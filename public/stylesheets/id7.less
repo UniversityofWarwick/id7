@@ -1,9 +1,14 @@
-// Core variables and mixins
+// ID7 Brand configuration variables
+@import "variables.less";
+
+// Bootstrap core variables and mixins
 @import "bootstrap/variables.less";
 @import "bootstrap/mixins.less";
 
-// Variables
+@icon-font-path: "/fonts";
 @body-bg: transparent;
+@font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@headings-font-weight: 300;
 
 // Reset and dependencies
 @import "bootstrap/normalize.less";
@@ -27,7 +32,7 @@
 @import "font-awesome/stacked.less";
 @import "font-awesome/icons.less";
 
-// Core CSS
+// Bootstrap core CSS
 @import "bootstrap/scaffolding.less";
 @import "bootstrap/type.less";
 @import "bootstrap/code.less";
@@ -36,7 +41,7 @@
 @import "bootstrap/forms.less";
 @import "bootstrap/buttons.less";
 
-// Components
+// Bootstrap components
 @import "bootstrap/component-animations.less";
 @import "bootstrap/dropdowns.less";
 @import "bootstrap/button-groups.less";
@@ -59,17 +64,21 @@
 @import "bootstrap/wells.less";
 @import "bootstrap/close.less";
 
-// Components w/ JavaScript
+// Bootstrap components w/ JavaScript
 @import "bootstrap/modals.less";
 @import "bootstrap/tooltip.less";
 @import "bootstrap/popovers.less";
 @import "bootstrap/carousel.less";
 
-// Utility classes
+// Bootstrap utility classes
 @import "bootstrap/utilities.less";
 @import "bootstrap/responsive-utilities.less";
 
-// Insert magic here
+// ID7 layout classes
+@import "fixed-width-container.less";
 @import "header.less";
 @import "main-content.less";
 @import "footer.less";
+
+// Colour branding
+@import "branding.less";

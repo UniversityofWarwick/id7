@@ -1,14 +1,65 @@
 #masthead {
-  margin-top: 5px;
-  height: 80px;
+  height: @id7-masthead-height;
   background: white;
+
+  > .row, .logo, .utility {
+    height: 100%;
+  }
+
+  .logo a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .utility { background: white; }
+}
+
+// Bleed bg into logo
+#masthead.bg-bleed {
+  background: none;
+  margin-top: @id7-masthead-bleed-height;
+  height: @id7-masthead-height - @id7-masthead-bleed-height;
+
+  .logo {
+    background: transparent url(../images/masthead-logo-bleed.png) center top no-repeat;
+    img { visibility: hidden; }
+  }
 }
 
 #navigation {
-  height: 32px;
-  background: #333;
+  height: @id7-navigation-height;
 }
 
 #header-image {
-  height: 200px;
+  height: @id7-header-bleed-height;
+  position: relative;
+
+  .header-text {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+
+    h1 {
+      margin: (@line-height-computed / 2) (@grid-gutter-width / 2);
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  #header-image .header-text {
+    bottom: -@id7-content-header-height;
+
+    h1 {
+      margin-bottom: (@line-height-computed / 2) + @id7-content-header-height;
+    }
+  }
 }

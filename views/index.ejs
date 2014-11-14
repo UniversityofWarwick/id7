@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><%= title %></title>
 
-  <link href="/stylesheets/id7.css" rel="stylesheet">
-  <link href="/site/site.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+  <link href="/stylesheets/id7.css" rel="stylesheet" type="text/css">
+  <link href="/site/site.css" rel="stylesheet" type="text/css">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,37 +18,168 @@
   <script src="/javascripts/respond-1.4.2.min.js"></script>
   <![endif]-->
 </head>
-<body>
-<div class="container main">
+<body class="brand-default">
   <header id="page-header">
-    <div id="masthead">
+    <div id="masthead" class="container bg-bleed">
+      <div class="row">
+        <div class="col-md-3 col-sm-4 logo">
+          <a href="/" title="Warwick homepage">
+            <img src="/images/logo@2x.png" alt="Warwick">
+          </a>
+        </div>
+        <div class="col-md-9 col-sm-8 utility hidden-xs">
 
+        </div>
+      </div>
     </div>
-    <div id="navigation">
+    <div id="navigation" class="container brand-bg">
       <nav class="primary-navigation"></nav>
       <nav class="secondary-navigation"></nav>
     </div>
-    <div id="header-image">
-
+    <div id="header-image" class="container">
+      <div class="header-text">
+        <h1><span id="parent-site-header">Parent site &raquo; </span>Site header</h1>
+      </div>
     </div>
   </header>
   <section id="main-content-section">
-    <header id="page-header">
-      <h1>PAGE HEADER</h1>
+    <header id="main-content-header" class="container">
+      <div class="row">
+        <div class="col-sm-8 header-text hidden-xs">
+          <h1>Page header</h1>
+        </div>
+        <div class="col-sm-4 logo-bleed"></div>
+      </div>
     </header>
 
-    <div id="main-content">
-      BLAH BLAH BLAH CONTENT
+    <div id="main-content" class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2>About</h2>
+
+          <p>The University of Warwick is globally connected, forward-looking and entrepreneurial. We create new ways of thinking and achieving: making us stand out from our competitors and the more ‘traditional universities’ and creating an inspiring place to study and undertake research.</p>
+
+          <p>Warwick is one of the UK’s great success stories. In less than fifty years since being founded we’ve become one of the UK’s best universities, consistently at the top of UK league tables and we’re rapidly climbing the international league tables of world class universities.</p>
+
+          <p>We’re a university that champions independent thinking and as well as being founded, first and foremost, on academic excellence, a key driver of the Warwick success story so far is our entrepreneurial spirit - a key strength is our relevance to society and our close links with business and industry. Companies tap into Warwick knowledge to develop their own strengths and ensure they remain at the cutting edge within their industries. And that cutting edge insight is developed out of truly world class research: Warwick ranks 7th overall in the UK according to the latest Research Assessment Exercise.</p>
+
+          <p>To understand how Warwick has come so far in such a short space of time is to understand the character of the University. The success of Warwick, underpinned by innovation, entrepreneurialism and academic excellence, is driven by the exceptional talent of our staff, students and alumni.</p>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <section>
+                <h3>About Warwick</h3>
+
+                <ul class="list-unstyled">
+                  <li><a href="profile">University Profile: Facts and Figures</a></li>
+                  <li><a href="strategy/">University Strategy</a></li>
+                  <li><a href="history">History of the University</a></li>
+                  <li><a href="management">University Management</a></li>
+                  <li><a href="profile/ranking/">University League Table Rankings</a></li>
+                  <li><a href="publications/">Publications</a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="col-sm-4">
+              <section>
+                <h3>Departments and Services</h3>
+
+                <ul class="list-unstyled">
+                  <li><a href="profile">University Profile: Facts and Figures</a></li>
+                  <li><a href="strategy/">University Strategy</a></li>
+                  <li><a href="history">History of the University</a></li>
+                  <li><a href="management">University Management</a></li>
+                  <li><a href="profile/ranking/">University League Table Rankings</a></li>
+                  <li><a href="publications/">Publications</a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="col-sm-4">
+              <section>
+                <h3>Visiting the University</h3>
+
+                <ul class="list-unstyled">
+                  <li><a href="profile">University Profile: Facts and Figures</a></li>
+                  <li><a href="strategy/">University Strategy</a></li>
+                  <li><a href="history">History of the University</a></li>
+                  <li><a href="management">University Management</a></li>
+                  <li><a href="profile/ranking/">University League Table Rankings</a></li>
+                  <li><a href="publications/">Publications</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <h2>Colour picker</h2>
+
+          <ul>
+            <li><a href="#" data-toggle-class="brand-purple">Purple (default)</a></li>
+            <li><a href="#" data-toggle-class="brand-grey">Grey</a></li>
+            <li><a href="#" data-toggle-class="brand-yellow">Yellow</a></li>
+            <li><a href="#" data-toggle-class="brand-blue">Blue</a></li>
+            <li><a href="#" data-toggle-class="brand-orange">Orange</a></li>
+            <li><a href="#" data-toggle-class="brand-green">Green</a></li>
+            <li><a href="#" data-toggle-class="brand-red">Red</a></li>
+          </ul>
+
+          <h2>Options</h2>
+
+          <ul>
+            <li>
+              <label class="checkbox">
+                <input type="checkbox" data-toggle="className" data-target="#masthead" data-className="bg-bleed">
+                Bleed the background image into the masthead
+              </label>
+            </li>
+            <li>
+              <label class="checkbox">
+                <input type="checkbox" data-toggle="className" data-target="#parent-site-header" data-className="hidden" checked>
+                Hide parent site name in site header
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
-  <footer id="page-footer">
-    OH GOOD A FOOTER
+  <footer id="page-footer" class="container">
+    <h2>Footer</h2>
   </footer>
-</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/javascripts/jquery-1.11.1.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/javascripts/bootstrap-3.3.1.min.js"></script>
+
+  <script type="text/javascript">
+    var ALL_CLASSES = ['brand-default', 'brand-purple', 'brand-grey', 'brand-yellow', 'brand-blue', 'brand-orange', 'brand-green', 'brand-red'];
+
+    jQuery(function($) {
+      $('[data-toggle-class]').on('click', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+
+        var clazz = $(this).data('toggle-class');
+        $.each(ALL_CLASSES, function(i, clz) {
+          if (clz != clazz) {
+            $('.' + clz).removeClass(clz).addClass(clazz);
+          }
+        });
+      });
+
+      $('[data-toggle="className"]').on('change', function(e) {
+        var $cb = $(this);
+        var $target = $($cb.attr('data-target'));
+        var className = $cb.attr('data-className');
+
+        if ($cb.is(':checked')) {
+          $target.addClass(className);
+        } else {
+          $target.removeClass(className);
+        }
+      }).trigger('change');
+    });
+  </script>
 </body>
 </html>

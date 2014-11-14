@@ -1,3 +1,42 @@
-#main-content-section {
+#main-content-header {
   background: white;
+
+  @media (min-width: @screen-sm-min) {
+    background: none;
+    height: @id7-content-header-height;
+
+    .row, .header-text, .logo-bleed {
+      height: 100%;
+    }
+
+    .header-text {
+      background: white;
+    }
+
+    .logo-bleed {
+      background: transparent url(../images/content-header-logo-bleed.png) left top no-repeat;
+    }
+  }
+}
+
+#main-content {
+  background: white;
+
+  @media (min-width: @screen-sm-min) {
+    padding-top: @grid-gutter-width;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    padding-bottom: (@line-height-computed / 2);
+    border-bottom: 1px solid @id7-subtle-line-colour;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .bordered {
+    border-bottom: 1px solid @id7-subtle-line-colour;
+  }
 }

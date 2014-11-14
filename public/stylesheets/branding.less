@@ -1,0 +1,29 @@
+.apply-brand(@colour) {
+  #main-content {
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+      color: @colour;
+    }
+
+//    h1, h2, h3, h4, h5, h6,
+//    .h1, .h2, .h3, .h4, .h5, .h6 {
+//      border-bottom-color: @colour;
+//    }
+  }
+
+  .brand-bg { background: @colour; }
+  .brand-text { color: @colour; }
+  .brand-border { border-color: @colour; }
+}
+
+body {
+  .apply-brand(@id7-brand-default);
+
+  &.brand-purple { .apply-brand(@id7-brand-purple); }
+  &.brand-grey { .apply-brand(@id7-brand-grey); }
+  &.brand-yellow { .apply-brand(@id7-brand-yellow); }
+  &.brand-blue { .apply-brand(@id7-brand-blue); }
+  &.brand-orange { .apply-brand(@id7-brand-orange); }
+  &.brand-green { .apply-brand(@id7-brand-green); }
+  &.brand-red { .apply-brand(@id7-brand-red); }
+}
