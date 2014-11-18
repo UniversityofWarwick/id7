@@ -1,0 +1,36 @@
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/javascripts/jquery-1.11.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/javascripts/bootstrap-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+    var ALL_CLASSES = ['brand-default', 'brand-purple', 'brand-grey', 'brand-yellow', 'brand-blue', 'brand-orange', 'brand-green', 'brand-red'];
+
+    jQuery(function($) {
+        $('[data-toggle-class]').on('click', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+
+            var clazz = $(this).data('toggle-class');
+            $.each(ALL_CLASSES, function(i, clz) {
+                if (clz != clazz) {
+                    $('.' + clz).removeClass(clz).addClass(clazz);
+                }
+            });
+        });
+
+        $('[data-toggle="className"]').on('change', function(e) {
+            var $cb = $(this);
+            var $target = $($cb.attr('data-target'));
+            var className = $cb.attr('data-className');
+
+            if ($cb.is(':checked')) {
+                $target.addClass(className);
+            } else {
+                $target.removeClass(className);
+            }
+        }).trigger('change');
+    });
+</script>
+</body>
+</html>
