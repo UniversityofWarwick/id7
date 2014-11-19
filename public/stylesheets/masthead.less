@@ -1,0 +1,61 @@
+#masthead {
+  height: @id7-masthead-height-xs;
+  &.bg-bleed {
+    height: @id7-masthead-height-xs - @id7-masthead-bleed-height;
+
+    .logo {
+      background-color: transparent;
+      background-image: url(../images/masthead-logo-bleed-xs.png);
+      background-position: center top;
+      background-repeat: no-repeat;
+      img { visibility: hidden; }
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    height: @id7-masthead-height-sm;
+    &.bg-bleed {
+      height: @id7-masthead-height-sm - @id7-masthead-bleed-height;
+
+      .logo {
+        background-image: url(../images/masthead-logo-bleed-sm.png);
+      }
+    }
+  }
+
+  background: white;
+
+  > .container, > .container > .row, .logo, .utility {
+    height: 100%;
+  }
+
+  .logo a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .utility { background: white; }
+
+  // Bleed bg into logo
+  &.bg-bleed {
+    background: none;
+    margin-top: @id7-masthead-bleed-height;
+  }
+
+  .navbar-toggle {
+    border-color: @navbar-default-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: @navbar-default-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: @navbar-default-toggle-icon-bar-bg;
+    }
+  }
+}
