@@ -1,0 +1,12 @@
+.link-colour(@base) {
+  a {
+    color: @base;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: darken(@base, 7%);
+      text-decoration: @link-hover-decoration;
+    }
+  }
+}

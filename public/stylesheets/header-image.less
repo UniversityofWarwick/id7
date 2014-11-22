@@ -1,46 +1,14 @@
-#header-image {
+#navigation {
+  // Set this on #navigation to allow the collapsing nav on smallscreens to fill this height up
   min-height: @id7-header-bleed-height;
+  @media (min-width: @screen-sm-min) {
+    min-height: @navbar-height + @id7-header-bleed-height;
+  }
 
   .subpage & {
     min-height: @id7-header-subpage-height;
-  }
-
-  position: relative;
-
-  .header-text {
-    .clearfix();
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    font-variant: small-caps;
-
-    h1, h2 {
-      margin: (@line-height-computed / 2) 0;
-    }
-  }
-
-  .navbar-toggle {
-    border-color: @navbar-default-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: @navbar-default-toggle-hover-bg;
-    }
-    .icon-bar {
-      background-color: @navbar-default-toggle-icon-bar-bg;
-    }
-  }
-}
-
-@media (min-width: @screen-sm-min) {
-  #header-image {
-    .header-text {
-      h1, h2 {
-        display: inline-block;
-      }
-
-      h1 + h2::before {
-        content: "\00BB";
-        margin: 0 (@grid-gutter-width / 4);
-      }
+    @media (min-width: @screen-sm-min) {
+      min-height: @navbar-height + @id7-header-subpage-height;
     }
   }
 }

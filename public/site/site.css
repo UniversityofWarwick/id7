@@ -1,1 +1,1 @@
-html{background:#000 url(border-image.jpg) center top no-repeat;background-attachment:fixed}
+html{background:black}body{background:#000 url(banner-image.jpg) center top no-repeat}body .left-border{background:#000 url(border-image.jpg) right top no-repeat;background-attachment:fixed}body .right-border{background:#000 url(border-image.jpg) left top no-repeat;background-attachment:fixed}
