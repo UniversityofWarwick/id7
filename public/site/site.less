@@ -1,17 +1,25 @@
+@import "../stylesheets/bootstrap/variables.less";
+@import "../stylesheets/bootstrap/mixins.less";
+@import "../stylesheets/variables.less";
+@import "../stylesheets/mixins.less";
+
 html {
   background: black;
 }
 
-body {
-  background: black url(banner-image.jpg) center top no-repeat;
+#header-image-container {
+  background-image: url(banner-image.jpg);
+  background-position: center @id7-navigation-height;
+}
 
-  .left-border {
-    background: black url(border-image.jpg) right top no-repeat;
-    background-attachment: fixed;
-  }
+.left-border .inner {
+  background-image: url(border-image-left.jpg);
+  background-attachment: fixed;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
 
-  .right-border {
-    background: black url(border-image.jpg) left top no-repeat;
-    background-attachment: fixed;
-  }
+.right-border .inner {
+  background: black url(border-image-right.jpg) left top no-repeat;
+  background-attachment: fixed;
 }
