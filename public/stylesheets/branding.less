@@ -159,8 +159,8 @@
     .transition(none);
   }
 
-  #fixed-width-container {
-    &::before, &::after { border-color: fadeout(@colour, 70%); }
+  &.bordered {
+    #left-border, #right-border { border-color: fadeout(@colour, 70%); }
   }
 }
 

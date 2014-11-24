@@ -1,12 +1,4 @@
 #masthead {
-  > .container {
-    > .row {
-      background: white;
-
-      &.logo-row { background: none; }
-    }
-  }
-
   .logo-row {
     height: @id7-masthead-height-xs;
 
@@ -21,6 +13,28 @@
       background-position: center top;
       background-repeat: no-repeat;
       img { visibility: hidden; }
+    }
+  }
+
+  .header-text-row {
+    min-height: @id7-header-text-height;
+  }
+
+  > .container > .row > * {
+    background: white;
+
+    @media (min-width: @screen-sm-min) {
+      min-height: @id7-masthead-height-sm + @id7-header-text-height;
+    }
+
+    &.logo-column {
+      background: none;
+
+      > * {
+        background: white;
+
+        &.logo-row { background: none; }
+      }
     }
   }
 
@@ -44,15 +58,15 @@
 
   .logo-row > .container-fluid {
     @media (min-width: @screen-sm-min) {
-      width: @container-sm - @id7-masthead-logo-width-sm;
+      width: (@container-sm * 2/3) - @id7-masthead-logo-width-sm;
     }
 
     @media (min-width: @screen-md-min) {
-      width: @container-md - @id7-masthead-logo-width-sm;
+      width: (@container-md * 2/3) - @id7-masthead-logo-width-sm;
     }
 
     @media (min-width: @screen-lg-min) {
-      width: @container-lg - @id7-masthead-logo-width-sm;
+      width: (@container-lg * 2/3) - @id7-masthead-logo-width-sm;
     }
   }
 
@@ -122,4 +136,34 @@
   }
 
   .logo-row:hover .warwick-site-links { .opacity(1); }
+
+  .search {
+    .search-box {
+      @media (min-width: @screen-sm-min) {
+        margin-top: ((@id7-masthead-height-sm + @id7-header-text-height) / 2) - (@input-height-large / 2);
+      }
+
+      position: relative;
+    }
+
+    .form-group {
+      margin-bottom: 0;
+      padding-bottom: (@line-height-computed / 2);
+    }
+
+    .fa {
+      position: absolute;
+      top: 9px;
+      right: 9px;
+
+      color: @gray-light;
+      .transition(color .15s linear);
+    }
+
+    #search-box:active + .fa,
+    #search-box:hover + .fa,
+    #search-box:focus + .fa {
+      color: black;
+    }
+  }
 }

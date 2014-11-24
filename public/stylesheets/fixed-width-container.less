@@ -18,60 +18,64 @@ body {
   }
 
   position: relative;
+  z-index: 1;
 
   @media (min-width: @screen-sm-min) {
-    &::before, &::after {
-      position: fixed;
-      top: 0px;
-      width: 50%;
-      height: 100%;
-      z-index: 0;
-    }
-
-    &::before {
-      background-position: right top;
-      background-repeat: no-repeat;
-      left: 0;
-
-      .translate(-(@container-sm/2), 0);
-    }
-
-    &::after {
-      background-position: left top;
-      background-repeat: no-repeat;
-      right: 0;
-
-      .translate(@container-sm / 2, 0);
-    }
-
-    &.bordered::before {
-      border-right: 1px solid #ccc;
-    }
-
-    &.bordered::after {
-      border-left: 1px solid #ccc;
-    }
-
     &.shadowed {
       box-shadow: 0 0 35px rgba(0, 0, 0, .4);
     }
   }
+}
 
-  @media (min-width: @screen-md-min) {
-    &::before {
-      .translate(-(@container-md / 2), 0);
+@media (min-width: @screen-sm-min) {
+  #left-border, #right-border {
+    position: fixed;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+  }
 
-    }
-    &::after {
-      .translate(@container-md / 2, 0);
+  #left-border {
+    background-position: right top;
+    background-repeat: no-repeat;
+    left: 0;
+
+    .translate(-(@container-sm/2), 0);
+
+    .bordered & {
+      border-right: 1px solid #ccc;
     }
   }
-  @media (min-width: @screen-lg-min) {
-    &::before {
-      .translate(-(@container-lg / 2), 0);
+
+  #right-border {
+    background-position: left top;
+    background-repeat: no-repeat;
+    right: 0;
+
+    .translate(@container-sm / 2, 0);
+
+    .bordered & {
+      border-left: 1px solid #ccc;
     }
-    &::after {
-      .translate(@container-lg / 2, 0);
-    }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  #left-border {
+    .translate(-(@container-md / 2), 0);
+
+  }
+  #right-border {
+    .translate(@container-md / 2, 0);
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  #left-border {
+    .translate(-(@container-lg / 2), 0);
+  }
+  #right-border {
+    .translate(@container-lg / 2, 0);
   }
 }

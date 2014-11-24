@@ -1,1 +1,1 @@
-#header-image-container{background-image:url(banner-image.jpg)}#page-header{background-image:url(banner-image.jpg)}#fixed-width-container::before{background-image:url(border-image-left.jpg)}#fixed-width-container::after{background-image:url(border-image-right.jpg)}
+#header-image-container{background-image:url(banner-image.jpg)}#page-header{background-image:url(banner-image.jpg)}#left-border{background-image:url(border-image-left.jpg)}#right-border{background-image:url(border-image-right.jpg)}
