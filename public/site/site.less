@@ -12,14 +12,23 @@ html {
   background-position: center @id7-navigation-height;
 }
 
-.left-border .inner {
-  background-image: url(border-image-left.jpg);
-  background-attachment: fixed;
-  background-position: right top;
-  background-repeat: no-repeat;
+#page-header {
+  background-image: url(banner-image.jpg);
+  background-position: center top;
 }
 
-.right-border .inner {
-  background: black url(border-image-right.jpg) left top no-repeat;
+html {
+  background-position: center top;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+
+  @media (min-width: @screen-sm-min) {
+    background-image: url(border-image-sm.jpg);
+  }
+  @media (min-width: @screen-md-min) {
+    background-image: url(border-image-md.jpg);
+  }
+  @media (min-width: @screen-lg-min) {
+    background-image: url(border-image-lg.jpg);
+  }
 }
