@@ -8,7 +8,14 @@
   @link-active-bg,
   @link-disabled-colour,
   @link-disabled-bg) {
+
   background-color: @bg;
+  @media (min-width: @screen-sm-min) {
+    background-color: fadeout(@bg, 60%);
+    &:hover { background-color: @bg; }
+
+    .transition(background-color 0.15s linear);
+  }
 
   .navbar-text {
     color: @text;
@@ -129,7 +136,7 @@
   .brand-text { color: @colour; }
   .brand-border { border-color: @colour; }
 
-  .utility-masthead {
+  #utility-masthead {
     background-color: fadeout(@colour, 60%);
   }
 
@@ -140,11 +147,20 @@
       contrast(@colour),
       contrast(@colour),
       darken(@colour, 7%),
-      darken(@colour, 7%),
-      contrast(darken(@colour, 7%)),
+      contrast(spin(@colour, 120%)),
+      spin(@colour, 120%),
       contrast(@colour),
       darken(@colour, 7%)
-    )
+    );
+  }
+
+  .opaque-navigation .navbar-primary {
+    background-color: @colour;
+    .transition(none);
+  }
+
+  #fixed-width-container {
+    &::before, &::after { border-color: fadeout(@colour, 70%); }
   }
 }
 
