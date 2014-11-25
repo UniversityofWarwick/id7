@@ -2,15 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a564f611-36b6-4fe2-bf30-5171a7ad24ee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/branding.less" afterPath="$PROJECT_DIR$/public/stylesheets/branding.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/flexbox.less" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/content-header-logo-bleed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/logo-text-cutout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/logo-text-cutout.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/logo.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/logo@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/logo@2x.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/masthead-logo-bleed-sm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/masthead-logo-bleed-xs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/masthead-logo-bleed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/masthead-logo-bleed.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/warwick-w-cutout-large.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/warwick-w-cutout-large.xcf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/warwick-w-cutout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/warwick-w-cutout.xcf" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/site/banner-image.jpg" afterPath="$PROJECT_DIR$/public/site/banner-image.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/content-header-logo-bleed.xcf" afterPath="$PROJECT_DIR$/public/images/content-header-logo-bleed.xcf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/masthead-logo-bleed-sm.xcf" afterPath="$PROJECT_DIR$/public/images/masthead-logo-bleed-sm.xcf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/masthead-logo-bleed-xs.xcf" afterPath="$PROJECT_DIR$/public/images/masthead-logo-bleed-xs.xcf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/fixed-width-container.less" afterPath="$PROJECT_DIR$/public/stylesheets/fixed-width-container.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/id7.css" afterPath="$PROJECT_DIR$/public/stylesheets/id7.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/id7.less" afterPath="$PROJECT_DIR$/public/stylesheets/id7.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/main-content.ejs" afterPath="$PROJECT_DIR$/views/partials/main-content.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/main-content.less" afterPath="$PROJECT_DIR$/public/stylesheets/main-content.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/masthead.ejs" afterPath="$PROJECT_DIR$/views/partials/masthead.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/masthead.less" afterPath="$PROJECT_DIR$/public/stylesheets/masthead.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/mixins.less" afterPath="$PROJECT_DIR$/public/stylesheets/mixins.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/site/site.css" afterPath="$PROJECT_DIR$/public/site/site.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/site/site.less" afterPath="$PROJECT_DIR$/public/site/site.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/variables.less" afterPath="$PROJECT_DIR$/public/stylesheets/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="id7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,21 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="masthead.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/partials/masthead.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38267148" vertical-offset="598" max-vertical-offset="1152">
-              <caret line="45" column="94" selection-start-line="45" selection-start-column="94" selection-end-line="45" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="masthead.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="masthead.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/masthead.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.666667" vertical-offset="2349" max-vertical-offset="3132">
-              <caret line="151" column="5" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.30511463" vertical-offset="79" max-vertical-offset="3582">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -75,27 +87,28 @@
         <option value="$PROJECT_DIR$/views/partials/header-small.ejs" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/views/subpage.ejs" />
-        <option value="$PROJECT_DIR$/public/stylesheets/main-content.less" />
         <option value="$PROJECT_DIR$/views/partials/navigation.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/navigation.less" />
         <option value="$PROJECT_DIR$/views/partials/utility-bar.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/utility-bar.less" />
-        <option value="$PROJECT_DIR$/public/stylesheets/mixins.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/font-awesome/path.less" />
-        <option value="$PROJECT_DIR$/public/stylesheets/id7.less" />
-        <option value="$PROJECT_DIR$/public/stylesheets/avenir-next.less" />
         <option value="$PROJECT_DIR$/views/partials/header.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/header.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/header-image.less" />
         <option value="$PROJECT_DIR$/views/partials/tail.ejs" />
         <option value="$PROJECT_DIR$/views/partials/head.ejs" />
-        <option value="$PROJECT_DIR$/public/site/site.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/branding.less" />
-        <option value="$PROJECT_DIR$/public/stylesheets/fixed-width-container.less" />
-        <option value="$PROJECT_DIR$/views/partials/main-content.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/variables.less" />
-        <option value="$PROJECT_DIR$/public/stylesheets/masthead.less" />
+        <option value="$PROJECT_DIR$/public/stylesheets/main-content.less" />
+        <option value="$PROJECT_DIR$/views/partials/main-content.ejs" />
+        <option value="$PROJECT_DIR$/public/site/site.less" />
+        <option value="$PROJECT_DIR$/public/stylesheets/mixins.less" />
+        <option value="$PROJECT_DIR$/public/stylesheets/flexbox.less" />
+        <option value="$PROJECT_DIR$/public/stylesheets/fixed-width-container.less" />
         <option value="$PROJECT_DIR$/views/partials/masthead.ejs" />
+        <option value="$PROJECT_DIR$/public/stylesheets/id7.less" />
+        <option value="$PROJECT_DIR$/public/stylesheets/avenir-next.less" />
+        <option value="$PROJECT_DIR$/public/stylesheets/masthead.less" />
       </list>
     </option>
   </component>
@@ -103,7 +116,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
+    <option name="x" value="1745" />
     <option name="y" value="24" />
     <option name="width" value="1615" />
     <option name="height" value="1026" />
@@ -219,24 +232,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="id7" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="id7" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -600,15 +595,15 @@
       <workItem from="1416821326821" duration="607000" />
       <workItem from="1416827705429" duration="230000" />
       <workItem from="1416828255530" duration="910000" />
-      <workItem from="1416831989834" duration="13807000" />
+      <workItem from="1416831989834" duration="22976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75160000" />
+    <option name="totallyTimeSpent" value="84329000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1615" height="1026" extended-state="6" />
+    <frame x="1745" y="24" width="1615" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -660,13 +655,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.94383776" vertical-offset="493" max-vertical-offset="1206">
@@ -798,24 +786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/main-content.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32451499" vertical-offset="86" max-vertical-offset="918">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/id7.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="581">
           <caret line="0" column="136368" selection-start-line="0" selection-start-column="136368" selection-end-line="0" selection-end-column="136368" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/mixins.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22222222" vertical-offset="0" max-vertical-offset="567">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -830,13 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="594">
           <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/footer.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.082474224" vertical-offset="0" max-vertical-offset="873">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -876,30 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44444445" vertical-offset="18" max-vertical-offset="1962">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap/variables.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47619048" vertical-offset="666" max-vertical-offset="15516">
-          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/id7.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31746033" vertical-offset="0" max-vertical-offset="1782">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/avenir-next.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26984128" vertical-offset="837" max-vertical-offset="1494">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -968,30 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/main-content.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6101083" vertical-offset="1642" max-vertical-offset="2304">
-          <caret line="110" column="29" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/site/site.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3809524" vertical-offset="0" max-vertical-offset="567">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/fixed-width-container.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46031746" vertical-offset="189" max-vertical-offset="1548">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/tail.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.032490976" vertical-offset="0" max-vertical-offset="1008">
@@ -1008,34 +927,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/main-content.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47619048" vertical-offset="0" max-vertical-offset="936">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/variables.less">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53968257" vertical-offset="0" max-vertical-offset="567">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/main-content.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3574008" vertical-offset="994" max-vertical-offset="2952">
+          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/site/site.less">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47619048" vertical-offset="0" max-vertical-offset="567">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap/forms.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36641222" vertical-offset="3246" max-vertical-offset="9936">
-          <caret line="191" column="36" selection-start-line="191" selection-start-column="17" selection-end-line="191" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.39711192" vertical-offset="5522" max-vertical-offset="9936">
+          <caret line="319" column="85" selection-start-line="319" selection-start-column="60" selection-end-line="319" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/masthead.less">
+    <entry file="file://$PROJECT_DIR$/views/partials/footer.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.666667" vertical-offset="2349" max-vertical-offset="3132">
-          <caret line="151" column="5" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.12698413" vertical-offset="0" max-vertical-offset="567">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/mixins.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41269842" vertical-offset="0" max-vertical-offset="567">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/fixed-width-container.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.73015875" vertical-offset="702" max-vertical-offset="1746">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/masthead.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38267148" vertical-offset="598" max-vertical-offset="1152">
-          <caret line="45" column="94" selection-start-line="45" selection-start-column="94" selection-end-line="45" selection-end-column="94" />
+        <state vertical-scroll-proportion="0.56137186" vertical-offset="571" max-vertical-offset="1152">
+          <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/flexbox.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6108007" vertical-offset="2071" max-vertical-offset="11556">
+          <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap/variables.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44444445" vertical-offset="0" max-vertical-offset="15516">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/avenir-next.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11111111" vertical-offset="909" max-vertical-offset="1494">
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/id7.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47619048" vertical-offset="0" max-vertical-offset="1782">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/masthead.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30511463" vertical-offset="79" max-vertical-offset="3582">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
       </provider>

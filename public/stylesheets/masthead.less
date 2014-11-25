@@ -9,23 +9,16 @@
 
     > .logo {
       background-color: transparent;
-      background-image: url(../images/masthead-logo-bleed-xs.png);
-      background-position: center top;
+      background-image: url(../images/masthead-logo-bleed-xs@2x.png);
+      background-size: (@id7-masthead-logo-width-xs + (@grid-gutter-width / 2)) @id7-masthead-height-xs;
+      background-position: left top;
       background-repeat: no-repeat;
       img { visibility: hidden; }
     }
   }
 
-  .header-text-row {
-    min-height: @id7-header-text-height;
-  }
-
   > .container > .row > * {
     background: white;
-
-    @media (min-width: @screen-sm-min) {
-      min-height: @id7-masthead-height-sm + @id7-header-text-height;
-    }
 
     &.logo-column {
       background: none;
@@ -43,7 +36,8 @@
       height: @id7-masthead-height-sm;
 
       > .logo {
-        background-image: url(../images/masthead-logo-bleed-sm.png);
+        background-image: url(../images/masthead-logo-bleed-sm@2x.png);
+        background-size: (@id7-masthead-logo-width-sm + (@grid-gutter-width / 2)) @id7-masthead-height-sm;
         background-position: left top;
 
         width: @id7-masthead-logo-width-sm;
@@ -90,10 +84,12 @@
 
     .parent-site-link {
       .small();
+      font-weight: 100;
     }
 
     .parent-site-link + .current-site-link::before {
       content: "\00BB";
+      font-weight: 100;
       margin-right: (@grid-gutter-width / 4);
     }
   }
@@ -140,10 +136,14 @@
   .search {
     .search-box {
       @media (min-width: @screen-sm-min) {
-        margin-top: ((@id7-masthead-height-sm + @id7-header-text-height) / 2) - (@input-height-large / 2);
+        margin-top: (@line-height-computed / 2);
       }
 
       position: relative;
+
+      .input-lg {
+        padding-right: @padding-large-horizontal + 26px;
+      }
     }
 
     .form-group {
@@ -164,6 +164,31 @@
     #search-box:hover + .fa,
     #search-box:focus + .fa {
       color: black;
+    }
+  }
+
+  // Make container row columns equal height to avoid bg bleed
+  @media (min-width: @screen-sm-min) {
+    > .container > .row {
+      display: table;
+
+      width: @container-sm + 2;
+      margin: 0 -((@grid-gutter-width / 2) + 1);
+
+      @media (min-width: @screen-md-min) {
+        width: @container-md + 2;
+      }
+
+      @media (min-width: @screen-lg-min) {
+        width: @container-lg + 2;
+      }
+
+      > * {
+        display: table-cell;
+        float: none;
+
+        &.search-column { vertical-align: middle; }
+      }
     }
   }
 }
