@@ -165,6 +165,15 @@
   &.bordered {
     #left-border, #right-border { border-color: fadeout(@colour, 70%); }
   }
+
+  #site-footer {
+    background: @colour;
+    color: contrast(@colour);
+
+    @footer-overlap: 48px; // FIXME magic number
+    margin-bottom: -@footer-overlap;
+    padding-bottom: @footer-overlap;
+  }
 }
 
 body {

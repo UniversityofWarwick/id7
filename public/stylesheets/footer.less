@@ -1,7 +1,18 @@
 #page-footer {
-  background: #f5f5f5;
+  #site-footer, #app-footer {
+    > .container {
+      padding-top: @grid-gutter-width / 2;
+    }
+  }
 
-  > .container {
-    background: url(../images/logo-horizontal-rule.png) right top no-repeat;
+  #app-footer {
+    background-image: url(../images/logo-horizontal-rule@2x.png);
+    background-position: right top;
+    background-size: @container-lg 100px; // FIXME magic number
+    background-repeat: no-repeat;
+
+    > .container {
+      padding-right: 140px; // FIXME magic number
+    }
   }
 }
