@@ -42,6 +42,17 @@
                 $target.removeClass(className);
             }
         }).trigger('change');
+
+        $('#border-width').on('change', function(e) {
+            var width = $(this).val();
+            $('#left-border').css('border-right-width', width + 'px');
+            $('#right-border').css('border-left-width', width + 'px');
+        }).trigger('change');
+
+        $('#border-colour').on('change', function(e) {
+            var colour = $(this).val();
+            $('#left-border, #right-border').css('border-color', colour);
+        }).trigger('change');
     });
 </script>
 </body>

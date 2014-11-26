@@ -143,9 +143,15 @@
                         </li>
                         <li>
                             <label class="checkbox">
-                                <input type="checkbox" data-toggle="className" data-target="body" data-className="bordered">
+                                <input type="checkbox" data-toggle="className" id="bordered-cb" data-target="body" data-className="bordered" checked>
                                 Add line delimiter between borders and container
                             </label>
+
+                            <label for="border-width">Border width (0-10px)</label>
+                            <input type="range" min="0" max="10" value="1" id="border-width">
+
+                            <label for="border-colour">Border colour</label>
+                            <input type="color" id="border-colour" value="#808080">
                         </li>
                         <li>
                             <label class="checkbox">
