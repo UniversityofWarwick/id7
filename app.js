@@ -4,9 +4,25 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var assetManager = require('connect-assetmanager');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+
+var assetManagerGroups = {
+    'js': {
+        'route': /\/static\/js\/[0-9]+\/.*\.js/
+        , 'path': './public/javascripts/'
+        , 'dataType': 'javascript'
+        , 'files': [
+            'jquery-1.11.1.min.js',
+            'bootstrap-3.3.1.min.js',
+            'typeahead.jquery-0.10.5.js'
+        ]
+    }
+};
+
+var assetsManagerMiddleware = assetManager(assetManagerGroups);
 
 var app = express();
 
@@ -21,6 +37,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
+app.use(assetsManagerMiddleware);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
