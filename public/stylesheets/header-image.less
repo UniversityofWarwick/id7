@@ -1,15 +1,19 @@
 #header-image-container {
   background-position: center top;
   background-repeat: no-repeat;
+  background-size: @container-sm 195px; // FIXME magic number
 
   .subpage & {
     background: none;
   }
 
   // Set this on #header-image-container to allow the collapsing nav on smallscreens to fill this height up
-  min-height: @id7-header-bleed-height;
+  min-height: @id7-header-height-xs;
   @media (min-width: @screen-sm-min) {
-    min-height: @navbar-height + @id7-header-bleed-height + @id7-content-header-height;
+    @id7-header-height-sm-total: @navbar-height + @id7-header-height-sm + @id7-content-header-height;
+
+    background-size: @container-lg @id7-header-height-sm-total;
+    min-height: @id7-header-height-sm-total;
     margin-bottom: -@id7-content-header-height;
 
     &.opaque-navigation {
