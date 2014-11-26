@@ -2,6 +2,10 @@
   background-position: center top;
   background-repeat: no-repeat;
 
+  .subpage & {
+    background: none;
+  }
+
   // Set this on #header-image-container to allow the collapsing nav on smallscreens to fill this height up
   min-height: @id7-header-bleed-height;
   @media (min-width: @screen-sm-min) {
@@ -14,9 +18,11 @@
   }
 
   .subpage & {
-    min-height: @id7-header-subpage-height;
+    min-height: 0;
+    margin-bottom: 0;
+
     @media (min-width: @screen-sm-min) {
-      min-height: @navbar-height + @id7-header-subpage-height + @id7-content-header-height;
+      min-height: 0;
     }
   }
 }
