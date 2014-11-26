@@ -53,6 +53,13 @@
             var colour = $(this).val();
             $('#left-border, #right-border').css('border-color', colour);
         }).trigger('change');
+
+        $('#shadow-blur, #shadow-opacity').on('change', function(e) {
+            var blur = $('#shadow-blur').val();
+            var opacity = $('#shadow-opacity').val();
+
+            $('#fixed-width-container.shadowed').css('box-shadow', '0 0 ' + blur + 'px rgba(0, 0, 0, ' + opacity + ')');
+        }).trigger('change');
     });
 </script>
 </body>

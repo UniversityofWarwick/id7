@@ -1,0 +1,27 @@
+
+## line endings
+
+# things that should definitely be text
+*.java text
+*.scala text
+*.aj text
+*.xml text
+*.txt text
+*.ftl text
+*.jsp text
+*.tag text
+*.properties text
+*.htm text
+*.html text
+*.ics text
+*.prefs text
+*.md text
+
+
+# things that should definitely not be text
+*.png binary
+*.jpg binary
+*.jar binary
+*.war binary
+*.zip binary
+

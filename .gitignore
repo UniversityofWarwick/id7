@@ -1,0 +1,29 @@
+# Temporary files
+.cache
+*~
+.ensime*
+*.orig
+.*.swp
+.ctags
+.unison*
+${*
+
+# Eclipse IDE
+/.classpath
+.externalToolBuilders
+
+# IntelliJ IDE
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/artifacts
+/.idea/libraries
+/.idea/dictionaries
+/.idea/scala_compiler.xml
+/.idea/*
+.idea/
+*.iml
+*.iws
+
+# Sublime Text IDE
+*.sublime-project
+*.sublime-workspace
