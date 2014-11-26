@@ -27,10 +27,6 @@
 #main-content {
   background: white;
 
-  @media (min-width: @screen-sm-min) {
-    padding-top: @grid-gutter-width;
-  }
-
   h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6 {
     padding-bottom: (@line-height-computed / 2);
@@ -39,6 +35,10 @@
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  #page-title {
+    margin-bottom: @line-height-computed;
   }
 
   .bordered {

@@ -1,1 +1,1 @@
-html{background:black}#header-image-container{background-image:url(banner-image.jpg)}#page-header{background-image:url(masthead-image.jpg)}#left-border{background-image:url(border-image-left.jpg)}#right-border{background-image:url(border-image-right.jpg)}
+#header-image-container{background-image:url("site1/banner-image.jpg")}#page-header{background-image:url("site1/masthead-image.jpg")}#left-border{background-image:url("site1/border-image-left.jpg")}#right-border{background-image:url("site1/border-image-right.jpg")}

@@ -4,6 +4,30 @@
 
 #utility-masthead {
   background: rgba(0, 0, 0, 0.3);
+
+  // Place a block underneath the WARWICK text so we can change its colour
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: @grid-gutter-width / 2;
+
+    @offset-xs: 36px + @id7-masthead-bleed-height; // FIXME Magic number
+
+    top: @offset-xs;
+    width: @id7-masthead-logo-width-xs - (@grid-gutter-width / 2);
+    height: @id7-masthead-bleed-height + @id7-masthead-height-xs - @offset-xs;
+
+    @media (min-width: @screen-sm-min) {
+      @offset-sm: 48px + @id7-masthead-bleed-height; // FIXME Magic number
+
+      top: @offset-sm;
+      width: @id7-masthead-logo-width-sm - (@grid-gutter-width / 2);
+      height: @id7-masthead-bleed-height + @id7-masthead-height-sm - @offset-sm;
+    }
+  }
 }
 
 #page-header {

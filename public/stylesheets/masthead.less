@@ -4,42 +4,26 @@
 
     > * {
       height: 100%;
-      background: white;
     }
 
     > .logo {
-      background-color: transparent;
-      background-image: url(../images/masthead-logo-bleed-xs@2x.png);
-      background-size: (@id7-masthead-logo-width-xs + (@grid-gutter-width / 2)) @id7-masthead-height-xs;
-      background-position: left top;
-      background-repeat: no-repeat;
       img { visibility: hidden; }
     }
   }
 
-  > .container > .row > * {
-    background: white;
-
-    &.logo-column {
-      background: none;
-
-      > * {
-        background: white;
-
-        &.logo-row { background: none; }
-      }
-    }
-  }
+  background-image: url(../images/masthead-logo-bleed-xs@2x.png);
+  background-size: @container-sm 300px;
+  background-position: left top;
+  background-repeat: no-repeat;
 
   @media (min-width: @screen-sm-min) {
+    background-image: url(../images/masthead-logo-bleed-sm@2x.png);
+    background-size: @container-lg 300px;
+
     .logo-row {
       height: @id7-masthead-height-sm;
 
       > .logo {
-        background-image: url(../images/masthead-logo-bleed-sm@2x.png);
-        background-size: (@id7-masthead-logo-width-sm + (@grid-gutter-width / 2)) @id7-masthead-height-sm;
-        background-position: left top;
-
         width: @id7-masthead-logo-width-sm;
         float: left;
       }
@@ -136,13 +120,13 @@
   .search {
     .search-box {
       @media (min-width: @screen-sm-min) {
-        margin-top: (@line-height-computed / 2);
+        margin-top: 38px + (@line-height-computed / 2); // FIXME Magic number
       }
 
       position: relative;
 
       .input-lg {
-        padding-right: @padding-large-horizontal + 26px;
+        padding-right: @padding-large-horizontal + 26px; // FIXME Magic number
       }
     }
 
@@ -164,31 +148,6 @@
     #search-box:hover + .fa,
     #search-box:focus + .fa {
       color: black;
-    }
-  }
-
-  // Make container row columns equal height to avoid bg bleed
-  @media (min-width: @screen-sm-min) {
-    > .container > .row {
-      display: table;
-
-      width: @container-sm + 2;
-      margin: 0 -((@grid-gutter-width / 2) + 1);
-
-      @media (min-width: @screen-md-min) {
-        width: @container-md + 2;
-      }
-
-      @media (min-width: @screen-lg-min) {
-        width: @container-lg + 2;
-      }
-
-      > * {
-        display: table-cell;
-        float: none;
-
-        &.search-column { vertical-align: middle; }
-      }
     }
   }
 }

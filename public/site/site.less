@@ -3,20 +3,22 @@
 @import "../stylesheets/variables.less";
 @import "../stylesheets/mixins.less";
 
-html { background: black; }
+.apply-site(@name) {
+  #header-image-container {
+    background-image: url("@{name}/banner-image.jpg");
+  }
 
-#header-image-container {
-  background-image: url(banner-image.jpg);
+  #page-header {
+    background-image: url("@{name}/masthead-image.jpg");
+  }
+
+  #left-border {
+    background-image: url("@{name}/border-image-left.jpg");
+  }
+
+  #right-border {
+    background-image: url("@{name}/border-image-right.jpg");
+  }
 }
 
-#page-header {
-  background-image: url(masthead-image.jpg);
-}
-
-#left-border {
-  background-image: url(border-image-left.jpg);
-}
-
-#right-border {
-  background-image: url(border-image-right.jpg);
-}
+.apply-site('site1');

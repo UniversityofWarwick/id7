@@ -11,7 +11,7 @@
 
   background-color: @bg;
   @media (min-width: @screen-sm-min) {
-    background-color: fadeout(@bg, 60%);
+    background-color: fadeout(@bg, 30%);
     &:hover { background-color: @bg; }
 
     .transition(background-color 0.15s linear);
@@ -137,7 +137,10 @@
   .brand-border { border-color: @colour; }
 
   #utility-masthead {
-    background-color: fadeout(@colour, 60%);
+    //background-color: fadeout(@colour, 30%);
+    &::after {
+      background-color: @colour;
+    }
   }
 
   .navbar-primary {
