@@ -179,6 +179,33 @@
     background: @colour;
     color: contrast(@colour);
   }
+
+  #masthead .search {
+    #search-box {
+      border-color: @colour;
+    }
+
+    .fa {
+      color: fadeout(@colour, 50%);
+      .transition(color .15s linear);
+    }
+
+    // FIXME this is a <span> not an <input> so focus/active don't make sense
+    .twitter-typeahead:active + .fa,
+    .twitter-typeahead:hover + .fa,
+    .twitter-typeahead:focus + .fa {
+      color: @colour;
+    }
+
+    .twitter-typeahead .tt-suggestion.tt-cursor {
+      background: @colour;
+      color: contrast(@colour);
+    }
+  }
+
+  .form-control {
+    .form-control-focus(@colour);
+  }
 }
 
 body {
@@ -191,4 +218,5 @@ body {
   &.brand-orange { .apply-brand(@id7-brand-orange); }
   &.brand-green { .apply-brand(@id7-brand-green); }
   &.brand-red { .apply-brand(@id7-brand-red); }
+  &.brand-red-bold { .apply-brand(@id7-brand-red-bold); }
 }
