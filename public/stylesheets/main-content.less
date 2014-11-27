@@ -2,24 +2,16 @@
   background: white;
 
   @media (min-width: @screen-sm-min) {
-    background: none;
     height: @id7-content-header-height;
 
     .container, .row, .header-text, .logo-bleed {
       height: 100%;
     }
 
-    .header-text {
-      background: white;
-    }
-
-    .logo-bleed {
-      background: white;
-
-      .site-root & {
-        background: transparent url(../images/content-header-logo-bleed@2x.png) left top no-repeat;
-        background-size: 500px @id7-content-header-height;
-      }
+    .site-root & {
+      background: transparent url(../images/content-header-logo-bleed@2x.png) right top no-repeat;
+      background-size: @container-lg @id7-content-header-height;
+      z-index: 1;
     }
   }
 }

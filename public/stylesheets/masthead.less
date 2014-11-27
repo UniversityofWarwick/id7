@@ -2,10 +2,6 @@
   .logo-row {
     height: @id7-masthead-height-xs;
 
-    > * {
-      height: 100%;
-    }
-
     > .logo {
       img { visibility: hidden; }
     }
@@ -91,24 +87,29 @@
   }
 
   .warwick-site-links {
-    .list-inline();
-    .small();
+    margin-left: @id7-masthead-logo-width-sm + (@grid-gutter-width / 2);
+
     .opacity(0);
     .transition(opacity 0.15s linear);
-
-    margin: 0;
+    .small();
 
     @line-height-small-computed: floor((@font-size-small * @line-height-small)); // ~17px
     margin-top: (@id7-masthead-height-sm * 3/4) - (@line-height-small-computed / 2);
 
-    > li {
-      padding: 0;
+    ul {
+      .list-inline();
 
-      &:not(:first-child)::before {
-        content: '|';
-        margin-left: 0.1em;
-        margin-right: 0.2em;
-        color: @gray-light;
+      margin: 0;
+
+      > li {
+        padding: 0;
+
+        &:not(:first-child)::before {
+          content: '|';
+          margin-left: 0.1em;
+          margin-right: 0.2em;
+          color: @gray-light;
+        }
       }
     }
 
