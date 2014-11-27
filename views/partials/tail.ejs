@@ -60,6 +60,11 @@
 
             $('#fixed-width-container.shadowed').css('box-shadow', '0 0 ' + blur + 'px rgba(0, 0, 0, ' + opacity + ')');
         }).trigger('change');
+
+        $('#strapline-position').on('change', function(e) {
+            var classes = 'strapline ' + $(this).val();
+            $('#header-image-container .strapline').attr('class', classes);
+        }).trigger('change');
     });
 </script>
 </body>

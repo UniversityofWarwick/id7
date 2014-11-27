@@ -11,10 +11,14 @@
 
   background-color: @bg;
   @media (min-width: @screen-sm-min) {
-    background-color: fadeout(@bg, 30%);
-    &:hover { background-color: @bg; }
+    .site-root & {
+      background-color: fadeout(@bg, 30%);
+      &:hover {
+        background-color: @bg;
+      }
 
-    .transition(background-color 0.15s linear);
+      .transition(background-color 0.15s linear);
+    }
   }
 
   .navbar-text {
@@ -150,14 +154,14 @@
       contrast(@colour),
       contrast(@colour),
       darken(@colour, 7%),
-      contrast(spin(@colour, 120%)),
-      spin(@colour, 120%),
+      contrast(lighten(@colour, 20%)),
+      lighten(@colour, 20%),
       contrast(@colour),
       darken(@colour, 7%)
     );
   }
 
-  .opaque-navigation .navbar-primary, .subpage & .navbar-primary {
+  .opaque-navigation .navbar-primary {
     background-color: @colour;
     .transition(none);
   }
@@ -167,12 +171,13 @@
   }
 
   #site-footer {
+    background: @id7-site-footer-colour;
+    color: contrast(@id7-site-footer-colour);
+  }
+
+  #app-footer {
     background: @colour;
     color: contrast(@colour);
-
-    @footer-overlap: 48px; // FIXME magic number
-    margin-bottom: -@footer-overlap;
-    padding-bottom: @footer-overlap;
   }
 }
 

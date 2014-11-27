@@ -2,7 +2,11 @@
     <header id="main-content-header">
         <div class="container">
             <div class="row">
-                <div class="col-sm-8 header-text"></div>
+                <div class="col-sm-8 header-text">
+                    <div id="page-title">
+                        <h1>About Warwick University</h1>
+                    </div>
+                </div>
                 <div class="col-sm-4 logo-bleed"></div>
             </div>
         </div>
@@ -10,10 +14,6 @@
 
     <div id="main-content">
         <div class="container">
-            <div id="page-title">
-                <h1>Welcome to Big School</h1>
-            </div>
-
             <div class="row">
                 <div class="col-sm-8">
                     <h2>About</h2>
@@ -122,7 +122,7 @@
 
                     <h2>Options</h2>
 
-                    <ul>
+                    <ul class="list-unstyled" style="padding-left: 30px;">
                         <li>
                             <label class="checkbox">
                                 <input type="checkbox" data-toggle="className" data-target=".header-text .parent-site-link" data-className="hidden">
@@ -170,6 +170,15 @@
                                 <input type="checkbox" data-toggle="className" data-target="body" data-className="large-font">
                                 Increase body font size to 16px
                             </label>
+                        </li>
+                        <li>
+                            <label for="strapline-position">Strapline position</label>
+                            <select id="strapline-position">
+                                <option value="bottom text-left">Bottom left</option>
+                                <option value="bottom text-right">Bottom right</option>
+                                <option value="top text-left">Top left</option>
+                                <option value="top text-right">Top right</option>
+                            </select>
                         </li>
                     </ul>
                 </div>

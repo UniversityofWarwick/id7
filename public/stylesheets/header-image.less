@@ -1,32 +1,37 @@
 #header-image-container {
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: @container-sm 195px; // FIXME magic number
+  .site-root & {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: @container-sm 195px; // FIXME magic number
 
-  .subpage & {
-    background: none;
-  }
+    // Set this on #header-image-container to allow the collapsing nav on smallscreens to fill this height up
+    min-height: @id7-header-height-xs;
+    @media (min-width: @screen-sm-min) {
+      @id7-header-height-sm-total: @navbar-height + @id7-header-height-sm + @id7-content-header-height;
 
-  // Set this on #header-image-container to allow the collapsing nav on smallscreens to fill this height up
-  min-height: @id7-header-height-xs;
-  @media (min-width: @screen-sm-min) {
-    @id7-header-height-sm-total: @navbar-height + @id7-header-height-sm + @id7-content-header-height;
+      background-size: @container-lg @id7-header-height-sm-total;
+      min-height: @id7-header-height-sm-total;
+      margin-bottom: -@id7-content-header-height;
 
-    background-size: @container-lg @id7-header-height-sm-total;
-    min-height: @id7-header-height-sm-total;
-    margin-bottom: -@id7-content-header-height;
-
-    &.opaque-navigation {
-      background-position: center @id7-navigation-height;
+      &.opaque-navigation {
+        background-position: center @id7-navigation-height;
+      }
     }
   }
 
-  .subpage & {
-    min-height: 0;
-    margin-bottom: 0;
+  position: relative;
+  .strapline {
+    color: white;
+    background: rgba(80, 80, 80, 0.3);
 
-    @media (min-width: @screen-sm-min) {
-      min-height: 0;
+    h2 {
+      margin: (@line-height-computed / 2) 0;
+    }
+
+    &.bottom {
+      position: absolute;
+      bottom: 0px;
+      padding-bottom: @id7-content-header-height;
     }
   }
 }

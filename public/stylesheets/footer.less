@@ -6,13 +6,18 @@
   }
 
   #app-footer {
-    background-image: url(../images/logo-horizontal-rule@2x.png);
-    background-position: right top;
-    background-size: @container-lg 100px; // FIXME magic number
-    background-repeat: no-repeat;
+    position: relative;
+
+    > .logo-bleed {
+      .logo-as-css(auto, @grid-gutter-width, @id7-site-footer-colour);
+      position: absolute;
+      top: 0px;
+      left: 15%; // FIXME magic number
+    }
 
     > .container {
-      padding-right: 140px; // FIXME magic number
+      padding-top: @grid-gutter-width;
+      .small();
     }
   }
 }
