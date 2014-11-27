@@ -1,7 +1,11 @@
 </div>
 <div id="right-border"></div>
 
-<script src="/static/js/1/id7.min.js"></script>
+<script src="/javascripts/libs/jquery-1.11.1.min.js"></script>
+<script src="/javascripts/libs/bootstrap-3.3.1.min.js"></script>
+<script src="/javascripts/libs/typeahead.jquery-0.10.5.js"></script>
+<script src="/javascripts/libs/handlebars-2.0.0.js"></script>
+<script src="/javascripts/search-suggest.jquery.js"></script>
 
 <!-- Avenir Next usage for fonts.com -->
 <script type="text/javascript">
@@ -64,6 +68,13 @@
         $('#strapline-position').on('change', function(e) {
             var classes = 'strapline ' + $(this).val();
             $('#header-image-container .strapline').attr('class', classes);
+        }).trigger('change');
+
+        $('#site-imagery').on('change', function(e) {
+            var allClasses = $(this).find('option').map(function() { return $(this).attr('value'); }).get();
+
+            $.each(allClasses, function(i, clz) { $('html').removeClass(clz); });
+            $('html').addClass($(this).val());
         }).trigger('change');
     });
 </script>

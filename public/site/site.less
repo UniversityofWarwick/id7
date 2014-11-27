@@ -21,4 +21,10 @@
   }
 }
 
-.apply-site('site1');
+html {
+  .apply-site('site1');
+
+  &.site1 { .apply-site('site1'); }
+  &.site2 { .apply-site('site2'); }
+  &.site3 { .apply-site('site3'); }
+}

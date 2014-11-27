@@ -15,9 +15,11 @@ var assetManagerGroups = {
         , 'path': './public/javascripts/'
         , 'dataType': 'javascript'
         , 'files': [
-            'jquery-1.11.1.min.js',
-            'bootstrap-3.3.1.min.js',
-            'typeahead.jquery-0.10.5.js'
+            'libs/jquery-1.11.1.min.js',
+            'libs/bootstrap-3.3.1.min.js',
+            'libs/typeahead.jquery-0.10.5.js',
+            'libs/handlebars-2.0.0.js',
+            'search-suggest.jquery.js'
         ]
     }
 };

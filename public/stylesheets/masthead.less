@@ -149,5 +149,43 @@
     #search-box:focus + .fa {
       color: black;
     }
+
+    .twitter-typeahead {
+      width: 100%;
+    }
+
+    .tt-dropdown-menu {
+      width: 100%;
+      margin-top: -1px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      .box-shadow(0 5px 10px rgba(0,0,0,.2));
+    }
+
+    .tt-suggestion {
+      padding: 8px 20px;
+      line-height: 18px;
+    }
+
+    .tt-suggestion + .tt-suggestion {
+      border-top: 1px solid #ccc;
+    }
+
+    .tt-suggestions .go-path {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .tt-suggestions .go-description {
+      margin: 0;
+    }
+
+    .twitter-typeahead .tt-suggestion.tt-cursor {
+      background: #03739c;
+      color: white;
+      cursor: pointer;
+    }
   }
 }

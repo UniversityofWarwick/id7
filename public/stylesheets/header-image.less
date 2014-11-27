@@ -21,17 +21,25 @@
 
   position: relative;
   .strapline {
-    color: white;
-    background: rgba(80, 80, 80, 0.3);
+    display: none;
 
-    h2 {
-      margin: (@line-height-computed / 2) 0;
-    }
+    @media (min-width: @screen-sm-min) {
+      .site-root & {
+        display: block;
 
-    &.bottom {
-      position: absolute;
-      bottom: 0px;
-      padding-bottom: @id7-content-header-height;
+        color: white;
+        background: rgba(80, 80, 80, 0.3);
+
+        h2 {
+          margin: (@line-height-computed / 2) 0;
+        }
+
+        &.bottom {
+          position: absolute;
+          bottom: 0px;
+          padding-bottom: @id7-content-header-height;
+        }
+      }
     }
   }
 }
