@@ -8,4 +8,26 @@
   }
 
   .link-colour(white);
+
+  &.affix {
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+
+    @media (min-width: @screen-sm-min) {
+      width: @container-sm;
+    }
+
+    @media (min-width: @screen-md-min) {
+      width: @container-md;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      width: @container-lg;
+    }
+
+    + #masthead {
+      margin-top: @id7-masthead-bleed-height;
+    }
+  }
 }

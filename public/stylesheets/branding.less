@@ -73,7 +73,7 @@
 
     &:hover,
     &:focus {
-      color: @link-active-bg;
+      color: @bg;
     }
   }
 
@@ -161,7 +161,6 @@
   .brand-border { border-color: @colour; }
 
   #utility-masthead {
-    //background-color: fadeout(@colour, 30%);
     &::after {
       background-color: @colour;
     }
@@ -192,6 +191,10 @@
         &:hover,
         &:focus {
           color: lighten(contrast(@id7-breadcrumb-navigation-bg), 10%);
+        }
+
+        &::after {
+          color: @colour;
         }
       }
       > .active > a {

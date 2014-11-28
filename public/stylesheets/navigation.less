@@ -9,7 +9,7 @@
   }
 
   &.affix {
-    top: 0px;
+    top: @id7-masthead-bleed-height;
     width: 100%;
     z-index: 10;
 
@@ -55,39 +55,44 @@
     border-width: 0px;
   }
 
-  .navbar-brand:focus {
-    // remove focus outline
-    outline: 0 !important;
-  }
-
   .navbar-toggle, .navbar-brand {
     padding: 7px 8px;
   }
 
   .navbar-brand {
     margin-left: -(@grid-gutter-width / 2);
-
     background: @id7-breadcrumb-navigation-bg;
+
+    &:focus {
+      // remove focus outline
+      outline: 0 !important;
+    }
+
+    i.fa {
+      position: relative;
+      top: -2px; // FIXME magic number
+    }
   }
 
   .navbar-breadcrumbs {
     .navbar-nav {
       > li > a {
-        padding-left: 5px;
-        padding-right: 5px;
-        margin: 0 8px;
-        text-decoration: underline;
+        padding-left: 4px; // FIXME magic number
+        padding-right: 6px; // FIXME magic number
+        margin: 0 10px; // FIXME magic number
 
         &:first-child { margin-left: 0; }
         &::after {
-          content: '>';
-          .small();
+          .fa();
+          font-size: 0.7em; // FIXME magic number
+          content: @fa-var-play;
           position: absolute;
           left: 100%;
+          top: 11px; // FIXME magic number
         }
       }
       > li.navbar-text {
-        padding-left: 5px;
+        padding-left: 4px;
       }
     }
   }

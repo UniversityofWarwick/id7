@@ -46,9 +46,9 @@
             minLength: 2,
             hint: false,
             templates: {
-                suggestion: Handlebars.compile([
-                    '<p class="go-path">{{path}}</p>',
-                    '<p class="go-description">{{description}}</p>'
+                suggestion: _.template([
+                    '<p class="go-path"><%= path %></p>',
+                    '<p class="go-description"><%= description %></p>'
                 ].join(''))
             }
         }).on('typeahead:selected', function(evt, redirect) {
