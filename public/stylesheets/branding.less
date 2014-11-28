@@ -53,8 +53,28 @@
     }
   }
 
+  .navbar-toggle {
+    border: none;
+    color: @link-colour;
+
+    &:hover,
+    &:focus {
+      color: @link-colour;
+      background: none;
+    }
+  }
+
   .navbar-collapse {
     border-color: darken(@bg, 7%);
+  }
+
+  .navbar-brand.btn-link {
+    color: @bg;
+
+    &:hover,
+    &:focus {
+      color: @link-active-bg;
+    }
   }
 
   // Dropdowns
@@ -159,6 +179,36 @@
       contrast(@colour),
       darken(@colour, 7%)
     );
+  }
+
+  .navbar-breadcrumbs {
+    background-color: @id7-breadcrumb-navigation-bg;
+    color: contrast(@id7-breadcrumb-navigation-bg);
+
+    .navbar-nav {
+      > li > a {
+        color: contrast(@id7-breadcrumb-navigation-bg);
+
+        &:hover,
+        &:focus {
+          color: lighten(contrast(@id7-breadcrumb-navigation-bg), 10%);
+        }
+      }
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: lighten(contrast(@id7-breadcrumb-navigation-bg), 10%);
+        }
+      }
+      > .disabled > a {
+        &,
+        &:hover,
+        &:focus {
+          color: lighten(contrast(@id7-breadcrumb-navigation-bg), 40%);
+        }
+      }
+    }
   }
 
   .opaque-navigation .navbar-primary {

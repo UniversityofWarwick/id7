@@ -19,7 +19,9 @@ var assetManagerGroups = {
             'libs/bootstrap-3.3.1.min.js',
             'libs/typeahead.jquery-0.10.5.js',
             'libs/handlebars-2.0.0.js',
-            'search-suggest.jquery.js'
+            'search-suggest.jquery.js',
+            'breadcrumbs.js',
+            'fixed-navigation.js'
         ]
     }
 };

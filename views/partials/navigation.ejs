@@ -1,6 +1,19 @@
 <div id="navigation">
     <nav class="primary-navigation navbar navbar-primary" role="navigation">
         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-navigation-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars fa-fw"></i>
+                </button>
+
+                <button type="button" class="btn-link navbar-brand collapsed" data-toggle="collapse" data-target="#breadcrumbs">
+                    <span class="sr-only">Toggle breadcrumbs</span>
+                    <i class="fa fa-home fa-fw"></i>
+                </button>
+            </div>
+
             <div class="collapse navbar-collapse" id="primary-navigation-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/subpage">Link one</a></li>
@@ -24,5 +37,20 @@
             </div>
         </div>
     </nav>
+
+    <nav class="breadcrumbs navbar navbar-breadcrumbs collapse navbar-breadcrumb-collapse" id="breadcrumbs">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Uni home</a></li>
+                <li><a href="/subpage">IT Services</a></li>
+                <li><a href="/subpage">Services & Support</a></li>
+                <li><a href="/subpage">Web Publishing Service</a></li>
+                <li><a href="/subpage">Files.Warwick</a></li>
+                <li><a href="/subpage">FAQs</a></li>
+                <li class="active navbar-text">How do I upload a ZIP file?</li>
+            </ul>
+        </div>
+    </nav>
+
     <nav class="secondary-navigation"></nav>
 </div>
