@@ -27,3 +27,6 @@ ${*
 # Sublime Text IDE
 *.sublime-project
 *.sublime-workspace
+
+# Generated assets
+/public/stylesheets/*.css

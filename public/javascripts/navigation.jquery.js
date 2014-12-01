@@ -19,29 +19,64 @@
                     '</li>',
                 '</ul>'
             ].join('')
+        },
+        Defaults: {
+            fixed: true,
+            flipBreadcrumbIcons: true,
+            fitToWidth: true,
+            trimLinkTitles: {
+                maxLength: 60,
+                append: '&hellip;'
+            }
         }
     };
 
     var Navigation = (function() {
-        var defaults = {
-            fixed: true,
-            flipBreadcrumbIcons: true,
-            fitToWidth: true
-        };
-
         function Navigation(o) {
-            o = $.extend({}, defaults, o);
+            o = $.extend({}, Config.Defaults, o);
             this.$container = o.container;
+
+            // Allow trimLinkTitles: true, replace with config options
+            if (o.trimLinkTitles && typeof o.trimLinkTitles !== 'object') {
+                o.trimLinkTitles = $.extend({}, Config.Defaults.trimLinkTitles);
+            }
+
             this.options = o;
 
+            if (o.trimLinkTitles) this.trimLinkTitles();
             if (o.fixed) this.affix();
             if (o.flipBreadcrumbIcons) this.flipBreadcrumbIcons();
-            if (o.fitToWidth) this.fitToWidth();
 
             this.wireEventHandlers();
         }
 
         $.extend(Navigation.prototype, {
+            trimLinkTitles: function trimLinkTitles() {
+                var options = this.options.trimLinkTitles;
+
+                this.$container.find('.nav a').filter(function() {
+                    return $.trim($(this).text()).length > options.maxLength;
+                }).each(function() {
+                    var $link = $(this);
+                    var linkTitle = $.trim($link.text());
+
+                    // Split on spaces to avoid breaking in the middle of a word
+                    var words = linkTitle.split(/\s+/g);
+                    var newLinkTitle = [];
+
+                    $.each(words, function(i, word) {
+                        var currentLinkTitle = newLinkTitle.join(' ');
+                        if ((currentLinkTitle + ' ' + word).length > options.maxLength) {
+                            return false; // break
+                        }
+
+                        newLinkTitle.push(word);
+                    });
+
+                    $link.attr('title', linkTitle).text(newLinkTitle.join(' ')).append(options.append);
+                });
+            },
+
             affix: function affix() {
                 this.$container.affix({
                     offset: {
@@ -85,23 +120,29 @@
                         var $li = $(this);
                         $nav.append($li);
                     });
-                    $moreContainer.remove();
+
+                    if ($moreContainer.length == 0) {
+                        $moreContainer = $(Config.Templates.moreContainer);
+                        $collapse.append($moreContainer);
+                    }
 
                     if (screenConfig.name != 'xs') {
                         var isWrapped = function () {
                             return _.some(_.union($nav.find('> li').get(), $collapse.find('> .navbar-right').get()), function (el) {
+                                console.log(el);
+                                console.log($(el).position().top);
+
                                 return $(el).position().top > 0;
                             });
                         };
 
                         if (isWrapped()) {
-                            $moreContainer = $(Config.Templates.moreContainer);
-                            $collapse.append($moreContainer);
-
                             do {
                                 // Remove the last element and prepend it to the more container
                                 $moreContainer.find('> .dropdown > .dropdown-menu').prepend($nav.find('> li').last());
                             } while (isWrapped());
+                        } else {
+                            $moreContainer.remove();
                         }
                     }
                 });
@@ -111,7 +152,8 @@
 
             wireEventHandlers: function wireEventHandlers() {
                 if (this.options.fitToWidth) {
-                    $(window).on('resize.id7.navigation', $.proxy(this.fitToWidth, this))
+                    $('html').on('id7:fonts-loaded', $.proxy(this.fitToWidth, this));
+                    $(window).on('resize.id7.navigation', $.proxy(this.fitToWidth, this));
                 }
             }
         });
@@ -135,6 +177,4 @@
     $(function() {
         $('#navigation').id7Navigation();
     });
-
-
 })(jQuery);

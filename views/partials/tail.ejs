@@ -1,7 +1,20 @@
 </div>
 <div id="right-border"></div>
 
+<script type="text/javascript">
+    window.WebFontConfig = {
+        custom: {
+            families: ['Avenir Next:n1,i1,n5,i5,n7,i7'],
+            urls: ['/stylesheets/avenir-next.css']
+        },
+        active: function() {
+            $('html').trigger('id7:fonts-loaded');
+        }
+    };
+</script>
+
 <script src="/javascripts/libs/jquery-1.11.1.min.js"></script>
+<script src="/javascripts/libs/webfont-1.5.6.min.js"></script>
 <script src="/javascripts/libs/bootstrap-3.3.1.min.js"></script>
 <script src="/javascripts/libs/typeahead.jquery-0.10.5.js"></script>
 <script src="/javascripts/libs/lodash-2.4.1.js"></script>
