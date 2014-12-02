@@ -129,9 +129,6 @@
                     if (screenConfig.name != 'xs') {
                         var isWrapped = function () {
                             return _.some(_.union($nav.find('> li').get(), $collapse.find('> .navbar-right').get()), function (el) {
-                                console.log(el);
-                                console.log($(el).position().top);
-
                                 return $(el).position().top > 0;
                             });
                         };
