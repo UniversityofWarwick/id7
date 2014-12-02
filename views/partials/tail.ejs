@@ -8,7 +8,7 @@
             urls: ['/stylesheets/avenir-next.css']
         },
         active: function() {
-            $('html').trigger('id7:fonts-loaded');
+            $('html').data('fonts-loaded', true).trigger('id7:fonts-loaded');
         }
     };
 </script>

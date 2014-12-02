@@ -150,6 +150,12 @@
             wireEventHandlers: function wireEventHandlers() {
                 if (this.options.fitToWidth) {
                     $('html').on('id7:fonts-loaded', $.proxy(this.fitToWidth, this));
+
+                    // Catch the situation where we're missing the event being fired
+                    if ($('html').data('fonts-loaded')) {
+                        this.fitToWidth();
+                    }
+
                     $(window).on('resize.id7.navigation', $.proxy(this.fitToWidth, this));
                 }
             }
