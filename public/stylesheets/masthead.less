@@ -61,13 +61,13 @@
     }
 
     .parent-site-link {
-      font-weight: 100;
-    }
+      color: @gray;
 
-    .parent-site-link + .current-site-link::before {
-      content: "\00BB";
-      font-weight: 100;
-      margin-right: (@grid-gutter-width / 4);
+      &::after {
+        content: "\00BB";
+        font-weight: 100;
+        margin-left: (@grid-gutter-width / 4);
+      }
     }
   }
 

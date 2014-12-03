@@ -150,13 +150,13 @@
     margin-top: 6px; // FIXME magic number
   }
 
-  .navbar-nav.nav-fixed-width {
-    > li > .description {
-      @media (min-width: @grid-float-breakpoint) {
-        display: block;
-      }
+  @media (min-width: @grid-float-breakpoint) {
+    .site-root .navbar-nav.nav-fixed-width > li > .description {
+      display: block;
     }
+  }
 
+  .navbar-nav.nav-fixed-width {
     @media (min-width: @screen-sm-min) {
       max-width: @id7-navigation-fixed-width-sm * 5; // FIXME magic number
       > li {
