@@ -43,10 +43,6 @@
 
       > li {
         float: left;
-        > a {
-          padding-top: @navbar-padding-vertical;
-          padding-bottom: @navbar-padding-vertical;
-        }
       }
     }
   }
@@ -76,10 +72,10 @@
 
   .navbar-breadcrumbs {
     .navbar-nav {
-      > li > a {
+      > li {
         padding-left: 4px; // FIXME magic number
         padding-right: 6px; // FIXME magic number
-        margin: 0 10px; // FIXME magic number
+        margin: 0 0 0 10px; // FIXME magic number
 
         &:first-child { margin-left: 0; }
         &::after {
@@ -92,7 +88,12 @@
         }
       }
       > li.navbar-text {
-        padding-left: 4px;
+        margin: 0 0 0 10px; // FIXME magic number
+
+        &::after {
+          content: none;
+          display: none;
+        }
       }
     }
   }
@@ -110,6 +111,74 @@
   @media (min-width: @grid-float-breakpoint) {
     .navbar-collapse > .navbar-nav:first-child .dropdown:hover .dropdown-menu {
       display: block;
+    }
+
+    .navbar-nav.nav-fixed-width {
+      margin-right: -(@grid-gutter-width / 2);
+
+      // Switch to table cell rendering to get equal-height columns
+      display: table;
+
+      > li {
+        float: none;
+        display: table-cell;
+      }
+    }
+
+    .navbar-right {
+      margin-right: -(@grid-gutter-width / 2);
+    }
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    // Fiddle with the padding to expand the <a> all the way out
+    .navbar-nav > li {
+      // TODO could extract the horizontal variable here (we set it to 0)
+      padding: @nav-link-padding;
+      padding-top: @navbar-padding-vertical;
+      padding-bottom: @navbar-padding-vertical;
+
+      > a {
+        padding: 0;
+      }
+    }
+  }
+
+  .navbar-nav > li > .description {
+    display: none;
+    .small();
+    margin-top: 6px; // FIXME magic number
+  }
+
+  .navbar-nav.nav-fixed-width {
+    > li > .description {
+      @media (min-width: @grid-float-breakpoint) {
+        display: block;
+      }
+    }
+
+    @media (min-width: @screen-sm-min) {
+      max-width: @id7-navigation-fixed-width-sm * 5; // FIXME magic number
+      > li {
+        min-width: @id7-navigation-fixed-width-sm;
+        max-width: @id7-navigation-fixed-width-sm;
+      }
+    }
+
+    @media (min-width: @screen-md-min) {
+      max-width: @id7-navigation-fixed-width-md * 6; // FIXME magic number
+      > li {
+        min-width: @id7-navigation-fixed-width-md;
+        max-width: @id7-navigation-fixed-width-md;
+      }
+    }
+
+    @media (min-width: @screen-lg-min) {
+      max-width: @id7-navigation-fixed-width-lg * 7; // FIXME magic number
+      > li {
+        min-width: @id7-navigation-fixed-width-lg;
+        max-width: @id7-navigation-fixed-width-lg;
+      }
     }
   }
 }

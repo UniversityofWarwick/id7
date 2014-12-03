@@ -1,14 +1,14 @@
 #main-content-header {
   background: white;
 
-  @media (min-width: @grid-float-breakpoint) {
-    height: @id7-content-header-height;
+  .site-root.content-bleed & {
+    @media (min-width: @grid-float-breakpoint) {
+      height: @id7-content-header-height;
 
-    .container, .row, .header-text, .logo-bleed {
-      height: 100%;
-    }
+      .container, .row, .header-text, .logo-bleed {
+        height: 100%;
+      }
 
-    .site-root & {
       background-color: transparent;
       .img-retina('../images/content-header-logo-bleed@2x.png'; '../images/content-header-logo-bleed@2x.png'; @container-lg; @id7-content-header-height);
       background-size: @container-lg @id7-content-header-height;

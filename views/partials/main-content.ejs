@@ -125,6 +125,14 @@
 
                     <ul class="list-unstyled" style="padding-left: 30px;">
                         <li>
+                            <label for="site-imagery">Site imagery</label>
+                            <select id="site-imagery">
+                                <option value="site1">Black/red dancer</option>
+                                <option value="site2">Motion woman looking at laptop</option>
+                                <option value="site3" selected>Blue globe</option>
+                            </select>
+                        </li>
+                        <li>
                             <label class="checkbox">
                                 <input type="checkbox" data-toggle="className" data-target=".header-text .parent-site-link" data-className="hidden">
                                 Hide parent site name in site header
@@ -183,12 +191,22 @@
                             </select>
                         </li>
                         <li>
-                            <label for="site-imagery">Site imagery</label>
-                            <select id="site-imagery">
-                                <option value="site1">Black/red dancer</option>
-                                <option value="site2">Motion woman looking at laptop</option>
-                                <option value="site3" selected>Blue globe</option>
-                            </select>
+                            <label class="checkbox">
+                                <input type="checkbox" data-toggle="className" data-target=".site-root #main-content-header" data-className="hidden" checked>
+                                Hide page title/header on site roots
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox">
+                                <input type="checkbox" data-toggle="className" data-target="html" data-className="content-bleed">
+                                Bleed content into page title/header (needs to be visible!)
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox">
+                                <input type="checkbox" data-toggle="className" data-target="#primary-navigation-collapse > .nav:first-child" data-className="nav-fixed-width" checked>
+                                Fixed width primary navigation
+                            </label>
                         </li>
                     </ul>
                 </div>

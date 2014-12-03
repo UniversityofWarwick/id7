@@ -1,21 +1,48 @@
+.header-height(@width, @height, @bleed) {
+  @height-total: @navbar-height + @height + @bleed;
+
+  background-size: @width @height-total;
+  min-height: @height-total;
+  margin-bottom: -@bleed;
+
+  &.opaque-navigation {
+    background-position: center @id7-navigation-height;
+  }
+}
+
 #header-image-container {
   .site-root & {
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: @container-sm 195px; // FIXME magic number
+    background-size: @container-sm @id7-header-height-sm;
 
     // Set this on #header-image-container to allow the collapsing nav on smallscreens to fill this height up
     min-height: @id7-header-height-xs;
-    @media (min-width: @grid-float-breakpoint) {
-      @id7-header-height-sm-total: @navbar-height + @id7-header-height-sm + @id7-content-header-height;
 
-      background-size: @container-lg @id7-header-height-sm-total;
-      min-height: @id7-header-height-sm-total;
-      margin-bottom: -@id7-content-header-height;
+    @media (min-width: @screen-sm-min) {
+      .header-height(@container-sm, @id7-header-height-sm, 0px);
+    }
 
-      &.opaque-navigation {
-        background-position: center @id7-navigation-height;
-      }
+    @media (min-width: @screen-md-min) {
+      .header-height(@container-md, @id7-header-height-md, 0px);
+    }
+
+    @media (min-width: @screen-lg-min) {
+      .header-height(@container-lg, @id7-header-height-lg, 0px);
+    }
+  }
+
+  .site-root.content-bleed & {
+    @media (min-width: @screen-sm-min) {
+      .header-height(@container-sm, @id7-header-height-sm, @id7-content-header-height);
+    }
+
+    @media (min-width: @screen-md-min) {
+      .header-height(@container-md, @id7-header-height-md, @id7-content-header-height);
+    }
+
+    @media (min-width: @screen-lg-min) {
+      .header-height(@container-lg, @id7-header-height-lg, @id7-content-header-height);
     }
   }
 
@@ -37,6 +64,11 @@
         &.bottom {
           position: absolute;
           bottom: 0px;
+        }
+      }
+
+      .site-root.content-bleed & {
+        &.bottom {
           padding-bottom: @id7-content-header-height;
         }
       }

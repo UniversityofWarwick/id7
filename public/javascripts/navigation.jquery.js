@@ -126,6 +126,8 @@
                         $collapse.append($moreContainer);
                     }
 
+                    $moreContainer.hide();
+
                     if (screenConfig.name != 'xs') {
                         var isWrapped = function () {
                             return _.some(_.union($nav.find('> li').get(), $collapse.find('> .navbar-right').get()), function (el) {
@@ -134,15 +136,14 @@
                         };
 
                         if (isWrapped()) {
+                            $moreContainer.show();
+
+                            var i = 100; // Infinite loop protection
                             do {
                                 // Remove the last element and prepend it to the more container
                                 $moreContainer.find('> .dropdown > .dropdown-menu').prepend($nav.find('> li').last());
-                            } while (isWrapped());
-                        } else {
-                            $moreContainer.remove();
+                            } while (isWrapped() & --i > 0);
                         }
-                    } else {
-                        $moreContainer.remove();
                     }
                 });
 
@@ -160,6 +161,22 @@
 
                     $(window).on('resize.id7.navigation', $.proxy(this.fitToWidth, this));
                 }
+
+                this.$container.on('click', '.nav > li', function(e) {
+                    var $targetLink = $(e.target).closest('a');
+                    if ($targetLink.length > 0) {
+                        return; // Let the default handler take it
+                    }
+
+                    $targetLink = $(this).find('a').first();
+                    if ($targetLink.length > 0) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        window.location = $targetLink.attr('href');
+
+                        return false;
+                    }
+                });
             }
         });
 

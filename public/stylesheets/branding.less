@@ -26,7 +26,7 @@
   }
 
   .navbar-nav {
-    > li > a {
+    > li {
       color: @link-colour;
 
       &:hover,
@@ -34,8 +34,19 @@
         color: @link-hover-colour;
         background-color: @link-hover-bg;
       }
+
+      cursor: pointer; // TODO move elsewhere
+
+      > a {
+        &,
+        &:hover,
+        &:focus {
+          color: inherit;
+          background: none;
+        }
+      }
     }
-    > .active > a {
+    > .active {
       &,
       &:hover,
       &:focus {
@@ -43,7 +54,7 @@
         background-color: @link-active-bg;
       }
     }
-    > .disabled > a {
+    > .disabled {
       &,
       &:hover,
       &:focus {
@@ -185,26 +196,49 @@
     color: contrast(@id7-breadcrumb-navigation-bg);
 
     .navbar-nav {
-      > li > a {
+      > li {
         color: contrast(@id7-breadcrumb-navigation-bg);
+
+        cursor: pointer; // TODO move elsewhere
+
+        > a {
+          &,
+          &:hover,
+          &:focus {
+            color: inherit;
+            background: none;
+          }
+        }
 
         &:hover,
         &:focus {
-          color: lighten(contrast(@id7-breadcrumb-navigation-bg), 10%);
+          color: contrast(lighten(@colour, 30%));
+          background: lighten(@colour, 30%);
+        }
+
+        // Undo for navbar-text
+        &.navbar-text {
+          cursor: auto; // TODO move elsewhere
+
+          &:hover,
+          &:focus {
+            color: inherit;
+            background: none;
+          }
         }
 
         &::after {
           color: @colour;
         }
       }
-      > .active > a {
+      > .active {
         &,
         &:hover,
         &:focus {
           color: lighten(contrast(@id7-breadcrumb-navigation-bg), 10%);
         }
       }
-      > .disabled > a {
+      > .disabled {
         &,
         &:hover,
         &:focus {
