@@ -1,7 +1,7 @@
 #main-content-header {
   background: white;
 
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @grid-float-breakpoint) {
     height: @id7-content-header-height;
 
     .container, .row, .header-text, .logo-bleed {
@@ -9,7 +9,8 @@
     }
 
     .site-root & {
-      background: transparent url(../images/content-header-logo-bleed@2x.png) right top no-repeat;
+      background-color: transparent;
+      .img-retina('../images/content-header-logo-bleed@2x.png'; '../images/content-header-logo-bleed@2x.png'; @container-lg; @id7-content-header-height);
       background-size: @container-lg @id7-content-header-height;
       z-index: 3;
     }
@@ -39,7 +40,7 @@
   }
 
   .site-root & {
-    @media (min-width: @screen-sm-min) {
+    @media (min-width: @grid-float-breakpoint) {
       padding-top: @grid-gutter-width / 2;
     }
   }

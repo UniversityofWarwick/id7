@@ -3,7 +3,7 @@
     min-height: 0;
     border-width: 0px;
 
-    @media (min-width: @screen-sm-min) {
+    @media (min-width: @grid-float-breakpoint) {
       min-height: @navbar-height;
     }
   }
@@ -94,6 +94,22 @@
       > li.navbar-text {
         padding-left: 4px;
       }
+    }
+  }
+
+  .dropdown-menu {
+    border: 0;
+  }
+
+  @media (max-width: @grid-float-breakpoint-max) {
+    .navbar-collapse {
+      max-height: 70vh;
+    }
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    .navbar-collapse > .navbar-nav:first-child .dropdown:hover .dropdown-menu {
+      display: block;
     }
   }
 }

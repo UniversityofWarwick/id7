@@ -10,7 +10,7 @@
   @link-disabled-bg) {
 
   background-color: @bg;
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @grid-float-breakpoint) {
     .site-root & {
       background-color: fadeout(@bg, 20%);
       &:hover {
@@ -88,38 +88,38 @@
       }
     }
 
-    @media (max-width: @grid-float-breakpoint-max) {
-      // Dropdowns get custom display
-      .open .dropdown-menu {
-        > .dropdown-header {
-          border-color: darken(@bg, 7%);
+    // Dropdowns get custom display
+    .dropdown-menu {
+      background-color: @bg;
+
+      > .dropdown-header {
+        border-color: darken(@bg, 7%);
+      }
+      .divider {
+        background-color: darken(@bg, 7%);
+      }
+      > li > a {
+        color: @link-colour;
+        &:hover,
+        &:focus {
+          color: @link-hover-colour;
+          background-color: @link-hover-bg;
         }
-        .divider {
-          background-color: darken(@bg, 7%);
+      }
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @link-active-colour;
+          background-color: @link-active-bg;
         }
-        > li > a {
-          color: @link-colour;
-          &:hover,
-          &:focus {
-            color: @link-hover-colour;
-            background-color: @link-hover-bg;
-          }
-        }
-        > .active > a {
-          &,
-          &:hover,
-          &:focus {
-            color: @link-active-colour;
-            background-color: @link-active-bg;
-          }
-        }
-        > .disabled > a {
-          &,
-          &:hover,
-          &:focus {
-            color: @link-disabled-colour;
-            background-color: @link-disabled-bg;
-          }
+      }
+      > .disabled > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @link-disabled-colour;
+          background-color: @link-disabled-bg;
         }
       }
     }

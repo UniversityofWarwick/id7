@@ -141,6 +141,8 @@
                         } else {
                             $moreContainer.remove();
                         }
+                    } else {
+                        $moreContainer.remove();
                     }
                 });
 

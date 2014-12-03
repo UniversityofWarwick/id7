@@ -6,7 +6,7 @@
 
     // Set this on #header-image-container to allow the collapsing nav on smallscreens to fill this height up
     min-height: @id7-header-height-xs;
-    @media (min-width: @screen-sm-min) {
+    @media (min-width: @grid-float-breakpoint) {
       @id7-header-height-sm-total: @navbar-height + @id7-header-height-sm + @id7-content-header-height;
 
       background-size: @container-lg @id7-header-height-sm-total;
@@ -23,7 +23,7 @@
   .strapline {
     display: none;
 
-    @media (min-width: @screen-sm-min) {
+    @media (min-width: @grid-float-breakpoint) {
       .site-root & {
         display: block;
 
