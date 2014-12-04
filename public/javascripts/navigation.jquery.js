@@ -1,7 +1,7 @@
 (function($) { 'use strict';
     var Config = {
         Breadcrumbs: {
-            ICON_OPEN: 'fa-play fa-rotate-90',
+            ICON_OPEN: 'fa-ellipsis-h fa-rotate-90',
             ICON_CLOSED: 'fa-ellipsis-h'
         },
         ScreenSizes: [
@@ -89,7 +89,7 @@
             flipBreadcrumbIcons: function flipBreadcrumbIcons() {
                 this.$container.find('.navbar-brand[data-target]').each(function() {
                     var $trigger = $(this);
-                    var $icon = $trigger.find('.fa').addClass(Config.Breadcrumbs.ICON_CLOSED).removeClass(Config.Breadcrumbs.ICON_OPEN);
+                    var $icon = $trigger.find('.fa').addClass(Config.Breadcrumbs.ICON_CLOSED);
 
                     var $element = $($trigger.attr('data-target'));
 
@@ -97,7 +97,7 @@
                         $icon.removeClass(Config.Breadcrumbs.ICON_CLOSED).addClass(Config.Breadcrumbs.ICON_OPEN);
                     });
                     $element.on('hide.bs.collapse', function() {
-                        $icon.addClass(Config.Breadcrumbs.ICON_CLOSED).removeClass(Config.Breadcrumbs.ICON_OPEN);
+                        $icon.removeClass(Config.Breadcrumbs.ICON_OPEN).addClass(Config.Breadcrumbs.ICON_CLOSED);
                     });
                 });
             },
