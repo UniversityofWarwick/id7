@@ -1,4 +1,4 @@
-(function($) {
+(function($) { 'use strict';
     var Config = {
         Breadcrumbs: {
             ICON_OPEN: 'fa-play fa-rotate-90',

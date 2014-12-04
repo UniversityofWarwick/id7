@@ -13,9 +13,6 @@
   @media (min-width: @grid-float-breakpoint) {
     .site-root & {
       background-color: fadeout(@bg, 20%);
-      &:hover {
-        background-color: @bg;
-      }
 
       .transition(background-color 0.15s linear);
     }
@@ -79,14 +76,14 @@
     border-color: darken(@bg, 7%);
   }
 
-  .navbar-brand.btn-link {
-    color: @bg;
-
-    &:hover,
-    &:focus {
-      color: @bg;
-    }
-  }
+//  .navbar-brand.btn-link {
+//    color: @bg;
+//
+//    &:hover,
+//    &:focus {
+//      color: @bg;
+//    }
+//  }
 
   // Dropdowns
   .navbar-nav {
@@ -177,7 +174,7 @@
     }
   }
 
-  .navbar-primary {
+  .navbar-primary, .navbar-breadcrumbs {
     .apply-navbar-brand(
       @colour,
       contrast(@colour),
@@ -191,62 +188,68 @@
     );
   }
 
-  .navbar-breadcrumbs {
-    background-color: @id7-breadcrumb-navigation-bg;
-    color: contrast(@id7-breadcrumb-navigation-bg);
-
-    .navbar-nav {
-      > li {
-        color: contrast(@id7-breadcrumb-navigation-bg);
-
-        cursor: pointer; // TODO move elsewhere
-
-        > a {
-          &,
-          &:hover,
-          &:focus {
-            color: inherit;
-            background: none;
-          }
-        }
-
-        &:hover,
-        &:focus {
-          color: contrast(lighten(@colour, 30%));
-          background: lighten(@colour, 30%);
-        }
-
-        // Undo for navbar-text
-        &.navbar-text {
-          cursor: auto; // TODO move elsewhere
-
-          &:hover,
-          &:focus {
-            color: inherit;
-            background: none;
-          }
-        }
-
-        &::after {
-          color: @colour;
-        }
-      }
-      > .active {
-        &,
-        &:hover,
-        &:focus {
-          color: lighten(contrast(@id7-breadcrumb-navigation-bg), 10%);
-        }
-      }
-      > .disabled {
-        &,
-        &:hover,
-        &:focus {
-          color: lighten(contrast(@id7-breadcrumb-navigation-bg), 40%);
-        }
-      }
+  .site-root & #navigation:hover {
+    .navbar-primary, .navbar-breadcrumbs {
+      background-color: @colour; // TODO work out how to move into apply-navbar-brand
     }
   }
+
+//  .navbar-breadcrumbs {
+//    background-color: @id7-breadcrumb-navigation-bg;
+//    color: contrast(@id7-breadcrumb-navigation-bg);
+//
+//    .navbar-nav {
+//      > li {
+//        color: contrast(@id7-breadcrumb-navigation-bg);
+//
+//        cursor: pointer; // TODO move elsewhere
+//
+//        > a {
+//          &,
+//          &:hover,
+//          &:focus {
+//            color: inherit;
+//            background: none;
+//          }
+//        }
+//
+//        &:hover,
+//        &:focus {
+//          color: contrast(lighten(@colour, 30%));
+//          background: lighten(@colour, 30%);
+//        }
+//
+//        // Undo for navbar-text
+//        &.navbar-text {
+//          cursor: auto; // TODO move elsewhere
+//
+//          &:hover,
+//          &:focus {
+//            color: inherit;
+//            background: none;
+//          }
+//        }
+//
+//        &::after {
+//          color: @colour;
+//        }
+//      }
+//      > .active {
+//        &,
+//        &:hover,
+//        &:focus {
+//          color: lighten(contrast(@id7-breadcrumb-navigation-bg), 10%);
+//        }
+//      }
+//      > .disabled {
+//        &,
+//        &:hover,
+//        &:focus {
+//          color: lighten(contrast(@id7-breadcrumb-navigation-bg), 40%);
+//        }
+//      }
+//    }
+//  }
 
   .opaque-navigation .navbar-primary {
     background-color: @colour;
