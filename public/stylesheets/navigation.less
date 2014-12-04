@@ -47,7 +47,7 @@
     }
   }
 
-  .navbar-collapse, .navbar-breadcrumb-collapse {
+  /*.navbar-collapse, */.navbar-breadcrumb-collapse {
     border-width: 0px;
   }
 
@@ -109,19 +109,19 @@
     border: 0;
   }
 
-  @media (max-width: @grid-float-breakpoint-max) {
-    .navbar-collapse {
-      max-height: 70vh;
-    }
-  }
+//  @media (max-width: @grid-float-breakpoint-max) {
+//    .navbar-collapse {
+//      max-height: 70vh;
+//    }
+//  }
+//
+//  @media (min-width: @grid-float-breakpoint) {
+//    .navbar-collapse > .navbar-nav:first-child .dropdown:hover .dropdown-menu {
+//      display: block;
+//    }
+//  }
 
-  @media (min-width: @grid-float-breakpoint) {
-    .navbar-collapse > .navbar-nav:first-child .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-  }
-
-  @media (min-width: @grid-float-breakpoint) {
+//  @media (min-width: @grid-float-breakpoint) {
     // Fiddle with the padding to expand the <a> all the way out
     .navbar-nav > li {
       // TODO could extract the horizontal variable here (we set it to 0)
@@ -133,7 +133,7 @@
         padding: 0;
       }
     }
-  }
+//  }
 
   .navbar-nav > li > .description {
     display: none;
@@ -141,15 +141,20 @@
     margin-top: 6px; // FIXME magic number
   }
 
-  @media (min-width: @grid-float-breakpoint) {
+  @media (min-width: @screen-md-min) {
     .site-root & .navbar-nav.nav-fixed-width > li > .description {
       display: block;
     }
   }
 
   .navbar-nav.nav-fixed-width {
+    > li {
+      min-width: @id7-navigation-fixed-width-xs;
+      max-width: @id7-navigation-fixed-width-xs;
+    }
+
     @media (min-width: @screen-sm-min) {
-      max-width: @id7-navigation-fixed-width-sm * 5; // FIXME magic number
+//      max-width: @id7-navigation-fixed-width-sm * 5; // FIXME magic number
       > li {
         min-width: @id7-navigation-fixed-width-sm;
         max-width: @id7-navigation-fixed-width-sm;
@@ -157,7 +162,7 @@
     }
 
     @media (min-width: @screen-md-min) {
-      max-width: @id7-navigation-fixed-width-md * 6; // FIXME magic number
+//      max-width: @id7-navigation-fixed-width-md * 6; // FIXME magic number
       > li {
         min-width: @id7-navigation-fixed-width-md;
         max-width: @id7-navigation-fixed-width-md;
@@ -165,7 +170,7 @@
     }
 
     @media (min-width: @screen-lg-min) {
-      max-width: @id7-navigation-fixed-width-lg * 7; // FIXME magic number
+//      max-width: @id7-navigation-fixed-width-lg * 7; // FIXME magic number
       > li {
         min-width: @id7-navigation-fixed-width-lg;
         max-width: @id7-navigation-fixed-width-lg;
@@ -175,4 +180,27 @@
 
   // TODO remove this it's just cheating
   .site-root & .secondary-navigation { display: none; }
+
+  // Don't collapse nav
+  .navbar-header {
+    .pull-left();
+  }
+
+  .navbar-nav {
+    // Uncollapse the nav
+    float: left;
+    margin: 0;
+
+    > li {
+      float: left;
+    }
+
+    &.navbar-right {
+      .pull-right();
+
+      .dropdown-menu {
+        .dropdown-menu-right();
+      }
+    }
+  }
 }

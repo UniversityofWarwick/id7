@@ -14,7 +14,7 @@
             moreContainer: [
                 '<ul class="nav navbar-nav navbar-right">',
                     '<li class="dropdown">',
-                        '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>',
+                        '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-bars"></i></a>',
                         '<ul class="dropdown-menu" role="menu"></ul>',
                     '</li>',
                 '</ul>'
@@ -25,6 +25,7 @@
             flipBreadcrumbIcons: true,
             fitToWidth: true,
             equaliseHeight: true,
+            collapseSmallscreen: false,
             trimLinkTitles: {
                 maxLength: 60,
                 append: '&hellip;'
@@ -118,10 +119,12 @@
             },
 
             fitToWidth: function fitToWidth(screenConfig) {
-                this.$container.find('.navbar-collapse').each(function() {
-                    var $collapse = $(this);
-                    var $nav = $collapse.find('> .nav').first();
-                    var $moreContainer = $collapse.find('> .navbar-right');
+                var options = this.options;
+
+                this.$container.find('.navbar:not(.navbar-breadcrumbs)').each(function() {
+                    var $navbar = $(this);
+                    var $nav = $navbar.find('> .nav').first();
+                    var $moreContainer = $navbar.find('> .navbar-right');
 
                     $moreContainer.find('> .dropdown > .dropdown-menu > li').each(function() {
                         var $li = $(this);
@@ -130,14 +133,14 @@
 
                     if ($moreContainer.length == 0) {
                         $moreContainer = $(Config.Templates.moreContainer);
-                        $collapse.append($moreContainer);
+                        $navbar.append($moreContainer);
                     }
 
                     $moreContainer.hide();
 
-                    if (screenConfig.name != 'xs') {
+                    if (!options.collapseSmallscreen || screenConfig.name != 'xs') {
                         var isWrapped = function () {
-                            return _.some(_.union($nav.find('> li').get(), $collapse.find('> .navbar-right').get()), function (el) {
+                            return _.some(_.union($nav.find('> li').get(), $navbar.find('> .navbar-right').get()), function (el) {
                                 return $(el).position().top > 0;
                             });
                         };
@@ -148,7 +151,7 @@
                             var i = 100; // Infinite loop protection
                             do {
                                 // Remove the last element and prepend it to the more container
-                                $moreContainer.find('> .dropdown > .dropdown-menu').prepend($nav.find('> li').last());
+                                $moreContainer.find('> .dropdown > .dropdown-menu').prepend($nav.find('> li').last().css('height', ''));
                             } while (isWrapped() & --i > 0);
                         }
                     }
@@ -156,9 +159,11 @@
             },
 
             equaliseHeight: function equaliseHeight(screenConfig) {
+                var options = this.options;
+
                 this.$container.find('.nav-fixed-width').closest('.navbar').each(function() {
                     var $navbar = $(this);
-                    var $nav = $navbar.find('.navbar-collapse > .nav').first();
+                    var $nav = $navbar.find('> .nav').first();
                     var $header = $navbar.find('> .navbar-header > .navbar-brand');
                     var $right = $navbar.find('.navbar-right > .dropdown').first();
 
@@ -167,7 +172,7 @@
                         var candidates = _.union($nav.find('> li').get(), $header.get(), $right.get());
                         _.each(candidates, function(candidate) { $(candidate).css('height', ""); });
 
-                        if (screenConfig.name != 'xs') {
+                        if (!options.collapseSmallscreen || screenConfig.name != 'xs') {
                             var heights = _.map(candidates, function(candidate) { return $(candidate).outerHeight(); });
 
                             var maxHeight = _.max(heights);
