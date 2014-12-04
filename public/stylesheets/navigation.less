@@ -56,7 +56,7 @@
   }
 
   .navbar-brand {
-    margin-left: -(@grid-gutter-width / 2);
+//    margin-left: -(@grid-gutter-width / 2);
     //background: @id7-breadcrumb-navigation-bg;
 
     &:focus {
@@ -120,7 +120,7 @@
     }
 
     .navbar-nav.nav-fixed-width {
-      margin-right: -(@grid-gutter-width / 2);
+//      margin-right: -(@grid-gutter-width / 2);
 
       // Switch to table cell rendering to get equal-height columns
       display: table;
@@ -132,7 +132,7 @@
     }
 
     .navbar-right {
-      margin-right: -(@grid-gutter-width / 2);
+//      margin-right: -(@grid-gutter-width / 2);
     }
   }
 
@@ -187,4 +187,7 @@
       }
     }
   }
+
+  // TODO remove this it's just cheating
+  .site-root & .secondary-navigation { display: none; }
 }

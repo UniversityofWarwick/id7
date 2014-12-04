@@ -194,6 +194,22 @@
     }
   }
 
+  .navbar-secondary {
+    @secondary-colour: @id7-brand-orange; // FIXME hardcoded
+
+    .apply-navbar-brand(
+      @id7-brand-orange,
+      contrast(@id7-brand-orange),
+      contrast(@id7-brand-orange),
+      contrast(@id7-brand-orange),
+      darken(@id7-brand-orange, 7%),
+      contrast(lighten(@id7-brand-orange, 20%)),
+      lighten(@id7-brand-orange, 20%),
+      contrast(@id7-brand-orange),
+      darken(@id7-brand-orange, 7%)
+    );
+  }
+
 //  .navbar-breadcrumbs {
 //    background-color: @id7-breadcrumb-navigation-bg;
 //    color: contrast(@id7-breadcrumb-navigation-bg);

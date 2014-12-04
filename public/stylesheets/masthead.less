@@ -44,9 +44,13 @@
 
   .logo a {
     display: block;
-    height: 100%;
+    height: @id7-masthead-height-xs;
     width: 100%;
     text-align: center;
+
+    @media (min-width: @grid-float-breakpoint) {
+      height: @id7-masthead-height-sm;
+    }
 
     img {
       height: 100%;
