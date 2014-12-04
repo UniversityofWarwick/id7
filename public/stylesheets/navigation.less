@@ -56,8 +56,7 @@
   }
 
   .navbar-brand {
-//    margin-left: -(@grid-gutter-width / 2);
-    //background: @id7-breadcrumb-navigation-bg;
+    border: 0;
 
     &:focus {
       // remove focus outline
@@ -66,7 +65,7 @@
 
     i.fa {
       position: relative;
-      top: -2px; // FIXME magic number
+//      top: -2px; // FIXME magic number
 
       &.fa-play {
         font-size: 10px; // FIXME magic number
@@ -117,22 +116,6 @@
   @media (min-width: @grid-float-breakpoint) {
     .navbar-collapse > .navbar-nav:first-child .dropdown:hover .dropdown-menu {
       display: block;
-    }
-
-    .navbar-nav.nav-fixed-width {
-//      margin-right: -(@grid-gutter-width / 2);
-
-      // Switch to table cell rendering to get equal-height columns
-      display: table;
-
-      > li {
-        float: none;
-        display: table-cell;
-      }
-    }
-
-    .navbar-right {
-//      margin-right: -(@grid-gutter-width / 2);
     }
   }
 

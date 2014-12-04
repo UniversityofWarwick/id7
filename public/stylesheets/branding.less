@@ -174,7 +174,7 @@
     }
   }
 
-  .navbar-primary, .navbar-breadcrumbs {
+  .navbar-primary {
     .apply-navbar-brand(
       @colour,
       contrast(@colour),
@@ -189,8 +189,37 @@
   }
 
   .site-root & #navigation:hover {
-    .navbar-primary, .navbar-breadcrumbs {
+    .navbar-primary {
       background-color: @colour; // TODO work out how to move into apply-navbar-brand
+    }
+  }
+
+  @breadcrumbs-colour: lighten(@colour, 10%);
+  .navbar-primary .navbar-brand {
+    background: @breadcrumbs-colour;
+  }
+
+  .navbar-breadcrumbs {
+    .apply-navbar-brand(
+      @breadcrumbs-colour,
+      contrast(@breadcrumbs-colour),
+      contrast(@breadcrumbs-colour),
+      contrast(@breadcrumbs-colour),
+      darken(@breadcrumbs-colour, 7%),
+      contrast(lighten(@breadcrumbs-colour, 20%)),
+      lighten(@breadcrumbs-colour, 20%),
+      contrast(@breadcrumbs-colour),
+      darken(@breadcrumbs-colour, 7%)
+    );
+
+    .site-root & {
+      .transition(~"background-color 0.15s linear, height .35s ease, visibility .35s ease");
+    }
+  }
+
+  .site-root & #navigation:hover {
+    .navbar-breadcrumbs {
+      background-color: @breadcrumbs-colour; // TODO work out how to move into apply-navbar-brand
     }
   }
 

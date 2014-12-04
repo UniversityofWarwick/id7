@@ -2,7 +2,7 @@
     var Config = {
         Breadcrumbs: {
             ICON_OPEN: 'fa-play fa-rotate-90',
-            ICON_CLOSED: 'fa-home'
+            ICON_CLOSED: 'fa-ellipsis-h'
         },
         ScreenSizes: [
             { name: 'lg', test: function() { return window.matchMedia("(min-width: 1200px)").matches; }, container: 1170 },
@@ -24,6 +24,7 @@
             fixed: true,
             flipBreadcrumbIcons: true,
             fitToWidth: true,
+            equaliseHeight: true,
             trimLinkTitles: {
                 maxLength: 60,
                 append: '&hellip;'
@@ -88,7 +89,7 @@
             flipBreadcrumbIcons: function flipBreadcrumbIcons() {
                 this.$container.find('.navbar-brand[data-target]').each(function() {
                     var $trigger = $(this);
-                    var $icon = $trigger.find('.fa');
+                    var $icon = $trigger.find('.fa').addClass(Config.Breadcrumbs.ICON_CLOSED).removeClass(Config.Breadcrumbs.ICON_OPEN);
 
                     var $element = $($trigger.attr('data-target'));
 
@@ -105,12 +106,18 @@
                 return _.find(Config.ScreenSizes, function(screenConfig) { return screenConfig.test(); });
             },
 
-            fitToWidth: function fitToWidth() {
+            onScreenResize: function onResize() {
                 // Which stop-point are we on?
                 var screenConfig = this._screenConfig();
-                if (screenConfig.name === this.lastScreenConfig);
+                if (screenConfig.name === this.lastScreenConfig) return;
 
-                // Put the bunnies back in the box
+                if (this.options.fitToWidth) this.fitToWidth(screenConfig);
+                if (this.options.equaliseHeight) this.equaliseHeight(screenConfig);
+
+                this.lastScreenConfig = screenConfig.name;
+            },
+
+            fitToWidth: function fitToWidth(screenConfig) {
                 this.$container.find('.navbar-collapse').each(function() {
                     var $collapse = $(this);
                     var $nav = $collapse.find('> .nav').first();
@@ -146,20 +153,41 @@
                         }
                     }
                 });
+            },
 
-                this.lastScreenConfig = screenConfig.name;
+            equaliseHeight: function equaliseHeight(screenConfig) {
+                this.$container.find('.nav-fixed-width').closest('.navbar').each(function() {
+                    var $navbar = $(this);
+                    var $nav = $navbar.find('.navbar-collapse > .nav').first();
+                    var $header = $navbar.find('> .navbar-header > .navbar-brand');
+                    var $right = $navbar.find('.navbar-right > .dropdown').first();
+
+                    if ($nav.length > 0) {
+                        // Convert all the candidates into their height
+                        var candidates = _.union($nav.find('> li').get(), $header.get(), $right.get());
+                        _.each(candidates, function(candidate) { $(candidate).css('height', ""); });
+
+                        if (screenConfig.name != 'xs') {
+                            var heights = _.map(candidates, function(candidate) { return $(candidate).outerHeight(); });
+
+                            var maxHeight = _.max(heights);
+
+                            _.each(candidates, function(candidate) { $(candidate).css('height', maxHeight + 'px'); });
+                        }
+                    }
+                });
             },
 
             wireEventHandlers: function wireEventHandlers() {
-                if (this.options.fitToWidth) {
-                    $('html').on('id7:fonts-loaded', $.proxy(this.fitToWidth, this));
+                if (this.options.fitToWidth || this.options.equaliseHeight) {
+                    $('html').on('id7:fonts-loaded', $.proxy(this.onScreenResize, this));
 
                     // Catch the situation where we're missing the event being fired
                     if ($('html').data('fonts-loaded')) {
-                        this.fitToWidth();
+                        this.onScreenResize();
                     }
 
-                    $(window).on('resize.id7.navigation', $.proxy(this.fitToWidth, this));
+                    $(window).on('resize.id7.navigation.fitToWidth', $.proxy(this.onScreenResize, this));
                 }
 
                 this.$container.on('click', '.nav > li', function(e) {
