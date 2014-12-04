@@ -110,7 +110,9 @@
             onScreenResize: function onResize() {
                 // Which stop-point are we on?
                 var screenConfig = this._screenConfig();
-                if (screenConfig.name === this.lastScreenConfig) return;
+
+                // Early exit if the width is the same. xs is variable width so can't be clever :(
+                if (screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
 
                 if (this.options.fitToWidth) this.fitToWidth(screenConfig);
                 if (this.options.equaliseHeight) this.equaliseHeight(screenConfig);
