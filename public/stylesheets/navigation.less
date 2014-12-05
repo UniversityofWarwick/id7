@@ -1,10 +1,14 @@
 #navigation {
+  position: relative;
+  z-index: 1;
+
   .navbar {
     min-height: 0;
     border-width: 0px;
   }
 
   &.affix {
+    position: fixed;
     top: @id7-masthead-bleed-height;
     width: 100%;
     z-index: 10;
@@ -43,7 +47,7 @@
     }
   }
 
-  /*.navbar-collapse, */.navbar-breadcrumb-collapse {
+  .navbar-breadcrumb-collapse {
     border-width: 0px;
   }
 
@@ -106,12 +110,6 @@
     border: 0;
   }
 
-//  @media (max-width: @grid-float-breakpoint-max) {
-//    .navbar-collapse {
-//      max-height: 70vh;
-//    }
-//  }
-
   @media (min-width: @grid-float-breakpoint) {
     .navbar-nav .dropdown:hover .dropdown-menu {
       display: block;
@@ -169,7 +167,6 @@
     }
 
     @media (min-width: @screen-sm-min) {
-//      max-width: @id7-navigation-fixed-width-sm * 5; // FIXME magic number
       > li {
         min-width: @id7-navigation-fixed-width-sm;
         max-width: @id7-navigation-fixed-width-sm;
@@ -177,7 +174,6 @@
     }
 
     @media (min-width: @screen-md-min) {
-//      max-width: @id7-navigation-fixed-width-md * 6; // FIXME magic number
       > li {
         min-width: @id7-navigation-fixed-width-md;
         max-width: @id7-navigation-fixed-width-md;
@@ -185,7 +181,6 @@
     }
 
     @media (min-width: @screen-lg-min) {
-//      max-width: @id7-navigation-fixed-width-lg * 7; // FIXME magic number
       > li {
         min-width: @id7-navigation-fixed-width-lg;
         max-width: @id7-navigation-fixed-width-lg;

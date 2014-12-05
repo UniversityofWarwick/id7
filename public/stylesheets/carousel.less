@@ -62,28 +62,32 @@
 }
 
 // Change carousel indicators to triangles
-.carousel .carousel-indicators li {
-  border: 0;
-  text-indent: 0;
-  width: 14px;
-  height: 14px;
+.carousel .carousel-indicators {
+  z-index: 1;
 
-  &::after {
-    .fa();
-    .fa-rotate-90();
-
-    color: @gray-light;
-    content: @fa-var-play;
-
-    position: relative;
-    top: -4px; // FIXME hardcoded
-  }
-
-  &.active {
-    background: none;
+  li {
+    border: 0;
+    text-indent: 0;
+    width: 14px;
+    height: 14px;
 
     &::after {
-      color: contrast(white);
+      .fa();
+      .fa-rotate-90();
+
+      color: @gray-light;
+      content: @fa-var-play;
+
+      position: relative;
+      top: -4px; // FIXME hardcoded
+    }
+
+    &.active {
+      background: none;
+
+      &::after {
+        color: contrast(white);
+      }
     }
   }
 }
