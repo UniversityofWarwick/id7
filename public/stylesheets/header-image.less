@@ -12,7 +12,7 @@
 
 #header-image-container {
   .site-root & {
-    background-position: center bottom;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: @container-sm @id7-header-height-sm;
 
@@ -20,6 +20,8 @@
     min-height: @id7-header-height-xs;
 
     @media (min-width: @screen-sm-min) {
+      background-position: center bottom;
+
       .header-height(@container-sm, @id7-header-height-sm, 0px);
     }
 

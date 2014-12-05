@@ -207,7 +207,9 @@
                     if ($targetLink.length > 0) {
                         e.stopPropagation();
                         e.preventDefault();
-                        window.location = $targetLink.attr('href');
+
+                        $targetLink[0].click();
+                        //window.location = $targetLink.attr('href');
 
                         return false;
                     }
