@@ -1,7 +1,12 @@
 .header-height(@width, @height, @bleed) {
   @height-total: @navbar-height + @height + @bleed;
 
-  background-size: @width @height-total;
+  &,
+  .carousel > .carousel-inner > .item {
+    background-position: center bottom;
+    background-size: @width @height-total;
+  }
+
   min-height: @height-total;
   margin-bottom: -@bleed;
 
@@ -12,16 +17,17 @@
 
 #header-image-container {
   .site-root & {
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: @container-sm (@id7-header-height-sm + @navbar-height);
+    &,
+    .carousel > .carousel-inner > .item {
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: @container-sm (@id7-header-height-sm + @navbar-height);
+    }
 
     // Set this on #header-image-container to allow the collapsing nav on smallscreens to fill this height up
     min-height: @id7-header-height-xs;
 
     @media (min-width: @screen-sm-min) {
-      background-position: center bottom;
-
       .header-height(@container-sm, @id7-header-height-sm, 0px);
     }
 

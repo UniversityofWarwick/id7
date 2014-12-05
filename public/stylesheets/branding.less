@@ -288,6 +288,16 @@
   .form-control {
     .form-control-focus(@colour);
   }
+
+  .carousel .carousel-indicators li {
+    &::after {
+      color: fadeout(@colour, 70%);
+    }
+
+    &.active::after {
+      color: @colour;
+    }
+  }
 }
 
 body {
