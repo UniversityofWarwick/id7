@@ -68,9 +68,13 @@
       color: @gray;
 
       &::after {
-        content: "\00BB";
-        font-weight: 100;
+        .fa();
+        font-size: 12px; // FIXME hardcoded
+        content: @fa-var-play;
         margin-left: (@grid-gutter-width / 4);
+
+        position: relative;
+        top: -4px; // FIXME hardcoded
       }
     }
   }

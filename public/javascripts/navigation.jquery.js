@@ -1,8 +1,8 @@
 (function($) { 'use strict';
     var Config = {
         Breadcrumbs: {
-            ICON_OPEN: 'fa-ellipsis-h fa-rotate-90',
-            ICON_CLOSED: 'fa-ellipsis-h'
+            ICON_OPEN: 'fa-compass fa-rotate-270',
+            ICON_CLOSED: 'fa-compass'
         },
         ScreenSizes: [
             { name: 'lg', test: function() { return window.matchMedia("(min-width: 1200px)").matches; }, container: 1170 },

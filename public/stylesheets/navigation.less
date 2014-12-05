@@ -2,10 +2,6 @@
   .navbar {
     min-height: 0;
     border-width: 0px;
-
-    @media (min-width: @grid-float-breakpoint) {
-      min-height: @navbar-height;
-    }
   }
 
   &.affix {
@@ -78,11 +74,13 @@
   }
 
   .navbar-breadcrumbs {
+    .small();
+
     .navbar-nav {
       > li {
         padding-left: 4px; // FIXME magic number
         padding-right: 6px; // FIXME magic number
-        margin: 0 0 0 10px; // FIXME magic number
+        margin: 0 10px 0 0; // FIXME magic number
 
         &:first-child { margin-left: 0; }
         &::after {
@@ -95,7 +93,9 @@
         }
       }
       > li.navbar-text {
-        margin: 0 0 0 10px; // FIXME magic number
+        margin: 0 10px 0 0; // FIXME magic number
+        line-height: 20px; // FIXME magic number
+        cursor: auto;
 
         &::after {
           content: none;
@@ -121,19 +121,37 @@
 //    }
 //  }
 
-//  @media (min-width: @grid-float-breakpoint) {
-    // Fiddle with the padding to expand the <a> all the way out
-    .navbar-nav > li {
-      // TODO could extract the horizontal variable here (we set it to 0)
-      padding: @nav-link-padding;
-      padding-top: @navbar-padding-vertical;
-      padding-bottom: @navbar-padding-vertical;
+  // Fiddle with the padding to expand the <a> all the way out
+  .navbar-nav > li {
+    // TODO could extract the horizontal variable here (we set it to 0)
+    padding: @nav-link-padding;
+    padding-top: @navbar-padding-vertical;
+    padding-bottom: @navbar-padding-vertical;
 
-      > a {
-        padding: 0;
+    > a {
+      padding: 0;
+    }
+  }
+
+  .navbar-primary, .navbar-secondary {
+    .navbar-nav > li {
+      position: relative;
+
+      &:not(.active):not(:first-child)::before {
+        content: '|';
+        position: absolute;
+        right: 100%;
+        top: 6px; // FIXME hardcoded
+        width: 2px;
+        margin-left: 1px;
+        color: white; // FIXME hardcoded
+      }
+
+      &.active + li::before {
+        display: none;
       }
     }
-//  }
+  }
 
   .navbar-nav > li > .description {
     display: none;
