@@ -191,6 +191,10 @@
   // TODO remove this it's just cheating
   .site-root & .secondary-navigation { display: none; }
 
+  .navbar-nav > li {
+    .transition(~"background-color .15s linear, color .15s linear")
+  }
+
   // Don't collapse nav
   .navbar-header {
     .pull-left();
