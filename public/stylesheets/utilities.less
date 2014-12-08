@@ -1,0 +1,64 @@
+.equal-height-xs {
+  .equal-height-columns();
+}
+
+@media (min-width: @screen-sm-min) {
+  // Legacy, use equal-height-md
+  .equal-height {
+    .equal-height-columns();
+  }
+
+  .equal-height-sm {
+    .equal-height-columns();
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .equal-height-md {
+    .equal-height-columns();
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .equal-height-lg {
+    .equal-height-columns();
+  }
+}
+
+// ID6 utility classes
+.id6-layout(@left, @right) {
+  .make-row();
+
+  @media (min-width: @screen-sm-min) {
+    > .column-1 {
+      .make-sm-column(@left);
+    }
+
+    > .column-2 {
+      .make-sm-column(@right);
+    }
+  }
+}
+
+.layout-100 { .id6-layout(12, 0); }
+.layout-75-25 { .id6-layout(9, 3); }
+.layout-50-50 { .id6-layout(6, 6); }
+.layout-25-75 { .id6-layout(3, 9); }
+.layout-33-66 { .id6-layout(4, 8); }
+.layout-66-33 { .id6-layout(8, 4); }
+
+.flush-left {
+  margin-left: -(@grid-gutter-width / 2);
+}
+
+.flush-right {
+  margin-right: -(@grid-gutter-width / 2);
+}
+
+.flush-top {
+  margin-top: -(@grid-gutter-width / 2);
+}
+
+.flush-bottom {
+  margin-bottom: -(@grid-gutter-width / 2);
+}

@@ -1,0 +1,15 @@
+@import 'flexbox.less';
+
+.equal-height-columns() {
+  .flexbox();
+  .flex(2013, 1, 1, auto);
+
+  > [class*='col-'] { // FIXME there must be a more supported way of doing this
+    .flexbox();
+    .flex-direction(column);
+
+    > * {
+      .flex(2013, 1, 1, auto);
+    }
+  }
+}
