@@ -1,0 +1,31 @@
+@import "utility-bar";
+@import "masthead";
+@import "header-image";
+@import "carousel.less";
+
+#utility-masthead {
+  // Place a block underneath the WARWICK text so we can change its colour
+  position: relative;
+  z-index: 40;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: @grid-gutter-width / 2;
+
+    @offset-xs: 36px; // FIXME Magic number
+
+    top: @offset-xs;
+    width: @id7-masthead-logo-width-xs - (@grid-gutter-width / 2);
+    height: @id7-masthead-height-xs - @offset-xs;
+
+    @media (min-width: @grid-float-breakpoint) {
+      @offset-sm: 52px; // FIXME Magic number
+
+      top: @offset-sm;
+      width: @id7-masthead-logo-width-sm - (@grid-gutter-width / 2);
+      height: @id7-masthead-height-sm - @offset-sm;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import 'css-triangles';
+
+@logo-triangle-ratio: 1.141; // Approximately 3090/2708
+@logo-triangle-overlap: 0.89; // Approximately 5504/6180
+
+.logo-as-css-base(@width, @height, @colour) {
+  position: relative;
+  height: @height;
+  width: (@width * 2) * @logo-triangle-overlap;
+
+  &::before {
+    .triangle(down, @width, @height, @colour);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  &::after {
+    .triangle(down, @width, @height, @colour);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.logo-as-css(@width, @height, @colour) when (@width = auto) {
+  .logo-as-css-base(@height * @logo-triangle-ratio, @height, @colour);
+}
+
+.logo-as-css(@width, @height, @colour) when (@height = auto) {
+  .logo-as-css-base(@width, @width / @logo-triangle-ratio, @colour);
+}

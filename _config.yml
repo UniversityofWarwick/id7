@@ -1,0 +1,13 @@
+# Dependencies
+markdown:         kramdown
+
+# Permalinks
+permalink:        pretty
+
+# Server
+source:           docs
+destination:      _gh_pages
+host:             0.0.0.0
+port:             9001
+url:              http://getbootstrap.com
+encoding:         UTF-8
