@@ -91,6 +91,17 @@
             $.each(allClasses, function(i, clz) { $('html').removeClass(clz); });
             $('html').addClass($(this).val());
         }).trigger('change');
+
+        $('#hero-imagery').on('change', function(e) {
+            var allClasses = $(this).find('option').map(function() { return $(this).attr('value'); }).get();
+
+            $.each(allClasses, function(i, clz) { if (clz) { $('#header-image-container').find(clz).addClass('hidden'); } });
+
+            var value = $(this).val();
+            if (value) {
+                $('#header-image-container').find(value).removeClass('hidden');
+            }
+        }).trigger('change');
     });
 </script>
 </body>

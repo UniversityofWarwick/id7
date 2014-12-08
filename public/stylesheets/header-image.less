@@ -57,6 +57,7 @@
   position: relative;
   .strapline {
     display: none;
+    position: relative;
 
     @media (min-width: @grid-float-breakpoint) {
       .site-root & {
@@ -80,6 +81,22 @@
           padding-bottom: @id7-content-header-height;
         }
       }
+    }
+  }
+
+  .header-video {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+
+    iframe {
+      height: 130%;
+      margin: -5% -10%;
+      width: 120%;
     }
   }
 }

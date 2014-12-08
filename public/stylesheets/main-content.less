@@ -40,4 +40,7 @@
   }
 
   padding: @grid-gutter-width / 2 0;
+
+  // Don't allow form elements to drop out of the container
+  input, textarea, select, .uneditable-input { width: auto; max-width: 100%; }
 }

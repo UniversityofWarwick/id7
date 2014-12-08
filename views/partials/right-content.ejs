@@ -23,6 +23,14 @@
         </select>
     </li>
     <li>
+        <label for="hero-imagery">Header 'hero' style</label>
+        <select id="hero-imagery">
+            <option value="" selected>Header image</option>
+            <option value=".carousel">Carousel</option>
+            <option value=".header-video">Video</option>
+        </select>
+    </li>
+    <li>
         <label class="checkbox">
             <input type="checkbox" data-toggle="className" data-target=".header-text .parent-site-link" data-className="hidden">
             Hide parent site name in site header
@@ -102,12 +110,6 @@
         <label class="checkbox">
             <input type="checkbox" data-toggle="className" data-target=".navbar-nav .description" data-className="hidden" checked>
             Hide nav descriptions on site root
-        </label>
-    </li>
-    <li>
-        <label class="checkbox">
-            <input type="checkbox" data-toggle="className" data-target="#header-carousel" data-className="hidden" checked>
-            Hide header slideshow/carousel
         </label>
     </li>
 </ul>
