@@ -104,6 +104,17 @@ module.exports = function (grunt) {
         src: 'less/id7.less',
         dest: 'dist/css/<%= pkg.name %>.css'
       },
+      compileAvenir: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: 'avenir-next.css.map',
+          sourceMapFilename: 'dist/css/avenir-next.css.map'
+        },
+        src: 'less/avenir-next.less',
+        dest: 'dist/css/avenir-next.css'
+      },
       compileTheme: {
         options: {
           strictMath: true,
@@ -136,6 +147,12 @@ module.exports = function (grunt) {
         },
         src: 'dist/css/<%= pkg.name %>.css'
       },
+      avenir: {
+        options: {
+          map: true
+        },
+        src: 'dist/css/avenir-next.css'
+      },
       theme: {
         options: {
           map: true
@@ -164,6 +181,10 @@ module.exports = function (grunt) {
         src: 'dist/css/<%= pkg.name %>.css',
         dest: 'dist/css/<%= pkg.name %>.min.css'
       },
+      minifyAvenir: {
+        src: 'dist/css/avenir-next.css',
+        dest: 'dist/css/avenir-next.min.css'
+      },
       minifyTheme: {
         src: 'dist/css/<%= pkg.name %>-theme.css',
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
@@ -187,9 +208,9 @@ module.exports = function (grunt) {
         src: 'fonts/*',
         dest: 'dist/'
       },
-      jslibs: {
-        src: 'js/libs/*',
-        dest: 'dist/libs/'
+      images: {
+        src: 'images/*',
+        dest: 'dist/'
       },
       docs: {
         src: 'dist/*/*',
@@ -288,14 +309,14 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:core']);
 
   // CSS distribution.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
+  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileAvenir','less:compileTheme']);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:avenir', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyAvenir', 'cssmin:minifyTheme']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js', 'copy:jslibs']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js']);
 
   // Default task.
-  grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
+  grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'test']);
 
   // Docs task.
   grunt.registerTask('docs', ['clean:docs', 'copy:docs']);

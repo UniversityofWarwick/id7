@@ -3,15 +3,34 @@
 <head>
   {% include header.html %}
 </head>
-<body>
-<a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
+<body class="brand-yellow">
+<div id="left-border"></div>
+<div id="fixed-width-container">
+  <a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
 
-<!-- Docs master nav -->
-{% include nav/main.html %}
+  <header id="page-header">
+    {% include utility-masthead.html %}
 
-<!-- Page content of course! -->
-{{ content }}
+    <div id="header-image-container">
+      <!-- Docs master nav -->
+      {% include nav/main.html %}
 
-{% include footer.html %}
+      <div class="strapline top text-right">
+        <div class="container">
+          <h2>University of the Year 2014</h2>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page content of course! -->
+  {{ content }}
+
+  {% include footer.html %}
+</div>
+<div id="right-border"></div>
+
+{% include tail.html %}
+
 </body>
 </html>
