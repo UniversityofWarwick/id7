@@ -1,0 +1,167 @@
+<h2>Colour picker</h2>
+
+<ul>
+  <li><a href="#" data-toggle-class="brand-purple">Purple</a></li>
+  <li><a href="#" data-toggle-class="brand-grey">Grey</a></li>
+  <li><a href="#" data-toggle-class="brand-yellow">Yellow</a></li>
+  <li><a href="#" data-toggle-class="brand-blue">Blue</a></li>
+  <li><a href="#" data-toggle-class="brand-orange">Orange</a></li>
+  <li><a href="#" data-toggle-class="brand-green">Green</a></li>
+  <li><a href="#" data-toggle-class="brand-red">Red (agency)</a></li>
+  <li><a href="#" data-toggle-class="brand-red-bold">Red (Hannah)</a></li>
+</ul>
+
+<h2>Options</h2>
+
+<ul class="list-unstyled" style="padding-left: 30px;">
+  <li>
+    <label for="site-imagery">Site imagery</label>
+    <select id="site-imagery">
+      <option value="site1">Black/red dancer</option>
+      <option value="site2" selected>Motion woman looking at laptop</option>
+      <option value="site3">Blue globe</option>
+    </select>
+  </li>
+  <li>
+    <label class="checkbox">
+      <input type="checkbox" data-toggle="className" data-target=".header-text .parent-site-link" data-className="hidden">
+      Hide parent site name in site header
+    </label>
+  </li>
+  <li>
+    <label class="checkbox">
+      <input type="checkbox" data-toggle="className" data-target="html" data-className="use-avenir" checked>
+      Use Avenir Next instead of Lato as font
+    </label>
+  </li>
+  <li>
+    <label class="checkbox">
+      <input type="checkbox" data-toggle="className" data-target="#header-image-container" data-className="opaque-navigation" checked>
+      Opaque navbar
+    </label>
+  </li>
+  <li>
+    <label class="checkbox">
+      <input type="checkbox" data-toggle="className" id="bordered-cb" data-target="body" data-className="bordered">
+      Add line delimiter between borders and container
+    </label>
+
+    <label for="border-width">Border width (0-10px)</label>
+    <input type="range" min="0" max="10" value="1" id="border-width">
+
+    <label for="border-colour">Border colour</label>
+    <input type="color" id="border-colour" value="#808080">
+  </li>
+  <li>
+    <label class="checkbox">
+      <input type="checkbox" data-toggle="className" data-target="#fixed-width-container" data-className="shadowed">
+      Add shadow to container
+    </label>
+
+    <label for="shadow-blur">Shadow blur (0-100px)</label>
+    <input type="range" min="0" max="100" value="25" id="shadow-blur">
+
+    <label for="border-colour">Shadow opacity (0-1)</label>
+    <input type="range" min="0" max="1" step="0.1" value="0.1" id="shadow-opacity">
+  </li>
+  <li>
+    <label class="checkbox">
+      <input type="checkbox" data-toggle="className" data-target="body" data-className="large-font">
+      Increase body font size to 16px
+    </label>
+  </li>
+  <li>
+    <label for="strapline-position">Strapline position</label>
+    <select id="strapline-position">
+      <option value="bottom text-left">Bottom left</option>
+      <option value="bottom text-right">Bottom right</option>
+      <option value="top text-left">Top left</option>
+      <option value="top text-right" selected>Top right</option>
+      <option value="hidden">None</option>
+    </select>
+  </li>
+  <li>
+    <label class="checkbox">
+      <input type="checkbox" data-toggle="className" data-target=".site-root #main-content-header" data-className="hidden" checked>
+      Hide page title/header on site roots
+    </label>
+  </li>
+  <li>
+    <label class="checkbox">
+      <input type="checkbox" data-toggle="className" data-target="html" data-className="content-bleed">
+      Bleed content into page title/header (needs to be visible!)
+    </label>
+  </li>
+  <li>
+    <label class="checkbox">
+      <input type="checkbox" data-toggle="className" data-target=".primary-navigation > .nav" data-className="nav-fixed-width">
+      Fixed width primary navigation
+    </label>
+  </li>
+  <li>
+    <label class="checkbox">
+      <input type="checkbox" data-toggle="className" data-target=".navbar-nav .description" data-className="hidden" checked>
+      Hide nav descriptions on site root
+    </label>
+  </li>
+</ul>
+
+<script type="text/javascript" defer>
+  var ALL_CLASSES = ['brand-default', 'brand-purple', 'brand-grey', 'brand-yellow', 'brand-blue', 'brand-orange', 'brand-green', 'brand-red', 'brand-red-bold'];
+
+  jQuery(function($) {
+    $('[data-toggle-class]').on('click', function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+
+      var clazz = $(this).data('toggle-class');
+      $.each(ALL_CLASSES, function(i, clz) {
+        if (clz != clazz) {
+          $('.' + clz).removeClass(clz).addClass(clazz);
+        }
+      });
+    });
+
+    $('[data-toggle="className"]').on('change', function(e) {
+      var $cb = $(this);
+      var $target = $($cb.attr('data-target'));
+      var className = $cb.attr('data-className');
+
+      if ($cb.is(':checked')) {
+        $target.addClass(className);
+      } else {
+        $target.removeClass(className);
+      }
+    }).trigger('change');
+
+    $('#border-width').on('change', function(e) {
+      var width = $(this).val();
+      $('#left-border').css('border-right-width', width + 'px');
+      $('#right-border').css('border-left-width', width + 'px');
+    }).trigger('change');
+
+    $('#border-colour').on('change', function(e) {
+      var colour = $(this).val();
+      $('#left-border, #right-border').css('border-color', colour);
+    }).trigger('change');
+
+    $('#shadow-blur, #shadow-opacity').on('change', function(e) {
+      var blur = $('#shadow-blur').val();
+      var opacity = $('#shadow-opacity').val();
+
+      $('#fixed-width-container.shadowed').css('box-shadow', '0 0 ' + blur + 'px rgba(0, 0, 0, ' + opacity + ')');
+    }).trigger('change');
+
+    $('#strapline-position').on('change', function(e) {
+      var classes = 'strapline ' + $(this).val();
+      $('#header-image-container .strapline').attr('class', classes);
+    }).trigger('change');
+
+    $('#site-imagery').on('change', function(e) {
+      var allClasses = $(this).find('option').map(function() { return $(this).attr('value'); }).get();
+
+      $.each(allClasses, function(i, clz) { $('html').removeClass(clz); });
+      $('html').addClass($(this).val());
+    }).trigger('change');
+  });
+</script>

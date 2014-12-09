@@ -30,9 +30,6 @@ id7/
 │   ├── id7.css
 │   ├── id7.css.map
 │   ├── id7.min.css
-│   ├── id7-theme.css
-│   ├── id7-theme.css.map
-│   └── id7-theme.min.css
 ├── js/
 │   ├── id7.js
 │   └── id7.min.js
@@ -54,11 +51,11 @@ Bootstrap's documentation, included in this repo in the root directory, is built
 
 ### Running sample site locally
 
-1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.5.x).
-  - **Windows users:** Read [this unofficial guide](http://jekyll-windows.juthilo.com/) to get Jekyll up and running without problems.
+1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.5.x). **Windows users:** Read [this unofficial guide](http://jekyll-windows.juthilo.com/) to get Jekyll up and running without problems.
 2. Install the Ruby-based syntax highlighter, [Rouge](https://github.com/jneen/rouge), with `gem install rouge`.
-3. From the root `/id7` directory, run `jekyll serve` in the command line.
-4. Open <http://localhost:9001> in your browser, and voilà.
+3. Install [LessCSS support for Jekyll](https://github.com/zroger/jekyll-less) with `gem install jekyll-less`.
+4. From the root `/id7` directory, run `jekyll serve` in the command line.
+5. Open <http://localhost:9001> in your browser, and voilà.
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
 

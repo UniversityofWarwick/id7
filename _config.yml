@@ -1,6 +1,7 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
+gems:             ['jekyll-less']
 
 # Permalinks
 permalink:        pretty

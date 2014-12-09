@@ -1,7 +1,7 @@
-@import "../less/bootstrap/variables.less";
-@import "../less/bootstrap/mixins.less";
-@import "../less/variables.less";
-@import "../less/mixins.less";
+@import "../../../less/bootstrap/variables.less";
+@import "../../../less/bootstrap/mixins.less";
+@import "../../../less/variables.less";
+@import "../../../less/mixins.less";
 
 .apply-site(@name) {
   #header-image-container {
@@ -22,9 +22,9 @@
 }
 
 html {
-  .apply-site('site1');
+  .apply-site('.');
 
-  &.site1 { .apply-site('site1'); }
-  &.site2 { .apply-site('site2'); }
-  &.site3 { .apply-site('site3'); }
+//  &.site1 { .apply-site('site1'); }
+//  &.site2 { .apply-site('site2'); }
+//  &.site3 { .apply-site('site3'); }
 }

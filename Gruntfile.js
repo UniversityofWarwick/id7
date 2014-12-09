@@ -62,11 +62,11 @@ module.exports = function (grunt) {
       },
       core: {
         src: [
-          'js/libs/jquery-1.11.1.min.js',
-          'js/libs/webfont-1.5.6.min.js',
-          'js/libs/bootstrap-3.3.1.min.js',
-          'js/libs/typeahead.jquery-0.10.5.js',
-          'js/libs/lodash-2.4.1.js',
+          'js/vendor/jquery-1.11.1.min.js',
+          'js/vendor/webfont-1.5.6.min.js',
+          'js/vendor/bootstrap-3.3.1.min.js',
+          'js/vendor/typeahead.jquery-0.10.5.js',
+          'js/vendor/lodash-2.4.1.js',
           'js/account-popover.jquery.js',
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js'
@@ -114,17 +114,6 @@ module.exports = function (grunt) {
         },
         src: 'less/avenir-next.less',
         dest: 'dist/css/avenir-next.css'
-      },
-      compileTheme: {
-        options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>-theme.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>-theme.css.map'
-        },
-        src: 'theme/site.less',
-        dest: 'dist/css/<%= pkg.name %>-theme.css'
       }
     },
 
@@ -152,12 +141,6 @@ module.exports = function (grunt) {
           map: true
         },
         src: 'dist/css/avenir-next.css'
-      },
-      theme: {
-        options: {
-          map: true
-        },
-        src: 'dist/css/<%= pkg.name %>-theme.css'
       }
     },
 
@@ -166,8 +149,7 @@ module.exports = function (grunt) {
         csslintrc: 'less/.csslintrc'
       },
       dist: [
-        'dist/css/id7.css',
-        'dist/css/id7-theme.css'
+        'dist/css/id7.css'
       ]
     },
 
@@ -184,10 +166,6 @@ module.exports = function (grunt) {
       minifyAvenir: {
         src: 'dist/css/avenir-next.css',
         dest: 'dist/css/avenir-next.min.css'
-      },
-      minifyTheme: {
-        src: 'dist/css/<%= pkg.name %>-theme.css',
-        dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       }
     },
 
@@ -210,6 +188,10 @@ module.exports = function (grunt) {
       },
       images: {
         src: 'images/*',
+        dest: 'dist/'
+      },
+      vendorjs: {
+        src: 'js/vendor/*',
         dest: 'dist/'
       },
       docs: {
@@ -309,14 +291,14 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:core']);
 
   // CSS distribution.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileAvenir','less:compileTheme']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:avenir', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyAvenir', 'cssmin:minifyTheme']);
+  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileAvenir']);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:avenir', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyAvenir']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'copy:vendorjs']);
 
   // Default task.
-  grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'test']);
+  grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'copy:vendorjs', 'test']);
 
   // Docs task.
   grunt.registerTask('docs', ['clean:docs', 'copy:docs']);

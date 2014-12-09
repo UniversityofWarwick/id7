@@ -23,8 +23,12 @@
                 <div class="row header-text-row">
                     <div class="col-sm-12 header-text">
                         <h1>
-                            <span class="parent-site-link">Study</span>
-                            <span class="current-site-link">Postgraduate</span>
+                            {% if page.slug contains 'subsite' %}
+                                <span class="parent-site-link"><a href="/">ID7 Documentation</a></span>
+                                <span class="current-site-link"><a href="/{{ page.slug }}">Subsite</a></span>
+                            {% else %}
+                                <span class="current-site-link"><a href="/">ID7 Documentation</a></span>
+                            {% endif %}
                         </h1>
                     </div>
                 </div>

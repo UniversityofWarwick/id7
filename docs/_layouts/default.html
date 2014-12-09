@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" class="site-root">
+<html lang="en">
 <head>
   {% include header.html %}
 </head>
-<body class="{% if page.slug contains 'subsite' %}brand-purple{% else %}brand-yellow{% endif %}">
+<body class="brand-yellow">
 <div id="left-border"></div>
-<main id="fixed-width-container">
+<div id="fixed-width-container">
   <a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
 
   <header id="page-header">
     {% include utility-masthead.html %}
 
     <div id="header-image-container">
-      {% if page.header == 'video' %}
-        {% include header-video.html %}
-      {% elsif page.header == 'carousel' %}
-        {% include header-carousel.html %}
-      {% endif %}
-
       <!-- Docs master nav -->
       <div id="navigation">
         {% include nav/main.html %}
         {% include nav/breadcrumbs.html %}
-      </div>
 
-      {% unless page.header == 'carousel' %}
-        <div class="strapline top text-right">
-          <div class="container">
-            <h2>University of the Year 2014</h2>
-          </div>
-        </div>
-      {% endunless %}
+        {% if page.slug contains 'examples' %}
+        {% include nav/examples-secondary.html %}
+        {% endif %}
+      </div>
     </div>
   </header>
 
@@ -59,7 +49,7 @@
   </section>
 
   {% include footer.html %}
-</main>
+</div>
 <div id="right-border"></div>
 
 {% include tail.html %}
