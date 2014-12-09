@@ -21,7 +21,8 @@ module.exports = function (grunt) {
 
     // Task configuration.
     clean: {
-      dist: 'dist'
+      dist: 'dist',
+      docs: 'docs/dist'
     },
 
     jshint: {
@@ -185,6 +186,14 @@ module.exports = function (grunt) {
       fonts: {
         src: 'fonts/*',
         dest: 'dist/'
+      },
+      jslibs: {
+        src: 'js/libs/*',
+        dest: 'dist/libs/'
+      },
+      docs: {
+        src: 'dist/*/*',
+        dest: 'docs/'
       }
     },
 
@@ -202,6 +211,24 @@ module.exports = function (grunt) {
         config: '_config.yml'
       },
       docs: {}
+    },
+
+    validation: {
+      options: {
+        charset: 'utf-8',
+        doctype: 'HTML5',
+        failHard: true,
+        reset: true,
+        relaxerror: [
+          'Element img is missing required attribute src.',
+          'Attribute autocomplete not allowed on element input at this point.',
+          'Attribute autocomplete not allowed on element button at this point.',
+          'Bad value separator for attribute role on element li.'
+        ]
+      },
+      files: {
+        src: '_gh_pages/**/*.html'
+      }
     },
 
     watch: {
@@ -232,7 +259,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Docs HTML validation task
-  //grunt.registerTask('validate-html', ['jekyll:docs', 'validation']);
+  grunt.registerTask('validate-html', ['jekyll:docs', 'validation']);
 
   var runSubset = function (subset) {
     return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset;
@@ -246,13 +273,13 @@ module.exports = function (grunt) {
 
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core')) {
-    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'csslint:dist', 'test-js'/*, 'docs'*/]);
+    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'csslint:dist', 'test-js', 'docs']);
   }
 
   // Skip HTML validation if running a different subset of the test suite
-  //if (runSubset('validate-html')) {
-  //  testSubtasks.push('validate-html');
-  //}
+  if (runSubset('validate-html')) {
+    testSubtasks.push('validate-html');
+  }
 
   grunt.registerTask('test', testSubtasks);
   grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jscs:core', 'jscs:test', 'qunit']);
@@ -260,20 +287,16 @@ module.exports = function (grunt) {
   // JS distribution task.
   grunt.registerTask('dist-js', ['concat', 'uglify:core']);
 
-  // CSS distribution task.
+  // CSS distribution.
   grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js', 'copy:jslibs']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
 
   // Docs task.
-  //grunt.registerTask('docs-css', ['autoprefixer:docs', 'autoprefixer:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
-  //grunt.registerTask('lint-docs-css', ['csslint:docs', 'csslint:examples']);
-  //grunt.registerTask('docs-js', ['uglify:docsJs']);
-  //grunt.registerTask('lint-docs-js', ['jshint:assets', 'jscs:assets']);
-  //grunt.registerTask('docs', ['docs-css', 'lint-docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs']);
+  grunt.registerTask('docs', ['clean:docs', 'copy:docs']);
 };

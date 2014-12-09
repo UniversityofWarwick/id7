@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" class="site-root">
+<head>
+  {% include header.html %}
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
+
+<!-- Docs master nav -->
+{% include nav/main.html %}
+
+<!-- Page content of course! -->
+{{ content }}
+
+{% include footer.html %}
+</body>
+</html>
