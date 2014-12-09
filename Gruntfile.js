@@ -21,8 +21,7 @@ module.exports = function (grunt) {
 
     // Task configuration.
     clean: {
-      dist: 'dist',
-      docs: 'docs/dist'
+      dist: 'dist'
     },
 
     jshint: {
@@ -44,13 +43,13 @@ module.exports = function (grunt) {
       options: {
         config: 'js/.jscsrc'
       },
-      grunt: {
-        src: '<%= jshint.grunt.src %>'
-      },
       core: {
         src: '<%= jshint.core.src %>'
       },
       test: {
+        options: {
+          config: 'js/tests/unit/.jscsrc'
+        },
         src: '<%= jshint.test.src %>'
       }
     },
@@ -186,10 +185,6 @@ module.exports = function (grunt) {
       fonts: {
         src: 'fonts/*',
         dest: 'dist/'
-      },
-      docs: {
-        src: 'dist/*/*',
-        dest: 'docs/'
       }
     },
 
@@ -237,7 +232,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Docs HTML validation task
-  grunt.registerTask('validate-html', ['jekyll:docs', 'validation']);
+  //grunt.registerTask('validate-html', ['jekyll:docs', 'validation']);
 
   var runSubset = function (subset) {
     return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset;
@@ -251,16 +246,16 @@ module.exports = function (grunt) {
 
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core')) {
-    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'csslint:dist', 'test-js', 'docs']);
+    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'csslint:dist', 'test-js'/*, 'docs'*/]);
   }
 
   // Skip HTML validation if running a different subset of the test suite
-  if (runSubset('validate-html')) {
-    testSubtasks.push('validate-html');
-  }
+  //if (runSubset('validate-html')) {
+  //  testSubtasks.push('validate-html');
+  //}
 
   grunt.registerTask('test', testSubtasks);
-  grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jshint:grunt', 'jscs:core', 'jscs:test', 'jscs:grunt', 'qunit']);
+  grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jscs:core', 'jscs:test', 'qunit']);
 
   // JS distribution task.
   grunt.registerTask('dist-js', ['concat', 'uglify:core']);
@@ -276,9 +271,9 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
 
   // Docs task.
-  grunt.registerTask('docs-css', ['autoprefixer:docs', 'autoprefixer:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
-  grunt.registerTask('lint-docs-css', ['csslint:docs', 'csslint:examples']);
-  grunt.registerTask('docs-js', ['uglify:docsJs', 'uglify:customize']);
-  grunt.registerTask('lint-docs-js', ['jshint:assets', 'jscs:assets']);
-  grunt.registerTask('docs', ['docs-css', 'lint-docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'build-customizer']);
+  //grunt.registerTask('docs-css', ['autoprefixer:docs', 'autoprefixer:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
+  //grunt.registerTask('lint-docs-css', ['csslint:docs', 'csslint:examples']);
+  //grunt.registerTask('docs-js', ['uglify:docsJs']);
+  //grunt.registerTask('lint-docs-js', ['jshint:assets', 'jscs:assets']);
+  //grunt.registerTask('docs', ['docs-css', 'lint-docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs']);
 };

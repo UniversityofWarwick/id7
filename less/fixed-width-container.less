@@ -57,7 +57,7 @@ body {
     background-repeat: no-repeat;
     left: 0;
 
-    .translate(-(@container-sm/2), 0);
+    .translate((-(@container-sm/2)), 0);
 
     .bordered & {
       border-right: 1px solid #808080;
@@ -69,7 +69,7 @@ body {
     background-repeat: no-repeat;
     right: 0;
 
-    .translate(@container-sm / 2, 0);
+    .translate((@container-sm / 2), 0);
 
     .bordered & {
       border-left: 1px solid #808080;
@@ -79,20 +79,20 @@ body {
 
 @media (min-width: @screen-md-min) {
   #left-border {
-    .translate(-(@container-md / 2), 0);
+    .translate((-(@container-md / 2)), 0);
 
   }
   #right-border {
-    .translate(@container-md / 2, 0);
+    .translate((@container-md / 2), 0);
   }
 }
 
 @media (min-width: @screen-lg-min) {
   #left-border {
-    .translate(-(@container-lg / 2), 0);
+    .translate((-(@container-lg / 2)), 0);
   }
   #right-border {
-    .translate(@container-lg / 2, 0);
+    .translate((@container-lg / 2), 0);
   }
 }
 

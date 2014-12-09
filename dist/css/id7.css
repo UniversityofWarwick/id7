@@ -8150,10 +8150,10 @@ body {
     left: 0;
     background-repeat: no-repeat;
     background-position: right top;
-    -webkit-transform: translate(-(750px/2), 0);
-        -ms-transform: translate(-(750px/2), 0);
-         -o-transform: translate(-(750px/2), 0);
-            transform: translate(-(750px/2), 0);
+    -webkit-transform: translate(-375px, 0);
+        -ms-transform: translate(-375px, 0);
+         -o-transform: translate(-375px, 0);
+            transform: translate(-375px, 0);
   }
   .bordered #left-border {
     border-right: 1px solid #808080;
@@ -8162,10 +8162,10 @@ body {
     right: 0;
     background-repeat: no-repeat;
     background-position: left top;
-    -webkit-transform: translate(750px / 2, 0);
-        -ms-transform: translate(750px / 2, 0);
-         -o-transform: translate(750px / 2, 0);
-            transform: translate(750px / 2, 0);
+    -webkit-transform: translate(375px, 0);
+        -ms-transform: translate(375px, 0);
+         -o-transform: translate(375px, 0);
+            transform: translate(375px, 0);
   }
   .bordered #right-border {
     border-left: 1px solid #808080;
@@ -8173,30 +8173,30 @@ body {
 }
 @media (min-width: 992px) {
   #left-border {
-    -webkit-transform: translate(-(970px / 2), 0);
-        -ms-transform: translate(-(970px / 2), 0);
-         -o-transform: translate(-(970px / 2), 0);
-            transform: translate(-(970px / 2), 0);
+    -webkit-transform: translate(-485px, 0);
+        -ms-transform: translate(-485px, 0);
+         -o-transform: translate(-485px, 0);
+            transform: translate(-485px, 0);
   }
   #right-border {
-    -webkit-transform: translate(970px / 2, 0);
-        -ms-transform: translate(970px / 2, 0);
-         -o-transform: translate(970px / 2, 0);
-            transform: translate(970px / 2, 0);
+    -webkit-transform: translate(485px, 0);
+        -ms-transform: translate(485px, 0);
+         -o-transform: translate(485px, 0);
+            transform: translate(485px, 0);
   }
 }
 @media (min-width: 1200px) {
   #left-border {
-    -webkit-transform: translate(-(1170px / 2), 0);
-        -ms-transform: translate(-(1170px / 2), 0);
-         -o-transform: translate(-(1170px / 2), 0);
-            transform: translate(-(1170px / 2), 0);
+    -webkit-transform: translate(-585px, 0);
+        -ms-transform: translate(-585px, 0);
+         -o-transform: translate(-585px, 0);
+            transform: translate(-585px, 0);
   }
   #right-border {
-    -webkit-transform: translate(1170px / 2, 0);
-        -ms-transform: translate(1170px / 2, 0);
-         -o-transform: translate(1170px / 2, 0);
-            transform: translate(1170px / 2, 0);
+    -webkit-transform: translate(585px, 0);
+        -ms-transform: translate(585px, 0);
+         -o-transform: translate(585px, 0);
+            transform: translate(585px, 0);
   }
 }
 @media (min-width: 1920px), (min-height: 1200px) {
@@ -8267,7 +8267,7 @@ body {
   border-spacing: 10px;
 }
 #masthead {
-  background-image: url("../images/masthead-logo-bleed-xs@2x.png");
+  background-image: url(../images/masthead-logo-bleed-xs@2x.png);
   -webkit-background-size: 768px 300px;
           background-size: 768px 300px;
 }
@@ -8277,16 +8277,9 @@ body {
 #masthead .logo-row > .logo img {
   visibility: hidden;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  #masthead {
-    background-image: url("../images/masthead-logo-bleed-xs@2x.png");
-    -webkit-background-size: 768px 300px;
-            background-size: 768px 300px;
-  }
-}
 @media (min-width: 768px) {
   #masthead {
-    background-image: url("../images/masthead-logo-bleed-sm@2x.png");
+    background-image: url(../images/masthead-logo-bleed-sm@2x.png);
     -webkit-background-size: 1170px 300px;
             background-size: 1170px 300px;
   }
@@ -8301,26 +8294,19 @@ body {
     float: left;
   }
 }
-@media (min-width: 768px) and only screen and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and only screen and (min--moz-device-pixel-ratio: 2), (min-width: 768px) and only screen and (-o-min-device-pixel-ratio: 2/1), (min-width: 768px) and only screen and (min-device-pixel-ratio: 2), (min-width: 768px) and only screen and (min-resolution: 192dpi), (min-width: 768px) and only screen and (min-resolution: 2dppx) {
-  #masthead {
-    background-image: url("../images/masthead-logo-bleed-sm@2x.png");
-    -webkit-background-size: 1170px 300px;
-            background-size: 1170px 300px;
-  }
-}
 @media (min-width: 768px) {
   #masthead .logo-row > .container-fluid {
-    width: (750px * 2/3) - 180px;
+    width: 320px;
   }
 }
 @media (min-width: 992px) {
   #masthead .logo-row > .container-fluid {
-    width: (970px * 2/3) - 180px;
+    width: 466.66666667px;
   }
 }
 @media (min-width: 1200px) {
   #masthead .logo-row > .container-fluid {
-    width: (1170px * 2/3) - 180px;
+    width: 600px;
   }
 }
 #masthead .logo a {
@@ -8367,8 +8353,8 @@ body {
   margin-left: .3em;
 }
 #masthead .warwick-site-links {
-  margin-top: (80px * 5/6) - (18px / 2);
-  margin-left: 180px + (30px / 2);
+  margin-top: 57.66666667px;
+  margin-left: 195px;
   font-size: 85%;
   filter: alpha(opacity=0);
   opacity: 0;
@@ -8414,11 +8400,11 @@ body {
 }
 @media (min-width: 768px) {
   #masthead .search .search-box {
-    margin-top: 38px + (20px / 2);
+    margin-top: 48px;
   }
 }
 #masthead .search .search-box .input-lg {
-  padding-right: 16px + 26px;
+  padding-right: 42px;
 }
 #masthead .search .form-group {
   padding-bottom: 10px;
@@ -8485,14 +8471,14 @@ body {
 }
 @media (min-width: 768px) {
   .site-root #header-image-container {
-    min-height: 32px + 256px + 0;
+    min-height: 288px;
     margin-bottom: -0;
   }
   .site-root #header-image-container,
   .site-root #header-image-container .carousel > .carousel-inner > .item {
     background-position: center bottom;
-    -webkit-background-size: 750px 32px + 256px + 0;
-            background-size: 750px 32px + 256px + 0;
+    -webkit-background-size: 750px 288px;
+            background-size: 750px 288px;
   }
   .site-root #header-image-container.opaque-navigation {
     background-position: center 32px;
@@ -8500,14 +8486,14 @@ body {
 }
 @media (min-width: 992px) {
   .site-root #header-image-container {
-    min-height: 32px + 330px + 0;
+    min-height: 362px;
     margin-bottom: -0;
   }
   .site-root #header-image-container,
   .site-root #header-image-container .carousel > .carousel-inner > .item {
     background-position: center bottom;
-    -webkit-background-size: 970px 32px + 330px + 0;
-            background-size: 970px 32px + 330px + 0;
+    -webkit-background-size: 970px 362px;
+            background-size: 970px 362px;
   }
   .site-root #header-image-container.opaque-navigation {
     background-position: center 32px;
@@ -8515,14 +8501,14 @@ body {
 }
 @media (min-width: 1200px) {
   .site-root #header-image-container {
-    min-height: 32px + 400px + 0;
+    min-height: 432px;
     margin-bottom: -0;
   }
   .site-root #header-image-container,
   .site-root #header-image-container .carousel > .carousel-inner > .item {
     background-position: center bottom;
-    -webkit-background-size: 1170px 32px + 400px + 0;
-            background-size: 1170px 32px + 400px + 0;
+    -webkit-background-size: 1170px 432px;
+            background-size: 1170px 432px;
   }
   .site-root #header-image-container.opaque-navigation {
     background-position: center 32px;
@@ -8530,14 +8516,14 @@ body {
 }
 @media (min-width: 768px) {
   .site-root.content-bleed #header-image-container {
-    min-height: 32px + 256px + 75px;
+    min-height: 363px;
     margin-bottom: -75px;
   }
   .site-root.content-bleed #header-image-container,
   .site-root.content-bleed #header-image-container .carousel > .carousel-inner > .item {
     background-position: center bottom;
-    -webkit-background-size: 750px 32px + 256px + 75px;
-            background-size: 750px 32px + 256px + 75px;
+    -webkit-background-size: 750px 363px;
+            background-size: 750px 363px;
   }
   .site-root.content-bleed #header-image-container.opaque-navigation {
     background-position: center 32px;
@@ -8545,14 +8531,14 @@ body {
 }
 @media (min-width: 992px) {
   .site-root.content-bleed #header-image-container {
-    min-height: 32px + 330px + 75px;
+    min-height: 437px;
     margin-bottom: -75px;
   }
   .site-root.content-bleed #header-image-container,
   .site-root.content-bleed #header-image-container .carousel > .carousel-inner > .item {
     background-position: center bottom;
-    -webkit-background-size: 970px 32px + 330px + 75px;
-            background-size: 970px 32px + 330px + 75px;
+    -webkit-background-size: 970px 437px;
+            background-size: 970px 437px;
   }
   .site-root.content-bleed #header-image-container.opaque-navigation {
     background-position: center 32px;
@@ -8560,14 +8546,14 @@ body {
 }
 @media (min-width: 1200px) {
   .site-root.content-bleed #header-image-container {
-    min-height: 32px + 400px + 75px;
+    min-height: 507px;
     margin-bottom: -75px;
   }
   .site-root.content-bleed #header-image-container,
   .site-root.content-bleed #header-image-container .carousel > .carousel-inner > .item {
     background-position: center bottom;
-    -webkit-background-size: 1170px 32px + 400px + 75px;
-            background-size: 1170px 32px + 400px + 75px;
+    -webkit-background-size: 1170px 507px;
+            background-size: 1170px 507px;
   }
   .site-root.content-bleed #header-image-container.opaque-navigation {
     background-position: center 32px;
@@ -8707,17 +8693,17 @@ body {
 #utility-masthead::after {
   position: absolute;
   top: 36px;
-  left: 30px / 2;
+  left: 15px;
   z-index: -1;
-  width: 125px - (30px / 2);
-  height: 54px - 36px;
+  width: 110px;
+  height: 18px;
   content: "";
 }
 @media (min-width: 768px) {
   #utility-masthead::after {
     top: 52px;
-    width: 180px - (30px / 2);
-    height: 80px - 52px;
+    width: 165px;
+    height: 28px;
   }
 }
 #navigation {
@@ -8909,7 +8895,6 @@ body {
           transition: background-color .15s linear, color .15s linear;
 }
 #navigation .navbar-header {
-  float: left;
   float: left !important;
 }
 #navigation .navbar-nav {
@@ -8920,7 +8905,6 @@ body {
   float: left;
 }
 #navigation .navbar-nav.navbar-right {
-  float: right;
   float: right !important;
 }
 #navigation .navbar-nav.navbar-right .dropdown-menu {
@@ -8935,7 +8919,7 @@ body {
     z-index: 3;
     height: 75px;
     background-color: transparent;
-    background-image: url("../images/content-header-logo-bleed@2x.png");
+    background-image: url(../images/content-header-logo-bleed@2x.png);
     -webkit-background-size: 1170px 75px;
             background-size: 1170px 75px;
   }
@@ -8946,15 +8930,8 @@ body {
     height: 100%;
   }
 }
-@media (min-width: 768px) and only screen and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and only screen and (min--moz-device-pixel-ratio: 2), (min-width: 768px) and only screen and (-o-min-device-pixel-ratio: 2/1), (min-width: 768px) and only screen and (min-device-pixel-ratio: 2), (min-width: 768px) and only screen and (min-resolution: 192dpi), (min-width: 768px) and only screen and (min-resolution: 2dppx) {
-  .site-root.content-bleed #main-content-header {
-    background-image: url("../images/content-header-logo-bleed@2x.png");
-    -webkit-background-size: 1170px 75px;
-            background-size: 1170px 75px;
-  }
-}
 #main-content {
-  padding: 30px / 2 0;
+  padding: 15px 0;
   background: white;
 }
 #main-content h1,
@@ -8987,7 +8964,7 @@ body {
   margin-top: 0;
 }
 #main-content #page-title {
-  margin-top: 30px / 2;
+  margin-top: 15px;
   margin-bottom: 20px;
 }
 #main-content .bordered {
@@ -9002,7 +8979,7 @@ body {
 }
 #page-footer #site-footer > .container,
 #page-footer #app-footer > .container {
-  padding-top: 30px / 2;
+  padding-top: 15px;
 }
 #page-footer #app-footer {
   position: relative;
@@ -9012,7 +8989,7 @@ body {
   position: absolute;
   top: 0;
   left: 15%;
-  width: (30px * 1.141 * 2) * .89;
+  width: 60.9294px;
   height: 30px;
 }
 #page-footer #app-footer > .logo-bleed::before {
@@ -9475,16 +9452,16 @@ body {
   }
 }
 .flush-left {
-  margin-left: -(30px / 2);
+  margin-left: -15px;
 }
 .flush-right {
-  margin-right: -(30px / 2);
+  margin-right: -15px;
 }
 .flush-top {
-  margin-top: -(30px / 2);
+  margin-top: -15px;
 }
 .flush-bottom {
-  margin-bottom: -(30px / 2);
+  margin-bottom: -15px;
 }
 body #main-content h1,
 body #main-content h2,

@@ -7,11 +7,13 @@
     }
   }
 
-  .img-retina('../images/masthead-logo-bleed-xs@2x.png'; '../images/masthead-logo-bleed-xs@2x.png'; @screen-sm-min; 300px);
+  //.img-retina('../images/masthead-logo-bleed-xs@2x.png'; '../images/masthead-logo-bleed-xs@2x.png'; @screen-sm-min; 300px);
+  background-image: url(../images/masthead-logo-bleed-xs@2x.png);
   background-size: @screen-sm-min 300px;
 
   @media (min-width: @grid-float-breakpoint) {
-    .img-retina('../images/masthead-logo-bleed-sm@2x.png'; '../images/masthead-logo-bleed-sm@2x.png'; @container-lg; 300px);
+//    .img-retina('../images/masthead-logo-bleed-sm@2x.png'; '../images/masthead-logo-bleed-sm@2x.png'; @container-lg; 300px);
+    background-image: url(../images/masthead-logo-bleed-sm@2x.png);
     background-size: @container-lg 300px;
 
     .logo-row {
@@ -30,15 +32,15 @@
 
   .logo-row > .container-fluid {
     @media (min-width: @screen-sm-min) {
-      width: (@container-sm * 2/3) - @id7-masthead-logo-width-sm;
+      width: ((@container-sm * 2/3) - @id7-masthead-logo-width-sm);
     }
 
     @media (min-width: @screen-md-min) {
-      width: (@container-md * 2/3) - @id7-masthead-logo-width-sm;
+      width: ((@container-md * 2/3) - @id7-masthead-logo-width-sm);
     }
 
     @media (min-width: @screen-lg-min) {
-      width: (@container-lg * 2/3) - @id7-masthead-logo-width-sm;
+      width: ((@container-lg * 2/3) - @id7-masthead-logo-width-sm);
     }
   }
 
@@ -80,14 +82,14 @@
   }
 
   .warwick-site-links {
-    margin-left: @id7-masthead-logo-width-sm + (@grid-gutter-width / 2);
+    margin-left: (@id7-masthead-logo-width-sm + (@grid-gutter-width / 2));
 
     .opacity(0);
     .transition(opacity 0.15s linear);
     .small();
 
     @line-height-small-computed: floor((@font-size-small * @line-height-small)); // ~17px
-    margin-top: (@id7-masthead-height-sm * 5/6) - (@line-height-small-computed / 2);
+    margin-top: ((@id7-masthead-height-sm * 5/6) - (@line-height-small-computed / 2));
 
     ul {
       .list-inline();
@@ -114,13 +116,13 @@
   .search {
     .search-box {
       @media (min-width: @grid-float-breakpoint) {
-        margin-top: 38px + (@line-height-computed / 2); // FIXME Magic number
+        margin-top: (38px + (@line-height-computed / 2)); // FIXME Magic number
       }
 
       position: relative;
 
       .input-lg {
-        padding-right: @padding-large-horizontal + 26px; // FIXME Magic number
+        padding-right: (@padding-large-horizontal + 26px); // FIXME Magic number
       }
     }
 

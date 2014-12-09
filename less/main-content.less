@@ -10,7 +10,8 @@
       }
 
       background-color: transparent;
-      .img-retina('../images/content-header-logo-bleed@2x.png'; '../images/content-header-logo-bleed@2x.png'; @container-lg; @id7-content-header-height);
+//      .img-retina('../images/content-header-logo-bleed@2x.png'; '../images/content-header-logo-bleed@2x.png'; @container-lg; @id7-content-header-height);
+      background-image: url(../images/content-header-logo-bleed@2x.png);
       background-size: @container-lg @id7-content-header-height;
       z-index: 3;
     }
@@ -31,7 +32,7 @@
   }
 
   #page-title {
-    margin-top: @grid-gutter-width / 2;
+    margin-top: (@grid-gutter-width / 2);
     margin-bottom: @line-height-computed;
   }
 
@@ -39,7 +40,7 @@
     border-bottom: 1px solid @id7-subtle-line-colour;
   }
 
-  padding: @grid-gutter-width / 2 0;
+  padding: (@grid-gutter-width / 2) 0;
 
   // Don't allow form elements to drop out of the container
   input, textarea, select, .uneditable-input { width: auto; max-width: 100%; }

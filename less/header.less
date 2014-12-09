@@ -12,20 +12,20 @@
     content: "";
     position: absolute;
     z-index: -1;
-    left: @grid-gutter-width / 2;
+    left: (@grid-gutter-width / 2);
 
     @offset-xs: 36px; // FIXME Magic number
 
     top: @offset-xs;
-    width: @id7-masthead-logo-width-xs - (@grid-gutter-width / 2);
-    height: @id7-masthead-height-xs - @offset-xs;
+    width: (@id7-masthead-logo-width-xs - (@grid-gutter-width / 2));
+    height: (@id7-masthead-height-xs - @offset-xs);
 
     @media (min-width: @grid-float-breakpoint) {
       @offset-sm: 52px; // FIXME Magic number
 
       top: @offset-sm;
-      width: @id7-masthead-logo-width-sm - (@grid-gutter-width / 2);
-      height: @id7-masthead-height-sm - @offset-sm;
+      width: (@id7-masthead-logo-width-sm - (@grid-gutter-width / 2));
+      height: (@id7-masthead-height-sm - @offset-sm);
     }
   }
 }

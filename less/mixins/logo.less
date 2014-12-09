@@ -6,7 +6,7 @@
 .logo-as-css-base(@width, @height, @colour) {
   position: relative;
   height: @height;
-  width: (@width * 2) * @logo-triangle-overlap;
+  width: (@width * 2 * @logo-triangle-overlap);
 
   &::before {
     .triangle(down, @width, @height, @colour);
@@ -24,9 +24,9 @@
 }
 
 .logo-as-css(@width, @height, @colour) when (@width = auto) {
-  .logo-as-css-base(@height * @logo-triangle-ratio, @height, @colour);
+  .logo-as-css-base((@height * @logo-triangle-ratio), @height, @colour);
 }
 
 .logo-as-css(@width, @height, @colour) when (@height = auto) {
-  .logo-as-css-base(@width, @width / @logo-triangle-ratio, @colour);
+  .logo-as-css-base(@width, (@width / @logo-triangle-ratio), @colour);
 }
