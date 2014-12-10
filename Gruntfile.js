@@ -64,7 +64,18 @@ module.exports = function (grunt) {
         src: [
           'js/vendor/jquery-1.11.1.min.js',
           'js/vendor/webfont-1.5.6.min.js',
-          'js/vendor/bootstrap-3.3.1.min.js',
+          'js/vendor/bootstrap-3.3.1/transition.js',
+          'js/vendor/bootstrap-3.3.1/alert.js',
+          'js/vendor/bootstrap-3.3.1/button.js',
+          'js/vendor/bootstrap-3.3.1/carousel.js',
+          'js/vendor/bootstrap-3.3.1/collapse.js',
+          'js/vendor/bootstrap-3.3.1/dropdown.js',
+          'js/vendor/bootstrap-3.3.1/modal.js',
+          'js/vendor/bootstrap-3.3.1/tooltip.js',
+          'js/vendor/bootstrap-3.3.1/popover.js',
+          'js/vendor/bootstrap-3.3.1/scrollspy.js',
+          'js/vendor/bootstrap-3.3.1/tab.js',
+          'js/vendor/bootstrap-3.3.1/affix.js',
           'js/vendor/typeahead.jquery-0.10.5.js',
           'js/vendor/lodash-2.4.1.js',
           'js/account-popover.jquery.js',
@@ -230,6 +241,22 @@ module.exports = function (grunt) {
       }
     },
 
+    markdown: {
+      readme: {
+        files: [
+          {
+            expand: true,
+            src: 'README.md',
+            dest: 'docs/_includes/',
+            ext: '.html'
+          }
+        ],
+        options: {
+          template: 'blank.jst'
+        }
+      }
+    },
+
     jekyll: {
       options: {
         config: '_config.yml'
@@ -247,7 +274,9 @@ module.exports = function (grunt) {
           'Element img is missing required attribute src.',
           'Attribute autocomplete not allowed on element input at this point.',
           'Attribute autocomplete not allowed on element button at this point.',
-          'Bad value separator for attribute role on element li.'
+          'Bad value separator for attribute role on element li.',
+          'Consider using the h1 element as a top-level heading only \\(all h1 elements are treated as top-level headings by many screen readers and other tools\\).',
+          'The color input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.'
         ]
       },
       files: {
@@ -256,9 +285,9 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      src: {
+      core: {
         files: '<%= jshint.core.src %>',
-        tasks: ['jshint:src', 'qunit', 'dist-js', 'copy:vendorjs', 'copy:docs']
+        tasks: ['jshint:core', 'qunit', 'dist-js', 'copy:vendorjs', 'copy:docs']
       },
       test: {
         files: '<%= jshint.test.src %>',
@@ -322,5 +351,5 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'copy:vendorjs', 'test']);
 
   // Docs task.
-  grunt.registerTask('docs', ['clean:docs', 'copy:docs']);
+  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme']);
 };

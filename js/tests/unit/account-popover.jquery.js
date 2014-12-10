@@ -26,7 +26,7 @@ $(function () {
 
   test('should return jquery collection containing the element', function () {
     var $el = $('<div/>');
-    var $accountPopover = $el.accountPopover({user: user});
+    var $accountPopover = $el.accountPopover({ user: user });
     ok($accountPopover instanceof $, 'returns jquery collection');
     strictEqual($accountPopover[0], $el[0], 'collection contains element');
   });
@@ -34,7 +34,7 @@ $(function () {
   test('should render popover element', function () {
     var $popover = $('<a href="#">Account information</a>')
       .appendTo('#qunit-fixture')
-      .accountPopover({user: user}).popover('show');
+      .accountPopover({ user: user }).popover('show');
 
     notEqual($('.popover.account-information.fade.in').length, 0, 'popover was inserted');
     $popover.popover('hide');
@@ -45,7 +45,7 @@ $(function () {
   test('should store popover instance in popover data object', function () {
     var $popover = $('<a href="#">Account information</a>')
         .appendTo('#qunit-fixture')
-        .accountPopover({user: user});
+        .accountPopover({ user: user });
 
     ok($popover.data('id7.account-popover'), 'popover instance exists');
   });
@@ -53,7 +53,7 @@ $(function () {
   test('should store popover trigger in popover instance data object', function () {
     var $popover = $('<a href="#">Account information</a>')
         .appendTo('#qunit-fixture')
-        .accountPopover({user: user});
+        .accountPopover({ user: user });
 
     $popover.popover('show');
 
@@ -71,7 +71,7 @@ $(function () {
 
     var $popover = $('<a href="#">Account information</a>')
         .appendTo('#qunit-fixture')
-        .accountPopover({user: user});
+        .accountPopover({ user: user });
 
     $popover.popover('show');
 
@@ -102,15 +102,15 @@ $(function () {
   test('popover should be dismissed by clicking outside it', function () {
     $('<a href="#">Account information</a>')
         .appendTo('#qunit-fixture')
-        .accountPopover({user: user}).popover('show');
+        .accountPopover({ user: user }).popover('show');
 
     notEqual($('.popover.account-information.fade.in').length, 0, 'popover was inserted');
 
     // Not dismissed by clicking inside the popover itself
-    $('.popover.account-information.fade.in')[0].click();
+    $('.popover.account-information.fade.in').trigger('click');
     notEqual($('.popover.account-information.fade.in').length, 0, 'popover was inserted');
 
-    $('html')[0].click();
+    $('html').trigger('click');
     equal($('.popover.account-information.fade.in').length, 0, 'popover removed');
   });
 

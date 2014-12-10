@@ -91,7 +91,7 @@ $(function () {
 
     ok(!$icon.hasClass('active'), 'should not have active class');
 
-    $icon[0].click();
+    $icon.trigger('click');
 
     ok($el.find('.breadcrumbs').hasClass('collapsing'), 'does not have class "collapsing"');
     ok($icon.hasClass('active'), 'should have active classname');
