@@ -3,28 +3,30 @@
 @import "../../../less/variables.less";
 @import "../../../less/mixins.less";
 
-.apply-site(@name) {
+.apply-site-images(@dir) {
   #header-image-container {
-    background-image: url("@{name}/banner-image.jpg");
+    background-image: url("@{dir}/banner-image.jpg");
   }
 
   #fixed-width-container, #utility-bar.affix { // TODO Do we really need to apply this to #utility-masthead too? (only when affixed)
-    background-image: url("@{name}/masthead-image.jpg");
+    background-image: url("@{dir}/masthead-image.jpg");
   }
 
   #left-border {
-    background-image: url("@{name}/border-image-left.jpg");
+    background-image: url("@{dir}/border-image-left.jpg");
   }
 
   #right-border {
-    background-image: url("@{name}/border-image-right.jpg");
+    background-image: url("@{dir}/border-image-right.jpg");
   }
 }
 
 html {
-  .apply-site('.');
+  &.site1 { .apply-site-images('site1'); }
+  &.site2 { .apply-site-images('site2'); }
+  &.site3 { .apply-site-images('site3'); }
+}
 
-//  &.site1 { .apply-site('site1'); }
-//  &.site2 { .apply-site('site2'); }
-//  &.site3 { .apply-site('site3'); }
+body {
+  .apply-brand(@id7-brand-yellow);
 }

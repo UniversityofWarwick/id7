@@ -13,11 +13,14 @@
 <link href="//fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 <link href="/dist/css/id7.css" rel="stylesheet" type="text/css">
-<link href="/assets/site/site.css" rel="stylesheet" type="text/css">
+<link href="/dist/css/id7-default-theme.css" rel="stylesheet" type="text/css">
 
 {% if page.slug contains 'subsite' %}
+<link href="/assets/site/site.css" rel="stylesheet" type="text/css">
 <link href="/assets/css/subsite.css" rel="stylesheet" type="text/css">
 {% endif %}
+
+<link href="/assets/css/config-options.css" rel="stylesheet" type="text/css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,5 +32,17 @@
 <script src="/dist/js/vendor/html5shiv-3.7.2.min.js"></script>
 <script src="/dist/js/vendor/respond-1.4.2.min.js"></script>
 <![endif]-->
+
+<script type="text/javascript">
+  window.WebFontConfig = {
+    custom: {
+      families: ['Avenir Next:n1,i1,n5,i5,n7,i7'],
+      urls: ['/dist/css/avenir-next.css']
+    },
+    active: function() {
+      $('html').data('fonts-loaded', true).trigger('id7:fonts-loaded');
+    }
+  };
+</script>
 
 <script src="/dist/js/id7.js"></script>

@@ -104,6 +104,17 @@ module.exports = function (grunt) {
         src: 'less/id7.less',
         dest: 'dist/css/<%= pkg.name %>.css'
       },
+      compileDefaultTheme: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: '<%= pkg.name %>-default-theme.css.map',
+          sourceMapFilename: 'dist/css/<%= pkg.name %>-default-theme.css.map'
+        },
+        src: 'less/default-theme.less',
+        dest: 'dist/css/<%= pkg.name %>-default-theme.css'
+      },
       compileAvenir: {
         options: {
           strictMath: true,
@@ -136,6 +147,12 @@ module.exports = function (grunt) {
         },
         src: 'dist/css/<%= pkg.name %>.css'
       },
+      defaultTheme: {
+        options: {
+          map: true
+        },
+        src: 'dist/css/<%= pkg.name %>-default-theme.css'
+      },
       avenir: {
         options: {
           map: true
@@ -162,6 +179,10 @@ module.exports = function (grunt) {
       minifyCore: {
         src: 'dist/css/<%= pkg.name %>.css',
         dest: 'dist/css/<%= pkg.name %>.min.css'
+      },
+      minifyDefaultTheme: {
+        src: 'dist/css/<%= pkg.name %>-default-theme.css',
+        dest: 'dist/css/<%= pkg.name %>-default-theme.min.css'
       },
       minifyAvenir: {
         src: 'dist/css/avenir-next.css',
@@ -237,7 +258,7 @@ module.exports = function (grunt) {
     watch: {
       src: {
         files: '<%= jshint.core.src %>',
-        tasks: ['jshint:src', 'qunit', 'concat']
+        tasks: ['jshint:src', 'qunit', 'dist-js', 'copy:vendorjs', 'copy:docs']
       },
       test: {
         files: '<%= jshint.test.src %>',
@@ -245,7 +266,7 @@ module.exports = function (grunt) {
       },
       less: {
         files: 'less/**/*.less',
-        tasks: 'less'
+        tasks: ['dist-css', 'copy:fonts', 'copy:images', 'copy:docs']
       }
     },
 
@@ -291,8 +312,8 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:core']);
 
   // CSS distribution.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileAvenir']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:avenir', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyAvenir']);
+  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileDefaultTheme', 'less:compileAvenir']);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:defaultTheme', 'autoprefixer:avenir', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyDefaultTheme', 'cssmin:minifyAvenir']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'copy:vendorjs']);
