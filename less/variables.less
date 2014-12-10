@@ -1,3 +1,5 @@
+@import "bootstrap/variables.less";
+
 @id7-brand-purple: #7a3b83;
 @id7-brand-grey: #8a8a8d;
 @id7-brand-yellow: #c4a11c;
@@ -17,10 +19,14 @@
 @id7-header-text-height: 60px;
 @id7-masthead-logo-width-xs: 125px;
 @id7-masthead-logo-width-sm: 180px;
+
+@id7-header-height-lg: 375px;
+@id7-header-ratio: (@container-lg / @id7-header-height-lg); // 3.12
+
+@id7-header-height-md: (round(@container-md / @id7-header-ratio)); // ~311
+@id7-header-height-sm: (round(@container-sm / @id7-header-ratio)); // ~240
 @id7-header-height-xs: 200px;
-@id7-header-height-sm: 256px;
-@id7-header-height-md: 330px;
-@id7-header-height-lg: 400px;
+
 @id7-header-subpage-height: 59px;
 
 @id7-navigation-height: 32px;

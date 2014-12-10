@@ -8,7 +8,7 @@
 
 @icon-font-path: "../fonts";
 @body-bg: transparent;
-@font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif: "Avenir Next", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @headings-font-weight: 500;
 
 @navbar-height: @id7-navigation-height;
@@ -27,9 +27,6 @@
 @border-radius-small: 0px;
 
 @grid-float-breakpoint-max: 0px; // Don't collapse nav
-
-// Don't import this here, use the Google Font Loader so we can get a callback once it's loaded
-//@import "avenir-next.less";
 
 // Reset and dependencies
 @import "bootstrap/normalize.less";
@@ -104,15 +101,4 @@
 @import "utilities";
 
 // Colour branding
-@import "branding";
-
-// FIXME move this somewhere else (it's only for testing anyway)
-.use-avenir {
-  body {
-    font-family: 'Avenir Next';
-
-    &.large-font #main-content {
-      font-size: 16px;
-    }
-  }
-}
+@import "mixins/branding";

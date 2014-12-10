@@ -7,7 +7,7 @@
     Template: _.template([
       '<div class="account-info row">',
       '<div class="col-xs-4">',
-      '<img src="<%- photo %>">',
+      '<img class="photo" src="<%- photo %>">',
       '</div>',
       '<div class="col-xs-8">',
       '<div class="full-name"><%= fullName %></div>',
@@ -55,6 +55,7 @@
     $.extend(AccountPopover.prototype, {
       wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
+        var user = this.options.user;
 
         $trigger.on('click', function (e) {
           e.preventDefault();
@@ -62,13 +63,7 @@
           return false;
         }).popover({
           container: this.options.container,
-          content: Config.Template({
-            photo: 'http://www.gravatar.com/avatar/ed08722fea72ddf208e404d92c20b01d',
-            fullName: 'Mathew Mannion',
-            email: 'M.Mannion@warwick.ac.uk',
-            userId: 'u0672089',
-            description: 'Staff, IT Services'
-          }),
+          content: Config.Template(user),
           template: this.options.template,
           html: true,
           placement: 'bottom',
@@ -105,7 +100,15 @@
   };
 
   $(function () {
-    $('[data-toggle="id7:account-popover"]').accountPopover();
+    $('[data-toggle="id7:account-popover"]').accountPopover({
+      user: {
+        photo: 'http://www.gravatar.com/avatar/ed08722fea72ddf208e404d92c20b01d',
+        fullName: 'Mathew Mannion',
+        email: 'M.Mannion@warwick.ac.uk',
+        userId: 'u0672089',
+        description: 'Staff, IT Services'
+      }
+    });
   });
 
 })(jQuery);

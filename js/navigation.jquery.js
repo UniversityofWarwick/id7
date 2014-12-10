@@ -163,8 +163,8 @@
 
           if (!options.collapseSmallscreen || screenConfig.name != 'xs') {
             var isWrapped = function () {
-              return _.some(_.union($nav.find('> li').get(), $navbar.find('> .navbar-right').get()), function (el) {
-                return $(el).position().top > 0;
+              return _.some(_.union($nav.find('> li').get(), $moreContainer.get()), function (el) {
+                return $(el).is(':visible') && $(el).position().top > 0;
               });
             };
 
@@ -221,7 +221,7 @@
             this.onScreenResize();
           }
 
-          $(window).on('resize.id7.navigation.fitToWidth', $.proxy(this.onScreenResize, this));
+          $(window).on('resize.id7.navigation.onScreenResize', $.proxy(this.onScreenResize, this));
         }
 
         this.$container.on('click', '.nav > li', function (e) {
