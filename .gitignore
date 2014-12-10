@@ -66,5 +66,5 @@ bower_components
 node_modules
 
 # Generated resources
-/docs/dist
+#/docs/dist
 /dist
