@@ -3,7 +3,7 @@
         <div id="id7-logo-column">
             <div id="id7-logo-row">
                 <div id="id7-logo">
-                    <a href="/" title="Warwick homepage">
+                    <a href="{{ site.prefix }}" title="Warwick homepage">
                         <img src="{{ site.prefix }}dist/images/shim.gif" alt="Warwick">
                     </a>
                 </div>
@@ -22,10 +22,10 @@
             <div id="id7-header-text">
                 <h1>
                     {% if page.slug contains 'subsite' %}
-                        <span id="id7-parent-site-link"><a href="/">ID7 Documentation</a></span>
-                        <span id="id7-current-site-link"><a href="/{{ page.slug }}">Subsite</a></span>
+                        <span id="id7-parent-site-link"><a href="{{ site.prefix }}">ID7 Documentation</a></span>
+                        <span id="id7-current-site-link"><a href="{{ site.prefix }}{{ page.slug }}">Subsite</a></span>
                     {% else %}
-                        <span id="id7-current-site-link"><a href="/">ID7 Documentation</a></span>
+                        <span id="id7-current-site-link"><a href="{{ site.prefix }}">ID7 Documentation</a></span>
                     {% endif %}
                 </h1>
             </div>

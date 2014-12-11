@@ -136,6 +136,16 @@ module.exports = function (grunt) {
         },
         src: 'less/avenir-next.less',
         dest: 'dist/css/avenir-next.css'
+      },
+      compileDocs: {
+        options: {
+          paths: ['docs/assets/css', 'docs/assets/site']
+        },
+        files: {
+          'docs/assets/css/config-options.css': 'docs/assets/css/config-options.less',
+          'docs/assets/css/subsite.css': 'docs/assets/css/subsite.less',
+          'docs/assets/site/site.css': 'docs/assets/site/site.less'
+        }
       }
     },
 
@@ -351,5 +361,5 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'copy:vendorjs', 'test']);
 
   // Docs task.
-  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme']);
+  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs']);
 };

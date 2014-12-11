@@ -1,9 +1,9 @@
 <nav id="id7-secondary-navigation" class="navbar navbar-secondary" role="navigation">
   <ul class="nav navbar-nav">
-    <li{% if page.slug == 'examples/bacon-ipsum' %} class="active"{% endif %}><a href="/examples/bacon-ipsum">Sample page content</a></li>
-    <li{% if page.slug == 'examples/subsite-homepage' %} class="active"{% endif %}><a href="/examples/subsite-homepage">Sample subsite homepage</a></li>
-    <li{% if page.slug == 'examples/bootstrap-testcard' %} class="active"{% endif %}><a href="/examples/bootstrap-testcard">Bootstrap test card</a></li>
-    <li{% if page.slug == 'examples/subsite-carousel' %} class="active"{% endif %}><a href="/examples/subsite-carousel">Carousel header</a></li>
-    <li{% if page.slug == 'examples/subsite-video' %} class="active"{% endif %}><a href="/examples/subsite-video">Video header</a></li>
+    <li{% if page.slug == 'examples/bacon-ipsum' %} class="active"{% endif %}><a href="{{ site.prefix }}examples/bacon-ipsum">Sample page content</a></li>
+    <li{% if page.slug == 'examples/subsite-homepage' %} class="active"{% endif %}><a href="{{ site.prefix }}examples/subsite-homepage">Sample subsite homepage</a></li>
+    <li{% if page.slug == 'examples/bootstrap-testcard' %} class="active"{% endif %}><a href="{{ site.prefix }}examples/bootstrap-testcard">Bootstrap test card</a></li>
+    <li{% if page.slug == 'examples/subsite-carousel' %} class="active"{% endif %}><a href="{{ site.prefix }}examples/subsite-carousel">Carousel header</a></li>
+    <li{% if page.slug == 'examples/subsite-video' %} class="active"{% endif %}><a href="{{ site.prefix }}examples/subsite-video">Video header</a></li>
   </ul>
 </nav>

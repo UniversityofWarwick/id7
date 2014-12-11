@@ -67,4 +67,6 @@ node_modules
 
 # Generated resources
 /docs/dist
+/docs/assets/css/*.css
+/docs/assets/site/*.css
 /dist
