@@ -1,0 +1,40 @@
+{
+  "name": "warwick-id7",
+  "description": "CSS, JavaScript and sample HTML in order to use the corporate identity on your site",
+  "version": "0.0.1",
+  "homepage": "http://id7.warwick.ac.uk",
+  "main": [
+    "less/id7.less",
+    "dist/css/id7.css",
+    "dist/js/id7-standalone.js",
+    "dist/fonts/fontawesome-webfont.eot",
+    "dist/fonts/fontawesome-webfont.eot.svg",
+    "dist/fonts/fontawesome-webfont.eot.ttf",
+    "dist/fonts/fontawesome-webfont.eot.woff",
+    "dist/images/logo.png",
+    "dist/images/masthead-logo-bleed-sm.png",
+    "dist/images/masthead-logo-bleed-sm@2x.png",
+    "dist/images/masthead-logo-bleed-xs.png",
+    "dist/images/masthead-logo-bleed-xs@2x.png"
+  ],
+  "ignore": [
+    "/.*",
+    "_config.yml",
+    "CNAME",
+    "composer.json",
+    "docs",
+    "js/tests",
+    "test-infra"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.11.1",
+    "webfontloader": ">= 1.5.6",
+    "bootstrap": ">= 3.3.1",
+    "typeahead.js": ">= 0.10.5",
+    "lodash": ">= 2.4.1",
+    "html5shiv": ">= 3.7.2",
+    "respond": ">= 1.4.2",
+    "matchMedia": ">= 0.2.0"
+  },
+  "private": true
+}

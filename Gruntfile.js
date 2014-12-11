@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>',
         stripBanners: false
       },
-      core: {
+      bundle: {
         src: [
           'js/vendor/jquery-1.11.1.min.js',
           'js/vendor/webfont-1.5.6.min.js',
@@ -82,7 +82,15 @@ module.exports = function (grunt) {
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js'
         ],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        dest: 'dist/js/<%= pkg.name %>-bundle.js'
+      },
+      standalone: {
+        src: [
+          'js/account-popover.jquery.js',
+          'js/navigation.jquery.js',
+          'js/search-suggest.jquery.js'
+        ],
+        dest: 'dist/js/<%= pkg.name %>-standalone.js'
       }
     },
 
@@ -90,9 +98,13 @@ module.exports = function (grunt) {
       options: {
         preserveComments: 'some'
       },
-      core: {
-        src: '<%= concat.core.dest %>',
-        dest: 'dist/js/<%= pkg.name %>.min.js'
+      bundle: {
+        src: '<%= concat.bundle.dest %>',
+        dest: 'dist/js/<%= pkg.name %>-bundle.min.js'
+      },
+      standalone: {
+        src: '<%= concat.standalone.dest %>',
+        dest: 'dist/js/<%= pkg.name %>-standalone.min.js'
       }
     },
 
@@ -348,7 +360,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jscs:core', 'jscs:test', 'qunit']);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['concat', 'uglify:core']);
+  grunt.registerTask('dist-js', ['concat:bundle', 'uglify:bundle', 'concat:standalone', 'uglify:standalone']);
 
   // CSS distribution.
   grunt.registerTask('less-compile', ['less:compileCore', 'less:compileDefaultTheme', 'less:compileAvenir']);

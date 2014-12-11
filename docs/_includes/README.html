@@ -11,7 +11,7 @@
 <p>Four quick start options are available:</p>
 <ul>
 <li><a href="#">Download the latest release</a>.</li>
-<li>Clone the repo: <code>git clone https://repo.elab.warwick.ac.uk/scm/id/id7.git</code>.</li>
+<li>Clone the repo: <code>git clone https://github.com/UniversityofWarwick/id7.git</code>.</li>
 <li>Install with <a href="http://bower.io">Bower</a>: <code>bower install #</code>.</li>
 <li>Install with <a href="https://www.npmjs.org">npm</a>: <code>npm install #</code>.</li>
 </ul>
@@ -20,21 +20,80 @@
 <p>Within the download you&#39;ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You&#39;ll see something like this:</p>
 <pre><code>id7/
 ├── css/
+│   ├── avenir-next.css
+│   ├── avenir-next.css.map
+│   ├── avenir-next.min.css
 │   ├── id7.css
 │   ├── id7.css.map
 │   ├── id7.min.css
 │   ├── id7-default-theme.css
 │   ├── id7-default-theme.css.map
-│   ├── id7-default-theme.min.css
+│   └── id7-default-theme.min.css
 ├── js/
-│   ├── id7.js
-│   └── id7.min.js
+│   ├── vendor/
+│   |   ├── html5shiv-3.7.2.min.js
+│   |   ├── respond-1.4.2.min.js
+│   |   └── matchMedia.js
+│   ├── id7-bundle.js
+│   ├── id7-bundle.min.js
+│   ├── id7-standalone.js
+│   └── id7-standalone.min.js
+│   images/
+|   ├── logo.png
+|   ├── masthead-logo-bleed-sm.png
+|   ├── masthead-logo-bleed-sm@2x.png
+|   ├── masthead-logo-bleed-xs.png
+|   └── masthead-logo-bleed-xs@2x.png
 └── fonts/
-    ├── STUFF</code></pre>
+    ├── avenirnext-demi.eot
+    ├── avenirnext-demi.svg
+    ├── avenirnext-demi.ttf
+    ├── avenirnext-demi.woff
+    ├── avenirnext-demi-italic.eot
+    ├── avenirnext-demi-italic.svg
+    ├── avenirnext-demi-italic.ttf
+    ├── avenirnext-demi-italic.woff
+    ├── avenirnext-italic.eot
+    ├── avenirnext-italic.svg
+    ├── avenirnext-italic.ttf
+    ├── avenirnext-italic.woff
+    ├── avenirnext-regular.eot
+    ├── avenirnext-regular.svg
+    ├── avenirnext-regular.ttf
+    ├── avenirnext-regular.woff
+    ├── avenirnext-ultralight.eot
+    ├── avenirnext-ultralight.svg
+    ├── avenirnext-ultralight.ttf
+    ├── avenirnext-ultralight.woff
+    ├── avenirnext-ultralight-italic.eot
+    ├── avenirnext-ultralight-italic.svg
+    ├── avenirnext-ultralight-italic.ttf
+    ├── avenirnext-ultralight-italic.woff
+    ├── fontawesome-webfont.eot
+    ├── fontawesome-webfont.svg
+    ├── fontawesome-webfont.ttf
+    └── fontawesome-webfont.woff</code></pre>
 <p>We provide compiled CSS and JS (<code>id7.*</code>), as well as compiled and minified CSS and JS (<code>id7.min.*</code>). CSS <a href="https://developers.google.com/chrome-developer-tools/docs/css-preprocessors">source maps</a> (<code>id7.*.map</code>) are available for use with certain browsers&#39; developer tools. Fonts from Glyphicons, FontAwesome and Avenir Next from fonts.com are included, as is an optional ID7 theme.</p>
+<p>The <code>id7-bundle.js</code> file includes dependencies such as jQuery and Bootstrap. The <code>id7-standalone.js</code> file doesn&#39;t include these, so they will need to be included manually. The dependencies required are:</p>
+<ul>
+<li><a href="https://github.com/jquery/jquery">jQuery</a> &gt;= 1.11.1</li>
+<li><a href="https://github.com/typekit/webfontloader">webfontloader</a> &gt;= 1.5.6</li>
+<li><a href="https://github.com/twbs/bootstrap">Bootstrap</a> &gt;= 3.3.1</li>
+<li><a href="https://github.com/twitter/typeahead.js">typeahead.js</a> &gt;= 0.10.5</li>
+<li><a href="https://github.com/lodash/lodash">lodash</a> &gt;= 2.4.1</li>
+</ul>
+<p>Internet Explorer 9 (and earlier) support requires</p>
+<ul>
+<li><a href="https://github.com/paulirish/matchMedia.js">matchMedia</a> &gt;= 0.2.0</li>
+</ul>
+<p>Internet Explorer 8 (and earlier) support (in order to not receive the &quot;mobile&quot; rendition) requires:</p>
+<ul>
+<li><a href="https://github.com/aFarkas/html5shiv">html5shiv</a> &gt;= 3.7.2</li>
+<li><a href="https://github.com/scottjehl/Respond">respond</a> &gt;= 1.4.2</li>
+</ul>
 <p>The Avenir Next fonts <em>MUST</em> only be used with the snippet of Javascript to callback to fonts.com. These fonts will only work on addresses ending warwick.ac.uk.</p>
 <h2 id="bugs-and-feature-requests">Bugs and feature requests</h2>
-<p>Have a bug or a feature request? Contact <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#119;&#101;&#98;&#116;&#101;&#x61;&#109;&#x40;&#x77;&#x61;&#114;&#119;&#x69;&#99;&#107;&#46;&#x61;&#x63;&#46;&#x75;&#107;">&#119;&#101;&#98;&#116;&#101;&#x61;&#109;&#x40;&#x77;&#x61;&#114;&#119;&#x69;&#99;&#107;&#46;&#x61;&#x63;&#46;&#x75;&#107;</a>.</p>
+<p>Have a bug or a feature request? Contact <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x77;&#101;&#x62;&#x74;&#x65;&#x61;&#x6d;&#64;&#119;&#97;&#x72;&#x77;&#105;&#x63;&#x6b;&#x2e;&#x61;&#99;&#x2e;&#x75;&#107;">&#x77;&#101;&#x62;&#x74;&#x65;&#x61;&#x6d;&#64;&#119;&#97;&#x72;&#x77;&#105;&#x63;&#x6b;&#x2e;&#x61;&#99;&#x2e;&#x75;&#107;</a>.</p>
 <h2 id="documentation">Documentation</h2>
 <p>Bootstrap&#39;s documentation, included in this repo in the root directory, is built with <a href="http://jekyllrb.com">Jekyll</a> and publicly hosted on GitHub Pages at <a href="http://getbootstrap.com">http://getbootstrap.com</a>. The docs may also be run locally.</p>
 <h3 id="running-sample-site-locally">Running sample site locally</h3>
@@ -47,4 +106,4 @@
 </ol>
 <p>Learn more about using Jekyll by reading its <a href="http://jekyllrb.com/docs/home/">documentation</a>.</p>
 <h2 id="copyright-and-license">Copyright and license</h2>
-<p>Code and documentation copyright 2011-2014 University of Warwick.</p>
+<p>Code and documentation copyright 2014 University of Warwick.</p>

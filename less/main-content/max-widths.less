@@ -29,6 +29,14 @@ table[role="presentation"] {
   }
 }
 
+// Setting image height is always a mistake that results in
+// the wrong aspect ratio, so ignore it
+img, audio {
+  &[height] {
+    height: auto !important;
+  }
+}
+
 @media (max-width: (@grid-float-breakpoint - 1)) {
   table[role="presentation"] {
     > tr > td,
