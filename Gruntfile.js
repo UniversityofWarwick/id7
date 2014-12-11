@@ -287,15 +287,15 @@ module.exports = function (grunt) {
     watch: {
       core: {
         files: '<%= jshint.core.src %>',
-        tasks: ['jshint:core', 'qunit', 'dist-js', 'copy:vendorjs', 'copy:docs']
+        tasks: ['dist-js', 'copy:vendorjs', 'copy:docs']
       },
       test: {
         files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'qunit']
+        tasks: ['jshint:core', 'jshint:test', 'qunit']
       },
       less: {
         files: 'less/**/*.less',
-        tasks: ['dist-css', 'copy:fonts', 'copy:images', 'copy:docs']
+        tasks: ['less-compile', 'autoprefixer:core', 'autoprefixer:defaultTheme', 'autoprefixer:avenir', 'copy:fonts', 'copy:images', 'copy:docs']
       }
     },
 

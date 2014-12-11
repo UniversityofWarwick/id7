@@ -14,4 +14,4 @@ port:             9001
 encoding:         UTF-8
 
 # Variables
-prefix:           id7
+prefix:           /

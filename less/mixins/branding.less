@@ -11,7 +11,7 @@
   );
 
   @media (min-width: @grid-float-breakpoint) {
-    .site-root & {
+    .id7-homepage-layout & {
       background-color: fadeout(@colour, 20%);
 
       .transition(background-color 0.15s linear);
@@ -158,12 +158,7 @@
 }
 
 .apply-brand(@colour) {
-  #main-content {
-    h1, h2, h3, h4, h5, h6,
-    .h1, .h2, .h3, .h4, .h5, .h6 {
-      color: @colour;
-    }
-  }
+  .header-colour(@colour);
 
   .brand-bg { background: @colour; }
   .brand-text { color: @colour; }
@@ -175,7 +170,7 @@
     }
   }
 
-  #utility-masthead, #utility-bar > .container {
+  #id7-utility-masthead, #id7-utility-bar > nav {
     background-color: fadeout(@colour, 50%);
   }
 
@@ -183,7 +178,7 @@
     .apply-navbar-brand(@colour);
   }
 
-  .site-root & #navigation:hover {
+  .id7-homepage-layout & #id7-navigation:hover {
     .navbar-primary {
       background-color: @colour; // TODO work out how to move into apply-navbar-brand
     }
@@ -194,7 +189,7 @@
     background-color: @breadcrumbs-colour;
   }
 
-  .site-root & #navigation:hover .navbar-primary .navbar-brand {
+  .id7-homepage-layout & #id7-navigation:hover .navbar-primary .navbar-brand {
     background-color: @breadcrumbs-colour;
   }
 
@@ -211,12 +206,12 @@
       darken(@breadcrumbs-colour, 7%)
     );
 
-    .site-root & {
+    .id7-homepage-layout & {
       .transition(~"background-color 0.15s linear, height .35s ease, visibility .35s ease");
     }
   }
 
-  .site-root & #navigation:hover {
+  .id7-homepage-layout & #id7-navigation:hover {
     .navbar-breadcrumbs {
       background-color: @breadcrumbs-colour; // TODO work out how to move into apply-navbar-brand
     }
@@ -234,22 +229,22 @@
   }
 
   &.bordered {
-    #left-border, #right-border { border-color: fadeout(@colour, 70%); }
+    #id7-left-border, #id7-right-border { border-color: fadeout(@colour, 70%); }
   }
 
-  #site-footer {
+  #id7-site-footer {
     background: @id7-site-footer-colour;
     color: contrast(@id7-site-footer-colour);
     .link-colour(contrast(@id7-site-footer-colour));
   }
 
-  #app-footer {
+  #id7-app-footer {
     background: @colour;
     color: contrast(@colour);
     .link-colour(contrast(@colour));
   }
 
-  #masthead .search {
+  #id7-masthead .search {
     #search-box {
       border-color: @colour;
     }

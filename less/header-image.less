@@ -1,70 +1,53 @@
-.header-height(@width, @height, @bleed) {
-  @height-total: (@navbar-height + @height + @bleed);
-
+.header-height(@width, @height) {
   &,
   .carousel > .carousel-inner > .item {
     background-position: center bottom;
-    background-size: @width @height-total;
+    background-size: @width @height;
   }
 
-  min-height: @height-total;
-  margin-bottom: -@bleed;
-
-  &.opaque-navigation {
-    background-position: center @id7-navigation-height;
-  }
+  min-height: @height;
 }
 
-#header-image-container {
-  .site-root & {
+#id7-header-image-container {
+  .id7-homepage-layout & {
     &,
     .carousel > .carousel-inner > .item {
       background-position: 50% 50%;
       background-repeat: no-repeat;
-      background-size: @container-sm (@id7-header-height-sm + @navbar-height);
+      background-size: @container-sm @id7-header-height-sm;
     }
 
     // Set this on #header-image-container to allow the collapsing nav on smallscreens to fill this height up
     min-height: @id7-header-height-xs;
 
     @media (min-width: @screen-sm-min) {
-      .header-height(@container-sm, @id7-header-height-sm, 0px);
+      .header-height(@container-sm, @id7-header-height-sm);
     }
 
     @media (min-width: @screen-md-min) {
-      .header-height(@container-md, @id7-header-height-md, 0px);
+      .header-height(@container-md, @id7-header-height-md);
     }
 
     @media (min-width: @screen-lg-min) {
-      .header-height(@container-lg, @id7-header-height-lg, 0px);
-    }
-  }
-
-  .site-root.content-bleed & {
-    @media (min-width: @screen-sm-min) {
-      .header-height(@container-sm, @id7-header-height-sm, @id7-content-header-height);
-    }
-
-    @media (min-width: @screen-md-min) {
-      .header-height(@container-md, @id7-header-height-md, @id7-content-header-height);
-    }
-
-    @media (min-width: @screen-lg-min) {
-      .header-height(@container-lg, @id7-header-height-lg, @id7-content-header-height);
+      .header-height(@container-lg, @id7-header-height-lg);
     }
   }
 
   position: relative;
   .strapline {
+    .container-fluid();
+    .header-colour(white);
+
     display: none;
     position: relative;
 
     @media (min-width: @grid-float-breakpoint) {
-      .site-root & {
+      .id7-homepage-layout & {
         display: block;
 
         color: white;
-        background: rgba(80, 80, 80, 0.3);
+        background-color: #555555;
+        background-color: rgba(80, 80, 80, 0.3);
 
         h2 {
           margin: (@line-height-computed / 2) 0;
@@ -75,16 +58,10 @@
           bottom: 0px;
         }
       }
-
-      .site-root.content-bleed & {
-        &.bottom {
-          padding-bottom: @id7-content-header-height;
-        }
-      }
     }
   }
 
-  .header-video {
+  #id7-header-video {
     height: 100%;
     left: 0;
     overflow: hidden;

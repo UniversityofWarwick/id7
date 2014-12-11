@@ -4,16 +4,16 @@
   {% include header.html %}
 </head>
 <body>
-<div id="left-border"></div>
-<div id="fixed-width-container">
-  <a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
+<div id="id7-left-border"></div>
+<main id="id7-fixed-width-container">
+  <a class="sr-only sr-only-focusable" href="#id7-main-content">Skip to main content</a>
 
-  <header id="page-header">
+  <header id="id7-page-header">
     {% include utility-masthead.html %}
 
-    <div id="header-image-container">
+    <div id="id7-header-image-container">
       <!-- Docs master nav -->
-      <div id="navigation">
+      <div id="id7-navigation">
         {% include nav/main.html %}
         {% include nav/breadcrumbs.html %}
 
@@ -25,32 +25,21 @@
   </header>
 
   <!-- Page content of course! -->
-  <section id="main-content-section">
-    <header id="main-content-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 header-text">
-            <div id="page-title">
-              <h1>{{ page.title }}</h1>
-            </div>
-          </div>
-          <div class="col-sm-4 logo-bleed"></div>
-        </div>
+  <section id="id7-main-content-section">
+    <header id="id7-main-content-header">
+      <div id="id7-page-title">
+        <h1>{{ page.title }}</h1>
       </div>
     </header>
 
-    <div id="main-content">
-      <div class="container">
-        <div class="row">
-          {{ content }}
-        </div>
-      </div>
+    <div id="id7-main-content">
+      {{ content }}
     </div>
   </section>
 
   {% include footer.html %}
-</div>
-<div id="right-border"></div>
+</main>
+<div id="id7-right-border"></div>
 
 {% include tail.html %}
 

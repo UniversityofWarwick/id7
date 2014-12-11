@@ -1,11 +1,17 @@
-#utility-bar {
+#id7-utility-bar {
   .small();
+
+  > nav {
+    .container-fluid();
+  }
+
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
   height: @id7-masthead-bleed-height;
   line-height: @id7-masthead-bleed-height;
 
   ul {
-    margin-bottom: 0;
+    .pull-right();
+    .horizontal-utility-links(0.4em, @gray-lighter);
   }
 
   .link-colour(white);
@@ -27,7 +33,7 @@
       width: @container-lg;
     }
 
-    + #masthead {
+    + #id7-masthead {
       margin-top: @id7-masthead-bleed-height;
     }
   }
@@ -36,7 +42,7 @@
     text-shadow: none;
 
     max-width: 100%;
-    width: 300px; // FIXME magic number
+    width: 320px; // FIXME magic number
 
     img { max-width: 100%; }
 

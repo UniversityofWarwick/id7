@@ -1,23 +1,23 @@
-@import "bootstrap/variables.less";
-@import "bootstrap/mixins.less";
-@import "variables.less";
-@import "mixins.less";
+@import 'bootstrap/variables.less';
+@import 'bootstrap/mixins.less';
+@import 'variables.less';
+@import 'mixins.less';
 
 /* A default theme */
 html {
-  #header-image-container {
+  #id7-header-image-container {
     #gradient > .vertical(@start-color: @id7-brand-blue; @end-color: @id7-brand-red);
   }
 
-  #fixed-width-container, #utility-bar.affix { // TODO Do we really need to apply this to #utility-masthead too? (only when affixed)
+  #id7-fixed-width-container, #id7-utility-bar.affix { // TODO Do we really need to apply this to #utility-masthead too? (only when affixed)
     #gradient > .vertical(@start-color: @id7-brand-blue; @end-color: @id7-brand-red);
   }
 
-  #left-border {
+  #id7-left-border {
     #gradient > .horizontal(@start-color: @id7-brand-blue; @end-color: @id7-brand-red);
   }
 
-  #right-border {
+  #id7-right-border {
     #gradient > .horizontal(@start-color: @id7-brand-red; @end-color: @id7-brand-blue);
   }
 }

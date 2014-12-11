@@ -43,7 +43,6 @@
       fixed: true,
       flipBreadcrumbIcons: true,
       fitToWidth: true,
-      equaliseHeight: true,
       collapseSmallscreen: false,
       trimLinkTitles: {
         maxLength: 60,
@@ -101,7 +100,7 @@
       affix: function affix() {
         this.$container.affix({
           offset: {
-            top: this.$container.offset().top - $('#utility-bar').height()
+            top: this.$container.offset().top - $('#id7-utility-bar').height()
           }
         });
       },
@@ -136,7 +135,6 @@
         if (screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
 
         if (this.options.fitToWidth) this.fitToWidth(screenConfig);
-        if (this.options.equaliseHeight) this.equaliseHeight(screenConfig);
 
         this.lastScreenConfig = screenConfig.name;
       },
@@ -181,39 +179,8 @@
         });
       },
 
-      equaliseHeight: function equaliseHeight(screenConfig) {
-        var options = this.options;
-
-        this.$container.find('.nav-fixed-width').closest('.navbar').each(function () {
-          var $navbar = $(this);
-          var $nav = $navbar.find('> .nav').first();
-          var $header = $navbar.find('> .navbar-header > .navbar-brand');
-          var $right = $navbar.find('.navbar-right > .dropdown').first();
-
-          if ($nav.length > 0) {
-            // Convert all the candidates into their height
-            var candidates = _.union($nav.find('> li').get(), $header.get(), $right.get());
-            _.each(candidates, function (candidate) {
-              $(candidate).css('height', '');
-            });
-
-            if (!options.collapseSmallscreen || screenConfig.name != 'xs') {
-              var heights = _.map(candidates, function (candidate) {
-                return $(candidate).outerHeight();
-              });
-
-              var maxHeight = _.max(heights);
-
-              _.each(candidates, function (candidate) {
-                $(candidate).css('height', maxHeight + 'px');
-              });
-            }
-          }
-        });
-      },
-
       wireEventHandlers: function wireEventHandlers() {
-        if (this.options.fitToWidth || this.options.equaliseHeight) {
+        if (this.options.fitToWidth) {
           $('html').on('id7:fonts-loaded', $.proxy(this.onScreenResize, this));
 
           // Catch the situation where we're missing the event being fired
@@ -262,6 +229,6 @@
   };
 
   $(function () {
-    $('#navigation').id7Navigation();
+    $('#id7-navigation').id7Navigation();
   });
 })(jQuery);

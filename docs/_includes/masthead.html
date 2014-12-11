@@ -1,51 +1,47 @@
-<div id="masthead">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 logo-column">
-                <div class="row logo-row">
-                    <div class="logo">
-                        <a href="/" title="Warwick homepage">
-                            <img src="{{ site.prefix }}/dist/images/shim.gif" alt="Warwick">
-                        </a>
-                    </div>
-                    <nav class="warwick-site-links">
-                        <ul class="hidden-sm hidden-xs">
-                            <li><a href="#">Study</a></li>
-                            <li><a href="#">Research</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Alumni</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">About</a></li>
-                        </ul>
-                    </nav>
+<div id="id7-masthead">
+    <div id="id7-masthead-contents">
+        <div id="id7-logo-column">
+            <div id="id7-logo-row">
+                <div id="id7-logo">
+                    <a href="/" title="Warwick homepage">
+                        <img src="{{ site.prefix }}dist/images/shim.gif" alt="Warwick">
+                    </a>
                 </div>
-
-                <div class="row header-text-row">
-                    <div class="col-sm-12 header-text">
-                        <h1>
-                            {% if page.slug contains 'subsite' %}
-                                <span class="parent-site-link"><a href="/">ID7 Documentation</a></span>
-                                <span class="current-site-link"><a href="/{{ page.slug }}">Subsite</a></span>
-                            {% else %}
-                                <span class="current-site-link"><a href="/">ID7 Documentation</a></span>
-                            {% endif %}
-                        </h1>
-                    </div>
-                </div>
+                <nav id="id7-site-links">
+                    <ul>
+                        <li><a href="#">Study</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="col-sm-4 search-column">
-                <div class="search row">
-                    <form action="http://search.warwick.ac.uk/website" role="search">
-                        <input type="hidden" name="source" value="http://www2.warwick.ac.uk/">
-                        <div class="form-group col-sm-12">
-                            <label class="sr-only" for="search-box">Search</label>
-                            <div class="search-box">
-                                <input type="search" class="form-control input-lg col-sm-12" id="search-box" name="q" placeholder="Type your search here" data-suggest="go">
-                                <i class="fa fa-search fa-2x"></i>
-                            </div>
+
+            <div id="id7-header-text">
+                <h1>
+                    {% if page.slug contains 'subsite' %}
+                        <span id="id7-parent-site-link"><a href="/">ID7 Documentation</a></span>
+                        <span id="id7-current-site-link"><a href="/{{ page.slug }}">Subsite</a></span>
+                    {% else %}
+                        <span id="id7-current-site-link"><a href="/">ID7 Documentation</a></span>
+                    {% endif %}
+                </h1>
+            </div>
+        </div>
+        <div id="id7-search-column">
+            <div id="id7-search">
+                <form action="http://search.warwick.ac.uk/website" role="search">
+                    <input type="hidden" name="source" value="http://www2.warwick.ac.uk/">
+                    <div class="form-group">
+                        <label class="sr-only" for="id7-search-box">Search</label>
+                        <div id="id7-search-box-container">
+                            <input type="search" class="form-control input-lg" id="id7-search-box" name="q" placeholder="Type your search here" data-suggest="go">
+                            <i class="fa fa-search fa-2x"></i>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

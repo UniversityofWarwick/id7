@@ -1,0 +1,25 @@
+.link-colour(@base) when not (@base = inherit) {
+  a {
+    color: @base;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: darken(@base, 7%);
+      text-decoration: @link-hover-decoration;
+    }
+  }
+}
+
+.link-colour(@base) when (@base = inherit) {
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      text-decoration: @link-hover-decoration;
+    }
+  }
+}

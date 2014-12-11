@@ -1,22 +1,22 @@
-@import "../../../less/bootstrap/variables.less";
-@import "../../../less/bootstrap/mixins.less";
-@import "../../../less/variables.less";
-@import "../../../less/mixins.less";
+@import '../../../less/bootstrap/variables.less';
+@import '../../../less/bootstrap/mixins.less';
+@import '../../../less/variables.less';
+@import '../../../less/mixins.less';
 
 .apply-site-images(@dir) {
-  #header-image-container {
+  #id7-header-image-container {
     background-image: url("@{dir}/banner-image.jpg");
   }
 
-  #fixed-width-container, #utility-bar.affix { // TODO Do we really need to apply this to #utility-masthead too? (only when affixed)
+  #id7-fixed-width-container, #id7-utility-bar.affix { // TODO Do we really need to apply this to #utility-masthead too? (only when affixed)
     background-image: url("@{dir}/masthead-image.jpg");
   }
 
-  #left-border {
+  #id7-left-border {
     background-image: url("@{dir}/border-image-left.jpg");
   }
 
-  #right-border {
+  #id7-right-border {
     background-image: url("@{dir}/border-image-right.jpg");
   }
 }
@@ -28,5 +28,5 @@ html {
 }
 
 body {
-  .apply-brand(@id7-brand-yellow);
+  .apply-brand(@id7-brand-purple);
 }

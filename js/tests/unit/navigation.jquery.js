@@ -32,8 +32,8 @@ $(function () {
   });
 
   test('should trim link titles', function () {
-    var $el = $('<div id="navigation" class="affix-top">' +
-                '<nav class="primary-navigation navbar navbar-primary" role="navigation">' +
+    var $el = $('<div id="id7-navigation" class="affix-top">' +
+                '<nav id="id7-primary-navigation" class="navbar navbar-primary" role="navigation">' +
                 '<ul class="nav navbar-nav">' +
                 '<li><a href="#">Short link title</a></li>' +
                 '<li><a href="#">A really long link title that goes over the sixty char threshold and needs trimming</a></li>' +
@@ -49,8 +49,8 @@ $(function () {
   });
 
   test('should affix', function () {
-    var $el = $('<div id="navigation" class="affix-top">' +
-                '<nav class="primary-navigation navbar navbar-primary" role="navigation">' +
+    var $el = $('<div id="id7-navigation" class="affix-top">' +
+                '<nav id="id7-primary-navigation" class="navbar navbar-primary" role="navigation">' +
                 '<ul class="nav navbar-nav">' +
                 '<li><a href="#">Primary nav link</a></li>' +
                 '</ul>' +
@@ -63,10 +63,10 @@ $(function () {
   });
 
   test('should swap breadcrumb icon out', function () {
-    var $el = $('<div id="navigation" class="affix-top">' +
-                '<nav class="primary-navigation navbar navbar-primary" role="navigation">' +
+    var $el = $('<div id="id7-navigation" class="affix-top">' +
+                '<nav id="id7-primary-navigation" class="navbar navbar-primary" role="navigation">' +
                 '<div class="navbar-header">' +
-                '<button type="button" class="btn-link navbar-brand collapsed" data-toggle="collapse" data-target="#breadcrumbs">' +
+                '<button type="button" class="btn-link navbar-brand collapsed" data-toggle="collapse" data-target="#id7-breadcrumbs">' +
                 '<span class="sr-only">Toggle breadcrumbs</span>' +
                 '<i class="fa fa-fw fa-compass"></i>' +
                 '</button>' +
@@ -75,7 +75,7 @@ $(function () {
                 '<li><a href="#">Primary nav link</a></li>' +
                 '</ul>' +
                 '</nav>' +
-                '<nav class="breadcrumbs navbar navbar-breadcrumbs collapse navbar-breadcrumb-collapse" id="breadcrumbs">' +
+                '<nav class="breadcrumbs navbar navbar-breadcrumbs collapse navbar-breadcrumb-collapse" id="id7-breadcrumbs">' +
                 '<div class="container-fluid">' +
                 '<ul class="nav navbar-nav">' +
                 '<li><a href="/">Uni home</a></li>' +

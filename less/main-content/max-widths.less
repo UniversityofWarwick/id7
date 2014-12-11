@@ -1,0 +1,46 @@
+.set-max-widths(100%);
+
+// SBTWO-4749 remove max widths within a table, as table cells can
+// squash content unnecessarily and they have their own scrolling mechanism
+table {
+  .set-max-widths(none);
+}
+
+// SBTWO-4749 Presentation table on mobile should allow things to shrink
+table[role="presentation"] {
+  .set-max-widths(100%);
+}
+
+// SBTWO-5949
+.fb-like iframe {
+  max-width: none;
+}
+
+// Don't allow any element to be larger than its container
+.set-max-widths(@max-width) {
+  img, video, audio, pre, iframe {
+    max-width: @max-width;
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  video[height] {
+    height: auto !important;
+  }
+}
+
+@media (max-width: (@grid-float-breakpoint - 1)) {
+  table[role="presentation"] {
+    > tr > td,
+    > tr > th,
+    > tbody > tr > td,
+    > tbody > tr > th,  {
+      display: block !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: auto  !important;
+    }
+  }
+}

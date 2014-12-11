@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="site-root">
+<html lang="en" class="id7-homepage-layout">
 <head>
   {% include header.html %}
 </head>
 <body>
-<div id="left-border"></div>
-<main id="fixed-width-container">
-  <a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
+<div id="id7-left-border"></div>
+<main id="id7-fixed-width-container">
+  <a class="sr-only sr-only-focusable" href="#id7-main-content">Skip to main content</a>
 
-  <header id="page-header">
+  <header id="id7-page-header">
     {% include utility-masthead.html %}
 
-    <div id="header-image-container">
+    <div id="id7-header-image-container">
       {% if page.header == 'video' %}
         {% include header-video.html %}
       {% elsif page.header == 'carousel' %}
@@ -19,48 +19,35 @@
       {% endif %}
 
       <!-- Docs master nav -->
-      <div id="navigation">
+      <div id="id7-navigation">
         {% include nav/main.html %}
         {% include nav/breadcrumbs.html %}
       </div>
 
       {% unless page.header == 'carousel' %}
         <div class="strapline top text-right">
-          <div class="container">
-            <h2>University of the Year 2014</h2>
-          </div>
+          <h2>University of the Year 2014</h2>
         </div>
       {% endunless %}
     </div>
   </header>
 
   <!-- Page content of course! -->
-  <section id="main-content-section">
-    <header id="main-content-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 header-text">
-            <div id="page-title">
-              <h1>{{ page.title }}</h1>
-            </div>
-          </div>
-          <div class="col-sm-4 logo-bleed"></div>
-        </div>
+  <section id="id7-main-content-section">
+    <header id="id7-main-content-header">
+      <div id="id7-page-title">
+        <h1>{{ page.title }}</h1>
       </div>
     </header>
 
-    <div id="main-content">
-      <div class="container">
-        <div class="row">
-          {{ content }}
-        </div>
-      </div>
+    <div id="id7-main-content">
+      {{ content }}
     </div>
   </section>
 
   {% include footer.html %}
 </main>
-<div id="right-border"></div>
+<div id="id7-right-border"></div>
 
 {% include tail.html %}
 

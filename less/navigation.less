@@ -1,4 +1,4 @@
-#navigation {
+#id7-navigation {
   position: relative;
   z-index: 1;
 
@@ -147,49 +147,6 @@
       }
     }
   }
-
-  .navbar-nav > li > .description {
-    display: none;
-    .small();
-    margin-top: 6px; // FIXME magic number
-  }
-
-  @media (min-width: @screen-md-min) {
-    .site-root & .navbar-nav.nav-fixed-width > li > .description {
-      display: block;
-    }
-  }
-
-  .navbar-nav.nav-fixed-width {
-    > li {
-      min-width: @id7-navigation-fixed-width-xs;
-      max-width: @id7-navigation-fixed-width-xs;
-    }
-
-    @media (min-width: @screen-sm-min) {
-      > li {
-        min-width: @id7-navigation-fixed-width-sm;
-        max-width: @id7-navigation-fixed-width-sm;
-      }
-    }
-
-    @media (min-width: @screen-md-min) {
-      > li {
-        min-width: @id7-navigation-fixed-width-md;
-        max-width: @id7-navigation-fixed-width-md;
-      }
-    }
-
-    @media (min-width: @screen-lg-min) {
-      > li {
-        min-width: @id7-navigation-fixed-width-lg;
-        max-width: @id7-navigation-fixed-width-lg;
-      }
-    }
-  }
-
-  // TODO remove this it's just cheating
-  .site-root & .secondary-navigation { display: none; }
 
   .navbar-nav > li {
     .transition(~"background-color .15s linear, color .15s linear")

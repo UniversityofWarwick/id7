@@ -1,0 +1,16 @@
+.horizontal-utility-links(@spacing: 0.2em, @separator-colour: @gray-light) {
+  .list-inline();
+
+  margin: 0;
+
+  > li {
+    padding: 0;
+
+    &:not(:first-child)::before {
+      content: '|';
+      margin-left: (@spacing / 2);
+      margin-right: @spacing;
+      color: @separator-colour;
+    }
+  }
+}

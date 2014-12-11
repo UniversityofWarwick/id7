@@ -1,18 +1,9 @@
-.link-colour(@base) {
-  a {
-    color: @base;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: darken(@base, 7%);
-      text-decoration: @link-hover-decoration;
-    }
-  }
-}
-
+@import 'mixins/link-styles.less';
+@import 'mixins/header-styles.less';
 @import 'mixins/branding.less';
 @import 'mixins/flexbox.less';
 @import 'mixins/css-triangles.less';
 @import 'mixins/logo.less';
 @import 'mixins/equal-height-columns.less';
+@import 'mixins/box-styles.less';
+@import 'mixins/horizontal-utility-links.less';

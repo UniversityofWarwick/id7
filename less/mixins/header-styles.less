@@ -1,0 +1,22 @@
+.header-colour(@colour) {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: @colour;
+  }
+}
+
+.bordered-headings(@border-colour) {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    padding-bottom: (@line-height-computed / 2);
+    border-bottom: 1px solid @border-colour;
+  }
+}
+
+.bordered-headings(@border-colour) when (@border-colour = none) {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}

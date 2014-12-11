@@ -17,8 +17,5 @@
   "universal-selector": false,
   "unqualified-attributes": false,
 
-  "ids": false,
-  "duplicate-background-images": false,
-  "fallback-colors": false,
-  "overqualified-elements": false
+  "ids": false
 }

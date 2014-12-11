@@ -1,0 +1,17 @@
+.boxstyle-filled(@bg, @text-colour: inherit) {
+  background: @bg;
+  color: @text-colour;
+}
+
+.boxstyle-filled(@bg, @text-colour: inherit) when not (@text-colour = inherit) {
+  .header-colour(inherit);
+}
+
+.boxstyle-bordered(@border-colour, @text-colour: inherit) {
+  border: 1px solid @border-colour;
+  color: @text-colour;
+}
+
+.boxstyle-bordered(@border-colour, @text-colour: inherit) when not (@text-colour = inherit) {
+  .header-colour(inherit);
+}

@@ -1,5 +1,5 @@
 /* A default theme */
-html #header-image-container {
+html #id7-header-image-container {
   background-image: -webkit-linear-gradient(top, #7e9bc0 0%, #a93439 100%);
   background-image:      -o-linear-gradient(top, #7e9bc0 0%, #a93439 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7e9bc0), to(#a93439));
@@ -7,8 +7,8 @@ html #header-image-container {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7e9bc0', endColorstr='#ffa93439', GradientType=0);
   background-repeat: repeat-x;
 }
-html #fixed-width-container,
-html #utility-bar.affix {
+html #id7-fixed-width-container,
+html #id7-utility-bar.affix {
   background-image: -webkit-linear-gradient(top, #7e9bc0 0%, #a93439 100%);
   background-image:      -o-linear-gradient(top, #7e9bc0 0%, #a93439 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7e9bc0), to(#a93439));
@@ -16,7 +16,7 @@ html #utility-bar.affix {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7e9bc0', endColorstr='#ffa93439', GradientType=0);
   background-repeat: repeat-x;
 }
-html #left-border {
+html #id7-left-border {
   background-image: -webkit-linear-gradient(left, #7e9bc0 0%, #a93439 100%);
   background-image:      -o-linear-gradient(left, #7e9bc0 0%, #a93439 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(#7e9bc0), to(#a93439));
@@ -24,7 +24,7 @@ html #left-border {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7e9bc0', endColorstr='#ffa93439', GradientType=1);
   background-repeat: repeat-x;
 }
-html #right-border {
+html #id7-right-border {
   background-image: -webkit-linear-gradient(left, #a93439 0%, #7e9bc0 100%);
   background-image:      -o-linear-gradient(left, #a93439 0%, #7e9bc0 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(#a93439), to(#7e9bc0));
@@ -32,18 +32,18 @@ html #right-border {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa93439', endColorstr='#ff7e9bc0', GradientType=1);
   background-repeat: repeat-x;
 }
-body #main-content h1,
-body #main-content h2,
-body #main-content h3,
-body #main-content h4,
-body #main-content h5,
-body #main-content h6,
-body #main-content .h1,
-body #main-content .h2,
-body #main-content .h3,
-body #main-content .h4,
-body #main-content .h5,
-body #main-content .h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body .h1,
+body .h2,
+body .h3,
+body .h4,
+body .h5,
+body .h6 {
   color: #7a3b83;
 }
 body .brand-bg {
@@ -58,8 +58,8 @@ body .brand-border {
 body #utility-masthead::after {
   background-color: #7a3b83;
 }
-body #utility-masthead,
-body #utility-bar > .container {
+body #id7-utility-masthead,
+body #id7-utility-bar > nav {
   background-color: rgba(122, 59, 131, .5);
 }
 body .navbar-primary {
@@ -159,20 +159,20 @@ fieldset[disabled] body .navbar-primary .btn-link:focus {
   color: #fff;
 }
 @media (min-width: 768px) {
-  .site-root body .navbar-primary {
+  .id7-homepage-layout body .navbar-primary {
     background-color: rgba(122, 59, 131, .8);
     -webkit-transition: background-color .15s linear;
          -o-transition: background-color .15s linear;
             transition: background-color .15s linear;
   }
 }
-.site-root body #navigation:hover .navbar-primary {
+.id7-homepage-layout body #id7-navigation:hover .navbar-primary {
   background-color: #7a3b83;
 }
 body .navbar-primary .navbar-brand {
   background-color: #9b4ba6;
 }
-.site-root body #navigation:hover .navbar-primary .navbar-brand {
+.id7-homepage-layout body #id7-navigation:hover .navbar-primary .navbar-brand {
   background-color: #9b4ba6;
 }
 body .navbar-breadcrumbs {
@@ -271,12 +271,12 @@ body .navbar-breadcrumbs .btn-link[disabled]:focus,
 fieldset[disabled] body .navbar-breadcrumbs .btn-link:focus {
   color: #fff;
 }
-.site-root body .navbar-breadcrumbs {
+.id7-homepage-layout body .navbar-breadcrumbs {
   -webkit-transition: background-color .15s linear, height .35s ease, visibility .35s ease;
        -o-transition: background-color .15s linear, height .35s ease, visibility .35s ease;
           transition: background-color .15s linear, height .35s ease, visibility .35s ease;
 }
-.site-root body #navigation:hover .navbar-breadcrumbs {
+.id7-homepage-layout body #id7-navigation:hover .navbar-breadcrumbs {
   background-color: #9b4ba6;
 }
 body .navbar-secondary {
@@ -376,7 +376,7 @@ fieldset[disabled] body .navbar-secondary .btn-link:focus {
   color: #fff;
 }
 @media (min-width: 768px) {
-  .site-root body .navbar-secondary {
+  .id7-homepage-layout body .navbar-secondary {
     background-color: rgba(231, 83, 0, .8);
     -webkit-transition: background-color .15s linear;
          -o-transition: background-color .15s linear;
@@ -389,51 +389,51 @@ body .opaque-navigation .navbar-primary {
        -o-transition: none;
           transition: none;
 }
-body.bordered #left-border,
-body.bordered #right-border {
+body.bordered #id7-left-border,
+body.bordered #id7-right-border {
   border-color: rgba(122, 59, 131, .3);
 }
-body #site-footer {
+body #id7-site-footer {
   color: #000;
   background: #d3d3d3;
 }
-body #site-footer a {
+body #id7-site-footer a {
   color: #000;
   text-decoration: none;
 }
-body #site-footer a:hover,
-body #site-footer a:focus {
+body #id7-site-footer a:hover,
+body #id7-site-footer a:focus {
   color: #000;
   text-decoration: underline;
 }
-body #app-footer {
+body #id7-app-footer {
   color: #fff;
   background: #7a3b83;
 }
-body #app-footer a {
+body #id7-app-footer a {
   color: #fff;
   text-decoration: none;
 }
-body #app-footer a:hover,
-body #app-footer a:focus {
+body #id7-app-footer a:hover,
+body #id7-app-footer a:focus {
   color: #ededed;
   text-decoration: underline;
 }
-body #masthead .search #search-box {
+body #id7-masthead .search #search-box {
   border-color: #7a3b83;
 }
-body #masthead .search .fa {
+body #id7-masthead .search .fa {
   color: rgba(122, 59, 131, .5);
   -webkit-transition: color .15s linear;
        -o-transition: color .15s linear;
           transition: color .15s linear;
 }
-body #masthead .search .twitter-typeahead:active + .fa,
-body #masthead .search .twitter-typeahead:hover + .fa,
-body #masthead .search .twitter-typeahead:focus + .fa {
+body #id7-masthead .search .twitter-typeahead:active + .fa,
+body #id7-masthead .search .twitter-typeahead:hover + .fa,
+body #id7-masthead .search .twitter-typeahead:focus + .fa {
   color: #7a3b83;
 }
-body #masthead .search .twitter-typeahead .tt-suggestion.tt-cursor {
+body #id7-masthead .search .twitter-typeahead .tt-suggestion.tt-cursor {
   color: #fff;
   background: #7a3b83;
 }

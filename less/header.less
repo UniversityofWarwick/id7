@@ -1,9 +1,8 @@
-@import "utility-bar";
-@import "masthead";
-@import "header-image";
-@import "carousel.less";
+#id7-page-header {
+  .bordered-headings(none);
+}
 
-#utility-masthead {
+#id7-utility-masthead {
   // Place a block underneath the WARWICK text so we can change its colour
   position: relative;
   z-index: 40;
@@ -29,3 +28,8 @@
     }
   }
 }
+
+@import 'utility-bar.less';
+@import 'masthead.less';
+@import 'header-image.less';
+@import 'carousel.less';

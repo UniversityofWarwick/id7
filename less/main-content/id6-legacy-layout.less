@@ -1,0 +1,45 @@
+// ID6 utility classes
+.hyphenate-small-columns(@size) when (@size < 6) {
+  @media (min-width: @screen-sm-min) {
+    .hyphens();
+  }
+}
+.hyphenate-small-columns(@size) when (@size >= 6) {}
+
+.id6-layout(@left, @right) {
+  .make-row();
+
+  @media (min-width: @screen-sm-min) {
+    > .column-1, #column-1 {
+      .make-sm-column(@left);
+      .hyphenate-small-columns(@left);
+    }
+
+    > .column-2, #column-2 {
+      .make-sm-column(@right);
+      .hyphenate-small-columns(@right);
+    }
+  }
+}
+
+.layout-75-25 { .id6-layout(9, 3); }
+.layout-50-50 { .id6-layout(6, 6); }
+.layout-25-75 { .id6-layout(3, 9); }
+.layout-33-66 { .id6-layout(4, 8); }
+.layout-66-33 { .id6-layout(8, 4); }
+
+.show-smallscreen {
+  .visible-xs-block;
+}
+
+.hide-smallscreen {
+ .hidden-xs;
+}
+
+// Not included here:
+// Expertise imports
+// table.sitebuilder_sortable
+// .livesearch-results
+// .kis-widget-container
+// ul.images li
+// .social-sharing-buttons

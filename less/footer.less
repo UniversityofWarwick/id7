@@ -1,23 +1,30 @@
-#page-footer {
-  #site-footer, #app-footer {
-    > .container {
-      padding-top: (@grid-gutter-width / 2);
-    }
-  }
-
-  #app-footer {
+#id7-page-footer {
+  #id7-site-footer, #id7-app-footer {
+    .container-fluid();
     position: relative;
+    padding-top: (@grid-gutter-width / 2);
 
-    > .logo-bleed {
+    .id7-logo-bleed {
       .logo-as-css(auto, @grid-gutter-width, @id7-site-footer-colour);
       position: absolute;
       top: 0px;
       left: 15%; // FIXME magic number
-    }
 
-    > .container {
-      padding-top: @grid-gutter-width;
-      .small();
+      + * {
+        margin-top: @grid-gutter-width;
+      }
+    }
+  }
+
+  #id7-app-footer {
+    .small();
+
+    #id7-footer-utility {
+      margin: (@grid-gutter-width / 2) 0;
+
+      ul {
+        .horizontal-utility-links();
+      }
     }
   }
 }
