@@ -8,7 +8,7 @@
 
 @icon-font-path: '../fonts';
 @body-bg: transparent;
-@font-family-sans-serif: 'Avenir Next', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+//@font-family-sans-serif: 'Avenir Next', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @headings-font-weight: 500;
 
 @navbar-height: @id7-navigation-height;
@@ -102,3 +102,11 @@
 
 // Colour branding
 @import 'mixins/branding';
+
+// TODO move this elsewhere
+// IE doesn't redraw when a webfont loads, so only use the font when it's been loaded
+html.wf-active {
+  body, .popover, .tooltip {
+    font-family: 'Avenir Next', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+}

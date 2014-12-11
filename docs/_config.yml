@@ -7,4 +7,4 @@ gems:             ['jekyll-less']
 permalink:        pretty
 
 # Variables
-prefix:           id7
+prefix:           /id7/
