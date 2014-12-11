@@ -156,6 +156,7 @@ module.exports = function (grunt) {
         files: {
           'docs/assets/css/config-options.css': 'docs/assets/css/config-options.less',
           'docs/assets/css/subsite.css': 'docs/assets/css/subsite.less',
+          'docs/assets/site/docs-site.css': 'docs/assets/site/docs-site.less',
           'docs/assets/site/site.css': 'docs/assets/site/site.less'
         }
       }
