@@ -1,0 +1,156 @@
+<h1 id="template" class="page-header">Basic template</h1>
+
+<p class="lead">Start with this basic HTML template, or modify <a href="{{ site.prefix }}examples">one of the examples</a>.</p>
+
+<p>Copy the HTML below to begin working with a minimal ID7 layout.</p>
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="en"> <!-- Add class="id7-homepage-layout" for a large hero image -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ID7 Template</title>
+
+  <!-- ID7 -->
+  <link href="css/id7.min.css" rel="stylesheet">
+
+  <!-- Default styling. You will probably want to replace with your own site.css -->
+  <link href="css/id7-default-style.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+  <!--[if lt IE 10]>
+  <script src="js/vendor/matchMedia.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="js/vendor/html5shiv-3.7.2.min.js"></script>
+  <script src="js/vendor/respond-1.4.2.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="id7-left-border"></div>
+  <main id="id7-fixed-width-container">
+    <a class="sr-only sr-only-focusable" href="#id7-main-content">Skip to main content</a>
+
+    <header id="id7-page-header">
+      <div id="id7-utility-masthead">
+        <div id="id7-utility-bar" data-spy="affix" class="affix">
+          <nav>
+            <ul>
+              <li>...</li>
+            </ul>
+          </nav>
+        </div>
+
+        <div id="id7-masthead">
+          <div id="id7-masthead-contents">
+            <div id="id7-logo-column">
+              <div id="id7-logo-row">
+                <div id="id7-logo">
+                  <a href="http://warwick.ac.uk" title="Warwick homepage">
+                    <img src="images/shim.gif" alt="Warwick">
+                  </a>
+                </div>
+                <nav id="id7-site-links">
+                  <ul>
+                    <li><a href="http://warwick.ac.uk/study">Study</a></li>
+                    <li><a href="http://warwick.ac.uk/research">Research</a></li>
+                    <li><a href="http://warwick.ac.uk/business">Business</a></li>
+                    <li><a href="http://warwick.ac.uk/alumni">Alumni</a></li>
+                    <li><a href="http://warwick.ac.uk/news">News</a></li>
+                    <li><a href="http://warwick.ac.uk/about">About</a></li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div id="id7-header-text">
+                <h1>
+                  <span id="id7-current-site-link"><a href="/">Site title</a></span>
+                </h1>
+              </div>
+            </div>
+            <div id="id7-search-column">
+              <div id="id7-search">
+                <form action="http://search.warwick.ac.uk/website" role="search">
+                  <input type="hidden" name="source" value="http://warwick.ac.uk"> <!-- Replace with the current page URL -->
+                  <div class="form-group">
+                    <label class="sr-only" for="id7-search-box">Search</label>
+                    <div id="id7-search-box-container">
+                      <input type="search" class="form-control input-lg" id="id7-search-box" name="q" placeholder="Type your search here" data-suggest="go">
+                      <i class="fa fa-search fa-2x"></i>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="id7-header-image-container">
+        <div id="id7-navigation">
+          <!-- Include the navigation component here if used -->
+        </div>
+      </div>
+    </header>
+
+    <section id="id7-main-content-section">
+      <header id="id7-main-content-header">
+        <div id="id7-page-title">
+          <h1>Hello, world!</h1>
+        </div>
+      </header>
+
+      <div id="id7-main-content">
+        <p>Page content goes here</p>
+      </div>
+    </section>
+
+    <footer id="id7-page-footer">
+      <div id="id7-site-footer">
+        <p>Site footer</p>
+      </div>
+      <div id="id7-app-footer">
+        <div class="id7-logo-bleed"></div>
+
+        <div id="id7-footer-utility">
+          <ul>
+            <li>...</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script type="text/javascript">
+    window.WebFontConfig = {
+      custom: {
+        families: ['Avenir Next:n1,i1,n5,i5,n7,i7'],
+        urls: ['css/avenir-next.css']
+      },
+      active: function() {
+        $('html').data('fonts-loaded', true).trigger('id7:fonts-loaded');
+      }
+    };
+  </script>
+
+  <script src="js/id7-bundle.min.js"></script>
+
+  <!-- Avenir Next usage for fonts.com -->
+  <script type="text/javascript">
+    var MTIProjectId='6473447e-ab65-4836-bf8e-65b5ecc63c87';
+    (function() {
+      var mtiTracking = document.createElement('script');
+      mtiTracking.type='text/javascript';
+      mtiTracking.async='true';
+      mtiTracking.src=('https:'==document.location.protocol?'https:':'http:')+'//fast.fonts.net/t/trackingCode.js';
+      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(mtiTracking);
+    })();
+  </script>
+</body>
+</html>
+{% endhighlight %}
