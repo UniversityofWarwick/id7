@@ -109,11 +109,10 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 
 ### Running sample site locally
 
-1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.5.x). **Windows users:** Read [this unofficial guide](http://jekyll-windows.juthilo.com/) to get Jekyll up and running without problems.
-2. Install the Ruby-based syntax highlighter, [Rouge](https://github.com/jneen/rouge), with `gem install rouge`.
-3. Install [LessCSS support for Jekyll](https://github.com/zroger/jekyll-less) with `gem install jekyll-less`.
-4. From the root `/id7` directory, run `jekyll serve` in the command line. To develop core CSS/JS, run `grunt watch` from another terminal at the same time.
-5. Open <http://localhost:9001> in your browser, and voilà.
+1. Install Ruby and `gem install bundler`
+2. From the root `/id7` directory, run `bundle install` to install dependent gems.
+4. From the root `/id7` directory, run `bundle exec jekyll serve` in the command line. To develop core CSS/JS, run `grunt watch` from another terminal at the same time.
+5. Open <http://localhost:9001> in your browser, et voilà.
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
 
