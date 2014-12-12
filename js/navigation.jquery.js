@@ -66,6 +66,7 @@
       if (o.trimLinkTitles) this.trimLinkTitles();
       if (o.fixed) this.affix();
       if (o.flipBreadcrumbIcons) this.flipBreadcrumbIcons();
+      if (o.fitToWidth) this.onScreenResize();
 
       this.wireEventHandlers();
     }

@@ -18,7 +18,7 @@ $(function () {
 
   test('should return jquery collection containing the element', function () {
     var $el = $('<div/>');
-    var $nav = $el.id7Navigation();
+    var $nav = $el.id7Navigation({ fitToWidth: false });
     ok($nav instanceof $, 'returns jquery collection');
     strictEqual($nav[0], $el[0], 'collection contains element');
   });
@@ -26,7 +26,7 @@ $(function () {
   test('should store navigation instance in navigation data object', function () {
     var $nav = $('<div/>')
         .appendTo('#qunit-fixture')
-        .id7Navigation();
+        .id7Navigation({ fitToWidth: false });
 
     ok($nav.data('id7.navigation'), 'navigation instance exists');
   });
@@ -41,7 +41,7 @@ $(function () {
                 '</nav>' +
                 '</div>')
         .appendTo('#qunit-fixture')
-        .id7Navigation();
+        .id7Navigation({ fitToWidth: false });
 
     equal($el.find('li').length, 2, 'should be two links');
     equal($el.find('li').eq(0).text(), 'Short link title', 'first link title should not have been truncated');
@@ -57,7 +57,7 @@ $(function () {
                 '</nav>' +
                 '</div>')
         .appendTo('#qunit-fixture')
-        .id7Navigation();
+        .id7Navigation({ fitToWidth: false });
 
     ok($el.data('bs.affix'), 'affix instance exists');
   });
@@ -85,7 +85,7 @@ $(function () {
                 '</nav>' +
                 '</div>')
         .appendTo('#qunit-fixture')
-        .id7Navigation();
+        .id7Navigation({ fitToWidth: false });
 
     var $icon = $el.find('i.fa');
 
