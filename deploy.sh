@@ -9,7 +9,7 @@ default_username=deploy.sh
 default_email=
 
 #repository to deploy to. must be readable and writable.
-repo=github
+repo=origin
 
 # Parse arg flags
 while : ; do

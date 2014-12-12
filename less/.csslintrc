@@ -17,5 +17,6 @@
   "universal-selector": false,
   "unqualified-attributes": false,
 
-  "ids": false
+  "ids": false,
+  "font-faces": false
 }

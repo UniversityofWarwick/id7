@@ -28,7 +28,6 @@
   ],
   "dependencies": {
     "jquery": ">= 1.11.1",
-    "webfontloader": ">= 1.5.6",
     "bootstrap": ">= 3.3.1",
     "typeahead.js": ">= 0.10.5",
     "lodash": ">= 2.4.1",

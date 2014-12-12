@@ -27,9 +27,6 @@ Within the download you'll find the following directories and files, logically g
 ```
 id7/
 ├── css/
-│   ├── avenir-next.css
-│   ├── avenir-next.css.map
-│   ├── avenir-next.min.css
 │   ├── id7.css
 │   ├── id7.css.map
 │   ├── id7.min.css
@@ -87,7 +84,6 @@ We provide compiled CSS and JS (`id7.*`), as well as compiled and minified CSS a
 The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The `id7-standalone.js` file doesn't include these, so they will need to be included manually. The dependencies required are:
 
 - [jQuery](https://github.com/jquery/jquery) >= 1.11.1
-- [webfontloader](https://github.com/typekit/webfontloader) >= 1.5.6
 - [Bootstrap](https://github.com/twbs/bootstrap) >= 3.3.1
 - [typeahead.js](https://github.com/twitter/typeahead.js) >= 0.10.5
 - [lodash](https://github.com/lodash/lodash) >= 2.4.1
