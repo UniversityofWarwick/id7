@@ -233,6 +233,13 @@ module.exports = function (grunt) {
       }
     },
 
+    concurrent: {
+      serve: {
+        tasks: ['watch','exec:jekyllServe'],
+        logConcurrentOutput: true
+      }
+    },
+
     connect: {
       server: {
         options: {
@@ -261,6 +268,11 @@ module.exports = function (grunt) {
     jekyll: {
       options: {
         config: '_config.yml'
+      },
+      server: {
+        options: {
+          config: '_config.yml'
+        }
       },
       docs: {}
     },
@@ -303,6 +315,9 @@ module.exports = function (grunt) {
     exec: {
       npmUpdate: {
         command: 'npm update'
+      },
+      jekyllServe: {
+        command: 'bin/jekyll serve'
       }
     }
   });
@@ -353,4 +368,7 @@ module.exports = function (grunt) {
 
   // Docs task.
   grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs']);
+
+  // Run Jekyll and watch for asset changes.
+  grunt.registerTask('serve', ['concurrent:serve'])
 };
