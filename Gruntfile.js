@@ -269,11 +269,6 @@ module.exports = function (grunt) {
       options: {
         config: '_config.yml'
       },
-      server: {
-        options: {
-          config: '_config.yml'
-        }
-      },
       docs: {}
     },
 
