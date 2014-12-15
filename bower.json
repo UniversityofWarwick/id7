@@ -24,7 +24,17 @@
     "composer.json",
     "docs",
     "js/tests",
-    "test-infra"
+    "test-infra",
+    "bin",
+    ".jscsrc",
+    ".jshintrc",
+    "deploy.sh",
+    "blank.jst",
+    "Gemfile",
+    "Gemfile.lock",
+    "Gruntfile.js",
+    "id7.iml",
+    "package.json"
   ],
   "//": {
     "All dependencies are intentionally removed here because they're packaged for inclusion by bower anyway": "",
