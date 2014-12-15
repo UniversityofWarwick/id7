@@ -24,20 +24,10 @@
     "composer.json",
     "docs",
     "js/tests",
-    "test-infra",
-		"bin",
-		".jscsrc",
-		".jshintrc",
-		"deploy.sh",
-		"blank.jst",
-		"Gemfile",
-		"Gemfile.lock",
-		"Gruntfile.js",
-		"id7.iml",
-		"package.json"
+    "test-infra"
   ],
-	"//": {
-		"All dependencies are intentionally removed here because they're packaged for inclusion by bower anyway": "",
+  "//": {
+    "All dependencies are intentionally removed here because they're packaged for inclusion by bower anyway": "",
     "jquery": ">= 1.11.1",
     "bootstrap": ">= 3.3.1",
     "typeahead.js": ">= 0.10.5",
