@@ -69,4 +69,5 @@ node_modules
 /docs/dist
 /docs/assets/css/*.css
 /docs/assets/site/*.css
+/docs/_includes/README.html
 /dist
