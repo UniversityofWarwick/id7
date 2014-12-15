@@ -6,19 +6,21 @@
 /* A default theme */
 html {
   #id7-header-image-container {
-    #gradient > .vertical(@start-color: @id7-brand-blue; @end-color: @id7-brand-red);
+    background-color: @gray-lighter;
   }
 
-  #id7-fixed-width-container, #id7-utility-bar.affix { // TODO Do we really need to apply this to #utility-masthead too? (only when affixed)
-    #gradient > .vertical(@start-color: @id7-brand-blue; @end-color: @id7-brand-red);
+  #id7-fixed-width-container, #id7-utility-bar.affix {
+    background-color: @gray-lighter;
   }
 
-  #id7-left-border {
-    #gradient > .horizontal(@start-color: @id7-brand-blue; @end-color: @id7-brand-red);
-  }
+  @media (min-width: @grid-float-breakpoint) {
+    #id7-left-border {
+      background-color: @gray-lighter;
+    }
 
-  #id7-right-border {
-    #gradient > .horizontal(@start-color: @id7-brand-red; @end-color: @id7-brand-blue);
+    #id7-right-border {
+      background-color: @gray-lighter;
+    }
   }
 }
 

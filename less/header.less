@@ -13,18 +13,18 @@
     z-index: -1;
     left: (@grid-gutter-width / 2);
 
-    @offset-xs: 36px; // FIXME Magic number
+    .position-logo-colour-block(@logo-height, @logo-width) {
+      @offset: ceil((@logo-height * 2 / 3));
 
-    top: @offset-xs;
-    width: (@id7-masthead-logo-width-xs - (@grid-gutter-width / 2));
-    height: (@id7-masthead-height-xs - @offset-xs);
+      top: @offset;
+      width: (@logo-width - (@grid-gutter-width / 2));
+      height: (@logo-height - @offset);
+    }
+
+    .position-logo-colour-block(@id7-masthead-height-xs, @id7-masthead-logo-width-xs);
 
     @media (min-width: @grid-float-breakpoint) {
-      @offset-sm: 52px; // FIXME Magic number
-
-      top: @offset-sm;
-      width: (@id7-masthead-logo-width-sm - (@grid-gutter-width / 2));
-      height: (@id7-masthead-height-sm - @offset-sm);
+      .position-logo-colour-block(@id7-masthead-height-sm, @id7-masthead-logo-width-sm);
     }
   }
 }

@@ -1,0 +1,25 @@
+// Open link in new window
+a {
+  img.targetBlank {
+    border: 0px;
+    width: 13px;
+    height: @line-height-computed;
+    background: url(../images/newwindow.gif) right 3px no-repeat;
+
+    @media print {
+      display: none;
+    }
+  }
+
+  &:hover img.targetBlank {
+    background-position: right -125px;
+  }
+}
+
+.user_error {
+  display: block;
+  color: red;
+}
+
+/* Tell IE to use Bicupic interpolation, makes resized images look better */
+img { -ms-interpolation-mode: bicubic; }

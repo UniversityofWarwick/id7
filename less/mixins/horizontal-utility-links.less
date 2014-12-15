@@ -6,6 +6,10 @@
   > li {
     padding: 0;
 
+    .lt-ie9 & {
+      margin: 0 @spacing;
+    }
+
     &:not(:first-child)::before {
       content: '|';
       margin-left: (@spacing / 2);

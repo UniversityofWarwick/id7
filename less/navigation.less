@@ -79,23 +79,23 @@
 
     .navbar-nav {
       > li {
-        padding-left: 4px; // FIXME magic number
-        padding-right: 6px; // FIXME magic number
-        margin: 0 10px 0 0; // FIXME magic number
+        padding-left: 4px;
+        padding-right: 6px;
+        margin: 0 (@line-height-computed / 2) 0 0;
 
         &:first-child { margin-left: 0; }
         &::after {
           .fa();
-          font-size: 0.7em; // FIXME magic number
+          font-size: 0.7em;
           content: @fa-var-play;
           position: absolute;
           left: 100%;
-          top: 11px; // FIXME magic number
+          top: 11px;
         }
       }
       > li.navbar-text {
-        margin: 0 10px 0 0; // FIXME magic number
-        line-height: 20px; // FIXME magic number
+        margin: 0 (@line-height-computed / 2) 0 0;
+        line-height: @line-height-computed;
         cursor: auto;
 
         &::after {
@@ -118,10 +118,11 @@
 
   // Fiddle with the padding to expand the <a> all the way out
   .navbar-nav > li {
-    // TODO could extract the horizontal variable here (we set it to 0)
     padding: @nav-link-padding;
     padding-top: @navbar-padding-vertical;
     padding-bottom: @navbar-padding-vertical;
+
+    cursor: pointer;
 
     > a {
       padding: 0;
@@ -136,10 +137,11 @@
         content: '|';
         position: absolute;
         right: 100%;
-        top: 6px; // FIXME hardcoded
+        top: 6px;
         width: 2px;
         margin-left: 1px;
-        color: white; // FIXME hardcoded
+        color: inherit;
+        .opacity(0.5);
       }
 
       &.active + li::before {

@@ -1,4 +1,5 @@
 .boxstyle-filled(@bg, @text-colour: inherit) {
+  border: 0;
   background: @bg;
   color: @text-colour;
 }
@@ -8,6 +9,7 @@
 }
 
 .boxstyle-bordered(@border-colour, @text-colour: inherit) {
+  background: none;
   border: 1px solid @border-colour;
   color: @text-colour;
 }

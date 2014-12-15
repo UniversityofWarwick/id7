@@ -42,25 +42,34 @@
   };
 
   $(function () {
-    $('input[data-suggest="go"]').searchSuggest({
-      name: 'go',
-      source: function (query, cb) {
-        $.getJSON('//sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=6&prefix=' + encodeURIComponent(query) + '&callback=?', cb);
-      },
-      displayKey: 'path',
-      minLength: 2,
-      hint: false,
-      templates: {
-        suggestion: _.template([
-          '<p class="go-path"><%= path %></p>',
-          '<p class="go-description"><%= description %></p>'
-        ].join(''))
-      }
-    }).on('typeahead:selected', function (evt, redirect) {
-      window.location =
-        'http://go.warwick.ac.uk/' + redirect.path +
-        '?goSearchReferer=' + encodeURIComponent(window.location) +
-        'goSearchQuery=' + $(this).val(); // FIXME this will always contain the selected path name, not the query
+    $('input[data-suggest="go"]').each(function (i, el) {
+      $(el).searchSuggest({
+        name: 'go',
+        source: function (query, cb) {
+          $.getJSON('//sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=6&prefix=' + encodeURIComponent(query) + '&callback=?', cb);
+        },
+        displayKey: 'path',
+        minLength: 2,
+        hint: false,
+        templates: {
+          suggestion: _.template([
+            '<p class="go-path"><%= path %></p>',
+            '<p class="go-description"><% if (typeof description !== "undefined") { print(description); } %></p>'
+          ].join(''))
+        }
+      });
+
+      var tt = $(el).data('ttTypeahead');
+      tt.input.onSync('queryChanged', function (evtName, query) {
+        $(el).data('original-query', query);
+      });
+
+      $(el).on('typeahead:selected', function (evt, redirect) {
+        window.location =
+          'http://go.warwick.ac.uk/' + redirect.path +
+          '?goSearchReferer=' + encodeURIComponent(window.location) +
+          '&goSearchQuery=' + encodeURIComponent($(this).data('original-query'));
+      });
     });
   });
 

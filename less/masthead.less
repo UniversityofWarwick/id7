@@ -57,6 +57,10 @@
 
     h1 {
       margin: (@line-height-computed / 2) 0;
+
+      @media (max-width: (@grid-float-breakpoint - 1)) {
+        .text-overflow();
+      }
     }
 
     #id7-parent-site-link {
@@ -64,12 +68,12 @@
 
       &::after {
         .fa();
-        font-size: 12px; // FIXME hardcoded
+        font-size: 12px;
         content: @fa-var-play;
         margin-left: (@grid-gutter-width / 4);
 
         position: relative;
-        top: -4px; // FIXME hardcoded
+        top: -4px;
       }
     }
   }
@@ -99,13 +103,13 @@
   #id7-search {
     #id7-search-box-container {
       @media (min-width: @grid-float-breakpoint) {
-        margin-top: (38px + (@line-height-computed / 2)); // FIXME Magic number
+        margin-top: (@id7-masthead-search-offset + (@line-height-computed / 2));
       }
 
       position: relative;
 
       .input-lg {
-        padding-right: (@padding-large-horizontal + 26px); // FIXME Magic number
+        padding-right: (@padding-large-horizontal + @id7-masthead-search-button-width);
       }
     }
 
@@ -192,5 +196,27 @@ only screen and (min-width: @grid-float-breakpoint) and (                min-res
 only screen and (min-width: @grid-float-breakpoint) and (                min-resolution: 2dppx) {
   #id7-masthead {
     background-image: url("../images/masthead-logo-bleed-sm@2x.png");
+  }
+}
+
+// Unbranded sites don't get the logo in the masthead
+.id7-non-branded {
+  #id7-masthead {
+    background: white !important;
+  }
+
+  #id7-utility-masthead::after {
+    content: '';
+    display: none;
+  }
+
+  #id7-search-box-container {
+    margin-top: (@line-height-computed / 2) !important;
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    #id7-logo-column {
+      margin-top: (@line-height-computed / 2);
+    }
   }
 }

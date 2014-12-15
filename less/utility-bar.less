@@ -42,21 +42,21 @@
     text-shadow: none;
 
     max-width: 100%;
-    width: 320px; // FIXME magic number
+    width: @id7-account-popover-width;
 
     img { max-width: 100%; }
 
     .account-info {
-      margin-bottom: 9px; // FIXME magic number
+      margin-bottom: 9px;
     }
 
     .actions {
-      background: #f7f7f7; // FIXME magic colour
-      border-top: 1px solid #ebebeb; // FIXME magic colour
-      margin-bottom: -9px; // FIXME magic number
+      background: @id7-account-popover-actions-bg;
+      border-top: 1px solid @id7-account-popover-actions-border;
+      margin-bottom: -9px;
 
       .btn-group-justified {
-        border-spacing: 10px; // FIXME magic number
+        border-spacing: (@line-height-computed / 2);
       }
     }
   }

@@ -1,23 +1,25 @@
 <div id="id7-masthead">
     <div id="id7-masthead-contents">
         <div id="id7-logo-column">
-            <div id="id7-logo-row">
-                <div id="id7-logo">
-                    <a href="http://warwick.ac.uk" title="Warwick homepage">
-                        <img src="{{ site.prefix }}dist/images/shim.gif" alt="Warwick">
-                    </a>
+            {% unless page.nonbranded %}
+                <div id="id7-logo-row">
+                    <div id="id7-logo">
+                        <a href="http://warwick.ac.uk" title="Warwick homepage">
+                            <img src="{{ site.prefix }}dist/images/shim.gif" alt="Warwick">
+                        </a>
+                    </div>
+                    <nav id="id7-site-links">
+                        <ul>
+                            <li><a href="http://warwick.ac.uk/study">Study</a></li>
+                            <li><a href="http://warwick.ac.uk/research">Research</a></li>
+                            <li><a href="http://warwick.ac.uk/business">Business</a></li>
+                            <li><a href="http://warwick.ac.uk/alumni">Alumni</a></li>
+                            <li><a href="http://warwick.ac.uk/news">News</a></li>
+                            <li><a href="http://warwick.ac.uk/about">About</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav id="id7-site-links">
-                    <ul>
-                        <li><a href="http://warwick.ac.uk/study">Study</a></li>
-                        <li><a href="http://warwick.ac.uk/research">Research</a></li>
-                        <li><a href="http://warwick.ac.uk/business">Business</a></li>
-                        <li><a href="http://warwick.ac.uk/alumni">Alumni</a></li>
-                        <li><a href="http://warwick.ac.uk/news">News</a></li>
-                        <li><a href="http://warwick.ac.uk/about">About</a></li>
-                    </ul>
-                </nav>
-            </div>
+            {% endunless %}
 
             <div id="id7-header-text">
                 <h1>

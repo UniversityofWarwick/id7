@@ -1,3 +1,29 @@
+.apply-site-imagery(
+  @basedir,
+  @banner-image: "banner-image.jpg",
+  @masthead-image: "masthead-image.jpg",
+  @border-image-left: "border-image-left.jpg",
+  @border-image-right: "border-image-right.jpg") {
+
+  #id7-header-image-container {
+    background-image: url("@{basedir}/@{banner-image}");
+  }
+
+  #id7-fixed-width-container, #id7-utility-bar.affix {
+    background-image: url("@{basedir}/@{masthead-image}");
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    #id7-left-border {
+      background-image: url("@{basedir}/@{border-image-left}");
+    }
+
+    #id7-right-border {
+      background-image: url("@{basedir}/@{border-image-right}");
+    }
+  }
+}
+
 .apply-navbar-brand(@colour) {
   .apply-navbar-brand(@colour,
     contrast(@colour),
@@ -45,8 +71,6 @@
         color: @link-hover-colour;
         background-color: @link-hover-bg;
       }
-
-      cursor: pointer; // TODO move elsewhere
 
       > a {
         &,
@@ -158,6 +182,11 @@
 }
 
 .apply-brand(@colour) {
+  // For older browsers where #id7-left-border and #id7-right-border don't display
+  html {
+    background: lighten(@colour, 30%);
+  }
+
   .header-colour(@colour);
 
   .brand-bg { background: @colour; }
@@ -169,6 +198,8 @@
   }
 
   #id7-utility-masthead, #id7-utility-bar > nav {
+    // IE8 won't put our semi-transparent overlay on here. Just make it the brand colour
+    background-color: @colour;
     background-color: fadeout(@colour, 50%);
   }
 
@@ -216,9 +247,19 @@
   }
 
   .navbar-secondary {
-    @secondary-colour: @id7-brand-orange; // FIXME hardcoded
+    @secondary-colour: lighten(@colour, 20%);
 
-    .apply-navbar-brand(@secondary-colour);
+    .apply-navbar-brand(
+      @secondary-colour,
+      contrast(@secondary-colour),
+      contrast(@secondary-colour),
+      contrast(@secondary-colour),
+      darken(@secondary-colour, 7%),
+      contrast(darken(@secondary-colour, 20%)),
+      darken(@secondary-colour, 20%),
+      contrast(@secondary-colour),
+      darken(@secondary-colour, 7%)
+    );
   }
 
   .opaque-navigation .navbar-primary {
@@ -252,10 +293,7 @@
       .transition(color .15s linear);
     }
 
-    // FIXME this is a <span> not an <input> so focus/active don't make sense
-    .twitter-typeahead:active + .fa,
-    .twitter-typeahead:hover + .fa,
-    .twitter-typeahead:focus + .fa {
+    .twitter-typeahead:hover + .fa {
       color: @colour;
     }
 
@@ -276,6 +314,25 @@
 
     &.active::after {
       color: @colour;
+    }
+  }
+
+  // Box styles
+  .boxstyle_ {
+    &.box1 {
+      .boxstyle-filled(lighten(@colour, 30%), contrast(lighten(@colour, 30%)));
+    }
+
+    &.box2 {
+      .boxstyle-filled(@gray-lighter);
+    }
+
+    &.box3 {
+      .boxstyle-bordered(@colour);
+    }
+
+    &.box4 {
+      .boxstyle-bordered(@gray-light);
     }
   }
 }

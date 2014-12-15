@@ -3,22 +3,7 @@
 @import '../../../less/variables.less';
 @import '../../../less/mixins.less';
 
-#id7-header-image-container {
-  background-image: url("docs-site/banner-image.jpg");
-}
-
-#id7-fixed-width-container, #id7-utility-bar.affix { // TODO Do we really need to apply this to #utility-masthead too? (only when affixed)
-  background-image: url("docs-site/masthead-image.jpg");
-}
-
-#id7-left-border {
-  background-image: url("docs-site/border-image-left.jpg");
-}
-
-#id7-right-border {
-  background-image: url("docs-site/border-image-right.jpg");
-}
-
+.apply-site-imagery("/assets/site/docs-site");
 .apply-brand(@id7-brand-blue);
 
 // Syntax highlighting

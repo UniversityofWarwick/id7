@@ -8,10 +8,10 @@
       .logo-as-css(auto, @grid-gutter-width, @id7-site-footer-colour);
       position: absolute;
       top: 0px;
-      left: 15%; // FIXME magic number
+      right: 10%;
 
       + * {
-        margin-top: @grid-gutter-width;
+        margin-top: (@grid-gutter-width / 2);
       }
     }
   }
@@ -20,10 +20,24 @@
     .small();
 
     #id7-footer-utility {
-      margin: (@grid-gutter-width / 2) 0;
+      margin-bottom: (@grid-gutter-width / 2);
 
       ul {
         .horizontal-utility-links();
+      }
+    }
+  }
+}
+
+.id7-non-branded {
+  #id7-page-footer {
+    #id7-site-footer, #id7-app-footer {
+      .id7-logo-bleed {
+        display: none;
+
+        + * {
+          margin-top: 0;
+        }
       }
     }
   }

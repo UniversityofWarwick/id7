@@ -3,28 +3,10 @@
 @import '../../../less/variables.less';
 @import '../../../less/mixins.less';
 
-.apply-site-images(@dir) {
-  #id7-header-image-container {
-    background-image: url("@{dir}/banner-image.jpg");
-  }
-
-  #id7-fixed-width-container, #id7-utility-bar.affix { // TODO Do we really need to apply this to #utility-masthead too? (only when affixed)
-    background-image: url("@{dir}/masthead-image.jpg");
-  }
-
-  #id7-left-border {
-    background-image: url("@{dir}/border-image-left.jpg");
-  }
-
-  #id7-right-border {
-    background-image: url("@{dir}/border-image-right.jpg");
-  }
-}
-
 html {
-  &.site1 { .apply-site-images('site1'); }
-  &.site2 { .apply-site-images('site2'); }
-  &.site3 { .apply-site-images('site3'); }
+  &.site1 { .apply-site-imagery('/assets/site/site1'); }
+  &.site2 { .apply-site-imagery('/assets/site/site2'); }
+  &.site3 { .apply-site-imagery('/assets/site/site3'); }
 }
 
 body {

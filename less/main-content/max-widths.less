@@ -18,7 +18,7 @@ table[role="presentation"] {
 
 // Don't allow any element to be larger than its container
 .set-max-widths(@max-width) {
-  img, video, audio, pre, iframe {
+  img, video, audio, pre, iframe, input, textarea, select, .uneditable-input {
     max-width: @max-width;
   }
 }
