@@ -26,8 +26,8 @@
     "js/tests",
     "test-infra"
   ],
-// All dependencies are intentionally removed here because they're packaged for inclusion by bower anyway
-/*  "dependencies": {
+	"//": {
+		"All dependencies are intentionally removed here because they're packaged for inclusion by bower anyway": "",
     "jquery": ">= 1.11.1",
     "bootstrap": ">= 3.3.1",
     "typeahead.js": ">= 0.10.5",
@@ -35,6 +35,6 @@
     "html5shiv": ">= 3.7.2",
     "respond": ">= 1.4.2",
     "matchMedia": ">= 0.2.0"
-  },*/
+  },
   "private": true
 }
