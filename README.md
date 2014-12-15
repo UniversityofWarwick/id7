@@ -15,8 +15,7 @@ Four quick start options are available:
 
 - [Download the latest release](#).
 - Clone the repo: `git clone https://github.com/UniversityofWarwick/id7.git`.
-- Install with [Bower](http://bower.io): `bower install #`.
-- Install with [npm](https://www.npmjs.org): `npm install #`.
+- Install with [Bower](http://bower.io): `bower install https://github.com/UniversityofWarwick/id7.git`.
 
 Read the [Getting started page](#) for information on the framework contents, templates and examples, and more.
 
