@@ -5,4 +5,4 @@ markdown:         kramdown
 permalink:        pretty
 
 # Variables
-prefix:           /id7/
+prefix:           /
