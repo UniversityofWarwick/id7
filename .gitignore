@@ -70,4 +70,5 @@ node_modules
 /docs/assets/css/*.css
 /docs/assets/site/*.css
 /docs/_includes/README.html
-/dist
+
+# Don't ignore /dist because it needs to be in Git in order to be Bowered
