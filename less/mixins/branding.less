@@ -84,9 +84,16 @@
     > .active {
       &,
       &:hover,
-      &:focus {
+      &:focus,
+      &.nav-breadcrumb,
+      &.nav-breadcrumb:hover,
+      &.nav-breadcrumb:focus, {
         color: @link-active-colour;
         background-color: @link-active-bg;
+
+        &::after {
+          border-left-color: @link-active-bg !important;
+        }
       }
     }
     > .disabled {
@@ -95,6 +102,24 @@
       &:focus {
         color: @link-disabled-colour;
         background-color: @link-disabled-bg;
+      }
+    }
+    > .nav-breadcrumb {
+      color: contrast(lighten(@bg, 10%));
+      background-color: lighten(@bg, 10%);
+
+      &::after {
+        border-left-color: lighten(@bg, 10%) !important;
+      }
+
+      &:hover,
+      &:focus {
+        color: @link-hover-colour;
+        background-color: @link-hover-bg;
+
+        &::after {
+          border-left-color: @link-hover-bg !important;
+        }
       }
     }
   }
@@ -255,8 +280,8 @@
       contrast(@secondary-colour),
       contrast(@secondary-colour),
       darken(@secondary-colour, 7%),
-      contrast(darken(@secondary-colour, 20%)),
-      darken(@secondary-colour, 20%),
+      black,
+      white,
       contrast(@secondary-colour),
       darken(@secondary-colour, 7%)
     );

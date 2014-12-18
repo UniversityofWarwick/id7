@@ -189,9 +189,8 @@
       }
     }
 
-    // TODO move vars out
-    @triangle-colour: #c3d0e1; // FIXME magic colour
     @triangle-border-width: 1px;
+
     &::before, &::after {
       content: " ";
       position: absolute;
@@ -208,12 +207,8 @@
     &::after {
       margin-top: ((-(@navbar-height / 2)) + @triangle-border-width);
 
-      .triangle(right, (@navbar-height - (@triangle-border-width * 2)), ((@grid-gutter-width / 2) - @triangle-border-width), @triangle-colour);
+      .triangle(right, (@navbar-height - (@triangle-border-width * 2)), ((@grid-gutter-width / 2) - @triangle-border-width), transparent);
       .transition(border-color .15s linear);
-    }
-
-    &:hover::after {
-      border-left-color: #abbed6; // FIXME magic colour
     }
   }
 }
