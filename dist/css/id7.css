@@ -7729,15 +7729,10 @@ body {
   float: right !important;
   padding-left: 0;
   margin: 0;
-  margin-left: -5px;
   list-style: none;
 }
 #id7-utility-bar ul > li {
   display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-#id7-utility-bar ul > li {
   padding: 0;
 }
 .lt-ie9 #id7-utility-bar ul > li {
@@ -7964,15 +7959,10 @@ body {
 #id7-masthead #id7-site-links ul {
   padding-left: 0;
   margin: 0;
-  margin-left: -5px;
   list-style: none;
 }
 #id7-masthead #id7-site-links ul > li {
   display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-#id7-masthead #id7-site-links ul > li {
   padding: 0;
 }
 .lt-ie9 #id7-masthead #id7-site-links ul > li {
@@ -9063,15 +9053,10 @@ body :not(iframe)::-webkit-scrollbar-thumb:hover {
 #id7-page-footer #id7-app-footer #id7-footer-utility ul {
   padding-left: 0;
   margin: 0;
-  margin-left: -5px;
   list-style: none;
 }
 #id7-page-footer #id7-app-footer #id7-footer-utility ul > li {
   display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-#id7-page-footer #id7-app-footer #id7-footer-utility ul > li {
   padding: 0;
 }
 .lt-ie9 #id7-page-footer #id7-app-footer #id7-footer-utility ul > li {

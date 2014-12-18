@@ -23,6 +23,9 @@ _gh_pages
 _site
 .ruby-version
 
+# Ignore build artifacts
+_build
+
 # Numerous always-ignore extensions
 *.diff
 *.err

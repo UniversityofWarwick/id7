@@ -114,6 +114,12 @@ module.exports = function (grunt) {
       files: 'js/tests/index.html'
     },
 
+    qunit_junit: {
+      options: {
+
+      }
+    },
+
     less: {
       compileCore: {
         options: {
@@ -348,7 +354,7 @@ module.exports = function (grunt) {
   }
 
   grunt.registerTask('test', testSubtasks);
-  grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jscs:core', 'jscs:test', 'qunit']);
+  grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jscs:core', 'jscs:test', 'qunit_junit', 'qunit']);
 
   // JS distribution task.
   grunt.registerTask('dist-js', ['concat:bundle', 'uglify:bundle', 'concat:standalone', 'uglify:standalone']);
