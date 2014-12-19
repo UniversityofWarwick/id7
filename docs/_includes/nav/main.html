@@ -1,4 +1,12 @@
 <nav id="id7-primary-navigation" class="navbar navbar-primary" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="btn-link navbar-brand collapsed" data-toggle="collapse" data-target="#id7-breadcrumbs">
+      <span class="sr-only">Toggle breadcrumbs</span>
+      <i class="fa fa-fw fa-compass"></i>
+    </button>
+  </div>
+
   <ul class="nav navbar-nav">
     <li{% if page.slug contains 'getting-started' %} class="active"{% endif %}><a href="{{ site.prefix }}getting-started">Getting started</a></li>
     <li{% if page.slug contains 'components' %} class="active"{% endif %}><a href="{{ site.prefix }}components">Components</a></li>

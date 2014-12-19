@@ -285,6 +285,10 @@
       contrast(@secondary-colour),
       darken(@secondary-colour, 7%)
     );
+
+    .breadcrumb > li + li:before {
+      color: @colour;
+    }
   }
 
   .opaque-navigation .navbar-primary {

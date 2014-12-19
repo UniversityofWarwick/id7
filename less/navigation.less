@@ -177,6 +177,7 @@
     }
   }
 
+  // For breadcrumbs in the nav itself
   .navbar-nav > li.nav-breadcrumb {
     padding-right: (@grid-gutter-width / 4);
 
@@ -209,6 +210,46 @@
 
       .triangle(right, (@navbar-height - (@triangle-border-width * 2)), ((@grid-gutter-width / 2) - @triangle-border-width), transparent);
       .transition(border-color .15s linear);
+    }
+  }
+
+  // For breadcrumbs as a separate element
+  .breadcrumb {
+    .pull-left();
+
+    margin-bottom: 0;
+    padding: @nav-link-padding;
+    padding-top: @navbar-padding-vertical;
+    padding-bottom: @navbar-padding-vertical;
+
+    > li + li:before {
+      .fa();
+      font-size: 0.7em;
+      content: @fa-var-play;
+      position: relative;
+      top: -1px;
+    }
+
+    position: relative;
+
+    // h = sqrt(3) / 2 * a
+    @triangle-side-length: @navbar-height;
+    @equilateral-triangle-height: (sqrt(3) / 2 * @triangle-side-length);
+
+    padding-right: (@grid-gutter-width / 4);
+    + .navbar-nav > li:first-child {
+      padding-left: ((@grid-gutter-width / 4) + @equilateral-triangle-height);
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      z-index: 2;
+      margin-top: (-(@triangle-side-length / 2));
+
+      .triangle(right, @triangle-side-length, @equilateral-triangle-height, @breadcrumb-bg);
     }
   }
 }

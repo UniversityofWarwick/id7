@@ -439,6 +439,9 @@ body .navbar-secondary .btn-link[disabled]:focus,
 fieldset[disabled] body .navbar-secondary .btn-link:focus {
   color: #fff;
 }
+body .navbar-secondary .breadcrumb > li + li:before {
+  color: #7a3b83;
+}
 body .opaque-navigation .navbar-primary {
   background-color: #7a3b83;
   -webkit-transition: none;

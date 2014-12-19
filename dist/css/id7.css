@@ -4942,7 +4942,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 32px;
+  min-height: 30px;
   margin-bottom: 0;
   border: 1px solid transparent;
 }
@@ -5051,8 +5051,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  height: 32px;
-  padding: 6px 0;
+  height: 30px;
+  padding: 5px 0;
   font-size: 18px;
   line-height: 20px;
 }
@@ -5073,9 +5073,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   float: right;
   padding: 9px 10px;
-  margin-top: -1px;
+  margin-top: -2px;
   margin-right: 0;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -5099,7 +5099,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 3px -0;
+  margin: 2.5px -0;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -5138,15 +5138,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 .navbar-form {
   padding: 10px 0;
-  margin-top: -1px;
+  margin-top: -2px;
   margin-right: -0;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
   margin-left: -0;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -5235,20 +5235,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: -1px;
-  margin-bottom: -1px;
+  margin-top: -2px;
+  margin-bottom: -2px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .navbar-btn.btn-xs {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 .navbar-text {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 @media (min-width: 768px) {
   .navbar-text {
@@ -8229,7 +8229,7 @@ body {
 }
 .carousel .strapline.top {
   position: absolute;
-  top: 32px;
+  top: 30px;
 }
 .carousel .strapline.bottom {
   position: absolute;
@@ -8398,8 +8398,8 @@ body {
 }
 #id7-navigation .navbar-nav > li {
   padding: 10px 15px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   cursor: pointer;
 }
 #id7-navigation .navbar-nav > li > a {
@@ -8471,24 +8471,70 @@ body {
   display: block;
   width: 0;
   height: 0;
-  margin-top: -16px;
+  margin-top: -15px;
   content: '';
-  border-top: 16px solid transparent;
-  border-bottom: 16px solid transparent;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
   border-left: 15px solid #fff;
 }
 #id7-navigation .navbar-nav > li.nav-breadcrumb::after {
   display: block;
   width: 0;
   height: 0;
-  margin-top: -15px;
+  margin-top: -14px;
   content: '';
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
   border-left: 14px solid transparent;
   -webkit-transition: border-color .15s linear;
        -o-transition: border-color .15s linear;
           transition: border-color .15s linear;
+}
+#id7-navigation .breadcrumb {
+  position: relative;
+  float: left !important;
+  padding: 10px 15px;
+  padding-top: 5px;
+  padding-right: 7.5px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+}
+#id7-navigation .breadcrumb > li + li:before {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  font-size: .7em;
+  content: "\f04b";
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#id7-navigation .breadcrumb > li + li:before.pull-left {
+  margin-right: .3em;
+}
+#id7-navigation .breadcrumb > li + li:before.pull-right {
+  margin-left: .3em;
+}
+#id7-navigation .breadcrumb + .navbar-nav > li:first-child {
+  padding-left: 33.48076211px;
+}
+#id7-navigation .breadcrumb::after {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index: 2;
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: -15px;
+  content: " ";
+  content: '';
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 25.98076211px solid #f5f5f5;
 }
 #id7-main-content-header {
   padding-right: 15px;
