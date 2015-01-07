@@ -1,4 +1,4 @@
-var ALL_CLASSES = ['brand-default', 'brand-purple', 'brand-grey', 'brand-yellow', 'brand-blue', 'brand-orange', 'brand-green', 'brand-red', 'brand-red-bold'];
+var ALL_CLASSES = ['brand-default', 'brand-purple', 'brand-gray', 'brand-gold', 'brand-blue', 'brand-orange', 'brand-green', 'brand-red'];
 
 jQuery(function($) {
     $('[data-toggle-class]').on('click', function(e) {

@@ -24,14 +24,14 @@
   }
 }
 
-.apply-navbar-brand(@colour) {
+.apply-navbar-brand(@colour, @bright-colour: lighten(@colour, 20%)) {
   .apply-navbar-brand(@colour,
     contrast(@colour),
     contrast(@colour),
     contrast(@colour),
     darken(@colour, 7%),
-    contrast(lighten(@colour, 20%)),
-    lighten(@colour, 20%),
+    contrast(@bright-colour),
+    @bright-colour,
     contrast(@colour),
     darken(@colour, 7%)
   );
@@ -206,10 +206,10 @@
   }
 }
 
-.apply-brand(@colour) {
+.apply-brand(@colour, @bright-colour: lighten(@colour, 20%)) {
   // For older browsers where #id7-left-border and #id7-right-border don't display
   html {
-    background: lighten(@colour, 30%);
+    background: @bright-colour;
   }
 
   .header-colour(@colour);
@@ -254,7 +254,7 @@
       contrast(@colour),
       contrast(@colour),
       darken(@breadcrumbs-colour, 7%),
-      contrast(lighten(@colour, 20%)),
+      contrast(lighten(@breadcrumbs-colour, 20%)),
       lighten(@breadcrumbs-colour, 20%),
       contrast(@colour),
       darken(@breadcrumbs-colour, 7%)
@@ -272,7 +272,7 @@
   }
 
   .navbar-secondary {
-    @secondary-colour: lighten(@colour, 20%);
+    @secondary-colour: @bright-colour;
 
     .apply-navbar-brand(
       @secondary-colour,
@@ -312,8 +312,8 @@
     .link-colour(contrast(@colour));
   }
 
-  #id7-masthead .search {
-    #search-box {
+  #id7-masthead #id7-search {
+    #id7-search-box {
       border-color: @colour;
     }
 
@@ -349,7 +349,7 @@
   // Box styles
   .boxstyle_ {
     &.box1 {
-      .boxstyle-filled(lighten(@colour, 30%), contrast(lighten(@colour, 30%)));
+      .boxstyle-filled(@bright-colour, contrast(@bright-colour));
     }
 
     &.box2 {

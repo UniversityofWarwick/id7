@@ -2012,7 +2012,7 @@ body {
   font-family: 'Avenir Next', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
+  color: #55595f;
   background-color: transparent;
 }
 input,
@@ -3769,7 +3769,7 @@ select[multiple].form-group-lg .form-control {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #94999f;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -5791,7 +5791,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333;
+  color: #55595f;
 }
 .alert {
   padding: 15px;
@@ -7892,7 +7892,7 @@ body {
 #id7-masthead #id7-header-text .h4,
 #id7-masthead #id7-header-text .h5,
 #id7-masthead #id7-header-text .h6 {
-  color: #000;
+  color: #55595f;
 }
 #id7-masthead #id7-header-text a {
   color: inherit;
@@ -7914,7 +7914,7 @@ body {
   }
 }
 #id7-masthead #id7-header-text #id7-parent-site-link {
-  color: #555;
+  color: #777;
 }
 #id7-masthead #id7-header-text #id7-parent-site-link::after {
   position: relative;
@@ -8179,6 +8179,7 @@ body {
 }
 #id7-header-image-container #id7-header-video iframe {
   width: 120%;
+  max-width: none;
   height: 130%;
   margin: -5% -10%;
 }
