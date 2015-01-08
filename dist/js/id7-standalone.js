@@ -163,7 +163,8 @@
         '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-ellipsis-h"></i></a>',
         '<ul class="dropdown-menu" role="menu"></ul>',
         '</li>'
-      ].join('')
+      ].join(''),
+      marker: '<div class="id7-navigation-marker"></div>'
     },
     Defaults: {
       fixed: true,
@@ -262,6 +263,7 @@
         if (screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
 
         if (this.options.fitToWidth) this.fitToWidth(screenConfig);
+        if (this.options.fixed) this.markFixedPosition();
 
         this.lastScreenConfig = screenConfig.name;
       },
@@ -334,6 +336,17 @@
             // If we're STILL wrapped, it's probably a long active nav-breadcrumb
           }
         });
+      },
+
+      markFixedPosition: function markFixedPosition() {
+        var $marker = this.$container.next('.id7-navigation-marker');
+
+        if ($marker.length === 0) {
+          $marker = $(Config.Templates.marker);
+          this.$container.after($marker);
+        }
+
+        $marker.height(this.$container.height());
       },
 
       wireEventHandlers: function wireEventHandlers() {

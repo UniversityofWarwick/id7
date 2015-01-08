@@ -8546,6 +8546,12 @@ body {
   border-bottom: 15px solid transparent;
   border-left: 25.98076211px solid #f5f5f5;
 }
+#id7-navigation.affix + .id7-navigation-marker {
+  display: block;
+}
+.id7-navigation-marker {
+  display: none;
+}
 #id7-main-content-header {
   padding-right: 15px;
   padding-left: 15px;
