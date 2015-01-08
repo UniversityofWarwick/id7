@@ -10432,6 +10432,12 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         '<ul class="dropdown-menu" role="menu"></ul>',
         '</li>',
         '</ul>'
+      ].join(''),
+      moreBreadcrumbsContainer: [
+        '<li class="nav-breadcrumb dropdown">',
+        '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-ellipsis-h"></i></a>',
+        '<ul class="dropdown-menu" role="menu"></ul>',
+        '</li>'
       ].join('')
     },
     Defaults: {
@@ -10542,18 +10548,37 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
           var $navbar = $(this);
           var $nav = $navbar.find('> .nav').first();
           var $moreContainer = $navbar.find('> .navbar-right');
+          var $moreBreadcrumbsContainer = $nav.find('> li.nav-breadcrumb.dropdown');
 
+          // Move existing collapsed links back into the nav
           $moreContainer.find('> .dropdown > .dropdown-menu > li').each(function () {
             var $li = $(this);
             $nav.append($li);
           });
 
+          // Insert a more container if one doesn't exist
           if ($moreContainer.length === 0) {
             $moreContainer = $(Config.Templates.moreContainer);
             $navbar.append($moreContainer);
           }
 
           $moreContainer.hide();
+
+          // If we have any parent breadcrumbs collapsed, un-collapse them
+          $moreBreadcrumbsContainer.find('> .dropdown-menu > li').each(function () {
+            var $li = $(this);
+            $moreBreadcrumbsContainer.after($li);
+          });
+
+          var $parentBreadcrumbs = $nav.find('> li.nav-breadcrumb:not(.active):not(.dropdown)');
+
+          // Insert a parent breadcrumbs container if one doesn't exist
+          if ($parentBreadcrumbs.length > 0 && $moreBreadcrumbsContainer.length === 0) {
+            $moreBreadcrumbsContainer = $(Config.Templates.moreBreadcrumbsContainer);
+            $nav.prepend($moreBreadcrumbsContainer);
+          }
+
+          $moreBreadcrumbsContainer.hide();
 
           if (!options.collapseSmallscreen || screenConfig.name != 'xs') {
             var isWrapped = function () {
@@ -10562,14 +10587,23 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
               });
             };
 
+            // Drop parent breadcrumbs into their own container first
+            if (isWrapped() && $parentBreadcrumbs.length > 0) {
+              $moreBreadcrumbsContainer.show();
+
+              do {
+                // Remove the last element and prepend it to the more container
+                $moreBreadcrumbsContainer.find('> .dropdown-menu').append($nav.find('> li.nav-breadcrumb:not(.active):not(.dropdown)').first().css('height', ''));
+              } while (isWrapped() & $nav.find('> li.nav-breadcrumb:not(.active):not(.dropdown)').length > 0);
+            }
+
             if (isWrapped()) {
               $moreContainer.show();
 
-              var i = 100; // Infinite loop protection
               do {
                 // Remove the last element and prepend it to the more container
                 $moreContainer.find('> .dropdown > .dropdown-menu').prepend($nav.find('> li').last().css('height', ''));
-              } while (isWrapped() & --i > 0);
+              } while (isWrapped() & $nav.find('> li').length > 0);
             }
           }
         });
