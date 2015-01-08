@@ -65,6 +65,8 @@
 
     i.fa {
       position: relative;
+      top: -1.5px;
+
       .transition(transform .35s ease);
 
       &.active {
@@ -75,6 +77,11 @@
   }
 
   .navbar-breadcrumbs {
+    // Float above secondary nav (or content)
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+
     .small();
 
     .navbar-nav {
@@ -182,12 +189,7 @@
     padding-right: (@grid-gutter-width / 4);
 
     + li {
-      margin-left: (@grid-gutter-width / 2);
-
-      &.nav-breadcrumb {
-        margin-left: 0;
-        padding-left: (@grid-gutter-width * 3 / 4);
-      }
+      padding-left: (@grid-gutter-width * 3 / 4);
     }
 
     @triangle-border-width: 1px;

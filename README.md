@@ -118,4 +118,4 @@ Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com
 
 ## Copyright and license
 
-Code and documentation copyright 2014 University of Warwick.
+Code and documentation copyright 2015 University of Warwick.

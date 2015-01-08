@@ -2012,7 +2012,7 @@ body {
   font-family: 'Avenir Next', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #55595f;
+  color: #333;
   background-color: transparent;
 }
 input,
@@ -3769,7 +3769,7 @@ select[multiple].form-group-lg .form-control {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #94999f;
+  color: #737373;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -5791,7 +5791,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #55595f;
+  color: #333;
 }
 .alert {
   padding: 15px;
@@ -7892,7 +7892,7 @@ body {
 #id7-masthead #id7-header-text .h4,
 #id7-masthead #id7-header-text .h5,
 #id7-masthead #id7-header-text .h6 {
-  color: #55595f;
+  color: #333;
 }
 #id7-masthead #id7-header-text a {
   color: inherit;
@@ -8334,6 +8334,7 @@ body {
 }
 #id7-navigation .navbar-brand i.fa {
   position: relative;
+  top: -1.5px;
   -webkit-transition: -webkit-transform .35s ease;
        -o-transition:      -o-transform .35s ease;
           transition:         transform .35s ease;
@@ -8350,6 +8351,9 @@ body {
           transform-origin: 49% 48%;
 }
 #id7-navigation .navbar-breadcrumbs {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
   font-size: 85%;
 }
 #id7-navigation .navbar-breadcrumbs .navbar-nav > li {
@@ -8454,11 +8458,7 @@ body {
   padding-right: 7.5px;
 }
 #id7-navigation .navbar-nav > li.nav-breadcrumb + li {
-  margin-left: 15px;
-}
-#id7-navigation .navbar-nav > li.nav-breadcrumb + li.nav-breadcrumb {
   padding-left: 22.5px;
-  margin-left: 0;
 }
 #id7-navigation .navbar-nav > li.nav-breadcrumb::before,
 #id7-navigation .navbar-nav > li.nav-breadcrumb::after {
