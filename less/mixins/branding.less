@@ -24,7 +24,7 @@
   }
 }
 
-.apply-navbar-brand(@colour, @bright-colour: screen(@colour, lighten(black, 20%))) {
+.apply-navbar-brand(@colour, @active-colour: screen(@colour, lighten(black, 30%))) {
   @border-colour: multiply(@colour, darken(white, 10%));
 
   .apply-navbar-brand(@colour,
@@ -32,8 +32,8 @@
     contrast(@colour),
     contrast(@colour),
     @border-colour,
-    contrast(@bright-colour),
-    @bright-colour,
+    contrast(@active-colour),
+    @active-colour,
     contrast(@colour),
     @border-colour
   );
@@ -215,7 +215,7 @@
 .apply-brand(@colour, @bright-colour: screen(@colour, lighten(black, 20%))) {
   // For older browsers where #id7-left-border and #id7-right-border don't display
   html {
-    background: @bright-colour;
+    background: screen(@colour, lighten(black, 20%));
   }
 
   .header-colour(@colour);
@@ -281,7 +281,7 @@
   }
 
   .navbar-secondary {
-    @secondary-colour: screen(@colour, lighten(black, 40%));
+    @secondary-colour: screen(@bright-colour, lighten(black, 40%));
     @secondary-accent-colour: multiply(@secondary-colour, darken(white, 10%));
 
     .apply-navbar-brand(
@@ -359,11 +359,11 @@
   // Box styles
   .boxstyle_ {
     &.box1 {
-      #boxstyle > .filled(@bright-colour, contrast(@bright-colour));
+      #boxstyle > .filled(screen(@colour, lighten(black, 80%)));
     }
 
     &.box2 {
-      #boxstyle > .filled(@gray-lighter, black);
+      #boxstyle > .filled(@gray-lighter);
     }
 
     &.box3 {

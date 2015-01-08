@@ -176,3 +176,30 @@
     width: 263px;
   }
 }
+
+.docs-palette-logo(@colour) {
+  .logo-as-css(auto, 80px, @colour);
+  margin-right: 10px;
+
+  &.tint-100 {.logo-as-css(auto, 30px, @colour);}
+  &.tint-90 { .logo-as-css(auto, 30px, screen(@colour, darken(white, 90%))); }
+  &.tint-80 { .logo-as-css(auto, 30px, screen(@colour, darken(white, 80%))); }
+  &.tint-70 { .logo-as-css(auto, 30px, screen(@colour, darken(white, 70%))); }
+  &.tint-60 { .logo-as-css(auto, 30px, screen(@colour, darken(white, 60%))); }
+  &.tint-50 { .logo-as-css(auto, 30px, screen(@colour, darken(white, 50%))); }
+  &.tint-40 { .logo-as-css(auto, 30px, screen(@colour, darken(white, 40%))); }
+  &.tint-30 { .logo-as-css(auto, 30px, screen(@colour, darken(white, 30%))); }
+  &.tint-20 { .logo-as-css(auto, 30px, screen(@colour, darken(white, 20%))); }
+  &.tint-10 { .logo-as-css(auto, 30px, screen(@colour, darken(white, 10%))); }
+  &.tint-5  { .logo-as-css(auto, 30px, screen(@colour, darken(white, 5%))); }
+}
+
+.id7-docs-palette-logo {
+  &.purple { .docs-palette-logo(@id7-brand-purple); }
+  &.gray   { .docs-palette-logo(@id7-brand-gray); }
+  &.gold   { .docs-palette-logo(@id7-brand-gold); }   &.gold-bright   { .docs-palette-logo(@id7-brand-gold-bright); }
+  &.orange { .docs-palette-logo(@id7-brand-orange); } &.orange-bright { .docs-palette-logo(@id7-brand-orange-bright); }
+  &.red    { .docs-palette-logo(@id7-brand-red); }    &.red-bright    { .docs-palette-logo(@id7-brand-red-bright); }
+  &.green  { .docs-palette-logo(@id7-brand-green); }  &.green-bright  { .docs-palette-logo(@id7-brand-green-bright); }
+  &.blue   { .docs-palette-logo(@id7-brand-blue); }   &.blue-bright   { .docs-palette-logo(@id7-brand-blue-bright); }
+}
