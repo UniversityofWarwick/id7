@@ -1,19 +1,21 @@
-.boxstyle-filled(@bg, @text-colour: inherit) {
-  border: 0;
-  background: @bg;
-  color: @text-colour;
-}
+#boxstyle {
+  .filled(@bg, @text-colour: black) {
+    border: 0;
+    background: @bg;
+    color: @text-colour;
+  }
 
-.boxstyle-filled(@bg, @text-colour: inherit) when not (@text-colour = inherit) {
-  .header-colour(inherit);
-}
+  .filled(@bg, @text-colour: black) when not (@text-colour = inherit) {
+    .header-colour(inherit);
+  }
 
-.boxstyle-bordered(@border-colour, @text-colour: inherit) {
-  background: none;
-  border: 1px solid @border-colour;
-  color: @text-colour;
-}
+  .bordered(@border-colour, @text-colour: inherit) {
+    background: none;
+    border: 1px solid @border-colour;
+    color: @text-colour;
+  }
 
-.boxstyle-bordered(@border-colour, @text-colour: inherit) when not (@text-colour = inherit) {
-  .header-colour(inherit);
+  .bordered(@border-colour, @text-colour: inherit) when not (@text-colour = inherit) {
+    .header-colour(inherit);
+  }
 }

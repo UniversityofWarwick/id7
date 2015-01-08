@@ -24,16 +24,18 @@
   }
 }
 
-.apply-navbar-brand(@colour, @bright-colour: lighten(@colour, 20%)) {
+.apply-navbar-brand(@colour, @bright-colour: screen(@colour, lighten(black, 20%))) {
+  @border-colour: multiply(@colour, darken(white, 10%));
+
   .apply-navbar-brand(@colour,
     contrast(@colour),
     contrast(@colour),
     contrast(@colour),
-    darken(@colour, 7%),
+    @border-colour,
     contrast(@bright-colour),
     @bright-colour,
     contrast(@colour),
-    darken(@colour, 7%)
+    @border-colour
   );
 
   @media (min-width: @grid-float-breakpoint) {
@@ -105,20 +107,22 @@
       }
     }
     > .nav-breadcrumb {
-      color: contrast(lighten(@bg, 10%));
-      background-color: lighten(@bg, 10%);
+      @breadcrumb-colour: multiply(@bg, darken(white, 15%));
+
+      color: contrast(@breadcrumb-colour);
+      background-color: @breadcrumb-colour;
 
       &::after {
-        border-left-color: lighten(@bg, 10%) !important;
+        border-left-color: @breadcrumb-colour !important;
       }
 
       &:hover,
       &:focus {
-        color: @link-hover-colour;
-        background-color: @link-hover-bg;
+        color: contrast(@breadcrumb-colour);
+        background-color: multiply(@breadcrumb-colour, darken(white, 10%));
 
         &::after {
-          border-left-color: @link-hover-bg !important;
+          border-left-color: multiply(@breadcrumb-colour, darken(white, 10%)) !important;
         }
       }
     }
@@ -150,11 +154,13 @@
     .dropdown-menu {
       background-color: @bg;
 
+      @dropdown-accent-colour: multiply(@bg, darken(white, 10%));
+
       > .dropdown-header {
-        border-color: darken(@bg, 7%);
+        border-color: @dropdown-accent-colour;
       }
       .divider {
-        background-color: darken(@bg, 7%);
+        background-color: @dropdown-accent-colour;
       }
       > li > a {
         color: @link-colour;
@@ -206,7 +212,7 @@
   }
 }
 
-.apply-brand(@colour, @bright-colour: lighten(@colour, 20%)) {
+.apply-brand(@colour, @bright-colour: screen(@colour, lighten(black, 20%))) {
   // For older browsers where #id7-left-border and #id7-right-border don't display
   html {
     background: @bright-colour;
@@ -229,7 +235,7 @@
   }
 
   .navbar-primary {
-    .apply-navbar-brand(@colour);
+    .apply-navbar-brand(@colour, @bright-colour);
   }
 
   .id7-homepage-layout & #id7-navigation:hover {
@@ -238,7 +244,7 @@
     }
   }
 
-  @breadcrumbs-colour: lighten(@colour, 10%);
+  @breadcrumbs-colour: multiply(@colour, darken(white, 20%));
   .navbar-primary .navbar-brand {
     background-color: @breadcrumbs-colour;
   }
@@ -248,16 +254,19 @@
   }
 
   .navbar-breadcrumbs {
+    @active-breadcrumbs-bg: screen(@breadcrumbs-colour, lighten(black, 20%));
+    @breadcrumbs-accent-colour: multiply(@breadcrumbs-colour, darken(white, 10%));
+
     .apply-navbar-brand(
       @breadcrumbs-colour,
       contrast(@colour),
       contrast(@colour),
       contrast(@colour),
-      darken(@breadcrumbs-colour, 7%),
-      contrast(lighten(@breadcrumbs-colour, 20%)),
-      lighten(@breadcrumbs-colour, 20%),
+      @breadcrumbs-accent-colour,
+      contrast(@active-breadcrumbs-bg),
+      @active-breadcrumbs-bg,
       contrast(@colour),
-      darken(@breadcrumbs-colour, 7%)
+      @breadcrumbs-accent-colour
     );
 
     .id7-homepage-layout & {
@@ -272,18 +281,19 @@
   }
 
   .navbar-secondary {
-    @secondary-colour: @bright-colour;
+    @secondary-colour: screen(@colour, lighten(black, 40%));
+    @secondary-accent-colour: multiply(@secondary-colour, darken(white, 10%));
 
     .apply-navbar-brand(
       @secondary-colour,
       contrast(@secondary-colour),
       contrast(@secondary-colour),
       contrast(@secondary-colour),
-      darken(@secondary-colour, 7%),
+      @secondary-accent-colour,
       black,
       white,
       contrast(@secondary-colour),
-      darken(@secondary-colour, 7%)
+      @secondary-accent-colour
     );
 
     .breadcrumb > li + li:before {
@@ -349,19 +359,19 @@
   // Box styles
   .boxstyle_ {
     &.box1 {
-      .boxstyle-filled(@bright-colour, contrast(@bright-colour));
+      #boxstyle > .filled(@bright-colour, contrast(@bright-colour));
     }
 
     &.box2 {
-      .boxstyle-filled(@gray-lighter, black);
+      #boxstyle > .filled(@gray-lighter, black);
     }
 
     &.box3 {
-      .boxstyle-bordered(@colour);
+      #boxstyle > .bordered(@colour);
     }
 
     &.box4 {
-      .boxstyle-bordered(@gray-light);
+      #boxstyle > .bordered(@gray-light);
     }
   }
 }

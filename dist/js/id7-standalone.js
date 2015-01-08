@@ -287,7 +287,7 @@
             $navbar.append($moreContainer);
           }
 
-          $moreContainer.hide();
+          $moreContainer.addClass('hidden');
 
           // If we have any parent breadcrumbs collapsed, un-collapse them
           $moreBreadcrumbsContainer.find('> .dropdown-menu > li').each(function () {
@@ -303,7 +303,7 @@
             $nav.prepend($moreBreadcrumbsContainer);
           }
 
-          $moreBreadcrumbsContainer.hide();
+          $moreBreadcrumbsContainer.addClass('hidden');
 
           if (!options.collapseSmallscreen || screenConfig.name != 'xs') {
             var isWrapped = function () {
@@ -314,22 +314,24 @@
 
             // Drop parent breadcrumbs into their own container first
             if (isWrapped() && $parentBreadcrumbs.length > 0) {
-              $moreBreadcrumbsContainer.show();
+              $moreBreadcrumbsContainer.removeClass('hidden');
 
-              do {
-                // Remove the last element and prepend it to the more container
-                $moreBreadcrumbsContainer.find('> .dropdown-menu').append($nav.find('> li.nav-breadcrumb:not(.active):not(.dropdown)').first().css('height', ''));
-              } while (isWrapped() & $nav.find('> li.nav-breadcrumb:not(.active):not(.dropdown)').length > 0);
+              // Gotta collapse 'em all
+              $nav.find('> li.nav-breadcrumb:not(.active):not(.dropdown)').each(function () {
+                $moreBreadcrumbsContainer.find('> .dropdown-menu').append($(this).css('height', ''));
+              });
             }
 
             if (isWrapped()) {
-              $moreContainer.show();
+              $moreContainer.removeClass('hidden');
 
               do {
                 // Remove the last element and prepend it to the more container
-                $moreContainer.find('> .dropdown > .dropdown-menu').prepend($nav.find('> li').last().css('height', ''));
-              } while (isWrapped() & $nav.find('> li').length > 0);
+                $moreContainer.find('> .dropdown > .dropdown-menu').prepend($nav.find('> li:not(.nav-breadcrumb)').last().css('height', ''));
+              } while (isWrapped() & $nav.find('> li:not(.nav-breadcrumb)').length > 0);
             }
+
+            // If we're STILL wrapped, it's probably a long active nav-breadcrumb
           }
         });
       },

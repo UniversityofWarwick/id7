@@ -16,3 +16,21 @@ body {
 html.use-lato body {
   font-family: "Lato";
 }
+
+.logo {
+  &.brand-colour { .logo-as-css(auto, 60px, @id7-brand-purple); }
+  &.brand-colour-90 { .logo-as-css(auto, 60px, screen(@id7-brand-purple, darken(white, 90%))); }
+  &.brand-colour-80 { .logo-as-css(auto, 60px, screen(@id7-brand-purple, darken(white, 80%))); }
+  &.brand-colour-70 { .logo-as-css(auto, 60px, screen(@id7-brand-purple, darken(white, 70%))); }
+  &.brand-colour-60 { .logo-as-css(auto, 60px, screen(@id7-brand-purple, darken(white, 60%))); }
+  &.brand-colour-50 { .logo-as-css(auto, 60px, screen(@id7-brand-purple, darken(white, 50%))); }
+  &.brand-colour-40 { .logo-as-css(auto, 60px, screen(@id7-brand-purple, darken(white, 40%))); }
+  &.brand-colour-30 { .logo-as-css(auto, 60px, screen(@id7-brand-purple, darken(white, 30%))); }
+  &.brand-colour-20 { .logo-as-css(auto, 60px, screen(@id7-brand-purple, darken(white, 20%))); }
+  &.brand-colour-10 { .logo-as-css(auto, 60px, screen(@id7-brand-purple, darken(white, 10%))); }
+  &.brand-colour-5  { .logo-as-css(auto, 60px, screen(@id7-brand-purple, darken(white, 5%))); }
+
+  &:not(:last-child) {
+    height: 40px !important;
+  }
+}

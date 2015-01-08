@@ -8432,6 +8432,9 @@ body {
 #id7-navigation .navbar-secondary .navbar-nav > li.nav-breadcrumb + li:not(.nav-breadcrumb)::before {
   display: none;
 }
+#id7-navigation .navbar-secondary .navbar-nav > li:not(.nav-breadcrumb) {
+  font-size: 13px;
+}
 #id7-navigation .navbar-nav > li {
   -webkit-transition: background-color .15s linear, color .15s linear;
        -o-transition: background-color .15s linear, color .15s linear;
@@ -8459,6 +8462,12 @@ body {
 }
 #id7-navigation .navbar-nav > li.nav-breadcrumb + li {
   padding-left: 22.5px;
+}
+#id7-navigation .navbar-nav > li.nav-breadcrumb.hidden + li {
+  padding-left: 15px;
+}
+#id7-navigation .navbar-nav > li.nav-breadcrumb.active {
+  font-weight: bold;
 }
 #id7-navigation .navbar-nav > li.nav-breadcrumb::before,
 #id7-navigation .navbar-nav > li.nav-breadcrumb::after {

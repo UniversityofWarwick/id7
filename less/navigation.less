@@ -157,6 +157,10 @@
     }
   }
 
+  .navbar-secondary .navbar-nav > li:not(.nav-breadcrumb) {
+    font-size: (@font-size-base - 1px);
+  }
+
   .navbar-nav > li {
     .transition(~"background-color .15s linear, color .15s linear")
   }
@@ -190,6 +194,14 @@
 
     + li {
       padding-left: (@grid-gutter-width * 3 / 4);
+    }
+
+    &.hidden + li {
+      padding-left: (@grid-gutter-width / 2);
+    }
+
+    &.active {
+      font-weight: bold;
     }
 
     @triangle-border-width: 1px;
