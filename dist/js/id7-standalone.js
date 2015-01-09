@@ -255,12 +255,12 @@
         });
       },
 
-      onScreenResize: function onResize() {
+      onScreenResize: function onResize(force) {
         // Which stop-point are we on?
         var screenConfig = this._screenConfig();
 
         // Early exit if the width is the same. xs is variable width so can't be clever :(
-        if (screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
+        if (!force && screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
 
         if (this.options.fitToWidth) this.fitToWidth(screenConfig);
         if (this.options.fixed) this.markFixedPosition();
@@ -352,6 +352,11 @@
       wireEventHandlers: function wireEventHandlers() {
         if (this.options.fitToWidth) {
           $(window).on('resize.id7.navigation.onScreenResize', $.proxy(this.onScreenResize, this));
+
+          // ID-30 on load (i.e. after fonts have loaded) run this, forcing a
+          $(window).on('load', $.proxy(function () {
+            this.onScreenResize(true);
+          }, this));
         }
 
         this.$container.on('click', '.nav > li', function (e) {
