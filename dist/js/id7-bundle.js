@@ -10284,31 +10284,28 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
   'use strict';
 
   var Config = {
-    Template: _.template([
-      '<div class="account-info row">',
-      '<div class="col-xs-4">',
-      '<img class="photo" src="<%- photo %>">',
-      '</div>',
-      '<div class="col-xs-8">',
-      '<div class="full-name"><%= fullName %></div>',
-      '<div class="email"><%= email %></div>',
-      '<div class="user-id"><%= userId %></div>',
-      '<div class="description"><%= description %></div>',
-      '</div>',
-      '</div>',
-      '<div class="row actions">',
-      '<div class="btn-group btn-group-justified">',
-      '<div class="btn-group">',
-      '<button data-action="change-password" type="button" class="btn btn-default">Change password</button>' +
-      '</div>',
-      '<div class="btn-group">',
-      '<button data-action="sign-out" type="button" class="btn btn-default">Sign out</button>',
-      '</div>',
-      '</div>',
-      '</div>'
-    ].join('')),
+    Templates: {
+      Popover: _.template([
+        '<div class="account-info">',
+        '<iframe src="<%- iframelink %>" scrolling="no" frameborder="0" allowtransparency="true" seamless></iframe>',
+        '</div>',
+        '<div class="row actions">',
+        '<div class="btn-group btn-group-justified">',
+        '<div class="btn-group">',
+        '<a href="<%- logoutlink %>" class="btn btn-default">Sign out</a>',
+        '</div>',
+        '</div>',
+        '</div>'
+      ].join('')),
+      Action: _.template([
+        '<div class="btn-group">',
+        '<a href="<%- href %>" class="btn btn-default"><%= title %></a>',
+        '</div>'
+      ].join(''))
+    },
     Defaults: {
       container: false,
+      iframelink: 'https://augustus.warwick.ac.uk/static_war/account.html', // TODO FIXME
       template: [
         '<div class="popover account-information">',
         '<div class="arrow"></div>',
@@ -10317,7 +10314,8 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         '</div>',
         '</div>'
       ].join('')
-    }
+    },
+    MessagePrefix: 'message.id7.account-popover.'
   };
 
   /**
@@ -10335,7 +10333,6 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
     $.extend(AccountPopover.prototype, {
       wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
-        var user = this.options.user;
 
         $trigger.on('click', function (e) {
           e.preventDefault();
@@ -10343,7 +10340,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
           return false;
         }).popover({
           container: this.options.container,
-          content: Config.Template(user),
+          content: Config.Templates.Popover(this.options),
           template: this.options.template,
           html: true,
           placement: 'bottom',
@@ -10358,6 +10355,20 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
             $trigger.popover('hide');
           }
         });
+      },
+      onMessage: function onMessage(messageType, data) {
+        var $popover = this.$trigger.next('.popover');
+
+        switch (messageType) {
+          case 'addAction':
+            $popover.find('.actions > .btn-group').prepend(Config.Templates.Action(data));
+            break;
+          case 'resizeIframe':
+            $popover.find('.account-info iframe').height(data.height);
+            break;
+          default:
+            console.error('Unexpected message type: ' + messageType);
+        }
       }
     });
 
@@ -10369,7 +10380,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 
     function attach(i, element) {
       var $trigger = $(element);
-      var accountPopover = new AccountPopover($.extend(o, {
+      var accountPopover = new AccountPopover($.extend({}, $trigger.data(), o, {
         trigger: $trigger
       }));
 
@@ -10380,15 +10391,27 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
   };
 
   $(function () {
-    $('[data-toggle="id7:account-popover"]').accountPopover({
-      user: {
-        photo: 'http://www.gravatar.com/avatar/ed08722fea72ddf208e404d92c20b01d',
-        fullName: 'Mathew Mannion',
-        email: 'M.Mannion@warwick.ac.uk',
-        userId: 'u0672089',
-        description: 'Staff, IT Services'
-      }
-    });
+    $('[data-toggle="id7:account-popover"]').accountPopover();
+
+    // Listen to relevant messages and send them through
+    $(window).on('message', function (e) {
+      var origin = e.originalEvent.origin;
+
+      // TODO check that the origin matches websignon.warwick.ac.uk
+
+      try {
+        var data = JSON.parse(e.originalEvent.data);
+        if (data['type'] && data['type'].indexOf(Config.MessagePrefix) === 0) {
+          var messageType = data['type'].substring(Config.MessagePrefix.length);
+
+          // Send the message out to each instance
+          $('[data-toggle="id7:account-popover"]').each(function () {
+            var $trigger = $(this);
+            $trigger.data('id7.account-popover').onMessage(messageType, data);
+          });
+        }
+      } catch (e) {}
+    })
   });
 
 })(jQuery);
@@ -10569,7 +10592,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
           // If we have any parent breadcrumbs collapsed, un-collapse them
           $moreBreadcrumbsContainer.find('> .dropdown-menu > li').each(function () {
             var $li = $(this);
-            $moreBreadcrumbsContainer.after($li);
+            $nav.find('> .nav-breadcrumb:not(.active)').last().after($li);
           });
 
           var $parentBreadcrumbs = $nav.find('> li.nav-breadcrumb:not(.active):not(.dropdown)');

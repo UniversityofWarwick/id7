@@ -38,19 +38,37 @@
     }
   }
 
+  .caret { margin-left: 5px; }
+
+  iframe[seamless] {
+    background-color: transparent;
+    border: 0px none transparent;
+    padding: 0px;
+    overflow: hidden;
+  }
+
   .popover.account-information {
     text-shadow: none;
 
     max-width: 100%;
     width: @id7-account-popover-width;
 
-    img { max-width: 100%; }
-
     .account-info {
       margin-bottom: 9px;
+
+      iframe {
+        height: 80px;
+        width: 100%;
+      }
     }
 
     .actions {
+      .link-colour(@gray-dark);
+
+      a:hover, a:focus {
+        text-decoration: none;
+      }
+
       background: @id7-account-popover-actions-bg;
       border-top: 1px solid @id7-account-popover-actions-border;
       margin-bottom: -9px;

@@ -7776,21 +7776,44 @@ body {
 #id7-utility-bar.affix + #id7-masthead {
   margin-top: 24px;
 }
+#id7-utility-bar .caret {
+  margin-left: 5px;
+}
+#id7-utility-bar iframe[seamless] {
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  border: 0 none transparent;
+}
 #id7-utility-bar .popover.account-information {
   width: 320px;
   max-width: 100%;
   text-shadow: none;
 }
-#id7-utility-bar .popover.account-information img {
-  max-width: 100%;
-}
 #id7-utility-bar .popover.account-information .account-info {
   margin-bottom: 9px;
+}
+#id7-utility-bar .popover.account-information .account-info iframe {
+  width: 100%;
+  height: 80px;
 }
 #id7-utility-bar .popover.account-information .actions {
   margin-bottom: -9px;
   background: #f7f7f7;
   border-top: 1px solid #ebebeb;
+}
+#id7-utility-bar .popover.account-information .actions a {
+  color: #333;
+  text-decoration: none;
+}
+#id7-utility-bar .popover.account-information .actions a:hover,
+#id7-utility-bar .popover.account-information .actions a:focus {
+  color: #212121;
+  text-decoration: underline;
+}
+#id7-utility-bar .popover.account-information .actions a:hover,
+#id7-utility-bar .popover.account-information .actions a:focus {
+  text-decoration: none;
 }
 #id7-utility-bar .popover.account-information .actions .btn-group-justified {
   border-spacing: 10px;

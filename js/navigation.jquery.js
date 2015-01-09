@@ -174,7 +174,7 @@
           // If we have any parent breadcrumbs collapsed, un-collapse them
           $moreBreadcrumbsContainer.find('> .dropdown-menu > li').each(function () {
             var $li = $(this);
-            $moreBreadcrumbsContainer.after($li);
+            $nav.find('> .nav-breadcrumb:not(.active)').last().after($li);
           });
 
           var $parentBreadcrumbs = $nav.find('> li.nav-breadcrumb:not(.active):not(.dropdown)');
