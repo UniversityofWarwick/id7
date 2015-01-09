@@ -226,7 +226,7 @@ module.exports = function (grunt) {
         dest: 'dist/'
       },
       images: {
-        src: 'images/*',
+        src: 'images/**/*',
         dest: 'dist/'
       },
       vendorjs: {

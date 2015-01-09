@@ -125,6 +125,14 @@
           border-left-color: multiply(@breadcrumb-colour, darken(white, 10%)) !important;
         }
       }
+
+      &.open > a {
+        &:hover,
+        &:focus {
+          color: contrast(@breadcrumb-colour);
+          background-color: multiply(@breadcrumb-colour, darken(white, 10%));
+        }
+      }
     }
   }
 

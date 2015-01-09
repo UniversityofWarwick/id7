@@ -107,6 +107,11 @@ body .navbar-primary .navbar-nav > .nav-breadcrumb:hover::after,
 body .navbar-primary .navbar-nav > .nav-breadcrumb:focus::after {
   border-left-color: #5e326d !important;
 }
+body .navbar-primary .navbar-nav > .nav-breadcrumb.open > a:hover,
+body .navbar-primary .navbar-nav > .nav-breadcrumb.open > a:focus {
+  color: #fff;
+  background-color: #5e326d;
+}
 body .navbar-primary .navbar-toggle {
   color: #fff;
   border: none;
@@ -246,6 +251,11 @@ body .navbar-breadcrumbs .navbar-nav > .nav-breadcrumb:hover::after,
 body .navbar-breadcrumbs .navbar-nav > .nav-breadcrumb:focus::after {
   border-left-color: #4b2857 !important;
 }
+body .navbar-breadcrumbs .navbar-nav > .nav-breadcrumb.open > a:hover,
+body .navbar-breadcrumbs .navbar-nav > .nav-breadcrumb.open > a:focus {
+  color: #fff;
+  background-color: #4b2857;
+}
 body .navbar-breadcrumbs .navbar-toggle {
   color: #fff;
   border: none;
@@ -375,6 +385,11 @@ body .navbar-secondary .navbar-nav > .nav-breadcrumb:focus {
 body .navbar-secondary .navbar-nav > .nav-breadcrumb:hover::after,
 body .navbar-secondary .navbar-nav > .nav-breadcrumb:focus::after {
   border-left-color: #937e9a !important;
+}
+body .navbar-secondary .navbar-nav > .nav-breadcrumb.open > a:hover,
+body .navbar-secondary .navbar-nav > .nav-breadcrumb.open > a:focus {
+  color: #fff;
+  background-color: #937e9a;
 }
 body .navbar-secondary .navbar-toggle {
   color: #fff;

@@ -10530,7 +10530,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         });
       },
 
-      onScreenResize: function onResize(force) {
+      onScreenResize: function onResize(e, force) {
         // Which stop-point are we on?
         var screenConfig = this._screenConfig();
 
@@ -10609,6 +10609,9 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
             }
 
             // If we're STILL wrapped, it's probably a long active nav-breadcrumb
+            if (isWrapped() && $nav.find('> li.nav-breadcrumb.active').length > 0) {
+              $moreBreadcrumbsContainer.find('> .dropdown-menu').append($nav.find('> li.nav-breadcrumb.active').css('height', ''));
+            }
           }
         });
       },
@@ -10629,8 +10632,8 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
           $(window).on('resize.id7.navigation.onScreenResize', $.proxy(this.onScreenResize, this));
 
           // ID-30 on load (i.e. after fonts have loaded) run this, forcing a
-          $(window).on('load', $.proxy(function () {
-            this.onScreenResize(true);
+          $(window).on('load', $.proxy(function (e) {
+            this.onScreenResize(e, true);
           }, this));
         }
 
