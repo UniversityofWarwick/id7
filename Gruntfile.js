@@ -79,7 +79,8 @@ module.exports = function (grunt) {
           'js/vendor/lodash-2.4.1.js',
           'js/account-popover.jquery.js',
           'js/navigation.jquery.js',
-          'js/search-suggest.jquery.js'
+          'js/search-suggest.jquery.js',
+          'js/wide-tables.jquery.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-bundle.js'
       },
@@ -87,7 +88,8 @@ module.exports = function (grunt) {
         src: [
           'js/account-popover.jquery.js',
           'js/navigation.jquery.js',
-          'js/search-suggest.jquery.js'
+          'js/search-suggest.jquery.js',
+          'js/wide-tables.jquery.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-standalone.js'
       }

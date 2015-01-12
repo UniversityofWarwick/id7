@@ -222,7 +222,7 @@
 
 .apply-brand(@colour, @bright-colour: screen(@colour, lighten(black, 20%))) {
   // For older browsers where #id7-left-border and #id7-right-border don't display
-  html {
+  html.lt-ie9 {
     background: screen(@colour, lighten(black, 20%));
   }
 

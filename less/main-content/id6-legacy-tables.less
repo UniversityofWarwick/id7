@@ -1,0 +1,19 @@
+// Sitebuilder doesn't add <table class="table"> by default
+.loop-table-cell-padding(@padding) when (@padding >= 0) {
+  table[cellpadding="@{padding}"] {
+    td, th {
+      padding: unit(@padding, px);
+    }
+  }
+
+  .loop-table-cell-padding((@padding - 1));
+}
+
+// We support the cellpadding attribute up to 10px
+.loop-table-cell-padding(10);
+
+#id7-main-content {
+  table:not(.table):not([role="presentation"]) {
+    .table;
+  }
+}

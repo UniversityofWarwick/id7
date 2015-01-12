@@ -1,4 +1,4 @@
-/*global _:false */
+/*global _:false, console:false */
 
 (function ($) {
   'use strict';
@@ -115,14 +115,13 @@
 
     // Listen to relevant messages and send them through
     $(window).on('message', function (e) {
-      var origin = e.originalEvent.origin;
-
       // TODO check that the origin matches websignon.warwick.ac.uk
+      // var origin = e.originalEvent.origin;
 
       try {
         var data = JSON.parse(e.originalEvent.data);
-        if (data['type'] && data['type'].indexOf(Config.MessagePrefix) === 0) {
-          var messageType = data['type'].substring(Config.MessagePrefix.length);
+        if (data.type && data.type.indexOf(Config.MessagePrefix) === 0) {
+          var messageType = data.type.substring(Config.MessagePrefix.length);
 
           // Send the message out to each instance
           $('[data-toggle="id7:account-popover"]').each(function () {
@@ -130,7 +129,7 @@
             $trigger.data('id7.account-popover').onMessage(messageType, data);
           });
         }
-      } catch (e) {}
+      } catch (error) {}
     })
   });
 

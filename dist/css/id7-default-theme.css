@@ -14,7 +14,7 @@ html #id7-utility-bar.affix {
     background-color: #eee;
   }
 }
-body html {
+body html.lt-ie9 {
   background: #9568a5;
 }
 body h1,
