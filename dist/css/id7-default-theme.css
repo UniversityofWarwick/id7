@@ -31,6 +31,15 @@ body .h5,
 body .h6 {
   color: #7b428e;
 }
+body a {
+  color: #7b428e;
+  text-decoration: none;
+}
+body a:hover,
+body a:focus {
+  color: #663776;
+  text-decoration: underline;
+}
 body .brand-bg {
   background: #7b428e;
 }

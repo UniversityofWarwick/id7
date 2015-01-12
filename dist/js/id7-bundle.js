@@ -10305,7 +10305,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
     },
     Defaults: {
       container: false,
-      iframelink: 'https://augustus.warwick.ac.uk/static_war/account.html', // TODO FIXME
+      iframelink: 'https://websignon.warwick.ac.uk/origin/account/popover',
       template: [
         '<div class="popover account-information">',
         '<div class="arrow"></div>',
@@ -10395,8 +10395,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 
     // Listen to relevant messages and send them through
     $(window).on('message', function (e) {
-      // TODO check that the origin matches websignon.warwick.ac.uk
-      // var origin = e.originalEvent.origin;
+      var origin = e.originalEvent.origin;
 
       try {
         var data = JSON.parse(e.originalEvent.data);
@@ -10406,7 +10405,13 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
           // Send the message out to each instance
           $('[data-toggle="id7:account-popover"]').each(function () {
             var $trigger = $(this);
-            $trigger.data('id7.account-popover').onMessage(messageType, data);
+            var accountPopover = $trigger.data('id7.account-popover');
+
+            if (accountPopover.options.iframelink.indexOf(origin) !== 0) {
+              console.error('Ignored message of type ' + messageType + ' because origin ' + origin + ' didn\'t match iframe link ' + accountPopover.options.iframelink);
+            } else {
+              accountPopover.onMessage(messageType, data);
+            }
           });
         }
       } catch (error) {}
