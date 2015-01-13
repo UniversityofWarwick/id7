@@ -34,19 +34,19 @@ id7/
 │   └── id7-default-theme.min.css
 ├── js/
 │   ├── vendor/
-│   |   ├── html5shiv-3.7.2.min.js
-│   |   ├── respond-1.4.2.min.js
-│   |   └── matchMedia.js
+│   │   ├── html5shiv-3.7.2.min.js
+│   │   ├── respond-1.4.2.min.js
+│   │   └── matchMedia.js
 │   ├── id7-bundle.js
 │   ├── id7-bundle.min.js
 │   ├── id7-standalone.js
 │   └── id7-standalone.min.js
 │   images/
-|   ├── logo.png
-|   ├── masthead-logo-bleed-sm.png
-|   ├── masthead-logo-bleed-sm@2x.png
-|   ├── masthead-logo-bleed-xs.png
-|   └── masthead-logo-bleed-xs@2x.png
+│   ├── logo.png
+│   ├── masthead-logo-bleed-sm.png
+│   ├── masthead-logo-bleed-sm@2x.png
+│   ├── masthead-logo-bleed-xs.png
+│   └── masthead-logo-bleed-xs@2x.png
 └── fonts/
     ├── avenirnext-demi.eot
     ├── avenirnext-demi.svg
