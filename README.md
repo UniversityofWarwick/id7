@@ -41,44 +41,20 @@ id7/
 │   ├── id7-bundle.min.js
 │   ├── id7-standalone.js
 │   └── id7-standalone.min.js
-│   images/
+└── images/
 │   ├── logo.png
 │   ├── masthead-logo-bleed-sm.png
 │   ├── masthead-logo-bleed-sm@2x.png
 │   ├── masthead-logo-bleed-xs.png
 │   └── masthead-logo-bleed-xs@2x.png
 └── fonts/
-    ├── avenirnext-demi.eot
-    ├── avenirnext-demi.svg
-    ├── avenirnext-demi.ttf
-    ├── avenirnext-demi.woff
-    ├── avenirnext-demi-italic.eot
-    ├── avenirnext-demi-italic.svg
-    ├── avenirnext-demi-italic.ttf
-    ├── avenirnext-demi-italic.woff
-    ├── avenirnext-italic.eot
-    ├── avenirnext-italic.svg
-    ├── avenirnext-italic.ttf
-    ├── avenirnext-italic.woff
-    ├── avenirnext-regular.eot
-    ├── avenirnext-regular.svg
-    ├── avenirnext-regular.ttf
-    ├── avenirnext-regular.woff
-    ├── avenirnext-ultralight.eot
-    ├── avenirnext-ultralight.svg
-    ├── avenirnext-ultralight.ttf
-    ├── avenirnext-ultralight.woff
-    ├── avenirnext-ultralight-italic.eot
-    ├── avenirnext-ultralight-italic.svg
-    ├── avenirnext-ultralight-italic.ttf
-    ├── avenirnext-ultralight-italic.woff
     ├── fontawesome-webfont.eot
     ├── fontawesome-webfont.svg
     ├── fontawesome-webfont.ttf
     └── fontawesome-webfont.woff
 ```
 
-We provide compiled CSS and JS (`id7.*`), as well as compiled and minified CSS and JS (`id7.min.*`). CSS [source maps](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors) (`id7.*.map`) are available for use with certain browsers' developer tools. Fonts from Glyphicons, FontAwesome and Avenir Next from fonts.com are included, as is an optional ID7 theme.
+We provide compiled CSS and JS (`id7.*`), as well as compiled and minified CSS and JS (`id7.min.*`). CSS [source maps](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors) (`id7.*.map`) are available for use with certain browsers' developer tools. The FontAwesome icon font is included, as is an optional ID7 theme.
 
 The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The `id7-standalone.js` file doesn't include these, so they will need to be included manually. The dependencies required are:
 
@@ -95,8 +71,6 @@ Internet Explorer 8 (and earlier) support (in order to not receive the "mobile" 
 
 - [html5shiv](https://github.com/aFarkas/html5shiv) >= 3.7.2
 - [respond](https://github.com/scottjehl/Respond) >= 1.4.2
-
-The Avenir Next fonts *MUST* only be used with the snippet of Javascript to callback to fonts.com. These fonts will only work on addresses ending warwick.ac.uk.
 
 ## Bugs and feature requests
 
