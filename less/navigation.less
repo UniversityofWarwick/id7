@@ -140,19 +140,54 @@
     .navbar-nav > li {
       position: relative;
 
-      &:not(.active):not(.nav-breadcrumb):not(:first-child)::before {
+      &:not(.nav-breadcrumb):not(:first-child)::before {
         content: '|';
         position: absolute;
         right: 100%;
         top: 6px;
         width: 2px;
         margin-left: 1px;
-        color: inherit;
         .opacity(0.5);
       }
 
-      &.active + li:not(.nav-breadcrumb)::before, &.nav-breadcrumb + li:not(.nav-breadcrumb)::before {
-        display: none;
+      // For breadcrumbs as a separate element
+      &.nav-breadcrumb {
+        &:not(.dropdown) + li::before {
+          .fa();
+          font-size: 0.7em;
+          content: @fa-var-play;
+          position: absolute;
+
+          // 8px * 10px
+          left: 0px;
+          right: auto;
+          top: 50%;
+          margin-top: -4px;
+          margin-left: -4px;
+          width: auto;
+
+          .opacity(1);
+        }
+      }
+
+      &.active {
+        font-weight: bold;
+
+        // Add an upwards pointing triangle at the bottom to link it to the other sections
+        &::after {
+          content: " ";
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          z-index: 2;
+
+          @nav-triangle-width: 13px;
+          @nav-triangle-height: 7px;
+
+          margin-left: (-@nav-triangle-width / 2);
+
+          .triangle(up, @nav-triangle-width, @nav-triangle-height, white);
+        }
       }
     }
   }
@@ -185,85 +220,6 @@
       .dropdown-menu {
         .dropdown-menu-right();
       }
-    }
-  }
-
-  // For breadcrumbs in the nav itself
-  .navbar-nav > li.nav-breadcrumb {
-    padding-right: (@grid-gutter-width / 4);
-
-    + li {
-      padding-left: (@grid-gutter-width * 3 / 4);
-    }
-
-    &.hidden + li {
-      padding-left: (@grid-gutter-width / 2);
-    }
-
-    &.active {
-      font-weight: bold;
-    }
-
-    @triangle-border-width: 1px;
-
-    &::before, &::after {
-      content: " ";
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      z-index: 2;
-    }
-
-    &::before {
-      margin-top: (-(@navbar-height / 2));
-
-      .triangle(right, @navbar-height, (@grid-gutter-width / 2), white);
-    }
-    &::after {
-      margin-top: ((-(@navbar-height / 2)) + @triangle-border-width);
-
-      .triangle(right, (@navbar-height - (@triangle-border-width * 2)), ((@grid-gutter-width / 2) - @triangle-border-width), transparent);
-      .transition(border-color .15s linear);
-    }
-  }
-
-  // For breadcrumbs as a separate element
-  .breadcrumb {
-    .pull-left();
-
-    margin-bottom: 0;
-    padding: @nav-link-padding;
-    padding-top: @navbar-padding-vertical;
-    padding-bottom: @navbar-padding-vertical;
-
-    > li + li:before {
-      .fa();
-      font-size: 0.7em;
-      content: @fa-var-play;
-      position: relative;
-      top: -1px;
-    }
-
-    position: relative;
-
-    // h = sqrt(3) / 2 * a
-    @triangle-side-length: @navbar-height;
-    @equilateral-triangle-height: (sqrt(3) / 2 * @triangle-side-length);
-
-    padding-right: (@grid-gutter-width / 4);
-    + .navbar-nav > li:first-child {
-      padding-left: ((@grid-gutter-width / 4) + @equilateral-triangle-height);
-    }
-
-    &::after {
-      content: " ";
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      z-index: 2;
-      margin-top: (-(@triangle-side-length / 2));
-
-      .triangle(right, @triangle-side-length, @equilateral-triangle-height, @breadcrumb-bg);
     }
   }
 

@@ -32,7 +32,6 @@
     contrast(@colour),
     contrast(@colour),
     @border-colour,
-    contrast(@active-colour),
     @active-colour,
     contrast(@colour),
     @border-colour
@@ -53,8 +52,7 @@
   @link-colour,
   @link-hover-colour,
   @link-hover-bg,
-  @link-active-colour,
-  @link-active-bg,
+  @link-active-marker-colour,
   @link-disabled-colour,
   @link-disabled-bg) {
 
@@ -84,18 +82,8 @@
       }
     }
     > .active {
-      &,
-      &:hover,
-      &:focus,
-      &.nav-breadcrumb,
-      &.nav-breadcrumb:hover,
-      &.nav-breadcrumb:focus, {
-        color: @link-active-colour;
-        background-color: @link-active-bg;
-
-        &::after {
-          border-left-color: @link-active-bg !important;
-        }
+      &::after {
+        border-bottom-color: @link-active-marker-colour !important;
       }
     }
     > .disabled {
@@ -104,34 +92,6 @@
       &:focus {
         color: @link-disabled-colour;
         background-color: @link-disabled-bg;
-      }
-    }
-    > .nav-breadcrumb {
-      @breadcrumb-colour: multiply(@bg, darken(white, 15%));
-
-      color: contrast(@breadcrumb-colour);
-      background-color: @breadcrumb-colour;
-
-      &::after {
-        border-left-color: @breadcrumb-colour !important;
-      }
-
-      &:hover,
-      &:focus {
-        color: contrast(@breadcrumb-colour);
-        background-color: multiply(@breadcrumb-colour, darken(white, 10%));
-
-        &::after {
-          border-left-color: multiply(@breadcrumb-colour, darken(white, 10%)) !important;
-        }
-      }
-
-      &.open > a {
-        &:hover,
-        &:focus {
-          color: contrast(@breadcrumb-colour);
-          background-color: multiply(@breadcrumb-colour, darken(white, 10%));
-        }
       }
     }
   }
@@ -179,11 +139,8 @@
         }
       }
       > .active > a {
-        &,
-        &:hover,
-        &:focus {
-          color: @link-active-colour;
-          background-color: @link-active-bg;
+        &::after {
+          border-bottom-color: @link-active-marker-colour !important;
         }
       }
       > .disabled > a {
@@ -243,8 +200,10 @@
     background-color: fadeout(@colour, 50%);
   }
 
+  @secondary-colour: screen(@bright-colour, lighten(black, 40%));
+
   .navbar-primary {
-    .apply-navbar-brand(@colour, @bright-colour);
+    .apply-navbar-brand(@colour, @secondary-colour);
   }
 
   .id7-homepage-layout & #id7-navigation:hover {
@@ -272,7 +231,6 @@
       contrast(@colour),
       contrast(@colour),
       @breadcrumbs-accent-colour,
-      contrast(@active-breadcrumbs-bg),
       @active-breadcrumbs-bg,
       contrast(@colour),
       @breadcrumbs-accent-colour
@@ -290,7 +248,6 @@
   }
 
   .navbar-secondary {
-    @secondary-colour: screen(@bright-colour, lighten(black, 40%));
     @secondary-accent-colour: multiply(@secondary-colour, darken(white, 10%));
 
     .apply-navbar-brand(
@@ -299,13 +256,12 @@
       contrast(@secondary-colour),
       contrast(@secondary-colour),
       @secondary-accent-colour,
-      black,
       white,
       contrast(@secondary-colour),
       @secondary-accent-colour
     );
 
-    .breadcrumb > li + li:before {
+    li.nav-breadcrumb + li:before {
       color: @colour;
     }
   }
