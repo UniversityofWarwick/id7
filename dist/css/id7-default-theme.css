@@ -78,7 +78,7 @@ body .navbar-primary .navbar-nav > li > a:focus {
   background: none;
 }
 body .navbar-primary .navbar-nav > .active::after {
-  border-bottom-color: #c0a4c9 !important;
+  border-bottom-color: #cab3d2 !important;
 }
 body .navbar-primary .navbar-nav > .disabled,
 body .navbar-primary .navbar-nav > .disabled:hover,
@@ -119,7 +119,7 @@ body .navbar-primary .navbar-nav .dropdown-menu > li > a:focus {
   background-color: #6f3b80;
 }
 body .navbar-primary .navbar-nav .dropdown-menu > .active > a::after {
-  border-bottom-color: #c0a4c9 !important;
+  border-bottom-color: #cab3d2 !important;
 }
 body .navbar-primary .navbar-nav .dropdown-menu > .disabled > a,
 body .navbar-primary .navbar-nav .dropdown-menu > .disabled > a:hover,
@@ -261,18 +261,18 @@ fieldset[disabled] body .navbar-breadcrumbs .btn-link:focus {
   background-color: #623572;
 }
 body .navbar-secondary {
-  background-color: #c0a4c9;
+  background-color: #cab3d2;
 }
 body .navbar-secondary .navbar-text {
-  color: #fff;
+  color: #000;
 }
 body .navbar-secondary .navbar-nav > li {
-  color: #fff;
+  color: #000;
 }
 body .navbar-secondary .navbar-nav > li:hover,
 body .navbar-secondary .navbar-nav > li:focus {
-  color: #fff;
-  background-color: #ac94b5;
+  color: #000;
+  background-color: #b6a1bd;
 }
 body .navbar-secondary .navbar-nav > li > a,
 body .navbar-secondary .navbar-nav > li > a:hover,
@@ -286,40 +286,40 @@ body .navbar-secondary .navbar-nav > .active::after {
 body .navbar-secondary .navbar-nav > .disabled,
 body .navbar-secondary .navbar-nav > .disabled:hover,
 body .navbar-secondary .navbar-nav > .disabled:focus {
-  color: #fff;
-  background-color: #ac94b5;
+  color: #000;
+  background-color: #b6a1bd;
 }
 body .navbar-secondary .navbar-toggle {
-  color: #fff;
+  color: #000;
   border: none;
 }
 body .navbar-secondary .navbar-toggle:hover,
 body .navbar-secondary .navbar-toggle:focus {
-  color: #fff;
+  color: #000;
   background: none;
 }
 body .navbar-secondary .navbar-nav > .open > a,
 body .navbar-secondary .navbar-nav > .open > a:hover,
 body .navbar-secondary .navbar-nav > .open > a:focus {
-  color: #fff;
-  background-color: #ac94b5;
+  color: #000;
+  background-color: #b6a1bd;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu {
-  background-color: #c0a4c9;
+  background-color: #cab3d2;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu > .dropdown-header {
-  border-color: #ac94b5;
+  border-color: #b6a1bd;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu .divider {
-  background-color: #ac94b5;
+  background-color: #b6a1bd;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu > li > a {
-  color: #fff;
+  color: #000;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu > li > a:hover,
 body .navbar-secondary .navbar-nav .dropdown-menu > li > a:focus {
-  color: #fff;
-  background-color: #ac94b5;
+  color: #000;
+  background-color: #b6a1bd;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu > .active > a::after {
   border-bottom-color: #fff !important;
@@ -327,27 +327,27 @@ body .navbar-secondary .navbar-nav .dropdown-menu > .active > a::after {
 body .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a,
 body .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a:hover,
 body .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a:focus {
-  color: #fff;
-  background-color: #ac94b5;
+  color: #000;
+  background-color: #b6a1bd;
 }
 body .navbar-secondary .navbar-link {
-  color: #fff;
+  color: #000;
 }
 body .navbar-secondary .navbar-link:hover {
-  color: #fff;
+  color: #000;
 }
 body .navbar-secondary .btn-link {
-  color: #fff;
+  color: #000;
 }
 body .navbar-secondary .btn-link:hover,
 body .navbar-secondary .btn-link:focus {
-  color: #fff;
+  color: #000;
 }
 body .navbar-secondary .btn-link[disabled]:hover,
 fieldset[disabled] body .navbar-secondary .btn-link:hover,
 body .navbar-secondary .btn-link[disabled]:focus,
 fieldset[disabled] body .navbar-secondary .btn-link:focus {
-  color: #fff;
+  color: #000;
 }
 body .navbar-secondary li.nav-breadcrumb + li:before {
   color: #7b428e;

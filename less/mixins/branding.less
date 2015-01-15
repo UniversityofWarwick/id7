@@ -200,7 +200,8 @@
     background-color: fadeout(@colour, 50%);
   }
 
-  @secondary-colour: screen(@bright-colour, lighten(black, 40%));
+  //@secondary-colour: screen(@bright-colour, lighten(black, 40%));
+  @secondary-colour: screen(@colour, lighten(black, 60%));
 
   .navbar-primary {
     .apply-navbar-brand(@colour, @secondary-colour);
