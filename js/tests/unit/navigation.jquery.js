@@ -62,7 +62,7 @@ $(function () {
     ok($el.data('bs.affix'), 'affix instance exists');
   });
 
-  test('should swap breadcrumb icon out', function () {
+  test('should toggle breadcrumb icon', function () {
     var $el = $('<div id="id7-navigation" class="affix-top">' +
                 '<nav id="id7-primary-navigation" class="navbar navbar-primary" role="navigation">' +
                 '<div class="navbar-header">' +

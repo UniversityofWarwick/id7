@@ -48,7 +48,7 @@
     },
     Defaults: {
       fixed: true,
-      flipBreadcrumbIcons: true,
+      toggleBreadcrumbs: true,
       fitToWidth: true,
       collapseSmallscreen: false,
       trimLinkTitles: {
@@ -72,7 +72,7 @@
 
       if (o.trimLinkTitles) this.trimLinkTitles();
       if (o.fixed) this.affix();
-      if (o.flipBreadcrumbIcons) this.flipBreadcrumbIcons();
+      if (o.toggleBreadcrumbs) this.toggleBreadcrumbs();
       if (o.fitToWidth) this.onScreenResize();
 
       this.wireEventHandlers();
@@ -113,7 +113,7 @@
         });
       },
 
-      flipBreadcrumbIcons: function flipBreadcrumbIcons() {
+      toggleBreadcrumbs: function flipBreadcrumbIcons() {
         this.$container.find('.navbar-brand[data-target]').each(function () {
           var $trigger = $(this);
           var $icon = $trigger.find('.fa').addClass(Config.Breadcrumbs.ICON_CLOSED);
@@ -211,6 +211,10 @@
                 // Remove the last element and prepend it to the more container
                 $moreContainer.find('> .dropdown > .dropdown-menu').prepend($nav.find('> li:not(.nav-breadcrumb)').last().css('height', ''));
               } while (isWrapped() & $nav.find('> li:not(.nav-breadcrumb)').length > 0);
+
+              // enable highlighting of menu icon if it contains an active link
+              var $moreMenu = $moreContainer.find('> .dropdown');
+              $moreMenu.toggleClass('active', $moreMenu.find('li.active').length > 0);
             }
 
             // If we're STILL wrapped, it's probably a long active nav-breadcrumb

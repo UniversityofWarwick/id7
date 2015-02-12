@@ -82,7 +82,7 @@
       }
     }
     > .active {
-      &::after {
+      &::before {
         border-bottom-color: @link-active-marker-colour !important;
       }
     }
@@ -139,7 +139,7 @@
         }
       }
       > .active > a {
-        &::after {
+        &::before {
           border-bottom-color: @link-active-marker-colour !important;
         }
       }
@@ -262,7 +262,7 @@
       @secondary-accent-colour
     );
 
-    li.nav-breadcrumb + li:before {
+    li.nav-breadcrumb::after {
       color: @colour;
     }
   }

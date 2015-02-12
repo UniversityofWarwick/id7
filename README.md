@@ -17,7 +17,7 @@ Four quick start options are available:
 - Clone the repo: `git clone https://github.com/UniversityofWarwick/id7.git`.
 - Install with [Bower](http://bower.io): `bower install https://github.com/UniversityofWarwick/id7.git`.
 
-Read the [Getting started page](#) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](getting-started/) for information on the framework contents, templates and examples, and more.
 
 ### What's included
 
