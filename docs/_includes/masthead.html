@@ -20,17 +20,6 @@
                     </nav>
                 </div>
             {% endunless %}
-
-            <div id="id7-header-text">
-                <h1>
-                    {% if page.slug contains 'subsite' %}
-                        <span id="id7-parent-site-link"><a href="{{ site.prefix }}">ID7 Documentation</a></span>
-                        <span id="id7-current-site-link"><a href="{{ site.prefix }}{{ page.slug }}">Subsite</a></span>
-                    {% else %}
-                        <span id="id7-current-site-link"><a href="{{ site.prefix }}">ID7 Documentation</a></span>
-                    {% endif %}
-                </h1>
-            </div>
         </div>
         <div id="id7-search-column">
             <div id="id7-search">
@@ -45,6 +34,17 @@
                     </div>
                 </form>
             </div>
+        </div>
+
+        <div id="id7-header-text">
+            <h1>
+                {% if page.slug contains 'subsite' %}
+                <span id="id7-parent-site-link"><a href="{{ site.prefix }}">ID7 Documentation</a></span>
+                <span id="id7-current-site-link"><a href="{{ site.prefix }}{{ page.slug }}">Subsite</a></span>
+                {% else %}
+                <span id="id7-current-site-link"><a href="{{ site.prefix }}">ID7 Documentation</a></span>
+                {% endif %}
+            </h1>
         </div>
     </div>
 </div>
