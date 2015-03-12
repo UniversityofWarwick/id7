@@ -334,7 +334,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Docs HTML validation task
-  grunt.registerTask('validate-html', ['jekyll:docs', 'validation']);
+  //grunt.registerTask('validate-html', ['jekyll:docs', 'validation']);
 
   var runSubset = function (subset) {
     return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset;
@@ -352,9 +352,9 @@ module.exports = function (grunt) {
   }
 
   // Skip HTML validation if running a different subset of the test suite
-  if (runSubset('validate-html')) {
-    testSubtasks.push('validate-html');
-  }
+  //if (runSubset('validate-html')) {
+  //  testSubtasks.push('validate-html');
+  //}
 
   grunt.registerTask('test', testSubtasks);
   grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jscs:core', 'jscs:test', 'qunit_junit', 'qunit']);
@@ -373,7 +373,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'copy:vendorjs', 'test']);
 
   // Docs task.
-  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs']);
+  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs', 'jekyll:docs']);
 
   // Run Jekyll and watch for asset changes.
   grunt.registerTask('serve', ['concurrent:serve'])
