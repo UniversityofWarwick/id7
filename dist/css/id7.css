@@ -8011,17 +8011,13 @@ body {
 .id7-non-branded .id7-masthead {
   background: white !important;
 }
+.id7-non-branded .id7-logo-column,
 .id7-non-branded .id7-utility-masthead::after {
   display: none;
   content: none;
 }
 .id7-non-branded .id7-search-box-container {
   margin-top: 11px !important;
-}
-@media (min-width: 768px) {
-  .id7-non-branded .id7-logo-column {
-    margin-top: 11px;
-  }
 }
 .id7-header-image-container {
   position: relative;
@@ -8596,6 +8592,9 @@ audio[height] {
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
+}
+body main a {
+  text-decoration: underline;
 }
 a {
   -webkit-transition: color .3s linear;
