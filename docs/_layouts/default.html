@@ -7,18 +7,17 @@
   {% include header.html %}
 </head>
 <body>
-<div id="id7-left-border"></div>
-<div id="id7-fixed-width-container">
-  <a class="sr-only sr-only-focusable" href="#id7-main-content-area">Skip to main content</a>
+<div class="id7-left-border"></div>
+<div class="id7-fixed-width-container">
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
 
-  <header id="id7-page-header">
+  <header class="id7-page-header">
     {% include utility-masthead.html %}
 
-    <div id="id7-header-image-container">
+    <div class="id7-header-image-container">
       <!-- Docs master nav -->
-      <div id="id7-navigation">
+      <div class="id7-navigation">
         {% include nav/main.html %}
-        {% include nav/breadcrumbs.html %}
 
         {% if page.slug contains 'examples/bacon-ipsum/child' %}
         {% include nav/bacon-ipsum-child-secondary.html %}
@@ -34,21 +33,21 @@
   </header>
 
   <!-- Page content of course! -->
-  <main id="id7-main-content-area">
-    <header id="id7-main-content-header">
-      <div id="id7-page-title">
+  <main class="id7-main-content-area" id="main">
+    <header class="id7-main-content-header">
+      <div class="id7-page-title">
         <h1>{{ page.title }}</h1>
       </div>
     </header>
 
-    <div id="id7-main-content">
+    <div class="id7-main-content">
       {{ content }}
     </div>
   </main>
 
   {% include footer.html %}
 </div>
-<div id="id7-right-border"></div>
+<div class="id7-right-border"></div>
 
 {% include tail.html %}
 
