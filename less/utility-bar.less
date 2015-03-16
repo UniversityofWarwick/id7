@@ -71,7 +71,10 @@
 
       background: @id7-account-popover-actions-bg;
       border-top: 1px solid @id7-account-popover-actions-border;
-      margin: 0 -15px -9px -15px;
+      
+      margin-left: (-(@popover-padding-horizontal + 1px));
+      margin-right: (-(@popover-padding-horizontal + 1px));
+      margin-bottom: (-(@popover-padding-vertical + 1px));
 
       .btn-group-justified {
         border-spacing: (@line-height-computed / 2);

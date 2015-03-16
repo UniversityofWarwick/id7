@@ -7389,6 +7389,9 @@ footer .id7-app-footer:after {
     display: none !important;
   }
 }
+.popover-content {
+  padding: 15px 19px;
+}
 main {
   font-size: ceiling(13.6px);
   font-weight: 300;
@@ -7719,7 +7722,9 @@ body {
   height: 80px;
 }
 .id7-utility-bar .popover.account-information .actions {
-  margin: 0 -15px -9px -15px;
+  margin-right: -20px;
+  margin-bottom: -16px;
+  margin-left: -20px;
   background: #f7f7f7;
   border-top: 1px solid #ebebeb;
 }
