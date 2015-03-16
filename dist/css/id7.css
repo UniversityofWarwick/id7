@@ -7798,7 +7798,7 @@ body {
   margin-right: -20px;
   margin-left: -20px;
 }
-.id7-masthead .id7-logo-row > id7-logo img {
+.id7-masthead .id7-logo-row > .id7-logo img {
   visibility: hidden;
 }
 @media (min-width: 768px) {
