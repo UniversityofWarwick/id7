@@ -10425,10 +10425,6 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 (function ($) {
   'use strict';
   var Config = {
-    Breadcrumbs: {
-      ICON_OPEN: 'active',
-      ICON_CLOSED: ''
-    },
     ScreenSizes: [
       {
         name: 'lg', test: function () {
@@ -10455,7 +10451,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
       moreContainer: [
         '<ul class="nav navbar-nav navbar-right">',
         '<li class="dropdown">',
-        '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-bars"></i></a>',
+        '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-caret-down"></i></a>',
         '<ul class="dropdown-menu" role="menu"></ul>',
         '</li>',
         '</ul>'
@@ -10470,7 +10466,6 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
     },
     Defaults: {
       fixed: true,
-      toggleBreadcrumbs: true,
       fitToWidth: true,
       collapseSmallscreen: false,
       trimLinkTitles: {
@@ -10494,7 +10489,6 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 
       if (o.trimLinkTitles) this.trimLinkTitles();
       if (o.fixed) this.affix();
-      if (o.toggleBreadcrumbs) this.toggleBreadcrumbs();
       if (o.fitToWidth) this.onScreenResize();
 
       this.wireEventHandlers();
@@ -10530,24 +10524,8 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
       affix: function affix() {
         this.$container.affix({
           offset: {
-            top: this.$container.offset().top - $('#id7-utility-bar').height()
+            top: this.$container.offset().top - $('.id7-utility-bar').height()
           }
-        });
-      },
-
-      toggleBreadcrumbs: function flipBreadcrumbIcons() {
-        this.$container.find('.navbar-brand[data-target]').each(function () {
-          var $trigger = $(this);
-          var $icon = $trigger.find('.fa').addClass(Config.Breadcrumbs.ICON_CLOSED);
-
-          var $element = $($trigger.attr('data-target'));
-
-          $element.on('show.bs.collapse', function () {
-            $icon.removeClass(Config.Breadcrumbs.ICON_CLOSED).addClass(Config.Breadcrumbs.ICON_OPEN);
-          });
-          $element.on('hide.bs.collapse', function () {
-            $icon.removeClass(Config.Breadcrumbs.ICON_OPEN).addClass(Config.Breadcrumbs.ICON_CLOSED);
-          });
         });
       },
 
@@ -10706,7 +10684,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
   };
 
   $(function () {
-    $('#id7-navigation').id7Navigation();
+    $('.id7-navigation').id7Navigation();
   });
 })(jQuery);
 
@@ -10852,7 +10830,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
   };
 
   $(function () {
-    $('#id7-main-content').wideTables();
+    $('.id7-main-content').wideTables();
   });
 
 })(jQuery);

@@ -32,8 +32,8 @@ $(function () {
   });
 
   test('should trim link titles', function () {
-    var $el = $('<div id="id7-navigation" class="affix-top">' +
-                '<nav id="id7-primary-navigation" class="navbar navbar-primary" role="navigation">' +
+    var $el = $('<div class="affix-top">' +
+                '<nav class="navbar navbar-primary" role="navigation">' +
                 '<ul class="nav navbar-nav">' +
                 '<li><a href="#">Short link title</a></li>' +
                 '<li><a href="#">A really long link title that goes over the sixty char threshold and needs trimming</a></li>' +
@@ -49,8 +49,8 @@ $(function () {
   });
 
   test('should affix', function () {
-    var $el = $('<div id="id7-navigation" class="affix-top">' +
-                '<nav id="id7-primary-navigation" class="navbar navbar-primary" role="navigation">' +
+    var $el = $('<div class="affix-top">' +
+                '<nav class="navbar navbar-primary" role="navigation">' +
                 '<ul class="nav navbar-nav">' +
                 '<li><a href="#">Primary nav link</a></li>' +
                 '</ul>' +
@@ -60,40 +60,5 @@ $(function () {
         .id7Navigation({ fitToWidth: false });
 
     ok($el.data('bs.affix'), 'affix instance exists');
-  });
-
-  test('should toggle breadcrumb icon', function () {
-    var $el = $('<div id="id7-navigation" class="affix-top">' +
-                '<nav id="id7-primary-navigation" class="navbar navbar-primary" role="navigation">' +
-                '<div class="navbar-header">' +
-                '<button type="button" class="btn-link navbar-brand collapsed" data-toggle="collapse" data-target="#id7-breadcrumbs">' +
-                '<span class="sr-only">Toggle breadcrumbs</span>' +
-                '<i class="fa fa-fw fa-compass"></i>' +
-                '</button>' +
-                '</div>' +
-                '<ul class="nav navbar-nav">' +
-                '<li><a href="#">Primary nav link</a></li>' +
-                '</ul>' +
-                '</nav>' +
-                '<nav class="breadcrumbs navbar navbar-breadcrumbs collapse navbar-breadcrumb-collapse" id="id7-breadcrumbs">' +
-                '<div class="container-fluid">' +
-                '<ul class="nav navbar-nav">' +
-                '<li><a href="/">Uni home</a></li>' +
-                '<li class="active navbar-text">Subsite homepage</li>' +
-                '</ul>' +
-                '</div>' +
-                '</nav>' +
-                '</div>')
-        .appendTo('#qunit-fixture')
-        .id7Navigation({ fitToWidth: false });
-
-    var $icon = $el.find('i.fa');
-
-    ok(!$icon.hasClass('active'), 'should not have active class');
-
-    $icon.trigger('click');
-
-    ok($el.find('.breadcrumbs').hasClass('collapsing'), 'does not have class "collapsing"');
-    ok($icon.hasClass('active'), 'should have active classname');
   });
 });

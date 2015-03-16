@@ -5,20 +5,20 @@
   @border-image-left: "border-image-left.jpg",
   @border-image-right: "border-image-right.jpg") {
 
-  #id7-header-image-container {
+  .id7-header-image-container {
     background-image: url("@{basedir}/@{banner-image}");
   }
 
-  #id7-fixed-width-container, #id7-utility-bar.affix {
+  .id7-fixed-width-container, .id7-utility-bar.affix {
     background-image: url("@{basedir}/@{masthead-image}");
   }
 
   @media (min-width: @grid-float-breakpoint) {
-    #id7-left-border {
+    .id7-left-border {
       background-image: url("@{basedir}/@{border-image-left}");
     }
 
-    #id7-right-border {
+    .id7-right-border {
       background-image: url("@{basedir}/@{border-image-right}");
     }
   }
@@ -81,9 +81,12 @@
         }
       }
     }
-    > .active {
+    > li.active {
       &::before {
-        border-bottom-color: @link-active-marker-colour !important;
+        border-bottom-color: @link-active-marker-colour;
+      }
+      &.childless::before {
+        border-bottom-color: @id7-brand-white;
       }
     }
     > .disabled {
@@ -178,7 +181,7 @@
 }
 
 .apply-brand(@colour, @bright-colour: screen(@colour, lighten(black, 20%))) {
-  // For older browsers where #id7-left-border and #id7-right-border don't display
+  // For older browsers where .id7-left-border and .id7-right-border don't display
   html.lt-ie9 {
     background: screen(@colour, lighten(black, 20%));
   }
@@ -190,11 +193,11 @@
   .brand-text { color: @colour; }
   .brand-border { border-color: @colour; }
 
-  #id7-utility-masthead::after {
+  .id7-utility-masthead::after {
     background-color: @colour;
   }
 
-  #id7-utility-masthead, #id7-utility-bar > nav {
+  .id7-utility-masthead, .id7-utility-bar > nav {
     // IE8 won't put our semi-transparent overlay on here. Just make it the brand colour
     background-color: @colour;
     background-color: fadeout(@colour, 50%);
@@ -203,11 +206,11 @@
   //@secondary-colour: screen(@bright-colour, lighten(black, 40%));
   @secondary-colour: screen(@colour, lighten(black, 60%));
 
-  .navbar-primary {
+  .id7-navigation .navbar-primary {
     .apply-navbar-brand(@colour, @secondary-colour);
   }
 
-  .id7-homepage-layout & #id7-navigation:hover {
+  .id7-homepage-layout & .id7-navigation:hover {
     .navbar-primary {
       background-color: @colour; // TODO work out how to move into apply-navbar-brand
     }
@@ -218,7 +221,7 @@
     background-color: @breadcrumbs-colour;
   }
 
-  .id7-homepage-layout & #id7-navigation:hover .navbar-primary .navbar-brand {
+  .id7-homepage-layout & .id7-navigation:hover .navbar-primary .navbar-brand {
     background-color: @breadcrumbs-colour;
   }
 
@@ -242,7 +245,7 @@
     }
   }
 
-  .id7-homepage-layout & #id7-navigation:hover {
+  .id7-homepage-layout & .id7-navigation:hover {
     .navbar-breadcrumbs {
       background-color: @breadcrumbs-colour; // TODO work out how to move into apply-navbar-brand
     }
@@ -262,9 +265,27 @@
       @secondary-accent-colour
     );
 
-    li.nav-breadcrumb::after {
-      color: @colour;
+    .navbar-nav {
+      > li::after {
+        color: @colour;
+      }
+
+      > li.first {
+        background-color: @colour;
+        color: white;
+
+        &:hover::after {
+          border-right-color: @breadcrumbs-colour;
+        }
+        &::after {
+          border-color: transparent transparent transparent @colour;
+        }
+      }
     }
+  }
+
+  .navbar-tertiary {
+    background-color: white;
   }
 
   .opaque-navigation .navbar-primary {
@@ -273,23 +294,23 @@
   }
 
   &.bordered {
-    #id7-left-border, #id7-right-border { border-color: fadeout(@colour, 70%); }
+    .id7-left-border, .id7-right-border { border-color: fadeout(@colour, 70%); }
   }
 
-  #id7-site-footer {
+  .id7-site-footer {
     background: @id7-site-footer-colour;
     color: contrast(@id7-site-footer-colour);
     .link-colour(contrast(@id7-site-footer-colour));
   }
 
-  #id7-app-footer {
+  .id7-app-footer {
     background: @colour;
     color: contrast(@colour);
     .link-colour(contrast(@colour));
   }
 
-  #id7-masthead #id7-search {
-    #id7-search-box {
+  .id7-masthead .id7-search {
+    .id7-search-box {
       border-color: @colour;
     }
 

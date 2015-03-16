@@ -27,25 +27,25 @@ jQuery(function($) {
 
     $('#border-width').on('change', function(e) {
         var width = $(this).val();
-        $('#id7-left-border').css('border-right-width', width + 'px');
-        $('#id7-right-border').css('border-left-width', width + 'px');
+        $('.id7-left-border').css('border-right-width', width + 'px');
+        $('.id7-right-border').css('border-left-width', width + 'px');
     }).trigger('change');
 
     $('#border-colour').on('change', function(e) {
         var colour = $(this).val();
-        $('#id7-left-border, #id7-right-border').css('border-color', colour);
+        $('.id7-left-border, .id7-right-border').css('border-color', colour);
     }).trigger('change');
 
     $('#shadow-blur, #shadow-opacity').on('change', function(e) {
         var blur = $('#shadow-blur').val();
         var opacity = $('#shadow-opacity').val();
 
-        $('#id7-fixed-width-container.shadowed').css('box-shadow', '0 0 ' + blur + 'px rgba(0, 0, 0, ' + opacity + ')');
+        $('.id7-fixed-width-container.shadowed').css('box-shadow', '0 0 ' + blur + 'px rgba(0, 0, 0, ' + opacity + ')');
     }).trigger('change');
 
     $('#strapline-position').on('change', function(e) {
         var classes = 'strapline ' + $(this).val();
-        $('#id7-header-image-container .strapline').attr('class', classes);
+        $('.id7-header-image-container .strapline').attr('class', classes);
     }).trigger('change');
 
     $('#site-imagery').on('change', function(e) {

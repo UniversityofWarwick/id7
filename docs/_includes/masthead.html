@@ -1,14 +1,14 @@
-<div id="id7-masthead">
-    <div id="id7-masthead-contents">
-        <div id="id7-logo-column">
+<div class="id7-masthead">
+    <div class="id7-masthead-contents">
+        <div class="id7-logo-column">
             {% unless page.nonbranded %}
-                <div id="id7-logo-row">
-                    <div id="id7-logo">
+                <div class="id7-logo-row">
+                    <div class="id7-logo">
                         <a href="http://warwick.ac.uk" title="Warwick homepage">
                             <img src="{{ site.prefix }}dist/images/shim.gif" alt="Warwick">
                         </a>
                     </div>
-                    <nav id="id7-site-links">
+                    <nav class="id7-site-links">
                         <ul>
                             <li><a href="http://warwick.ac.uk/study">Study</a></li>
                             <li><a href="http://warwick.ac.uk/research">Research</a></li>
@@ -20,31 +20,31 @@
                     </nav>
                 </div>
             {% endunless %}
-
-            <div id="id7-header-text">
-                <h1>
-                    {% if page.slug contains 'subsite' %}
-                        <span id="id7-parent-site-link"><a href="{{ site.prefix }}">ID7 Documentation</a></span>
-                        <span id="id7-current-site-link"><a href="{{ site.prefix }}{{ page.slug }}">Subsite</a></span>
-                    {% else %}
-                        <span id="id7-current-site-link"><a href="{{ site.prefix }}">ID7 Documentation</a></span>
-                    {% endif %}
-                </h1>
-            </div>
         </div>
-        <div id="id7-search-column">
-            <div id="id7-search">
+        <div class="id7-search-column">
+            <div class="id7-search">
                 <form action="http://search.warwick.ac.uk/website" role="search">
                     <input type="hidden" name="source" value="http://www2.warwick.ac.uk/">
                     <div class="form-group">
                         <label class="sr-only" for="id7-search-box">Search</label>
-                        <div id="id7-search-box-container">
+                        <div class="id7-search-box-container">
                             <input type="search" class="form-control input-lg" id="id7-search-box" name="q" placeholder="Type your search here" data-suggest="go">
                             <i class="fa fa-search fa-2x"></i>
                         </div>
                     </div>
                 </form>
             </div>
+        </div>
+
+        <div class="id7-header-text">
+            <h1>
+                {% if page.slug contains 'subsite' %}
+                <span class="id7-parent-site-link"><a href="{{ site.prefix }}">ID7 Documentation</a></span>
+                <span class="id7-current-site-link"><a href="{{ site.prefix }}{{ page.slug }}">Subsite</a></span>
+                {% else %}
+                <span class="id7-current-site-link"><a href="{{ site.prefix }}">ID7 Documentation</a></span>
+                {% endif %}
+            </h1>
         </div>
     </div>
 </div>

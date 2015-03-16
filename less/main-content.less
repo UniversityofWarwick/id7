@@ -1,13 +1,15 @@
-#id7-main-content-header {
-  .container();
-  background: white;
-}
+main {
+  > header {
+    .container();
+    background: white;
+  }
 
-#id7-main-content {
-  .container();
-  background: white;
-  padding-top: (@grid-gutter-width / 2);
-  padding-bottom: (@grid-gutter-width / 2);
+  > .id7-main-content {
+    .container();
+    background: white;
+    padding-top: (@grid-gutter-width / 2);
+    padding-bottom: (@grid-gutter-width / 2);
+  }
 }
 
 @import "main-content/box-styles.less";

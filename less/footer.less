@@ -1,5 +1,5 @@
-#id7-page-footer {
-  #id7-site-footer, #id7-app-footer {
+footer {
+  .id7-site-footer, .id7-app-footer {
     .container-fluid();
     position: relative;
     padding-top: (@grid-gutter-width / 2);
@@ -16,10 +16,20 @@
     }
   }
 
-  #id7-app-footer {
+  .id7-app-footer {
     .small();
 
-    #id7-footer-utility {
+    .page-footer-elements {
+      margin-top: 0;
+
+      ul {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+    }
+
+    .id7-footer-utility {
       margin-bottom: (@grid-gutter-width / 2);
 
       ul {
@@ -30,8 +40,8 @@
 }
 
 .id7-non-branded {
-  #id7-page-footer {
-    #id7-site-footer, #id7-app-footer {
+  .id7-page-footer {
+    .id7-site-footer, .id7-app-footer {
       .id7-logo-bleed {
         display: none;
 

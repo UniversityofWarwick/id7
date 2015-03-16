@@ -1,4 +1,7 @@
-#id7-navigation {
+@nav-triangle-width: 13px;
+@nav-triangle-height: 7px;
+
+.id7-navigation {
   position: relative;
   z-index: 1;
 
@@ -6,8 +9,12 @@
     min-height: 0;
     border-width: 0px;
 
-    &.navbar-secondary .nav {
-      padding-left: 10px;
+    .navbar-nav {
+      padding-right: 10px;
+
+      li.first {
+        padding-left: 20px;
+      }
     }
   }
 
@@ -55,70 +62,6 @@
     border-width: 0px;
   }
 
-  .navbar-toggle, .navbar-brand {
-    padding: 7px 7px 7px 17px;
-  }
-
-  .navbar-brand {
-    border: 0;
-
-    &:focus {
-      // remove focus outline
-      outline: 0 !important;
-    }
-
-    i.fa {
-      position: relative;
-      top: -2.8px;
-
-      .transition(transform .35s ease);
-      .transform-origin(49.5% 48%);
-
-      &.active {
-        .fa-icon-rotate(508deg, 5);
-      }
-    }
-  }
-
-  .navbar-breadcrumbs {
-    // Float above secondary nav (or content)
-    position: absolute;
-    width: 100%;
-    z-index: 4;
-
-    .small();
-
-    .navbar-nav {
-      > li {
-        padding-left: 4px;
-        padding-right: 6px;
-        margin: 0 (@line-height-computed / 2) 0 0;
-
-        &:first-child { margin-left: 0; }
-
-        &::after {
-          .fa();
-          font-size: 0.7em;
-          content: @fa-var-play;
-          position: absolute;
-          left: 100%;
-          top: 11px;
-        }
-      }
-
-      > li.navbar-text {
-        margin: 0 (@line-height-computed / 2) 0 0;
-        line-height: @line-height-computed;
-        cursor: auto;
-
-        &.active::after {
-          content: none;
-          display: none;
-        }
-      }
-    }
-  }
-
   .dropdown-menu {
     border: 0;
   }
@@ -142,21 +85,18 @@
     }
   }
 
-  .navbar-primary, .navbar-secondary {
+  .navbar {
     .navbar-nav ul.dropdown-menu > li.active {
       // highlighting in 'more' dropdowns
       > a {
         font-weight: bold;
       }
 
+      // active section triangle indicator
       &::after {
           content: ' ';
           position: absolute;
           z-index: 2;
-
-          @nav-triangle-width: 13px;
-          @nav-triangle-height: 7px;
-
           margin-top: (-@font-size-base + 1 - @nav-triangle-width/2);
 
           .triangle(right, @nav-triangle-width, @nav-triangle-height, white);
@@ -165,10 +105,31 @@
 
     .navbar-nav > li {
       position: relative;
-      margin: 0 2px 0 2px;
+      margin: 0 2px;
 
-      // For breadcrumbs within .navbar-secondary
-      &.nav-breadcrumb:not(.nav-last-breadcrumb):not(.dropdown) {
+      &.first {
+        margin-left: 0;
+      }
+
+      // Arrow background for first breadrumb in .navbar-secondary
+      &.nav-breadcrumb.first {
+        margin-right: 17px;
+
+        &::after {
+          top: 0;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          right: -17px;
+          border-style: solid;
+          border-width: 17px 0 17px 17px;
+          z-index: 10;
+        }
+      }
+
+      // For breadcrumbs in .navbar-secondary
+      &.nav-breadcrumb:not(.first):not(.nav-last-breadcrumb):not(.dropdown) {
         margin-right: 0.5em;
 
         &::after {
@@ -177,47 +138,45 @@
           content: @fa-var-play;
           position: absolute;
           left: 101%;
-          top: 11px;
+          top: 14px;
           .opacity(1);
         }
       }
 
       // bar between breadcrumbs and siblings (if present)
-      &.nav-last-breadcrumb + li::before {
+      // bar between siblings
+      &.nav-last-breadcrumb + li::before,
+      &:not(.nav-breadcrumb):not(:last-child)::after {
         content: '|';
+        font-size: 15px;
         position: absolute;
-        left: 0%;
-        top: 6px;
+        top: 5px;
         width: 2px;
-        margin-left: -3px;
         .opacity(0.5);
+      }
+
+      // bar between breadcrumbs and siblings (if present)
+      &.nav-last-breadcrumb + li::before {
+        left: 0%;
+        margin-left: -3px;
       }
 
       // bar between siblings
       &:not(.nav-breadcrumb):not(:last-child)::after {
-        content: '|';
-        position: absolute;
         left: 100%;
-        top: 6px;
-        width: 2px;
         margin-left: 1px;
-        .opacity(0.5);
       }
 
       &.active {
         font-weight: bold;
 
-        // Add an upwards pointing triangle at the bottom to link it to the other sections
+        // active section triangle indicator
         &::before {
           content: " ";
           position: absolute;
           bottom: 0px;
           left: 50%;
           z-index: 2;
-
-          @nav-triangle-width: 13px;
-          @nav-triangle-height: 7px;
-
           margin-left: (-@nav-triangle-width / 2);
 
           .triangle(up, @nav-triangle-width, @nav-triangle-height, white);
@@ -228,16 +187,18 @@
         &.dropdown:active::before {
           display: none;
         }
-
       }
     }
   }
 
-  .navbar-secondary .navbar-nav > li:not(.nav-breadcrumb) {
-    font-size: (@font-size-base - 1px);
+  .navbar-secondary, .navbar-tertiary {
+    .navbar-nav > li:not(.nav-breadcrumb) {
+      font-size: (@font-size-base - 1px);
+    }
   }
 
-  .navbar-nav > li {
+  .navbar-nav > li,
+  .navbar-secondary > li.first::after {
     .transition(~"background-color .15s linear, color .15s linear")
   }
 

@@ -6,7 +6,10 @@ a {
   font-weight: 700;
 }
 
-.bordered-headings(@id7-subtle-line-colour);
+h1 {
+  padding-bottom: (@line-height-computed / 2);
+  border-bottom: 1px solid @id7-subtle-line-colour;
+}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -15,7 +18,7 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-#id7-page-title {
+.id7-page-title {
   margin-top: (@grid-gutter-width / 2);
 
   h1 {
@@ -29,7 +32,7 @@ h1, h2, h3, h4, h5, h6,
 
 // Hyphenate on smallscreens
 @media (max-width: (@grid-float-breakpoint - 1)) {
-  #id7-main-content-section {
+  main {
     .hyphens();
   }
 }

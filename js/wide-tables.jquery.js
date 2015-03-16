@@ -63,7 +63,7 @@
   };
 
   $(function () {
-    $('#id7-main-content').wideTables();
+    $('.id7-main-content').wideTables();
   });
 
 })(jQuery);
