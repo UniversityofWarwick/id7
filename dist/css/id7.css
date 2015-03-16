@@ -7781,6 +7781,11 @@ body {
     width: 66.66666667%;
   }
 }
+@media (max-width: 767px) {
+  .id7-masthead .id7-logo-column {
+    margin-bottom: 8px;
+  }
+}
 .id7-masthead .id7-search-column {
   position: relative;
   min-height: 1px;
@@ -8358,6 +8363,7 @@ body {
   top: 5px;
   width: 2px;
   font-size: 15px;
+  font-weight: normal;
   content: '|';
   filter: alpha(opacity=50);
   opacity: .5;

@@ -81,14 +81,17 @@
         }
       }
     }
+
     > li.active {
-      &::before {
+      &.hasChildren::before {
         border-bottom-color: @link-active-marker-colour;
       }
-      &.childless::before {
+
+      &::before {
         border-bottom-color: @id7-brand-white;
       }
     }
+
     > .disabled {
       &,
       &:hover,

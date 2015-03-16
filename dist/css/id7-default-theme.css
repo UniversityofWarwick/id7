@@ -77,10 +77,10 @@ body .id7-navigation .navbar-primary .navbar-nav > li > a:focus {
   color: inherit;
   background: none;
 }
-body .id7-navigation .navbar-primary .navbar-nav > li.active::before {
+body .id7-navigation .navbar-primary .navbar-nav > li.active.hasChildren::before {
   border-bottom-color: #cab3d2;
 }
-body .id7-navigation .navbar-primary .navbar-nav > li.active.childless::before {
+body .id7-navigation .navbar-primary .navbar-nav > li.active::before {
   border-bottom-color: #fff;
 }
 body .id7-navigation .navbar-primary .navbar-nav > .disabled,
@@ -185,10 +185,10 @@ body .navbar-breadcrumbs .navbar-nav > li > a:focus {
   color: inherit;
   background: none;
 }
-body .navbar-breadcrumbs .navbar-nav > li.active::before {
+body .navbar-breadcrumbs .navbar-nav > li.active.hasChildren::before {
   border-bottom-color: #825d8e;
 }
-body .navbar-breadcrumbs .navbar-nav > li.active.childless::before {
+body .navbar-breadcrumbs .navbar-nav > li.active::before {
   border-bottom-color: #fff;
 }
 body .navbar-breadcrumbs .navbar-nav > .disabled,
@@ -284,10 +284,10 @@ body .navbar-secondary .navbar-nav > li > a:focus {
   color: inherit;
   background: none;
 }
-body .navbar-secondary .navbar-nav > li.active::before {
+body .navbar-secondary .navbar-nav > li.active.hasChildren::before {
   border-bottom-color: #fff;
 }
-body .navbar-secondary .navbar-nav > li.active.childless::before {
+body .navbar-secondary .navbar-nav > li.active::before {
   border-bottom-color: #fff;
 }
 body .navbar-secondary .navbar-nav > .disabled,
