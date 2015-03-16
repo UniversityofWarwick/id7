@@ -9,7 +9,7 @@
         '<div class="account-info">',
         '<iframe src="<%- iframelink %>" scrolling="no" frameborder="0" allowtransparency="true" seamless></iframe>',
         '</div>',
-        '<div class="row actions">',
+        '<div class="actions">',
         '<div class="btn-group btn-group-justified">',
         '<div class="btn-group">',
         '<a href="<%- logoutlink %>" class="btn btn-default">Sign out</a>',

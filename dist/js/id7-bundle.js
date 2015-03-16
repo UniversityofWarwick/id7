@@ -10289,7 +10289,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         '<div class="account-info">',
         '<iframe src="<%- iframelink %>" scrolling="no" frameborder="0" allowtransparency="true" seamless></iframe>',
         '</div>',
-        '<div class="row actions">',
+        '<div class="actions">',
         '<div class="btn-group btn-group-justified">',
         '<div class="btn-group">',
         '<a href="<%- logoutlink %>" class="btn btn-default">Sign out</a>',

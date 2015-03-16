@@ -7719,7 +7719,7 @@ body {
   height: 80px;
 }
 .id7-utility-bar .popover.account-information .actions {
-  margin-bottom: -9px;
+  margin: 0 -15px -9px -15px;
   background: #f7f7f7;
   border-top: 1px solid #ebebeb;
 }
