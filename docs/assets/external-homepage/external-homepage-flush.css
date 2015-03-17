@@ -1,0 +1,141 @@
+.navbar-fixed-top .navbar-nav {
+  margin-top: 25px;
+}
+.navbar-fixed-top .navbar-nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar-fixed-top .navbar-nav a:hover,
+.navbar-fixed-top .navbar-nav a:focus {
+  color: #ededed;
+  text-decoration: underline;
+}
+.jumbotron {
+  margin: 0;
+  color: white;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
+  display: box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  min-height: 600px;
+  height: 100vh;
+  max-height: 900px;
+}
+.jumbotron a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.jumbotron a:hover,
+.jumbotron a:focus {
+  color: #ededed;
+  text-decoration: underline;
+}
+.jumbotron > .container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
+  display: box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.jumbotron > .container > .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
+  display: box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -o-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  -o-box-align: center;
+  box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+}
+.jumbotron > .container > .row > * {
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -o-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.jumbotron h2 {
+  font-size: 40px;
+}
+.jumbotron p {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 200;
+}
+.jumbotron.jumbotron-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+.jumbotron.jumbotron-image::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 40, 40, 0.5);
+}
+.jumbotron.jumbotron-image .container {
+  margin: 100px auto;
+}
+.carousel-nav {
+  position: fixed;
+  width: 250px;
+  height: 100px;
+  right: 0px;
+  top: 50%;
+  margin-top: -50px;
+  z-index: 10;
+  text-align: right;
+  color: white;
+}
+.carousel-nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.carousel-nav a:hover,
+.carousel-nav a:focus {
+  color: #ededed;
+  text-decoration: underline;
+}
+.carousel-nav ul {
+  padding: 0;
+  padding-right: 20px;
+  list-style: none;
+  margin: 0;
+}
