@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  {% include header.html %}
+</head>
+<body>
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+  <header class="id7-page-header">
+    {% include utility-masthead.html %}
+
+    <div  class="id7-header-image-container">
+      <!-- Docs master nav -->
+      <div class="id7-navigation">
+        <nav class="navbar navbar-primary" role="navigation">
+          <ul class="nav navbar-nav">
+            <li><a href="http://warwick.ac.uk/study">Study</a></li>
+            <li><a href="http://warwick.ac.uk/research">Research</a></li>
+            <li><a href="http://warwick.ac.uk/business">Business</a></li>
+            <li><a href="http://warwick.ac.uk/alumni">Alumni</a></li>
+            <li><a href="http://warwick.ac.uk/news">News</a></li>
+            <li><a href="http://warwick.ac.uk/about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page content of course! -->
+  <main id="main" class="id7-main-content-area">
+    <div class="id7-main-content">
+      {{ content }}
+    </div>
+  </main>
+
+  {% include tail.html %}
+</body>
+</html>

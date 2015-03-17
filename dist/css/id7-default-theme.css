@@ -153,6 +153,7 @@ fieldset[disabled] body .id7-navigation .navbar-primary .btn-link:focus {
   .id7-homepage-layout body .id7-navigation .navbar-primary {
     background-color: rgba(123, 66, 142, .8);
     -webkit-transition: background-color .15s linear;
+         -o-transition: background-color .15s linear;
             transition: background-color .15s linear;
   }
 }
@@ -259,6 +260,7 @@ fieldset[disabled] body .navbar-breadcrumbs .btn-link:focus {
 }
 .id7-homepage-layout body .navbar-breadcrumbs {
   -webkit-transition: background-color .15s linear, height .35s ease, visibility .35s ease;
+       -o-transition: background-color .15s linear, height .35s ease, visibility .35s ease;
           transition: background-color .15s linear, height .35s ease, visibility .35s ease;
 }
 .id7-homepage-layout body .id7-navigation:hover .navbar-breadcrumbs {
@@ -375,6 +377,7 @@ body .navbar-tertiary {
 body .opaque-navigation .navbar-primary {
   background-color: #7b428e;
   -webkit-transition: none;
+       -o-transition: none;
           transition: none;
 }
 body.bordered .id7-left-border,
@@ -413,6 +416,7 @@ body .id7-masthead .id7-search .id7-search-box {
 body .id7-masthead .id7-search .fa {
   color: rgba(123, 66, 142, .5);
   -webkit-transition: color .15s linear;
+       -o-transition: color .15s linear;
           transition: color .15s linear;
 }
 body .id7-masthead .id7-search .twitter-typeahead:hover + .fa {

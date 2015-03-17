@@ -1,0 +1,99 @@
+@import '../../../less/bootstrap/variables.less';
+@import '../../../less/bootstrap/mixins.less';
+@import '../../../less/variables.less';
+@import '../../../less/mixins.less';
+
+body {
+  //.apply-brand(@id7-brand-purple);
+
+  .header-colour(@id7-brand-purple);
+  .link-colour(@id7-brand-purple);
+
+  @secondary-colour: screen(@id7-brand-purple, lighten(black, 60%));
+
+  .id7-navigation .navbar-primary {
+    .apply-navbar-brand(@id7-brand-purple, @secondary-colour);
+  }
+
+  .id7-navigation {
+    background: @id7-brand-purple;
+  }
+
+  .apply-form-control-brand(@id7-brand-purple);
+
+  .id7-utility-bar {
+    background: #87466b url('/assets/external-homepage/utility-bar.jpg') center top no-repeat;
+  }
+}
+
+// Undo fixed width container on affixed utility bar
+.id7-utility-bar.affix, .id7-navigation.affix {
+  width: 100% !important;
+}
+
+main > .id7-main-content {
+  width: 100% !important;
+  padding: 0;
+}
+
+// Containers
+.id7-utility-bar > nav, .id7-masthead, .id7-navigation > .navbar {
+  .container-fixed(0);
+
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+.id7-masthead {
+  background-color: white;
+  background-image: url('/assets/external-homepage/logo.png');
+  background-repeat: no-repeat;
+  background-size: 180px 100px;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .id7-masthead {
+    background-image: url('/assets/external-homepage/logo@2x.png');
+  }
+}
+
+// Jumbotron content blocks
+.jumbotron {
+  margin: 0;
+
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  min-height: 600px;
+  height: 90vh;
+  max-height: 900px;
+
+  background-image: url('http://lorempixel.com/1920/1200/?1');
+
+  &:nth-child(2) {
+    background-image: url('http://lorempixel.com/1920/1200/?2');
+  }
+
+  &:nth-child(3) {
+    background-image: url('http://lorempixel.com/1920/1200/?3');
+  }
+
+  &:nth-child(4) {
+    background-image: url('http://lorempixel.com/1920/1200/?4');
+  }
+}

@@ -15,13 +15,19 @@
 
 <link href="{{ site.prefix }}dist/css/id7.css" rel="stylesheet" type="text/css">
 
-{% unless page.slug contains 'subsite' %}
-<link href="{{ site.prefix }}assets/site/docs-site.css" rel="stylesheet" type="text/css">
+{% unless page.slug contains 'examples/hp' %}
+  {% unless page.slug contains 'subsite' %}
+  <link href="{{ site.prefix }}assets/site/docs-site.css" rel="stylesheet" type="text/css">
+  {% endunless %}
+
+  {% if page.slug contains 'subsite' %}
+  <link href="{{ site.prefix }}assets/site/site.css" rel="stylesheet" type="text/css">
+  <link href="{{ site.prefix }}assets/css/subsite.css" rel="stylesheet" type="text/css">
+  {% endif %}
 {% endunless %}
 
-{% if page.slug contains 'subsite' %}
-<link href="{{ site.prefix }}assets/site/site.css" rel="stylesheet" type="text/css">
-<link href="{{ site.prefix }}assets/css/subsite.css" rel="stylesheet" type="text/css">
+{% if page.slug contains 'examples/hp' %}
+<link href="{{ site.prefix }}assets/external-homepage/external-homepage.css" rel="stylesheet" type="text/css">
 {% endif %}
 
 <link href="{{ site.prefix }}assets/css/config-options.css" rel="stylesheet" type="text/css">
