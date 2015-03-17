@@ -11,23 +11,37 @@
 // Jumbotron content blocks
 .jumbotron {
   margin: 0;
+  padding: 0;
+
   color: white;
   .link-colour(white);
 
   .flexbox();
+  .flex-direction(column);
 
-  > .container {
+  .container-fluid {
+    width: 100%;
+  }
+
+  .container, .container-fluid {
     .flexbox();
+    .flex-direction(column);
+    .flex(2013, 1, 1, auto);
 
     > .row {
       .flexbox();
       .flex(2013, 1, 1, auto);
-      .align-items(center);
 
       > * {
+        .flexbox();
+        .flex-direction(column);
         .flex(2013, 1, 1, auto);
       }
     }
+  }
+
+  .container > .row { // Not on fluid, because that would make them not take up the space right
+    .align-items(center);
   }
 
   h2 {
