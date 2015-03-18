@@ -1,2 +1,5 @@
 <script src="{{ site.prefix }}dist/js/id7-bundle.js"></script>
+
+{% unless page.slug contains 'examples/hp' %}
 <script src="{{ site.prefix }}assets/js/docs.js"></script>
+{% endunless %}

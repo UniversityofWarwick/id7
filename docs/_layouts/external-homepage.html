@@ -6,7 +6,7 @@
 <head>
   {% include header.html %}
 </head>
-<body>
+<body data-spy="scroll" data-target=".carousel-nav" data-offset="0">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
 
   <header class="id7-page-header">
@@ -32,7 +32,7 @@
                                   <img src="{{ site.prefix }}dist/images/shim.gif" alt="Warwick">
                               </a>
                           </div>
-                          <nav class="id7-site-links">
+                          <nav class="id7-homepage-links">
                               <ul>
                                   <li><a href="http://warwick.ac.uk/study">Study</a></li>
                                   <li><a href="http://warwick.ac.uk/research">Research</a></li>
@@ -40,6 +40,7 @@
                                   <li><a href="http://warwick.ac.uk/alumni">Alumni</a></li>
                                   <li><a href="http://warwick.ac.uk/news">News</a></li>
                                   <li><a href="http://warwick.ac.uk/about">About</a></li>
+                                  <li><a href="#">More links <i class="fa fa-bars"></i></a></li>
                               </ul>
                           </nav>
                       </div>
