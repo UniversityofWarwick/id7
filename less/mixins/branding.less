@@ -288,7 +288,17 @@
   }
 
   .navbar-tertiary {
-    background-color: white;
+    @tertiary-accent-colour: multiply(@id7-navigation-tertiary-background-colour, darken(white, 10%));
+
+    .apply-navbar-brand(
+    @id7-navigation-tertiary-background-colour,
+    contrast(@id7-navigation-tertiary-background-colour),
+    contrast(@id7-navigation-tertiary-background-colour),
+    contrast(@id7-navigation-tertiary-background-colour),
+    @tertiary-accent-colour,
+    white,
+    contrast(@id7-navigation-tertiary-background-colour),
+    @tertiary-accent-colour);
   }
 
   .opaque-navigation .navbar-primary {

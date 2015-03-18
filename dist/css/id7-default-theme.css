@@ -153,7 +153,6 @@ fieldset[disabled] body .id7-navigation .navbar-primary .btn-link:focus {
   .id7-homepage-layout body .id7-navigation .navbar-primary {
     background-color: rgba(123, 66, 142, .8);
     -webkit-transition: background-color .15s linear;
-         -o-transition: background-color .15s linear;
             transition: background-color .15s linear;
   }
 }
@@ -260,7 +259,6 @@ fieldset[disabled] body .navbar-breadcrumbs .btn-link:focus {
 }
 .id7-homepage-layout body .navbar-breadcrumbs {
   -webkit-transition: background-color .15s linear, height .35s ease, visibility .35s ease;
-       -o-transition: background-color .15s linear, height .35s ease, visibility .35s ease;
           transition: background-color .15s linear, height .35s ease, visibility .35s ease;
 }
 .id7-homepage-layout body .id7-navigation:hover .navbar-breadcrumbs {
@@ -372,12 +370,100 @@ body .navbar-secondary .navbar-nav > li.first::after {
   border-color: transparent transparent transparent #7b428e;
 }
 body .navbar-tertiary {
-  background-color: white;
+  background-color: #f8f8f8;
+}
+body .navbar-tertiary .navbar-text {
+  color: #000;
+}
+body .navbar-tertiary .navbar-nav > li {
+  color: #000;
+}
+body .navbar-tertiary .navbar-nav > li:hover,
+body .navbar-tertiary .navbar-nav > li:focus {
+  color: #000;
+  background-color: #dfdfdf;
+}
+body .navbar-tertiary .navbar-nav > li > a,
+body .navbar-tertiary .navbar-nav > li > a:hover,
+body .navbar-tertiary .navbar-nav > li > a:focus {
+  color: inherit;
+  background: none;
+}
+body .navbar-tertiary .navbar-nav > li.active.hasChildren::before {
+  border-bottom-color: #fff;
+}
+body .navbar-tertiary .navbar-nav > li.active::before {
+  border-bottom-color: #fff;
+}
+body .navbar-tertiary .navbar-nav > .disabled,
+body .navbar-tertiary .navbar-nav > .disabled:hover,
+body .navbar-tertiary .navbar-nav > .disabled:focus {
+  color: #000;
+  background-color: #dfdfdf;
+}
+body .navbar-tertiary .navbar-toggle {
+  color: #000;
+  border: none;
+}
+body .navbar-tertiary .navbar-toggle:hover,
+body .navbar-tertiary .navbar-toggle:focus {
+  color: #000;
+  background: none;
+}
+body .navbar-tertiary .navbar-nav > .open > a,
+body .navbar-tertiary .navbar-nav > .open > a:hover,
+body .navbar-tertiary .navbar-nav > .open > a:focus {
+  color: #000;
+  background-color: #dfdfdf;
+}
+body .navbar-tertiary .navbar-nav .dropdown-menu {
+  background-color: #f8f8f8;
+}
+body .navbar-tertiary .navbar-nav .dropdown-menu > .dropdown-header {
+  border-color: #dfdfdf;
+}
+body .navbar-tertiary .navbar-nav .dropdown-menu .divider {
+  background-color: #dfdfdf;
+}
+body .navbar-tertiary .navbar-nav .dropdown-menu > li > a {
+  color: #000;
+}
+body .navbar-tertiary .navbar-nav .dropdown-menu > li > a:hover,
+body .navbar-tertiary .navbar-nav .dropdown-menu > li > a:focus {
+  color: #000;
+  background-color: #dfdfdf;
+}
+body .navbar-tertiary .navbar-nav .dropdown-menu > .active > a::before {
+  border-bottom-color: #fff !important;
+}
+body .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a,
+body .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a:hover,
+body .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a:focus {
+  color: #000;
+  background-color: #dfdfdf;
+}
+body .navbar-tertiary .navbar-link {
+  color: #000;
+}
+body .navbar-tertiary .navbar-link:hover {
+  color: #000;
+}
+body .navbar-tertiary .btn-link {
+  color: #000;
+}
+body .navbar-tertiary .btn-link:hover,
+body .navbar-tertiary .btn-link:focus {
+  color: #000;
+}
+body .navbar-tertiary .btn-link[disabled]:hover,
+fieldset[disabled] body .navbar-tertiary .btn-link:hover,
+body .navbar-tertiary .btn-link[disabled]:focus,
+fieldset[disabled] body .navbar-tertiary .btn-link:focus {
+  color: #000;
 }
 body .opaque-navigation .navbar-primary {
   background-color: #7b428e;
   -webkit-transition: none;
-       -o-transition: none;
           transition: none;
 }
 body.bordered .id7-left-border,
@@ -416,7 +502,6 @@ body .id7-masthead .id7-search .id7-search-box {
 body .id7-masthead .id7-search .fa {
   color: rgba(123, 66, 142, .5);
   -webkit-transition: color .15s linear;
-       -o-transition: color .15s linear;
           transition: color .15s linear;
 }
 body .id7-masthead .id7-search .twitter-typeahead:hover + .fa {

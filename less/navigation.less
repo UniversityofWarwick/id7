@@ -9,12 +9,8 @@
     min-height: 0;
     border-width: 0px;
 
-    .navbar-nav {
-      padding-right: 10px;
-
-      li.first {
-        padding-left: 20px;
-      }
+    .dropdown-toggle {
+      font-size: 1.8rem;
     }
   }
 
@@ -37,31 +33,6 @@
     }
   }
 
-  .navbar-breadcrumb-collapse {
-    overflow-x: visible;
-    padding-right: @navbar-padding-horizontal;
-    padding-left:  @navbar-padding-horizontal;
-    min-height: 0;
-    width: auto;
-
-    &:extend(.clearfix all);
-    -webkit-overflow-scrolling: touch;
-
-    // Uncollapse the nav
-    .navbar-nav {
-      float: left;
-      margin: 0;
-
-      > li {
-        float: left;
-      }
-    }
-  }
-
-  .navbar-breadcrumb-collapse {
-    border-width: 0px;
-  }
-
   .dropdown-menu {
     border: 0;
   }
@@ -72,47 +43,57 @@
     }
   }
 
-  // Fiddle with the padding to expand the <a> all the way out
-  .navbar-nav > li {
-    padding: @nav-link-padding;
-    padding-top: @navbar-padding-vertical;
-    padding-bottom: @navbar-padding-vertical;
+  .navbar-nav {
+    margin: 0;
+    padding-right: 10px;
+    float: left;
 
-    cursor: pointer;
+    &.navbar-right {
+      float: right !important;
 
-    > a {
-      padding: 0;
-    }
-  }
+      .dropdown-menu {
+        .dropdown-menu-right();
 
-  .navbar {
-    .navbar-nav ul.dropdown-menu > li.active {
-      // highlighting in 'more' dropdowns
-      > a {
-        font-weight: bold;
-      }
-
-      // active section triangle indicator
-      &::after {
-          content: ' ';
-          position: absolute;
-          z-index: 2;
-          margin-top: (-@font-size-base + 1 - @nav-triangle-width/2);
-
-          .triangle(right, @nav-triangle-width, @nav-triangle-height, white);
+        .dropdown-menu {
+          display: none;
+        }
       }
     }
 
-    .navbar-nav > li {
+    > li {
+      // Fiddle with the padding to expand the <a> all the way out
+      padding: @nav-link-padding;
+      padding-top: @navbar-padding-vertical;
+      padding-bottom: @navbar-padding-vertical;
+
       position: relative;
       margin: 0 2px;
+      float: left;
+      cursor: pointer;
+      .transition(~"background-color .15s linear, color .15s linear");
+
+      > a {
+        padding: 0;
+      }
 
       &.first {
+        padding-left: 20px;
         margin-left: 0;
+      }
+
+      &.second {
+        @media (min-width: @screen-sm-min) {
+          padding-left: 20px;
+          margin-left: 0;
+        }
       }
 
       // Arrow background for first breadcrumb in .navbar-secondary
       &.nav-breadcrumb.first {
+        @media (min-width: @screen-sm-min) {
+          display: none;
+        }
+
         margin-right: 17px;
 
         &::after {
@@ -129,7 +110,7 @@
       }
 
       // For breadcrumbs in .navbar-secondary
-      &.nav-breadcrumb:not(.first):not(.nav-last-breadcrumb):not(.dropdown) {
+      &.nav-breadcrumb:not(.first):not(.last):not(.dropdown) {
         margin-right: 0.5em;
 
         &::after {
@@ -145,7 +126,7 @@
 
       // bar between breadcrumbs and siblings (if present)
       // bar between siblings
-      &.nav-last-breadcrumb + li::before,
+      &.last + li::before,
       &:not(.nav-breadcrumb):not(:last-child)::after {
         content: '|';
         font-size: 15px;
@@ -157,7 +138,7 @@
       }
 
       // bar between breadcrumbs and siblings (if present)
-      &.nav-last-breadcrumb + li::before {
+      &.last + li::before {
         left: 0%;
         margin-left: -3px;
       }
@@ -190,6 +171,23 @@
         }
       }
     }
+
+    ul.dropdown-menu > li.active {
+      // highlighting in 'more' dropdowns
+      > a {
+        font-weight: bold;
+      }
+
+      // active section triangle indicator
+      &::after {
+        content: ' ';
+        position: absolute;
+        z-index: 2;
+        margin-top: (-@font-size-base + 1 - @nav-triangle-width/2);
+
+        .triangle(right, @nav-triangle-width, @nav-triangle-height, white);
+      }
+    }
   }
 
   .navbar-secondary, .navbar-tertiary {
@@ -198,37 +196,11 @@
     }
   }
 
-  .navbar-nav > li,
   .navbar-secondary > li.first::after {
     .transition(~"background-color .15s linear, color .15s linear")
   }
 
-  // Don't collapse nav
-  .navbar-header {
-    float: left !important;
-  }
-
-  .navbar-nav {
-    // Uncollapse the nav
-    float: left;
-    margin: 0;
-
-    > li {
-      float: left;
-    }
-
-    &.navbar-right {
-      float: right !important;
-
-      .dropdown-menu {
-        .dropdown-menu-right();
-
-        .dropdown-menu {
-          display: none;
-        }
-      }
-    }
-  }
+  .id7-navigation-marker { display: none; }
 
   &.affix + .id7-navigation-marker {
     display: block;
@@ -238,5 +210,3 @@
     .opacity(0.4);
   }
 }
-
-.id7-navigation-marker { display: none; }
