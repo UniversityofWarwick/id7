@@ -334,7 +334,7 @@ body .form-control:focus {
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(123, 66, 142, 0.6);
 }
 body .id7-utility-bar {
-  background: #87466b url("/assets/external-homepage/utility-bar.jpg") center top no-repeat;
+  background: #c6abce;
 }
 .id7-page-header {
   position: fixed;
@@ -388,9 +388,16 @@ main > .id7-main-content {
 }
 .id7-masthead .id7-logo-row nav {
   margin-left: 155px;
+  font-size: 14px;
+  font-weight: bold;
   opacity: 1;
   filter: alpha(opacity=100);
-  margin-top: 31px;
+  margin-top: 29px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .id7-masthead .id7-logo-row nav {
+    display: block !important;
+  }
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-search .id7-search-box-container {
@@ -405,6 +412,7 @@ main > .id7-main-content {
 .jumbotron {
   margin: 0;
   padding: 0;
+  background: black;
   color: white;
   display: -webkit-box;
   display: -moz-box;
@@ -443,216 +451,279 @@ main > .id7-main-content {
 .jumbotron .container-fluid {
   width: 100%;
 }
-.jumbotron .container,
-.jumbotron .container-fluid {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: -o-box;
-  display: box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -ms-box-orient: vertical;
-  -o-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  -o-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1 1 auto;
-  -moz-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  -o-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-.jumbotron .container > .row,
-.jumbotron .container-fluid > .row,
-.jumbotron .container > .layout,
-.jumbotron .container-fluid > .layout {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: -o-box;
-  display: box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -moz-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  -o-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-.jumbotron .container > .row > *,
-.jumbotron .container-fluid > .row > *,
-.jumbotron .container > .layout > *,
-.jumbotron .container-fluid > .layout > * {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: -o-box;
-  display: box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -ms-box-orient: vertical;
-  -o-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  -o-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1 1 auto;
-  -moz-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  -o-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-.jumbotron .container > .row,
-.jumbotron .container-fluid > .row {
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-box-align: center;
-  -o-box-align: center;
-  box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-}
-.jumbotron .container > .layout > .column-1,
-.jumbotron .container-fluid > .layout > .column-1,
-.jumbotron .container > .layout > .column-2,
-.jumbotron .container-fluid > .layout > .column-2 {
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  -o-box-orient: horizontal;
-  box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  -o-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-box-align: center;
-  -o-box-align: center;
-  box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  padding: 0;
-}
-.jumbotron .container > .layout > .column-1 > .column-1-content,
-.jumbotron .container-fluid > .layout > .column-1 > .column-1-content,
-.jumbotron .container > .layout > .column-2 > .column-1-content,
-.jumbotron .container-fluid > .layout > .column-2 > .column-1-content,
-.jumbotron .container > .layout > .column-1 > .column-2-content,
-.jumbotron .container-fluid > .layout > .column-1 > .column-2-content,
-.jumbotron .container > .layout > .column-2 > .column-2-content,
-.jumbotron .container-fluid > .layout > .column-2 > .column-2-content {
-  position: relative;
-  z-index: 2;
-  padding: 0 20px;
-  margin-top: 104px;
-}
 @media (min-width: 768px) {
-  .jumbotron .container > .layout > .column-1 > .column-1-content,
-  .jumbotron .container-fluid > .layout > .column-1 > .column-1-content,
-  .jumbotron .container > .layout > .column-2 > .column-1-content,
-  .jumbotron .container-fluid > .layout > .column-2 > .column-1-content,
-  .jumbotron .container > .layout > .column-1 > .column-2-content,
-  .jumbotron .container-fluid > .layout > .column-1 > .column-2-content,
-  .jumbotron .container > .layout > .column-2 > .column-2-content,
-  .jumbotron .container-fluid > .layout > .column-2 > .column-2-content {
+  .jumbotron .container,
+  .jumbotron .container-fluid {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -o-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+  .jumbotron .container .row,
+  .jumbotron .container-fluid .row,
+  .jumbotron .container .layout,
+  .jumbotron .container-fluid .layout {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex: 1 0 0;
+    -moz-flex: 1 0 0;
+    -ms-flex: 1 0 0;
+    -o-flex: 1 0 0;
+    flex: 1 0 0;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-box-align: center;
+    -o-box-align: center;
+    box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+  }
+  .jumbotron .container .row > *,
+  .jumbotron .container-fluid .row > *,
+  .jumbotron .container .layout > *,
+  .jumbotron .container-fluid .layout > * {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -o-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+  .jumbotron.jumbotron-panel .container .container-fluid,
+  .jumbotron.jumbotron-panel .container-fluid .container-fluid {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+  }
+  .jumbotron.jumbotron-panel .container .row,
+  .jumbotron.jumbotron-panel .container-fluid .row,
+  .jumbotron.jumbotron-panel .container .layout,
+  .jumbotron.jumbotron-panel .container-fluid .layout {
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -ms-box-align: stretch;
+    -o-box-align: stretch;
+    box-align: stretch;
+    -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+  }
+  .jumbotron.jumbotron-panel .container .row > *,
+  .jumbotron.jumbotron-panel .container-fluid .row > *,
+  .jumbotron.jumbotron-panel .container .layout > *,
+  .jumbotron.jumbotron-panel .container-fluid .layout > * {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-box-align: center;
+    -o-box-align: center;
+    box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+  }
+  .jumbotron.jumbotron-panel .container .row > *.flex-vertical,
+  .jumbotron.jumbotron-panel .container-fluid .row > *.flex-vertical,
+  .jumbotron.jumbotron-panel .container .layout > *.flex-vertical,
+  .jumbotron.jumbotron-panel .container-fluid .layout > *.flex-vertical {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -ms-box-align: stretch;
+    -o-box-align: stretch;
+    box-align: stretch;
+    -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+  }
+  .jumbotron.jumbotron-panel .container > .layout > .column-1,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 {
+    padding: 0;
+  }
+  .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    margin-top: 104px;
+  }
+  .jumbotron.jumbotron-panel .container > .layout > .column-1,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-box-pack: end;
+    -o-box-pack: end;
+    box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+  .jumbotron.jumbotron-panel .container > .layout > .column-2,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-box-pack: start;
+    -o-box-pack: start;
+    box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
     width: 380px;
   }
 }
-@media (min-width: 992px) {
-  .jumbotron .container > .layout > .column-1 > .column-1-content,
-  .jumbotron .container-fluid > .layout > .column-1 > .column-1-content,
-  .jumbotron .container > .layout > .column-2 > .column-1-content,
-  .jumbotron .container-fluid > .layout > .column-2 > .column-1-content,
-  .jumbotron .container > .layout > .column-1 > .column-2-content,
-  .jumbotron .container-fluid > .layout > .column-1 > .column-2-content,
-  .jumbotron .container > .layout > .column-2 > .column-2-content,
-  .jumbotron .container-fluid > .layout > .column-2 > .column-2-content {
+@media (min-width: 768px) and (min-width: 992px) {
+  .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
     width: 490px;
   }
 }
-@media (min-width: 1200px) {
-  .jumbotron .container > .layout > .column-1 > .column-1-content,
-  .jumbotron .container-fluid > .layout > .column-1 > .column-1-content,
-  .jumbotron .container > .layout > .column-2 > .column-1-content,
-  .jumbotron .container-fluid > .layout > .column-2 > .column-1-content,
-  .jumbotron .container > .layout > .column-1 > .column-2-content,
-  .jumbotron .container-fluid > .layout > .column-1 > .column-2-content,
-  .jumbotron .container > .layout > .column-2 > .column-2-content,
-  .jumbotron .container-fluid > .layout > .column-2 > .column-2-content {
+@media (min-width: 768px) and (min-width: 1200px) {
+  .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
     width: 590px;
   }
 }
-.jumbotron .container > .layout > .column-1 > .column-1-content,
-.jumbotron .container-fluid > .layout > .column-1 > .column-1-content,
-.jumbotron .container > .layout > .column-2 > .column-1-content,
-.jumbotron .container-fluid > .layout > .column-2 > .column-1-content {
-  padding-left: 200px;
+@media (min-width: 768px) and (min-width: 992px) {
+  .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content {
+    padding-left: 200px;
+  }
 }
-.jumbotron .container > .layout > .column-1 > .column-2-content,
-.jumbotron .container-fluid > .layout > .column-1 > .column-2-content,
-.jumbotron .container > .layout > .column-2 > .column-2-content,
-.jumbotron .container-fluid > .layout > .column-2 > .column-2-content {
-  padding-right: 200px;
-}
-.jumbotron .container > .layout > .column-1,
-.jumbotron .container-fluid > .layout > .column-1 {
-  -webkit-box-pack: end;
-  -moz-box-pack: end;
-  -ms-box-pack: end;
-  -o-box-pack: end;
-  box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  -ms-justify-content: flex-end;
-  -o-justify-content: flex-end;
-  justify-content: flex-end;
-}
-.jumbotron .container > .layout > .column-2,
-.jumbotron .container-fluid > .layout > .column-2 {
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  -ms-box-pack: start;
-  -o-box-pack: start;
-  box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  -o-justify-content: flex-start;
-  justify-content: flex-start;
+@media (min-width: 768px) and (min-width: 992px) {
+  .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
+  .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
+  .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
+    padding-right: 200px;
+  }
 }
 .jumbotron h2 {
   font-size: 40px;
@@ -679,6 +750,10 @@ main > .id7-main-content {
   width: 100%;
   height: 100%;
   background: rgba(40, 40, 40, 0.5);
+}
+.jumbotron.jumbotron-image > *,
+.jumbotron .jumbotron-image > * {
+  position: relative;
 }
 .jumbotron.jumbotron-image .container,
 .jumbotron .jumbotron-image .container {
@@ -737,4 +812,7 @@ main > .id7-main-content {
 }
 .carousel-nav ul.nav > li.active i.fa:before {
   content: "\f192";
+}
+.carousel-nav ul.nav > li.active .title {
+  font-weight: bold;
 }
