@@ -6,9 +6,6 @@
 body {
   //.apply-brand(@id7-brand-purple);
 
-  .header-colour(@id7-brand-purple);
-  .link-colour(@id7-brand-purple);
-
   @secondary-colour: screen(@id7-brand-purple, lighten(black, 60%));
 
   .id7-navigation .navbar-primary {
@@ -26,9 +23,11 @@ body {
   }
 }
 
-// Undo fixed width container on affixed utility bar
-.id7-utility-bar.affix, .id7-navigation.affix {
-  width: 100% !important;
+.id7-page-header {
+  position: fixed;
+  width: 100%;
+  background: white;
+  z-index: 1;
 }
 
 main > .id7-main-content {
@@ -55,7 +54,23 @@ main > .id7-main-content {
   background-color: white;
   background-image: url('/assets/external-homepage/logo.png');
   background-repeat: no-repeat;
-  background-size: 180px 100px;
+  background-size: 135px 75px;
+
+  .id7-logo-row nav {
+    margin-left: (135px + (@grid-gutter-width / 2));
+    .opacity(1);
+
+    @line-height-small-computed: floor((@font-size-small * @line-height-small)); // ~17px
+    margin-top: (40px - (@line-height-small-computed / 2));
+  }
+
+  .id7-search {
+    .id7-search-box-container {
+      @media (min-width: @grid-float-breakpoint) {
+        margin-top: (7px + (@line-height-computed / 2));
+      }
+    }
+  }
 }
 
 @media
@@ -73,27 +88,126 @@ only screen and (                min-resolution: 2dppx) {
 // Jumbotron content blocks
 .jumbotron {
   margin: 0;
+  padding: 0;
 
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  color: white;
+  .link-colour(white);
 
-  min-height: 600px;
+  .flexbox();
+  .flex-direction(column);
+
+  .container-fluid {
+    width: 100%;
+  }
+
+  .container, .container-fluid {
+    .flexbox();
+    .flex-direction(column);
+    .flex(2013, 1, 1, auto);
+
+    > .row, > .layout {
+      .flexbox();
+      .flex(2013, 1, 1, auto);
+
+      > * {
+        .flexbox();
+        .flex-direction(column);
+        .flex(2013, 1, 1, auto);
+      }
+    }
+  }
+
+  .container, .container-fluid {
+    > .row {
+      .align-items(center);
+    }
+
+    > .layout {
+      > .column-1, > .column-2 {
+        .flex-direction(row);
+        .align-items(center);
+        padding: 0;
+
+        > .column-1-content, > .column-2-content {
+          padding: 0 (@grid-gutter-width / 2);
+
+          @media (min-width: @screen-sm-min) {
+            width: (@container-sm / 2);
+          }
+          @media (min-width: @screen-md-min) {
+            width: (@container-md / 2);
+          }
+          @media (min-width: @screen-lg-min) {
+            width: (@container-lg / 2);
+          }
+        }
+      }
+
+      > .column-1 {
+        .justify-content(end);
+      }
+
+      > .column-2 {
+        .justify-content(start);
+      }
+    }
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+    margin-bottom: (@grid-gutter-width / 2);
+    font-size: @font-size-h3;
+    font-weight: 200;
+  }
+
+  &.jumbotron-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(40, 40, 40, 0.5);
+    }
+
+    .container {
+      margin: (104px + (@grid-gutter-width / 2)) auto;
+    }
+  }
+
+  min-height: 400px;
   height: 90vh;
-  max-height: 900px;
+  max-height: 800px;
+}
 
-  background-image: url('http://lorempixel.com/1920/1200/?1');
+.carousel-nav {
+  position: fixed;
+  width: 250px;
+  height: 100px;
+  right: 0px;
+  top: 50%;
+  margin-top: -50px;
+  z-index: 10;
+  text-align: right;
 
-  &:nth-child(2) {
-    background-image: url('http://lorempixel.com/1920/1200/?2');
-  }
+  color: white;
+  .link-colour(white);
 
-  &:nth-child(3) {
-    background-image: url('http://lorempixel.com/1920/1200/?3');
-  }
-
-  &:nth-child(4) {
-    background-image: url('http://lorempixel.com/1920/1200/?4');
+  ul {
+    padding: 0;
+    padding-right: (@grid-gutter-width / 2);
+    list-style: none;
+    margin: 0;
   }
 }

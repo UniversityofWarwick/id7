@@ -10,23 +10,57 @@
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
 
   <header class="id7-page-header">
-    {% include utility-masthead.html %}
+      <div class="id7-utility-masthead">
+          <div class="id7-utility-bar">
+              <nav>
+                  <ul>
+                      <li><a href="#">Text only</a></li>
+                      <li><a href="#">Notify</a></li>
+                      <li>
+                          <a href="http://warwick.ac.uk/myaccount" data-toggle="id7:account-popover" data-logoutlink="http://logout.link.goes.here#">Mat Mannion<b class="caret"></b></a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
 
-    <div  class="id7-header-image-container">
-      <!-- Docs master nav -->
-      <div class="id7-navigation">
-        <nav class="navbar navbar-primary" role="navigation">
-          <ul class="nav navbar-nav">
-            <li><a href="http://warwick.ac.uk/study">Study</a></li>
-            <li><a href="http://warwick.ac.uk/research">Research</a></li>
-            <li><a href="http://warwick.ac.uk/business">Business</a></li>
-            <li><a href="http://warwick.ac.uk/alumni">Alumni</a></li>
-            <li><a href="http://warwick.ac.uk/news">News</a></li>
-            <li><a href="http://warwick.ac.uk/about">About</a></li>
-          </ul>
-        </nav>
+          <div class="id7-masthead">
+              <div class="id7-masthead-contents">
+                  <div class="id7-logo-column">
+                      <div class="id7-logo-row">
+                          <div class="id7-logo">
+                              <a href="http://warwick.ac.uk" title="Warwick homepage">
+                                  <img src="{{ site.prefix }}dist/images/shim.gif" alt="Warwick">
+                              </a>
+                          </div>
+                          <nav class="id7-site-links">
+                              <ul>
+                                  <li><a href="http://warwick.ac.uk/study">Study</a></li>
+                                  <li><a href="http://warwick.ac.uk/research">Research</a></li>
+                                  <li><a href="http://warwick.ac.uk/business">Business</a></li>
+                                  <li><a href="http://warwick.ac.uk/alumni">Alumni</a></li>
+                                  <li><a href="http://warwick.ac.uk/news">News</a></li>
+                                  <li><a href="http://warwick.ac.uk/about">About</a></li>
+                              </ul>
+                          </nav>
+                      </div>
+                  </div>
+                  <div class="id7-search-column">
+                      <div class="id7-search">
+                          <form action="http://search.warwick.ac.uk/website" role="search">
+                              <input type="hidden" name="source" value="http://www2.warwick.ac.uk/">
+                              <div class="form-group">
+                                  <label class="sr-only" for="id7-search-box">Search</label>
+                                  <div class="id7-search-box-container">
+                                      <input type="search" class="form-control input-lg" id="id7-search-box" name="q" placeholder="Type your search here" data-suggest="go">
+                                      <i class="fa fa-search fa-2x"></i>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
   </header>
 
   <!-- Page content of course! -->
