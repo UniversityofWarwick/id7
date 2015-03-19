@@ -6,23 +6,13 @@
 @import '../../../less/mixins.less';
 
 body {
-  //.apply-brand(@id7-brand-purple);
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 
   @secondary-colour: screen(@id7-brand-purple, lighten(black, 60%));
 
-  .id7-navigation .navbar-primary {
-    .apply-navbar-brand(@id7-brand-purple, @secondary-colour);
-  }
-
-  .id7-navigation {
-    background: @id7-brand-purple;
-  }
-
   .apply-form-control-brand(@id7-brand-purple);
-
-  .id7-utility-bar {
-    background: #c6abce;
-  }
 }
 
 .id7-page-header {
