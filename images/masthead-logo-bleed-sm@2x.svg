@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" version="1.1" width="100%" height="100%" viewBox="0, 0, 2340, 600">
+	<!-- Define the bounding box for the logo so we don't fill it -->
+	<defs>
+		<mask id="logo-bounding-box">
+			<rect x="0" y="0" width="100%" height="100%" fill="white" fill-opacity="1" />
+
+			<!-- Intentionally ignore the last pixel of the import to fix semi-transparent line -->
+			<rect x="40" y="0" width="283.5" height="163" fill="black" fill-opacity="1" />
+		</mask>
+	</defs>
+
+	<!-- Fill the image with white, except for where the logo will be -->
+	<rect x="0" y="0" width="100%" height="100%" fill="red" mask="url(#logo-bounding-box)" />
+
+	<!-- Put the logo in -->
+	<image xlink:href="logo.svg" x="40" y="0" width="283.5" height="164" />
+</svg>
