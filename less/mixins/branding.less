@@ -82,14 +82,8 @@
       }
     }
 
-    > li.active {
-      &.hasChildren::before {
-        border-bottom-color: @link-active-marker-colour;
-      }
-
-      &::before {
-        border-bottom-color: @id7-brand-white;
-      }
+    > li.active::before {
+      border-bottom-color: @id7-brand-white;
     }
 
     > .disabled {

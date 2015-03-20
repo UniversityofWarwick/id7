@@ -74,15 +74,23 @@
     .id7-parent-site-link {
       color: @gray-light;
 
-      &::after {
+      &.hidden-xs::after {
         .fa();
         font-size: 12px;
         content: @fa-var-play;
-        margin-left: (@grid-gutter-width / 4);
+        margin-left: (@grid-gutter-width / 5);
 
         position: relative;
         top: -4px;
       }
+
+      &.visible-xs-block {
+        font-size: 1.25rem;
+      }
+    }
+
+    .id7-current-site-link.visible-xs-block {
+      font-size: 2rem;
     }
   }
 

@@ -7665,12 +7665,21 @@ body {
   color: #eee;
   content: '|';
 }
-.id7-utility-bar a {
+.id7-utility-bar a,
+.id7-utility-bar a:link,
+.id7-utility-bar a:visited {
   color: #fff;
   text-decoration: none;
 }
 .id7-utility-bar a:hover,
-.id7-utility-bar a:focus {
+.id7-utility-bar a:link:hover,
+.id7-utility-bar a:visited:hover,
+.id7-utility-bar a:focus,
+.id7-utility-bar a:link:focus,
+.id7-utility-bar a:visited:focus,
+.id7-utility-bar a:active,
+.id7-utility-bar a:link:active,
+.id7-utility-bar a:visited:active {
   color: #ededed;
   text-decoration: underline;
 }
@@ -7725,12 +7734,21 @@ body {
   background: #f7f7f7;
   border-top: 1px solid #ebebeb;
 }
-.id7-utility-bar .popover.account-information .actions a {
+.id7-utility-bar .popover.account-information .actions a,
+.id7-utility-bar .popover.account-information .actions a:link,
+.id7-utility-bar .popover.account-information .actions a:visited {
   color: #333;
   text-decoration: none;
 }
 .id7-utility-bar .popover.account-information .actions a:hover,
-.id7-utility-bar .popover.account-information .actions a:focus {
+.id7-utility-bar .popover.account-information .actions a:link:hover,
+.id7-utility-bar .popover.account-information .actions a:visited:hover,
+.id7-utility-bar .popover.account-information .actions a:focus,
+.id7-utility-bar .popover.account-information .actions a:link:focus,
+.id7-utility-bar .popover.account-information .actions a:visited:focus,
+.id7-utility-bar .popover.account-information .actions a:active,
+.id7-utility-bar .popover.account-information .actions a:link:active,
+.id7-utility-bar .popover.account-information .actions a:visited:active {
   color: #212121;
   text-decoration: underline;
 }
@@ -7849,12 +7867,21 @@ body {
 .id7-masthead .id7-header-text .h6 {
   color: #000;
 }
-.id7-masthead .id7-header-text a {
+.id7-masthead .id7-header-text a,
+.id7-masthead .id7-header-text a:link,
+.id7-masthead .id7-header-text a:visited {
   color: inherit;
   text-decoration: none;
 }
 .id7-masthead .id7-header-text a:hover,
-.id7-masthead .id7-header-text a:focus {
+.id7-masthead .id7-header-text a:link:hover,
+.id7-masthead .id7-header-text a:visited:hover,
+.id7-masthead .id7-header-text a:focus,
+.id7-masthead .id7-header-text a:link:focus,
+.id7-masthead .id7-header-text a:visited:focus,
+.id7-masthead .id7-header-text a:active,
+.id7-masthead .id7-header-text a:link:active,
+.id7-masthead .id7-header-text a:visited:active {
   color: inherit;
   text-decoration: underline;
 }
@@ -7871,11 +7898,11 @@ body {
 .id7-masthead .id7-header-text .id7-parent-site-link {
   color: #777;
 }
-.id7-masthead .id7-header-text .id7-parent-site-link::after {
+.id7-masthead .id7-header-text .id7-parent-site-link.hidden-xs::after {
   position: relative;
   top: -4px;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 8px;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   font-size: 12px;
@@ -7885,11 +7912,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.id7-masthead .id7-header-text .id7-parent-site-link::after.pull-left {
+.id7-masthead .id7-header-text .id7-parent-site-link.hidden-xs::after.pull-left {
   margin-right: .3em;
 }
-.id7-masthead .id7-header-text .id7-parent-site-link::after.pull-right {
+.id7-masthead .id7-header-text .id7-parent-site-link.hidden-xs::after.pull-right {
   margin-left: .3em;
+}
+.id7-masthead .id7-header-text .id7-parent-site-link.visible-xs-block {
+  font-size: 1.25rem;
+}
+.id7-masthead .id7-header-text .id7-current-site-link.visible-xs-block {
+  font-size: 2rem;
 }
 .id7-masthead .id7-logo-row nav {
   margin-top: 57.66666667px;
@@ -7928,12 +7961,21 @@ body {
   color: #777;
   content: '|';
 }
-.id7-masthead .id7-logo-row nav a {
+.id7-masthead .id7-logo-row nav a,
+.id7-masthead .id7-logo-row nav a:link,
+.id7-masthead .id7-logo-row nav a:visited {
   color: #333;
   text-decoration: none;
 }
 .id7-masthead .id7-logo-row nav a:hover,
-.id7-masthead .id7-logo-row nav a:focus {
+.id7-masthead .id7-logo-row nav a:link:hover,
+.id7-masthead .id7-logo-row nav a:visited:hover,
+.id7-masthead .id7-logo-row nav a:focus,
+.id7-masthead .id7-logo-row nav a:link:focus,
+.id7-masthead .id7-logo-row nav a:visited:focus,
+.id7-masthead .id7-logo-row nav a:active,
+.id7-masthead .id7-logo-row nav a:link:active,
+.id7-masthead .id7-logo-row nav a:visited:active {
   color: #212121;
   text-decoration: underline;
 }
@@ -8410,15 +8452,15 @@ body {
   -webkit-transition: background-color .15s linear, color .15s linear;
           transition: background-color .15s linear, color .15s linear;
 }
-.id7-navigation .id7-navigation-marker {
-  display: none;
-}
 .id7-navigation.affix + .id7-navigation-marker {
   display: block;
 }
 .id7-navigation .discreet {
   filter: alpha(opacity=40);
   opacity: .4;
+}
+.id7-navigation-marker {
+  display: none;
 }
 main > header {
   padding-right: 20px;

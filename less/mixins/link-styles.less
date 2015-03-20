@@ -1,10 +1,13 @@
 .link-colour(@base) when not (@base = inherit) {
-  a {
+  a,
+  a:link,
+  a:visited {
     color: @base;
     text-decoration: none;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: darken(@base, 7%);
       text-decoration: @link-hover-decoration;
     }
@@ -12,12 +15,15 @@
 }
 
 .link-colour(@base) when (@base = inherit) {
-  a {
+  a,
+  a:link,
+  a:visited {
     color: inherit;
     text-decoration: none;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: inherit;
       text-decoration: @link-hover-decoration;
     }
