@@ -147,13 +147,15 @@ module.exports = function (grunt) {
       },
       compileDocs: {
         options: {
-          paths: ['docs/assets/css', 'docs/assets/site']
+          paths: ['docs/assets/css', 'docs/assets/site', 'docs/assets/external-homepage']
         },
         files: {
           'docs/assets/css/config-options.css': 'docs/assets/css/config-options.less',
           'docs/assets/css/subsite.css': 'docs/assets/css/subsite.less',
           'docs/assets/site/docs-site.css': 'docs/assets/site/docs-site.less',
-          'docs/assets/site/site.css': 'docs/assets/site/site.less'
+          'docs/assets/site/site.css': 'docs/assets/site/site.less',
+          'docs/assets/external-homepage/external-homepage.css': 'docs/assets/external-homepage/external-homepage.less',
+          'docs/assets/external-homepage/external-homepage-flush.css': 'docs/assets/external-homepage/external-homepage-flush.less'
         }
       }
     },
@@ -228,7 +230,7 @@ module.exports = function (grunt) {
         dest: 'dist/'
       },
       images: {
-        src: 'images/**/*',
+        src: ['images/**/*', '!images/*.sh', '!images/*.svg'],
         dest: 'dist/'
       },
       vendorjs: {

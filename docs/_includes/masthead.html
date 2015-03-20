@@ -36,6 +36,7 @@
             </div>
         </div>
 
+        {% unless page.slug contains 'examples/hp' %}
         <div class="id7-header-text">
             <h1>
                 {% if page.slug contains 'subsite' %}
@@ -46,5 +47,6 @@
                 {% endif %}
             </h1>
         </div>
+        {% endunless %}
     </div>
 </div>

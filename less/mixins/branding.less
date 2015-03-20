@@ -300,6 +300,17 @@
     .id7-left-border, .id7-right-border { border-color: fadeout(@colour, 70%); }
   }
 
+  .apply-footer-brand(@colour);
+
+  .apply-form-control-brand(@colour);
+
+  .apply-carousel-brand(@colour);
+
+  // Box styles
+  .apply-boxstyles-brand(@colour);
+}
+
+.apply-footer-brand(@colour) {
   .id7-site-footer {
     background: @id7-site-footer-colour;
     color: contrast(@id7-site-footer-colour);
@@ -311,7 +322,9 @@
     color: contrast(@colour);
     .link-colour(contrast(@colour));
   }
+}
 
+.apply-form-control-brand(@colour) {
   .id7-masthead .id7-search {
     .id7-search-box {
       border-color: @colour;
@@ -335,7 +348,9 @@
   .form-control {
     .form-control-focus(@colour);
   }
+}
 
+.apply-carousel-brand(@colour) {
   .carousel .carousel-indicators li {
     &::after {
       color: fadeout(@colour, 70%);
@@ -345,8 +360,9 @@
       color: @colour;
     }
   }
+}
 
-  // Box styles
+.apply-boxstyles-brand(@colour) {
   .boxstyle_ {
     &.box1 {
       #boxstyle > .filled(screen(@colour, lighten(black, 80%)));
