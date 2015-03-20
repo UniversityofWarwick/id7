@@ -20,19 +20,19 @@ cat >.tmp.svg <<EOF
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" version="1.1" width="100%" height="100%" viewBox="0, 0, ${WIDTH}, ${HEIGHT}">
 	<defs>
 		<filter id="maskfilter">
-		    <feColorMatrix in="SourceGraphic" 
+		    <feColorMatrix in="SourceGraphic" color-interpolation-filters="sRGB"
 		    	values="0 0 0 0 0 
                         0 0 0 0 0 
                         0 0 0 0 0
-                        0.3086 0.6094 0.0820 0 0"/>
+                        0.212656 0.715158 0.072186 0 0"/>
 		</filter>
 
 		<filter id="invert">
-			<feColorMatrix in="SourceGraphic" type="matrix" 
-				values="-1 0 0 0 1 
-                        0 -1 0 0 1 
+			<feColorMatrix in="SourceGraphic" type="matrix" color-interpolation-filters="sRGB" 
+				values="-1 0 0 0 1
+                        0 -1 0 0 1
                         0 0 -1 0 1
-                        0 0 0 1 0"/>
+                        0 0 0 1.01 0"/>
 		</filter>
 	</defs>
 
@@ -44,5 +44,7 @@ cat >.tmp.svg <<EOF
 EOF
 
 inkscape .tmp.svg --export-png=$OUTPUT
+optipng -o3 $OUTPUT
+
 rm .tmp.png
 rm .tmp.svg
