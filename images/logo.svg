@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" version="1.1" width="100%" height="100%" viewBox="0, 0, 2835, 1640">
-	<!-- 
-		logo
-		position: 418.926,0
-		width: 1982.148
-		height: 977.65
-	-->
-
 	<path d="m 430,0 570,1000 424,-785 424,785 570,-1000" id="window" fill="black" />
 
-<!--
-	m 925.852,765.52 			925.852,765.52    bottom right of W
-	125.598,-428.3 				1051.45,337.32    top right of W
-	-42.1,0 					1009.35,337.32    top right of W, left edge
-	-108.538,379.308			900.812,716.628   lower right V			
-	-101,-343.038 				799.812,373.59    top right of middle
-	-52.007,0 					747.805,373.59    top left of middle
-	-102.715,343.038			645.09, 716.628   lower left V
-	-108.735,-379.308 			536.355,337.32    top left of W, right edge
-	
-	-42.097,0 					494.258,337.32    top left of W < EDGE
-	125.613,428.3 				619.871,765.52    bottom left of W
-	50.156,0 					670.027,765.52    bottom left of W, right edge
-	103.813,-344.83 			773.84, 420.69    middle top V
-	101.851,344.83 				875.691,765.52    bottom right of W, left edge
-	50.161,0 					925.852,765.52    bottom right of W (origin)
--->
 	<path d="
 		m 0,1184.3
 		42.097,0

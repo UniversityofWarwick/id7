@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" version="1.1" width="2835" height="1005" viewBox="0, 0, 2835, 1005">
-	<defs>
-		<mask id="logo">
-      		<rect x="0" y="0" width="100%" height="100%" fill="white" />
-
-			<!-- 
-				logo
-				position: 418.926,0
-				width: 1982.148
-				height: 977.65
-			-->
-
-			<path d="m 430,0 570,1000 424,-785 424,785 570,-1000" id="window" fill="black" />
-		</mask>
-	</defs>
-	
-	<rect x="0" y="0" width="100%" height="100%" fill="white" mask="url(#logo)" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" version="1.1" width="100%" height="100%" viewBox="0, 0, 2835, 1005">
+	<path d="m 430,0 570,1000 424,-785 424,785 570,-1000" id="window" fill="black" />
 </svg>

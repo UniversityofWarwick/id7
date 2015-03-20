@@ -3,6 +3,16 @@
 
     $(function() {
       $('body').scrollspy({ target: '.carousel-nav' });
+      $('.carousel-nav').on('activate.bs.scrollspy', function () {
+        $(this).find('li.active a[href^="#"]').each(function () {
+           var colour = $(this.hash).data('masthead-colour');
+           if (colour) {
+               $('.id7-page-header').css('background-color', colour);
+           } else {
+               $('.id7-page-header').css('background-color', null);
+           }
+        });
+      });
 
       // Smooth scroll
       $('.carousel-nav a[href^="#"]').on('click', function(e) {
