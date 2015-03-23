@@ -89,7 +89,8 @@
                 //menuSelector: 'a[href^="#"]',
                 panelSelector: '.jumbotron-carousel > article',
                 keyboardNavigation: {
-                    enabled: true
+                    enabled: true,
+                    wrapAround: false
                 }
             });
         $('.carousel-nav').on('activate.bs.scrollspy', function () {
