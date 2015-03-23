@@ -1,12 +1,21 @@
 .navbar-fixed-top .navbar-nav {
   margin-top: 25px;
 }
-.navbar-fixed-top .navbar-nav a {
+.navbar-fixed-top .navbar-nav a,
+.navbar-fixed-top .navbar-nav a:link,
+.navbar-fixed-top .navbar-nav a:visited {
   color: #ffffff;
   text-decoration: none;
 }
 .navbar-fixed-top .navbar-nav a:hover,
-.navbar-fixed-top .navbar-nav a:focus {
+.navbar-fixed-top .navbar-nav a:link:hover,
+.navbar-fixed-top .navbar-nav a:visited:hover,
+.navbar-fixed-top .navbar-nav a:focus,
+.navbar-fixed-top .navbar-nav a:link:focus,
+.navbar-fixed-top .navbar-nav a:visited:focus,
+.navbar-fixed-top .navbar-nav a:active,
+.navbar-fixed-top .navbar-nav a:link:active,
+.navbar-fixed-top .navbar-nav a:visited:active {
   color: #ededed;
   text-decoration: underline;
 }
@@ -39,12 +48,21 @@
   height: 100vh;
   max-height: 900px;
 }
-.jumbotron a {
+.jumbotron a,
+.jumbotron a:link,
+.jumbotron a:visited {
   color: #ffffff;
   text-decoration: none;
 }
 .jumbotron a:hover,
-.jumbotron a:focus {
+.jumbotron a:link:hover,
+.jumbotron a:visited:hover,
+.jumbotron a:focus,
+.jumbotron a:link:focus,
+.jumbotron a:visited:focus,
+.jumbotron a:active,
+.jumbotron a:link:active,
+.jumbotron a:visited:active {
   color: #ededed;
   text-decoration: underline;
 }
@@ -179,12 +197,21 @@
   text-align: right;
   color: white;
 }
-.carousel-nav a {
+.carousel-nav a,
+.carousel-nav a:link,
+.carousel-nav a:visited {
   color: #ffffff;
   text-decoration: none;
 }
 .carousel-nav a:hover,
-.carousel-nav a:focus {
+.carousel-nav a:link:hover,
+.carousel-nav a:visited:hover,
+.carousel-nav a:focus,
+.carousel-nav a:link:focus,
+.carousel-nav a:visited:focus,
+.carousel-nav a:active,
+.carousel-nav a:link:active,
+.carousel-nav a:visited:active {
   color: #ededed;
   text-decoration: underline;
 }

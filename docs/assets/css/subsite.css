@@ -50,12 +50,21 @@ main .slideshow .carousel-controls {
   background-color: #555555;
   background-color: rgba(0, 0, 0, 0.8);
 }
-main .slideshow .carousel-controls a {
+main .slideshow .carousel-controls a,
+main .slideshow .carousel-controls a:link,
+main .slideshow .carousel-controls a:visited {
   color: #ffffff;
   text-decoration: none;
 }
 main .slideshow .carousel-controls a:hover,
-main .slideshow .carousel-controls a:focus {
+main .slideshow .carousel-controls a:link:hover,
+main .slideshow .carousel-controls a:visited:hover,
+main .slideshow .carousel-controls a:focus,
+main .slideshow .carousel-controls a:link:focus,
+main .slideshow .carousel-controls a:visited:focus,
+main .slideshow .carousel-controls a:active,
+main .slideshow .carousel-controls a:link:active,
+main .slideshow .carousel-controls a:visited:active {
   color: #ededed;
   text-decoration: underline;
 }

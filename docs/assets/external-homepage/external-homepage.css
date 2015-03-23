@@ -330,6 +330,9 @@ main > .id7-main-content {
 .id7-masthead {
   background: none;
 }
+.id7-masthead .id7-logo-column {
+  margin-bottom: 0;
+}
 .id7-masthead .id7-logo-row nav {
   margin-left: 155px;
   font-size: 14px;
@@ -347,6 +350,14 @@ main > .id7-main-content {
   .id7-masthead .id7-search .id7-search-box-container {
     margin-top: 18px;
   }
+}
+.id7-masthead .popover.megamenu-links {
+  text-shadow: none;
+  max-width: 100%;
+  width: 80%;
+  min-height: 300px;
+  height: 70vh;
+  max-height: 600px;
 }
 .jumbotron {
   margin: 0;
@@ -378,12 +389,21 @@ main > .id7-main-content {
   height: 100vh;
   max-height: 1200px;
 }
-.jumbotron a {
+.jumbotron a,
+.jumbotron a:link,
+.jumbotron a:visited {
   color: #ffffff;
   text-decoration: none;
 }
 .jumbotron a:hover,
-.jumbotron a:focus {
+.jumbotron a:link:hover,
+.jumbotron a:visited:hover,
+.jumbotron a:focus,
+.jumbotron a:link:focus,
+.jumbotron a:visited:focus,
+.jumbotron a:active,
+.jumbotron a:link:active,
+.jumbotron a:visited:active {
   color: #ededed;
   text-decoration: underline;
 }
@@ -717,12 +737,21 @@ main > .id7-main-content {
     display: none !important;
   }
 }
-.carousel-nav a {
+.carousel-nav a,
+.carousel-nav a:link,
+.carousel-nav a:visited {
   color: #ffffff;
   text-decoration: none;
 }
 .carousel-nav a:hover,
-.carousel-nav a:focus {
+.carousel-nav a:link:hover,
+.carousel-nav a:visited:hover,
+.carousel-nav a:focus,
+.carousel-nav a:link:focus,
+.carousel-nav a:visited:focus,
+.carousel-nav a:active,
+.carousel-nav a:link:active,
+.carousel-nav a:visited:active {
   color: #ededed;
   text-decoration: underline;
 }

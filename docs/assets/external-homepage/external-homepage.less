@@ -96,6 +96,10 @@ only screen and (                min-resolution: 2dppx) {
 .id7-masthead {
   background: none;
 
+  .id7-logo-column {
+    margin-bottom: 0;
+  }
+
   .id7-logo-row nav {
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
       display: block !important;
@@ -116,6 +120,17 @@ only screen and (                min-resolution: 2dppx) {
         margin-top: (7px + (@line-height-computed / 2));
       }
     }
+  }
+
+  .popover.megamenu-links {
+    text-shadow: none;
+
+    max-width: 100%;
+    width: 80%;
+
+    min-height: 300px;
+    height: 70vh;
+    max-height: 600px;
   }
 }
 
