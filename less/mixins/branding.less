@@ -82,8 +82,18 @@
       }
     }
 
-    > li.active::before {
-      border-bottom-color: @id7-brand-white;
+    > li.active {
+      &.next-secondary::before {
+        border-bottom-color: @link-active-marker-colour;
+      }
+
+      &.next-tertiary::before {
+        border-bottom-color: @id7-navigation-tertiary-background-colour;
+      }
+
+      &::before {
+        border-bottom-color: @id7-brand-white;
+      }
     }
 
     > .disabled {
@@ -220,32 +230,6 @@
 
   .id7-homepage-layout & .id7-navigation:hover .navbar-primary .navbar-brand {
     background-color: @breadcrumbs-colour;
-  }
-
-  .navbar-breadcrumbs {
-    @active-breadcrumbs-bg: screen(@breadcrumbs-colour, lighten(black, 20%));
-    @breadcrumbs-accent-colour: multiply(@breadcrumbs-colour, darken(white, 10%));
-
-    .apply-navbar-brand(
-      @breadcrumbs-colour,
-      contrast(@colour),
-      contrast(@colour),
-      contrast(@colour),
-      @breadcrumbs-accent-colour,
-      @active-breadcrumbs-bg,
-      contrast(@colour),
-      @breadcrumbs-accent-colour
-    );
-
-    .id7-homepage-layout & {
-      .transition(~"background-color 0.15s linear, height .35s ease, visibility .35s ease");
-    }
-  }
-
-  .id7-homepage-layout & .id7-navigation:hover {
-    .navbar-breadcrumbs {
-      background-color: @breadcrumbs-colour; // TODO work out how to move into apply-navbar-brand
-    }
   }
 
   .navbar-secondary {

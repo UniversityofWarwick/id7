@@ -10456,12 +10456,6 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         '</li>',
         '</ul>'
       ].join(''),
-      moreBreadcrumbsContainer: [
-        '<li class="nav-breadcrumb dropdown">',
-        '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-ellipsis-h"></i></a>',
-        '<ul class="dropdown-menu" role="menu"></ul>',
-        '</li>'
-      ].join(''),
       marker: '<div class="id7-navigation-marker"></div>'
     },
     Defaults: {
@@ -10551,11 +10545,10 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
       fitToWidth: function fitToWidth(screenConfig) {
         var options = this.options;
 
-        this.$container.find('.navbar:not(.navbar-breadcrumbs)').each(function () {
+        this.$container.find('.navbar:not(.navbar-secondary)').each(function () {
           var $navbar = $(this);
           var $nav = $navbar.find('> .nav').first();
           var $moreContainer = $navbar.find('> .navbar-right');
-          var $moreBreadcrumbsContainer = $nav.find('> li.nav-breadcrumb.dropdown');
 
           // Move existing collapsed links back into the nav
           $moreContainer.find('> .dropdown > .dropdown-menu > li').each(function () {
@@ -10571,38 +10564,12 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 
           $moreContainer.addClass('hidden');
 
-          // If we have any parent breadcrumbs collapsed, un-collapse them
-          $moreBreadcrumbsContainer.find('> .dropdown-menu > li').each(function () {
-            var $li = $(this);
-            $nav.find('> .nav-breadcrumb:not(.active)').last().after($li);
-          });
-
-          var $parentBreadcrumbs = $nav.find('> li.nav-breadcrumb:not(.active):not(.dropdown)');
-
-          // Insert a parent breadcrumbs container if one doesn't exist
-          if ($parentBreadcrumbs.length > 0 && $moreBreadcrumbsContainer.length === 0) {
-            $moreBreadcrumbsContainer = $(Config.Templates.moreBreadcrumbsContainer);
-            $nav.prepend($moreBreadcrumbsContainer);
-          }
-
-          $moreBreadcrumbsContainer.addClass('hidden');
-
           if (!options.collapseSmallscreen || screenConfig.name != 'xs') {
             var isWrapped = function () {
               return _.some(_.union($nav.find('> li').get(), $moreContainer.get()), function (el) {
                 return $(el).is(':visible') && $(el).position().top > 0;
               });
             };
-
-            // Drop parent breadcrumbs into their own container first
-            if (isWrapped() && $parentBreadcrumbs.length > 0) {
-              $moreBreadcrumbsContainer.removeClass('hidden');
-
-              // Gotta collapse 'em all
-              $nav.find('> li.nav-breadcrumb:not(.active):not(.dropdown)').each(function () {
-                $moreBreadcrumbsContainer.find('> .dropdown-menu').append($(this).css('height', ''));
-              });
-            }
 
             if (isWrapped()) {
               $moreContainer.removeClass('hidden');
@@ -10615,11 +10582,6 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
               // enable highlighting of menu icon if it contains an active link
               var $moreMenu = $moreContainer.find('> .dropdown');
               $moreMenu.toggleClass('active', $moreMenu.find('li.active').length > 0);
-            }
-
-            // If we're STILL wrapped, it's probably a long active nav-breadcrumb
-            if (isWrapped() && $nav.find('> li.nav-breadcrumb.active').length > 0) {
-              $moreBreadcrumbsContainer.find('> .dropdown-menu').append($nav.find('> li.nav-breadcrumb.active').css('height', ''));
             }
           }
         });

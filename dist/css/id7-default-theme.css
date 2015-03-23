@@ -86,6 +86,12 @@ body .id7-navigation .navbar-primary .navbar-nav > li > a:focus {
   color: inherit;
   background: none;
 }
+body .id7-navigation .navbar-primary .navbar-nav > li.active.next-secondary::before {
+  border-bottom-color: #cab3d2;
+}
+body .id7-navigation .navbar-primary .navbar-nav > li.active.next-tertiary::before {
+  border-bottom-color: #f8f8f8;
+}
 body .id7-navigation .navbar-primary .navbar-nav > li.active::before {
   border-bottom-color: #fff;
 }
@@ -171,102 +177,6 @@ body .navbar-primary .navbar-brand {
 .id7-homepage-layout body .id7-navigation:hover .navbar-primary .navbar-brand {
   background-color: #623572;
 }
-body .navbar-breadcrumbs {
-  background-color: #623572;
-}
-body .navbar-breadcrumbs .navbar-text {
-  color: #fff;
-}
-body .navbar-breadcrumbs .navbar-nav > li {
-  color: #fff;
-}
-body .navbar-breadcrumbs .navbar-nav > li:hover,
-body .navbar-breadcrumbs .navbar-nav > li:focus {
-  color: #fff;
-  background-color: #593066;
-}
-body .navbar-breadcrumbs .navbar-nav > li > a,
-body .navbar-breadcrumbs .navbar-nav > li > a:hover,
-body .navbar-breadcrumbs .navbar-nav > li > a:focus {
-  color: inherit;
-  background: none;
-}
-body .navbar-breadcrumbs .navbar-nav > li.active::before {
-  border-bottom-color: #fff;
-}
-body .navbar-breadcrumbs .navbar-nav > .disabled,
-body .navbar-breadcrumbs .navbar-nav > .disabled:hover,
-body .navbar-breadcrumbs .navbar-nav > .disabled:focus {
-  color: #fff;
-  background-color: #593066;
-}
-body .navbar-breadcrumbs .navbar-toggle {
-  color: #fff;
-  border: none;
-}
-body .navbar-breadcrumbs .navbar-toggle:hover,
-body .navbar-breadcrumbs .navbar-toggle:focus {
-  color: #fff;
-  background: none;
-}
-body .navbar-breadcrumbs .navbar-nav > .open > a,
-body .navbar-breadcrumbs .navbar-nav > .open > a:hover,
-body .navbar-breadcrumbs .navbar-nav > .open > a:focus {
-  color: #fff;
-  background-color: #593066;
-}
-body .navbar-breadcrumbs .navbar-nav .dropdown-menu {
-  background-color: #623572;
-}
-body .navbar-breadcrumbs .navbar-nav .dropdown-menu > .dropdown-header {
-  border-color: #593066;
-}
-body .navbar-breadcrumbs .navbar-nav .dropdown-menu .divider {
-  background-color: #593066;
-}
-body .navbar-breadcrumbs .navbar-nav .dropdown-menu > li > a {
-  color: #fff;
-}
-body .navbar-breadcrumbs .navbar-nav .dropdown-menu > li > a:hover,
-body .navbar-breadcrumbs .navbar-nav .dropdown-menu > li > a:focus {
-  color: #fff;
-  background-color: #593066;
-}
-body .navbar-breadcrumbs .navbar-nav .dropdown-menu > .active > a::before {
-  border-bottom-color: #825d8e !important;
-}
-body .navbar-breadcrumbs .navbar-nav .dropdown-menu > .disabled > a,
-body .navbar-breadcrumbs .navbar-nav .dropdown-menu > .disabled > a:hover,
-body .navbar-breadcrumbs .navbar-nav .dropdown-menu > .disabled > a:focus {
-  color: #fff;
-  background-color: #593066;
-}
-body .navbar-breadcrumbs .navbar-link {
-  color: #fff;
-}
-body .navbar-breadcrumbs .navbar-link:hover {
-  color: #fff;
-}
-body .navbar-breadcrumbs .btn-link {
-  color: #fff;
-}
-body .navbar-breadcrumbs .btn-link:hover,
-body .navbar-breadcrumbs .btn-link:focus {
-  color: #fff;
-}
-body .navbar-breadcrumbs .btn-link[disabled]:hover,
-fieldset[disabled] body .navbar-breadcrumbs .btn-link:hover,
-body .navbar-breadcrumbs .btn-link[disabled]:focus,
-fieldset[disabled] body .navbar-breadcrumbs .btn-link:focus {
-  color: #fff;
-}
-.id7-homepage-layout body .navbar-breadcrumbs {
-  -webkit-transition: background-color .15s linear, height .35s ease, visibility .35s ease;
-          transition: background-color .15s linear, height .35s ease, visibility .35s ease;
-}
-.id7-homepage-layout body .id7-navigation:hover .navbar-breadcrumbs {
-  background-color: #623572;
-}
 body .navbar-secondary {
   background-color: #cab3d2;
 }
@@ -286,6 +196,12 @@ body .navbar-secondary .navbar-nav > li > a:hover,
 body .navbar-secondary .navbar-nav > li > a:focus {
   color: inherit;
   background: none;
+}
+body .navbar-secondary .navbar-nav > li.active.next-secondary::before {
+  border-bottom-color: #fff;
+}
+body .navbar-secondary .navbar-nav > li.active.next-tertiary::before {
+  border-bottom-color: #f8f8f8;
 }
 body .navbar-secondary .navbar-nav > li.active::before {
   border-bottom-color: #fff;
@@ -388,6 +304,12 @@ body .navbar-tertiary .navbar-nav > li > a:hover,
 body .navbar-tertiary .navbar-nav > li > a:focus {
   color: inherit;
   background: none;
+}
+body .navbar-tertiary .navbar-nav > li.active.next-secondary::before {
+  border-bottom-color: #fff;
+}
+body .navbar-tertiary .navbar-nav > li.active.next-tertiary::before {
+  border-bottom-color: #f8f8f8;
 }
 body .navbar-tertiary .navbar-nav > li.active::before {
   border-bottom-color: #fff;

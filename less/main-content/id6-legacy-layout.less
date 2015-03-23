@@ -7,7 +7,12 @@
 .hyphenate-small-columns(@size) when (@size >= 6) {}
 
 .id6-layout(@left, @right) {
-  .make-row();
+  margin-left: 0;
+  margin-right: 0;
+
+  @media (min-width: @screen-sm-min) {
+    .make-row();
+  }
 
   @media (min-width: @screen-sm-min) {
     > .column-1, #column-1 {

@@ -7093,16 +7093,6 @@ main > header:before,
 main > header:after,
 main > .id7-main-content:before,
 main > .id7-main-content:after,
-.layout-75-25:before,
-.layout-75-25:after,
-.layout-50-50:before,
-.layout-50-50:after,
-.layout-25-75:before,
-.layout-25-75:after,
-.layout-33-66:before,
-.layout-33-66:after,
-.layout-66-33:before,
-.layout-66-33:after,
 footer .id7-site-footer:before,
 footer .id7-site-footer:after,
 footer .id7-app-footer:before,
@@ -7133,11 +7123,6 @@ footer .id7-app-footer:after {
 .id7-header-image-container .strapline:after,
 main > header:after,
 main > .id7-main-content:after,
-.layout-75-25:after,
-.layout-50-50:after,
-.layout-25-75:after,
-.layout-33-66:after,
-.layout-66-33:after,
 footer .id7-site-footer:after,
 footer .id7-app-footer:after {
   clear: both;
@@ -8300,14 +8285,26 @@ body {
   border: 0;
 }
 @media (min-width: 768px) {
-  .id7-navigation .navbar-nav .dropdown:hover .dropdown-menu {
+  .id7-navigation .navbar-nav .dropdown .dropdown-menu {
     display: block;
+    visibility: hidden;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+            transition: opacity .15s linear;
+    -webkit-transition-delay: 250ms;
+            transition-delay: 250ms;
+  }
+  .id7-navigation .navbar-nav .dropdown:hover .dropdown-menu {
+    height: auto;
+    visibility: visible;
+    filter: alpha(opacity=100);
+    opacity: 1;
   }
 }
 .id7-navigation .navbar-nav {
   float: left;
-  padding-right: 10px;
-  margin: 0;
+  margin: 0 10px;
 }
 .id7-navigation .navbar-nav.navbar-right {
   float: right !important;
@@ -8334,12 +8331,10 @@ body {
   padding: 0;
 }
 .id7-navigation .navbar-nav > li.first {
-  padding-left: 20px;
   margin-left: 0;
 }
 @media (min-width: 768px) {
   .id7-navigation .navbar-nav > li.second {
-    padding-left: 20px;
     margin-left: 0;
   }
 }
@@ -8680,8 +8675,14 @@ h6:first-child,
   font-size: 90%;
 }
 .layout-75-25 {
-  margin-right: -20px;
-  margin-left: -20px;
+  margin-right: 0;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .layout-75-25 {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
 }
 @media (min-width: 768px) {
   .layout-75-25 > .column-1,
@@ -8726,8 +8727,14 @@ h6:first-child,
   }
 }
 .layout-50-50 {
-  margin-right: -20px;
-  margin-left: -20px;
+  margin-right: 0;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .layout-50-50 {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
 }
 @media (min-width: 768px) {
   .layout-50-50 > .column-1,
@@ -8760,8 +8767,14 @@ h6:first-child,
   }
 }
 .layout-25-75 {
-  margin-right: -20px;
-  margin-left: -20px;
+  margin-right: 0;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .layout-25-75 {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
 }
 @media (min-width: 768px) {
   .layout-25-75 > .column-1,
@@ -8806,8 +8819,14 @@ h6:first-child,
   }
 }
 .layout-33-66 {
-  margin-right: -20px;
-  margin-left: -20px;
+  margin-right: 0;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .layout-33-66 {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
 }
 @media (min-width: 768px) {
   .layout-33-66 > .column-1,
@@ -8852,8 +8871,14 @@ h6:first-child,
   }
 }
 .layout-66-33 {
-  margin-right: -20px;
-  margin-left: -20px;
+  margin-right: 0;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .layout-66-33 {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
 }
 @media (min-width: 768px) {
   .layout-66-33 > .column-1,
