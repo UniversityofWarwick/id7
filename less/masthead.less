@@ -18,7 +18,7 @@
 
   .id7-logo-row {
     .make-row();
-    height: @id7-masthead-height-xs;
+    height: @id7-masthead-logo-height-xs;
 
     > .id7-logo {
       img { visibility: hidden; }
@@ -33,7 +33,7 @@
     background-size: @container-lg 300px;
 
     .id7-logo-row {
-      height: @id7-masthead-height-sm;
+      height: @id7-masthead-logo-height-sm;
 
       > .id7-logo {
         width: @id7-masthead-logo-width-sm;
@@ -44,12 +44,12 @@
 
   .id7-logo a {
     display: block;
-    height: @id7-masthead-height-xs;
+    height: @id7-masthead-logo-height-xs;
     width: 100%;
     text-align: center;
 
     @media (min-width: @grid-float-breakpoint) {
-      height: @id7-masthead-height-sm;
+      height: @id7-masthead-logo-height-sm;
     }
 
     img {
@@ -60,11 +60,16 @@
   .id7-header-text {
     .header-colour(@text-color);
     .link-colour(inherit);
-
     padding: 0 20px;
 
     h1 {
-      margin: (@line-height-computed / 2) 0;
+      @id7-header-h1-height: (1.5 * @main-font-size);
+      @id7-header-h1-margin-top: (@id7-masthead-bleed-height + @id7-masthead-logo-height-sm);
+      @id7-header-h1-margin-bottom: (@id7-masthead-height - @id7-header-h1-height - @id7-header-h1-margin-top);
+
+      font-size: @id7-header-h1-height;
+      line-height: @id7-header-h1-height;
+      margin: @id7-header-h1-margin-top 0 @id7-header-h1-margin-bottom 0;
 
       @media (max-width: (@grid-float-breakpoint - 1)) {
         .text-overflow();
@@ -105,7 +110,7 @@
     .small();
 
     @line-height-small-computed: floor((@font-size-small * @line-height-small)); // ~17px
-    margin-top: ((@id7-masthead-height-sm * 5/6) - (@line-height-small-computed / 2));
+    margin-top: ((@id7-masthead-logo-height-sm * 5/6) - (@line-height-small-computed / 2));
 
     ul {
       .horizontal-utility-links();
