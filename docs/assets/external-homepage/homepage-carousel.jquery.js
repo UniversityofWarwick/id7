@@ -61,6 +61,8 @@
                 var $menu = $container.find(this.options.menu);
                 var options = this.options;
 
+                var onChangePanel = $.proxy(this.onChangePanel, this);
+
                 $container
                     .scrollspy({ target: options.menu })
                     .panelSnap({
@@ -70,8 +72,8 @@
                         slideSpeed: options.animation.length,
                         easing: options.animation.easing,
                         keyboardNavigation: options.keyboardNavigation,
-                        onActivate: $.proxy(this.onChangePanel, this),
-                        onSnapStart: $.proxy(this.onChangePanel, this),
+                        onActivate: onChangePanel,
+                        onSnapStart: onChangePanel,
                         onSnapFinish: $.proxy(this.onChangePanelComplete, this)
                     });
 
@@ -82,6 +84,7 @@
 
                     // store hash
                     var hash = this.hash;
+                    onChangePanel($(hash));
 
                     // animate
                     $('html, body').animate({

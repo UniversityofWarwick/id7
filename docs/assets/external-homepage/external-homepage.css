@@ -336,11 +336,14 @@ main > .id7-main-content {
 }
 .id7-masthead .id7-logo-row nav {
   margin-left: 155px;
-  font-weight: bold;
+  font-size: 16px;
   font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: 1px;
   opacity: 1;
   filter: alpha(opacity=100);
-  margin-top: 47px;
+  margin-top: 44px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .id7-masthead .id7-logo-row nav {
