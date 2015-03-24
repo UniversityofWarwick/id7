@@ -9,16 +9,11 @@ body {
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-
-  @secondary-colour: screen(@id7-brand-purple, lighten(black, 60%));
-
-  .apply-form-control-brand(@id7-brand-purple);
 }
 
 .id7-page-header {
   position: fixed;
   width: 100%;
-  background: @id7-brand-purple;
   .transition(background-color 0.15s linear);
 
   z-index: 1;
@@ -47,6 +42,16 @@ main > .id7-main-content {
   }
   @media (min-width: @screen-lg-min) {
     width: @container-lg;
+  }
+}
+
+// Make search column smaller
+.id7-masthead {
+  .id7-logo-column {
+    .make-sm-column(9);
+  }
+  .id7-search-column {
+    .make-sm-column(3);
   }
 }
 
@@ -106,11 +111,19 @@ only screen and (                min-resolution: 2dppx) {
     }
 
     margin-left: (135px + (@grid-gutter-width / 2));
-    font-size: @font-size-base;
+    //font-size: @font-size-base;
     font-weight: bold;
+    font-variant: small-caps;
     .opacity(1);
 
     margin-top: 47px;
+
+    ul > li {
+      &:not(:first-child)::before {
+        content: '';
+        margin: 0 0.6em;
+      }
+    }
   }
 
   .id7-search {
@@ -133,6 +146,10 @@ only screen and (                min-resolution: 2dppx) {
   }
 }
 
+.caption, .carousel-nav {
+  text-shadow: 1px 1px 0 rgba(0,0,0,.2);
+}
+
 // Jumbotron content blocks
 .jumbotron {
   margin: 0;
@@ -153,12 +170,12 @@ only screen and (                min-resolution: 2dppx) {
     .container, .container-fluid {
       .flexbox();
       .flex-direction(column);
-      .flex(2013, 1, 1, auto);
+      .flex(2013, 1, 0, 0);
 
       .row, .layout {
         .flexbox();
         .flex(2013, 1, 0, 0);
-        .align-items(center);
+        .align-items(stretch);
 
         > * {
           .flexbox();
@@ -179,7 +196,7 @@ only screen and (                min-resolution: 2dppx) {
 
           > * {
             .flex-direction(row);
-            .align-items(center);
+            .align-items(stretch);
 
             &.flex-vertical {
               .flex-direction(column);
@@ -209,15 +226,9 @@ only screen and (                min-resolution: 2dppx) {
               }
             }
 
-            > .column-1-content {
-              @media (min-width: @screen-md-min) {
-                padding-left: 200px;
-              }
-            }
-
             > .column-2-content {
-              @media (min-width: @screen-md-min) {
-                padding-right: 200px;
+              .caption-content {
+                margin-right: 200px;
               }
             }
           }
@@ -232,6 +243,20 @@ only screen and (                min-resolution: 2dppx) {
         }
       }
     }
+
+    .caption {
+      max-width: 600px;
+
+      .flexbox();
+      .flex-direction(column);
+      .flex(2013, 1, 0, 0);
+      .justify-content(center);
+
+      .caption-content {
+        padding: (@grid-gutter-width / 2);
+        .flex(2013, 0, 1, auto);
+      }
+    }
   }
 
   h2 {
@@ -242,6 +267,11 @@ only screen and (                min-resolution: 2dppx) {
     margin-bottom: (@grid-gutter-width / 2);
     font-size: @font-size-h3;
     font-weight: 200;
+    padding-right: 0 !important;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &.jumbotron-image, .jumbotron-image {
@@ -251,7 +281,7 @@ only screen and (                min-resolution: 2dppx) {
 
     position: relative;
 
-    &::before {
+    &.overlay::before {
       content: '';
       display: block;
       position: absolute;
