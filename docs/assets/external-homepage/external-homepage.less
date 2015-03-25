@@ -116,7 +116,7 @@ only screen and (                min-resolution: 2dppx) {
     font-weight: 600;
     text-transform: lowercase;
     letter-spacing: 1px;
-    .opacity(1);
+    a { color: white !important; } // Avoid flash of black
 
     margin-top: 44px;
 
@@ -135,17 +135,17 @@ only screen and (                min-resolution: 2dppx) {
       }
     }
   }
+}
 
-  .popover.megamenu-links {
-    text-shadow: none;
+.popover.megamenu-links {
+  text-shadow: none;
 
-    max-width: 100%;
-    width: 80%;
+  max-width: 100%;
+  width: 80%;
 
-    min-height: 300px;
-    height: 70vh;
-    max-height: 600px;
-  }
+  min-height: 300px;
+  height: 70vh;
+  max-height: 600px;
 }
 
 .caption, .carousel-nav {
@@ -201,6 +201,8 @@ only screen and (                min-resolution: 2dppx) {
             .align-items(stretch);
 
             &.flex-vertical {
+              padding-top: 0;
+              padding-bottom: 0;
               .flex-direction(column);
               .align-items(stretch);
             }
@@ -247,14 +249,23 @@ only screen and (                min-resolution: 2dppx) {
     }
 
     .caption {
-      max-width: 600px;
-
       .flexbox();
       .flex-direction(column);
       .flex(2013, 1, 0, 0);
-      .justify-content(center);
+
+      // Default .middle .left
+
+      // Vertical alignment
+      &, &.middle { .justify-content(center); }
+      &.top { .justify-content(start); }
+      &.bottom { .justify-content(end); }
+
+      &, &.left { .align-items(start); }
+      &.center { .align-items(center); }
+      &.right { .align-items(end); }
 
       .caption-content {
+        width: 66%;
         padding: (@grid-gutter-width / 2);
         .flex(2013, 0, 1, auto);
       }
@@ -297,10 +308,16 @@ only screen and (                min-resolution: 2dppx) {
     > * {
       position: relative;
     }
+  }
 
-    .container {
-      margin-top: (104px + (@grid-gutter-width / 2));
-    }
+  &.jumbotron-image > .container {
+    margin-top: (104px + (@grid-gutter-width / 2));
+    margin-bottom: (@grid-gutter-width / 2);
+  }
+
+  &.jumbotron-panel > .container-fluid > .row > * {
+    padding-top: (104px + (@grid-gutter-width / 2));
+    padding-bottom: (@grid-gutter-width / 2);
   }
 
   min-height: 600px;

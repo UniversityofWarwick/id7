@@ -341,14 +341,15 @@ main > .id7-main-content {
   font-weight: 600;
   text-transform: lowercase;
   letter-spacing: 1px;
-  opacity: 1;
-  filter: alpha(opacity=100);
   margin-top: 44px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .id7-masthead .id7-logo-row nav {
     display: block !important;
   }
+}
+.id7-masthead .id7-logo-row nav a {
+  color: white !important;
 }
 .id7-masthead .id7-logo-row nav ul > li:not(:first-child)::before {
   content: '';
@@ -359,7 +360,7 @@ main > .id7-main-content {
     margin-top: 18px;
   }
 }
-.id7-masthead .popover.megamenu-links {
+.popover.megamenu-links {
   text-shadow: none;
   max-width: 100%;
   width: 80%;
@@ -574,6 +575,8 @@ main > .id7-main-content {
   .jumbotron.jumbotron-panel .container-fluid .row > *.flex-vertical,
   .jumbotron.jumbotron-panel .container .layout > *.flex-vertical,
   .jumbotron.jumbotron-panel .container-fluid .layout > *.flex-vertical {
+    padding-top: 0;
+    padding-bottom: 0;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     -ms-box-orient: vertical;
@@ -650,7 +653,6 @@ main > .id7-main-content {
     justify-content: flex-start;
   }
   .jumbotron .caption {
-    max-width: 600px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-box;
@@ -677,6 +679,9 @@ main > .id7-main-content {
     -ms-flex: 1 0 0;
     -o-flex: 1 0 0;
     flex: 1 0 0;
+  }
+  .jumbotron .caption,
+  .jumbotron .caption.middle {
     -webkit-box-pack: center;
     -moz-box-pack: center;
     -ms-flex-pack: center;
@@ -686,7 +691,74 @@ main > .id7-main-content {
     -o-justify-content: center;
     justify-content: center;
   }
+  .jumbotron .caption.top {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-box-pack: start;
+    -o-box-pack: start;
+    box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+  .jumbotron .caption.bottom {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-box-pack: end;
+    -o-box-pack: end;
+    box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+  .jumbotron .caption,
+  .jumbotron .caption.left {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-box-align: start;
+    -o-box-align: start;
+    box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+  }
+  .jumbotron .caption.center {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-box-align: center;
+    -o-box-align: center;
+    box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+  }
+  .jumbotron .caption.right {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-box-align: end;
+    -o-box-align: end;
+    box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    -ms-align-items: flex-end;
+    -o-align-items: flex-end;
+    align-items: flex-end;
+  }
   .jumbotron .caption .caption-content {
+    width: 66%;
     padding: 20px;
     -webkit-flex: 0 1 auto;
     -moz-flex: 0 1 auto;
@@ -765,9 +837,13 @@ main > .id7-main-content {
 .jumbotron .jumbotron-image > * {
   position: relative;
 }
-.jumbotron.jumbotron-image .container,
-.jumbotron .jumbotron-image .container {
+.jumbotron.jumbotron-image > .container {
   margin-top: 124px;
+  margin-bottom: 20px;
+}
+.jumbotron.jumbotron-panel > .container-fluid > .row > * {
+  padding-top: 124px;
+  padding-bottom: 20px;
 }
 .carousel-nav {
   position: fixed;

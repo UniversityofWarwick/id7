@@ -23,6 +23,10 @@
             '.id7-page-header {',
                 'background: <%= colour %>;',
             '}',
+            '.id7-masthead .id7-logo-row nav {',
+                'opacity: 1;',
+                'filter: alpha(opacity=100);',
+            '}',
             '.id7-masthead .id7-logo-row nav a {',
                 'color: <%= colour %> !important;',
             '}'

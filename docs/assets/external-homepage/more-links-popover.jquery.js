@@ -9,7 +9,7 @@
             ].join(''))
         },
         Defaults: {
-            container: '.id7-masthead',
+            container: 'body', // Needed to avoid being drawn under the nav carousel which is fixed in the body
             template: [
                 '<div class="popover megamenu-links">',
                 '<div class="arrow"></div>',
