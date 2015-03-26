@@ -66,6 +66,11 @@
           display: none;
         }
       }
+
+      // hide active arrow
+      .dropdown.active::before {
+        display: none;
+      }
     }
 
     > li {
@@ -80,7 +85,7 @@
       cursor: pointer;
       .transition(~"background-color .15s linear, color .15s linear");
 
-      &:hover a {
+      &:hover + a {
         text-decoration: underline;
       }
 

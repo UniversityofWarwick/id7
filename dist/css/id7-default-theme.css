@@ -133,8 +133,11 @@ body .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > li > a:focus {
   color: #fff;
   background-color: #6f3b80;
 }
+body .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > .active > a {
+  background-color: #6f3b80;
+}
 body .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > .active > a::before {
-  border-bottom-color: #cab3d2 !important;
+  border-bottom-color: #cab3d2;
 }
 body .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > .disabled > a,
 body .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > .disabled > a:hover,
@@ -165,7 +168,6 @@ fieldset[disabled] body .id7-navigation .navbar-primary .btn-link:focus {
   .id7-homepage-layout body .id7-navigation .navbar-primary {
     background-color: rgba(123, 66, 142, .8);
     -webkit-transition: background-color .15s linear;
-         -o-transition: background-color .15s linear;
             transition: background-color .15s linear;
   }
 }
@@ -245,8 +247,11 @@ body .navbar-secondary .navbar-nav .dropdown-menu > li > a:focus {
   color: #000;
   background-color: #b6a1bd;
 }
+body .navbar-secondary .navbar-nav .dropdown-menu > .active > a {
+  background-color: #b6a1bd;
+}
 body .navbar-secondary .navbar-nav .dropdown-menu > .active > a::before {
-  border-bottom-color: #fff !important;
+  border-bottom-color: #fff;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a,
 body .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a:hover,
@@ -353,8 +358,11 @@ body .navbar-tertiary .navbar-nav .dropdown-menu > li > a:focus {
   color: #000;
   background-color: #dfdfdf;
 }
+body .navbar-tertiary .navbar-nav .dropdown-menu > .active > a {
+  background-color: #dfdfdf;
+}
 body .navbar-tertiary .navbar-nav .dropdown-menu > .active > a::before {
-  border-bottom-color: #fff !important;
+  border-bottom-color: #fff;
 }
 body .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a,
 body .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a:hover,
@@ -384,7 +392,6 @@ fieldset[disabled] body .navbar-tertiary .btn-link:focus {
 body .opaque-navigation .navbar-primary {
   background-color: #7b428e;
   -webkit-transition: none;
-       -o-transition: none;
           transition: none;
 }
 body.bordered .id7-left-border,
@@ -441,7 +448,6 @@ body .id7-masthead .id7-search .id7-search-box {
 body .id7-masthead .id7-search .fa {
   color: rgba(123, 66, 142, .5);
   -webkit-transition: color .15s linear;
-       -o-transition: color .15s linear;
           transition: color .15s linear;
 }
 body .id7-masthead .id7-search .twitter-typeahead:hover + .fa {

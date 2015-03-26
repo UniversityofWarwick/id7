@@ -137,11 +137,14 @@
       > .dropdown-header {
         border-color: @dropdown-accent-colour;
       }
+
       .divider {
         background-color: @dropdown-accent-colour;
       }
+
       > li > a {
         color: @link-colour;
+
         &:hover,
         &:focus {
           color: @link-hover-colour;
@@ -149,8 +152,10 @@
         }
       }
       > .active > a {
+        background-color: @link-hover-bg;
+
         &::before {
-          border-bottom-color: @link-active-marker-colour !important;
+          border-bottom-color: @link-active-marker-colour;
         }
       }
       > .disabled > a {
