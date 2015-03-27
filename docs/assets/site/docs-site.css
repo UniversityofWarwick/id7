@@ -2,7 +2,7 @@
   background-image: url("/assets/site/docs-site/banner-image.jpg");
 }
 .id7-fixed-width-container,
-.id7-utility-bar.affix {
+.id7-utility-bar {
   background-image: url("/assets/site/docs-site/masthead-image.jpg");
 }
 @media (min-width: 768px) {

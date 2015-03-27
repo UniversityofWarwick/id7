@@ -16,7 +16,7 @@
     .position-logo-colour-block(@logo-height, @logo-width) {
       @offset: ceil((@logo-height * 2 / 3));
 
-      top: @offset;
+      top: (@id7-masthead-bleed-height + @offset);
       width: (@logo-width - (@grid-gutter-width / 2));
       height: (@logo-height - @offset);
     }

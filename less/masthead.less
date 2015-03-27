@@ -1,8 +1,14 @@
 .id7-masthead {
   .container-fluid();
+
+  @media (min-width: @screen-xs-max) {
+    height: @id7-masthead-height;
+  }
+
   .id7-masthead-contents {
     .make-row();
   }
+
   .id7-logo-column {
     .make-sm-column(8);
 
@@ -12,6 +18,7 @@
       margin-bottom: 10px;
     }
   }
+
   .id7-search-column {
     .make-sm-column(4);
   }
@@ -61,15 +68,35 @@
     .header-colour(@text-color);
     .link-colour(inherit);
     padding: 0 20px;
+    position: relative;
 
     h1 {
-      @id7-header-h1-height: (1.5 * @main-font-size);
-      @id7-header-h1-margin-top: (@id7-masthead-bleed-height + @id7-masthead-logo-height-sm);
-      @id7-header-h1-margin-bottom: (@id7-masthead-height - @id7-header-h1-height - @id7-header-h1-margin-top);
-
       font-size: @id7-header-h1-height;
       line-height: @id7-header-h1-height;
-      margin: @id7-header-h1-margin-top 0 @id7-header-h1-margin-bottom 0;
+      margin: @id7-header-h1-margin-top 0 @id7-header-h1-margin-bottom;
+
+      &.affix {
+        top: 0;
+        margin: 0 0 0 -20px;
+        padding: 5px 0 0 20px;
+        width: 100%;
+        height: @id7-affixed-header-height;
+        z-index: 10;
+        background-color: white;
+        border-bottom: solid 1px @gray-lighter;
+
+        @media (min-width: @screen-sm-min) {
+          width: @container-sm;
+        }
+
+        @media (min-width: @screen-md-min) {
+          width: @container-md;
+        }
+
+        @media (min-width: @screen-lg-min) {
+          width: @container-lg;
+        }
+      }
 
       @media (max-width: (@grid-float-breakpoint - 1)) {
         .text-overflow();
@@ -223,6 +250,10 @@ only screen and (min-width: @grid-float-breakpoint) and (                min-res
 .id7-non-branded {
   .id7-masthead {
     background: white !important;
+
+    @media (min-width: @screen-xs-max) {
+      height: auto;
+    }
   }
 
   .id7-logo-column,

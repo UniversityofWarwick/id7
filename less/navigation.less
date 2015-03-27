@@ -16,9 +16,10 @@
 
   &.affix {
     position: fixed;
-    top: @id7-masthead-bleed-height;
+    top: @id7-affixed-header-height;
     width: 100%;
     z-index: 10;
+    border-bottom: solid 1px @gray-lighter;
 
     @media (min-width: @screen-sm-min) {
       width: @container-sm;
