@@ -9194,6 +9194,94 @@ body :not(iframe)::-webkit-scrollbar-thumb:horizontal {
 body :not(iframe)::-webkit-scrollbar-thumb:hover {
   background-color: #505050 !important;
 }
+.popup {
+  position: absolute;
+  z-index: 1000;
+  margin-top: -26px;
+  overflow: visible;
+  text-align: center;
+}
+.WPopupBox {
+  display: none;
+}
+.WPopupBox.visible {
+  display: block;
+}
+.WPopupGlass,
+.WPopupBox,
+.WPopupBoxContent {
+  position: absolute;
+  z-index: 1000;
+}
+.WPopupBox .c,
+.WPopupBox .tl,
+.WPopupBox .t,
+.WPopupBox .tr,
+.WPopupBox .r,
+.WPopupBox .br,
+.WPopupBox .b,
+.WPopupBox .bl,
+.WPopupBox .l,
+.WPopupBox .bArr,
+.WPopupBox .tArr,
+.WPopupBox .reflection {
+  position: absolute;
+}
+.WPopupBox .tr,
+.WPopupBox .r,
+.WPopupBox .br {
+  right: 0;
+}
+.WPopupBox .br,
+.WPopupBox .b,
+.WPopupBox .bl,
+.WPopupBox .bArr {
+  bottom: 0;
+}
+.popup #popupClosebutton:hover {
+  cursor: pointer;
+}
+.popup #popupContent {
+  background-color: #fffadc;
+}
+.popup a:hover {
+  text-decoration: underline;
+}
+.WPopupCloseButton img {
+  float: right;
+}
+#removeTemplateAjaxPopup,
+#removeTemplateTextSubAjaxPopup {
+  width: 300px;
+  padding: 5px;
+  margin-top: 14px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 3px 12px rgba(20, 20, 20, .75);
+          box-shadow: 2px 3px 12px rgba(20, 20, 20, .75);
+}
+#removeTemplateAjaxPopup:before,
+#removeTemplateTextSubAjaxPopup:before {
+  position: absolute;
+  top: -32px;
+  right: 23px;
+  width: 0;
+  height: 0;
+  content: ' ';
+  border: 16px solid transparent;
+  border-bottom-color: white;
+}
+#removeTemplateTextSubAjaxPopup::before {
+  left: 32px;
+}
+#removeTemplateTextSubMessage {
+  margin: 10px 20px;
+}
+#removeTemplateTextSubForm {
+  margin: 0 20px;
+}
+/* SBTWO-7073 */
 footer .id7-site-footer,
 footer .id7-app-footer {
   position: relative;

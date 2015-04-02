@@ -1,0 +1,92 @@
+.popup{
+  position: absolute;
+  text-align: center;
+  overflow: visible;
+  margin-top: -26px;
+  z-index: 1000;
+}
+
+.WPopupBox { display: none; }
+.WPopupBox.visible { display: block; }
+
+.WPopupGlass,
+.WPopupBox,
+.WPopupBoxContent {
+  position: absolute;
+  z-index: 1000;
+}
+
+.WPopupBox .c,
+.WPopupBox .tl,
+.WPopupBox .t,
+.WPopupBox .tr,
+.WPopupBox .r,
+.WPopupBox .br,
+.WPopupBox .b,
+.WPopupBox .bl,
+.WPopupBox .l,
+.WPopupBox .bArr,
+.WPopupBox .tArr,
+.WPopupBox .reflection {
+  position: absolute;
+}
+
+.WPopupBox .tr,
+.WPopupBox .r,
+.WPopupBox .br { right: 0px; }
+.WPopupBox .br,
+.WPopupBox .b,
+.WPopupBox .bl,
+.WPopupBox .bArr { bottom: 0px; }
+
+.popup #popupClosebutton:hover{
+  cursor: pointer;
+}
+
+.popup #popupContent{
+  background-color: #fffadc;
+}
+
+.popup a:hover {
+  text-decoration:underline;
+}
+
+.WPopupCloseButton img {
+  float: right;
+}
+
+
+#removeTemplateAjaxPopup, #removeTemplateTextSubAjaxPopup {
+  background-color:white;
+  border:1px solid #ccc;
+  -webkit-box-shadow: 2px 3px 12px rgba(20, 20, 20, 0.75);
+  -moz-box-shadow: 2px 3px 12px rgba(20, 20, 20, 0.75);
+  box-shadow: 2px 3px 12px rgba(20, 20, 20, 0.75);
+  border-radius:4px;
+  width:300px;
+  padding:5px;
+  margin-top:14px;
+
+  &:before {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 16px solid transparent;
+    border-bottom-color: white;
+    top: -32px;
+    right: 23px;
+  }
+}
+
+#removeTemplateTextSubAjaxPopup::before {
+  left:32px;
+}
+
+#removeTemplateTextSubMessage {
+  margin: 10px 20px;
+}
+
+#removeTemplateTextSubForm {
+  margin:0 20px;
+}
