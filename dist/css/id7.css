@@ -2456,17 +2456,17 @@ pre code {
 }
 @media (min-width: 768px) {
   .container {
-    width: 760px;
+    width: 750px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 980px;
+    width: 970px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1180px;
+    width: 1170px;
   }
 }
 .container-fluid {
@@ -7524,17 +7524,17 @@ body {
 }
 @media (min-width: 768px) {
   .id7-fixed-width-container {
-    width: 760px;
+    width: 750px;
   }
 }
 @media (min-width: 992px) {
   .id7-fixed-width-container {
-    width: 980px;
+    width: 970px;
   }
 }
 @media (min-width: 1200px) {
   .id7-fixed-width-container {
-    width: 1180px;
+    width: 1170px;
   }
 }
 @media (min-width: 768px) {
@@ -7556,10 +7556,10 @@ body {
     left: 0;
     background-repeat: no-repeat;
     background-position: right top;
-    -webkit-transform: translate(-380px, 0);
-        -ms-transform: translate(-380px, 0);
-         -o-transform: translate(-380px, 0);
-            transform: translate(-380px, 0);
+    -webkit-transform: translate(-375px, 0);
+        -ms-transform: translate(-375px, 0);
+         -o-transform: translate(-375px, 0);
+            transform: translate(-375px, 0);
   }
   .bordered .id7-left-border {
     border-right: 1px solid #808080;
@@ -7568,10 +7568,10 @@ body {
     right: 0;
     background-repeat: no-repeat;
     background-position: left top;
-    -webkit-transform: translate(380px, 0);
-        -ms-transform: translate(380px, 0);
-         -o-transform: translate(380px, 0);
-            transform: translate(380px, 0);
+    -webkit-transform: translate(375px, 0);
+        -ms-transform: translate(375px, 0);
+         -o-transform: translate(375px, 0);
+            transform: translate(375px, 0);
   }
   .bordered .id7-right-border {
     border-left: 1px solid #808080;
@@ -7579,30 +7579,30 @@ body {
 }
 @media (min-width: 992px) {
   .id7-left-border {
-    -webkit-transform: translate(-490px, 0);
-        -ms-transform: translate(-490px, 0);
-         -o-transform: translate(-490px, 0);
-            transform: translate(-490px, 0);
+    -webkit-transform: translate(-485px, 0);
+        -ms-transform: translate(-485px, 0);
+         -o-transform: translate(-485px, 0);
+            transform: translate(-485px, 0);
   }
   .id7-right-border {
-    -webkit-transform: translate(490px, 0);
-        -ms-transform: translate(490px, 0);
-         -o-transform: translate(490px, 0);
-            transform: translate(490px, 0);
+    -webkit-transform: translate(485px, 0);
+        -ms-transform: translate(485px, 0);
+         -o-transform: translate(485px, 0);
+            transform: translate(485px, 0);
   }
 }
 @media (min-width: 1200px) {
   .id7-left-border {
-    -webkit-transform: translate(-590px, 0);
-        -ms-transform: translate(-590px, 0);
-         -o-transform: translate(-590px, 0);
-            transform: translate(-590px, 0);
+    -webkit-transform: translate(-585px, 0);
+        -ms-transform: translate(-585px, 0);
+         -o-transform: translate(-585px, 0);
+            transform: translate(-585px, 0);
   }
   .id7-right-border {
-    -webkit-transform: translate(590px, 0);
-        -ms-transform: translate(590px, 0);
-         -o-transform: translate(590px, 0);
-            transform: translate(590px, 0);
+    -webkit-transform: translate(585px, 0);
+        -ms-transform: translate(585px, 0);
+         -o-transform: translate(585px, 0);
+            transform: translate(585px, 0);
   }
 }
 @media (min-width: 1920px), (min-height: 1200px) {
@@ -7847,8 +7847,8 @@ body {
 @media (min-width: 768px) {
   .id7-masthead {
     background-image: url("../images/masthead-logo-bleed-sm.png");
-    -webkit-background-size: 1180px 300px;
-            background-size: 1180px 300px;
+    -webkit-background-size: 1170px 300px;
+            background-size: 1170px 300px;
   }
   .id7-masthead .id7-logo-row {
     height: 80px;
@@ -7925,17 +7925,17 @@ body {
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-header-text h1.affix {
-    width: 760px;
+    width: 750px;
   }
 }
 @media (min-width: 992px) {
   .id7-masthead .id7-header-text h1.affix {
-    width: 980px;
+    width: 970px;
   }
 }
 @media (min-width: 1200px) {
   .id7-masthead .id7-header-text h1.affix {
-    width: 1180px;
+    width: 1170px;
   }
 }
 @media (max-width: 767px) {
@@ -8130,18 +8130,18 @@ body {
 .id7-homepage-layout .id7-header-image-container .carousel > .carousel-inner > .item {
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  -webkit-background-size: 760px 242px;
-          background-size: 760px 242px;
+  -webkit-background-size: 750px 240px;
+          background-size: 750px 240px;
 }
 @media (min-width: 768px) {
   .id7-homepage-layout .id7-header-image-container {
-    min-height: 242px;
+    min-height: 240px;
   }
   .id7-homepage-layout .id7-header-image-container,
   .id7-homepage-layout .id7-header-image-container .carousel > .carousel-inner > .item {
     background-position: center bottom;
-    -webkit-background-size: 760px 242px;
-            background-size: 760px 242px;
+    -webkit-background-size: 750px 240px;
+            background-size: 750px 240px;
   }
 }
 @media (min-width: 992px) {
@@ -8151,8 +8151,8 @@ body {
   .id7-homepage-layout .id7-header-image-container,
   .id7-homepage-layout .id7-header-image-container .carousel > .carousel-inner > .item {
     background-position: center bottom;
-    -webkit-background-size: 980px 311px;
-            background-size: 980px 311px;
+    -webkit-background-size: 970px 311px;
+            background-size: 970px 311px;
   }
 }
 @media (min-width: 1200px) {
@@ -8162,8 +8162,8 @@ body {
   .id7-homepage-layout .id7-header-image-container,
   .id7-homepage-layout .id7-header-image-container .carousel > .carousel-inner > .item {
     background-position: center bottom;
-    -webkit-background-size: 1180px 375px;
-            background-size: 1180px 375px;
+    -webkit-background-size: 1170px 375px;
+            background-size: 1170px 375px;
   }
 }
 .id7-header-image-container .strapline {
@@ -8342,17 +8342,17 @@ body {
 }
 @media (min-width: 768px) {
   .id7-navigation.affix {
-    width: 760px;
+    width: 750px;
   }
 }
 @media (min-width: 992px) {
   .id7-navigation.affix {
-    width: 980px;
+    width: 970px;
   }
 }
 @media (min-width: 1200px) {
   .id7-navigation.affix {
-    width: 1180px;
+    width: 1170px;
   }
 }
 .id7-navigation .dropdown-menu {
@@ -8550,17 +8550,17 @@ main > header {
 }
 @media (min-width: 768px) {
   main > header {
-    width: 760px;
+    width: 750px;
   }
 }
 @media (min-width: 992px) {
   main > header {
-    width: 980px;
+    width: 970px;
   }
 }
 @media (min-width: 1200px) {
   main > header {
-    width: 1180px;
+    width: 1170px;
   }
 }
 main > header > .navbar-header,
@@ -8586,17 +8586,17 @@ main > .id7-main-content {
 }
 @media (min-width: 768px) {
   main > .id7-main-content {
-    width: 760px;
+    width: 750px;
   }
 }
 @media (min-width: 992px) {
   main > .id7-main-content {
-    width: 980px;
+    width: 970px;
   }
 }
 @media (min-width: 1200px) {
   main > .id7-main-content {
-    width: 1180px;
+    width: 1170px;
   }
 }
 main > .id7-main-content > .navbar-header,

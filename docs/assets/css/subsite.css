@@ -296,12 +296,12 @@ main .nav-flex > li {
 }
 @media (min-width: 768px) {
   main .nav-flex > li {
-    width: 55px;
+    width: 54px;
   }
 }
 @media (min-width: 992px) {
   main .nav-flex > li {
-    width: 36px;
+    width: 35px;
   }
 }
 @media (min-width: 1200px) {

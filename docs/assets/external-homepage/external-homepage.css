@@ -242,21 +242,21 @@ main > .id7-main-content {
   .id7-utility-bar > nav,
   .id7-masthead,
   .id7-navigation > .navbar {
-    width: 760px;
+    width: 750px;
   }
 }
 @media (min-width: 992px) {
   .id7-utility-bar > nav,
   .id7-masthead,
   .id7-navigation > .navbar {
-    width: 980px;
+    width: 970px;
   }
 }
 @media (min-width: 1200px) {
   .id7-utility-bar > nav,
   .id7-masthead,
   .id7-navigation > .navbar {
-    width: 1180px;
+    width: 1170px;
   }
 }
 .id7-masthead .id7-logo-column {
@@ -287,19 +287,19 @@ main > .id7-main-content {
   background-image: url("/dist/images/masthead-logo-bleed-homepage-xs.png");
   background-position: 0 24px;
   background-repeat: no-repeat;
-  background-size: 760px 300px;
+  background-size: 750px 300px;
 }
 @media (min-width: 768px) {
   .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-homepage-sm.png");
-    background-size: 980px 80px;
+    background-size: 970px 80px;
     background-position: center 24px;
   }
 }
 @media (min-width: 992px) {
   .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-homepage-md.png");
-    background-size: 1180px 80px;
+    background-size: 1170px 80px;
   }
 }
 @media (min-width: 1200px) {
@@ -776,7 +776,7 @@ main > .id7-main-content {
   .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
   .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
   .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
-    width: 380px;
+    width: 375px;
   }
 }
 @media (min-width: 768px) and (min-width: 992px) {
@@ -788,7 +788,7 @@ main > .id7-main-content {
   .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
   .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
   .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
-    width: 490px;
+    width: 485px;
   }
 }
 @media (min-width: 768px) and (min-width: 1200px) {
@@ -800,7 +800,7 @@ main > .id7-main-content {
   .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
   .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
   .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
-    width: 590px;
+    width: 585px;
   }
 }
 .jumbotron h2 {
