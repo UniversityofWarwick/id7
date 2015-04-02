@@ -259,6 +259,9 @@ main > .id7-main-content {
     width: 1170px;
   }
 }
+.id7-masthead {
+  height: auto;
+}
 .id7-masthead .id7-logo-column {
   position: relative;
   min-height: 1px;
