@@ -31,7 +31,10 @@ id7/
 │   ├── id7.min.css
 │   ├── id7-default-theme.css
 │   ├── id7-default-theme.css.map
-│   └── id7-default-theme.min.css
+│   ├── id7-default-theme.min.css
+│   ├── id6a.css
+│   ├── id6a.css.map
+│   └── id6a.min.css
 ├── js/
 │   ├── vendor/
 │   │   ├── html5shiv-3.7.2.min.js

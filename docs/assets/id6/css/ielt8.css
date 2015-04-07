@@ -1,0 +1,36 @@
+/* spacer pipes are collapsed in IElt8 */
+#warwick-site-links li.spacer,
+#utility-bar li.spacer,
+#footer-utility li.spacer {
+  padding: 0 0.3em;
+}
+#search-container #search-box {
+  margin-top: 7px;
+}
+#search-container #search-button {
+  position: relative;
+  z-index: auto;
+  top: -1px;
+}
+/* edit menu appears with no width */
+#edit-tool-menu {
+  width: 13em;
+}
+/* non-scrolling vertical navigation doesn't work, position: fixed cancels out the float: left */
+#navigation.fixed {
+  position: static;
+  z-index: auto;
+  top: auto;
+  bottom: auto;
+}
+#navigation.fixed-bottom {
+  position: static;
+  z-index: auto;
+  bottom: auto;
+  top: auto;
+}
+/* cancels out position:relative added for fixed navigation */
+#navigation-and-content,
+#navigation-wrapper.vwrap {
+  position: static;
+}

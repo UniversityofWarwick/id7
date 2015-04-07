@@ -1,0 +1,212 @@
+body {
+  font-size: 13px;
+  font-family: "Trebuchet MS", Trebuchet, sans-serif;
+  letter-spacing: normal;
+  word-spacing: normal;
+  font-weight: normal;
+}
+#masthead {
+  /* SBTWO-4676 SBTWO-4677 Elements in the masthead aren't part of the site design, always display them in Calibri */
+  font-family: Calibri, "Bitstream Vera Sans", "Trebuchet MS", Trebuchet, sans-serif;
+  font-size: 12px;
+}
+#main-content {
+  line-height: 20px;
+}
+#main-content ul,
+#main-content ol {
+  font-size: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+#site-header-container {
+  font-family: Georgia, "Liberation Serif", serif;
+  font-size: 52px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: -1px;
+  line-height: normal;
+}
+#site-header-container h1#site-header {
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+#site-header-container h2#strapline {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 0;
+}
+#header.header-small #site-header-container h1#site-header {
+  font-size: 32px;
+}
+pre,
+code,
+kbd,
+samp,
+pre,
+tt,
+var {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+}
+pre,
+code {
+  line-height: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, "Liberation Serif", serif;
+  line-height: 1.4em;
+}
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: normal;
+}
+h2 {
+  font-size: 21px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: normal;
+  margin: 0 0 0.3em 0;
+  padding: 0;
+}
+h3 {
+  font-size: 19px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: normal;
+  margin: 0 0 0.2em 0;
+  padding: 0;
+}
+h4 {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: normal;
+  margin: 0 0 0.2em 0;
+  padding: 0;
+}
+h5 {
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: normal;
+  margin: 0 0 -0.1em 0;
+  padding: 0;
+}
+h6 {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: normal;
+  margin: 0 0 0em 0;
+  padding: 0;
+}
+blockquote {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+#navigation {
+  font-size: 13px;
+}
+#navigation.horizontal .fixed-width ul#primary-navigation .title.rendered-link-content {
+  font-size: 13px;
+}
+#navigation .description {
+  font-size: 11px;
+  line-height: 1.2em;
+}
+#common-footer {
+  font-size: 11px;
+}
+#common-footer ul,
+#common-footer ol {
+  font-size: 11px;
+}
+#common-footer .page-iterator,
+#common-footer #page-footer-elements,
+#common-footer #footer-utility {
+  margin-top: 0.5em;
+}
+@media screen and (max-width: 959px) {
+  #site-header-container h1#site-header {
+    font-size: 21px !important;
+    letter-spacing: normal !important;
+    line-height: normal !important;
+  }
+  h1 {
+    font-size: 21px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: normal;
+  }
+  h2 {
+    font-size: 19px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: normal;
+    margin: 0 0 0.2em 0;
+    padding: 0;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: normal;
+    margin: 0 0 0.2em 0;
+    padding: 0;
+  }
+  h4 {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: normal;
+    margin: 0 0 -0.1em 0;
+    padding: 0;
+  }
+  h5 {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: normal;
+    margin: 0 0 0em 0;
+    padding: 0;
+  }
+  h6 {
+    font-size: 13px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: normal;
+  }
+  #masthead {
+    font-size: 13px;
+  }
+  #common-footer {
+    font-size: 13px;
+  }
+  #common-footer ul,
+  #common-footer ol {
+    font-size: 13px;
+  }
+}

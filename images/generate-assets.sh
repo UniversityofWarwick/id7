@@ -14,3 +14,6 @@
 ./svg-to-png.sh masthead-logo-bleed-homepage-md.svg 1180 80 masthead-logo-bleed-homepage-md.png
 ./svg-to-png.sh masthead-logo-bleed-homepage-lg@2x.svg 6000 160 masthead-logo-bleed-homepage-lg@2x.png
 ./svg-to-png.sh masthead-logo-bleed-homepage-lg.svg 3000 80 masthead-logo-bleed-homepage-lg.png
+
+./svg-to-png.sh id6a-logotype@2x.svg 272 52 id6a-logotype@2x.png false
+./svg-to-png.sh id6a-logotype.svg 136 26 id6a-logotype.png false
