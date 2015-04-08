@@ -24,17 +24,3 @@ a {
 /* Tell IE to use Bicupic interpolation, makes resized images look better */
 img { -ms-interpolation-mode: bicubic; }
 
-/* Format glossary links SBTWO-7073 */
-a.glossaryDefinition{
-  &:link, &:visited { cursor: help; text-decoration: none; border-bottom: 1px dotted #000; }
-}
-
-/* Format acronym tags SBTWO-7072 */
-abbr, acronym {
-  letter-spacing: .1em;
-}
-
-abbr[title], acronym[title], dfn[title] {
-  border-bottom: 1px dotted black;
-  cursor: help;
-}
