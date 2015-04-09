@@ -30,21 +30,15 @@ h6,
 .h6 {
   color: #6ca4d4;
 }
-a,
-a:link,
-a:visited {
+a:not(.btn),
+a:link:not(.btn),
+a:visited:not(.btn) {
   color: #6ca4d4;
   text-decoration: none;
 }
-a:hover,
-a:link:hover,
-a:visited:hover,
-a:focus,
-a:link:focus,
-a:visited:focus,
-a:active,
-a:link:active,
-a:visited:active {
+a:hover:not(.btn),
+a:focus:not(.btn),
+a:active:not(.btn) {
   color: #5093cc;
   text-decoration: underline;
 }
@@ -403,21 +397,15 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   background: #d3d3d3;
   color: #000000;
 }
-.id7-site-footer a,
-.id7-site-footer a:link,
-.id7-site-footer a:visited {
+.id7-site-footer a:not(.btn),
+.id7-site-footer a:link:not(.btn),
+.id7-site-footer a:visited:not(.btn) {
   color: #000000;
   text-decoration: none;
 }
-.id7-site-footer a:hover,
-.id7-site-footer a:link:hover,
-.id7-site-footer a:visited:hover,
-.id7-site-footer a:focus,
-.id7-site-footer a:link:focus,
-.id7-site-footer a:visited:focus,
-.id7-site-footer a:active,
-.id7-site-footer a:link:active,
-.id7-site-footer a:visited:active {
+.id7-site-footer a:hover:not(.btn),
+.id7-site-footer a:focus:not(.btn),
+.id7-site-footer a:active:not(.btn) {
   color: #000000;
   text-decoration: underline;
 }
@@ -425,21 +413,15 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   background: #6ca4d4;
   color: #ffffff;
 }
-.id7-app-footer a,
-.id7-app-footer a:link,
-.id7-app-footer a:visited {
+.id7-app-footer a:not(.btn),
+.id7-app-footer a:link:not(.btn),
+.id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
   text-decoration: none;
 }
-.id7-app-footer a:hover,
-.id7-app-footer a:link:hover,
-.id7-app-footer a:visited:hover,
-.id7-app-footer a:focus,
-.id7-app-footer a:link:focus,
-.id7-app-footer a:visited:focus,
-.id7-app-footer a:active,
-.id7-app-footer a:link:active,
-.id7-app-footer a:visited:active {
+.id7-app-footer a:hover:not(.btn),
+.id7-app-footer a:focus:not(.btn),
+.id7-app-footer a:active:not(.btn) {
   color: #ededed;
   text-decoration: underline;
 }

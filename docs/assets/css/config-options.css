@@ -15,21 +15,15 @@ body.brand-purple .h5,
 body.brand-purple .h6 {
   color: #7b428e;
 }
-body.brand-purple a,
-body.brand-purple a:link,
-body.brand-purple a:visited {
+body.brand-purple a:not(.btn),
+body.brand-purple a:link:not(.btn),
+body.brand-purple a:visited:not(.btn) {
   color: #7b428e;
   text-decoration: none;
 }
-body.brand-purple a:hover,
-body.brand-purple a:link:hover,
-body.brand-purple a:visited:hover,
-body.brand-purple a:focus,
-body.brand-purple a:link:focus,
-body.brand-purple a:visited:focus,
-body.brand-purple a:active,
-body.brand-purple a:link:active,
-body.brand-purple a:visited:active {
+body.brand-purple a:hover:not(.btn),
+body.brand-purple a:focus:not(.btn),
+body.brand-purple a:active:not(.btn) {
   color: #663776;
   text-decoration: underline;
 }
@@ -388,21 +382,15 @@ body.brand-purple .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
-body.brand-purple .id7-site-footer a,
-body.brand-purple .id7-site-footer a:link,
-body.brand-purple .id7-site-footer a:visited {
+body.brand-purple .id7-site-footer a:not(.btn),
+body.brand-purple .id7-site-footer a:link:not(.btn),
+body.brand-purple .id7-site-footer a:visited:not(.btn) {
   color: #000000;
   text-decoration: none;
 }
-body.brand-purple .id7-site-footer a:hover,
-body.brand-purple .id7-site-footer a:link:hover,
-body.brand-purple .id7-site-footer a:visited:hover,
-body.brand-purple .id7-site-footer a:focus,
-body.brand-purple .id7-site-footer a:link:focus,
-body.brand-purple .id7-site-footer a:visited:focus,
-body.brand-purple .id7-site-footer a:active,
-body.brand-purple .id7-site-footer a:link:active,
-body.brand-purple .id7-site-footer a:visited:active {
+body.brand-purple .id7-site-footer a:hover:not(.btn),
+body.brand-purple .id7-site-footer a:focus:not(.btn),
+body.brand-purple .id7-site-footer a:active:not(.btn) {
   color: #000000;
   text-decoration: underline;
 }
@@ -410,21 +398,15 @@ body.brand-purple .id7-app-footer {
   background: #7b428e;
   color: #ffffff;
 }
-body.brand-purple .id7-app-footer a,
-body.brand-purple .id7-app-footer a:link,
-body.brand-purple .id7-app-footer a:visited {
+body.brand-purple .id7-app-footer a:not(.btn),
+body.brand-purple .id7-app-footer a:link:not(.btn),
+body.brand-purple .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
   text-decoration: none;
 }
-body.brand-purple .id7-app-footer a:hover,
-body.brand-purple .id7-app-footer a:link:hover,
-body.brand-purple .id7-app-footer a:visited:hover,
-body.brand-purple .id7-app-footer a:focus,
-body.brand-purple .id7-app-footer a:link:focus,
-body.brand-purple .id7-app-footer a:visited:focus,
-body.brand-purple .id7-app-footer a:active,
-body.brand-purple .id7-app-footer a:link:active,
-body.brand-purple .id7-app-footer a:visited:active {
+body.brand-purple .id7-app-footer a:hover:not(.btn),
+body.brand-purple .id7-app-footer a:focus:not(.btn),
+body.brand-purple .id7-app-footer a:active:not(.btn) {
   color: #ededed;
   text-decoration: underline;
 }
@@ -521,21 +503,15 @@ body.brand-gray .h5,
 body.brand-gray .h6 {
   color: #828c95;
 }
-body.brand-gray a,
-body.brand-gray a:link,
-body.brand-gray a:visited {
+body.brand-gray a:not(.btn),
+body.brand-gray a:link:not(.btn),
+body.brand-gray a:visited:not(.btn) {
   color: #828c95;
   text-decoration: none;
 }
-body.brand-gray a:hover,
-body.brand-gray a:link:hover,
-body.brand-gray a:visited:hover,
-body.brand-gray a:focus,
-body.brand-gray a:link:focus,
-body.brand-gray a:visited:focus,
-body.brand-gray a:active,
-body.brand-gray a:link:active,
-body.brand-gray a:visited:active {
+body.brand-gray a:hover:not(.btn),
+body.brand-gray a:focus:not(.btn),
+body.brand-gray a:active:not(.btn) {
   color: #707a84;
   text-decoration: underline;
 }
@@ -894,21 +870,15 @@ body.brand-gray .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
-body.brand-gray .id7-site-footer a,
-body.brand-gray .id7-site-footer a:link,
-body.brand-gray .id7-site-footer a:visited {
+body.brand-gray .id7-site-footer a:not(.btn),
+body.brand-gray .id7-site-footer a:link:not(.btn),
+body.brand-gray .id7-site-footer a:visited:not(.btn) {
   color: #000000;
   text-decoration: none;
 }
-body.brand-gray .id7-site-footer a:hover,
-body.brand-gray .id7-site-footer a:link:hover,
-body.brand-gray .id7-site-footer a:visited:hover,
-body.brand-gray .id7-site-footer a:focus,
-body.brand-gray .id7-site-footer a:link:focus,
-body.brand-gray .id7-site-footer a:visited:focus,
-body.brand-gray .id7-site-footer a:active,
-body.brand-gray .id7-site-footer a:link:active,
-body.brand-gray .id7-site-footer a:visited:active {
+body.brand-gray .id7-site-footer a:hover:not(.btn),
+body.brand-gray .id7-site-footer a:focus:not(.btn),
+body.brand-gray .id7-site-footer a:active:not(.btn) {
   color: #000000;
   text-decoration: underline;
 }
@@ -916,21 +886,15 @@ body.brand-gray .id7-app-footer {
   background: #828c95;
   color: #ffffff;
 }
-body.brand-gray .id7-app-footer a,
-body.brand-gray .id7-app-footer a:link,
-body.brand-gray .id7-app-footer a:visited {
+body.brand-gray .id7-app-footer a:not(.btn),
+body.brand-gray .id7-app-footer a:link:not(.btn),
+body.brand-gray .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
   text-decoration: none;
 }
-body.brand-gray .id7-app-footer a:hover,
-body.brand-gray .id7-app-footer a:link:hover,
-body.brand-gray .id7-app-footer a:visited:hover,
-body.brand-gray .id7-app-footer a:focus,
-body.brand-gray .id7-app-footer a:link:focus,
-body.brand-gray .id7-app-footer a:visited:focus,
-body.brand-gray .id7-app-footer a:active,
-body.brand-gray .id7-app-footer a:link:active,
-body.brand-gray .id7-app-footer a:visited:active {
+body.brand-gray .id7-app-footer a:hover:not(.btn),
+body.brand-gray .id7-app-footer a:focus:not(.btn),
+body.brand-gray .id7-app-footer a:active:not(.btn) {
   color: #ededed;
   text-decoration: underline;
 }
@@ -1027,21 +991,15 @@ body.brand-gold .h5,
 body.brand-gold .h6 {
   color: #dcbe2d;
 }
-body.brand-gold a,
-body.brand-gold a:link,
-body.brand-gold a:visited {
+body.brand-gold a:not(.btn),
+body.brand-gold a:link:not(.btn),
+body.brand-gold a:visited:not(.btn) {
   color: #dcbe2d;
   text-decoration: none;
 }
-body.brand-gold a:hover,
-body.brand-gold a:link:hover,
-body.brand-gold a:visited:hover,
-body.brand-gold a:focus,
-body.brand-gold a:link:focus,
-body.brand-gold a:visited:focus,
-body.brand-gold a:active,
-body.brand-gold a:link:active,
-body.brand-gold a:visited:active {
+body.brand-gold a:hover:not(.btn),
+body.brand-gold a:focus:not(.btn),
+body.brand-gold a:active:not(.btn) {
   color: #c5a821;
   text-decoration: underline;
 }
@@ -1400,21 +1358,15 @@ body.brand-gold .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
-body.brand-gold .id7-site-footer a,
-body.brand-gold .id7-site-footer a:link,
-body.brand-gold .id7-site-footer a:visited {
+body.brand-gold .id7-site-footer a:not(.btn),
+body.brand-gold .id7-site-footer a:link:not(.btn),
+body.brand-gold .id7-site-footer a:visited:not(.btn) {
   color: #000000;
   text-decoration: none;
 }
-body.brand-gold .id7-site-footer a:hover,
-body.brand-gold .id7-site-footer a:link:hover,
-body.brand-gold .id7-site-footer a:visited:hover,
-body.brand-gold .id7-site-footer a:focus,
-body.brand-gold .id7-site-footer a:link:focus,
-body.brand-gold .id7-site-footer a:visited:focus,
-body.brand-gold .id7-site-footer a:active,
-body.brand-gold .id7-site-footer a:link:active,
-body.brand-gold .id7-site-footer a:visited:active {
+body.brand-gold .id7-site-footer a:hover:not(.btn),
+body.brand-gold .id7-site-footer a:focus:not(.btn),
+body.brand-gold .id7-site-footer a:active:not(.btn) {
   color: #000000;
   text-decoration: underline;
 }
@@ -1422,21 +1374,15 @@ body.brand-gold .id7-app-footer {
   background: #dcbe2d;
   color: #000000;
 }
-body.brand-gold .id7-app-footer a,
-body.brand-gold .id7-app-footer a:link,
-body.brand-gold .id7-app-footer a:visited {
+body.brand-gold .id7-app-footer a:not(.btn),
+body.brand-gold .id7-app-footer a:link:not(.btn),
+body.brand-gold .id7-app-footer a:visited:not(.btn) {
   color: #000000;
   text-decoration: none;
 }
-body.brand-gold .id7-app-footer a:hover,
-body.brand-gold .id7-app-footer a:link:hover,
-body.brand-gold .id7-app-footer a:visited:hover,
-body.brand-gold .id7-app-footer a:focus,
-body.brand-gold .id7-app-footer a:link:focus,
-body.brand-gold .id7-app-footer a:visited:focus,
-body.brand-gold .id7-app-footer a:active,
-body.brand-gold .id7-app-footer a:link:active,
-body.brand-gold .id7-app-footer a:visited:active {
+body.brand-gold .id7-app-footer a:hover:not(.btn),
+body.brand-gold .id7-app-footer a:focus:not(.btn),
+body.brand-gold .id7-app-footer a:active:not(.btn) {
   color: #000000;
   text-decoration: underline;
 }
@@ -1533,21 +1479,15 @@ body.brand-blue .h5,
 body.brand-blue .h6 {
   color: #6ca4d4;
 }
-body.brand-blue a,
-body.brand-blue a:link,
-body.brand-blue a:visited {
+body.brand-blue a:not(.btn),
+body.brand-blue a:link:not(.btn),
+body.brand-blue a:visited:not(.btn) {
   color: #6ca4d4;
   text-decoration: none;
 }
-body.brand-blue a:hover,
-body.brand-blue a:link:hover,
-body.brand-blue a:visited:hover,
-body.brand-blue a:focus,
-body.brand-blue a:link:focus,
-body.brand-blue a:visited:focus,
-body.brand-blue a:active,
-body.brand-blue a:link:active,
-body.brand-blue a:visited:active {
+body.brand-blue a:hover:not(.btn),
+body.brand-blue a:focus:not(.btn),
+body.brand-blue a:active:not(.btn) {
   color: #5093cc;
   text-decoration: underline;
 }
@@ -1906,21 +1846,15 @@ body.brand-blue .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
-body.brand-blue .id7-site-footer a,
-body.brand-blue .id7-site-footer a:link,
-body.brand-blue .id7-site-footer a:visited {
+body.brand-blue .id7-site-footer a:not(.btn),
+body.brand-blue .id7-site-footer a:link:not(.btn),
+body.brand-blue .id7-site-footer a:visited:not(.btn) {
   color: #000000;
   text-decoration: none;
 }
-body.brand-blue .id7-site-footer a:hover,
-body.brand-blue .id7-site-footer a:link:hover,
-body.brand-blue .id7-site-footer a:visited:hover,
-body.brand-blue .id7-site-footer a:focus,
-body.brand-blue .id7-site-footer a:link:focus,
-body.brand-blue .id7-site-footer a:visited:focus,
-body.brand-blue .id7-site-footer a:active,
-body.brand-blue .id7-site-footer a:link:active,
-body.brand-blue .id7-site-footer a:visited:active {
+body.brand-blue .id7-site-footer a:hover:not(.btn),
+body.brand-blue .id7-site-footer a:focus:not(.btn),
+body.brand-blue .id7-site-footer a:active:not(.btn) {
   color: #000000;
   text-decoration: underline;
 }
@@ -1928,21 +1862,15 @@ body.brand-blue .id7-app-footer {
   background: #6ca4d4;
   color: #ffffff;
 }
-body.brand-blue .id7-app-footer a,
-body.brand-blue .id7-app-footer a:link,
-body.brand-blue .id7-app-footer a:visited {
+body.brand-blue .id7-app-footer a:not(.btn),
+body.brand-blue .id7-app-footer a:link:not(.btn),
+body.brand-blue .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
   text-decoration: none;
 }
-body.brand-blue .id7-app-footer a:hover,
-body.brand-blue .id7-app-footer a:link:hover,
-body.brand-blue .id7-app-footer a:visited:hover,
-body.brand-blue .id7-app-footer a:focus,
-body.brand-blue .id7-app-footer a:link:focus,
-body.brand-blue .id7-app-footer a:visited:focus,
-body.brand-blue .id7-app-footer a:active,
-body.brand-blue .id7-app-footer a:link:active,
-body.brand-blue .id7-app-footer a:visited:active {
+body.brand-blue .id7-app-footer a:hover:not(.btn),
+body.brand-blue .id7-app-footer a:focus:not(.btn),
+body.brand-blue .id7-app-footer a:active:not(.btn) {
   color: #ededed;
   text-decoration: underline;
 }
@@ -2039,21 +1967,15 @@ body.brand-orange .h5,
 body.brand-orange .h6 {
   color: #f1863c;
 }
-body.brand-orange a,
-body.brand-orange a:link,
-body.brand-orange a:visited {
+body.brand-orange a:not(.btn),
+body.brand-orange a:link:not(.btn),
+body.brand-orange a:visited:not(.btn) {
   color: #f1863c;
   text-decoration: none;
 }
-body.brand-orange a:hover,
-body.brand-orange a:link:hover,
-body.brand-orange a:visited:hover,
-body.brand-orange a:focus,
-body.brand-orange a:link:focus,
-body.brand-orange a:visited:focus,
-body.brand-orange a:active,
-body.brand-orange a:link:active,
-body.brand-orange a:visited:active {
+body.brand-orange a:hover:not(.btn),
+body.brand-orange a:focus:not(.btn),
+body.brand-orange a:active:not(.btn) {
   color: #ef711b;
   text-decoration: underline;
 }
@@ -2412,21 +2334,15 @@ body.brand-orange .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
-body.brand-orange .id7-site-footer a,
-body.brand-orange .id7-site-footer a:link,
-body.brand-orange .id7-site-footer a:visited {
+body.brand-orange .id7-site-footer a:not(.btn),
+body.brand-orange .id7-site-footer a:link:not(.btn),
+body.brand-orange .id7-site-footer a:visited:not(.btn) {
   color: #000000;
   text-decoration: none;
 }
-body.brand-orange .id7-site-footer a:hover,
-body.brand-orange .id7-site-footer a:link:hover,
-body.brand-orange .id7-site-footer a:visited:hover,
-body.brand-orange .id7-site-footer a:focus,
-body.brand-orange .id7-site-footer a:link:focus,
-body.brand-orange .id7-site-footer a:visited:focus,
-body.brand-orange .id7-site-footer a:active,
-body.brand-orange .id7-site-footer a:link:active,
-body.brand-orange .id7-site-footer a:visited:active {
+body.brand-orange .id7-site-footer a:hover:not(.btn),
+body.brand-orange .id7-site-footer a:focus:not(.btn),
+body.brand-orange .id7-site-footer a:active:not(.btn) {
   color: #000000;
   text-decoration: underline;
 }
@@ -2434,21 +2350,15 @@ body.brand-orange .id7-app-footer {
   background: #f1863c;
   color: #ffffff;
 }
-body.brand-orange .id7-app-footer a,
-body.brand-orange .id7-app-footer a:link,
-body.brand-orange .id7-app-footer a:visited {
+body.brand-orange .id7-app-footer a:not(.btn),
+body.brand-orange .id7-app-footer a:link:not(.btn),
+body.brand-orange .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
   text-decoration: none;
 }
-body.brand-orange .id7-app-footer a:hover,
-body.brand-orange .id7-app-footer a:link:hover,
-body.brand-orange .id7-app-footer a:visited:hover,
-body.brand-orange .id7-app-footer a:focus,
-body.brand-orange .id7-app-footer a:link:focus,
-body.brand-orange .id7-app-footer a:visited:focus,
-body.brand-orange .id7-app-footer a:active,
-body.brand-orange .id7-app-footer a:link:active,
-body.brand-orange .id7-app-footer a:visited:active {
+body.brand-orange .id7-app-footer a:hover:not(.btn),
+body.brand-orange .id7-app-footer a:focus:not(.btn),
+body.brand-orange .id7-app-footer a:active:not(.btn) {
   color: #ededed;
   text-decoration: underline;
 }
@@ -2545,21 +2455,15 @@ body.brand-green .h5,
 body.brand-green .h6 {
   color: #a5ab2a;
 }
-body.brand-green a,
-body.brand-green a:link,
-body.brand-green a:visited {
+body.brand-green a:not(.btn),
+body.brand-green a:link:not(.btn),
+body.brand-green a:visited:not(.btn) {
   color: #a5ab2a;
   text-decoration: none;
 }
-body.brand-green a:hover,
-body.brand-green a:link:hover,
-body.brand-green a:visited:hover,
-body.brand-green a:focus,
-body.brand-green a:link:focus,
-body.brand-green a:visited:focus,
-body.brand-green a:active,
-body.brand-green a:link:active,
-body.brand-green a:visited:active {
+body.brand-green a:hover:not(.btn),
+body.brand-green a:focus:not(.btn),
+body.brand-green a:active:not(.btn) {
   color: #898e23;
   text-decoration: underline;
 }
@@ -2918,21 +2822,15 @@ body.brand-green .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
-body.brand-green .id7-site-footer a,
-body.brand-green .id7-site-footer a:link,
-body.brand-green .id7-site-footer a:visited {
+body.brand-green .id7-site-footer a:not(.btn),
+body.brand-green .id7-site-footer a:link:not(.btn),
+body.brand-green .id7-site-footer a:visited:not(.btn) {
   color: #000000;
   text-decoration: none;
 }
-body.brand-green .id7-site-footer a:hover,
-body.brand-green .id7-site-footer a:link:hover,
-body.brand-green .id7-site-footer a:visited:hover,
-body.brand-green .id7-site-footer a:focus,
-body.brand-green .id7-site-footer a:link:focus,
-body.brand-green .id7-site-footer a:visited:focus,
-body.brand-green .id7-site-footer a:active,
-body.brand-green .id7-site-footer a:link:active,
-body.brand-green .id7-site-footer a:visited:active {
+body.brand-green .id7-site-footer a:hover:not(.btn),
+body.brand-green .id7-site-footer a:focus:not(.btn),
+body.brand-green .id7-site-footer a:active:not(.btn) {
   color: #000000;
   text-decoration: underline;
 }
@@ -2940,21 +2838,15 @@ body.brand-green .id7-app-footer {
   background: #a5ab2a;
   color: #ffffff;
 }
-body.brand-green .id7-app-footer a,
-body.brand-green .id7-app-footer a:link,
-body.brand-green .id7-app-footer a:visited {
+body.brand-green .id7-app-footer a:not(.btn),
+body.brand-green .id7-app-footer a:link:not(.btn),
+body.brand-green .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
   text-decoration: none;
 }
-body.brand-green .id7-app-footer a:hover,
-body.brand-green .id7-app-footer a:link:hover,
-body.brand-green .id7-app-footer a:visited:hover,
-body.brand-green .id7-app-footer a:focus,
-body.brand-green .id7-app-footer a:link:focus,
-body.brand-green .id7-app-footer a:visited:focus,
-body.brand-green .id7-app-footer a:active,
-body.brand-green .id7-app-footer a:link:active,
-body.brand-green .id7-app-footer a:visited:active {
+body.brand-green .id7-app-footer a:hover:not(.btn),
+body.brand-green .id7-app-footer a:focus:not(.btn),
+body.brand-green .id7-app-footer a:active:not(.btn) {
   color: #ededed;
   text-decoration: underline;
 }
@@ -3051,21 +2943,15 @@ body.brand-red .h5,
 body.brand-red .h6 {
   color: #bd3f4b;
 }
-body.brand-red a,
-body.brand-red a:link,
-body.brand-red a:visited {
+body.brand-red a:not(.btn),
+body.brand-red a:link:not(.btn),
+body.brand-red a:visited:not(.btn) {
   color: #bd3f4b;
   text-decoration: none;
 }
-body.brand-red a:hover,
-body.brand-red a:link:hover,
-body.brand-red a:visited:hover,
-body.brand-red a:focus,
-body.brand-red a:link:focus,
-body.brand-red a:visited:focus,
-body.brand-red a:active,
-body.brand-red a:link:active,
-body.brand-red a:visited:active {
+body.brand-red a:hover:not(.btn),
+body.brand-red a:focus:not(.btn),
+body.brand-red a:active:not(.btn) {
   color: #a23640;
   text-decoration: underline;
 }
@@ -3424,21 +3310,15 @@ body.brand-red .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
-body.brand-red .id7-site-footer a,
-body.brand-red .id7-site-footer a:link,
-body.brand-red .id7-site-footer a:visited {
+body.brand-red .id7-site-footer a:not(.btn),
+body.brand-red .id7-site-footer a:link:not(.btn),
+body.brand-red .id7-site-footer a:visited:not(.btn) {
   color: #000000;
   text-decoration: none;
 }
-body.brand-red .id7-site-footer a:hover,
-body.brand-red .id7-site-footer a:link:hover,
-body.brand-red .id7-site-footer a:visited:hover,
-body.brand-red .id7-site-footer a:focus,
-body.brand-red .id7-site-footer a:link:focus,
-body.brand-red .id7-site-footer a:visited:focus,
-body.brand-red .id7-site-footer a:active,
-body.brand-red .id7-site-footer a:link:active,
-body.brand-red .id7-site-footer a:visited:active {
+body.brand-red .id7-site-footer a:hover:not(.btn),
+body.brand-red .id7-site-footer a:focus:not(.btn),
+body.brand-red .id7-site-footer a:active:not(.btn) {
   color: #000000;
   text-decoration: underline;
 }
@@ -3446,21 +3326,15 @@ body.brand-red .id7-app-footer {
   background: #bd3f4b;
   color: #ffffff;
 }
-body.brand-red .id7-app-footer a,
-body.brand-red .id7-app-footer a:link,
-body.brand-red .id7-app-footer a:visited {
+body.brand-red .id7-app-footer a:not(.btn),
+body.brand-red .id7-app-footer a:link:not(.btn),
+body.brand-red .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
   text-decoration: none;
 }
-body.brand-red .id7-app-footer a:hover,
-body.brand-red .id7-app-footer a:link:hover,
-body.brand-red .id7-app-footer a:visited:hover,
-body.brand-red .id7-app-footer a:focus,
-body.brand-red .id7-app-footer a:link:focus,
-body.brand-red .id7-app-footer a:visited:focus,
-body.brand-red .id7-app-footer a:active,
-body.brand-red .id7-app-footer a:link:active,
-body.brand-red .id7-app-footer a:visited:active {
+body.brand-red .id7-app-footer a:hover:not(.btn),
+body.brand-red .id7-app-footer a:focus:not(.btn),
+body.brand-red .id7-app-footer a:active:not(.btn) {
   color: #ededed;
   text-decoration: underline;
 }

@@ -60,21 +60,15 @@ body .h5,
 body .h6 {
   color: #7b428e;
 }
-body a,
-body a:link,
-body a:visited {
+body a:not(.btn),
+body a:link:not(.btn),
+body a:visited:not(.btn) {
   color: #7b428e;
   text-decoration: none;
 }
-body a:hover,
-body a:link:hover,
-body a:visited:hover,
-body a:focus,
-body a:link:focus,
-body a:visited:focus,
-body a:active,
-body a:link:active,
-body a:visited:active {
+body a:hover:not(.btn),
+body a:focus:not(.btn),
+body a:active:not(.btn) {
   color: #663776;
   text-decoration: underline;
 }
@@ -433,21 +427,15 @@ body .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
-body .id7-site-footer a,
-body .id7-site-footer a:link,
-body .id7-site-footer a:visited {
+body .id7-site-footer a:not(.btn),
+body .id7-site-footer a:link:not(.btn),
+body .id7-site-footer a:visited:not(.btn) {
   color: #000000;
   text-decoration: none;
 }
-body .id7-site-footer a:hover,
-body .id7-site-footer a:link:hover,
-body .id7-site-footer a:visited:hover,
-body .id7-site-footer a:focus,
-body .id7-site-footer a:link:focus,
-body .id7-site-footer a:visited:focus,
-body .id7-site-footer a:active,
-body .id7-site-footer a:link:active,
-body .id7-site-footer a:visited:active {
+body .id7-site-footer a:hover:not(.btn),
+body .id7-site-footer a:focus:not(.btn),
+body .id7-site-footer a:active:not(.btn) {
   color: #000000;
   text-decoration: underline;
 }
@@ -455,21 +443,15 @@ body .id7-app-footer {
   background: #7b428e;
   color: #ffffff;
 }
-body .id7-app-footer a,
-body .id7-app-footer a:link,
-body .id7-app-footer a:visited {
+body .id7-app-footer a:not(.btn),
+body .id7-app-footer a:link:not(.btn),
+body .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
   text-decoration: none;
 }
-body .id7-app-footer a:hover,
-body .id7-app-footer a:link:hover,
-body .id7-app-footer a:visited:hover,
-body .id7-app-footer a:focus,
-body .id7-app-footer a:link:focus,
-body .id7-app-footer a:visited:focus,
-body .id7-app-footer a:active,
-body .id7-app-footer a:link:active,
-body .id7-app-footer a:visited:active {
+body .id7-app-footer a:hover:not(.btn),
+body .id7-app-footer a:focus:not(.btn),
+body .id7-app-footer a:active:not(.btn) {
   color: #ededed;
   text-decoration: underline;
 }

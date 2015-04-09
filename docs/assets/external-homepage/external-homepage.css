@@ -405,21 +405,15 @@ main > .id7-main-content {
   height: 100vh;
   max-height: 1200px;
 }
-.jumbotron a,
-.jumbotron a:link,
-.jumbotron a:visited {
+.jumbotron a:not(.btn),
+.jumbotron a:link:not(.btn),
+.jumbotron a:visited:not(.btn) {
   color: #ffffff;
   text-decoration: none;
 }
-.jumbotron a:hover,
-.jumbotron a:link:hover,
-.jumbotron a:visited:hover,
-.jumbotron a:focus,
-.jumbotron a:link:focus,
-.jumbotron a:visited:focus,
-.jumbotron a:active,
-.jumbotron a:link:active,
-.jumbotron a:visited:active {
+.jumbotron a:hover:not(.btn),
+.jumbotron a:focus:not(.btn),
+.jumbotron a:active:not(.btn) {
   color: #ededed;
   text-decoration: underline;
 }
@@ -867,21 +861,15 @@ main > .id7-main-content {
     display: none !important;
   }
 }
-.carousel-nav a,
-.carousel-nav a:link,
-.carousel-nav a:visited {
+.carousel-nav a:not(.btn),
+.carousel-nav a:link:not(.btn),
+.carousel-nav a:visited:not(.btn) {
   color: #ffffff;
   text-decoration: none;
 }
-.carousel-nav a:hover,
-.carousel-nav a:link:hover,
-.carousel-nav a:visited:hover,
-.carousel-nav a:focus,
-.carousel-nav a:link:focus,
-.carousel-nav a:visited:focus,
-.carousel-nav a:active,
-.carousel-nav a:link:active,
-.carousel-nav a:visited:active {
+.carousel-nav a:hover:not(.btn),
+.carousel-nav a:focus:not(.btn),
+.carousel-nav a:active:not(.btn) {
   color: #ededed;
   text-decoration: underline;
 }

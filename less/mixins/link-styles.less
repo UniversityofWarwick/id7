@@ -1,31 +1,32 @@
 .link-colour(@base) when not (@base = inherit) {
-  a,
-  a:link,
-  a:visited {
-    color: @base;
-    text-decoration: none;
 
-    &:hover,
-    &:focus,
-    &:active {
+  a, a:link, a:visited {
+    &:not(.btn) {
+      color: @base;
+      text-decoration: none;
+    }
+  }
+  a:hover, a:focus, a:active {
+    &:not(.btn) {
       color: darken(@base, 7%);
       text-decoration: @link-hover-decoration;
     }
   }
+
 }
 
 .link-colour(@base) when (@base = inherit) {
-  a,
-  a:link,
-  a:visited {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover,
-    &:focus,
-    &:active {
+  a, a:link, a:visited {
+    &:not(.btn) {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  a:hover, a:focus, a:active {
+    &:not(.btn) {
       color: inherit;
       text-decoration: @link-hover-decoration;
     }
   }
+
 }
