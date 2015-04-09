@@ -10291,7 +10291,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         '</div>',
         '<div class="actions">',
         '<div class="btn-group btn-group-justified">',
-        '<div class="btn-group">',
+        '<div class="btn-group sign-out">',
         '<a href="<%- logoutlink %>" class="btn btn-default">Sign out</a>',
         '</div>',
         '</div>',
@@ -10299,7 +10299,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
       ].join('')),
       Action: _.template([
         '<div class="btn-group">',
-        '<a href="<%- href %>" class="btn btn-default"><%= title %></a>',
+        '<a href="<%- href %>" class="btn btn-default <%= classes %>"><%= title %></a>',
         '</div>'
       ].join(''))
     },
@@ -10365,6 +10365,10 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
             break;
           case 'resizeIframe':
             $popover.find('.account-info iframe').height(data.height);
+            break;
+          case 'signedOut':
+            var loginlink = this.options.loginlink;
+            $popover.find('.actions > .btn-group > .sign-out').replaceWith(Config.Templates.Action({href:loginlink, classes:'sign-in', title:'Sign in'}));
             break;
           default:
             console.error('Unexpected message type: ' + messageType);
