@@ -35,7 +35,7 @@
 #search-container ul.index-section li.active a:not(.btn),
 #search-container ul.index-section li.active a:link:not(.btn),
 #search-container ul.index-section li.active a:visited:not(.btn) {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 #search-container ul.index-section li.active a:hover:not(.btn),

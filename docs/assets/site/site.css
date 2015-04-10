@@ -226,7 +226,7 @@ body .navbar-secondary .navbar-nav > li > a:focus {
   background: none;
 }
 body .navbar-secondary .navbar-nav > li.active.next-secondary::before {
-  border-bottom-color: #ffffff;
+  border-bottom-color: white;
 }
 body .navbar-secondary .navbar-nav > li.active.next-tertiary::before {
   border-bottom-color: #f8f8f8;
@@ -276,7 +276,7 @@ body .navbar-secondary .navbar-nav .dropdown-menu > .active > a {
   background-color: #b6a1bd;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu > .active > a::before {
-  border-bottom-color: #ffffff;
+  border-bottom-color: white;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a,
 body .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a:hover,
@@ -337,7 +337,7 @@ body .navbar-tertiary .navbar-nav > li > a:focus {
   background: none;
 }
 body .navbar-tertiary .navbar-nav > li.active.next-secondary::before {
-  border-bottom-color: #ffffff;
+  border-bottom-color: white;
 }
 body .navbar-tertiary .navbar-nav > li.active.next-tertiary::before {
   border-bottom-color: #f8f8f8;
@@ -387,7 +387,7 @@ body .navbar-tertiary .navbar-nav .dropdown-menu > .active > a {
   background-color: #dfdfdf;
 }
 body .navbar-tertiary .navbar-nav .dropdown-menu > .active > a::before {
-  border-bottom-color: #ffffff;
+  border-bottom-color: white;
 }
 body .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a,
 body .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a:hover,
@@ -490,7 +490,7 @@ body .carousel .carousel-indicators li.active::after {
 body .boxstyle_.box1 {
   border: 0;
   background: #e5d9e8;
-  color: #000000;
+  color: black;
 }
 body .boxstyle_.box1 h1,
 body .boxstyle_.box1 h2,
@@ -509,7 +509,7 @@ body .boxstyle_.box1 .h6 {
 body .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
-  color: #000000;
+  color: black;
 }
 body .boxstyle_.box2 h1,
 body .boxstyle_.box2 h2,

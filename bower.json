@@ -40,7 +40,7 @@
   "//": {
     "All dependencies are intentionally removed here because they're packaged for inclusion by bower anyway": "",
     "jquery": ">= 1.11.1",
-    "bootstrap": ">= 3.3.1",
+    "bootstrap": ">= 3.3.4",
     "typeahead.js": ">= 0.10.5",
     "lodash": ">= 2.4.1",
     "html5shiv": ">= 3.7.2",

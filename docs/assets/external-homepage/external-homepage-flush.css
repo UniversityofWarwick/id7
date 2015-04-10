@@ -4,7 +4,7 @@
 .navbar-fixed-top .navbar-nav a:not(.btn),
 .navbar-fixed-top .navbar-nav a:link:not(.btn),
 .navbar-fixed-top .navbar-nav a:visited:not(.btn) {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 .navbar-fixed-top .navbar-nav a:hover:not(.btn),
@@ -45,7 +45,7 @@
 .jumbotron a:not(.btn),
 .jumbotron a:link:not(.btn),
 .jumbotron a:visited:not(.btn) {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 .jumbotron a:hover:not(.btn),
@@ -188,7 +188,7 @@
 .carousel-nav a:not(.btn),
 .carousel-nav a:link:not(.btn),
 .carousel-nav a:visited:not(.btn) {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 .carousel-nav a:hover:not(.btn),

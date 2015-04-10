@@ -1,4 +1,4 @@
-/*global _:false, console:false */
+/*global _:false, console:false, JSON:false */
 
 (function ($) {
   'use strict';

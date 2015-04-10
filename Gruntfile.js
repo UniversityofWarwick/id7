@@ -63,18 +63,18 @@ module.exports = function (grunt) {
       bundle: {
         src: [
           'js/vendor/jquery-1.11.1.min.js',
-          'js/vendor/bootstrap-3.3.1/transition.js',
-          'js/vendor/bootstrap-3.3.1/alert.js',
-          'js/vendor/bootstrap-3.3.1/button.js',
-          'js/vendor/bootstrap-3.3.1/carousel.js',
-          'js/vendor/bootstrap-3.3.1/collapse.js',
-          'js/vendor/bootstrap-3.3.1/dropdown.js',
-          'js/vendor/bootstrap-3.3.1/modal.js',
-          'js/vendor/bootstrap-3.3.1/tooltip.js',
-          'js/vendor/bootstrap-3.3.1/popover.js',
-          'js/vendor/bootstrap-3.3.1/scrollspy.js',
-          'js/vendor/bootstrap-3.3.1/tab.js',
-          'js/vendor/bootstrap-3.3.1/affix.js',
+          'js/vendor/bootstrap-3.3.4/transition.js',
+          'js/vendor/bootstrap-3.3.4/alert.js',
+          'js/vendor/bootstrap-3.3.4/button.js',
+          'js/vendor/bootstrap-3.3.4/carousel.js',
+          'js/vendor/bootstrap-3.3.4/collapse.js',
+          'js/vendor/bootstrap-3.3.4/dropdown.js',
+          'js/vendor/bootstrap-3.3.4/modal.js',
+          'js/vendor/bootstrap-3.3.4/tooltip.js',
+          'js/vendor/bootstrap-3.3.4/popover.js',
+          'js/vendor/bootstrap-3.3.4/scrollspy.js',
+          'js/vendor/bootstrap-3.3.4/tab.js',
+          'js/vendor/bootstrap-3.3.4/affix.js',
           'js/vendor/typeahead.jquery-0.10.5.js',
           'js/vendor/lodash-2.4.1.js',
           'js/account-popover.jquery.js',
@@ -249,18 +249,22 @@ module.exports = function (grunt) {
 
     copy: {
       fonts: {
+        expand: true,
         src: 'fonts/*',
         dest: 'dist/'
       },
       images: {
+        expand: true,
         src: ['images/**/*', '!images/*.sh', '!images/*.svg'],
         dest: 'dist/'
       },
       vendorjs: {
+        expand: true,
         src: 'js/vendor/*',
         dest: 'dist/'
       },
       docs: {
+        expand: true,
         src: 'dist/**/*',
         dest: 'docs/'
       }

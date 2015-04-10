@@ -3,7 +3,7 @@
  */
 
 
-/*global _:false, console:false */
+/*global _:false, console:false, JSON:false */
 
 (function ($) {
   'use strict';
@@ -260,7 +260,7 @@
       affixNav: function affixNav() {
         this.$container.affix({
           offset: {
-              top: 121 // FIXME empirical magic number, only works for desktop
+            top: 121 // FIXME empirical magic number, only works for desktop
           }
         });
       },

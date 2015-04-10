@@ -53,7 +53,7 @@ main .slideshow .carousel-controls {
 main .slideshow .carousel-controls a:not(.btn),
 main .slideshow .carousel-controls a:link:not(.btn),
 main .slideshow .carousel-controls a:visited:not(.btn) {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 main .slideshow .carousel-controls a:hover:not(.btn),
@@ -65,7 +65,7 @@ main .slideshow .carousel-controls a:active:not(.btn) {
 main .boxstyle_.box1 {
   border: 0;
   background: #cab3d2;
-  color: #000000;
+  color: black;
 }
 main .boxstyle_.box1 h1,
 main .boxstyle_.box1 h2,
@@ -84,7 +84,7 @@ main .boxstyle_.box1 .h6 {
 main .boxstyle_.box2 {
   border: 0;
   background: #f2ecf4;
-  color: #000000;
+  color: black;
 }
 main .boxstyle_.box2 h1,
 main .boxstyle_.box2 h2,
@@ -103,7 +103,7 @@ main .boxstyle_.box2 .h6 {
 main .boxstyle_.box3 {
   border: 0;
   background: #e6e6e6;
-  color: #000000;
+  color: black;
 }
 main .boxstyle_.box3 h1,
 main .boxstyle_.box3 h2,
@@ -122,7 +122,7 @@ main .boxstyle_.box3 .h6 {
 main .boxstyle_.feature-image1 {
   border: 0;
   background: url(../site/site1/banner-image.jpg) top right no-repeat;
-  color: #ffffff;
+  color: white;
 }
 main .boxstyle_.feature-image1 h1,
 main .boxstyle_.feature-image1 h2,
@@ -141,7 +141,7 @@ main .boxstyle_.feature-image1 .h6 {
 main .boxstyle_.feature-image2 {
   border: 0;
   background: url(../site/site3/banner-image.jpg) top right no-repeat;
-  color: #ffffff;
+  color: white;
 }
 main .boxstyle_.feature-image2 h1,
 main .boxstyle_.feature-image2 h2,

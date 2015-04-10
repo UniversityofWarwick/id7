@@ -408,7 +408,7 @@ main > .id7-main-content {
 .jumbotron a:not(.btn),
 .jumbotron a:link:not(.btn),
 .jumbotron a:visited:not(.btn) {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 .jumbotron a:hover:not(.btn),
@@ -864,7 +864,7 @@ main > .id7-main-content {
 .carousel-nav a:not(.btn),
 .carousel-nav a:link:not(.btn),
 .carousel-nav a:visited:not(.btn) {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 .carousel-nav a:hover:not(.btn),
