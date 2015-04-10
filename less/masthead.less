@@ -69,17 +69,16 @@
     h1 {
       font-size: @id7-header-h1-font-size;
       line-height: @id7-header-h1-height;
-      margin: @id7-header-h1-margin-top 0 @id7-header-h1-margin-bottom;
+      margin: 0;
+      padding: @id7-header-h1-padding-vertical 0;
 
       &.affix {
         top: 0;
-        margin: 0 0 0 (-(@grid-gutter-width / 2));
-        padding: 5px 0 0 (@grid-gutter-width / 2);
+        margin: 0 (-(@grid-gutter-width / 2));
+        padding: @id7-header-h1-padding-vertical (@grid-gutter-width / 2);
         width: 100%;
-        height: @id7-affixed-header-height;
         z-index: 10;
         background-color: white;
-        border-bottom: solid 1px @gray-lighter;
 
         @media (min-width: @screen-sm-min) {
           width: @container-sm;

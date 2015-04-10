@@ -187,22 +187,7 @@ body .id7-navigation .navbar-primary .btn-link[disabled]:focus,
 fieldset[disabled] body .id7-navigation .navbar-primary .btn-link:focus {
   color: #ffffff;
 }
-@media (min-width: 768px) {
-  .id7-homepage-layout body .id7-navigation .navbar-primary {
-    background-color: #7b428e;
-    background-color: rgba(123, 66, 142, 0.8);
-    -webkit-transition: background-color 0.15s linear;
-    -o-transition: background-color 0.15s linear;
-    transition: background-color 0.15s linear;
-  }
-}
-.id7-homepage-layout body .id7-navigation:hover .navbar-primary {
-  background-color: #7b428e;
-}
 body .navbar-primary .navbar-brand {
-  background-color: #623572;
-}
-.id7-homepage-layout body .id7-navigation:hover .navbar-primary .navbar-brand {
   background-color: #623572;
 }
 body .navbar-secondary {
