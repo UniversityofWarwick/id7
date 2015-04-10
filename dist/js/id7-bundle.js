@@ -10368,7 +10368,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
             break;
           case 'signedOut':
             var loginlink = this.options.loginlink;
-            $popover.find('.actions > .btn-group > .sign-out').replaceWith(Config.Templates.Action({href:loginlink, classes:'sign-in', title:'Sign in'}));
+            $popover.find('.actions > .btn-group > .sign-out').replaceWith(Config.Templates.Action({ href:loginlink, classes:'sign-in', title:'Sign in' }));
             break;
           default:
             console.error('Unexpected message type: ' + messageType);
