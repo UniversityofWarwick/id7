@@ -101,31 +101,35 @@
     .id7-parent-site-link {
       color: @gray-light;
 
-      &.hidden-xs::after {
-        .fa();
-        font-size: 12px;
-        content: @fa-var-play;
-        margin-left: (@grid-gutter-width / 5);
-
-        position: relative;
-        top: -4px;
+      @media (max-width: (@grid-float-breakpoint - 1)) {
+        font-size: 1.25rem;
+        display: block;
       }
 
-      &.visible-xs-block {
-        font-size: 1.25rem;
+      @media (min-width: @grid-float-breakpoint) {
+        &::after {
+          .fa();
+          font-size: 12px;
+          content: @fa-var-play;
+          margin-left: (@grid-gutter-width / 5);
+
+          position: relative;
+          top: -4px;
+        }
       }
     }
 
-    .id7-current-site-link.visible-xs-block {
-      font-size: 2rem;
+    .id7-current-site-link {
+      @media (max-width: (@grid-float-breakpoint - 1)) {
+        font-size: 2rem;
+      }
     }
   }
 
   .id7-logo-row nav {
     .hidden-xs();
-    .hidden-sm();
 
-    margin-left: (@id7-masthead-logo-width-sm + (@grid-gutter-width / 2));
+    margin-left: @id7-masthead-logo-width-sm;
 
     .opacity(0);
     .transition(opacity 0.15s linear);

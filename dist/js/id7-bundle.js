@@ -10566,6 +10566,10 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         if (!force && screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
 
         if (this.options.fitToWidth) this.fitToWidth(screenConfig);
+        if (this.options.fixedHeader) {
+          $('.id7-header-text').css('height', '');
+          $('.id7-header-text').height($('.id7-header-text').height());
+        }
         if (this.options.fixedNav) this.markFixedPosition();
 
         this.lastScreenConfig = screenConfig.name;
