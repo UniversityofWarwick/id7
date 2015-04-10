@@ -8723,6 +8723,28 @@ h6:first-child,
 .bordered {
   border-bottom: 1px solid #ababab;
 }
+blockquote.quotes {
+  border-left: none;
+}
+blockquote.quotes::before {
+  position: absolute;
+  display: inline-block;
+  margin-left: -1.2em;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  color: #828c95;
+  content: "\f10d";
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+blockquote.quotes::before.pull-left {
+  margin-right: .3em;
+}
+blockquote.quotes::before.pull-right {
+  margin-left: .3em;
+}
 @media (max-width: 767px) {
   main {
     -webkit-hyphens: auto;
