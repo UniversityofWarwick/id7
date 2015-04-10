@@ -1,0 +1,77 @@
+#masthead,
+#masthead.transparent {
+  color: black;
+  background-color: white;
+}
+#masthead a,
+#masthead.transparent a,
+#masthead a:link,
+#masthead.transparent a:link,
+#masthead a:visited,
+#masthead.transparent a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+#masthead a:hover,
+#masthead.transparent a:hover,
+#masthead a:link:hover,
+#masthead.transparent a:link:hover,
+#masthead a:visited:hover,
+#masthead.transparent a:visited:hover,
+#masthead a:focus,
+#masthead.transparent a:focus,
+#masthead a:link:focus,
+#masthead.transparent a:link:focus,
+#masthead a:visited:focus,
+#masthead.transparent a:visited:focus,
+#masthead a:active,
+#masthead.transparent a:active,
+#masthead a:link:active,
+#masthead.transparent a:link:active,
+#masthead a:visited:active,
+#masthead.transparent a:visited:active {
+  color: inherit;
+  text-decoration: underline;
+}
+#warwick-logo-link {
+  background-image: url("../images/id6a-logotype.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  #warwick-logo-link {
+    background-image: url("../images/id6a-logotype@2x.png");
+  }
+}
+#search-container ul.index-section li.active {
+  background-color: #7b428e;
+}
+#search-container ul.index-section li.active a,
+#search-container ul.index-section li.active a:link,
+#search-container ul.index-section li.active a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+#search-container ul.index-section li.active a:hover,
+#search-container ul.index-section li.active a:link:hover,
+#search-container ul.index-section li.active a:visited:hover,
+#search-container ul.index-section li.active a:focus,
+#search-container ul.index-section li.active a:link:focus,
+#search-container ul.index-section li.active a:visited:focus,
+#search-container ul.index-section li.active a:active,
+#search-container ul.index-section li.active a:link:active,
+#search-container ul.index-section li.active a:visited:active {
+  color: #ededed;
+  text-decoration: underline;
+}
+#search-container ul.index-section {
+  display: none;
+}
+#search-container #search-box {
+  padding: 2px 23px 2px 3px;
+  border: 1px solid #ccc;
+}
+#search-container #search-button {
+  position: relative;
+  top: -3px;
+  margin-left: -20px;
+}
+/*# sourceMappingURL=id6a.css.map */

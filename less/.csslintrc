@@ -18,5 +18,6 @@
   "unqualified-attributes": false,
 
   "ids": false,
-  "font-faces": false
+  "font-faces": false,
+  "overqualified-elements": false
 }

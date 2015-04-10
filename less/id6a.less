@@ -1,0 +1,56 @@
+// Additional CSS file that can be added to give ID6 sites the ID7 masthead
+
+// ID7 Brand configuration variables
+@import 'variables.less';
+@import 'mixins.less';
+
+// Override header and masthead colour to white
+#masthead, #masthead.transparent {
+  background-color: white;
+  color: black;
+
+  .link-colour(inherit);
+}
+
+// Replace the logo with the new one
+#warwick-logo-link {
+  background-image: url("../images/id6a-logotype.png");
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  #warwick-logo-link {
+    background-image: url("../images/id6a-logotype@2x.png");
+  }
+}
+
+#search-container {
+  // Update search box pointer colour
+  ul.index-section li.active {
+    background-color: @id7-brand-purple;
+    .link-colour(white);
+  }
+
+  // Hide index section selector
+  ul.index-section {
+    display: none;
+  }
+
+  // Reinstate search box border
+  #search-box {
+    border: 1px solid #cccccc;
+    padding: 2px 23px 2px 3px;
+  }
+
+  // Move search button inside of box
+  #search-button {
+    margin-left: -20px;
+    position: relative;
+    top: -3px;
+  }
+}
