@@ -39,6 +39,8 @@
 
   @media (min-width: @grid-float-breakpoint) {
     .id7-homepage-layout & {
+      // IE8 won't put our semi-transparent overlay on here. Just make it the brand colour
+      background-color: @colour;
       background-color: fadeout(@colour, 20%);
 
       .transition(background-color 0.15s linear);
@@ -290,7 +292,10 @@
   }
 
   &.bordered {
-    .id7-left-border, .id7-right-border { border-color: fadeout(@colour, 70%); }
+    .id7-left-border, .id7-right-border {
+      border-color: @colour; // IE8
+      border-color: fadeout(@colour, 70%);
+    }
   }
 
   .apply-footer-brand(@colour);
@@ -324,6 +329,7 @@
     }
 
     .fa {
+      color: @colour; // IE 8
       color: fadeout(@colour, 50%);
       .transition(color .15s linear);
     }
@@ -346,6 +352,7 @@
 .apply-carousel-brand(@colour) {
   .carousel .carousel-indicators li {
     &::after {
+      color: @colour; // IE 8
       color: fadeout(@colour, 70%);
     }
 

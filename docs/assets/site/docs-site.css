@@ -159,6 +159,7 @@ fieldset[disabled] .id7-navigation .navbar-primary .btn-link:focus {
 }
 @media (min-width: 768px) {
   .id7-homepage-layout .id7-navigation .navbar-primary {
+    background-color: #6ca4d4;
     background-color: rgba(108, 164, 212, 0.8);
     -webkit-transition: background-color 0.15s linear;
     -o-transition: background-color 0.15s linear;
@@ -391,6 +392,7 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 }
 .bordered .id7-left-border,
 .bordered .id7-right-border {
+  border-color: #6ca4d4;
   border-color: rgba(108, 164, 212, 0.3);
 }
 .id7-site-footer {
@@ -429,6 +431,7 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   border-color: #6ca4d4;
 }
 .id7-masthead .id7-search .fa {
+  color: #6ca4d4;
   color: rgba(108, 164, 212, 0.5);
   -webkit-transition: color 0.15s linear;
   -o-transition: color 0.15s linear;
@@ -448,6 +451,7 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(108, 164, 212, 0.6);
 }
 .carousel .carousel-indicators li::after {
+  color: #6ca4d4;
   color: rgba(108, 164, 212, 0.3);
 }
 .carousel .carousel-indicators li.active::after {
