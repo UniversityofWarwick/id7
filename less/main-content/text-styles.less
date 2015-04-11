@@ -42,6 +42,19 @@ h1, h2, h3, h4, h5, h6,
   border-bottom: 1px solid @id7-subtle-line-colour;
 }
 
+blockquote.quotes {
+  border-left: none;
+  &::before {
+    position: absolute;
+    content: '\201C';
+    color: @id7-brand-gray;
+    margin-left: -24px;
+    margin-top: -10px;
+    font-size: 4em;
+    line-height: 1em;
+  }
+}
+
 // Hyphenate on smallscreens
 @media (max-width: (@grid-float-breakpoint - 1)) {
   main {

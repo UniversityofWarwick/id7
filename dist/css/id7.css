@@ -2092,7 +2092,7 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  color: black;
+  color: #000;
   background-color: transparent;
 }
 input,
@@ -2475,7 +2475,7 @@ abbr[data-original-title] {
 blockquote {
   padding: 11px 22px;
   margin: 0 0 22px;
-  font-size: 17.5px;
+  font-size: 16px;
   border-left: 5px solid #eee;
 }
 blockquote p:last-child,
@@ -5921,7 +5921,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: black;
+  color: #000;
 }
 .alert {
   padding: 15px;
@@ -7659,7 +7659,6 @@ body {
 @media (min-width: 768px) {
   .id7-fixed-width-container {
     display: -webkit-box;
-    display:    -moz-box;
     display:     -ms-box;
     display:      -o-box;
     display:         box;
@@ -7682,7 +7681,6 @@ body {
   }
   .id7-fixed-width-container main {
     display: -webkit-box;
-    display:    -moz-box;
     display:     -ms-box;
     display:      -o-box;
     display:         box;
@@ -7905,7 +7903,7 @@ body {
 .id7-utility-bar a:not(.btn),
 .id7-utility-bar a:link:not(.btn),
 .id7-utility-bar a:visited:not(.btn) {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 .id7-utility-bar a:hover:not(.btn),
@@ -8068,7 +8066,7 @@ body {
 .id7-masthead .id7-header-text .h4,
 .id7-masthead .id7-header-text .h5,
 .id7-masthead .id7-header-text .h6 {
-  color: black;
+  color: #000;
 }
 .id7-masthead .id7-header-text a:not(.btn),
 .id7-masthead .id7-header-text a:link:not(.btn),
@@ -8374,7 +8372,7 @@ body {
 .id7-header-image-container .strapline .h4,
 .id7-header-image-container .strapline .h5,
 .id7-header-image-container .strapline .h6 {
-  color: white;
+  color: #fff;
 }
 @media (min-width: 768px) {
   .id7-homepage-layout .id7-header-image-container .strapline {
@@ -8683,7 +8681,7 @@ body {
   content: " ";
   content: '';
   border-right: 6.5px solid transparent;
-  border-bottom: 7px solid white;
+  border-bottom: 7px solid #fff;
   border-left: 6.5px solid transparent;
 }
 .id7-navigation .navbar-nav > li.active.dropdown:hover::before,
@@ -8704,7 +8702,7 @@ body {
   content: '';
   border-top: 6.5px solid transparent;
   border-bottom: 6.5px solid transparent;
-  border-left: 7px solid white;
+  border-left: 7px solid #fff;
 }
 .id7-navigation .navbar-secondary .navbar-nav > li:not(.nav-breadcrumb),
 .id7-navigation .navbar-tertiary .navbar-nav > li:not(.nav-breadcrumb) {
@@ -8930,6 +8928,18 @@ h6:first-child,
 }
 .bordered {
   border-bottom: 1px solid #ababab;
+}
+blockquote.quotes {
+  border-left: none;
+}
+blockquote.quotes::before {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -24px;
+  font-size: 4em;
+  line-height: 1em;
+  color: #828c95;
+  content: '\201C';
 }
 @media (max-width: 767px) {
   main {
@@ -9470,7 +9480,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
 }
 .equal-height-xs {
   display: -webkit-box;
-  display:    -moz-box;
   display:     -ms-box;
   display:      -o-box;
   display:         box;
@@ -9490,7 +9499,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
 }
 .equal-height-xs > [class*='col-'] {
   display: -webkit-box;
-  display:    -moz-box;
   display:     -ms-box;
   display:      -o-box;
   display:         box;
@@ -9525,7 +9533,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
 @media (min-width: 768px) {
   .equal-height {
     display: -webkit-box;
-    display:    -moz-box;
     display:     -ms-box;
     display:      -o-box;
     display:         box;
@@ -9545,7 +9552,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
   }
   .equal-height > [class*='col-'] {
     display: -webkit-box;
-    display:    -moz-box;
     display:     -ms-box;
     display:      -o-box;
     display:         box;
@@ -9579,7 +9585,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
   }
   .equal-height-sm {
     display: -webkit-box;
-    display:    -moz-box;
     display:     -ms-box;
     display:      -o-box;
     display:         box;
@@ -9599,7 +9604,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
   }
   .equal-height-sm > [class*='col-'] {
     display: -webkit-box;
-    display:    -moz-box;
     display:     -ms-box;
     display:      -o-box;
     display:         box;
@@ -9635,7 +9639,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
 @media (min-width: 992px) {
   .equal-height-md {
     display: -webkit-box;
-    display:    -moz-box;
     display:     -ms-box;
     display:      -o-box;
     display:         box;
@@ -9655,7 +9658,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
   }
   .equal-height-md > [class*='col-'] {
     display: -webkit-box;
-    display:    -moz-box;
     display:     -ms-box;
     display:      -o-box;
     display:         box;
@@ -9691,7 +9693,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
 @media (min-width: 1200px) {
   .equal-height-lg {
     display: -webkit-box;
-    display:    -moz-box;
     display:     -ms-box;
     display:      -o-box;
     display:         box;
@@ -9711,7 +9712,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
   }
   .equal-height-lg > [class*='col-'] {
     display: -webkit-box;
-    display:    -moz-box;
     display:     -ms-box;
     display:      -o-box;
     display:         box;

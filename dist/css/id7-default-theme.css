@@ -182,7 +182,7 @@ body .navbar-secondary .navbar-nav > li > a:focus {
   background: none;
 }
 body .navbar-secondary .navbar-nav > li.active.next-secondary::before {
-  border-bottom-color: white;
+  border-bottom-color: #fff;
 }
 body .navbar-secondary .navbar-nav > li.active.next-tertiary::before {
   border-bottom-color: #f8f8f8;
@@ -232,7 +232,7 @@ body .navbar-secondary .navbar-nav .dropdown-menu > .active > a {
   background-color: #b6a1bd;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu > .active > a::before {
-  border-bottom-color: white;
+  border-bottom-color: #fff;
 }
 body .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a,
 body .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a:hover,
@@ -293,7 +293,7 @@ body .navbar-tertiary .navbar-nav > li > a:focus {
   background: none;
 }
 body .navbar-tertiary .navbar-nav > li.active.next-secondary::before {
-  border-bottom-color: white;
+  border-bottom-color: #fff;
 }
 body .navbar-tertiary .navbar-nav > li.active.next-tertiary::before {
   border-bottom-color: #f8f8f8;
@@ -343,7 +343,7 @@ body .navbar-tertiary .navbar-nav .dropdown-menu > .active > a {
   background-color: #dfdfdf;
 }
 body .navbar-tertiary .navbar-nav .dropdown-menu > .active > a::before {
-  border-bottom-color: white;
+  border-bottom-color: #fff;
 }
 body .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a,
 body .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a:hover,
@@ -444,7 +444,7 @@ body .carousel .carousel-indicators li.active::after {
   color: #7b428e;
 }
 body .boxstyle_.box1 {
-  color: black;
+  color: #000;
   background: #e5d9e8;
   border: 0;
 }
@@ -463,7 +463,7 @@ body .boxstyle_.box1 .h6 {
   color: inherit;
 }
 body .boxstyle_.box2 {
-  color: black;
+  color: #000;
   background: #eee;
   border: 0;
 }
