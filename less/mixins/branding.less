@@ -36,16 +36,6 @@
     contrast(@colour),
     @border-colour
   );
-
-  @media (min-width: @grid-float-breakpoint) {
-    .id7-homepage-layout & {
-      // IE8 won't put our semi-transparent overlay on here. Just make it the brand colour
-      background-color: @colour;
-      background-color: fadeout(@colour, 20%);
-
-      .transition(background-color 0.15s linear);
-    }
-  }
 }
 
 .apply-navbar-brand(
@@ -224,18 +214,8 @@
     .apply-navbar-brand(@colour, @secondary-colour);
   }
 
-  .id7-homepage-layout & .id7-navigation:hover {
-    .navbar-primary {
-      background-color: @colour; // TODO work out how to move into apply-navbar-brand
-    }
-  }
-
   @breadcrumbs-colour: multiply(@colour, darken(white, 20%));
   .navbar-primary .navbar-brand {
-    background-color: @breadcrumbs-colour;
-  }
-
-  .id7-homepage-layout & .id7-navigation:hover .navbar-primary .navbar-brand {
     background-color: @breadcrumbs-colour;
   }
 

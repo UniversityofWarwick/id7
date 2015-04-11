@@ -249,18 +249,31 @@
       affixHeader: function affixHeader() {
         var $h1 = $('.id7-header-text h1');
         if ($h1.length) {
+          // Set height in stone
+          $('.id7-header-text').height($('.id7-header-text').height());
+
           $h1.affix({
             offset: {
-              top: $h1.offset().top - 5 // 5px h1.affix padding (in masthead.less)
+              top: $h1.offset().top
             }
           });
         }
       },
 
       affixNav: function affixNav() {
-        this.$container.affix({
+        var $nav = this.$container;
+
+        var $h1 = $('.id7-header-text h1');
+        var offsetTop;
+        if ($h1.length) {
+          offsetTop = $h1.offset().top;
+        } else {
+          offsetTop = $nav.offset().top;
+        }
+
+        $nav.affix({
           offset: {
-            top: 121 // FIXME empirical magic number, only works for desktop
+            top: offsetTop
           }
         });
       },
@@ -279,6 +292,10 @@
         if (!force && screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
 
         if (this.options.fitToWidth) this.fitToWidth(screenConfig);
+        if (this.options.fixedHeader) {
+          $('.id7-header-text').css('height', '');
+          $('.id7-header-text').height($('.id7-header-text').height());
+        }
         if (this.options.fixedNav) this.markFixedPosition();
 
         this.lastScreenConfig = screenConfig.name;

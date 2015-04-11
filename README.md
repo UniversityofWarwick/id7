@@ -45,16 +45,20 @@ id7/
 │   ├── id7-standalone.js
 │   └── id7-standalone.min.js
 └── images/
+│   ├── id6a-logotype.png
+│   ├── id6a-logotype@2x.png
 │   ├── logo.png
 │   ├── masthead-logo-bleed-sm.png
 │   ├── masthead-logo-bleed-sm@2x.png
 │   ├── masthead-logo-bleed-xs.png
 │   └── masthead-logo-bleed-xs@2x.png
 └── fonts/
+    ├── FontAwesome.otf
     ├── fontawesome-webfont.eot
     ├── fontawesome-webfont.svg
     ├── fontawesome-webfont.ttf
-    └── fontawesome-webfont.woff
+    ├── fontawesome-webfont.woff
+    └── fontawesome-webfont.woff2
 ```
 
 We provide compiled CSS and JS (`id7.*`), as well as compiled and minified CSS and JS (`id7.min.*`). CSS [source maps](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors) (`id7.*.map`) are available for use with certain browsers' developer tools. The FontAwesome icon font is included, as is an optional ID7 theme.
