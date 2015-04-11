@@ -8096,6 +8096,9 @@ body {
   margin: 0 -20px;
   background-color: white;
 }
+.id7-masthead .id7-header-text h1.affix .id7-parent-site-link {
+  display: none;
+}
 @media (min-width: 768px) {
   .id7-masthead .id7-header-text h1.affix {
     width: 750px;
@@ -8512,7 +8515,7 @@ body {
 }
 .id7-navigation.affix {
   position: fixed;
-  top: 75px;
+  top: 52px;
   z-index: 10;
   width: 100%;
 }

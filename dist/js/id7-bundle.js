@@ -10488,8 +10488,8 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
       if (o.trimLinkTitles) this.trimLinkTitles();
       if (o.fixedHeader) this.affixHeader();
       if (o.fixedNav) this.affixNav();
-      if (o.fitToWidth) this.onScreenResize();
 
+      this.onScreenResize();
       this.wireEventHandlers();
     }
 
@@ -10526,9 +10526,17 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
           // Set height in stone
           $('.id7-header-text').height($('.id7-header-text').height());
 
+          var offsetTop = $h1.offset().top;
+          var headerTextHeight = $('.id7-header-text').height();
+
+          // FIXME magic number for xs - this comes into play where we have a parent site header
+          if (headerTextHeight > 52) {
+            offsetTop += (headerTextHeight - 52);
+          }
+
           $h1.affix({
             offset: {
-              top: $h1.offset().top
+              top: offsetTop
             }
           });
         }
@@ -10541,6 +10549,13 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         var offsetTop;
         if ($h1.length) {
           offsetTop = $h1.offset().top;
+
+          var headerTextHeight = $('.id7-header-text').height();
+
+          // FIXME magic number for xs - this comes into play where we have a parent site header
+          if (headerTextHeight > 52) {
+            offsetTop += (headerTextHeight - 52);
+          }
         } else {
           offsetTop = $nav.offset().top;
         }
@@ -10566,10 +10581,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         if (!force && screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
 
         if (this.options.fitToWidth) this.fitToWidth(screenConfig);
-        if (this.options.fixedHeader) {
-          $('.id7-header-text').css('height', '');
-          $('.id7-header-text').height($('.id7-header-text').height());
-        }
+        if (this.options.fixedHeader) this.markHeaderFixedPosition();
         if (this.options.fixedNav) this.markFixedPosition();
 
         this.lastScreenConfig = screenConfig.name;
@@ -10618,6 +10630,11 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
             }
           }
         });
+      },
+
+      markHeaderFixedPosition: function markHeaderFixedPosition() {
+        $('.id7-header-text').css('height', '');
+        $('.id7-header-text').height($('.id7-header-text').height());
       },
 
       markFixedPosition: function markFixedPosition() {

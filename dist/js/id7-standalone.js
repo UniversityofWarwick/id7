@@ -214,8 +214,8 @@
       if (o.trimLinkTitles) this.trimLinkTitles();
       if (o.fixedHeader) this.affixHeader();
       if (o.fixedNav) this.affixNav();
-      if (o.fitToWidth) this.onScreenResize();
 
+      this.onScreenResize();
       this.wireEventHandlers();
     }
 
@@ -252,9 +252,17 @@
           // Set height in stone
           $('.id7-header-text').height($('.id7-header-text').height());
 
+          var offsetTop = $h1.offset().top;
+          var headerTextHeight = $('.id7-header-text').height();
+
+          // FIXME magic number for xs - this comes into play where we have a parent site header
+          if (headerTextHeight > 52) {
+            offsetTop += (headerTextHeight - 52);
+          }
+
           $h1.affix({
             offset: {
-              top: $h1.offset().top
+              top: offsetTop
             }
           });
         }
@@ -267,6 +275,13 @@
         var offsetTop;
         if ($h1.length) {
           offsetTop = $h1.offset().top;
+
+          var headerTextHeight = $('.id7-header-text').height();
+
+          // FIXME magic number for xs - this comes into play where we have a parent site header
+          if (headerTextHeight > 52) {
+            offsetTop += (headerTextHeight - 52);
+          }
         } else {
           offsetTop = $nav.offset().top;
         }
@@ -292,10 +307,7 @@
         if (!force && screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
 
         if (this.options.fitToWidth) this.fitToWidth(screenConfig);
-        if (this.options.fixedHeader) {
-          $('.id7-header-text').css('height', '');
-          $('.id7-header-text').height($('.id7-header-text').height());
-        }
+        if (this.options.fixedHeader) this.markHeaderFixedPosition();
         if (this.options.fixedNav) this.markFixedPosition();
 
         this.lastScreenConfig = screenConfig.name;
@@ -344,6 +356,11 @@
             }
           }
         });
+      },
+
+      markHeaderFixedPosition: function markHeaderFixedPosition() {
+        $('.id7-header-text').css('height', '');
+        $('.id7-header-text').height($('.id7-header-text').height());
       },
 
       markFixedPosition: function markFixedPosition() {
