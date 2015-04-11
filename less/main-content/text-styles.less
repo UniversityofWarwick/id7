@@ -45,11 +45,13 @@ h1, h2, h3, h4, h5, h6,
 blockquote.quotes {
   border-left: none;
   &::before {
-    .fa;
     position: absolute;
-    content: @fa-var-quote-left;
+    content: '\201C';
     color: @id7-brand-gray;
-    margin-left: -1.2em;
+    margin-left: -24px;
+    margin-top: -10px;
+    font-size: 4em;
+    line-height: 1em;
   }
 }
 

@@ -2344,7 +2344,7 @@ abbr[data-original-title] {
 blockquote {
   padding: 11px 22px;
   margin: 0 0 22px;
-  font-size: 17.5px;
+  font-size: 16px;
   border-left: 5px solid #eee;
 }
 blockquote p:last-child,
@@ -8728,22 +8728,12 @@ blockquote.quotes {
 }
 blockquote.quotes::before {
   position: absolute;
-  display: inline-block;
-  margin-left: -1.2em;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
+  margin-top: -10px;
+  margin-left: -24px;
+  font-size: 4em;
+  line-height: 1em;
   color: #828c95;
-  content: "\f10d";
-
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-blockquote.quotes::before.pull-left {
-  margin-right: .3em;
-}
-blockquote.quotes::before.pull-right {
-  margin-left: .3em;
+  content: '\201C';
 }
 @media (max-width: 767px) {
   main {
