@@ -9244,6 +9244,10 @@ a:hover img.targetBlank {
 img {
   -ms-interpolation-mode: bicubic;
 }
+.column-2-content p,
+.boxstyle_ p {
+  padding-right: 0;
+}
 table[cellpadding="10"] td,
 table[cellpadding="10"] th {
   padding: 10px;
