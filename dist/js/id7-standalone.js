@@ -359,6 +359,23 @@
         });
       },
 
+      // Return the total height of affixed elements (whether affixed or not)
+      getAffixedHeight: function getAffixedHeight() {
+        var height = 0;
+        if (this.options.fixedHeader) height += $('.id7-header-text h1').outerHeight();
+        if (this.options.fixedNav) height += this.$container.outerHeight();
+        return height;
+      },
+
+      // Called when a page is loaded with a hash, or a hash changes (e.g. an inline
+      // bookmark is clicked). Scrolls up by the height of the affixed area.
+      hashChanged: function hashChanged() {
+        var scrollY = this.getAffixedHeight();
+        setTimeout(function () {
+          window.scrollBy(0, -scrollY);
+        }, 1);
+      },
+
       markHeaderFixedPosition: function markHeaderFixedPosition() {
         $('.id7-header-text').css('height', '');
 
@@ -409,6 +426,10 @@
             return false;
           }
         });
+
+        // Handle in-page bookmarks.
+        if (location.hash) this.hashChanged();
+        window.addEventListener('hashchange', $.proxy(this.hashChanged, this));
       }
     });
 
@@ -432,6 +453,7 @@
 
   $(function () {
     $('.id7-navigation').id7Navigation();
+
   });
 })(jQuery);
 
