@@ -473,6 +473,11 @@ body .boxstyle_.box1 {
   background: #e5d9e8;
   color: black;
 }
+@media print {
+  body .boxstyle_.box1 {
+    border: 1px solid #e5d9e8;
+  }
+}
 body .boxstyle_.box1 h1,
 body .boxstyle_.box1 h2,
 body .boxstyle_.box1 h3,
@@ -491,6 +496,11 @@ body .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
   color: black;
+}
+@media print {
+  body .boxstyle_.box2 {
+    border: 1px solid #eeeeee;
+  }
 }
 body .boxstyle_.box2 h1,
 body .boxstyle_.box2 h2,

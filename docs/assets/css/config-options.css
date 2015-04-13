@@ -431,6 +431,11 @@ body.brand-purple .boxstyle_.box1 {
   background: #e5d9e8;
   color: black;
 }
+@media print {
+  body.brand-purple .boxstyle_.box1 {
+    border: 1px solid #e5d9e8;
+  }
+}
 body.brand-purple .boxstyle_.box1 h1,
 body.brand-purple .boxstyle_.box1 h2,
 body.brand-purple .boxstyle_.box1 h3,
@@ -449,6 +454,11 @@ body.brand-purple .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
   color: black;
+}
+@media print {
+  body.brand-purple .boxstyle_.box2 {
+    border: 1px solid #eeeeee;
+  }
 }
 body.brand-purple .boxstyle_.box2 h1,
 body.brand-purple .boxstyle_.box2 h2,
@@ -907,6 +917,11 @@ body.brand-gray .boxstyle_.box1 {
   background: #e6e8ea;
   color: black;
 }
+@media print {
+  body.brand-gray .boxstyle_.box1 {
+    border: 1px solid #e6e8ea;
+  }
+}
 body.brand-gray .boxstyle_.box1 h1,
 body.brand-gray .boxstyle_.box1 h2,
 body.brand-gray .boxstyle_.box1 h3,
@@ -925,6 +940,11 @@ body.brand-gray .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
   color: black;
+}
+@media print {
+  body.brand-gray .boxstyle_.box2 {
+    border: 1px solid #eeeeee;
+  }
 }
 body.brand-gray .boxstyle_.box2 h1,
 body.brand-gray .boxstyle_.box2 h2,
@@ -1383,6 +1403,11 @@ body.brand-gold .boxstyle_.box1 {
   background: #f8f2d5;
   color: black;
 }
+@media print {
+  body.brand-gold .boxstyle_.box1 {
+    border: 1px solid #f8f2d5;
+  }
+}
 body.brand-gold .boxstyle_.box1 h1,
 body.brand-gold .boxstyle_.box1 h2,
 body.brand-gold .boxstyle_.box1 h3,
@@ -1401,6 +1426,11 @@ body.brand-gold .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
   color: black;
+}
+@media print {
+  body.brand-gold .boxstyle_.box2 {
+    border: 1px solid #eeeeee;
+  }
 }
 body.brand-gold .boxstyle_.box2 h1,
 body.brand-gold .boxstyle_.box2 h2,
@@ -1859,6 +1889,11 @@ body.brand-blue .boxstyle_.box1 {
   background: #e2edf6;
   color: black;
 }
+@media print {
+  body.brand-blue .boxstyle_.box1 {
+    border: 1px solid #e2edf6;
+  }
+}
 body.brand-blue .boxstyle_.box1 h1,
 body.brand-blue .boxstyle_.box1 h2,
 body.brand-blue .boxstyle_.box1 h3,
@@ -1877,6 +1912,11 @@ body.brand-blue .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
   color: black;
+}
+@media print {
+  body.brand-blue .boxstyle_.box2 {
+    border: 1px solid #eeeeee;
+  }
 }
 body.brand-blue .boxstyle_.box2 h1,
 body.brand-blue .boxstyle_.box2 h2,
@@ -2335,6 +2375,11 @@ body.brand-orange .boxstyle_.box1 {
   background: #fce7d8;
   color: black;
 }
+@media print {
+  body.brand-orange .boxstyle_.box1 {
+    border: 1px solid #fce7d8;
+  }
+}
 body.brand-orange .boxstyle_.box1 h1,
 body.brand-orange .boxstyle_.box1 h2,
 body.brand-orange .boxstyle_.box1 h3,
@@ -2353,6 +2398,11 @@ body.brand-orange .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
   color: black;
+}
+@media print {
+  body.brand-orange .boxstyle_.box2 {
+    border: 1px solid #eeeeee;
+  }
 }
 body.brand-orange .boxstyle_.box2 h1,
 body.brand-orange .boxstyle_.box2 h2,
@@ -2811,6 +2861,11 @@ body.brand-green .boxstyle_.box1 {
   background: #edeed4;
   color: black;
 }
+@media print {
+  body.brand-green .boxstyle_.box1 {
+    border: 1px solid #edeed4;
+  }
+}
 body.brand-green .boxstyle_.box1 h1,
 body.brand-green .boxstyle_.box1 h2,
 body.brand-green .boxstyle_.box1 h3,
@@ -2829,6 +2884,11 @@ body.brand-green .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
   color: black;
+}
+@media print {
+  body.brand-green .boxstyle_.box2 {
+    border: 1px solid #eeeeee;
+  }
 }
 body.brand-green .boxstyle_.box2 h1,
 body.brand-green .boxstyle_.box2 h2,
@@ -3287,6 +3347,11 @@ body.brand-red .boxstyle_.box1 {
   background: #f2d9db;
   color: black;
 }
+@media print {
+  body.brand-red .boxstyle_.box1 {
+    border: 1px solid #f2d9db;
+  }
+}
 body.brand-red .boxstyle_.box1 h1,
 body.brand-red .boxstyle_.box1 h2,
 body.brand-red .boxstyle_.box1 h3,
@@ -3305,6 +3370,11 @@ body.brand-red .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
   color: black;
+}
+@media print {
+  body.brand-red .boxstyle_.box2 {
+    border: 1px solid #eeeeee;
+  }
 }
 body.brand-red .boxstyle_.box2 h1,
 body.brand-red .boxstyle_.box2 h2,

@@ -1,5 +1,10 @@
 .id7-page-header {
   .bordered-headings(none);
+
+  // Hide the whole header when printing
+  @media print {
+    display: none;
+  }
 }
 
 .id7-utility-masthead {

@@ -7617,6 +7617,12 @@ footer .id7-app-footer:after {
 .popover-content {
   padding: 15px 19px;
 }
+@media print {
+  a[href^="mailto:"]:after,
+  a[href^="tel:"]:after {
+    content: "";
+  }
+}
 main {
   font-size: ceiling(13.6px);
   font-weight: 300;
@@ -7633,6 +7639,8 @@ main label {
   main {
     font-size: 16px;
   }
+}
+@media screen and (min-width: 480px) {
   main p,
   main ul,
   main ol,
@@ -7838,6 +7846,11 @@ body {
   padding-bottom: 0;
   border-bottom: 0;
 }
+@media print {
+  .id7-page-header {
+    display: none;
+  }
+}
 .id7-utility-masthead {
   position: relative;
   z-index: 40;
@@ -7901,6 +7914,11 @@ body {
   margin-left: .2em;
   color: #eee;
   content: '|';
+}
+@media print {
+  .id7-utility-bar ul a[href]:after {
+    content: "";
+  }
 }
 .id7-utility-bar a:not(.btn),
 .id7-utility-bar a:link:not(.btn),
@@ -8193,6 +8211,11 @@ body {
   margin-left: .1em;
   color: #777;
   content: '|';
+}
+@media print {
+  .id7-masthead .id7-logo-row nav ul a[href]:after {
+    content: "";
+  }
 }
 .id7-masthead .id7-logo-row nav a:not(.btn),
 .id7-masthead .id7-logo-row nav a:link:not(.btn),
@@ -8759,6 +8782,14 @@ main > header > .navbar-collapse {
     margin-left: 0;
   }
 }
+@media print {
+  main > header > img.visible-print-block {
+    float: right;
+  }
+  main > header > .id7-page-title {
+    padding-right: 162px;
+  }
+}
 main > .id7-main-content {
   padding-top: 20px;
   padding-right: 20px;
@@ -8828,6 +8859,11 @@ main > .id7-main-content > .navbar-collapse {
 .boxstyle_ .h6 {
   padding-bottom: 0;
   border-bottom: 0;
+}
+@media print {
+  .boxstyle_ {
+    page-break-inside: avoid;
+  }
 }
 img,
 video,
@@ -8942,6 +8978,11 @@ blockquote.quotes::before {
   line-height: 1em;
   color: #828c95;
   content: '\201C';
+}
+@media print {
+  blockquote.quotes {
+    border: none;
+  }
 }
 @media (max-width: 767px) {
   main {
@@ -9405,44 +9446,46 @@ footer .id7-app-footer > .navbar-collapse {
     margin-left: 0;
   }
 }
-footer .id7-site-footer .id7-logo-bleed,
-footer .id7-app-footer .id7-logo-bleed {
-  position: relative;
-  position: absolute;
-  top: 0;
-  right: 10%;
-  width: 81.2392px;
-  height: 40px;
-}
-footer .id7-site-footer .id7-logo-bleed::before,
-footer .id7-app-footer .id7-logo-bleed::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 0;
-  height: 0;
-  content: '';
-  border-top: 40px solid #d3d3d3;
-  border-right: 22.82px solid transparent;
-  border-left: 22.82px solid transparent;
-}
-footer .id7-site-footer .id7-logo-bleed::after,
-footer .id7-app-footer .id7-logo-bleed::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  width: 0;
-  height: 0;
-  content: '';
-  border-top: 40px solid #d3d3d3;
-  border-right: 22.82px solid transparent;
-  border-left: 22.82px solid transparent;
-}
-footer .id7-site-footer .id7-logo-bleed + *,
-footer .id7-app-footer .id7-logo-bleed + * {
-  margin-top: 20px;
+@media screen {
+  footer .id7-site-footer .id7-logo-bleed,
+  footer .id7-app-footer .id7-logo-bleed {
+    position: relative;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    width: 81.2392px;
+    height: 40px;
+  }
+  footer .id7-site-footer .id7-logo-bleed::before,
+  footer .id7-app-footer .id7-logo-bleed::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 40px solid #d3d3d3;
+    border-right: 22.82px solid transparent;
+    border-left: 22.82px solid transparent;
+  }
+  footer .id7-site-footer .id7-logo-bleed::after,
+  footer .id7-app-footer .id7-logo-bleed::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 40px solid #d3d3d3;
+    border-right: 22.82px solid transparent;
+    border-left: 22.82px solid transparent;
+  }
+  footer .id7-site-footer .id7-logo-bleed + *,
+  footer .id7-app-footer .id7-logo-bleed + * {
+    margin-top: 20px;
+  }
 }
 footer .id7-app-footer {
   font-size: 85%;
@@ -9475,6 +9518,11 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
   margin-left: .1em;
   color: #777;
   content: '|';
+}
+@media print {
+  footer .id7-app-footer .id7-footer-utility ul a[href]:after {
+    content: "";
+  }
 }
 .id7-non-branded .id7-page-footer .id7-site-footer .id7-logo-bleed,
 .id7-non-branded .id7-page-footer .id7-app-footer .id7-logo-bleed {

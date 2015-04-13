@@ -3,6 +3,10 @@
     border: 0;
     background: @bg;
     color: @text-colour;
+
+    @media print {
+      border: 1px solid @bg;
+    }
   }
 
   .filled(@bg, @text-colour: black) when not (@text-colour = inherit) {

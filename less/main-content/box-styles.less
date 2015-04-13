@@ -3,4 +3,9 @@
   padding: (@grid-gutter-width / 2);
 
   .bordered-headings(none);
+
+  // Avoid breaking box styles when printing
+  @media print {
+    page-break-inside: avoid;
+  }
 }
