@@ -24,3 +24,10 @@ a {
 /* Tell IE to use Bicupic interpolation, makes resized images look better */
 img { -ms-interpolation-mode: bicubic; }
 
+// ID-74
+p {
+  .column-2-content &,
+  .boxstyle_ & {
+    padding-right: 0;
+  }
+}
