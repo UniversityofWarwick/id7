@@ -10,6 +10,25 @@ a {
   .transition(color 0.3s linear);
 }
 
+a {
+  .new-window-link {
+    .fa();
+    font-size: @font-size-small;
+    padding-left: 3px;
+    margin-right: 2px;
+    color: @gray-light;
+    .transition(color 0.3s linear);
+
+    &:before {
+      content: @fa-var-external-link;
+    }
+  }
+
+  &:hover .new-window-link {
+    color: @link-color;
+  }
+}
+
 .lead {
   font-weight: 700;
 }

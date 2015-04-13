@@ -10,8 +10,11 @@
 .navbar-fixed-top .navbar-nav a:hover:not(.btn),
 .navbar-fixed-top .navbar-nav a:focus:not(.btn),
 .navbar-fixed-top .navbar-nav a:active:not(.btn) {
-  color: #ededed;
+  color: #cccccc;
   text-decoration: underline;
+}
+.navbar-fixed-top .navbar-nav a:hover .new-window-link {
+  color: #cccccc;
 }
 .jumbotron {
   margin: 0;
@@ -51,8 +54,11 @@
 .jumbotron a:hover:not(.btn),
 .jumbotron a:focus:not(.btn),
 .jumbotron a:active:not(.btn) {
-  color: #ededed;
+  color: #cccccc;
   text-decoration: underline;
+}
+.jumbotron a:hover .new-window-link {
+  color: #cccccc;
 }
 .jumbotron .container-fluid {
   width: 100%;
@@ -194,8 +200,11 @@
 .carousel-nav a:hover:not(.btn),
 .carousel-nav a:focus:not(.btn),
 .carousel-nav a:active:not(.btn) {
-  color: #ededed;
+  color: #cccccc;
   text-decoration: underline;
+}
+.carousel-nav a:hover .new-window-link {
+  color: #cccccc;
 }
 .carousel-nav ul {
   padding: 0;

@@ -7929,8 +7929,11 @@ body {
 .id7-utility-bar a:hover:not(.btn),
 .id7-utility-bar a:focus:not(.btn),
 .id7-utility-bar a:active:not(.btn) {
-  color: #ededed;
+  color: #ccc;
   text-decoration: underline;
+}
+.id7-utility-bar a:hover .new-window-link {
+  color: #ccc;
 }
 .id7-utility-bar .caret {
   margin-left: 5px;
@@ -7969,8 +7972,11 @@ body {
 .id7-utility-bar .popover.account-information .actions a:hover:not(.btn),
 .id7-utility-bar .popover.account-information .actions a:focus:not(.btn),
 .id7-utility-bar .popover.account-information .actions a:active:not(.btn) {
-  color: #212121;
+  color: #000;
   text-decoration: underline;
+}
+.id7-utility-bar .popover.account-information .actions a:hover .new-window-link {
+  color: #000;
 }
 .id7-utility-bar .popover.account-information .actions a:hover,
 .id7-utility-bar .popover.account-information .actions a:focus {
@@ -8226,8 +8232,11 @@ body {
 .id7-masthead .id7-logo-row nav a:hover:not(.btn),
 .id7-masthead .id7-logo-row nav a:focus:not(.btn),
 .id7-masthead .id7-logo-row nav a:active:not(.btn) {
-  color: #212121;
+  color: #000;
   text-decoration: underline;
+}
+.id7-masthead .id7-logo-row nav a:hover .new-window-link {
+  color: #000;
 }
 .id7-masthead .id7-logo-row:hover nav {
   filter: alpha(opacity=100);
@@ -8548,8 +8557,11 @@ body {
 .carousel a:hover:not(.btn),
 .carousel a:focus:not(.btn),
 .carousel a:active:not(.btn) {
-  color: #ededed;
+  color: #ccc;
   text-decoration: underline;
+}
+.carousel a:hover .new-window-link {
+  color: #ccc;
 }
 .carousel-control .glyphicon {
   display: inline-block;
@@ -8984,6 +8996,38 @@ a {
   -webkit-transition: color .3s linear;
        -o-transition: color .3s linear;
           transition: color .3s linear;
+}
+a .new-window-link {
+  display: inline-block;
+  padding-left: 3px;
+  margin-right: 2px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  font-size: 12px;
+  color: #777;
+  -webkit-transition: color .3s linear;
+       -o-transition: color .3s linear;
+          transition: color .3s linear;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a .new-window-link.pull-left {
+  margin-right: .3em;
+}
+a .new-window-link.pull-right {
+  margin-left: .3em;
+}
+a .new-window-link:before {
+  content: "\f08e";
+}
+a:hover .new-window-link {
+  color: #7b428e;
 }
 .lead {
   font-weight: 700;

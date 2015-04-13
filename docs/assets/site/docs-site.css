@@ -38,8 +38,11 @@ a:visited:not(.btn) {
 a:hover:not(.btn),
 a:focus:not(.btn),
 a:active:not(.btn) {
-  color: #5093cc;
+  color: #3172a9;
   text-decoration: underline;
+}
+a:hover .new-window-link {
+  color: #3172a9;
 }
 .brand-bg {
   background: #6ca4d4;
@@ -394,6 +397,9 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   color: #000000;
   text-decoration: underline;
 }
+.id7-site-footer a:hover .new-window-link {
+  color: #000000;
+}
 .id7-app-footer {
   background: #6ca4d4;
   color: #ffffff;
@@ -407,8 +413,11 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-app-footer a:hover:not(.btn),
 .id7-app-footer a:focus:not(.btn),
 .id7-app-footer a:active:not(.btn) {
-  color: #ededed;
+  color: #cccccc;
   text-decoration: underline;
+}
+.id7-app-footer a:hover .new-window-link {
+  color: #cccccc;
 }
 .id7-masthead .id7-search .id7-search-box {
   border-color: #6ca4d4;

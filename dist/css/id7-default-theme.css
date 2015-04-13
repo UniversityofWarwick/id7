@@ -1,16 +1,16 @@
 /* A default theme */
-html .id7-header-image-container {
+.id7-header-image-container {
   background-color: #eee;
 }
-html .id7-fixed-width-container,
-html .id7-utility-bar {
+.id7-fixed-width-container,
+.id7-utility-bar {
   background-color: #eee;
 }
 @media (min-width: 768px) {
-  html .id7-left-border {
+  .id7-left-border {
     background-color: #eee;
   }
-  html .id7-right-border {
+  .id7-right-border {
     background-color: #eee;
   }
 }
@@ -40,8 +40,11 @@ a:visited:not(.btn) {
 a:hover:not(.btn),
 a:focus:not(.btn),
 a:active:not(.btn) {
-  color: #663776;
+  color: #3f2248;
   text-decoration: underline;
+}
+a:hover .new-window-link {
+  color: #3f2248;
 }
 .brand-bg {
   background: #7b428e;
@@ -396,6 +399,9 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   color: #000;
   text-decoration: underline;
 }
+.id7-site-footer a:hover .new-window-link {
+  color: #000;
+}
 .id7-app-footer {
   color: #fff;
   background: #7b428e;
@@ -409,8 +415,11 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-app-footer a:hover:not(.btn),
 .id7-app-footer a:focus:not(.btn),
 .id7-app-footer a:active:not(.btn) {
-  color: #ededed;
+  color: #ccc;
   text-decoration: underline;
+}
+.id7-app-footer a:hover .new-window-link {
+  color: #ccc;
 }
 .id7-masthead .id7-search .id7-search-box {
   border-color: #7b428e;

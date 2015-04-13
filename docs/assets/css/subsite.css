@@ -59,8 +59,11 @@ main .slideshow .carousel-controls a:visited:not(.btn) {
 main .slideshow .carousel-controls a:hover:not(.btn),
 main .slideshow .carousel-controls a:focus:not(.btn),
 main .slideshow .carousel-controls a:active:not(.btn) {
-  color: #ededed;
+  color: #cccccc;
   text-decoration: underline;
+}
+main .slideshow .carousel-controls a:hover .new-window-link {
+  color: #cccccc;
 }
 main .boxstyle_.box1 {
   border: 0;
