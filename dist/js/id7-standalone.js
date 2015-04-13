@@ -211,11 +211,12 @@
 
       this.options = o;
 
-      if (o.trimLinkTitles) this.trimLinkTitles();
-      if (o.fixedHeader) this.affixHeader();
-      if (o.fixedNav) this.affixNav();
-
       this.onScreenResize();
+
+      if (o.trimLinkTitles) this.trimLinkTitles();
+      if (o.fixedNav) this.affixNav();
+      if (o.fixedHeader) this.affixHeader();
+
       this.wireEventHandlers();
     }
 
@@ -250,7 +251,7 @@
         var $h1 = $('.id7-header-text h1');
         if ($h1.length) {
           // Set height in stone
-          $('.id7-header-text').height($('.id7-header-text').height());
+          this.markHeaderFixedPosition();
 
           var offsetTop = $h1.offset().top;
           var headerTextHeight = $('.id7-header-text').height();
@@ -360,7 +361,15 @@
 
       markHeaderFixedPosition: function markHeaderFixedPosition() {
         $('.id7-header-text').css('height', '');
+
+        var $h1 = $('.id7-header-text h1');
+        var isAlreadyAffixed = $h1.hasClass('affix');
+
+        if (isAlreadyAffixed) $h1.removeClass('affix');
+
         $('.id7-header-text').height($('.id7-header-text').height());
+
+        if (isAlreadyAffixed) $h1.addClass('affix');
       },
 
       markFixedPosition: function markFixedPosition() {
