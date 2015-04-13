@@ -1,7 +1,7 @@
 #masthead,
 #masthead.transparent {
-  background-color: white;
   color: black;
+  background-color: white;
 }
 #masthead a:not(.btn),
 #masthead.transparent a:not(.btn),
@@ -48,12 +48,12 @@
   display: none;
 }
 #search-container #search-box {
-  border: 1px solid #cccccc;
   padding: 2px 23px 2px 3px;
+  border: 1px solid #ccc;
 }
 #search-container #search-button {
-  margin-left: -20px;
   position: relative;
   top: -3px;
+  margin-left: -20px;
 }
 /*# sourceMappingURL=id6a.css.map */
