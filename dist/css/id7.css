@@ -8296,6 +8296,13 @@ body {
 .id7-non-branded .id7-search-box-container {
   margin-top: 11px !important;
 }
+*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+}
 .id7-header-image-container {
   position: relative;
 }
