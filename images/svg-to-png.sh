@@ -48,4 +48,16 @@ else
 	inkscape $SVG --export-background=white --export-png=$OUTPUT
 fi
 
+# SVG generation is a bit squiffy around the edges and can generate almost-invisible
+# white lines along the borders. Let's assume anything almost invisible is actually
+# invisible.
+convert $OUTPUT \
+  -transparent "#ffffff01" \
+  -transparent "#ffffff02" \
+  -transparent "#ffffff03" \
+  -transparent "#ffffff04" \
+  -transparent "#ffffff05" \
+  $OUTPUT
+
 optipng -o3 $OUTPUT
+

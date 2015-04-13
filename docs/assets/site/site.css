@@ -1,8 +1,7 @@
 html.site1 .id7-header-image-container {
   background-image: url("/assets/site/site1/banner-image.jpg");
 }
-html.site1 .id7-fixed-width-container,
-html.site1 .id7-utility-bar {
+html.site1 .id7-fixed-width-container {
   background-image: url("/assets/site/site1/masthead-image.jpg");
 }
 @media (min-width: 768px) {
@@ -16,8 +15,7 @@ html.site1 .id7-utility-bar {
 html.site2 .id7-header-image-container {
   background-image: url("/assets/site/site2/banner-image.jpg");
 }
-html.site2 .id7-fixed-width-container,
-html.site2 .id7-utility-bar {
+html.site2 .id7-fixed-width-container {
   background-image: url("/assets/site/site2/masthead-image.jpg");
 }
 @media (min-width: 768px) {
@@ -31,8 +29,7 @@ html.site2 .id7-utility-bar {
 html.site3 .id7-header-image-container {
   background-image: url("/assets/site/site3/banner-image.jpg");
 }
-html.site3 .id7-fixed-width-container,
-html.site3 .id7-utility-bar {
+html.site3 .id7-fixed-width-container {
   background-image: url("/assets/site/site3/masthead-image.jpg");
 }
 @media (min-width: 768px) {
@@ -81,13 +78,12 @@ body .brand-text {
 body .brand-border {
   border-color: #7b428e;
 }
-body .id7-utility-masthead::after {
-  background-color: #7b428e;
-}
-body .id7-utility-masthead,
-body .id7-utility-bar > nav {
+body .id7-utility-masthead {
   background-color: #7b428e;
   background-color: rgba(123, 66, 142, 0.5);
+}
+body .id7-utility-masthead::after {
+  background-color: #7b428e;
 }
 body .id7-navigation .navbar-primary {
   background-color: #7b428e;
