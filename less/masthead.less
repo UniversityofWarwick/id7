@@ -269,12 +269,3 @@ only screen and (min-width: @grid-float-breakpoint) and (                min-res
     margin-top: (@line-height-computed / 2) !important;
   }
 }
-
-// ID-63 Fix for scroll-to-anchor being obscured by affixed title/nav
-*[id]:before {
-  display: block;
-  content: " ";
-  margin-top: -100px;
-  height: 100px;
-  visibility: hidden;
-}
