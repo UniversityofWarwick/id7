@@ -7624,7 +7624,7 @@ footer .id7-app-footer:after {
   }
 }
 main {
-  font-size: ceiling(13.6px);
+  font-size: 14px;
   font-weight: 300;
   font-weight: 400;
 }
@@ -8441,10 +8441,10 @@ body {
 .id7-header-image-container .carousel .carousel-inner > .item {
   height: 100%;
 }
-.carousel-control {
+.id7-header-image-container .carousel-control {
   width: 10%;
 }
-.carousel-control .fa {
+.id7-header-image-container .carousel-control .fa {
   position: absolute;
   top: 50%;
   z-index: 5;
@@ -8453,20 +8453,20 @@ body {
   height: 40px;
   font-size: 2em;
 }
-.carousel-control.left .fa {
+.id7-header-image-container .carousel-control.left .fa {
   left: 10px;
 }
-.carousel-control.right .fa {
+.id7-header-image-container .carousel-control.right .fa {
   right: 10px;
 }
-.carousel-control .icon-prev,
-.carousel-control .icon-next {
+.id7-header-image-container .carousel-control .icon-prev,
+.id7-header-image-container .carousel-control .icon-next {
   width: 20px;
   height: 20px;
   margin-top: -10px;
   font-family: serif;
 }
-.carousel .strapline {
+.id7-header-image-container .carousel .strapline {
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -8474,24 +8474,24 @@ body {
   background-color: #555;
   background-color: rgba(0, 0, 0, .8);
 }
-.carousel .strapline.top {
+.id7-header-image-container .carousel .strapline.top {
   position: absolute;
   top: 35px;
 }
-.carousel .strapline.bottom {
+.id7-header-image-container .carousel .strapline.bottom {
   position: absolute;
   bottom: 0;
 }
-.carousel .carousel-indicators {
+.id7-header-image-container .carousel .carousel-indicators {
   z-index: 1;
 }
-.carousel .carousel-indicators li {
+.id7-header-image-container .carousel .carousel-indicators li {
   width: 14px;
   height: 14px;
   text-indent: 0;
   border: 0;
 }
-.carousel .carousel-indicators li::after {
+.id7-header-image-container .carousel .carousel-indicators li::after {
   position: relative;
   top: -4px;
   display: inline-block;
@@ -8513,17 +8513,69 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.carousel .carousel-indicators li::after.pull-left {
+.id7-header-image-container .carousel .carousel-indicators li::after.pull-left {
   margin-right: .3em;
 }
-.carousel .carousel-indicators li::after.pull-right {
+.id7-header-image-container .carousel .carousel-indicators li::after.pull-right {
   margin-left: .3em;
 }
-.carousel .carousel-indicators li.active {
+.id7-header-image-container .carousel .carousel-indicators li.active {
   background: none;
 }
-.carousel .carousel-indicators li.active::after {
+.id7-header-image-container .carousel .carousel-indicators li.active::after {
   color: #000;
+}
+.carousel h1,
+.carousel h2,
+.carousel h3,
+.carousel h4,
+.carousel h5,
+.carousel h6,
+.carousel .h1,
+.carousel .h2,
+.carousel .h3,
+.carousel .h4,
+.carousel .h5,
+.carousel .h6 {
+  color: inherit;
+}
+.carousel a:not(.btn),
+.carousel a:link:not(.btn),
+.carousel a:visited:not(.btn) {
+  color: white;
+  text-decoration: none;
+}
+.carousel a:hover:not(.btn),
+.carousel a:focus:not(.btn),
+.carousel a:active:not(.btn) {
+  color: #ededed;
+  text-decoration: underline;
+}
+.carousel-control .glyphicon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  font-size: 2em;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.carousel-control .glyphicon.pull-left {
+  margin-right: .3em;
+}
+.carousel-control .glyphicon.pull-right {
+  margin-left: .3em;
+}
+.carousel-control .glyphicon-chevron-left:before {
+  content: "\f053";
+}
+.carousel-control .glyphicon-chevron-right:before {
+  content: "\f054";
 }
 .id7-navigation {
   position: relative;
@@ -9286,7 +9338,20 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 .column-2-content p,
-.boxstyle_ p {
+.column-2-content ul,
+.column-2-content ol,
+.column-2-content dl,
+.column-2-content blockquote,
+.boxstyle_ p,
+.boxstyle_ ul,
+.boxstyle_ ol,
+.boxstyle_ dl,
+.boxstyle_ blockquote,
+.carousel p,
+.carousel ul,
+.carousel ol,
+.carousel dl,
+.carousel blockquote {
   padding-right: 0;
 }
 table[cellpadding="10"] td,

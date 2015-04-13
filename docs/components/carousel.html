@@ -1,0 +1,348 @@
+---
+layout: default
+title: Carousel
+slug: components/carousel
+---
+
+<p>A slideshow component for cycling through elements, like a carousel. <strong>Nested carousels are not
+    supported.</strong></p>
+
+<div class="row">
+    <section class="col-sm-9">
+
+        <h2 id="carousel-examples">Examples</h2>
+
+        <div class="bs-example" data-example-id="simple-carousel">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="http://placehold.it/900x500/777777" alt="First slide">
+                    </div>
+                    <div class="item">
+                        <img src="http://placehold.it/900x500/666666" alt="Second slide">
+                    </div>
+                    <div class="item">
+                        <img src="http://placehold.it/900x500/555555" alt="Third slide">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <!-- /example -->
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span
+                class="na">id=</span><span class="s">"carousel-example-generic"</span> <span
+                class="na">class=</span><span class="s">"carousel slide"</span> <span class="na">data-ride=</span><span
+                class="s">"carousel"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Indicators --&gt;</span>
+            <span class="nt">&lt;ol</span> <span class="na">class=</span><span
+                    class="s">"carousel-indicators"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">"#carousel-example-generic"</span>
+            <span class="na">data-slide-to=</span><span class="s">"0"</span> <span class="na">class=</span><span
+                    class="s">"active"</span><span class="nt">&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">"#carousel-example-generic"</span>
+            <span class="na">data-slide-to=</span><span class="s">"1"</span><span class="nt">&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">"#carousel-example-generic"</span>
+            <span class="na">data-slide-to=</span><span class="s">"2"</span><span class="nt">&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ol&gt;</span>
+
+            <span class="c">&lt;!-- Wrapper for slides --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-inner"</span> <span
+                    class="na">role=</span><span class="s">"listbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item active"</span><span
+                    class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span
+                    class="s">"..."</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-caption"</span><span
+                    class="nt">&gt;</span>
+            ...
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span
+                    class="s">"..."</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-caption"</span><span
+                    class="nt">&gt;</span>
+            ...
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            ...
+            <span class="nt">&lt;/div&gt;</span>
+
+            <span class="c">&lt;!-- Controls --&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"left carousel-control"</span>
+            <span class="na">href=</span><span class="s">"#carousel-example-generic"</span> <span
+                    class="na">role=</span><span class="s">"button"</span> <span class="na">data-slide=</span><span
+                    class="s">"prev"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-chevron-left"</span>
+            <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span
+                    class="nt">&gt;</span>Previous<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"right carousel-control"</span>
+            <span class="na">href=</span><span class="s">"#carousel-example-generic"</span> <span
+                    class="na">role=</span><span class="s">"button"</span> <span class="na">data-slide=</span><span
+                    class="s">"next"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-chevron-right"</span>
+            <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span
+                    class="nt">&gt;</span>Next<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span></code></pre>
+        </div>
+
+        <div class="bs-callout bs-callout-danger" id="callout-carousel-accessibility">
+            <h4>Accessibility issue</h4>
+
+            <p>The carousel component is generally not compliant with accessibility standards. If you need to be
+                compliant, please consider other options for presenting your content.</p>
+        </div>
+
+        <div class="bs-callout bs-callout-warning" id="callout-carousel-transitions">
+            <h4>Transition animations not supported in Internet Explorer 8 &amp; 9</h4>
+
+            <p>Bootstrap exclusively uses CSS3 for its animations, but Internet Explorer 8 &amp; 9 don't support the
+                necessary CSS properties. Thus, there are no slide transition animations when using these browsers. We
+                have intentionally decided not to include jQuery-based fallbacks for the transitions.</p>
+        </div>
+
+        <div class="bs-callout bs-callout-warning" id="callout-carousel-active">
+            <h4>Initial active element required</h4>
+
+            <p>The <code>.active</code> class needs to be added to one of the slides. Otherwise, the carousel will not
+                be visible.</p>
+        </div>
+
+        <h3>Optional captions</h3>
+
+        <p>Add captions to your slides easily with the <code>.carousel-caption</code> element within any
+            <code>.item</code>. Place just about any optional HTML within there and it will be automatically aligned and
+            formatted.</p>
+
+        <div class="bs-example" data-example-id="carousel-with-captions">
+            <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-captions" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-captions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="http://placehold.it/900x500/777777" alt="First slide image">
+
+                        <div class="carousel-caption">
+                            <h2><a href="/services/its/intranet/projects/webdev/content-kb/templates/layouts/slideshow/slides/../atoz/">Sub-heading for this news information piece</a> </h2>
+
+                            <p>Warwick is one of the UK's leading universities, the quality and impact of our research is demonstrated by our excellent research rankings. In x, research award-stopped <a href="/services/its/intranet/projects/webdev/content-kb/templates/layouts/slideshow/slides/../news/">&pound;100 million</a> and we invested x amount in research infrastructure</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="http://placehold.it/900x500/666666" alt="Second slide image">
+
+                        <div class="carousel-caption">
+                            <h3>New research unit using digital technology to fight cancer</h3>
+
+                            <p>A new cancer research unit set up at the University of Warwick will use digital technology to try and find new treatments for the disease.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="http://placehold.it/900x500/555555" alt="Third slide image">
+
+                        <div class="carousel-caption">
+                            <h3>Third slide label</h3>
+
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-captions" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-captions" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <!-- /example -->
+        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span
+                class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span
+                    class="s">"..."</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-caption"</span><span
+                    class="nt">&gt;</span>
+            <span class="nt">&lt;h3&gt;</span>...<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span></code></pre>
+        </div>
+
+        <h2 id="carousel-usage">Usage</h2>
+
+        <h3>Multiple carousels</h3>
+
+        <p>Carousels require the use of an <code>id</code> on the outermost container (the <code>.carousel</code>) for
+            carousel controls to function properly. When adding multiple carousels, or when changing a carousel's <code>id</code>,
+            be sure to update the relevant controls.</p>
+
+        <h3>Via data attributes</h3>
+
+        <p>Use data attributes to easily control the position of the carousel. <code>data-slide</code> accepts the
+            keywords <code>prev</code> or <code>next</code>, which alters the slide position relative to its current
+            position. Alternatively, use <code>data-slide-to</code> to pass a raw slide index to the carousel <code>data-slide-to="2"</code>,
+            which shifts the slide position to a particular index beginning with <code>0</code>.</p>
+
+        <p>The <code>data-ride="carousel"</code> attribute is used to mark a carousel as animating starting at page
+            load. <strong class="text-danger">It cannot be used in combination with (redundant and unnecessary) explicit
+                JavaScript initialization of the same carousel.</strong></p>
+
+        <h3>Via JavaScript</h3>
+
+        <p>Call carousel manually with:</p>
+
+        <div class="highlight">
+            <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span
+                    class="s1">'.carousel'</span><span class="p">).</span><span class="nx">carousel</span><span
+                    class="p">()</span></code></pre>
+        </div>
+
+        <h3 id="carousel-options">Options</h3>
+
+        <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to
+            <code>data-</code>, as in <code>data-interval=""</code>.</p>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped js-options-table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>type</th>
+                    <th>default</th>
+                    <th>description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>interval</td>
+                    <td>number</td>
+                    <td>5000</td>
+                    <td>The amount of time to delay between automatically cycling an item. If false, carousel will not
+                        automatically cycle.
+                    </td>
+                </tr>
+                <tr>
+                    <td>pause</td>
+                    <td>string</td>
+                    <td>"hover"</td>
+                    <td>Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on
+                        mouseleave.
+                    </td>
+                </tr>
+                <tr>
+                    <td>wrap</td>
+                    <td>boolean</td>
+                    <td>true</td>
+                    <td>Whether the carousel should cycle continuously or have hard stops.</td>
+                </tr>
+                <tr>
+                    <td>keyboard</td>
+                    <td>boolean</td>
+                    <td>true</td>
+                    <td>Whether the carousel should react to keyboard events.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+
+        <h3 id="carousel-methods">Methods</h3>
+
+        <h4><code>.carousel(options)</code></h4>
+
+        <p>Initializes the carousel with an optional options <code>object</code> and starts cycling through items.</p>
+
+        <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span
+                class="p">(</span><span class="s1">'.carousel'</span><span class="p">).</span><span
+                class="nx">carousel</span><span class="p">({</span>
+            <span class="na">interval</span><span class="p">:</span> <span class="mi">2000</span>
+            <span class="p">})</span></code></pre>
+        </div>
+
+        <h4><code>.carousel('cycle')</code></h4>
+
+        <p>Cycles through the carousel items from left to right.</p>
+
+        <h4><code>.carousel('pause')</code></h4>
+
+        <p>Stops the carousel from cycling through items.</p>
+
+
+        <h4><code>.carousel(number)</code></h4>
+
+        <p>Cycles the carousel to a particular frame (0 based, similar to an array).</p>
+
+        <h4><code>.carousel('prev')</code></h4>
+
+        <p>Cycles to the previous item.</p>
+
+        <h4><code>.carousel('next')</code></h4>
+
+        <p>Cycles to the next item.</p>
+
+        <h3 id="carousel-events">Events</h3>
+
+        <p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
+
+        <p>Both events have the following additional properties:</p>
+        <ul>
+            <li><code>direction</code>: The direction in which the carousel is sliding (either <code>"left"</code> or
+                <code>"right"</code>).
+            </li>
+            <li><code>relatedTarget</code>: The DOM element that is being slid into place as the active item.</li>
+        </ul>
+        <p>All carousel events are fired at the carousel itself (i.e. at the <code>&lt;div class="carousel"&gt;</code>).
+        </p>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped bs-events-table">
+                <thead>
+                <tr>
+                    <th>Event Type</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>slide.bs.carousel</td>
+                    <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td>
+                </tr>
+                <tr>
+                    <td>slid.bs.carousel</td>
+                    <td>This event is fired when the carousel has completed its slide transition.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+        <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span
+                class="p">(</span><span class="s1">'#myCarousel'</span><span class="p">).</span><span
+                class="nx">on</span><span class="p">(</span><span class="s1">'slide.bs.carousel'</span><span
+                class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// do something…</span>
+            <span class="p">})</span></code></pre>
+        </div>
+
+    </section>
+</div>
