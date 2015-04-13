@@ -445,6 +445,11 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   background: #e2edf6;
   color: black;
 }
+@media print {
+  .boxstyle_.box1 {
+    border: 1px solid #e2edf6;
+  }
+}
 .boxstyle_.box1 h1,
 .boxstyle_.box1 h2,
 .boxstyle_.box1 h3,
@@ -463,6 +468,11 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   border: 0;
   background: #eeeeee;
   color: black;
+}
+@media print {
+  .boxstyle_.box2 {
+    border: 1px solid #eeeeee;
+  }
 }
 .boxstyle_.box2 h1,
 .boxstyle_.box2 h2,

@@ -17,4 +17,11 @@
       color: @separator-colour;
     }
   }
+
+  // ID-60 Don't expand utility bar links in print view
+  @media print {
+    a[href]:after {
+      content: "";
+    }
+  }
 }

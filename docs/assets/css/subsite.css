@@ -67,6 +67,11 @@ main .boxstyle_.box1 {
   background: #cab3d2;
   color: black;
 }
+@media print {
+  main .boxstyle_.box1 {
+    border: 1px solid #cab3d2;
+  }
+}
 main .boxstyle_.box1 h1,
 main .boxstyle_.box1 h2,
 main .boxstyle_.box1 h3,
@@ -85,6 +90,11 @@ main .boxstyle_.box2 {
   border: 0;
   background: #f2ecf4;
   color: black;
+}
+@media print {
+  main .boxstyle_.box2 {
+    border: 1px solid #f2ecf4;
+  }
 }
 main .boxstyle_.box2 h1,
 main .boxstyle_.box2 h2,
@@ -105,6 +115,11 @@ main .boxstyle_.box3 {
   background: #e6e6e6;
   color: black;
 }
+@media print {
+  main .boxstyle_.box3 {
+    border: 1px solid #e6e6e6;
+  }
+}
 main .boxstyle_.box3 h1,
 main .boxstyle_.box3 h2,
 main .boxstyle_.box3 h3,
@@ -124,6 +139,11 @@ main .boxstyle_.feature-image1 {
   background: url(../site/site1/banner-image.jpg) top right no-repeat;
   color: white;
 }
+@media print {
+  main .boxstyle_.feature-image1 {
+    border: 1px solid url(../site/site1/banner-image.jpg) top right no-repeat;
+  }
+}
 main .boxstyle_.feature-image1 h1,
 main .boxstyle_.feature-image1 h2,
 main .boxstyle_.feature-image1 h3,
@@ -142,6 +162,11 @@ main .boxstyle_.feature-image2 {
   border: 0;
   background: url(../site/site3/banner-image.jpg) top right no-repeat;
   color: white;
+}
+@media print {
+  main .boxstyle_.feature-image2 {
+    border: 1px solid url(../site/site3/banner-image.jpg) top right no-repeat;
+  }
 }
 main .boxstyle_.feature-image2 h1,
 main .boxstyle_.feature-image2 h2,

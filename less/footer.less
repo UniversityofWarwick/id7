@@ -4,14 +4,16 @@ footer {
     position: relative;
     padding-top: (@grid-gutter-width / 2);
 
-    .id7-logo-bleed {
-      .logo-as-css(auto, @grid-gutter-width, @id7-site-footer-colour);
-      position: absolute;
-      top: 0px;
-      right: 10%;
+    @media screen {
+      .id7-logo-bleed {
+        .logo-as-css(auto, @grid-gutter-width, @id7-site-footer-colour);
+        position: absolute;
+        top: 0px;
+        right: 10%;
 
-      + * {
-        margin-top: (@grid-gutter-width / 2);
+        + * {
+          margin-top: (@grid-gutter-width / 2);
+        }
       }
     }
   }

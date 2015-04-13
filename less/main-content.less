@@ -2,6 +2,17 @@ main {
   > header {
     .container();
     background: white;
+
+    // Add the logo to the right hand side when printing
+    @media print {
+      > img.visible-print-block {
+        float: right;
+      }
+
+      > .id7-page-title {
+        padding-right: (142px + (@grid-gutter-width / 2)); // FIXME magic number, 142px is width of print logo
+      }
+    }
   }
 
   > .id7-main-content {

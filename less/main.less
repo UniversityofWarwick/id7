@@ -14,7 +14,10 @@ main {
 
   @media (min-width: @screen-xs-min) {
     font-size: @main-font-size;
+  }
 
+  // Only add the right padding on a screen (to avoid it going on print)
+  @media screen and (min-width: @screen-xs-min) {
     p, ul, ol, dl, blockquote {
       padding-right: 4rem;
     }
