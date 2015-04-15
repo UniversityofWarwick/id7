@@ -16,7 +16,7 @@ body {
   width: 100%;
   .transition(background-color 0.15s linear);
 
-  z-index: 1;
+  z-index: 30;
   top: 0px;
   left: 0px;
 }
@@ -25,14 +25,14 @@ body {
   position: relative;
 }
 
-main > .id7-main-content {
+.id7-main-content-area > .id7-main-content {
   width: 100% !important;
   padding: 0;
 }
 
 // Containers
 .id7-utility-bar > nav, .id7-masthead, .id7-navigation > .navbar {
-  .container-fixed(0);
+  .container-fixed(@grid-gutter-width);
 
   @media (min-width: @screen-sm-min) {
     width: @container-sm;
@@ -75,6 +75,12 @@ main > .id7-main-content {
   @media (min-width: @screen-lg-min) {
     background-image: url("/dist/images/masthead-logo-bleed-homepage-lg.png");
     background-size: 3000px @id7-masthead-logo-height-sm;
+  }
+}
+
+@media (min-width: @grid-float-breakpoint) {
+  .id7-masthead .id7-logo-row > .id7-logo {
+    width: 150px;
   }
 }
 
@@ -125,7 +131,11 @@ only screen and (                min-resolution: 2dppx) {
     ul > li {
       &:not(:first-child)::before {
         content: '';
-        margin: 0 0.6em;
+        margin: 0 0.3em;
+
+        @media (min-width: @screen-md-min) {
+          margin: 0 0.6em;
+        }
       }
     }
   }
@@ -143,15 +153,20 @@ only screen and (                min-resolution: 2dppx) {
   text-shadow: none;
 
   max-width: 100%;
-  width: 80%;
+  width: @container-lg;
+  min-width: @container-sm;
 
-  min-height: 300px;
-  height: 70vh;
-  max-height: 600px;
+  @media (min-width: @screen-md-min) {
+    min-width: @container-md;
+  }
 }
 
 .caption, .carousel-nav {
   text-shadow: 1px 1px 0 rgba(0,0,0,.2);
+}
+
+.jumbotron-carousel, .carousel-nav {
+  .link-decoration(none, @hover: underline);
 }
 
 // Jumbotron content blocks
@@ -161,7 +176,7 @@ only screen and (                min-resolution: 2dppx) {
 
   background: black;
   color: white;
-  .link-colour(white);
+  .link-colour(white, #e0e4f8);
 
   .flexbox();
   .flex-direction(column);
@@ -342,7 +357,7 @@ only screen and (                min-resolution: 2dppx) {
   text-align: right;
 
   color: white;
-  .link-colour(white);
+  .link-colour(white, #e0e4f8);
 
   ul.nav {
     padding: 0;
@@ -371,4 +386,107 @@ only screen and (                min-resolution: 2dppx) {
       &.active .title { font-weight: bold; }
     }
   }
+}
+
+#more-links-footer {
+  background: @gray;
+  color: white;
+  .link-colour(white, #e0e4f8);
+
+  @media (min-width: @grid-float-breakpoint) {
+    display: none;
+  }
+}
+
+.more-links-sitemap {
+  // Unstyle lists
+  &, ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  > li {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+
+    > i {
+      font-size: 2em;
+      display: block;
+    }
+
+    ul {
+      font-weight: normal;
+      text-align: left;
+      font-size: @font-size-base;
+    }
+
+    @media (max-width: (@grid-float-breakpoint - 1)) {
+      padding: (@grid-gutter-width / 2) 0;
+    }
+
+    @media (min-width: @grid-float-breakpoint) {
+
+    }
+  }
+
+  // When inside the footer
+  #more-links-footer & {
+    > li + li {
+      border-top: 1px solid @gray-light;
+    }
+
+    > li > i {
+      color: @gray-lighter;
+    }
+  }
+
+  // When inside the popover
+  .megamenu-links & {
+    .make-row();
+    .link-colour(#333, #2c66e8);
+
+    a {
+      text-decoration: underline;
+    }
+
+    > li {
+      width: percentage((1 / 4));
+
+      @media (min-width: @screen-md-min) {
+        width: percentage((1 / 8));
+      }
+
+      float: left;
+      position: relative;
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+      // Inner gutter via padding
+      padding-left:  (@grid-gutter-width / 2);
+      padding-right: (@grid-gutter-width / 2);
+      margin-bottom: (@grid-gutter-width / 2);
+
+      + li {
+        border-left: 1px solid @gray-lighter;
+      }
+
+      > i {
+        color: @gray-light;
+      }
+    }
+
+    // Flexbox it in browsers that support it to get equal-height columns
+    .flexbox();
+    .flex-wrap(wrap);
+    > li {
+      .flex(2013, 1);
+    }
+  }
+}
+
+.megamenu-links .address {
+  margin-top: (@grid-gutter-width / 2);
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
 }

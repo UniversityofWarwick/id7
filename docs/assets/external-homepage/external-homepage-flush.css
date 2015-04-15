@@ -5,13 +5,11 @@
 .navbar-fixed-top .navbar-nav a:link:not(.btn),
 .navbar-fixed-top .navbar-nav a:visited:not(.btn) {
   color: white;
-  text-decoration: none;
 }
 .navbar-fixed-top .navbar-nav a:hover:not(.btn),
 .navbar-fixed-top .navbar-nav a:focus:not(.btn),
 .navbar-fixed-top .navbar-nav a:active:not(.btn) {
   color: #cccccc;
-  text-decoration: underline;
 }
 .navbar-fixed-top .navbar-nav a:hover .new-window-link {
   color: #cccccc;
@@ -49,13 +47,11 @@
 .jumbotron a:link:not(.btn),
 .jumbotron a:visited:not(.btn) {
   color: white;
-  text-decoration: none;
 }
 .jumbotron a:hover:not(.btn),
 .jumbotron a:focus:not(.btn),
 .jumbotron a:active:not(.btn) {
   color: #cccccc;
-  text-decoration: underline;
 }
 .jumbotron a:hover .new-window-link {
   color: #cccccc;
@@ -195,13 +191,11 @@
 .carousel-nav a:link:not(.btn),
 .carousel-nav a:visited:not(.btn) {
   color: white;
-  text-decoration: none;
 }
 .carousel-nav a:hover:not(.btn),
 .carousel-nav a:focus:not(.btn),
 .carousel-nav a:active:not(.btn) {
   color: #cccccc;
-  text-decoration: underline;
 }
 .carousel-nav a:hover .new-window-link {
   color: #cccccc;

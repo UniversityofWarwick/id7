@@ -2,7 +2,7 @@
     'use strict';
 
     var Config = {
-        CSSTemplate: _.template([
+        PanelsCSSTemplate: _.template([
             'body .id7-masthead .id7-search .id7-search-box {',
                 'border-color: <%= colour %>;',
             '}',
@@ -30,6 +30,13 @@
             '.id7-masthead .id7-logo-row nav a {',
                 'color: <%= colour %> !important;',
             '}'
+        ].join('')),
+        NavCSSTemplate: _.template([
+            '<% _.each(panels, function (panel) { %>',
+                '.carousel-nav a[href="#<%= panel.id %>"]:hover {',
+                    'color: <%= panel.colour %>;',
+                '}',
+            '<% }); %>'
         ].join('')),
         Defaults: {
             menu: '.carousel-nav',
@@ -124,12 +131,31 @@
                     var scaling = $panel.data('image-scaling') || options.defaultImageScaling;
                     $panel.css('background-size', scaling);
                 });
+
+                var panelColours = [];
+                $container.find(options.panels + '[id][data-colour]').each(function () {
+                    var $panel = $(this);
+                    var id = $panel.attr('id');
+                    var colour = $panel.data('colour');
+
+                    panelColours.push({
+                        id: id,
+                        colour: colour,
+                        colour_r: parseInt(colour.substring(1, 3), 16),
+                        colour_g: parseInt(colour.substring(3, 5), 16),
+                        colour_b: parseInt(colour.substring(5, 7), 16)
+                    });
+                });
+
+                $('#homepage-style-rules-nav').text(Config.NavCSSTemplate({
+                    panels: panelColours
+                }));
             },
 
             onChangePanel: function ($panel) {
                 var colour = $panel.data('colour');
 
-                $('#homepage-style-rules').text(Config.CSSTemplate({
+                $('#homepage-style-rules-panels').text(Config.PanelsCSSTemplate({
                     colour: colour,
                     colour_r: parseInt(colour.substring(1, 3), 16),
                     colour_g: parseInt(colour.substring(3, 5), 16),

@@ -33,13 +33,11 @@ a:not(.btn),
 a:link:not(.btn),
 a:visited:not(.btn) {
   color: #6ca4d4;
-  text-decoration: none;
 }
 a:hover:not(.btn),
 a:focus:not(.btn),
 a:active:not(.btn) {
   color: #3172a9;
-  text-decoration: underline;
 }
 a:hover .new-window-link {
   color: #3172a9;
@@ -389,13 +387,11 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-site-footer a:link:not(.btn),
 .id7-site-footer a:visited:not(.btn) {
   color: #000000;
-  text-decoration: none;
 }
 .id7-site-footer a:hover:not(.btn),
 .id7-site-footer a:focus:not(.btn),
 .id7-site-footer a:active:not(.btn) {
   color: #000000;
-  text-decoration: underline;
 }
 .id7-site-footer a:hover .new-window-link {
   color: #000000;
@@ -408,13 +404,11 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-app-footer a:link:not(.btn),
 .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
-  text-decoration: none;
 }
 .id7-app-footer a:hover:not(.btn),
 .id7-app-footer a:focus:not(.btn),
 .id7-app-footer a:active:not(.btn) {
   color: #cccccc;
-  text-decoration: underline;
 }
 .id7-app-footer a:hover .new-window-link {
   color: #cccccc;

@@ -1,8 +1,9 @@
-main {
+.id7-main-content-area {
   font-weight: @main-font-weight;
   font-size: ceil((@main-font-size * 0.85));
   font-weight: 400;
 
+  // FIXME ???
   section {
     margin-bottom: 2rem;
   }
@@ -18,7 +19,7 @@ main {
 
   // Only add the right padding on a screen (to avoid it going on print)
   @media screen and (min-width: @screen-xs-min) {
-    p, ul, ol, dl, blockquote {
+    .id7-main-content > .layout > .column-1 > .column-1-content > p {
       padding-right: 4rem;
     }
   }

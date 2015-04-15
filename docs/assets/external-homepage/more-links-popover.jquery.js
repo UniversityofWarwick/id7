@@ -2,19 +2,13 @@
     'use strict';
 
     var Config = {
-        Templates: {
-            Popover: _.template([
-                '<div>',
-                '</div>'
-            ].join(''))
-        },
         Defaults: {
             container: 'body', // Needed to avoid being drawn under the nav carousel which is fixed in the body
             template: [
                 '<div class="popover megamenu-links">',
                 '<div class="arrow"></div>',
                 '<div class="popover-inner">',
-                '<div class="popover-content"><p></p></div>',
+                '<div class="popover-content container-fluid"></div>',
                 '</div>',
                 '</div>'
             ].join('')
@@ -43,7 +37,7 @@
                     return false;
                 }).popover({
                     container: this.options.container,
-                    content: Config.Templates.Popover(this.options),
+                    content: $('#more-links-footer > .container').html(),
                     template: this.options.template,
                     html: true,
                     placement: 'bottom',

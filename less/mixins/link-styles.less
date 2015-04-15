@@ -1,35 +1,49 @@
-.link-colour(@base) when not (@base = inherit) {
+.link-colour(@base, @hover) {
   a, a:link, a:visited {
     &:not(.btn) {
       color: @base;
-      text-decoration: none;
     }
   }
 
   a:hover, a:focus, a:active {
     &:not(.btn) {
-      color: darken(@base, 20%);
-      text-decoration: @link-hover-decoration;
+      color: @hover;
     }
   }
 
   a:hover .new-window-link {
-    color: darken(@base, 20%);
+    color: @hover;
   }
+}
+
+.link-colour(@base) when not (@base = inherit) {
+  .link-colour(@base, darken(@base, 20%));
 }
 
 .link-colour(@base) when (@base = inherit) {
   a, a:link, a:visited {
     &:not(.btn) {
       color: inherit;
-      text-decoration: none;
     }
   }
 
   a:hover, a:focus, a:active {
     &:not(.btn) {
       color: inherit;
-      text-decoration: @link-hover-decoration;
+    }
+  }
+}
+
+.link-decoration(@base: none, @hover: underline) {
+  a, a:link, a:visited {
+    &:not(.btn) {
+      text-decoration: @base;
+    }
+  }
+
+  a:hover, a:focus, a:active {
+    &:not(.btn) {
+      text-decoration: @hover;
     }
   }
 }

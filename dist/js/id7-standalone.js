@@ -479,6 +479,16 @@
         source: o.source,
         displayKey: o.displayKey,
         templates: o.templates
+      }).on('keydown', function ($e) {
+        var keyCode = $e.which || $e.keyCode;
+        switch (keyCode) {
+          case 38: // up
+          case 40: // down
+            // Only if no modifier
+            if (!($e.altKey || $e.ctrlKey || $e.metaKey || $e.shiftKey)) {
+              $e.stopPropagation();
+            }
+        }
       });
     }
 

@@ -1,20 +1,20 @@
-main .row-spacer > [class*='col-'] {
+.id7-main-content-area .row-spacer > [class*='col-'] {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-main .slideshow {
+.id7-main-content-area .slideshow {
   background: black;
   color: white;
   margin-bottom: 20px;
 }
-main .slideshow .carousel {
+.id7-main-content-area .slideshow .carousel {
   height: 400px;
 }
-main .slideshow .carousel .carousel-inner,
-main .slideshow .carousel .carousel-inner > .item {
+.id7-main-content-area .slideshow .carousel .carousel-inner,
+.id7-main-content-area .slideshow .carousel .carousel-inner > .item {
   height: 100%;
 }
-main .slideshow .carousel-inner > .item > .caption {
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption {
   width: 290px;
   max-width: 100%;
   position: absolute;
@@ -26,22 +26,22 @@ main .slideshow .carousel-inner > .item > .caption {
   background-color: rgba(0, 0, 0, 0.8);
   overflow: auto;
 }
-main .slideshow .carousel-inner > .item > .caption h1,
-main .slideshow .carousel-inner > .item > .caption h2,
-main .slideshow .carousel-inner > .item > .caption h3,
-main .slideshow .carousel-inner > .item > .caption h4,
-main .slideshow .carousel-inner > .item > .caption h5,
-main .slideshow .carousel-inner > .item > .caption h6,
-main .slideshow .carousel-inner > .item > .caption .h1,
-main .slideshow .carousel-inner > .item > .caption .h2,
-main .slideshow .carousel-inner > .item > .caption .h3,
-main .slideshow .carousel-inner > .item > .caption .h4,
-main .slideshow .carousel-inner > .item > .caption .h5,
-main .slideshow .carousel-inner > .item > .caption .h6 {
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption h1,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption h2,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption h3,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption h4,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption h5,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption h6,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption .h1,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption .h2,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption .h3,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption .h4,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption .h5,
+.id7-main-content-area .slideshow .carousel-inner > .item > .caption .h6 {
   color: inherit;
   border: 0;
 }
-main .slideshow .carousel-controls {
+.id7-main-content-area .slideshow .carousel-controls {
   height: 40px;
   line-height: 40px;
   position: absolute;
@@ -50,167 +50,165 @@ main .slideshow .carousel-controls {
   background-color: #555555;
   background-color: rgba(0, 0, 0, 0.8);
 }
-main .slideshow .carousel-controls a:not(.btn),
-main .slideshow .carousel-controls a:link:not(.btn),
-main .slideshow .carousel-controls a:visited:not(.btn) {
+.id7-main-content-area .slideshow .carousel-controls a:not(.btn),
+.id7-main-content-area .slideshow .carousel-controls a:link:not(.btn),
+.id7-main-content-area .slideshow .carousel-controls a:visited:not(.btn) {
   color: white;
-  text-decoration: none;
 }
-main .slideshow .carousel-controls a:hover:not(.btn),
-main .slideshow .carousel-controls a:focus:not(.btn),
-main .slideshow .carousel-controls a:active:not(.btn) {
-  color: #cccccc;
-  text-decoration: underline;
-}
-main .slideshow .carousel-controls a:hover .new-window-link {
+.id7-main-content-area .slideshow .carousel-controls a:hover:not(.btn),
+.id7-main-content-area .slideshow .carousel-controls a:focus:not(.btn),
+.id7-main-content-area .slideshow .carousel-controls a:active:not(.btn) {
   color: #cccccc;
 }
-main .boxstyle_.box1 {
+.id7-main-content-area .slideshow .carousel-controls a:hover .new-window-link {
+  color: #cccccc;
+}
+.id7-main-content-area .boxstyle_.box1 {
   border: 0;
   background: #cab3d2;
   color: black;
 }
 @media print {
-  main .boxstyle_.box1 {
+  .id7-main-content-area .boxstyle_.box1 {
     border: 1px solid #cab3d2;
   }
 }
-main .boxstyle_.box1 h1,
-main .boxstyle_.box1 h2,
-main .boxstyle_.box1 h3,
-main .boxstyle_.box1 h4,
-main .boxstyle_.box1 h5,
-main .boxstyle_.box1 h6,
-main .boxstyle_.box1 .h1,
-main .boxstyle_.box1 .h2,
-main .boxstyle_.box1 .h3,
-main .boxstyle_.box1 .h4,
-main .boxstyle_.box1 .h5,
-main .boxstyle_.box1 .h6 {
+.id7-main-content-area .boxstyle_.box1 h1,
+.id7-main-content-area .boxstyle_.box1 h2,
+.id7-main-content-area .boxstyle_.box1 h3,
+.id7-main-content-area .boxstyle_.box1 h4,
+.id7-main-content-area .boxstyle_.box1 h5,
+.id7-main-content-area .boxstyle_.box1 h6,
+.id7-main-content-area .boxstyle_.box1 .h1,
+.id7-main-content-area .boxstyle_.box1 .h2,
+.id7-main-content-area .boxstyle_.box1 .h3,
+.id7-main-content-area .boxstyle_.box1 .h4,
+.id7-main-content-area .boxstyle_.box1 .h5,
+.id7-main-content-area .boxstyle_.box1 .h6 {
   color: inherit;
 }
-main .boxstyle_.box2 {
+.id7-main-content-area .boxstyle_.box2 {
   border: 0;
   background: #f2ecf4;
   color: black;
 }
 @media print {
-  main .boxstyle_.box2 {
+  .id7-main-content-area .boxstyle_.box2 {
     border: 1px solid #f2ecf4;
   }
 }
-main .boxstyle_.box2 h1,
-main .boxstyle_.box2 h2,
-main .boxstyle_.box2 h3,
-main .boxstyle_.box2 h4,
-main .boxstyle_.box2 h5,
-main .boxstyle_.box2 h6,
-main .boxstyle_.box2 .h1,
-main .boxstyle_.box2 .h2,
-main .boxstyle_.box2 .h3,
-main .boxstyle_.box2 .h4,
-main .boxstyle_.box2 .h5,
-main .boxstyle_.box2 .h6 {
+.id7-main-content-area .boxstyle_.box2 h1,
+.id7-main-content-area .boxstyle_.box2 h2,
+.id7-main-content-area .boxstyle_.box2 h3,
+.id7-main-content-area .boxstyle_.box2 h4,
+.id7-main-content-area .boxstyle_.box2 h5,
+.id7-main-content-area .boxstyle_.box2 h6,
+.id7-main-content-area .boxstyle_.box2 .h1,
+.id7-main-content-area .boxstyle_.box2 .h2,
+.id7-main-content-area .boxstyle_.box2 .h3,
+.id7-main-content-area .boxstyle_.box2 .h4,
+.id7-main-content-area .boxstyle_.box2 .h5,
+.id7-main-content-area .boxstyle_.box2 .h6 {
   color: inherit;
 }
-main .boxstyle_.box3 {
+.id7-main-content-area .boxstyle_.box3 {
   border: 0;
   background: #e6e6e6;
   color: black;
 }
 @media print {
-  main .boxstyle_.box3 {
+  .id7-main-content-area .boxstyle_.box3 {
     border: 1px solid #e6e6e6;
   }
 }
-main .boxstyle_.box3 h1,
-main .boxstyle_.box3 h2,
-main .boxstyle_.box3 h3,
-main .boxstyle_.box3 h4,
-main .boxstyle_.box3 h5,
-main .boxstyle_.box3 h6,
-main .boxstyle_.box3 .h1,
-main .boxstyle_.box3 .h2,
-main .boxstyle_.box3 .h3,
-main .boxstyle_.box3 .h4,
-main .boxstyle_.box3 .h5,
-main .boxstyle_.box3 .h6 {
+.id7-main-content-area .boxstyle_.box3 h1,
+.id7-main-content-area .boxstyle_.box3 h2,
+.id7-main-content-area .boxstyle_.box3 h3,
+.id7-main-content-area .boxstyle_.box3 h4,
+.id7-main-content-area .boxstyle_.box3 h5,
+.id7-main-content-area .boxstyle_.box3 h6,
+.id7-main-content-area .boxstyle_.box3 .h1,
+.id7-main-content-area .boxstyle_.box3 .h2,
+.id7-main-content-area .boxstyle_.box3 .h3,
+.id7-main-content-area .boxstyle_.box3 .h4,
+.id7-main-content-area .boxstyle_.box3 .h5,
+.id7-main-content-area .boxstyle_.box3 .h6 {
   color: inherit;
 }
-main .boxstyle_.feature-image1 {
+.id7-main-content-area .boxstyle_.feature-image1 {
   border: 0;
   background: url(../site/site1/banner-image.jpg) top right no-repeat;
   color: white;
 }
 @media print {
-  main .boxstyle_.feature-image1 {
+  .id7-main-content-area .boxstyle_.feature-image1 {
     border: 1px solid url(../site/site1/banner-image.jpg) top right no-repeat;
   }
 }
-main .boxstyle_.feature-image1 h1,
-main .boxstyle_.feature-image1 h2,
-main .boxstyle_.feature-image1 h3,
-main .boxstyle_.feature-image1 h4,
-main .boxstyle_.feature-image1 h5,
-main .boxstyle_.feature-image1 h6,
-main .boxstyle_.feature-image1 .h1,
-main .boxstyle_.feature-image1 .h2,
-main .boxstyle_.feature-image1 .h3,
-main .boxstyle_.feature-image1 .h4,
-main .boxstyle_.feature-image1 .h5,
-main .boxstyle_.feature-image1 .h6 {
+.id7-main-content-area .boxstyle_.feature-image1 h1,
+.id7-main-content-area .boxstyle_.feature-image1 h2,
+.id7-main-content-area .boxstyle_.feature-image1 h3,
+.id7-main-content-area .boxstyle_.feature-image1 h4,
+.id7-main-content-area .boxstyle_.feature-image1 h5,
+.id7-main-content-area .boxstyle_.feature-image1 h6,
+.id7-main-content-area .boxstyle_.feature-image1 .h1,
+.id7-main-content-area .boxstyle_.feature-image1 .h2,
+.id7-main-content-area .boxstyle_.feature-image1 .h3,
+.id7-main-content-area .boxstyle_.feature-image1 .h4,
+.id7-main-content-area .boxstyle_.feature-image1 .h5,
+.id7-main-content-area .boxstyle_.feature-image1 .h6 {
   color: inherit;
 }
-main .boxstyle_.feature-image2 {
+.id7-main-content-area .boxstyle_.feature-image2 {
   border: 0;
   background: url(../site/site3/banner-image.jpg) top right no-repeat;
   color: white;
 }
 @media print {
-  main .boxstyle_.feature-image2 {
+  .id7-main-content-area .boxstyle_.feature-image2 {
     border: 1px solid url(../site/site3/banner-image.jpg) top right no-repeat;
   }
 }
-main .boxstyle_.feature-image2 h1,
-main .boxstyle_.feature-image2 h2,
-main .boxstyle_.feature-image2 h3,
-main .boxstyle_.feature-image2 h4,
-main .boxstyle_.feature-image2 h5,
-main .boxstyle_.feature-image2 h6,
-main .boxstyle_.feature-image2 .h1,
-main .boxstyle_.feature-image2 .h2,
-main .boxstyle_.feature-image2 .h3,
-main .boxstyle_.feature-image2 .h4,
-main .boxstyle_.feature-image2 .h5,
-main .boxstyle_.feature-image2 .h6 {
+.id7-main-content-area .boxstyle_.feature-image2 h1,
+.id7-main-content-area .boxstyle_.feature-image2 h2,
+.id7-main-content-area .boxstyle_.feature-image2 h3,
+.id7-main-content-area .boxstyle_.feature-image2 h4,
+.id7-main-content-area .boxstyle_.feature-image2 h5,
+.id7-main-content-area .boxstyle_.feature-image2 h6,
+.id7-main-content-area .boxstyle_.feature-image2 .h1,
+.id7-main-content-area .boxstyle_.feature-image2 .h2,
+.id7-main-content-area .boxstyle_.feature-image2 .h3,
+.id7-main-content-area .boxstyle_.feature-image2 .h4,
+.id7-main-content-area .boxstyle_.feature-image2 .h5,
+.id7-main-content-area .boxstyle_.feature-image2 .h6 {
   color: inherit;
 }
-main .feature-box {
+.id7-main-content-area .feature-box {
   position: relative;
 }
-main .feature-box .heading {
+.id7-main-content-area .feature-box .heading {
   display: inline-block;
   margin-left: -30px;
   padding: 10px 20px;
 }
-main .feature-box .heading h1,
-main .feature-box .heading h2,
-main .feature-box .heading h3,
-main .feature-box .heading h4,
-main .feature-box .heading h5,
-main .feature-box .heading h6,
-main .feature-box .heading .h1,
-main .feature-box .heading .h2,
-main .feature-box .heading .h3,
-main .feature-box .heading .h4,
-main .feature-box .heading .h5,
-main .feature-box .heading .h6 {
+.id7-main-content-area .feature-box .heading h1,
+.id7-main-content-area .feature-box .heading h2,
+.id7-main-content-area .feature-box .heading h3,
+.id7-main-content-area .feature-box .heading h4,
+.id7-main-content-area .feature-box .heading h5,
+.id7-main-content-area .feature-box .heading h6,
+.id7-main-content-area .feature-box .heading .h1,
+.id7-main-content-area .feature-box .heading .h2,
+.id7-main-content-area .feature-box .heading .h3,
+.id7-main-content-area .feature-box .heading .h4,
+.id7-main-content-area .feature-box .heading .h5,
+.id7-main-content-area .feature-box .heading .h6 {
   color: inherit;
   border: 0;
   margin: 0;
   padding: 0;
 }
-main .feature-box .caption {
+.id7-main-content-area .feature-box .caption {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -222,62 +220,62 @@ main .feature-box .caption {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=0);
 }
-main .feature-box .caption > :last-child {
+.id7-main-content-area .feature-box .caption > :last-child {
   margin-bottom: 0;
 }
-main .feature-image1 {
+.id7-main-content-area .feature-image1 {
   color: white;
   min-height: 200px;
   font-weight: bold;
 }
-main .feature-image1 .heading {
+.id7-main-content-area .feature-image1 .heading {
   background: #6b3251;
   color: #ffffff;
 }
-main .feature-image2 {
+.id7-main-content-area .feature-image2 {
   color: white;
   min-height: 200px;
   font-weight: bold;
 }
-main .feature-image2 .heading {
+.id7-main-content-area .feature-image2 .heading {
   background-color: #555555;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
-main .btn-block {
+.id7-main-content-area .btn-block {
   font-size: 160%;
   text-align: left;
   padding: 0;
   min-height: 60px;
   position: relative;
 }
-main .btn-block > span {
+.id7-main-content-area .btn-block > span {
   position: absolute;
   left: 20px;
   bottom: 20px;
 }
-main .btn-colour1 {
+.id7-main-content-area .btn-colour1 {
   background: #1f2121;
   color: #dbc6d7;
 }
-main .btn-colour1:hover,
-main .btn-colour1:active {
+.id7-main-content-area .btn-colour1:hover,
+.id7-main-content-area .btn-colour1:active {
   background: #060707;
   color: #efe5ed;
 }
-main .btn-colour2 {
+.id7-main-content-area .btn-colour2 {
   background: #6b3251;
   color: #dbc6d7;
 }
-main .btn-colour2:hover,
-main .btn-colour2:active {
+.id7-main-content-area .btn-colour2:hover,
+.id7-main-content-area .btn-colour2:active {
   background: #482237;
   color: #efe5ed;
 }
-main blockquote.no-margin {
+.id7-main-content-area blockquote.no-margin {
   margin: 0;
 }
-main .nav-flex {
+.id7-main-content-area .nav-flex {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-box;
@@ -312,30 +310,30 @@ main .nav-flex {
   flex-wrap: wrap;
   width: 100%;
 }
-main .nav-flex > li {
+.id7-main-content-area .nav-flex > li {
   float: none;
   margin: 0 !important;
 }
 @media (min-width: 768px) {
-  main .nav-flex > li {
+  .id7-main-content-area .nav-flex > li {
     width: 54px;
   }
 }
 @media (min-width: 992px) {
-  main .nav-flex > li {
+  .id7-main-content-area .nav-flex > li {
     width: 35px;
   }
 }
 @media (min-width: 1200px) {
-  main .nav-flex > li {
+  .id7-main-content-area .nav-flex > li {
     width: 43px;
   }
 }
-main .nav-flex > li > a {
+.id7-main-content-area .nav-flex > li > a {
   text-align: center;
   margin-bottom: 5px;
 }
-main .nav-flex > .dropdown .dropdown-menu {
+.id7-main-content-area .nav-flex > .dropdown .dropdown-menu {
   top: auto;
   left: auto;
 }
