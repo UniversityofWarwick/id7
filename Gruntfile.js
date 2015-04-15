@@ -219,7 +219,8 @@ module.exports = function (grunt) {
       options: {
         compatibility: 'ie8',
         keepSpecialComments: '*',
-        noAdvanced: true
+        noAdvanced: true,
+        sourceMap: true
       },
       minifyCore: {
         src: 'dist/css/<%= pkg.name %>.css',
