@@ -2092,7 +2092,7 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  color: black;
+  color: #383838;
   background-color: transparent;
 }
 input,
@@ -3901,7 +3901,7 @@ select[multiple].form-group-lg .form-control {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #404040;
+  color: #787878;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -5921,7 +5921,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: black;
+  color: #383838;
 }
 .alert {
   padding: 15px;
@@ -8084,7 +8084,7 @@ body {
 .id7-masthead .id7-header-text .h4,
 .id7-masthead .id7-header-text .h5,
 .id7-masthead .id7-header-text .h6 {
-  color: black;
+  color: #383838;
 }
 .id7-masthead .id7-header-text a:not(.btn),
 .id7-masthead .id7-header-text a:link:not(.btn),
