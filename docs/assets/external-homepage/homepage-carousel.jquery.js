@@ -23,9 +23,6 @@
             '.id7-page-header {',
                 'background: <%= colour %>;',
             '}',
-            //'.id7-page-header::after {',
-            //    'background: <%= colour %>;',
-            //'}',
             '.id7-masthead .id7-logo-row nav {',
                 'opacity: 1;',
                 'filter: alpha(opacity=100);',
@@ -69,13 +66,17 @@
             this.$container = o.container;
             this.options = o;
 
+            // Apply the colour from the first panel - on mobile, this is the only one ever applied
+            this.applyPanelStyles(this.$container.find(this.options.panels + '[data-colour]').first().data('colour'));
+
             if (this.options.gridStopPointTest()) {
                 this.initPanelSnap();
                 this.initMenu();
                 this.initBackgroundImages();
+                this.initBackgroundColours(true);
+            } else {
+                this.initBackgroundColours(false);
             }
-
-            this.initBackgroundColours();
         }
 
         $.extend(HomepageCarousel.prototype, {
@@ -179,7 +180,7 @@
                 }));
             },
 
-            initBackgroundColours: function initBackgroundColours() {
+            initBackgroundColours: function initBackgroundColours(isDesktop) {
                 var $container = this.$container;
 
                 // Init background colours
@@ -191,9 +192,12 @@
                     var colour_b = parseInt(colour.substring(5, 7), 16);
 
                     $panel.css('background-color', colour);
-                    $panel.find('.caption-content')
-                        .css('background-color', colour)
-                        .css('background-color', 'rgba(' + colour_r + ', ' + colour_g + ', ' + colour_b + ', 0.9)');
+                    var $content = $panel.find('.caption-content');
+                    $content.css('background-color', colour);
+
+                    if (isDesktop) {
+                        $content.css('background-color', 'rgba(' + colour_r + ', ' + colour_g + ', ' + colour_b + ', 0.9)');
+                    }
                 });
             },
 
@@ -216,6 +220,10 @@
             },
 
             onChangePanel: function ($panel) {
+                this.applyPanelStyles($panel.data('colour'));
+            },
+
+            applyPanelStyles: function (colour) {
                 //cb + cs - cb * cs
                 //function screen (cb, cs) {
                 //    return Math.round((cb + cs) - ((cb * cs) / 255));
@@ -229,8 +237,6 @@
                 //function rgbToHex(r, g, b) {
                 //    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
                 //}
-
-                var colour = $panel.data('colour');
 
                 var r = parseInt(colour.substring(1, 3), 16);
                 var g = parseInt(colour.substring(3, 5), 16);

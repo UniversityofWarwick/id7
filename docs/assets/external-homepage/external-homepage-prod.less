@@ -5,8 +5,16 @@
 @import '../../../less/variables.less';
 @import '../../../less/mixins.less';
 
+@logo-width: 150px;
+@logo-height: 80px;
+
 body {
   position: relative;
+
+  // On smallscreen, don't allow the body to go underneath the fixed header
+  @media (max-width: @screen-xs-max) {
+    margin-top: 170px;
+  }
 }
 
 /***** START HOMEPAGE MASTHEAD *****/
@@ -37,12 +45,92 @@ body {
 }
 
 // Change the masthead imagery
+// Remove the image from the masthead itself, as we put it on the utility-masthead
+.id7-masthead {
+  background: none;
+}
 
+.id7-utility-masthead {
+  background-image: url("/dist/images/masthead-logo-bleed-homepage-xs.png");
+  background-position: 0 @id7-masthead-bleed-height;
+  background-repeat: no-repeat;
+  background-size: @screen-sm-min 300px;
+
+  @media (min-width: @screen-sm-min) {
+    background-image: url("/dist/images/masthead-logo-bleed-homepage-sm.png");
+    background-size: @screen-md-min @id7-masthead-logo-height-sm;
+    background-position: center @id7-masthead-bleed-height;
+  }
+  @media (min-width: @screen-md-min) {
+    background-image: url("/dist/images/masthead-logo-bleed-homepage-md.png");
+    background-size: @screen-lg-min @id7-masthead-logo-height-sm;
+  }
+  @media (min-width: @screen-lg-min) {
+    background-image: url("/dist/images/masthead-logo-bleed-homepage-lg.png");
+    background-size: 3000px @id7-masthead-logo-height-sm;
+  }
+
+  // Don't show the colour block
+  &::after { display: none; }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .id7-utility-masthead {
+    background-image: url("/dist/images/masthead-logo-bleed-homepage-xs@2x.png");
+
+    @media (min-width: @screen-sm-min) {
+      background-image: url("/dist/images/masthead-logo-bleed-homepage-sm@2x.png");
+    }
+    @media (min-width: @screen-md-min) {
+      background-image: url("/dist/images/masthead-logo-bleed-homepage-md@2x.png");
+    }
+    @media (min-width: @screen-lg-min) {
+      background-image: url("/dist/images/masthead-logo-bleed-homepage-lg@2x.png");
+    }
+  }
+}
+
+.id7-masthead .id7-logo-row {
+  height: @logo-height;
+
+  > .id7-logo {
+    height: @logo-height;
+    width: 100%;
+  }
+}
+
+// Change the width of the logo itself
+@media (min-width: @grid-float-breakpoint) {
+  .id7-masthead .id7-logo-row > .id7-logo {
+    width: @logo-width;
+  }
+}
+
+// Make search column smaller
+.id7-masthead {
+  height: auto;
+
+  .id7-logo-column {
+    .make-sm-column(9);
+  }
+  .id7-search-column {
+    .make-sm-column(3);
+
+    @media (max-width: @screen-xs-max) {
+      margin-bottom: 10px;
+    }
+  }
+}
 
 /***** END HOMEPAGE MASTHEAD *****/
 
 /***** START MAIN CONTENT AREA *****/
-
 .id7-main-content-area > .id7-main-content {
   width: 100%;
   padding: 0;
@@ -55,6 +143,8 @@ body {
   .title {
     .hidden-sm();
   }
+
+  .link-decoration(none, @hover: underline);
 
   //position: fixed;
   //width: 250px;
@@ -97,6 +187,18 @@ body {
 /***** END CAROUSEL NAV *****/
 
 /***** START MORE LINKS FOOTER *****/
+
+.popover.megamenu-links {
+  text-shadow: none;
+
+  max-width: 100%;
+  width: @container-md;
+  min-width: @container-sm;
+
+  @media (min-width: @screen-md-min) {
+    min-width: @container-md;
+  }
+}
 
 #more-links {
   padding: (@grid-gutter-width / 2) 0;
