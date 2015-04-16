@@ -53,7 +53,10 @@
                 wrapAround: false
             },
             defaultImageFocalPoint: 'center center',
-            defaultImageScaling: 'cover'
+            defaultImageScaling: 'cover',
+            gridStopPointTest: function () {
+                return window.matchMedia('(min-width: 768px)').matches;
+            }
         }
     };
 
@@ -66,13 +69,18 @@
             this.$container = o.container;
             this.options = o;
 
-            this.init();
+            if (this.options.gridStopPointTest()) {
+                this.initPanelSnap();
+                this.initMenu();
+                this.initBackgroundImages();
+            }
+
+            this.initBackgroundColours();
         }
 
         $.extend(HomepageCarousel.prototype, {
-            init: function init() {
+            initPanelSnap: function initPanelSnap() {
                 var $container = this.$container;
-                var $menu = $container.find(this.options.menu);
                 var options = this.options;
 
                 var onChangePanel = $.proxy(this.onChangePanel, this);
@@ -80,8 +88,6 @@
                 $container
                     .scrollspy({ target: options.menu })
                     .panelSnap({
-                        //$menu: $menu,
-                        //menuSelector: 'a[href^="#"]',
                         panelSelector: options.panels,
                         slideSpeed: options.animation.length,
                         easing: options.animation.easing,
@@ -90,6 +96,21 @@
                         onSnapStart: onChangePanel,
                         onSnapFinish: $.proxy(this.onChangePanelComplete, this)
                     });
+
+                // Scroll to right panel on page load
+                if (window.location.hash && $container.find(options.panels + window.location.hash).length) {
+                    setTimeout(function() {
+                        $('html, body').scrollTop($(window.location.hash).offset().top);
+                    }, 100);
+                }
+            },
+
+            initMenu: function initMenu() {
+                var $container = this.$container;
+                var options = this.options;
+
+                var $menu = $container.find(this.options.menu);
+                var onChangePanel = $.proxy(this.onChangePanel, this);
 
                 // Smooth scroll
                 $menu.find('a[href^="#"]').on('click', function(e) {
@@ -108,33 +129,6 @@
                             window.location.hash = hash;
                         }
                     });
-                });
-
-                // Init background colours
-                $container.find('[data-colour]').each(function () {
-                    var $panel = $(this);
-                    var colour = $panel.data('colour');
-                    var colour_r = parseInt(colour.substring(1, 3), 16);
-                    var colour_g = parseInt(colour.substring(3, 5), 16);
-                    var colour_b = parseInt(colour.substring(5, 7), 16);
-
-                    $panel.css('background-color', colour);
-                    $panel.find('.caption-content')
-                        .css('background-color', colour)
-                        .css('background-color', 'rgba(' + colour_r + ', ' + colour_g + ', ' + colour_b + ', 0.9)');
-                });
-
-                // Background images
-                $container.find('[data-image]').each(function () {
-                    var $panel = $(this);
-
-                    $panel.css('background-image', 'url(' + $panel.data('image') + ')');
-
-                    var position = $panel.data('image-focal-point') || options.defaultImageFocalPoint;
-                    $panel.css('background-position', position);
-
-                    var scaling = $panel.data('image-scaling') || options.defaultImageScaling;
-                    $panel.css('background-size', scaling);
                 });
 
                 var panelColours = [];
@@ -183,13 +177,42 @@
                 $('#homepage-style-rules-nav').text(Config.NavCSSTemplate({
                     panels: panelColours
                 }));
+            },
 
-                // Scroll to right panel on page load
-                if (window.location.hash && $container.find(options.panels + window.location.hash).length) {
-                    setTimeout(function() {
-                        $('html, body').scrollTop($(window.location.hash).offset().top);
-                    }, 100);
-                }
+            initBackgroundColours: function initBackgroundColours() {
+                var $container = this.$container;
+
+                // Init background colours
+                $container.find('[data-colour]').each(function () {
+                    var $panel = $(this);
+                    var colour = $panel.data('colour');
+                    var colour_r = parseInt(colour.substring(1, 3), 16);
+                    var colour_g = parseInt(colour.substring(3, 5), 16);
+                    var colour_b = parseInt(colour.substring(5, 7), 16);
+
+                    $panel.css('background-color', colour);
+                    $panel.find('.caption-content')
+                        .css('background-color', colour)
+                        .css('background-color', 'rgba(' + colour_r + ', ' + colour_g + ', ' + colour_b + ', 0.9)');
+                });
+            },
+
+            initBackgroundImages: function initBackgroundColours() {
+                var $container = this.$container;
+                var options = this.options;
+
+                // Background images
+                $container.find('[data-image]').each(function () {
+                    var $panel = $(this);
+
+                    $panel.css('background-image', 'url(' + $panel.data('image') + ')');
+
+                    var position = $panel.data('image-focal-point') || options.defaultImageFocalPoint;
+                    $panel.css('background-position', position);
+
+                    var scaling = $panel.data('image-scaling') || options.defaultImageScaling;
+                    $panel.css('background-size', scaling);
+                });
             },
 
             onChangePanel: function ($panel) {

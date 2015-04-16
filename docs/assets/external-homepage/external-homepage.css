@@ -285,19 +285,19 @@ body {
   background-image: url("/dist/images/masthead-logo-bleed-homepage-xs.png");
   background-position: 0 24px;
   background-repeat: no-repeat;
-  background-size: 750px 300px;
+  background-size: 768px 300px;
 }
 @media (min-width: 768px) {
   .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-homepage-sm.png");
-    background-size: 970px 80px;
+    background-size: 992px 80px;
     background-position: center 24px;
   }
 }
 @media (min-width: 992px) {
   .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-homepage-md.png");
-    background-size: 1170px 80px;
+    background-size: 1200px 80px;
   }
 }
 @media (min-width: 1200px) {

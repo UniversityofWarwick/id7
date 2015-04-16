@@ -1,0 +1,202 @@
+@import '../../../less/bootstrap/variables.less';
+@import '../../../less/bootstrap/mixins.less';
+@import '../../../less/bootstrap/responsive-utilities.less';
+@import '../../../less/font-awesome/variables.less';
+@import '../../../less/variables.less';
+@import '../../../less/mixins.less';
+
+body {
+  position: relative;
+}
+
+/***** START HOMEPAGE MASTHEAD *****/
+// Modify containers to be full width
+.id7-utility-bar > nav, .id7-masthead {
+  .container-fixed(@grid-gutter-width);
+
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+// Fix the header
+.id7-page-header {
+  position: fixed;
+  width: 100%;
+  .transition(background-color 0.15s linear);
+
+  z-index: 30;
+  top: 0px;
+  left: 0px;
+}
+
+// Change the masthead imagery
+
+
+/***** END HOMEPAGE MASTHEAD *****/
+
+/***** START MAIN CONTENT AREA *****/
+
+.id7-main-content-area > .id7-main-content {
+  width: 100%;
+  padding: 0;
+}
+
+/***** START CAROUSEL NAV *****/
+.carousel-nav {
+  .hidden-xs();
+
+  .title {
+    .hidden-sm();
+  }
+
+  //position: fixed;
+  //width: 250px;
+  //right: 0px;
+  //top: 124px;
+  //z-index: 10;
+  //text-align: right;
+  //
+  //color: white;
+  //.link-colour(white, #e0e4f8);
+  //
+  //ul.nav {
+  //  padding: 0;
+  //  padding-right: (@grid-gutter-width / 2);
+  //  list-style: none;
+  //  margin: 0;
+  //
+  //  > li {
+  //    position: static;
+  //    display: list-item;
+  //
+  //    > a {
+  //      position: static;
+  //      display: inline;
+  //      padding: 0;
+  //
+  //      &:hover,
+  //      &:focus {
+  //        text-decoration: underline;
+  //        background: none;
+  //      }
+  //    }
+  //
+  //    i.fa:before { content: @fa-var-circle-o; }
+  //    &.active i.fa:before { content: @fa-var-dot-circle-o; }
+  //    &.active .title { font-weight: bold; }
+  //  }
+  //}
+}
+/***** END CAROUSEL NAV *****/
+
+/***** START MORE LINKS FOOTER *****/
+
+#more-links {
+  padding: (@grid-gutter-width / 2) 0;
+  background: @gray;
+  color: white;
+  .link-colour(white, #e0e4f8);
+
+  @media (min-width: @grid-float-breakpoint) {
+    display: none;
+  }
+}
+
+.more-links-sitemap {
+  // Unstyle lists
+  &, ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  > li {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+
+    > i {
+      font-size: 2em;
+      display: block;
+    }
+
+    ul {
+      font-weight: normal;
+      text-align: left;
+      font-size: @font-size-base;
+    }
+
+    padding: (@grid-gutter-width / 2) 0;
+  }
+
+  // When inside the footer
+  #more-links & {
+    > li + li {
+      border-top: 1px solid @gray-light;
+    }
+
+    > li > i {
+      color: @gray-lighter;
+    }
+  }
+
+  // When inside the popover
+  .megamenu-links & {
+    .make-row();
+    .link-colour(#333, #2c66e8);
+
+    a {
+      text-decoration: underline;
+    }
+
+    > li {
+      width: percentage((1 / 4));
+
+      float: left;
+      position: relative;
+
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+
+      // Inner gutter via padding
+      padding-left:  (@grid-gutter-width / 2);
+      padding-right: (@grid-gutter-width / 2);
+      margin-bottom: (@grid-gutter-width / 2);
+
+      + li {
+        border-left: 1px solid @gray-lighter;
+      }
+
+      > i {
+        color: @gray-light;
+      }
+    }
+
+    // Flexbox it in browsers that support it to get equal-height columns
+    .flexbox();
+    .flex-wrap(wrap);
+    > li {
+      .flex(2013, 1);
+    }
+  }
+}
+
+.megamenu-links-address {
+  margin-top: (@grid-gutter-width / 2);
+  text-align: center;
+  .link-colour(#333, #2c66e8);
+
+  .utility {
+    .horizontal-utility-links();
+  }
+}
+
+/***** END MORE LINKS FOOTER *****/
+
+/***** END MAIN CONTENT AREA *****/
