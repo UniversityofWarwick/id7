@@ -23,6 +23,9 @@
             '.id7-page-header {',
                 'background: <%= colour %>;',
             '}',
+            //'.id7-page-header::after {',
+            //    'background: <%= colour %>;',
+            //'}',
             '.id7-masthead .id7-logo-row nav {',
                 'opacity: 1;',
                 'filter: alpha(opacity=100);',
@@ -34,7 +37,7 @@
         NavCSSTemplate: _.template([
             '<% _.each(panels, function (panel) { %>',
                 '.carousel-nav a[href="#<%= panel.id %>"]:hover {',
-                    'color: <%= panel.colour %>;',
+                    'color: <%= panel.lighter_colour %>;',
                 '}',
             '<% }); %>'
         ].join('')),
@@ -101,7 +104,9 @@
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
                     }, options.animation.length, function() {
-                        window.location.hash = hash;
+                        if (!$('.megamenu-links.popover').is(':visible')) {
+                            window.location.hash = hash;
+                        }
                     });
                 });
 
@@ -134,13 +139,41 @@
 
                 var panelColours = [];
                 $container.find(options.panels + '[id][data-colour]').each(function () {
+                    function screen (cb, cs) {
+                        return Math.round((cb + cs) - ((cb * cs) / 255));
+                    }
+
+                    function lighten (cb, ratio) {
+                        return Math.min(255, Math.round(cb + (255 * ratio)));
+                    }
+
+                    function componentToHex(c) {
+                        var hex = c.toString(16);
+                        return hex.length == 1 ? "0" + hex : hex;
+                    }
+
+                    function rgbToHex(r, g, b) {
+                        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+                    }
+
                     var $panel = $(this);
                     var id = $panel.attr('id');
                     var colour = $panel.data('colour');
 
+                    var r = parseInt(colour.substring(1, 3), 16);
+                    var g = parseInt(colour.substring(3, 5), 16);
+                    var b = parseInt(colour.substring(5, 7), 16);
+
+                    var lighten_factor = 0.2; // 20%
+
+                    var r_brighter = lighten(r, lighten_factor);
+                    var g_brighter = lighten(g, lighten_factor);
+                    var b_brighter = lighten(b, lighten_factor);
+
                     panelColours.push({
                         id: id,
                         colour: colour,
+                        lighter_colour: rgbToHex(r_brighter, g_brighter, b_brighter),
                         colour_r: parseInt(colour.substring(1, 3), 16),
                         colour_g: parseInt(colour.substring(3, 5), 16),
                         colour_b: parseInt(colour.substring(5, 7), 16)
@@ -150,23 +183,60 @@
                 $('#homepage-style-rules-nav').text(Config.NavCSSTemplate({
                     panels: panelColours
                 }));
+
+                // Scroll to right panel on page load
+                if (window.location.hash && $container.find(options.panels + window.location.hash).length) {
+                    setTimeout(function() {
+                        $('html, body').scrollTop($(window.location.hash).offset().top);
+                    }, 100);
+                }
             },
 
             onChangePanel: function ($panel) {
+                //cb + cs - cb * cs
+                //function screen (cb, cs) {
+                //    return Math.round((cb + cs) - ((cb * cs) / 255));
+                //}
+                //
+                //function componentToHex(c) {
+                //    var hex = c.toString(16);
+                //    return hex.length == 1 ? "0" + hex : hex;
+                //}
+                //
+                //function rgbToHex(r, g, b) {
+                //    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+                //}
+
                 var colour = $panel.data('colour');
+
+                var r = parseInt(colour.substring(1, 3), 16);
+                var g = parseInt(colour.substring(3, 5), 16);
+                var b = parseInt(colour.substring(5, 7), 16);
+
+                //var screen_factor = 102; // #666666
+                //
+                //var r_brighter = screen(r, screen_factor);
+                //var g_brighter = screen(g, screen_factor);
+                //var b_brighter = screen(b, screen_factor);
+
+                // Note: all this screen/brightening stuff not currently used.
 
                 $('#homepage-style-rules-panels').text(Config.PanelsCSSTemplate({
                     colour: colour,
-                    colour_r: parseInt(colour.substring(1, 3), 16),
-                    colour_g: parseInt(colour.substring(3, 5), 16),
-                    colour_b: parseInt(colour.substring(5, 7), 16)
+                    //brighter_colour: rgbToHex(r_brighter, g_brighter, b_brighter),
+                    colour_r: r,
+                    colour_g: g,
+                    colour_b: b
                 }));
             },
 
             onChangePanelComplete: function ($panel) {
                 // when done, add hash to url
                 // (default click behaviour)
-                window.location.hash = $panel.attr('id');
+                // Only if the more links popover is not open
+                if (!$('.megamenu-links.popover').is(':visible')) {
+                    window.location.hash = $panel.attr('id');
+                }
             }
         });
 

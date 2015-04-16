@@ -30,20 +30,32 @@
         $.extend(MoreLinksPopover.prototype, {
             wireEventHandlers: function wireEventHandlers() {
                 var $trigger = this.$trigger;
+                var options = this.options;
 
                 $trigger.on('click', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                     return false;
                 }).popover({
-                    container: this.options.container,
-                    content: $('#more-links-footer > .container').html(),
-                    template: this.options.template,
+                    container: options.container,
+                    content: $(options.target).find('> .container').html(),
+                    template: options.template,
                     html: true,
                     placement: 'bottom',
                     title: 'More links',
                     trigger: 'click'
+                }).on('show.bs.popover', function () {
+                    $trigger.data('previous-hash', window.location.hash);
+                    window.location.hash = options.target;
+                }).on('hide.bs.popover', function () {
+                    if ($trigger.data('previous-hash')) {
+                        window.location.hash = $trigger.data('previous-hash');
+                    }
                 });
+
+                if (window.location.hash == options.target) {
+                    $trigger.popover('show');
+                }
 
                 // Click away to dismiss
                 $('html').on('click.popoverDismiss', function (e) {

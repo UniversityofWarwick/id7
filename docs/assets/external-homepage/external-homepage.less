@@ -5,12 +5,6 @@
 @import '../../../less/variables.less';
 @import '../../../less/mixins.less';
 
-body {
-  max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .id7-page-header {
   position: fixed;
   width: 100%;
@@ -19,6 +13,34 @@ body {
   z-index: 30;
   top: 0px;
   left: 0px;
+
+  //&&::after {
+  //  content: "";
+  //  position: absolute;
+  //  z-index: -1;
+  //
+  //  .transition(background-color 0.15s linear);
+  //
+  //  width: 150px;
+  //  height: 20px;
+  //
+  //  left: 0px;
+  //  top: (24px + 26px);
+  //
+  //  @media (min-width: @screen-sm-min) {
+  //    left: 50%;
+  //    top: (24px + 40px);
+  //    height: 35px;
+  //
+  //    margin-left: (-(@container-sm / 2));
+  //  }
+  //  @media (min-width: @screen-md-min) {
+  //    margin-left: (-(@container-md / 2));
+  //  }
+  //  @media (min-width: @screen-lg-min) {
+  //    margin-left: (-(@container-lg / 2));
+  //  }
+  //}
 }
 
 body {
@@ -76,6 +98,8 @@ body {
     background-image: url("/dist/images/masthead-logo-bleed-homepage-lg.png");
     background-size: 3000px @id7-masthead-logo-height-sm;
   }
+
+  &::after { display: none; }
 }
 
 @media (min-width: @grid-float-breakpoint) {
@@ -153,7 +177,7 @@ only screen and (                min-resolution: 2dppx) {
   text-shadow: none;
 
   max-width: 100%;
-  width: @container-lg;
+  width: @container-md;
   min-width: @container-sm;
 
   @media (min-width: @screen-md-min) {
@@ -278,7 +302,12 @@ only screen and (                min-resolution: 2dppx) {
       &.bottom { .justify-content(end); }
 
       &, &.left { .align-items(start); }
-      &.center { .align-items(center); }
+      &.center { .align-items(center);
+        // Padding for exclusion zone on right
+        @media (min-width: @screen-md-min) {
+          padding: 0 250px;
+        }
+      }
       &.right { .align-items(end); }
 
       .caption-content {
@@ -286,16 +315,37 @@ only screen and (                min-resolution: 2dppx) {
         padding: (@grid-gutter-width / 2);
         .flex(2013, 0, 1, auto);
       }
+
+      @media (min-width: @screen-md-min) {
+        &.center .caption-content {
+          width: 100%;
+        }
+      }
     }
   }
 
-  h2 {
-    font-size: 40px;
+  @media (min-width: @screen-md-min) {
+    h2 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: @font-size-h4;
+    }
+  }
+
+  @media (min-width: @screen-lg-min) {
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: @font-size-h3;
+    }
   }
 
   p {
     margin-bottom: (@grid-gutter-width / 2);
-    font-size: @font-size-h3;
     font-weight: 200;
     padding-right: 0 !important;
 
@@ -339,7 +389,6 @@ only screen and (                min-resolution: 2dppx) {
 
   min-height: 600px;
   height: 100vh;
-  max-height: 1200px;
 }
 
 .carousel-nav {
@@ -388,7 +437,7 @@ only screen and (                min-resolution: 2dppx) {
   }
 }
 
-#more-links-footer {
+#more-links {
   background: @gray;
   color: white;
   .link-colour(white, #e0e4f8);
@@ -431,7 +480,7 @@ only screen and (                min-resolution: 2dppx) {
   }
 
   // When inside the footer
-  #more-links-footer & {
+  #more-links & {
     > li + li {
       border-top: 1px solid @gray-light;
     }
@@ -453,9 +502,9 @@ only screen and (                min-resolution: 2dppx) {
     > li {
       width: percentage((1 / 4));
 
-      @media (min-width: @screen-md-min) {
-        width: percentage((1 / 8));
-      }
+      //@media (min-width: @screen-md-min) {
+      //  width: percentage((1 / 8));
+      //}
 
       float: left;
       position: relative;
@@ -486,7 +535,10 @@ only screen and (                min-resolution: 2dppx) {
 
 .megamenu-links .address {
   margin-top: (@grid-gutter-width / 2);
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
+  text-align: center;
+  .link-colour(#333, #2c66e8);
+
+  .utility {
+    .horizontal-utility-links();
+  }
 }
