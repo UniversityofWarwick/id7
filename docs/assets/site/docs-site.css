@@ -446,7 +446,7 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .boxstyle_.box1 {
   border: 0;
   background: #e2edf6;
-  color: black;
+  color: #383838;
 }
 @media print {
   .boxstyle_.box1 {
@@ -470,7 +470,7 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
-  color: black;
+  color: #383838;
 }
 @media print {
   .boxstyle_.box2 {

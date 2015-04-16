@@ -1,5 +1,5 @@
 #boxstyle {
-  .filled(@bg, @text-colour: black) {
+  .filled(@bg, @text-colour: @text-color) {
     border: 0;
     background: @bg;
     color: @text-colour;
@@ -9,8 +9,9 @@
     }
   }
 
-  .filled(@bg, @text-colour: black) when not (@text-colour = inherit) {
+  .filled(@bg, @text-colour: @text-color) when not (@text-colour = inherit) {
     .header-colour(inherit);
+    // ID-78 Hanging fire on this for now .link-colour(inherit);
   }
 
   .bordered(@border-colour, @text-colour: inherit) {
@@ -19,7 +20,8 @@
     color: @text-colour;
   }
 
-  .bordered(@border-colour, @text-colour: inherit) when not (@text-colour = inherit) {
+  .bordered(@border-colour, @text-colour) when not (@text-colour = inherit) {
     .header-colour(inherit);
+    // ID-78 Hanging fire on this for now .link-colour(inherit);
   }
 }

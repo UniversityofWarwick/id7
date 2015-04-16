@@ -445,7 +445,7 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   color: #7b428e;
 }
 .boxstyle_.box1 {
-  color: black;
+  color: #383838;
   background: #e5d9e8;
   border: 0;
 }
@@ -469,7 +469,7 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   color: inherit;
 }
 .boxstyle_.box2 {
-  color: black;
+  color: #383838;
   background: #eee;
   border: 0;
 }
