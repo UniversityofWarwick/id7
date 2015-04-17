@@ -1,16 +1,14 @@
 .id7-utility-bar {
+  position: relative;
   .small();
   white-space: nowrap;
-
-  > nav {
-    .container-fluid();
-  }
+  .container-fluid();
 
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
   height: @id7-masthead-bleed-height;
   line-height: @id7-masthead-bleed-height;
 
-  ul {
+  > ul {
     .pull-right();
     .horizontal-utility-links(0.4em, @gray-lighter);
   }
@@ -21,9 +19,32 @@
 
   iframe[seamless] {
     background-color: transparent;
-    border: 0px none transparent;
     padding: 0px;
     overflow: hidden;
+  }
+
+  .dropdown-menu {
+    margin-top: 0;
+    padding: 5px 0;
+    font-size: inherit;
+
+    > li {
+      > a {
+        padding: 1px 20px;
+
+        &,
+        &:link,
+        &:visited,
+        &:hover {
+          color: @text-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    > li.divider {
+      margin: 5px 0;
+    }
   }
 
   .popover.account-information {
