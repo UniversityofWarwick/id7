@@ -434,7 +434,7 @@ body {
 .jumbotron a:not(.btn),
 .jumbotron a:link:not(.btn),
 .jumbotron a:visited:not(.btn) {
-  color: white;
+  color: #ffffff;
 }
 .jumbotron a:hover:not(.btn),
 .jumbotron a:focus:not(.btn),
@@ -913,7 +913,7 @@ body {
 .carousel-nav a:not(.btn),
 .carousel-nav a:link:not(.btn),
 .carousel-nav a:visited:not(.btn) {
-  color: white;
+  color: #ffffff;
 }
 .carousel-nav a:hover:not(.btn),
 .carousel-nav a:focus:not(.btn),
@@ -959,7 +959,7 @@ body {
 #more-links a:not(.btn),
 #more-links a:link:not(.btn),
 #more-links a:visited:not(.btn) {
-  color: white;
+  color: #ffffff;
 }
 #more-links a:hover:not(.btn),
 #more-links a:focus:not(.btn),
