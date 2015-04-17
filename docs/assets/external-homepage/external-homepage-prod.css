@@ -217,7 +217,7 @@ body {
   }
 }
 /***** START HOMEPAGE MASTHEAD *****/
-.id7-utility-bar > nav,
+nav.id7-utility-bar,
 .id7-masthead {
   margin-right: auto;
   margin-left: auto;
@@ -225,19 +225,19 @@ body {
   padding-right: 20px;
 }
 @media (min-width: 768px) {
-  .id7-utility-bar > nav,
+  nav.id7-utility-bar,
   .id7-masthead {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .id7-utility-bar > nav,
+  nav.id7-utility-bar,
   .id7-masthead {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .id7-utility-bar > nav,
+  nav.id7-utility-bar,
   .id7-masthead {
     width: 1170px;
   }
