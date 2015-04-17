@@ -96,6 +96,8 @@
                 this.initBackgroundImages(isOnLoad, isDesktop);
                 this.initBackgroundColours(isOnLoad, isDesktop);
                 this.initHashChangeListener(isOnLoad, isDesktop);
+                this.initCaptionIcons(isOnLoad, isDesktop);
+                this.initScrollWatcher(isOnLoad, isDesktop);
 
                 this.lastIsDesktop = isDesktop;
             },
@@ -262,6 +264,25 @@
                 }
             },
 
+            initCaptionIcons: function initCaptionIcons(isOnLoad, isDesktop) {
+                var $container = this.$container;
+
+                if (!isDesktop) {
+                    $container.find('[data-icon]').each(function () {
+                        var $caption = $(this);
+
+                        var $target = $caption;
+
+                        $target.prepend($('<img />').addClass('caption-icon').attr({
+                            alt: $caption.find('h2').first().text(),
+                            src: $caption.data('icon')
+                        }));
+                    });
+                } else {
+                    $container.find('[data-icon] .caption-icon').remove();
+                }
+            },
+
             initHashChangeListener: function initHashChangeListener (isOnLoad, isDesktop) {
                 // Handle in-page bookmarks.
                 if (isOnLoad && !isDesktop && window.location.hash) this.hashChanged();
@@ -277,6 +298,31 @@
                 setTimeout(function () {
                     window.scrollBy(0, -scrollY);
                 }, 1);
+            },
+
+            initScrollWatcher: function initScrollWatcher (isOnLoad, isDesktop) {
+                $(window).off('scrollstop.id7.homepage');
+
+                if (!isDesktop) {
+                    var $container = this.$container;
+                    var options = this.options;
+                    var fixedHeight = $('.id7-page-header').outerHeight();
+                    var onChangePanel = $.proxy(this.onChangePanel, this);
+
+                    $(window).on('scrollstop.id7.homepage', function (e) {
+                        var scrollY = fixedHeight + $(window).scrollTop();
+
+                        var beforeScroll = $container.find(options.panels + '[data-colour]:visible').filter(function () {
+                            var $panel = $(this);
+                            var offsetY = $panel.offset().top;
+
+                            return offsetY <= scrollY;
+                        });
+
+                        var $panel = (beforeScroll.length > 0) ? beforeScroll.last() : $container.find(options.panels + '[data-colour]:visible').first();
+                        onChangePanel($panel);
+                    });
+                }
             },
 
             onChangePanel: function ($panel) {

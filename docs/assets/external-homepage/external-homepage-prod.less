@@ -15,6 +15,9 @@
 @fixed-header-size: (@id7-masthead-bleed-height + @logo-height);
 @body-content-padding: (@fixed-header-size + (@grid-gutter-width / 2));
 
+@caption-icon-width: 128px;
+@caption-icon-height: 128px;
+
 body {
   position: relative;
 
@@ -26,7 +29,7 @@ body {
 
 /***** START HOMEPAGE MASTHEAD *****/
 // Modify containers to be full width
-nav.id7-utility-bar, .id7-masthead {
+.id7-utility-bar, .id7-masthead {
   .container-fixed(@grid-gutter-width);
 
   @media (min-width: @screen-sm-min) {
@@ -342,8 +345,19 @@ only screen and (                min-resolution: 2dppx) {
       }
     }
 
-    .caption-content {
-      padding: (@grid-gutter-width / 2);
+    .caption {
+      .clearfix();
+
+      .caption-content {
+        padding: (@grid-gutter-width / 2) 0;
+      }
+
+      .caption-icon {
+        float: left;
+        width: @caption-icon-width;
+        height: @caption-icon-height;
+        margin: (@grid-gutter-width / 2) (@grid-gutter-width / 2) (@grid-gutter-width / 2) 0; // none on left
+      }
     }
 
     @media (min-width: @grid-float-breakpoint) {

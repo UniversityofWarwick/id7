@@ -217,7 +217,7 @@ body {
   }
 }
 /***** START HOMEPAGE MASTHEAD *****/
-nav.id7-utility-bar,
+.id7-utility-bar,
 .id7-masthead {
   margin-right: auto;
   margin-left: auto;
@@ -225,19 +225,19 @@ nav.id7-utility-bar,
   padding-right: 20px;
 }
 @media (min-width: 768px) {
-  nav.id7-utility-bar,
+  .id7-utility-bar,
   .id7-masthead {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  nav.id7-utility-bar,
+  .id7-utility-bar,
   .id7-masthead {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  nav.id7-utility-bar,
+  .id7-utility-bar,
   .id7-masthead {
     width: 1170px;
   }
@@ -549,8 +549,22 @@ nav.id7-utility-bar,
     font-size: 24px;
   }
 }
-.jumbotron-carousel .jumbotron .caption-content {
-  padding: 20px;
+.jumbotron-carousel .jumbotron .caption:before,
+.jumbotron-carousel .jumbotron .caption:after {
+  content: " ";
+  display: table;
+}
+.jumbotron-carousel .jumbotron .caption:after {
+  clear: both;
+}
+.jumbotron-carousel .jumbotron .caption .caption-content {
+  padding: 20px 0;
+}
+.jumbotron-carousel .jumbotron .caption .caption-icon {
+  float: left;
+  width: 128px;
+  height: 128px;
+  margin: 20px 20px 20px 0;
 }
 @media (min-width: 768px) {
   .jumbotron-carousel .jumbotron {
