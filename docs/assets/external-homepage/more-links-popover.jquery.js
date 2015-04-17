@@ -53,7 +53,7 @@
                     }
                 });
 
-                if (window.location.hash == options.target) {
+                if ($trigger.is(':visible') && window.location.hash == options.target) {
                     $trigger.popover('show');
                 }
 

@@ -68,27 +68,53 @@
 
             // Apply the colour from the first panel - on mobile, this is the only one ever applied
             this.applyPanelStyles(this.$container.find(this.options.panels + '[data-colour]').first().data('colour'));
-
-            if (this.options.gridStopPointTest()) {
-                this.initPanelSnap();
-                this.initMenu();
-                this.initBackgroundImages();
-                this.initBackgroundColours(true);
-            } else {
-                this.initBackgroundColours(false);
-            }
+            this.onScreenResize();
+            this.wireEventHandlers();
         }
 
         $.extend(HomepageCarousel.prototype, {
-            initPanelSnap: function initPanelSnap() {
+            wireEventHandlers: function wireEventHandlers() {
+                $(window).on('resize.id7.homepage', $.proxy(this.onScreenResize, this));
+
+                // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
+                $(window).on('load', $.proxy(function (e) {
+                    this.onScreenResize(e, true);
+                }, this));
+            },
+
+            onScreenResize: function onResize() {
+                var isOnLoad = (typeof this.lastIsDesktop === 'undefined');
+
+                // Which stop-point are we on?
+                var isDesktop = this.options.gridStopPointTest();
+
+                // Early exit if we're not transitioning
+                if (isDesktop === this.lastIsDesktop) return;
+
+                this.initPanelSnap(isOnLoad, isDesktop);
+                this.initMenu(isOnLoad, isDesktop);
+                this.initBackgroundImages(isOnLoad, isDesktop);
+                this.initBackgroundColours(isOnLoad, isDesktop);
+                this.initHashChangeListener(isOnLoad, isDesktop);
+
+                this.lastIsDesktop = isDesktop;
+            },
+
+            initPanelSnap: function initPanelSnap(isOnLoad, isDesktop) {
                 var $container = this.$container;
                 var options = this.options;
 
                 var onChangePanel = $.proxy(this.onChangePanel, this);
 
-                $container
-                    .scrollspy({ target: options.menu })
-                    .panelSnap({
+                if ($container.data('plugin_panelSnap')) {
+                    if (isDesktop) {
+                        $container.panelSnap('enable');
+                    } else {
+                        $container.panelSnap('disable');
+                    }
+                } else if (isDesktop) {
+                    // First time init
+                    $container.panelSnap({
                         panelSelector: options.panels,
                         slideSpeed: options.animation.length,
                         easing: options.animation.easing,
@@ -97,90 +123,99 @@
                         onSnapStart: onChangePanel,
                         onSnapFinish: $.proxy(this.onChangePanelComplete, this)
                     });
+                }
 
                 // Scroll to right panel on page load
-                if (window.location.hash && $container.find(options.panels + window.location.hash).length) {
+                if (isDesktop && isOnLoad && window.location.hash.length > 0 && $container.find(options.panels + window.location.hash).length) {
                     setTimeout(function() {
                         $('html, body').scrollTop($(window.location.hash).offset().top);
                     }, 100);
                 }
             },
 
-            initMenu: function initMenu() {
+            initMenu: function initMenu(isOnLoad, isDesktop) {
                 var $container = this.$container;
                 var options = this.options;
 
                 var $menu = $container.find(this.options.menu);
                 var onChangePanel = $.proxy(this.onChangePanel, this);
 
-                // Smooth scroll
-                $menu.find('a[href^="#"]').on('click', function(e) {
-                    // prevent default anchor click behavior
-                    e.preventDefault();
+                $menu.find('a[href^="#"]').off('click.id7.homepage');
 
-                    // store hash
-                    var hash = this.hash;
-                    onChangePanel($(hash));
+                if (isDesktop) {
+                    $container.scrollspy({ target: options.menu }); // Idempotent, safe to call multiple times
 
-                    // animate
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, options.animation.length, function() {
-                        if (!$('.megamenu-links.popover').is(':visible')) {
-                            window.location.hash = hash;
-                        }
+                    // Smooth scroll
+                    $menu.find('a[href^="#"]').on('click.id7.homepage', function (e) {
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+
+                        // store hash
+                        var hash = this.hash;
+                        onChangePanel($(hash));
+
+                        // animate
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, options.animation.length, function () {
+                            if (!$('.megamenu-links.popover').is(':visible')) {
+                                window.location.hash = hash;
+                            }
+                        });
                     });
-                });
 
-                var panelColours = [];
-                $container.find(options.panels + '[id][data-colour]').each(function () {
-                    function screen (cb, cs) {
-                        return Math.round((cb + cs) - ((cb * cs) / 255));
+                    if ($('#homepage-style-rules-nav').is(':empty')) {
+                        var panelColours = [];
+                        $container.find(options.panels + '[id][data-colour]').each(function () {
+                            function screen(cb, cs) {
+                                return Math.round((cb + cs) - ((cb * cs) / 255));
+                            }
+
+                            function lighten(cb, ratio) {
+                                return Math.min(255, Math.round(cb + (255 * ratio)));
+                            }
+
+                            function componentToHex(c) {
+                                var hex = c.toString(16);
+                                return hex.length == 1 ? "0" + hex : hex;
+                            }
+
+                            function rgbToHex(r, g, b) {
+                                return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+                            }
+
+                            var $panel = $(this);
+                            var id = $panel.attr('id');
+                            var colour = $panel.data('colour');
+
+                            var r = parseInt(colour.substring(1, 3), 16);
+                            var g = parseInt(colour.substring(3, 5), 16);
+                            var b = parseInt(colour.substring(5, 7), 16);
+
+                            var lighten_factor = 0.2; // 20%
+
+                            var r_brighter = lighten(r, lighten_factor);
+                            var g_brighter = lighten(g, lighten_factor);
+                            var b_brighter = lighten(b, lighten_factor);
+
+                            panelColours.push({
+                                id: id,
+                                colour: colour,
+                                lighter_colour: rgbToHex(r_brighter, g_brighter, b_brighter),
+                                colour_r: parseInt(colour.substring(1, 3), 16),
+                                colour_g: parseInt(colour.substring(3, 5), 16),
+                                colour_b: parseInt(colour.substring(5, 7), 16)
+                            });
+                        });
+
+                        $('#homepage-style-rules-nav').text(Config.NavCSSTemplate({
+                            panels: panelColours
+                        }));
                     }
-
-                    function lighten (cb, ratio) {
-                        return Math.min(255, Math.round(cb + (255 * ratio)));
-                    }
-
-                    function componentToHex(c) {
-                        var hex = c.toString(16);
-                        return hex.length == 1 ? "0" + hex : hex;
-                    }
-
-                    function rgbToHex(r, g, b) {
-                        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-                    }
-
-                    var $panel = $(this);
-                    var id = $panel.attr('id');
-                    var colour = $panel.data('colour');
-
-                    var r = parseInt(colour.substring(1, 3), 16);
-                    var g = parseInt(colour.substring(3, 5), 16);
-                    var b = parseInt(colour.substring(5, 7), 16);
-
-                    var lighten_factor = 0.2; // 20%
-
-                    var r_brighter = lighten(r, lighten_factor);
-                    var g_brighter = lighten(g, lighten_factor);
-                    var b_brighter = lighten(b, lighten_factor);
-
-                    panelColours.push({
-                        id: id,
-                        colour: colour,
-                        lighter_colour: rgbToHex(r_brighter, g_brighter, b_brighter),
-                        colour_r: parseInt(colour.substring(1, 3), 16),
-                        colour_g: parseInt(colour.substring(3, 5), 16),
-                        colour_b: parseInt(colour.substring(5, 7), 16)
-                    });
-                });
-
-                $('#homepage-style-rules-nav').text(Config.NavCSSTemplate({
-                    panels: panelColours
-                }));
+                }
             },
 
-            initBackgroundColours: function initBackgroundColours(isDesktop) {
+            initBackgroundColours: function initBackgroundColours(isOnLoad, isDesktop) {
                 var $container = this.$container;
 
                 // Init background colours
@@ -201,22 +236,47 @@
                 });
             },
 
-            initBackgroundImages: function initBackgroundColours() {
+            initBackgroundImages: function initBackgroundColours(isOnLoad, isDesktop) {
                 var $container = this.$container;
                 var options = this.options;
 
                 // Background images
-                $container.find('[data-image]').each(function () {
-                    var $panel = $(this);
+                if (isDesktop) {
+                    $container.find('[data-image]').each(function () {
+                        var $panel = $(this);
 
-                    $panel.css('background-image', 'url(' + $panel.data('image') + ')');
+                        $panel.css('background-image', 'url(' + $panel.data('image') + ')');
 
-                    var position = $panel.data('image-focal-point') || options.defaultImageFocalPoint;
-                    $panel.css('background-position', position);
+                        var position = $panel.data('image-focal-point') || options.defaultImageFocalPoint;
+                        $panel.css('background-position', position);
 
-                    var scaling = $panel.data('image-scaling') || options.defaultImageScaling;
-                    $panel.css('background-size', scaling);
-                });
+                        var scaling = $panel.data('image-scaling') || options.defaultImageScaling;
+                        $panel.css('background-size', scaling);
+                    });
+                } else {
+                    $container.find('[data-image]').css({
+                        'background-image': '',
+                        'background-position': '',
+                        'background-size': ''
+                    });
+                }
+            },
+
+            initHashChangeListener: function initHashChangeListener (isOnLoad, isDesktop) {
+                // Handle in-page bookmarks.
+                if (isOnLoad && !isDesktop && window.location.hash) this.hashChanged();
+                $(window).off('hashchange.id7.homepage');
+
+                if (!isDesktop) {
+                    $(window).on('hashchange.id7.homepage', $.proxy(this.hashChanged, this));
+                }
+            },
+
+            hashChanged: function onHashChange() {
+                var scrollY = $('.id7-page-header').outerHeight();
+                setTimeout(function () {
+                    window.scrollBy(0, -scrollY);
+                }, 1);
             },
 
             onChangePanel: function ($panel) {
