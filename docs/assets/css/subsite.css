@@ -53,7 +53,7 @@
 .id7-main-content-area .slideshow .carousel-controls a:not(.btn),
 .id7-main-content-area .slideshow .carousel-controls a:link:not(.btn),
 .id7-main-content-area .slideshow .carousel-controls a:visited:not(.btn) {
-  color: #ffffff;
+  color: white;
 }
 .id7-main-content-area .slideshow .carousel-controls a:hover:not(.btn),
 .id7-main-content-area .slideshow .carousel-controls a:focus:not(.btn),
@@ -138,7 +138,7 @@
 .id7-main-content-area .boxstyle_.feature-image1 {
   border: 0;
   background: url(../site/site1/banner-image.jpg) top right no-repeat;
-  color: #ffffff;
+  color: white;
 }
 @media print {
   .id7-main-content-area .boxstyle_.feature-image1 {
@@ -162,7 +162,7 @@
 .id7-main-content-area .boxstyle_.feature-image2 {
   border: 0;
   background: url(../site/site3/banner-image.jpg) top right no-repeat;
-  color: #ffffff;
+  color: white;
 }
 @media print {
   .id7-main-content-area .boxstyle_.feature-image2 {
