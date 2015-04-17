@@ -1044,6 +1044,7 @@ body {
   padding: 20px 0;
   background: #555555;
   color: white;
+  font-size: 16px;
 }
 #more-links a:not(.btn),
 #more-links a:link:not(.btn),
@@ -1111,6 +1112,12 @@ body {
   color: #eeeeee;
   vertical-align: middle;
   margin-right: 4px;
+}
+#more-links .more-links-sitemap > li {
+  font-size: 18px;
+}
+#more-links .more-links-sitemap > li ul {
+  font-size: 16px;
 }
 .megamenu-links .more-links-sitemap {
   margin-left: -20px;

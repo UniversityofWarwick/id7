@@ -557,6 +557,7 @@ only screen and (                min-resolution: 2dppx) {
   padding: (@grid-gutter-width / 2) 0;
   background: @gray;
   color: white;
+  font-size: 16px;
   .link-colour(white, #e0e4f8);
 
   @media (min-width: @grid-float-breakpoint) {
@@ -619,6 +620,14 @@ only screen and (                min-resolution: 2dppx) {
       color: @gray-lighter;
       vertical-align: middle;
       margin-right: 4px;
+    }
+
+    > li {
+      font-size: 18px;
+
+      ul {
+        font-size: 16px;
+      }
     }
   }
 
