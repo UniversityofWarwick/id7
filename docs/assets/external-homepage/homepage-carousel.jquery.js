@@ -273,12 +273,21 @@
 
                         var $target = $caption;
 
-                        $target.prepend($('<img />').addClass('caption-icon').attr({
+                        var $icon = $('<img />').addClass('caption-icon').attr({
                             alt: $caption.find('h2').first().text(),
                             src: $caption.data('icon')
-                        }));
+                        });
+
+                        if ($caption.find('a').length > 0) {
+                            // Shallow clone
+                            var $iconLink = $($caption.find('a')[0].cloneNode(false)).addClass('caption-icon-link');
+                            $target.prepend($iconLink.append($icon));
+                        } else {
+                            $target.prepend($icon);
+                        }
                     });
                 } else {
+                    $container.find('[data-icon] .caption-icon-link').remove();
                     $container.find('[data-icon] .caption-icon').remove();
                 }
             },
