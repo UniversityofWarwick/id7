@@ -77,6 +77,7 @@ module.exports = function (grunt) {
           'js/vendor/bootstrap-3.3.4/affix.js',
           'js/vendor/typeahead.jquery-0.10.5.js',
           'js/vendor/lodash-2.4.1.js',
+          'js/vendor/modernizr-2.8.3.js',
           'js/account-popover.jquery.js',
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js',
@@ -166,7 +167,7 @@ module.exports = function (grunt) {
           'docs/assets/site/docs-site.css': 'docs/assets/site/docs-site.less',
           'docs/assets/site/site.css': 'docs/assets/site/site.less',
           'docs/assets/external-homepage/external-homepage.css': 'docs/assets/external-homepage/external-homepage.less',
-          'docs/assets/external-homepage/external-homepage-flush.css': 'docs/assets/external-homepage/external-homepage-flush.less'
+          'docs/assets/external-homepage/external-homepage-prod.css': 'docs/assets/external-homepage/external-homepage-prod.less'
         }
       }
     },

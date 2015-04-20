@@ -404,7 +404,7 @@
         if (this.options.fitToWidth) {
           $(window).on('resize.id7.navigation.onScreenResize', $.proxy(this.onScreenResize, this));
 
-          // ID-30 on load (i.e. after fonts have loaded) run this, forcing a
+          // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
           $(window).on('load', $.proxy(function (e) {
             this.onScreenResize(e, true);
           }, this));
@@ -453,7 +453,6 @@
 
   $(function () {
     $('.id7-navigation').id7Navigation();
-
   });
 })(jQuery);
 

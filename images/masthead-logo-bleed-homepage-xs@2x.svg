@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" version="1.1" width="100%" height="100%" viewBox="0, 0, 1520, 600">
-	<!-- Put the logo in -->
-	<image xlink:href="logo-with-descriptor.svg" x="40" y="0" width="138.66" height="92" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" version="1.1" width="100%" height="100%" viewBox="0, 0, 1536, 600">
+	<!--
+	<image xlink:href="logo-with-descriptor.svg" x="40" y="0" width="226.08" height="150" />
+	-->
+
+	<!-- 90% -->
+	<image xlink:href="logo-no-text.svg" x="51.124" y="0" width="203.472" height="72" />
+	<image xlink:href="logotype-descriptor.svg" x="25.414" y="80" width="255.252" height="70" />
 </svg>

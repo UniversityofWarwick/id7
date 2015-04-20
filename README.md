@@ -72,6 +72,7 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 - [Bootstrap](https://github.com/twbs/bootstrap) >= 3.3.4
 - [typeahead.js](https://github.com/twitter/typeahead.js) >= 0.10.5
 - [lodash](https://github.com/lodash/lodash) >= 2.4.1
+- [Modernizr](https://github.com/Modernizr/Modernizr) >= 2.8.3
 
 Internet Explorer 9 (and earlier) support requires
 
