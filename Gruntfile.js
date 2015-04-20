@@ -202,6 +202,13 @@ module.exports = function (grunt) {
           map: true
         },
         src: 'dist/css/id6a.css'
+      },
+      docsHomepage: {
+        options: {
+          expand: true,
+          flatten: true
+        },
+        src: 'docs/assets/external-homepage/*.css'
       }
     },
 
@@ -404,7 +411,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'copy:vendorjs', 'test']);
 
   // Docs task.
-  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs', 'jekyll:docs']);
+  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs', 'autoprefixer:docsHomepage', 'jekyll:docs']);
 
   // Run Jekyll and watch for asset changes.
   grunt.registerTask('serve', ['concurrent:serve'])

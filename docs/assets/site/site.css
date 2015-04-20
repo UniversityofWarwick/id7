@@ -1,3 +1,4 @@
+/* We explicitly don't target .btn on these, but IE8 doesn't support :not, so we target html.lt-ie9 as well */
 html.site1 .id7-header-image-container {
   background-image: url("/assets/site/site1/banner-image.jpg");
 }
@@ -57,10 +58,20 @@ h6,
 .h6 {
   color: #7b428e;
 }
+html.lt-ie9 a,
+html.lt-ie9 a:link,
+html.lt-ie9 a:visited {
+  color: #7b428e;
+}
 a:not(.btn),
 a:link:not(.btn),
 a:visited:not(.btn) {
   color: #7b428e;
+}
+html.lt-ie9 a:hover,
+html.lt-ie9 a:focus,
+html.lt-ie9 a:active {
+  color: #3f2248;
 }
 a:hover:not(.btn),
 a:focus:not(.btn),
@@ -411,9 +422,19 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   background: #d3d3d3;
   color: #000000;
 }
+html.lt-ie9 .id7-site-footer a,
+html.lt-ie9 .id7-site-footer a:link,
+html.lt-ie9 .id7-site-footer a:visited {
+  color: #000000;
+}
 .id7-site-footer a:not(.btn),
 .id7-site-footer a:link:not(.btn),
 .id7-site-footer a:visited:not(.btn) {
+  color: #000000;
+}
+html.lt-ie9 .id7-site-footer a:hover,
+html.lt-ie9 .id7-site-footer a:focus,
+html.lt-ie9 .id7-site-footer a:active {
   color: #000000;
 }
 .id7-site-footer a:hover:not(.btn),
@@ -428,10 +449,20 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   background: #7b428e;
   color: #ffffff;
 }
+html.lt-ie9 .id7-app-footer a,
+html.lt-ie9 .id7-app-footer a:link,
+html.lt-ie9 .id7-app-footer a:visited {
+  color: #ffffff;
+}
 .id7-app-footer a:not(.btn),
 .id7-app-footer a:link:not(.btn),
 .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
+}
+html.lt-ie9 .id7-app-footer a:hover,
+html.lt-ie9 .id7-app-footer a:focus,
+html.lt-ie9 .id7-app-footer a:active {
+  color: #cccccc;
 }
 .id7-app-footer a:hover:not(.btn),
 .id7-app-footer a:focus:not(.btn),

@@ -1,11 +1,21 @@
+/* We explicitly don't target .btn on these, but IE8 doesn't support :not, so we target html.lt-ie9 as well */
+
 .link-colour(@base, @hover) {
   a, a:link, a:visited {
+    html.lt-ie9 & {
+      color: @base;
+    }
+
     &:not(.btn) {
       color: @base;
     }
   }
 
   a:hover, a:focus, a:active {
+    html.lt-ie9 & {
+      color: @hover;
+    }
+
     &:not(.btn) {
       color: @hover;
     }
@@ -22,12 +32,20 @@
 
 .link-colour(@base) when (@base = inherit) {
   a, a:link, a:visited {
+    html.lt-ie9 & {
+      color: inherit;
+    }
+
     &:not(.btn) {
       color: inherit;
     }
   }
 
   a:hover, a:focus, a:active {
+    html.lt-ie9 & {
+      color: inherit;
+    }
+
     &:not(.btn) {
       color: inherit;
     }
@@ -36,12 +54,20 @@
 
 .link-decoration(@base: none, @hover: underline) {
   a, a:link, a:visited {
+    html.lt-ie9 & {
+      text-decoration: @base;
+    }
+
     &:not(.btn) {
       text-decoration: @base;
     }
   }
 
   a:hover, a:focus, a:active {
+    html.lt-ie9 & {
+      text-decoration: @hover;
+    }
+
     &:not(.btn) {
       text-decoration: @hover;
     }

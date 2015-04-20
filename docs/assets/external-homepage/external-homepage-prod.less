@@ -50,8 +50,8 @@ body {
   .transition(background-color 0.15s linear);
 
   z-index: 30;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 
 // Change the masthead imagery
@@ -61,15 +61,12 @@ body {
 }
 
 .id7-utility-masthead {
-  background-image: url("/dist/images/masthead-logo-bleed-homepage-xs.png");
-  background-position: 0 @id7-masthead-bleed-height;
-  background-repeat: no-repeat;
+  background: url("/dist/images/masthead-logo-bleed-homepage-xs.png") 0 @id7-masthead-bleed-height no-repeat;
   background-size: @screen-sm-min 300px;
 
   @media (min-width: @screen-sm-min) {
-    background-image: url("/dist/images/masthead-logo-bleed-homepage-sm.png");
+    background: url("/dist/images/masthead-logo-bleed-homepage-sm.png") center @id7-masthead-bleed-height no-repeat;
     background-size: @screen-md-min @id7-masthead-logo-height-sm;
-    background-position: center @id7-masthead-bleed-height;
   }
   @media (min-width: @screen-md-min) {
     background-image: url("/dist/images/masthead-logo-bleed-homepage-md.png");
@@ -225,7 +222,7 @@ only screen and (                min-resolution: 2dppx) {
   .link-decoration(none, @hover: underline);
 
   position: fixed;
-  right: 0px;
+  right: 0;
   top: @body-content-padding;
   z-index: 10;
   text-align: right;
@@ -234,8 +231,7 @@ only screen and (                min-resolution: 2dppx) {
   .link-colour(white, #e0e4f8);
 
   ul.nav {
-    padding: 0;
-    padding-right: (@grid-gutter-width / 2);
+    padding: 0 (@grid-gutter-width / 2) 0 0;
     list-style: none;
     margin: 0;
 
@@ -362,53 +358,17 @@ only screen and (                min-resolution: 2dppx) {
 
     @media (min-width: @grid-float-breakpoint) {
       height: 600px;
-      height: 100vh;
-
-      // Flex so that the container inside it takes up the full height
-      .flexbox();
-      .flex-direction(column);
 
       .container-fluid {
         width: 100%;
       }
 
-      .container, .container-fluid {
-        .flexbox();
-        .flex-direction(column);
-        .flex(2013, 1, 0, 0);
-
-        .row, .layout {
-          .flexbox();
-          .flex(2013, 1, 0, 0);
-          .align-items(stretch);
-
-          > * {
-            .flexbox();
-            .flex-direction(column);
-            .flex(2013, 1, 1, auto);
-          }
-        }
-      }
-
       &.jumbotron-panel {
         .container, .container-fluid {
-          .container-fluid {
-            .flex-direction(column);
-          }
-
           .row, .layout {
-            .align-items(stretch);
-
-            > * {
-              .flex-direction(row);
-              .align-items(stretch);
-
-              &.flex-vertical {
-                padding-top: 0;
-                padding-bottom: 0;
-                .flex-direction(column);
-                .align-items(stretch);
-              }
+            > .flex-vertical {
+              padding-top: 0;
+              padding-bottom: 0;
             }
           }
 
@@ -438,14 +398,6 @@ only screen and (                min-resolution: 2dppx) {
                   margin-right: 200px;
                 }
               }
-            }
-
-            > .column-1 {
-              .justify-content(end);
-            }
-
-            > .column-2 {
-              .justify-content(start);
             }
           }
         }
@@ -485,30 +437,16 @@ only screen and (                min-resolution: 2dppx) {
       }
 
       .caption {
-        .flexbox();
-        .flex-direction(column);
-        .flex(2013, 1, 0, 0);
-
-        // Default .middle .left
-
-        // Vertical alignment
-        &, &.middle { .justify-content(center); }
-        &.top { .justify-content(start); }
-        &.bottom { .justify-content(end); }
-
-        &, &.left { .align-items(start); }
-        &.center { .align-items(center);
+        .center {
           // Padding for exclusion zone on right
           @media (min-width: @screen-md-min) {
             padding: 0 @carousel-nav-exclusion-zone;
           }
         }
-        &.right { .align-items(end); }
 
         .caption-content {
           width: 66%;
           padding: (@grid-gutter-width / 2);
-          .flex(2013, 0, 1, auto);
         }
 
         @media (min-width: @screen-md-min) {
@@ -516,6 +454,92 @@ only screen and (                min-resolution: 2dppx) {
             width: 100%;
           }
         }
+      }
+    }
+  }
+}
+
+// Flexbox-y Jumbotrons on desktop
+@media (min-width: @grid-float-breakpoint) {
+  html.flexbox .jumbotron-carousel .jumbotron {
+    height: 100vh;
+
+    // Flex so that the container inside it takes up the full height
+    display: flex;
+    flex-direction: column;
+
+    .container, .container-fluid {
+      flex: 1 0 auto;
+
+      display: flex;
+      flex-direction: column;
+
+      .row, .layout {
+        flex: 1 0 auto;
+
+        display: flex;
+        align-items: stretch;
+
+        > * {
+          flex: auto;
+
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    &.jumbotron-panel {
+      .container, .container-fluid {
+        .container-fluid {
+          flex-direction: column;
+        }
+
+        .row, .layout {
+          align-items: stretch;
+
+          > * {
+            flex-direction: row;
+            align-items: stretch;
+
+            &.flex-vertical {
+              flex-direction: column;
+              align-items: stretch;
+            }
+          }
+        }
+
+        > .layout {
+          > .column-1 {
+            justify-content: flex-end;
+          }
+
+          > .column-2 {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+
+    .caption {
+      flex: 1 0 auto;
+
+      display: flex;
+      flex-direction: column;
+
+      // Default .middle .left
+
+      // Vertical alignment
+      &, &.middle { justify-content: center; }
+      &.top { justify-content: flex-start; }
+      &.bottom { justify-content: flex-end; }
+
+      &, &.left { align-items: flex-start; }
+      &.center { align-items: center; }
+      &.right { align-items: flex-end; }
+
+      .caption-content {
+        flex: 0 1 auto; // This should be the default, but isn't in IE
       }
     }
   }
@@ -665,10 +689,10 @@ only screen and (                min-resolution: 2dppx) {
     }
 
     // Flexbox it in browsers that support it to get equal-height columns
-    .flexbox();
-    .flex-wrap(wrap);
+    display: flex;
+    flex-wrap: wrap;
     > li {
-      .flex(2013, 1);
+      flex: 1;
     }
   }
 }
