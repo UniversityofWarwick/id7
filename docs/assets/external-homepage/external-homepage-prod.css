@@ -208,6 +208,7 @@
     display: none !important;
   }
 }
+/* We explicitly don't target .btn on these, but IE8 doesn't support :not, so we target html.lt-ie9 as well */
 body {
   position: relative;
 }
@@ -249,35 +250,36 @@ body {
   -o-transition: background-color 0.15s linear;
   transition: background-color 0.15s linear;
   z-index: 30;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 .id7-masthead {
   background: none;
 }
 .id7-utility-masthead {
-  background-image: url("/dist/images/masthead-logo-bleed-homepage-xs.png");
-  background-position: 0 24px;
-  background-repeat: no-repeat;
-  background-size: 768px 300px;
+  background: url("/dist/images/masthead-logo-bleed-homepage-xs.png") 0 24px no-repeat;
+  -webkit-background-size: 768px 300px;
+          background-size: 768px 300px;
 }
 @media (min-width: 768px) {
   .id7-utility-masthead {
-    background-image: url("/dist/images/masthead-logo-bleed-homepage-sm.png");
-    background-size: 992px 80px;
-    background-position: center 24px;
+    background: url("/dist/images/masthead-logo-bleed-homepage-sm.png") center 24px no-repeat;
+    -webkit-background-size: 992px 80px;
+            background-size: 992px 80px;
   }
 }
 @media (min-width: 992px) {
   .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-homepage-md.png");
-    background-size: 1200px 80px;
+    -webkit-background-size: 1200px 80px;
+            background-size: 1200px 80px;
   }
 }
 @media (min-width: 1200px) {
   .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-homepage-lg.png");
-    background-size: 3000px 80px;
+    -webkit-background-size: 3000px 80px;
+            background-size: 3000px 80px;
   }
 }
 .id7-utility-masthead::after {
@@ -411,7 +413,7 @@ body {
 /***** START CAROUSEL NAV *****/
 .carousel-nav {
   position: fixed;
-  right: 0px;
+  right: 0;
   top: 124px;
   z-index: 10;
   text-align: right;
@@ -427,20 +429,40 @@ body {
     display: none !important;
   }
 }
+html.lt-ie9 .carousel-nav a,
+html.lt-ie9 .carousel-nav a:link,
+html.lt-ie9 .carousel-nav a:visited {
+  text-decoration: none;
+}
 .carousel-nav a:not(.btn),
 .carousel-nav a:link:not(.btn),
 .carousel-nav a:visited:not(.btn) {
   text-decoration: none;
+}
+html.lt-ie9 .carousel-nav a:hover,
+html.lt-ie9 .carousel-nav a:focus,
+html.lt-ie9 .carousel-nav a:active {
+  text-decoration: underline;
 }
 .carousel-nav a:hover:not(.btn),
 .carousel-nav a:focus:not(.btn),
 .carousel-nav a:active:not(.btn) {
   text-decoration: underline;
 }
+html.lt-ie9 .carousel-nav a,
+html.lt-ie9 .carousel-nav a:link,
+html.lt-ie9 .carousel-nav a:visited {
+  color: white;
+}
 .carousel-nav a:not(.btn),
 .carousel-nav a:link:not(.btn),
 .carousel-nav a:visited:not(.btn) {
   color: white;
+}
+html.lt-ie9 .carousel-nav a:hover,
+html.lt-ie9 .carousel-nav a:focus,
+html.lt-ie9 .carousel-nav a:active {
+  color: #e0e4f8;
 }
 .carousel-nav a:hover:not(.btn),
 .carousel-nav a:focus:not(.btn),
@@ -451,8 +473,7 @@ body {
   color: #e0e4f8;
 }
 .carousel-nav ul.nav {
-  padding: 0;
-  padding-right: 20px;
+  padding: 0 20px 0 0;
   list-style: none;
   margin: 0;
 }
@@ -481,10 +502,20 @@ body {
 }
 /***** END CAROUSEL NAV *****/
 /***** START JUMBOTRON CAROUSEL *****/
+html.lt-ie9 .jumbotron-carousel a,
+html.lt-ie9 .jumbotron-carousel a:link,
+html.lt-ie9 .jumbotron-carousel a:visited {
+  text-decoration: none;
+}
 .jumbotron-carousel a:not(.btn),
 .jumbotron-carousel a:link:not(.btn),
 .jumbotron-carousel a:visited:not(.btn) {
   text-decoration: none;
+}
+html.lt-ie9 .jumbotron-carousel a:hover,
+html.lt-ie9 .jumbotron-carousel a:focus,
+html.lt-ie9 .jumbotron-carousel a:active {
+  text-decoration: underline;
 }
 .jumbotron-carousel a:hover:not(.btn),
 .jumbotron-carousel a:focus:not(.btn),
@@ -497,10 +528,20 @@ body {
   background: black;
   color: white;
 }
+html.lt-ie9 .jumbotron-carousel .jumbotron a,
+html.lt-ie9 .jumbotron-carousel .jumbotron a:link,
+html.lt-ie9 .jumbotron-carousel .jumbotron a:visited {
+  color: white;
+}
 .jumbotron-carousel .jumbotron a:not(.btn),
 .jumbotron-carousel .jumbotron a:link:not(.btn),
 .jumbotron-carousel .jumbotron a:visited:not(.btn) {
   color: white;
+}
+html.lt-ie9 .jumbotron-carousel .jumbotron a:hover,
+html.lt-ie9 .jumbotron-carousel .jumbotron a:focus,
+html.lt-ie9 .jumbotron-carousel .jumbotron a:active {
+  color: #e0e4f8;
 }
 .jumbotron-carousel .jumbotron a:hover:not(.btn),
 .jumbotron-carousel .jumbotron a:focus:not(.btn),
@@ -569,206 +610,16 @@ body {
 @media (min-width: 768px) {
   .jumbotron-carousel .jumbotron {
     height: 600px;
-    height: 100vh;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-box;
-    display: -o-box;
-    display: box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -ms-box-orient: vertical;
-    -o-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
-    flex-direction: column;
   }
   .jumbotron-carousel .jumbotron .container-fluid {
     width: 100%;
   }
-  .jumbotron-carousel .jumbotron .container,
-  .jumbotron-carousel .jumbotron .container-fluid {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-box;
-    display: -o-box;
-    display: box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -ms-box-orient: vertical;
-    -o-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex: 1 0 0;
-    -moz-flex: 1 0 0;
-    -ms-flex: 1 0 0;
-    -o-flex: 1 0 0;
-    flex: 1 0 0;
-  }
-  .jumbotron-carousel .jumbotron .container .row,
-  .jumbotron-carousel .jumbotron .container-fluid .row,
-  .jumbotron-carousel .jumbotron .container .layout,
-  .jumbotron-carousel .jumbotron .container-fluid .layout {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-box;
-    display: -o-box;
-    display: box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    -webkit-flex: 1 0 0;
-    -moz-flex: 1 0 0;
-    -ms-flex: 1 0 0;
-    -o-flex: 1 0 0;
-    flex: 1 0 0;
-    -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-    -ms-box-align: stretch;
-    -o-box-align: stretch;
-    box-align: stretch;
-    -ms-flex-align: stretch;
-    -webkit-align-items: stretch;
-    -moz-align-items: stretch;
-    -ms-align-items: stretch;
-    -o-align-items: stretch;
-    align-items: stretch;
-  }
-  .jumbotron-carousel .jumbotron .container .row > *,
-  .jumbotron-carousel .jumbotron .container-fluid .row > *,
-  .jumbotron-carousel .jumbotron .container .layout > *,
-  .jumbotron-carousel .jumbotron .container-fluid .layout > * {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-box;
-    display: -o-box;
-    display: box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -ms-box-orient: vertical;
-    -o-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex: 1 1 auto;
-    -moz-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    -o-flex: 1 1 auto;
-    flex: 1 1 auto;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container .container-fluid,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .container-fluid {
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -ms-box-orient: vertical;
-    -o-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
-    flex-direction: column;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container .row,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout {
-    -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-    -ms-box-align: stretch;
-    -o-box-align: stretch;
-    box-align: stretch;
-    -ms-flex-align: stretch;
-    -webkit-align-items: stretch;
-    -moz-align-items: stretch;
-    -ms-align-items: stretch;
-    -o-align-items: stretch;
-    align-items: stretch;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container .row > *,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row > *,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout > *,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout > * {
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    -ms-box-orient: horizontal;
-    -o-box-orient: horizontal;
-    box-orient: horizontal;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    -o-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-    -ms-box-align: stretch;
-    -o-box-align: stretch;
-    box-align: stretch;
-    -ms-flex-align: stretch;
-    -webkit-align-items: stretch;
-    -moz-align-items: stretch;
-    -ms-align-items: stretch;
-    -o-align-items: stretch;
-    align-items: stretch;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container .row > *.flex-vertical,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row > *.flex-vertical,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout > *.flex-vertical,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout > *.flex-vertical {
+  .jumbotron-carousel .jumbotron.jumbotron-panel .container .row > .flex-vertical,
+  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row > .flex-vertical,
+  .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout > .flex-vertical,
+  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout > .flex-vertical {
     padding-top: 0;
     padding-bottom: 0;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -ms-box-orient: vertical;
-    -o-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-    -ms-box-align: stretch;
-    -o-box-align: stretch;
-    box-align: stretch;
-    -ms-flex-align: stretch;
-    -webkit-align-items: stretch;
-    -moz-align-items: stretch;
-    -ms-align-items: stretch;
-    -o-align-items: stretch;
-    align-items: stretch;
   }
   .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1,
   .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1,
@@ -795,39 +646,12 @@ body {
   .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content .caption-content {
     margin-right: 200px;
   }
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 {
-    -webkit-box-pack: end;
-    -moz-box-pack: end;
-    -ms-box-pack: end;
-    -o-box-pack: end;
-    box-pack: end;
-    -ms-flex-pack: end;
-    -webkit-justify-content: flex-end;
-    -moz-justify-content: flex-end;
-    -ms-justify-content: flex-end;
-    -o-justify-content: flex-end;
-    justify-content: flex-end;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 {
-    -webkit-box-pack: start;
-    -moz-box-pack: start;
-    -ms-box-pack: start;
-    -o-box-pack: start;
-    box-pack: start;
-    -ms-flex-pack: start;
-    -webkit-justify-content: flex-start;
-    -moz-justify-content: flex-start;
-    -ms-justify-content: flex-start;
-    -o-justify-content: flex-start;
-    justify-content: flex-start;
-  }
   .jumbotron-carousel .jumbotron.jumbotron-image,
   .jumbotron-carousel .jumbotron .jumbotron-image {
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
     position: relative;
   }
   .jumbotron-carousel .jumbotron.jumbotron-image.overlay::before,
@@ -853,119 +677,9 @@ body {
     padding-top: 124px;
     padding-bottom: 20px;
   }
-  .jumbotron-carousel .jumbotron .caption {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-box;
-    display: -o-box;
-    display: box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -ms-box-orient: vertical;
-    -o-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex: 1 0 0;
-    -moz-flex: 1 0 0;
-    -ms-flex: 1 0 0;
-    -o-flex: 1 0 0;
-    flex: 1 0 0;
-  }
-  .jumbotron-carousel .jumbotron .caption,
-  .jumbotron-carousel .jumbotron .caption.middle {
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-  }
-  .jumbotron-carousel .jumbotron .caption.top {
-    -webkit-box-pack: start;
-    -moz-box-pack: start;
-    -ms-box-pack: start;
-    -o-box-pack: start;
-    box-pack: start;
-    -ms-flex-pack: start;
-    -webkit-justify-content: flex-start;
-    -moz-justify-content: flex-start;
-    -ms-justify-content: flex-start;
-    -o-justify-content: flex-start;
-    justify-content: flex-start;
-  }
-  .jumbotron-carousel .jumbotron .caption.bottom {
-    -webkit-box-pack: end;
-    -moz-box-pack: end;
-    -ms-box-pack: end;
-    -o-box-pack: end;
-    box-pack: end;
-    -ms-flex-pack: end;
-    -webkit-justify-content: flex-end;
-    -moz-justify-content: flex-end;
-    -ms-justify-content: flex-end;
-    -o-justify-content: flex-end;
-    justify-content: flex-end;
-  }
-  .jumbotron-carousel .jumbotron .caption,
-  .jumbotron-carousel .jumbotron .caption.left {
-    -webkit-box-align: start;
-    -moz-box-align: start;
-    -ms-box-align: start;
-    -o-box-align: start;
-    box-align: start;
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    -ms-align-items: flex-start;
-    -o-align-items: flex-start;
-    align-items: flex-start;
-  }
-  .jumbotron-carousel .jumbotron .caption.center {
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-box-align: center;
-    -o-box-align: center;
-    box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -o-align-items: center;
-    align-items: center;
-  }
-  .jumbotron-carousel .jumbotron .caption.right {
-    -webkit-box-align: end;
-    -moz-box-align: end;
-    -ms-box-align: end;
-    -o-box-align: end;
-    box-align: end;
-    -ms-flex-align: end;
-    -webkit-align-items: flex-end;
-    -moz-align-items: flex-end;
-    -ms-align-items: flex-end;
-    -o-align-items: flex-end;
-    align-items: flex-end;
-  }
   .jumbotron-carousel .jumbotron .caption .caption-content {
     width: 66%;
     padding: 20px;
-    -webkit-flex: 0 1 auto;
-    -moz-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    -o-flex: 0 1 auto;
-    flex: 0 1 auto;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -1005,13 +719,196 @@ body {
   }
 }
 @media (min-width: 768px) and (min-width: 992px) {
-  .jumbotron-carousel .jumbotron .caption.center {
+  .jumbotron-carousel .jumbotron .caption .center {
     padding: 0 250px;
   }
 }
 @media (min-width: 768px) and (min-width: 992px) {
   .jumbotron-carousel .jumbotron .caption.center .caption-content {
     width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  html.flexbox .jumbotron-carousel .jumbotron {
+    height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .container,
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .container .row,
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid .row,
+  html.flexbox .jumbotron-carousel .jumbotron .container .layout,
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid .layout {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .container .row > *,
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid .row > *,
+  html.flexbox .jumbotron-carousel .jumbotron .container .layout > *,
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid .layout > * {
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .container-fluid,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .container-fluid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .row,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .row > *,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row > *,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout > *,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout > * {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .row > *.flex-vertical,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row > *.flex-vertical,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout > *.flex-vertical,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout > *.flex-vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption,
+  html.flexbox .jumbotron-carousel .jumbotron .caption.middle {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption.top {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption.bottom {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption,
+  html.flexbox .jumbotron-carousel .jumbotron .caption.left {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption.center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption.right {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption .caption-content {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
 }
 /***** END JUMBOTRON CAROUSEL *****/
@@ -1046,10 +943,20 @@ body {
   color: white;
   font-size: 16px;
 }
+html.lt-ie9 #more-links a,
+html.lt-ie9 #more-links a:link,
+html.lt-ie9 #more-links a:visited {
+  color: white;
+}
 #more-links a:not(.btn),
 #more-links a:link:not(.btn),
 #more-links a:visited:not(.btn) {
   color: white;
+}
+html.lt-ie9 #more-links a:hover,
+html.lt-ie9 #more-links a:focus,
+html.lt-ie9 #more-links a:active {
+  color: #e0e4f8;
 }
 #more-links a:hover:not(.btn),
 #more-links a:focus:not(.btn),
@@ -1067,9 +974,19 @@ body {
 #more-links .megamenu-links-address {
   text-align: left;
 }
+html.lt-ie9 #more-links .megamenu-links-address .telephone a,
+html.lt-ie9 #more-links .megamenu-links-address .telephone a:link,
+html.lt-ie9 #more-links .megamenu-links-address .telephone a:visited {
+  text-decoration: none;
+}
 #more-links .megamenu-links-address .telephone a:not(.btn),
 #more-links .megamenu-links-address .telephone a:link:not(.btn),
 #more-links .megamenu-links-address .telephone a:visited:not(.btn) {
+  text-decoration: none;
+}
+html.lt-ie9 #more-links .megamenu-links-address .telephone a:hover,
+html.lt-ie9 #more-links .megamenu-links-address .telephone a:focus,
+html.lt-ie9 #more-links .megamenu-links-address .telephone a:active {
   text-decoration: none;
 }
 #more-links .megamenu-links-address .telephone a:hover:not(.btn),
@@ -1123,32 +1040,27 @@ body {
   margin-left: -20px;
   margin-right: -20px;
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: -o-box;
-  display: box;
-  display: -ms-flexbox;
   display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-lines: multiple;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -ms-box-lines: multiple;
-  -o-box-lines: multiple;
-  box-lines: multiple;
   -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  -o-flex-wrap: wrap;
-  flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+html.lt-ie9 .megamenu-links .more-links-sitemap a,
+html.lt-ie9 .megamenu-links .more-links-sitemap a:link,
+html.lt-ie9 .megamenu-links .more-links-sitemap a:visited {
+  color: #333333;
 }
 .megamenu-links .more-links-sitemap a:not(.btn),
 .megamenu-links .more-links-sitemap a:link:not(.btn),
 .megamenu-links .more-links-sitemap a:visited:not(.btn) {
   color: #333333;
+}
+html.lt-ie9 .megamenu-links .more-links-sitemap a:hover,
+html.lt-ie9 .megamenu-links .more-links-sitemap a:focus,
+html.lt-ie9 .megamenu-links .more-links-sitemap a:active {
+  color: #2c66e8;
 }
 .megamenu-links .more-links-sitemap a:hover:not(.btn),
 .megamenu-links .more-links-sitemap a:focus:not(.btn),
@@ -1177,14 +1089,30 @@ body {
   color: #777777;
   display: block;
 }
+.megamenu-links .more-links-sitemap > li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 .megamenu-links-address {
   margin-top: 20px;
   text-align: center;
+}
+html.lt-ie9 .megamenu-links-address a,
+html.lt-ie9 .megamenu-links-address a:link,
+html.lt-ie9 .megamenu-links-address a:visited {
+  color: #333333;
 }
 .megamenu-links-address a:not(.btn),
 .megamenu-links-address a:link:not(.btn),
 .megamenu-links-address a:visited:not(.btn) {
   color: #333333;
+}
+html.lt-ie9 .megamenu-links-address a:hover,
+html.lt-ie9 .megamenu-links-address a:focus,
+html.lt-ie9 .megamenu-links-address a:active {
+  color: #2c66e8;
 }
 .megamenu-links-address a:hover:not(.btn),
 .megamenu-links-address a:focus:not(.btn),

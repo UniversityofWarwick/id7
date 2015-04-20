@@ -202,8 +202,8 @@ only screen and (                min-resolution: 2dppx) {
   color: white;
   .link-colour(white, #e0e4f8);
 
-  .flexbox();
-  .flex-direction(column);
+  display: flex;
+  flex-direction: column;
 
   .container-fluid {
     width: 100%;
@@ -211,19 +211,19 @@ only screen and (                min-resolution: 2dppx) {
 
   @media (min-width: @grid-float-breakpoint) {
     .container, .container-fluid {
-      .flexbox();
-      .flex-direction(column);
-      .flex(2013, 1, 0, 0);
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
 
       .row, .layout {
-        .flexbox();
-        .flex(2013, 1, 0, 0);
-        .align-items(stretch);
+        display: flex;
+        flex: 1 0 auto;
+        align-items: stretch;
 
         > * {
-          .flexbox();
-          .flex-direction(column);
-          .flex(2013, 1, 1, auto);
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 auto;
         }
       }
     }
@@ -231,21 +231,21 @@ only screen and (                min-resolution: 2dppx) {
     &.jumbotron-panel {
       .container, .container-fluid {
         .container-fluid {
-          .flex-direction(column);
+          flex-direction: column;
         }
 
         .row, .layout {
-          .align-items(stretch);
+          align-items: stretch;
 
           > * {
-            .flex-direction(row);
-            .align-items(stretch);
+            flex-direction: row;
+            align-items: stretch;
 
             &.flex-vertical {
               padding-top: 0;
               padding-bottom: 0;
-              .flex-direction(column);
-              .align-items(stretch);
+              flex-direction: column;
+              align-items: stretch;
             }
           }
         }
@@ -279,41 +279,41 @@ only screen and (                min-resolution: 2dppx) {
           }
 
           > .column-1 {
-            .justify-content(end);
+            justify-content: flex-end;
           }
 
           > .column-2 {
-            .justify-content(start);
+            justify-content: flex-start;
           }
         }
       }
     }
 
     .caption {
-      .flexbox();
-      .flex-direction(column);
-      .flex(2013, 1, 0, 0);
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
 
       // Default .middle .left
 
       // Vertical alignment
-      &, &.middle { .justify-content(center); }
-      &.top { .justify-content(start); }
-      &.bottom { .justify-content(end); }
+      &, &.middle { justify-content: center; }
+      &.top { justify-content: flex-start; }
+      &.bottom { justify-content: flex-end; }
 
-      &, &.left { .align-items(start); }
-      &.center { .align-items(center);
+      &, &.left { align-items: flex-start; }
+      &.center { align-items: center;
         // Padding for exclusion zone on right
         @media (min-width: @screen-md-min) {
           padding: 0 250px;
         }
       }
-      &.right { .align-items(end); }
+      &.right { align-items: flex-end; }
 
       .caption-content {
         width: 66%;
         padding: (@grid-gutter-width / 2);
-        .flex(2013, 0, 1, auto);
+        flex: 0 1 auto;
       }
 
       @media (min-width: @screen-md-min) {
@@ -525,10 +525,10 @@ only screen and (                min-resolution: 2dppx) {
     }
 
     // Flexbox it in browsers that support it to get equal-height columns
-    .flexbox();
-    .flex-wrap(wrap);
+    display: flex;
+    flex-wrap: wrap;
     > li {
-      .flex(2013, 1);
+      flex: 1;
     }
   }
 }

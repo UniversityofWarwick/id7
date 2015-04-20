@@ -1,15 +1,12 @@
-@import 'flexbox';
-
 .equal-height-columns() {
-  .flexbox();
-  .flex(2013, 1, 1, auto);
+  display: flex;
 
   > [class*='col-'] {
-    .flexbox();
-    .flex-direction(column);
+    display: flex;
+    flex-direction: column;
 
     > * {
-      .flex(2013, 1, 1, auto);
+      flex: auto;
     }
   }
 

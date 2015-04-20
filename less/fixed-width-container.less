@@ -10,16 +10,22 @@ body {
   background-position: left top;
   background-repeat: no-repeat;
 
+  // Stretch the content down to the footer, using Flexbox
   @media (min-width: @grid-float-breakpoint) {
-    .flexbox();
-    .flex-direction(column);
+    html.flexbox & {
+      display: flex;
+      flex-direction: column;
 
-    .id7-main-content-area {
-      .flex(2013, 1, 0, auto);
+      .id7-main-content-area {
+        flex: 1 0 auto;
 
-      .flexbox();
-      .flex-direction(column);
-      .id7-main-content { .flex(2013, 1, 0, auto); }
+        display: flex;
+        flex-direction: column;
+
+        .id7-main-content {
+          flex: 1 0 auto;
+        }
+      }
     }
   }
 

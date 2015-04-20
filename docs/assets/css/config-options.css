@@ -1,3 +1,4 @@
+/* We explicitly don't target .btn on these, but IE8 doesn't support :not, so we target html.lt-ie9 as well */
 body.brand-purple html.lt-ie9 {
   background: #9568a5;
 }
@@ -15,10 +16,20 @@ body.brand-purple .h5,
 body.brand-purple .h6 {
   color: #7b428e;
 }
+html.lt-ie9 body.brand-purple a,
+html.lt-ie9 body.brand-purple a:link,
+html.lt-ie9 body.brand-purple a:visited {
+  color: #7b428e;
+}
 body.brand-purple a:not(.btn),
 body.brand-purple a:link:not(.btn),
 body.brand-purple a:visited:not(.btn) {
   color: #7b428e;
+}
+html.lt-ie9 body.brand-purple a:hover,
+html.lt-ie9 body.brand-purple a:focus,
+html.lt-ie9 body.brand-purple a:active {
+  color: #3f2248;
 }
 body.brand-purple a:hover:not(.btn),
 body.brand-purple a:focus:not(.btn),
@@ -369,9 +380,19 @@ body.brand-purple .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+html.lt-ie9 body.brand-purple .id7-site-footer a,
+html.lt-ie9 body.brand-purple .id7-site-footer a:link,
+html.lt-ie9 body.brand-purple .id7-site-footer a:visited {
+  color: #000000;
+}
 body.brand-purple .id7-site-footer a:not(.btn),
 body.brand-purple .id7-site-footer a:link:not(.btn),
 body.brand-purple .id7-site-footer a:visited:not(.btn) {
+  color: #000000;
+}
+html.lt-ie9 body.brand-purple .id7-site-footer a:hover,
+html.lt-ie9 body.brand-purple .id7-site-footer a:focus,
+html.lt-ie9 body.brand-purple .id7-site-footer a:active {
   color: #000000;
 }
 body.brand-purple .id7-site-footer a:hover:not(.btn),
@@ -386,10 +407,20 @@ body.brand-purple .id7-app-footer {
   background: #7b428e;
   color: #ffffff;
 }
+html.lt-ie9 body.brand-purple .id7-app-footer a,
+html.lt-ie9 body.brand-purple .id7-app-footer a:link,
+html.lt-ie9 body.brand-purple .id7-app-footer a:visited {
+  color: #ffffff;
+}
 body.brand-purple .id7-app-footer a:not(.btn),
 body.brand-purple .id7-app-footer a:link:not(.btn),
 body.brand-purple .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
+}
+html.lt-ie9 body.brand-purple .id7-app-footer a:hover,
+html.lt-ie9 body.brand-purple .id7-app-footer a:focus,
+html.lt-ie9 body.brand-purple .id7-app-footer a:active {
+  color: #cccccc;
 }
 body.brand-purple .id7-app-footer a:hover:not(.btn),
 body.brand-purple .id7-app-footer a:focus:not(.btn),
@@ -504,10 +535,20 @@ body.brand-gray .h5,
 body.brand-gray .h6 {
   color: #828c95;
 }
+html.lt-ie9 body.brand-gray a,
+html.lt-ie9 body.brand-gray a:link,
+html.lt-ie9 body.brand-gray a:visited {
+  color: #828c95;
+}
 body.brand-gray a:not(.btn),
 body.brand-gray a:link:not(.btn),
 body.brand-gray a:visited:not(.btn) {
   color: #828c95;
+}
+html.lt-ie9 body.brand-gray a:hover,
+html.lt-ie9 body.brand-gray a:focus,
+html.lt-ie9 body.brand-gray a:active {
+  color: #515960;
 }
 body.brand-gray a:hover:not(.btn),
 body.brand-gray a:focus:not(.btn),
@@ -858,9 +899,19 @@ body.brand-gray .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+html.lt-ie9 body.brand-gray .id7-site-footer a,
+html.lt-ie9 body.brand-gray .id7-site-footer a:link,
+html.lt-ie9 body.brand-gray .id7-site-footer a:visited {
+  color: #000000;
+}
 body.brand-gray .id7-site-footer a:not(.btn),
 body.brand-gray .id7-site-footer a:link:not(.btn),
 body.brand-gray .id7-site-footer a:visited:not(.btn) {
+  color: #000000;
+}
+html.lt-ie9 body.brand-gray .id7-site-footer a:hover,
+html.lt-ie9 body.brand-gray .id7-site-footer a:focus,
+html.lt-ie9 body.brand-gray .id7-site-footer a:active {
   color: #000000;
 }
 body.brand-gray .id7-site-footer a:hover:not(.btn),
@@ -875,10 +926,20 @@ body.brand-gray .id7-app-footer {
   background: #828c95;
   color: #ffffff;
 }
+html.lt-ie9 body.brand-gray .id7-app-footer a,
+html.lt-ie9 body.brand-gray .id7-app-footer a:link,
+html.lt-ie9 body.brand-gray .id7-app-footer a:visited {
+  color: #ffffff;
+}
 body.brand-gray .id7-app-footer a:not(.btn),
 body.brand-gray .id7-app-footer a:link:not(.btn),
 body.brand-gray .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
+}
+html.lt-ie9 body.brand-gray .id7-app-footer a:hover,
+html.lt-ie9 body.brand-gray .id7-app-footer a:focus,
+html.lt-ie9 body.brand-gray .id7-app-footer a:active {
+  color: #cccccc;
 }
 body.brand-gray .id7-app-footer a:hover:not(.btn),
 body.brand-gray .id7-app-footer a:focus:not(.btn),
@@ -993,10 +1054,20 @@ body.brand-gold .h5,
 body.brand-gold .h6 {
   color: #dcbe2d;
 }
+html.lt-ie9 body.brand-gold a,
+html.lt-ie9 body.brand-gold a:link,
+html.lt-ie9 body.brand-gold a:visited {
+  color: #dcbe2d;
+}
 body.brand-gold a:not(.btn),
 body.brand-gold a:link:not(.btn),
 body.brand-gold a:visited:not(.btn) {
   color: #dcbe2d;
+}
+html.lt-ie9 body.brand-gold a:hover,
+html.lt-ie9 body.brand-gold a:focus,
+html.lt-ie9 body.brand-gold a:active {
+  color: #8c7817;
 }
 body.brand-gold a:hover:not(.btn),
 body.brand-gold a:focus:not(.btn),
@@ -1347,9 +1418,19 @@ body.brand-gold .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+html.lt-ie9 body.brand-gold .id7-site-footer a,
+html.lt-ie9 body.brand-gold .id7-site-footer a:link,
+html.lt-ie9 body.brand-gold .id7-site-footer a:visited {
+  color: #000000;
+}
 body.brand-gold .id7-site-footer a:not(.btn),
 body.brand-gold .id7-site-footer a:link:not(.btn),
 body.brand-gold .id7-site-footer a:visited:not(.btn) {
+  color: #000000;
+}
+html.lt-ie9 body.brand-gold .id7-site-footer a:hover,
+html.lt-ie9 body.brand-gold .id7-site-footer a:focus,
+html.lt-ie9 body.brand-gold .id7-site-footer a:active {
   color: #000000;
 }
 body.brand-gold .id7-site-footer a:hover:not(.btn),
@@ -1364,9 +1445,19 @@ body.brand-gold .id7-app-footer {
   background: #dcbe2d;
   color: #000000;
 }
+html.lt-ie9 body.brand-gold .id7-app-footer a,
+html.lt-ie9 body.brand-gold .id7-app-footer a:link,
+html.lt-ie9 body.brand-gold .id7-app-footer a:visited {
+  color: #000000;
+}
 body.brand-gold .id7-app-footer a:not(.btn),
 body.brand-gold .id7-app-footer a:link:not(.btn),
 body.brand-gold .id7-app-footer a:visited:not(.btn) {
+  color: #000000;
+}
+html.lt-ie9 body.brand-gold .id7-app-footer a:hover,
+html.lt-ie9 body.brand-gold .id7-app-footer a:focus,
+html.lt-ie9 body.brand-gold .id7-app-footer a:active {
   color: #000000;
 }
 body.brand-gold .id7-app-footer a:hover:not(.btn),
@@ -1482,10 +1573,20 @@ body.brand-blue .h5,
 body.brand-blue .h6 {
   color: #6ca4d4;
 }
+html.lt-ie9 body.brand-blue a,
+html.lt-ie9 body.brand-blue a:link,
+html.lt-ie9 body.brand-blue a:visited {
+  color: #6ca4d4;
+}
 body.brand-blue a:not(.btn),
 body.brand-blue a:link:not(.btn),
 body.brand-blue a:visited:not(.btn) {
   color: #6ca4d4;
+}
+html.lt-ie9 body.brand-blue a:hover,
+html.lt-ie9 body.brand-blue a:focus,
+html.lt-ie9 body.brand-blue a:active {
+  color: #3172a9;
 }
 body.brand-blue a:hover:not(.btn),
 body.brand-blue a:focus:not(.btn),
@@ -1836,9 +1937,19 @@ body.brand-blue .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+html.lt-ie9 body.brand-blue .id7-site-footer a,
+html.lt-ie9 body.brand-blue .id7-site-footer a:link,
+html.lt-ie9 body.brand-blue .id7-site-footer a:visited {
+  color: #000000;
+}
 body.brand-blue .id7-site-footer a:not(.btn),
 body.brand-blue .id7-site-footer a:link:not(.btn),
 body.brand-blue .id7-site-footer a:visited:not(.btn) {
+  color: #000000;
+}
+html.lt-ie9 body.brand-blue .id7-site-footer a:hover,
+html.lt-ie9 body.brand-blue .id7-site-footer a:focus,
+html.lt-ie9 body.brand-blue .id7-site-footer a:active {
   color: #000000;
 }
 body.brand-blue .id7-site-footer a:hover:not(.btn),
@@ -1853,10 +1964,20 @@ body.brand-blue .id7-app-footer {
   background: #6ca4d4;
   color: #ffffff;
 }
+html.lt-ie9 body.brand-blue .id7-app-footer a,
+html.lt-ie9 body.brand-blue .id7-app-footer a:link,
+html.lt-ie9 body.brand-blue .id7-app-footer a:visited {
+  color: #ffffff;
+}
 body.brand-blue .id7-app-footer a:not(.btn),
 body.brand-blue .id7-app-footer a:link:not(.btn),
 body.brand-blue .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
+}
+html.lt-ie9 body.brand-blue .id7-app-footer a:hover,
+html.lt-ie9 body.brand-blue .id7-app-footer a:focus,
+html.lt-ie9 body.brand-blue .id7-app-footer a:active {
+  color: #cccccc;
 }
 body.brand-blue .id7-app-footer a:hover:not(.btn),
 body.brand-blue .id7-app-footer a:focus:not(.btn),
@@ -1971,10 +2092,20 @@ body.brand-orange .h5,
 body.brand-orange .h6 {
   color: #f1863c;
 }
+html.lt-ie9 body.brand-orange a,
+html.lt-ie9 body.brand-orange a:link,
+html.lt-ie9 body.brand-orange a:visited {
+  color: #f1863c;
+}
 body.brand-orange a:not(.btn),
 body.brand-orange a:link:not(.btn),
 body.brand-orange a:visited:not(.btn) {
   color: #f1863c;
+}
+html.lt-ie9 body.brand-orange a:hover,
+html.lt-ie9 body.brand-orange a:focus,
+html.lt-ie9 body.brand-orange a:active {
+  color: #ba540d;
 }
 body.brand-orange a:hover:not(.btn),
 body.brand-orange a:focus:not(.btn),
@@ -2325,9 +2456,19 @@ body.brand-orange .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+html.lt-ie9 body.brand-orange .id7-site-footer a,
+html.lt-ie9 body.brand-orange .id7-site-footer a:link,
+html.lt-ie9 body.brand-orange .id7-site-footer a:visited {
+  color: #000000;
+}
 body.brand-orange .id7-site-footer a:not(.btn),
 body.brand-orange .id7-site-footer a:link:not(.btn),
 body.brand-orange .id7-site-footer a:visited:not(.btn) {
+  color: #000000;
+}
+html.lt-ie9 body.brand-orange .id7-site-footer a:hover,
+html.lt-ie9 body.brand-orange .id7-site-footer a:focus,
+html.lt-ie9 body.brand-orange .id7-site-footer a:active {
   color: #000000;
 }
 body.brand-orange .id7-site-footer a:hover:not(.btn),
@@ -2342,10 +2483,20 @@ body.brand-orange .id7-app-footer {
   background: #f1863c;
   color: #ffffff;
 }
+html.lt-ie9 body.brand-orange .id7-app-footer a,
+html.lt-ie9 body.brand-orange .id7-app-footer a:link,
+html.lt-ie9 body.brand-orange .id7-app-footer a:visited {
+  color: #ffffff;
+}
 body.brand-orange .id7-app-footer a:not(.btn),
 body.brand-orange .id7-app-footer a:link:not(.btn),
 body.brand-orange .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
+}
+html.lt-ie9 body.brand-orange .id7-app-footer a:hover,
+html.lt-ie9 body.brand-orange .id7-app-footer a:focus,
+html.lt-ie9 body.brand-orange .id7-app-footer a:active {
+  color: #cccccc;
 }
 body.brand-orange .id7-app-footer a:hover:not(.btn),
 body.brand-orange .id7-app-footer a:focus:not(.btn),
@@ -2460,10 +2611,20 @@ body.brand-green .h5,
 body.brand-green .h6 {
   color: #a5ab2a;
 }
+html.lt-ie9 body.brand-green a,
+html.lt-ie9 body.brand-green a:link,
+html.lt-ie9 body.brand-green a:visited {
+  color: #a5ab2a;
+}
 body.brand-green a:not(.btn),
 body.brand-green a:link:not(.btn),
 body.brand-green a:visited:not(.btn) {
   color: #a5ab2a;
+}
+html.lt-ie9 body.brand-green a:hover,
+html.lt-ie9 body.brand-green a:focus,
+html.lt-ie9 body.brand-green a:active {
+  color: #565916;
 }
 body.brand-green a:hover:not(.btn),
 body.brand-green a:focus:not(.btn),
@@ -2814,9 +2975,19 @@ body.brand-green .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+html.lt-ie9 body.brand-green .id7-site-footer a,
+html.lt-ie9 body.brand-green .id7-site-footer a:link,
+html.lt-ie9 body.brand-green .id7-site-footer a:visited {
+  color: #000000;
+}
 body.brand-green .id7-site-footer a:not(.btn),
 body.brand-green .id7-site-footer a:link:not(.btn),
 body.brand-green .id7-site-footer a:visited:not(.btn) {
+  color: #000000;
+}
+html.lt-ie9 body.brand-green .id7-site-footer a:hover,
+html.lt-ie9 body.brand-green .id7-site-footer a:focus,
+html.lt-ie9 body.brand-green .id7-site-footer a:active {
   color: #000000;
 }
 body.brand-green .id7-site-footer a:hover:not(.btn),
@@ -2831,10 +3002,20 @@ body.brand-green .id7-app-footer {
   background: #a5ab2a;
   color: #ffffff;
 }
+html.lt-ie9 body.brand-green .id7-app-footer a,
+html.lt-ie9 body.brand-green .id7-app-footer a:link,
+html.lt-ie9 body.brand-green .id7-app-footer a:visited {
+  color: #ffffff;
+}
 body.brand-green .id7-app-footer a:not(.btn),
 body.brand-green .id7-app-footer a:link:not(.btn),
 body.brand-green .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
+}
+html.lt-ie9 body.brand-green .id7-app-footer a:hover,
+html.lt-ie9 body.brand-green .id7-app-footer a:focus,
+html.lt-ie9 body.brand-green .id7-app-footer a:active {
+  color: #cccccc;
 }
 body.brand-green .id7-app-footer a:hover:not(.btn),
 body.brand-green .id7-app-footer a:focus:not(.btn),
@@ -2949,10 +3130,20 @@ body.brand-red .h5,
 body.brand-red .h6 {
   color: #bd3f4b;
 }
+html.lt-ie9 body.brand-red a,
+html.lt-ie9 body.brand-red a:link,
+html.lt-ie9 body.brand-red a:visited {
+  color: #bd3f4b;
+}
 body.brand-red a:not(.btn),
 body.brand-red a:link:not(.btn),
 body.brand-red a:visited:not(.btn) {
   color: #bd3f4b;
+}
+html.lt-ie9 body.brand-red a:hover,
+html.lt-ie9 body.brand-red a:focus,
+html.lt-ie9 body.brand-red a:active {
+  color: #71262d;
 }
 body.brand-red a:hover:not(.btn),
 body.brand-red a:focus:not(.btn),
@@ -3303,9 +3494,19 @@ body.brand-red .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+html.lt-ie9 body.brand-red .id7-site-footer a,
+html.lt-ie9 body.brand-red .id7-site-footer a:link,
+html.lt-ie9 body.brand-red .id7-site-footer a:visited {
+  color: #000000;
+}
 body.brand-red .id7-site-footer a:not(.btn),
 body.brand-red .id7-site-footer a:link:not(.btn),
 body.brand-red .id7-site-footer a:visited:not(.btn) {
+  color: #000000;
+}
+html.lt-ie9 body.brand-red .id7-site-footer a:hover,
+html.lt-ie9 body.brand-red .id7-site-footer a:focus,
+html.lt-ie9 body.brand-red .id7-site-footer a:active {
   color: #000000;
 }
 body.brand-red .id7-site-footer a:hover:not(.btn),
@@ -3320,10 +3521,20 @@ body.brand-red .id7-app-footer {
   background: #bd3f4b;
   color: #ffffff;
 }
+html.lt-ie9 body.brand-red .id7-app-footer a,
+html.lt-ie9 body.brand-red .id7-app-footer a:link,
+html.lt-ie9 body.brand-red .id7-app-footer a:visited {
+  color: #ffffff;
+}
 body.brand-red .id7-app-footer a:not(.btn),
 body.brand-red .id7-app-footer a:link:not(.btn),
 body.brand-red .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
+}
+html.lt-ie9 body.brand-red .id7-app-footer a:hover,
+html.lt-ie9 body.brand-red .id7-app-footer a:focus,
+html.lt-ie9 body.brand-red .id7-app-footer a:active {
+  color: #cccccc;
 }
 body.brand-red .id7-app-footer a:hover:not(.btn),
 body.brand-red .id7-app-footer a:focus:not(.btn),
