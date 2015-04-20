@@ -258,6 +258,7 @@ th {
     border: 1px solid #ddd !important;
   }
 }
+/* We explicitly don't target .btn on these, but IE8 doesn't support :not, so we target html.lt-ie9 as well */
 /* FONT PATH
  * -------------------------- */
 @font-face {
@@ -7660,64 +7661,38 @@ body {
   background-position: left top;
 }
 @media (min-width: 768px) {
-  .id7-fixed-width-container {
+  html.flexbox .id7-fixed-width-container {
     display: -webkit-box;
-    display:    -moz-box;
-    display:     -ms-box;
-    display:      -o-box;
-    display:         box;
-    display: -ms-flexbox;
     display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
+    display: -ms-flexbox;
     display:         flex;
             flex-direction: column;
 
     -webkit-box-orient: vertical;
-        -ms-box-orient: vertical;
-         -o-box-orient: vertical;
-            box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-       -moz-flex-direction: column;
         -ms-flex-direction: column;
-         -o-flex-direction: column;
   }
-  .id7-fixed-width-container .id7-main-content-area {
+  html.flexbox .id7-fixed-width-container .id7-main-content-area {
     display: -webkit-box;
-    display:    -moz-box;
-    display:     -ms-box;
-    display:      -o-box;
-    display:         box;
-    display: -ms-flexbox;
     display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
+    display: -ms-flexbox;
     display:         flex;
             flex-direction: column;
 
-    -webkit-flex: 1 0 auto;
-       -moz-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-         -o-flex: 1 0 auto;
     -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
             flex: 1 0 auto;
     -webkit-box-orient: vertical;
-        -ms-box-orient: vertical;
-         -o-box-orient: vertical;
-            box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-       -moz-flex-direction: column;
         -ms-flex-direction: column;
-         -o-flex-direction: column;
   }
-  .id7-fixed-width-container .id7-main-content-area .id7-main-content {
-    -webkit-flex: 1 0 auto;
-       -moz-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-         -o-flex: 1 0 auto;
+  html.flexbox .id7-fixed-width-container .id7-main-content-area .id7-main-content {
     -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
             flex: 1 0 auto;
   }
 }
@@ -7914,10 +7889,20 @@ body {
     content: "";
   }
 }
+html.lt-ie9 .id7-utility-bar a,
+html.lt-ie9 .id7-utility-bar a:link,
+html.lt-ie9 .id7-utility-bar a:visited {
+  color: white;
+}
 .id7-utility-bar a:not(.btn),
 .id7-utility-bar a:link:not(.btn),
 .id7-utility-bar a:visited:not(.btn) {
   color: white;
+}
+html.lt-ie9 .id7-utility-bar a:hover,
+html.lt-ie9 .id7-utility-bar a:focus,
+html.lt-ie9 .id7-utility-bar a:active {
+  color: #ccc;
 }
 .id7-utility-bar a:hover:not(.btn),
 .id7-utility-bar a:focus:not(.btn),
@@ -7972,10 +7957,20 @@ body {
   background: #f7f7f7;
   border-top: 1px solid #ebebeb;
 }
+html.lt-ie9 .id7-utility-bar .popover.account-information .actions a,
+html.lt-ie9 .id7-utility-bar .popover.account-information .actions a:link,
+html.lt-ie9 .id7-utility-bar .popover.account-information .actions a:visited {
+  color: #333;
+}
 .id7-utility-bar .popover.account-information .actions a:not(.btn),
 .id7-utility-bar .popover.account-information .actions a:link:not(.btn),
 .id7-utility-bar .popover.account-information .actions a:visited:not(.btn) {
   color: #333;
+}
+html.lt-ie9 .id7-utility-bar .popover.account-information .actions a:hover,
+html.lt-ie9 .id7-utility-bar .popover.account-information .actions a:focus,
+html.lt-ie9 .id7-utility-bar .popover.account-information .actions a:active {
+  color: #000;
 }
 .id7-utility-bar .popover.account-information .actions a:hover:not(.btn),
 .id7-utility-bar .popover.account-information .actions a:focus:not(.btn),
@@ -8101,9 +8096,19 @@ body {
 .id7-masthead .id7-header-text .h6 {
   color: #383838;
 }
+html.lt-ie9 .id7-masthead .id7-header-text a,
+html.lt-ie9 .id7-masthead .id7-header-text a:link,
+html.lt-ie9 .id7-masthead .id7-header-text a:visited {
+  color: inherit;
+}
 .id7-masthead .id7-header-text a:not(.btn),
 .id7-masthead .id7-header-text a:link:not(.btn),
 .id7-masthead .id7-header-text a:visited:not(.btn) {
+  color: inherit;
+}
+html.lt-ie9 .id7-masthead .id7-header-text a:hover,
+html.lt-ie9 .id7-masthead .id7-header-text a:focus,
+html.lt-ie9 .id7-masthead .id7-header-text a:active {
   color: inherit;
 }
 .id7-masthead .id7-header-text a:hover:not(.btn),
@@ -8228,10 +8233,20 @@ body {
     content: "";
   }
 }
+html.lt-ie9 .id7-masthead .id7-logo-row nav a,
+html.lt-ie9 .id7-masthead .id7-logo-row nav a:link,
+html.lt-ie9 .id7-masthead .id7-logo-row nav a:visited {
+  color: #333;
+}
 .id7-masthead .id7-logo-row nav a:not(.btn),
 .id7-masthead .id7-logo-row nav a:link:not(.btn),
 .id7-masthead .id7-logo-row nav a:visited:not(.btn) {
   color: #333;
+}
+html.lt-ie9 .id7-masthead .id7-logo-row nav a:hover,
+html.lt-ie9 .id7-masthead .id7-logo-row nav a:focus,
+html.lt-ie9 .id7-masthead .id7-logo-row nav a:active {
+  color: #000;
 }
 .id7-masthead .id7-logo-row nav a:hover:not(.btn),
 .id7-masthead .id7-logo-row nav a:focus:not(.btn),
@@ -8551,10 +8566,20 @@ body {
 .carousel .h6 {
   color: inherit;
 }
+html.lt-ie9 .carousel a,
+html.lt-ie9 .carousel a:link,
+html.lt-ie9 .carousel a:visited {
+  color: white;
+}
 .carousel a:not(.btn),
 .carousel a:link:not(.btn),
 .carousel a:visited:not(.btn) {
   color: white;
+}
+html.lt-ie9 .carousel a:hover,
+html.lt-ie9 .carousel a:focus,
+html.lt-ie9 .carousel a:active {
+  color: #ccc;
 }
 .carousel a:hover:not(.btn),
 .carousel a:focus:not(.btn),
@@ -8988,12 +9013,28 @@ audio[height] {
     margin-left: 0 !important;
   }
 }
+html.lt-ie9 main a,
+html.lt-ie9 .id7-page-footer a,
+html.lt-ie9 main a:link,
+html.lt-ie9 .id7-page-footer a:link,
+html.lt-ie9 main a:visited,
+html.lt-ie9 .id7-page-footer a:visited {
+  text-decoration: underline;
+}
 main a:not(.btn),
 .id7-page-footer a:not(.btn),
 main a:link:not(.btn),
 .id7-page-footer a:link:not(.btn),
 main a:visited:not(.btn),
 .id7-page-footer a:visited:not(.btn) {
+  text-decoration: underline;
+}
+html.lt-ie9 main a:hover,
+html.lt-ie9 .id7-page-footer a:hover,
+html.lt-ie9 main a:focus,
+html.lt-ie9 .id7-page-footer a:focus,
+html.lt-ie9 main a:active,
+html.lt-ie9 .id7-page-footer a:active {
   text-decoration: underline;
 }
 main a:hover:not(.btn),
@@ -9638,54 +9679,27 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
 }
 .equal-height-xs {
   display: -webkit-box;
-  display:    -moz-box;
-  display:     -ms-box;
-  display:      -o-box;
-  display:         box;
-  display: -ms-flexbox;
   display: -webkit-flex;
-  display:    -moz-flex;
-  display:     -ms-flex;
-  display:      -o-flex;
+  display: -ms-flexbox;
   display:         flex;
-
-  -webkit-flex: 1 1 auto;
-     -moz-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-       -o-flex: 1 1 auto;
-  -webkit-box-flex: 1;
-          flex: 1 1 auto;
 }
 .equal-height-xs > [class*='col-'] {
   display: -webkit-box;
-  display:    -moz-box;
-  display:     -ms-box;
-  display:      -o-box;
-  display:         box;
-  display: -ms-flexbox;
   display: -webkit-flex;
-  display:    -moz-flex;
-  display:     -ms-flex;
-  display:      -o-flex;
+  display: -ms-flexbox;
   display:         flex;
           flex-direction: column;
 
   -webkit-box-orient: vertical;
-      -ms-box-orient: vertical;
-       -o-box-orient: vertical;
-          box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-     -moz-flex-direction: column;
       -ms-flex-direction: column;
-       -o-flex-direction: column;
 }
 .equal-height-xs > [class*='col-'] > * {
-  -webkit-flex: 1 1 auto;
-     -moz-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-       -o-flex: 1 1 auto;
   -webkit-box-flex: 1;
-          flex: 1 1 auto;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
 }
 .equal-height-xs .boxstyle_ {
   margin: 0;
@@ -9693,108 +9707,54 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
 @media (min-width: 768px) {
   .equal-height {
     display: -webkit-box;
-    display:    -moz-box;
-    display:     -ms-box;
-    display:      -o-box;
-    display:         box;
-    display: -ms-flexbox;
     display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
+    display: -ms-flexbox;
     display:         flex;
-
-    -webkit-flex: 1 1 auto;
-       -moz-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-         -o-flex: 1 1 auto;
-    -webkit-box-flex: 1;
-            flex: 1 1 auto;
   }
   .equal-height > [class*='col-'] {
     display: -webkit-box;
-    display:    -moz-box;
-    display:     -ms-box;
-    display:      -o-box;
-    display:         box;
-    display: -ms-flexbox;
     display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
+    display: -ms-flexbox;
     display:         flex;
             flex-direction: column;
 
     -webkit-box-orient: vertical;
-        -ms-box-orient: vertical;
-         -o-box-orient: vertical;
-            box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-       -moz-flex-direction: column;
         -ms-flex-direction: column;
-         -o-flex-direction: column;
   }
   .equal-height > [class*='col-'] > * {
-    -webkit-flex: 1 1 auto;
-       -moz-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-         -o-flex: 1 1 auto;
     -webkit-box-flex: 1;
-            flex: 1 1 auto;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
   }
   .equal-height .boxstyle_ {
     margin: 0;
   }
   .equal-height-sm {
     display: -webkit-box;
-    display:    -moz-box;
-    display:     -ms-box;
-    display:      -o-box;
-    display:         box;
-    display: -ms-flexbox;
     display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
+    display: -ms-flexbox;
     display:         flex;
-
-    -webkit-flex: 1 1 auto;
-       -moz-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-         -o-flex: 1 1 auto;
-    -webkit-box-flex: 1;
-            flex: 1 1 auto;
   }
   .equal-height-sm > [class*='col-'] {
     display: -webkit-box;
-    display:    -moz-box;
-    display:     -ms-box;
-    display:      -o-box;
-    display:         box;
-    display: -ms-flexbox;
     display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
+    display: -ms-flexbox;
     display:         flex;
             flex-direction: column;
 
     -webkit-box-orient: vertical;
-        -ms-box-orient: vertical;
-         -o-box-orient: vertical;
-            box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-       -moz-flex-direction: column;
         -ms-flex-direction: column;
-         -o-flex-direction: column;
   }
   .equal-height-sm > [class*='col-'] > * {
-    -webkit-flex: 1 1 auto;
-       -moz-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-         -o-flex: 1 1 auto;
     -webkit-box-flex: 1;
-            flex: 1 1 auto;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
   }
   .equal-height-sm .boxstyle_ {
     margin: 0;
@@ -9803,54 +9763,27 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
 @media (min-width: 992px) {
   .equal-height-md {
     display: -webkit-box;
-    display:    -moz-box;
-    display:     -ms-box;
-    display:      -o-box;
-    display:         box;
-    display: -ms-flexbox;
     display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
+    display: -ms-flexbox;
     display:         flex;
-
-    -webkit-flex: 1 1 auto;
-       -moz-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-         -o-flex: 1 1 auto;
-    -webkit-box-flex: 1;
-            flex: 1 1 auto;
   }
   .equal-height-md > [class*='col-'] {
     display: -webkit-box;
-    display:    -moz-box;
-    display:     -ms-box;
-    display:      -o-box;
-    display:         box;
-    display: -ms-flexbox;
     display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
+    display: -ms-flexbox;
     display:         flex;
             flex-direction: column;
 
     -webkit-box-orient: vertical;
-        -ms-box-orient: vertical;
-         -o-box-orient: vertical;
-            box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-       -moz-flex-direction: column;
         -ms-flex-direction: column;
-         -o-flex-direction: column;
   }
   .equal-height-md > [class*='col-'] > * {
-    -webkit-flex: 1 1 auto;
-       -moz-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-         -o-flex: 1 1 auto;
     -webkit-box-flex: 1;
-            flex: 1 1 auto;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
   }
   .equal-height-md .boxstyle_ {
     margin: 0;
@@ -9859,54 +9792,27 @@ footer .id7-app-footer .id7-footer-utility ul > li:not(:first-child)::before {
 @media (min-width: 1200px) {
   .equal-height-lg {
     display: -webkit-box;
-    display:    -moz-box;
-    display:     -ms-box;
-    display:      -o-box;
-    display:         box;
-    display: -ms-flexbox;
     display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
+    display: -ms-flexbox;
     display:         flex;
-
-    -webkit-flex: 1 1 auto;
-       -moz-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-         -o-flex: 1 1 auto;
-    -webkit-box-flex: 1;
-            flex: 1 1 auto;
   }
   .equal-height-lg > [class*='col-'] {
     display: -webkit-box;
-    display:    -moz-box;
-    display:     -ms-box;
-    display:      -o-box;
-    display:         box;
-    display: -ms-flexbox;
     display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
+    display: -ms-flexbox;
     display:         flex;
             flex-direction: column;
 
     -webkit-box-orient: vertical;
-        -ms-box-orient: vertical;
-         -o-box-orient: vertical;
-            box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-       -moz-flex-direction: column;
         -ms-flex-direction: column;
-         -o-flex-direction: column;
   }
   .equal-height-lg > [class*='col-'] > * {
-    -webkit-flex: 1 1 auto;
-       -moz-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-         -o-flex: 1 1 auto;
     -webkit-box-flex: 1;
-            flex: 1 1 auto;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
   }
   .equal-height-lg .boxstyle_ {
     margin: 0;

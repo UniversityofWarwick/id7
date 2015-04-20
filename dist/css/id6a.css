@@ -1,7 +1,16 @@
+/* We explicitly don't target .btn on these, but IE8 doesn't support :not, so we target html.lt-ie9 as well */
 #masthead,
 #masthead.transparent {
   color: black;
   background-color: white;
+}
+html.lt-ie9 #masthead a,
+html.lt-ie9 #masthead.transparent a,
+html.lt-ie9 #masthead a:link,
+html.lt-ie9 #masthead.transparent a:link,
+html.lt-ie9 #masthead a:visited,
+html.lt-ie9 #masthead.transparent a:visited {
+  color: inherit;
 }
 #masthead a:not(.btn),
 #masthead.transparent a:not(.btn),
@@ -9,6 +18,14 @@
 #masthead.transparent a:link:not(.btn),
 #masthead a:visited:not(.btn),
 #masthead.transparent a:visited:not(.btn) {
+  color: inherit;
+}
+html.lt-ie9 #masthead a:hover,
+html.lt-ie9 #masthead.transparent a:hover,
+html.lt-ie9 #masthead a:focus,
+html.lt-ie9 #masthead.transparent a:focus,
+html.lt-ie9 #masthead a:active,
+html.lt-ie9 #masthead.transparent a:active {
   color: inherit;
 }
 #masthead a:hover:not(.btn),
@@ -30,10 +47,20 @@
 #search-container ul.index-section li.active {
   background-color: #7b428e;
 }
+html.lt-ie9 #search-container ul.index-section li.active a,
+html.lt-ie9 #search-container ul.index-section li.active a:link,
+html.lt-ie9 #search-container ul.index-section li.active a:visited {
+  color: white;
+}
 #search-container ul.index-section li.active a:not(.btn),
 #search-container ul.index-section li.active a:link:not(.btn),
 #search-container ul.index-section li.active a:visited:not(.btn) {
   color: white;
+}
+html.lt-ie9 #search-container ul.index-section li.active a:hover,
+html.lt-ie9 #search-container ul.index-section li.active a:focus,
+html.lt-ie9 #search-container ul.index-section li.active a:active {
+  color: #ccc;
 }
 #search-container ul.index-section li.active a:hover:not(.btn),
 #search-container ul.index-section li.active a:focus:not(.btn),

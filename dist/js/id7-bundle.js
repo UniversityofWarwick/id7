@@ -12099,7 +12099,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
         // Handle in-page bookmarks.
         if (location.hash) this.hashChanged();
-        window.addEventListener('hashchange', $.proxy(this.hashChanged, this));
+        $(window).on('hashchange', $.proxy(this.hashChanged, this));
       }
     });
 
