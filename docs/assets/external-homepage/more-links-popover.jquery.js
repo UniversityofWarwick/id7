@@ -86,6 +86,8 @@
     };
 
     $(function() {
-        $('[data-toggle="id7:megamenu-popover"]').moreLinksPopover();
+        if (Modernizr.flexbox) {
+            $('[data-toggle="id7:megamenu-popover"]').moreLinksPopover();
+        }
     });
 })(jQuery);

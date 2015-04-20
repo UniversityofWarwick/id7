@@ -211,10 +211,11 @@
 /* We explicitly don't target .btn on these, but IE8 doesn't support :not, so we target html.lt-ie9 as well */
 body {
   position: relative;
+  margin-top: 104px;
 }
-@media (max-width: 767px) {
-  body {
-    margin-top: 104px;
+@media (min-width: 768px) {
+  html.flexbox body {
+    margin-top: 0;
   }
 }
 /***** START HOMEPAGE MASTHEAD *****/
@@ -397,11 +398,19 @@ body {
 }
 .id7-masthead .id7-logo-row nav ul > li:not(:first-child)::before {
   content: '';
-  margin: 0 0.3em;
+  margin: 0 0.2em;
 }
 @media (min-width: 992px) {
   .id7-masthead .id7-logo-row nav ul > li:not(:first-child)::before {
     margin: 0 0.6em;
+  }
+}
+.id7-masthead .id7-logo-row nav .more-links-trigger {
+  display: none;
+}
+@media (min-width: 768px) {
+  html.flexbox .id7-masthead .id7-logo-row nav .more-links-trigger {
+    display: inline-block;
   }
 }
 /***** END HOMEPAGE MASTHEAD *****/
@@ -412,17 +421,20 @@ body {
 }
 /***** START CAROUSEL NAV *****/
 .carousel-nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  html.flexbox .carousel-nav {
+    display: block;
+  }
+}
+.carousel-nav {
   position: fixed;
   right: 0;
   top: 124px;
   z-index: 10;
   text-align: right;
   color: white;
-}
-@media (max-width: 767px) {
-  .carousel-nav {
-    display: none !important;
-  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .carousel-nav .title {
@@ -608,127 +620,6 @@ html.lt-ie9 .jumbotron-carousel .jumbotron a:active {
   margin: 20px 20px 20px 0;
 }
 @media (min-width: 768px) {
-  .jumbotron-carousel .jumbotron {
-    height: 600px;
-  }
-  .jumbotron-carousel .jumbotron .container-fluid {
-    width: 100%;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container .row > .flex-vertical,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row > .flex-vertical,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout > .flex-vertical,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout > .flex-vertical {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 {
-    padding: 0;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
-    position: relative;
-    z-index: 2;
-    padding: 0 20px;
-    margin-top: 124px;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content .caption-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content .caption-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content .caption-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content .caption-content {
-    margin-right: 200px;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-image,
-  .jumbotron-carousel .jumbotron .jumbotron-image {
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-            background-size: cover;
-    position: relative;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-image.overlay::before,
-  .jumbotron-carousel .jumbotron .jumbotron-image.overlay::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(40, 40, 40, 0.5);
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-image > *,
-  .jumbotron-carousel .jumbotron .jumbotron-image > * {
-    position: relative;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-image > .container {
-    margin-top: 124px;
-    margin-bottom: 20px;
-  }
-  .jumbotron-carousel .jumbotron.jumbotron-panel > .container-fluid > .row > * {
-    padding-top: 124px;
-    padding-bottom: 20px;
-  }
-  .jumbotron-carousel .jumbotron .caption .caption-content {
-    width: 66%;
-    padding: 20px;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
-    width: 375px;
-  }
-}
-@media (min-width: 768px) and (min-width: 992px) {
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
-    width: 485px;
-  }
-}
-@media (min-width: 768px) and (min-width: 1200px) {
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
-  .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
-    width: 585px;
-  }
-}
-@media (min-width: 768px) and (min-width: 992px) {
-  .jumbotron-carousel .jumbotron .caption .center {
-    padding: 0 250px;
-  }
-}
-@media (min-width: 768px) and (min-width: 992px) {
-  .jumbotron-carousel .jumbotron .caption.center .caption-content {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
   html.flexbox .jumbotron-carousel .jumbotron {
     height: 100vh;
     display: -webkit-box;
@@ -740,6 +631,9 @@ html.lt-ie9 .jumbotron-carousel .jumbotron a:active {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid {
+    width: 100%;
   }
   html.flexbox .jumbotron-carousel .jumbotron .container,
   html.flexbox .jumbotron-carousel .jumbotron .container-fluid {
@@ -792,6 +686,33 @@ html.lt-ie9 .jumbotron-carousel .jumbotron a:active {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-image,
+  html.flexbox .jumbotron-carousel .jumbotron .jumbotron-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+            background-size: cover;
+    position: relative;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-image.overlay::before,
+  html.flexbox .jumbotron-carousel .jumbotron .jumbotron-image.overlay::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 40, 40, 0.5);
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-image > *,
+  html.flexbox .jumbotron-carousel .jumbotron .jumbotron-image > * {
+    position: relative;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-image > .container {
+    margin-top: 124px;
+    margin-bottom: 20px;
+  }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .container-fluid,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .container-fluid {
     -webkit-box-orient: vertical;
@@ -836,6 +757,33 @@ html.lt-ie9 .jumbotron-carousel .jumbotron a:active {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 {
+    padding: 0;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    margin-top: 124px;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content .caption-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content .caption-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content .caption-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content .caption-content {
+    margin-right: 200px;
   }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 {
@@ -850,6 +798,10 @@ html.lt-ie9 .jumbotron-carousel .jumbotron a:active {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel > .container-fluid > .row > * {
+    padding-top: 124px;
+    padding-bottom: 20px;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption {
     -webkit-box-flex: 1;
@@ -909,6 +861,83 @@ html.lt-ie9 .jumbotron-carousel .jumbotron a:active {
     -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+    width: 66%;
+    padding: 20px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
+    width: 375px;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
+    width: 485px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-1-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2 > .column-2-content,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
+    width: 585px;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
+  html.flexbox .jumbotron-carousel .jumbotron .caption.center {
+    padding: 0 250px;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
+  html.flexbox .jumbotron-carousel .jumbotron .caption.center .caption-content {
+    width: 100%;
+  }
+}
+@media (min-width: 0px) {
+  html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: static;
+    min-height: 0px;
+    float: none;
+    width: auto;
+  }
+}
+@media (min-width: 0px) and (min-width: 768px) {
+  html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid {
+    width: 750px;
+  }
+}
+@media (min-width: 0px) and (min-width: 992px) {
+  html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid {
+    width: 970px;
+  }
+}
+@media (min-width: 0px) and (min-width: 1200px) {
+  html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid {
+    width: 1170px;
   }
 }
 /***** END JUMBOTRON CAROUSEL *****/
@@ -918,6 +947,11 @@ html.lt-ie9 .jumbotron-carousel .jumbotron a:active {
   max-width: 100%;
   width: 970px;
   min-width: 750px;
+}
+@media (max-width: 767px) {
+  .popover.megamenu-links {
+    display: none !important;
+  }
 }
 @media (min-width: 992px) {
   .popover.megamenu-links {
@@ -967,7 +1001,7 @@ html.lt-ie9 #more-links a:active {
   color: #e0e4f8;
 }
 @media (min-width: 768px) {
-  #more-links {
+  html.flexbox #more-links {
     display: none;
   }
 }
@@ -997,16 +1031,30 @@ html.lt-ie9 #more-links .megamenu-links-address .telephone a:active {
 #more-links .megamenu-links-address .utility {
   margin-top: 20px;
 }
+.more-links-sitemap {
+  margin-left: -20px;
+  margin-right: -20px;
+}
 .more-links-sitemap,
 .more-links-sitemap ul {
   padding-left: 0;
   list-style: none;
 }
 .more-links-sitemap > li {
+  position: relative;
+  min-height: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
   font-weight: bold;
   font-size: 16px;
   padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .more-links-sitemap > li {
+    float: left;
+    width: 25%;
+  }
 }
 .more-links-sitemap > li > i {
   font-size: 2em;
@@ -1016,14 +1064,29 @@ html.lt-ie9 #more-links .megamenu-links-address .telephone a:active {
   text-align: left;
   font-size: 14px;
 }
-#more-links .more-links-sitemap > li:first-child {
-  padding-top: 0;
+@media (min-width: 40px) {
+  .more-links-sitemap > li {
+    padding: 20px;
+  }
 }
-#more-links .more-links-sitemap > li:last-child {
-  padding-bottom: 0;
+#more-links .more-links-sitemap:before,
+#more-links .more-links-sitemap:after {
+  content: " ";
+  display: table;
 }
-#more-links .more-links-sitemap > li + li {
-  border-top: 1px solid #777777;
+#more-links .more-links-sitemap:after {
+  clear: both;
+}
+@media (max-width: 767px) {
+  #more-links .more-links-sitemap > li:first-child {
+    padding-top: 0;
+  }
+  #more-links .more-links-sitemap > li:last-child {
+    padding-bottom: 0;
+  }
+  #more-links .more-links-sitemap > li + li {
+    border-top: 1px solid #777777;
+  }
 }
 #more-links .more-links-sitemap > li > i {
   color: #eeeeee;
@@ -1036,9 +1099,10 @@ html.lt-ie9 #more-links .megamenu-links-address .telephone a:active {
 #more-links .more-links-sitemap > li ul {
   font-size: 16px;
 }
+#more-links .more-links-sitemap > li:nth-child(5) {
+  clear: left;
+}
 .megamenu-links .more-links-sitemap {
-  margin-left: -20px;
-  margin-right: -20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1074,26 +1138,23 @@ html.lt-ie9 .megamenu-links .more-links-sitemap a:active {
   text-decoration: underline;
 }
 .megamenu-links .more-links-sitemap > li {
-  width: 25%;
-  float: left;
-  position: relative;
-  min-height: 1px;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-bottom: 20px;
 }
 .megamenu-links .more-links-sitemap > li + li {
   border-left: 1px solid #eeeeee;
+}
+.megamenu-links .more-links-sitemap > li + li:nth-child(5) {
+  border-left: 0;
 }
 .megamenu-links .more-links-sitemap > li > i {
   color: #777777;
   display: block;
 }
 .megamenu-links .more-links-sitemap > li {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .megamenu-links-address {
   margin-top: 20px;
