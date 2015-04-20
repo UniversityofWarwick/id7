@@ -1,19 +1,17 @@
 <h2 id="utility-bar">Utility bar</h2>
 
-<p class="lead">The utility bar persists across all Warwick ID7 pages, affixing to the top of the page and providing a way to quickly access application links and manage accounts.</p>
+<p class="lead">The utility bar provides consistently positioned and styled access to application links and manage accounts.</p>
 
 {% highlight html %}
-<div data-spy="affix" class="affix id7-utility-bar">
-  <nav>
-    <ul>
-      <li><a href="#">App link 1</a></li>
-      <li><a href="#">App link 2</a></li>
-      <li>
-        <a href="https://websignon.warwick.ac.uk/origin/account" data-toggle="id7:account-popover">Mat Mannion</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+<nav class="id7-utility-bar">
+  <ul>
+    <li><a href="#">App link 1</a></li>
+    <li><a href="#">App link 2</a></li>
+    <li>
+      <a href="https://websignon.warwick.ac.uk/origin/account" data-toggle="id7:account-popover">Mat Mannion</a>
+    </li>
+  </ul>
+</nav>
 {% endhighlight %}
 
-<p>The last link should <em>always</em> be either a "Sign in" link, or an initiator for the account popover with the currently signed in user's full name.</p>
+<p>The last link should <em>always</em> be either a "Sign in" link, or an initiator for the account popover with the full name of the currently signed-in user.</p>

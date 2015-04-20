@@ -1,6 +1,11 @@
 <nav class="navbar navbar-secondary" role="navigation">
   <ul class="nav navbar-nav">
-    <li{% if page.slug == 'examples/bacon-ipsum' %} class="active nav-breadcrumb"{% endif %}><a href="{{ site.prefix }}examples/bacon-ipsum">Sample page content</a></li>
+    <li class="nav-breadcrumb first"><a href="{{ site.prefix }}examples">Examples</a></li>
+    <li class="nav-breadcrumb next-tertiary second last active"><a href="{{ site.prefix }}examples/bacon-ipsum">Sample page content</a></li>
+  </ul>
+</nav>
+<nav class="navbar navbar-tertiary" role="navigation">
+  <ul class="nav navbar-nav">
     <li><a href="{{ site.prefix }}examples/bacon-ipsum/child">Child link 1</a></li>
     <li><a href="{{ site.prefix }}examples/bacon-ipsum/child">Child link 2</a></li>
     <li><a href="{{ site.prefix }}examples/bacon-ipsum/child">Child link 3</a></li>

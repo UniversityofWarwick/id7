@@ -1,7 +1,12 @@
 <nav class="navbar navbar-secondary" role="navigation">
   <ul class="nav navbar-nav">
-    <li{% if page.slug == 'components/main-content' %} class="active"{% endif %}><a href="{{ site.prefix }}components/main-content">Main content components</a></li>
-    <li{% if page.slug == 'components/colour-palette' %} class="active"{% endif %}><a href="{{ site.prefix }}components/colour-palette">Colour palette</a></li>
-    <li{% if page.slug == 'components/image-sizes' %} class="active"{% endif %}><a href="{{ site.prefix }}components/image-sizes">Image sizes</a></li>
+    <li class="first active nav-breadcrumb next-tertiary first last"><a href="{{ site.prefix }}components">Components</a></li>
+  </ul>
+</nav>
+<nav class="navbar navbar-tertiary" role="navigation">
+  <ul class="nav navbar-nav">
+    <li class="{% if page.slug == 'components/main-content' %} active{% endif %}"><a href="{{ site.prefix }}components/main-content">Main content components</a></li>
+    <li class="{% if page.slug == 'components/colour-palette' %} active{% endif %}"><a href="{{ site.prefix }}components/colour-palette">Colour palette</a></li>
+    <li class="{% if page.slug == 'components/image-sizes' %} active{% endif %}"><a href="{{ site.prefix }}components/image-sizes">Image sizes</a></li>
   </ul>
 </nav>
