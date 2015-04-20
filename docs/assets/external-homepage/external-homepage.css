@@ -954,9 +954,9 @@ html.lt-ie9 .megamenu-links .more-links-sitemap a:active {
 }
 .megamenu-links .more-links-sitemap > li {
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 .megamenu-links .address {
   margin-top: 20px;
