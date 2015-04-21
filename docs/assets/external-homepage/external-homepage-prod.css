@@ -253,10 +253,14 @@ body {
   top: 0;
   left: 0;
 }
+.id7-page-header .id7-header-text {
+  display: none;
+}
 .id7-masthead {
   background: none !important;
 }
 .id7-utility-masthead {
+  background-color: transparent;
   background-image: url("/dist/images/masthead-logo-bleed-wide-xs.png");
   background-position: 0 24px;
   background-repeat: no-repeat;
@@ -517,6 +521,9 @@ html.no-not-selector .carousel-nav a:active {
 }
 /***** END CAROUSEL NAV *****/
 /***** START JUMBOTRON CAROUSEL *****/
+.jumbotron-carousel .jumbotron .col-xs-1, .jumbotron-carousel .jumbotron .col-sm-1, .jumbotron-carousel .jumbotron .col-md-1, .jumbotron-carousel .jumbotron .col-lg-1, .jumbotron-carousel .jumbotron .col-xs-2, .jumbotron-carousel .jumbotron .col-sm-2, .jumbotron-carousel .jumbotron .col-md-2, .jumbotron-carousel .jumbotron .col-lg-2, .jumbotron-carousel .jumbotron .col-xs-3, .jumbotron-carousel .jumbotron .col-sm-3, .jumbotron-carousel .jumbotron .col-md-3, .jumbotron-carousel .jumbotron .col-lg-3, .jumbotron-carousel .jumbotron .col-xs-4, .jumbotron-carousel .jumbotron .col-sm-4, .jumbotron-carousel .jumbotron .col-md-4, .jumbotron-carousel .jumbotron .col-lg-4, .jumbotron-carousel .jumbotron .col-xs-5, .jumbotron-carousel .jumbotron .col-sm-5, .jumbotron-carousel .jumbotron .col-md-5, .jumbotron-carousel .jumbotron .col-lg-5, .jumbotron-carousel .jumbotron .col-xs-6, .jumbotron-carousel .jumbotron .col-sm-6, .jumbotron-carousel .jumbotron .col-md-6, .jumbotron-carousel .jumbotron .col-lg-6, .jumbotron-carousel .jumbotron .col-xs-7, .jumbotron-carousel .jumbotron .col-sm-7, .jumbotron-carousel .jumbotron .col-md-7, .jumbotron-carousel .jumbotron .col-lg-7, .jumbotron-carousel .jumbotron .col-xs-8, .jumbotron-carousel .jumbotron .col-sm-8, .jumbotron-carousel .jumbotron .col-md-8, .jumbotron-carousel .jumbotron .col-lg-8, .jumbotron-carousel .jumbotron .col-xs-9, .jumbotron-carousel .jumbotron .col-sm-9, .jumbotron-carousel .jumbotron .col-md-9, .jumbotron-carousel .jumbotron .col-lg-9, .jumbotron-carousel .jumbotron .col-xs-10, .jumbotron-carousel .jumbotron .col-sm-10, .jumbotron-carousel .jumbotron .col-md-10, .jumbotron-carousel .jumbotron .col-lg-10, .jumbotron-carousel .jumbotron .col-xs-11, .jumbotron-carousel .jumbotron .col-sm-11, .jumbotron-carousel .jumbotron .col-md-11, .jumbotron-carousel .jumbotron .col-lg-11, .jumbotron-carousel .jumbotron .col-xs-12, .jumbotron-carousel .jumbotron .col-sm-12, .jumbotron-carousel .jumbotron .col-md-12, .jumbotron-carousel .jumbotron .col-lg-12:empty {
+  min-height: 0;
+}
 html.no-not-selector .jumbotron-carousel a,
 html.no-not-selector .jumbotron-carousel a:link,
 html.no-not-selector .jumbotron-carousel a:visited {
@@ -566,8 +573,19 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
 .jumbotron-carousel .jumbotron a:hover .new-window-link {
   color: #e0e4f8;
 }
-.jumbotron-carousel .jumbotron .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12:empty {
-  min-height: 0;
+.jumbotron-carousel .jumbotron h1,
+.jumbotron-carousel .jumbotron h2,
+.jumbotron-carousel .jumbotron h3,
+.jumbotron-carousel .jumbotron h4,
+.jumbotron-carousel .jumbotron h5,
+.jumbotron-carousel .jumbotron h6,
+.jumbotron-carousel .jumbotron .h1,
+.jumbotron-carousel .jumbotron .h2,
+.jumbotron-carousel .jumbotron .h3,
+.jumbotron-carousel .jumbotron .h4,
+.jumbotron-carousel .jumbotron .h5,
+.jumbotron-carousel .jumbotron .h6 {
+  color: inherit;
 }
 .jumbotron-carousel .jumbotron h2 {
   font-size: 22px;
@@ -637,9 +655,19 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
   }
   html.flexbox .jumbotron-carousel .jumbotron .container-fluid {
     width: 100%;
+    height: 100%;
   }
-  html.flexbox .jumbotron-carousel .jumbotron .container,
-  html.flexbox .jumbotron-carousel .jumbotron .container-fluid {
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid > .row {
+    height: 100%;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid > .row > * {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .container {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
@@ -655,9 +683,7 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
             flex-direction: column;
   }
   html.flexbox .jumbotron-carousel .jumbotron .container .row,
-  html.flexbox .jumbotron-carousel .jumbotron .container-fluid .row,
-  html.flexbox .jumbotron-carousel .jumbotron .container .layout,
-  html.flexbox .jumbotron-carousel .jumbotron .container-fluid .layout {
+  html.flexbox .jumbotron-carousel .jumbotron .container .layout {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
@@ -672,9 +698,7 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
             align-items: stretch;
   }
   html.flexbox .jumbotron-carousel .jumbotron .container .row > *,
-  html.flexbox .jumbotron-carousel .jumbotron .container-fluid .row > *,
-  html.flexbox .jumbotron-carousel .jumbotron .container .layout > *,
-  html.flexbox .jumbotron-carousel .jumbotron .container-fluid .layout > * {
+  html.flexbox .jumbotron-carousel .jumbotron .container .layout > * {
     -webkit-box-flex: 1;
     -webkit-flex: auto;
         -ms-flex: auto;
@@ -763,6 +787,19 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
     padding-top: 0;
     padding-bottom: 0;
   }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .row > *.flex-vertical > .row,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row > *.flex-vertical > .row,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout > *.flex-vertical > .row,
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout > *.flex-vertical > .row {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2,
@@ -808,9 +845,9 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption {
     -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -914,31 +951,31 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
     width: 100%;
   }
 }
-@media (min-width: 0px) {
+@media (min-width: 768px) {
+  html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-1, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-1, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-1, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-1, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-2, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-2, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-2, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-2, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-3, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-3, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-3, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-3, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-4, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-4, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-4, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-4, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-5, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-5, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-5, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-5, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-6, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-6, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-6, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-6, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-7, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-7, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-7, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-7, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-8, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-8, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-8, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-8, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-9, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-9, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-9, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-9, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-10, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-10, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-10, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-10, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-11, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-11, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-11, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-11, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-12, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-12, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-12, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-12 {
+    position: static;
+    min-height: 0px;
+    float: none;
+    width: auto;
+  }
   html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid {
     margin-right: auto;
     margin-left: auto;
     padding-left: 20px;
     padding-right: 20px;
   }
-  html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-    position: static;
-    min-height: 0px;
-    float: none;
-    width: auto;
-  }
 }
-@media (min-width: 0px) and (min-width: 768px) {
+@media (min-width: 768px) and (min-width: 768px) {
   html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid {
     width: 750px;
   }
 }
-@media (min-width: 0px) and (min-width: 992px) {
+@media (min-width: 768px) and (min-width: 992px) {
   html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid {
     width: 970px;
   }
 }
-@media (min-width: 0px) and (min-width: 1200px) {
+@media (min-width: 768px) and (min-width: 1200px) {
   html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid {
     width: 1170px;
   }

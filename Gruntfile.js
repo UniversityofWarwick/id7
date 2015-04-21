@@ -97,6 +97,14 @@ module.exports = function (grunt) {
           'js/style-update-feature-detect.modernizr.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-standalone.js'
+      },
+      homepage: {
+        src: [
+          'docs/assets/external-homepage/jquery.panelSnap.js',
+          'docs/assets/external-homepage/homepage-carousel.jquery.js',
+          'docs/assets/external-homepage/more-links-popover.jquery.js'
+        ],
+        dest: 'dist/external-homepage/js/hp.js'
       }
     },
 
@@ -111,6 +119,10 @@ module.exports = function (grunt) {
       standalone: {
         src: '<%= concat.standalone.dest %>',
         dest: 'dist/js/<%= pkg.name %>-standalone.min.js'
+      },
+      homepage: {
+        src: '<%= concat.homepage.dest %>',
+        dest: 'dist/external-homepage/js/hp.min.js'
       }
     },
 
@@ -170,7 +182,6 @@ module.exports = function (grunt) {
           'docs/assets/css/subsite.css': 'docs/assets/css/subsite.less',
           'docs/assets/site/docs-site.css': 'docs/assets/site/docs-site.less',
           'docs/assets/site/site.css': 'docs/assets/site/site.less',
-          'docs/assets/external-homepage/external-homepage.css': 'docs/assets/external-homepage/external-homepage.less',
           'docs/assets/external-homepage/external-homepage-prod.css': 'docs/assets/external-homepage/external-homepage-prod.less'
         }
       }
@@ -207,7 +218,7 @@ module.exports = function (grunt) {
         },
         src: 'dist/css/id6a.css'
       },
-      docsHomepage: {
+      homepage: {
         options: {
           expand: true,
           flatten: true
@@ -245,6 +256,10 @@ module.exports = function (grunt) {
       minifyID6a: {
         src: 'dist/css/id6a.css',
         dest: 'dist/css/id6a.min.css'
+      },
+      minifyHomepage: {
+        src: 'dist/external-homepage/css/external-homepage-prod.css',
+        dest: 'dist/external-homepage/css/hp.min.css'
       }
     },
 
@@ -257,6 +272,33 @@ module.exports = function (grunt) {
         cwd: 'dist/css/',
         src: ['*.css', '!*.min.css'],
         dest: 'dist/css/'
+      },
+      distHomepage: {
+        expand: true,
+        cwd: 'docs/assets/external-homepage/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'dist/external-homepage/css/'
+      }
+    },
+
+    replace: {
+      homepage: {
+        options: {
+          patterns: [
+            {
+              match: /\/dist/g,
+              replacement: '/static_war/render/id7'
+            }
+          ]
+        },
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['dist/external-homepage/css/*.css'],
+            dest: 'dist/external-homepage/css/'
+          }
+        ]
       }
     },
 
@@ -415,7 +457,11 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'copy:vendorjs', 'test']);
 
   // Docs task.
-  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs', 'autoprefixer:docsHomepage', 'jekyll:docs']);
+  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs', 'autoprefixer:homepage', 'jekyll:docs']);
+
+  grunt.registerTask('dist-homepage-css', ['less:compileDocs', 'autoprefixer:homepage', 'csscomb:distHomepage', 'replace:homepage', 'cssmin:minifyHomepage']);
+  grunt.registerTask('dist-homepage-js', ['concat:homepage', 'uglify:homepage']);
+  grunt.registerTask('homepage-assets', ['dist', 'clean:docs', 'copy:docs', 'dist-homepage-css', 'dist-homepage-js']);
 
   // Run Jekyll and watch for asset changes.
   grunt.registerTask('serve', ['concurrent:serve'])

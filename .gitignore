@@ -72,5 +72,6 @@ node_modules
 # Generated resources
 /docs/dist
 /docs/_includes/README.html
+/dist/external-homepage
 
 # Don't ignore /dist because it needs to be in Git in order to be Bowered

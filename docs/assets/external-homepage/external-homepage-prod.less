@@ -56,6 +56,8 @@ body {
   z-index: 30;
   top: 0;
   left: 0;
+
+  .id7-header-text { display: none; }
 }
 
 // Change the masthead imagery
@@ -65,6 +67,7 @@ body {
 }
 
 .id7-utility-masthead {
+  background-color: transparent; // Override default style
   background-image: url("/dist/images/masthead-logo-bleed-wide-xs.png");
   background-position: 0 @id7-masthead-bleed-height;
   background-repeat: no-repeat;
@@ -288,13 +291,13 @@ only screen and (                min-resolution: 2dppx) {
 /***** START JUMBOTRON CAROUSEL *****/
 
 // Remove column min height when empty
-.remove-column-min-height() {
+.remove-column-min-height(@prefix) {
   .col(@index) { // initial
-    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+    @item: ~"@{prefix} .col-xs-@{index}, @{prefix} .col-sm-@{index}, @{prefix} .col-md-@{index}, @{prefix} .col-lg-@{index}";
     .col((@index + 1), @item);
   }
   .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
-    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+    @item: ~"@{prefix} .col-xs-@{index}, @{prefix} .col-sm-@{index}, @{prefix} .col-md-@{index}, @{prefix} .col-lg-@{index}";
     .col((@index + 1), ~"@{list}, @{item}");
   }
   .col(@index, @list) when (@index > @grid-columns) { // terminal
@@ -307,6 +310,9 @@ only screen and (                min-resolution: 2dppx) {
   .col(1); // kickstart it
 }
 
+// Remove the min-height from empty columns
+.remove-column-min-height(".jumbotron-carousel .jumbotron");
+
 .jumbotron-carousel {
   .link-decoration(none, @hover: underline);
 
@@ -318,9 +324,7 @@ only screen and (                min-resolution: 2dppx) {
     background: black;
     color: white;
     .link-colour(white, #e0e4f8);
-
-    // Remove the min-height from empty columns
-    .remove-column-min-height();
+    .header-colour(inherit);
 
     h2 {
       font-size: 22px;
@@ -395,9 +399,19 @@ only screen and (                min-resolution: 2dppx) {
 
     .container-fluid {
       width: 100%;
+      height: 100%;
+
+      > .row {
+        height: 100%;
+
+        > * {
+          height: 100%;
+          display: flex;
+        }
+      }
     }
 
-    .container, .container-fluid {
+    .container {
       flex: 1 0 auto;
 
       display: flex;
@@ -465,6 +479,11 @@ only screen and (                min-resolution: 2dppx) {
 
               padding-top: 0;
               padding-bottom: 0;
+
+              > .row {
+                flex: 1;
+                display: flex;
+              }
             }
           }
         }
@@ -514,7 +533,7 @@ only screen and (                min-resolution: 2dppx) {
     }
 
     .caption {
-      flex: 1 0 auto;
+      flex: 1 1 auto;
 
       display: flex;
       flex-direction: column;
@@ -552,13 +571,13 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 // Remove col-* classes from panel containers when on no-flexbox
-.remove-column-layout() {
+.remove-column-layout(@prefix) {
   .col(@index) { // initial
-    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+    @item: ~"@{prefix} .col-xs-@{index}, @{prefix} .col-sm-@{index}, @{prefix} .col-md-@{index}, @{prefix} .col-lg-@{index}";
     .col((@index + 1), @item);
   }
   .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
-    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
+    @item: ~"@{prefix} .col-xs-@{index}, @{prefix} .col-sm-@{index}, @{prefix} .col-md-@{index}, @{prefix} .col-lg-@{index}";
     .col((@index + 1), ~"@{list}, @{item}");
   }
   .col(@index, @list) when (@index > @grid-columns) { // terminal
@@ -573,7 +592,9 @@ only screen and (                min-resolution: 2dppx) {
   .col(1); // kickstart it
 }
 
-@media (min-width: @grid-float-breakpoint-max) {
+@media (min-width: @grid-float-breakpoint) {
+  .remove-column-layout("html.no-flexbox .jumbotron-carousel .jumbotron-panel");
+
   html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel {
     .container-fluid {
       .container-fixed(@grid-gutter-width);
@@ -588,8 +609,6 @@ only screen and (                min-resolution: 2dppx) {
         width: @container-lg;
       }
     }
-
-    .remove-column-layout();
   }
 }
 
