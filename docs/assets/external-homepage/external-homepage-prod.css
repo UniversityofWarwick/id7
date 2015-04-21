@@ -491,6 +491,20 @@ html.no-not-selector .carousel-nav a:active {
 .carousel-nav a:hover .new-window-link {
   color: #e0e4f8;
 }
+.carousel-nav a:not(.btn),
+.carousel-nav a:link:not(.btn),
+.carousel-nav a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff;
+  -moz-text-decoration-color: #ffffff;
+       text-decoration-color: #ffffff;
+}
+.carousel-nav a:hover:not(.btn),
+.carousel-nav a:focus:not(.btn),
+.carousel-nav a:active:not(.btn) {
+  -webkit-text-decoration-color: #e0e4f8;
+  -moz-text-decoration-color: #e0e4f8;
+       text-decoration-color: #e0e4f8;
+}
 .carousel-nav ul.nav {
   padding: 0 20px 0 0;
   list-style: none;
@@ -572,6 +586,20 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
 }
 .jumbotron-carousel .jumbotron a:hover .new-window-link {
   color: #e0e4f8;
+}
+.jumbotron-carousel .jumbotron a:not(.btn),
+.jumbotron-carousel .jumbotron a:link:not(.btn),
+.jumbotron-carousel .jumbotron a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff;
+  -moz-text-decoration-color: #ffffff;
+       text-decoration-color: #ffffff;
+}
+.jumbotron-carousel .jumbotron a:hover:not(.btn),
+.jumbotron-carousel .jumbotron a:focus:not(.btn),
+.jumbotron-carousel .jumbotron a:active:not(.btn) {
+  -webkit-text-decoration-color: #e0e4f8;
+  -moz-text-decoration-color: #e0e4f8;
+       text-decoration-color: #e0e4f8;
 }
 .jumbotron-carousel .jumbotron h1,
 .jumbotron-carousel .jumbotron h2,
@@ -1040,6 +1068,20 @@ html.no-not-selector #more-links a:active {
 #more-links a:hover .new-window-link {
   color: #e0e4f8;
 }
+#more-links a:not(.btn),
+#more-links a:link:not(.btn),
+#more-links a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff;
+  -moz-text-decoration-color: #ffffff;
+       text-decoration-color: #ffffff;
+}
+#more-links a:hover:not(.btn),
+#more-links a:focus:not(.btn),
+#more-links a:active:not(.btn) {
+  -webkit-text-decoration-color: #e0e4f8;
+  -moz-text-decoration-color: #e0e4f8;
+       text-decoration-color: #e0e4f8;
+}
 @media (min-width: 768px) {
   html.flexbox #more-links {
     display: none;
@@ -1169,6 +1211,20 @@ html.no-not-selector .megamenu-links .more-links-sitemap a:active {
 .megamenu-links .more-links-sitemap a:hover .new-window-link {
   color: #2c66e8;
 }
+.megamenu-links .more-links-sitemap a:not(.btn),
+.megamenu-links .more-links-sitemap a:link:not(.btn),
+.megamenu-links .more-links-sitemap a:visited:not(.btn) {
+  -webkit-text-decoration-color: #666666;
+  -moz-text-decoration-color: #666666;
+       text-decoration-color: #666666;
+}
+.megamenu-links .more-links-sitemap a:hover:not(.btn),
+.megamenu-links .more-links-sitemap a:focus:not(.btn),
+.megamenu-links .more-links-sitemap a:active:not(.btn) {
+  -webkit-text-decoration-color: #2c66e8;
+  -moz-text-decoration-color: #2c66e8;
+       text-decoration-color: #2c66e8;
+}
 .megamenu-links .more-links-sitemap a {
   text-decoration: underline;
 }
@@ -1217,6 +1273,20 @@ html.no-not-selector .megamenu-links-address a:active {
 }
 .megamenu-links-address a:hover .new-window-link {
   color: #2c66e8;
+}
+.megamenu-links-address a:not(.btn),
+.megamenu-links-address a:link:not(.btn),
+.megamenu-links-address a:visited:not(.btn) {
+  -webkit-text-decoration-color: #666666;
+  -moz-text-decoration-color: #666666;
+       text-decoration-color: #666666;
+}
+.megamenu-links-address a:hover:not(.btn),
+.megamenu-links-address a:focus:not(.btn),
+.megamenu-links-address a:active:not(.btn) {
+  -webkit-text-decoration-color: #2c66e8;
+  -moz-text-decoration-color: #2c66e8;
+       text-decoration-color: #2c66e8;
 }
 .megamenu-links-address .utility {
   padding-left: 0;

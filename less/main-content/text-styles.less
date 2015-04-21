@@ -1,9 +1,8 @@
-main, .id7-page-footer {
-  .link-decoration(@base: underline);
-}
+.link-decoration(@base: underline);
 
 a {
-  .transition(color 0.3s linear);
+  .transition(~"all 0.3s linear"); // Double decl for Safari
+  .transition(~"color 0.3s linear, text-decoration-color 0.15s linear");
 }
 
 a {

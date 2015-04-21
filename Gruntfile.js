@@ -218,6 +218,20 @@ module.exports = function (grunt) {
         },
         src: 'dist/css/id6a.css'
       },
+      docs: {
+        options: {
+          expand: true,
+          flatten: true
+        },
+        src: 'docs/assets/css/*.css'
+      },
+      docsSite: {
+        options: {
+          expand: true,
+          flatten: true
+        },
+        src: 'docs/assets/site/*.css'
+      },
       homepage: {
         options: {
           expand: true,
@@ -457,7 +471,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'copy:vendorjs', 'test']);
 
   // Docs task.
-  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs', 'autoprefixer:homepage', 'jekyll:docs']);
+  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs', 'autoprefixer:docs', 'autoprefixer:docsSite', 'autoprefixer:homepage', 'jekyll:docs']);
 
   grunt.registerTask('dist-homepage-css', ['less:compileDocs', 'autoprefixer:homepage', 'csscomb:distHomepage', 'replace:homepage', 'cssmin:minifyHomepage']);
   grunt.registerTask('dist-homepage-js', ['concat:homepage', 'uglify:homepage']);

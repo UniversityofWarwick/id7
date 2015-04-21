@@ -24,6 +24,22 @@
   }
 }
 
+.link-colour(@base, @hover) when not (@base = inherit) {
+  a, a:link, a:visited {
+    &:not(.btn) {
+      -webkit-text-decoration-color: lighten(@base, 20%); // Bug in caniuse/autoprefixer
+      text-decoration-color: lighten(@base, 20%);
+    }
+  }
+
+  a:hover, a:focus, a:active {
+    &:not(.btn) {
+      -webkit-text-decoration-color: @hover; // Bug in caniuse/autoprefixer
+      text-decoration-color: @hover;
+    }
+  }
+}
+
 .link-colour(@base) when not (@base = inherit) {
   .link-colour(@base, darken(@base, 20%));
 }
