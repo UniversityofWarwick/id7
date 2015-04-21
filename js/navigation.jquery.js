@@ -1,4 +1,4 @@
-/*global _:false */
+/*global _:false, Modernizr:false */
 
 (function ($) {
   'use strict';
@@ -6,17 +6,17 @@
     ScreenSizes: [
       {
         name: 'lg', test: function () {
-        return window.matchMedia('(min-width: 1200px)').matches;
+        return Modernizr.mq('only all and (min-width: 1200px)');
       }, container: 1170
       },
       {
         name: 'md', test: function () {
-        return window.matchMedia('(min-width: 992px)').matches;
+        return Modernizr.mq('only all and (min-width: 992px)');
       }, container: 970
       },
       {
         name: 'sm', test: function () {
-        return window.matchMedia('(min-width: 768px)').matches;
+        return Modernizr.mq('only all and (min-width: 768px)');
       }, container: 750
       },
       {
@@ -39,7 +39,7 @@
     Defaults: {
       fixedHeader: true,
       fixedNav: true,
-      fitToWidth: true,
+      fitToWidth: false,
       collapseSmallscreen: false,
       trimLinkTitles: {
         maxLength: 60,

@@ -1,4 +1,3 @@
-/* We explicitly don't target .btn on these, but IE8 doesn't support :not, so we target html.lt-ie9 as well */
 .id7-header-image-container {
   background-image: url("/assets/site/docs-site/banner-image.jpg");
 }
@@ -13,7 +12,7 @@
     background-image: url("/assets/site/docs-site/border-image-right.jpg");
   }
 }
-html.lt-ie9 {
+html.no-rgba {
   background: #89b6dd;
 }
 h1,
@@ -30,9 +29,9 @@ h6,
 .h6 {
   color: #6ca4d4;
 }
-html.lt-ie9 a,
-html.lt-ie9 a:link,
-html.lt-ie9 a:visited {
+html.no-not-selector a,
+html.no-not-selector a:link,
+html.no-not-selector a:visited {
   color: #6ca4d4;
 }
 a:not(.btn),
@@ -40,9 +39,9 @@ a:link:not(.btn),
 a:visited:not(.btn) {
   color: #6ca4d4;
 }
-html.lt-ie9 a:hover,
-html.lt-ie9 a:focus,
-html.lt-ie9 a:active {
+html.no-not-selector a:hover,
+html.no-not-selector a:focus,
+html.no-not-selector a:active {
   color: #3172a9;
 }
 a:hover:not(.btn),
@@ -394,9 +393,9 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   background: #d3d3d3;
   color: #000000;
 }
-html.lt-ie9 .id7-site-footer a,
-html.lt-ie9 .id7-site-footer a:link,
-html.lt-ie9 .id7-site-footer a:visited {
+html.no-not-selector .id7-site-footer a,
+html.no-not-selector .id7-site-footer a:link,
+html.no-not-selector .id7-site-footer a:visited {
   color: #000000;
 }
 .id7-site-footer a:not(.btn),
@@ -404,9 +403,9 @@ html.lt-ie9 .id7-site-footer a:visited {
 .id7-site-footer a:visited:not(.btn) {
   color: #000000;
 }
-html.lt-ie9 .id7-site-footer a:hover,
-html.lt-ie9 .id7-site-footer a:focus,
-html.lt-ie9 .id7-site-footer a:active {
+html.no-not-selector .id7-site-footer a:hover,
+html.no-not-selector .id7-site-footer a:focus,
+html.no-not-selector .id7-site-footer a:active {
   color: #000000;
 }
 .id7-site-footer a:hover:not(.btn),
@@ -421,9 +420,9 @@ html.lt-ie9 .id7-site-footer a:active {
   background: #6ca4d4;
   color: #ffffff;
 }
-html.lt-ie9 .id7-app-footer a,
-html.lt-ie9 .id7-app-footer a:link,
-html.lt-ie9 .id7-app-footer a:visited {
+html.no-not-selector .id7-app-footer a,
+html.no-not-selector .id7-app-footer a:link,
+html.no-not-selector .id7-app-footer a:visited {
   color: #ffffff;
 }
 .id7-app-footer a:not(.btn),
@@ -431,9 +430,9 @@ html.lt-ie9 .id7-app-footer a:visited {
 .id7-app-footer a:visited:not(.btn) {
   color: #ffffff;
 }
-html.lt-ie9 .id7-app-footer a:hover,
-html.lt-ie9 .id7-app-footer a:focus,
-html.lt-ie9 .id7-app-footer a:active {
+html.no-not-selector .id7-app-footer a:hover,
+html.no-not-selector .id7-app-footer a:focus,
+html.no-not-selector .id7-app-footer a:active {
   color: #cccccc;
 }
 .id7-app-footer a:hover:not(.btn),

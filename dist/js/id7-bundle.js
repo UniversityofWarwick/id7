@@ -11819,7 +11819,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
 })(jQuery);
 
-/*global _:false */
+/*global _:false, Modernizr:false */
 
 (function ($) {
   'use strict';
@@ -11827,17 +11827,17 @@ window.Modernizr = (function( window, document, undefined ) {
     ScreenSizes: [
       {
         name: 'lg', test: function () {
-        return window.matchMedia('(min-width: 1200px)').matches;
+        return Modernizr.mq('only all and (min-width: 1200px)');
       }, container: 1170
       },
       {
         name: 'md', test: function () {
-        return window.matchMedia('(min-width: 992px)').matches;
+        return Modernizr.mq('only all and (min-width: 992px)');
       }, container: 970
       },
       {
         name: 'sm', test: function () {
-        return window.matchMedia('(min-width: 768px)').matches;
+        return Modernizr.mq('only all and (min-width: 768px)');
       }, container: 750
       },
       {
@@ -11860,7 +11860,7 @@ window.Modernizr = (function( window, document, undefined ) {
     Defaults: {
       fixedHeader: true,
       fixedNav: true,
-      fitToWidth: true,
+      fitToWidth: false,
       collapseSmallscreen: false,
       trimLinkTitles: {
         maxLength: 60,
@@ -12282,3 +12282,48 @@ window.Modernizr = (function( window, document, undefined ) {
   });
 
 })(jQuery);
+
+/*global Modernizr:false */
+
+(function () {
+  'use strict';
+  // querySelector
+  Modernizr.addTest('not-selector', function () {
+    var doc = window.document;
+    if (!('querySelectorAll' in doc)) {
+      return false;
+    }
+
+    try {
+      doc.querySelectorAll(':not(html)');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  });
+})();
+
+/*global Modernizr:false */
+
+(function () {
+  'use strict';
+  // querySelector
+  Modernizr.addTest('style-update', function () {
+    var doc = window.document;
+    if (!('createElement' in doc && 'createTextNode' in doc)) {
+      return false;
+    }
+
+    try {
+      var el = doc.createElement('style');
+      el.setAttribute('type', 'text/css');
+
+      var contents = doc.createTextNode('modernizr { property: slime; }');
+      el.appendChild(contents);
+
+      return true;
+    } catch (e) {
+      return false;
+    }
+  });
+})();

@@ -186,7 +186,7 @@
 
 .apply-brand(@colour, @bright-colour: screen(@colour, lighten(black, 20%))) {
   // For older browsers where .id7-left-border and .id7-right-border don't display
-  html.lt-ie9 {
+  html.no-rgba {
     background: screen(@colour, lighten(black, 20%));
   }
 

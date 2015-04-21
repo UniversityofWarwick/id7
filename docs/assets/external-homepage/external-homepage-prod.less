@@ -61,15 +61,19 @@ body {
 // Change the masthead imagery
 // Remove the image from the masthead itself, as we put it on the utility-masthead
 .id7-masthead {
-  background: none;
+  background: none !important; // Important to fix IE8 media tag precedence
 }
 
 .id7-utility-masthead {
-  background: url("/dist/images/masthead-logo-bleed-homepage-xs.png") 0 @id7-masthead-bleed-height no-repeat;
-  background-size: @screen-sm-min 300px;
+  background-image: url("/dist/images/masthead-logo-bleed-homepage-xs.png");
+  background-position: 0 @id7-masthead-bleed-height;
+  background-repeat: no-repeat;
+  background-size: 1680px 300px;
 
   @media (min-width: @screen-sm-min) {
-    background: url("/dist/images/masthead-logo-bleed-homepage-sm.png") center @id7-masthead-bleed-height no-repeat;
+    background-image: url("/dist/images/masthead-logo-bleed-homepage-sm.png");
+    background-position: center @id7-masthead-bleed-height;
+    background-repeat: no-repeat;
     background-size: @screen-md-min @id7-masthead-logo-height-sm;
   }
   @media (min-width: @screen-md-min) {
@@ -221,7 +225,7 @@ only screen and (                min-resolution: 2dppx) {
 
 /***** START MAIN CONTENT AREA *****/
 .id7-main-content-area > .id7-main-content {
-  width: 100%;
+  width: 100% !important; // Important fixes bug in IE8 where media query takes precedence
   padding: 0;
 }
 
@@ -676,10 +680,7 @@ only screen and (                min-resolution: 2dppx) {
       font-size: @font-size-base;
     }
 
-    padding: (@grid-gutter-width / 2) 0;
-    @media (min-width: @grid-gutter-width) {
-      padding: (@grid-gutter-width / 2);
-    }
+    padding: (@grid-gutter-width / 2);
   }
 
   // When inside the footer
@@ -766,3 +767,34 @@ only screen and (                min-resolution: 2dppx) {
 /***** END MORE LINKS FOOTER *****/
 
 /***** END MAIN CONTENT AREA *****/
+
+/***** HACKS AND MISC *****/
+html.no-js, html.no-style-update {
+  .id7-masthead .id7-search {
+    .id7-search-box {
+      border-color: @id7-brand-default;
+    }
+
+    .fa, .twitter-typeahead:hover + .fa {
+      color: @id7-brand-default;
+    }
+
+    .twitter-typeahead .tt-suggestion.tt-cursor {
+      background: @id7-brand-default;
+    }
+  }
+
+  .form-control:focus {
+    border-color: @id7-brand-default;
+  }
+
+  .id7-page-header {
+    background: @id7-brand-default;
+  }
+
+  .id7-masthead .id7-logo-row nav {
+    a {
+      color: @id7-brand-default !important;
+    }
+  }
+}

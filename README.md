@@ -39,10 +39,6 @@ id7/
 │   ├── id6a.min.css
 │   └── id6a.min.css.map
 ├── js/
-│   ├── vendor/
-│   │   ├── html5shiv-3.7.2.min.js
-│   │   ├── respond-1.4.2.min.js
-│   │   └── matchMedia.js
 │   ├── id7-bundle.js
 │   ├── id7-bundle.min.js
 │   ├── id7-standalone.js

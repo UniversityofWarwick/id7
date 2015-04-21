@@ -208,7 +208,6 @@
     display: none !important;
   }
 }
-/* We explicitly don't target .btn on these, but IE8 doesn't support :not, so we target html.lt-ie9 as well */
 body {
   position: relative;
   margin-top: 104px;
@@ -255,16 +254,20 @@ body {
   left: 0;
 }
 .id7-masthead {
-  background: none;
+  background: none !important;
 }
 .id7-utility-masthead {
-  background: url("/dist/images/masthead-logo-bleed-homepage-xs.png") 0 24px no-repeat;
+  background-image: url("/dist/images/masthead-logo-bleed-homepage-xs.png");
+  background-position: 0 24px;
+  background-repeat: no-repeat;
   -webkit-background-size: 768px 300px;
           background-size: 768px 300px;
 }
 @media (min-width: 768px) {
   .id7-utility-masthead {
-    background: url("/dist/images/masthead-logo-bleed-homepage-sm.png") center 24px no-repeat;
+    background-image: url("/dist/images/masthead-logo-bleed-homepage-sm.png");
+    background-position: center 24px;
+    background-repeat: no-repeat;
     -webkit-background-size: 992px 80px;
             background-size: 992px 80px;
   }
@@ -416,7 +419,7 @@ body {
 /***** END HOMEPAGE MASTHEAD *****/
 /***** START MAIN CONTENT AREA *****/
 .id7-main-content-area > .id7-main-content {
-  width: 100%;
+  width: 100% !important;
   padding: 0;
 }
 /***** START CAROUSEL NAV *****/
@@ -441,9 +444,9 @@ body {
     display: none !important;
   }
 }
-html.lt-ie9 .carousel-nav a,
-html.lt-ie9 .carousel-nav a:link,
-html.lt-ie9 .carousel-nav a:visited {
+html.no-not-selector .carousel-nav a,
+html.no-not-selector .carousel-nav a:link,
+html.no-not-selector .carousel-nav a:visited {
   text-decoration: none;
 }
 .carousel-nav a:not(.btn),
@@ -451,9 +454,9 @@ html.lt-ie9 .carousel-nav a:visited {
 .carousel-nav a:visited:not(.btn) {
   text-decoration: none;
 }
-html.lt-ie9 .carousel-nav a:hover,
-html.lt-ie9 .carousel-nav a:focus,
-html.lt-ie9 .carousel-nav a:active {
+html.no-not-selector .carousel-nav a:hover,
+html.no-not-selector .carousel-nav a:focus,
+html.no-not-selector .carousel-nav a:active {
   text-decoration: underline;
 }
 .carousel-nav a:hover:not(.btn),
@@ -461,9 +464,9 @@ html.lt-ie9 .carousel-nav a:active {
 .carousel-nav a:active:not(.btn) {
   text-decoration: underline;
 }
-html.lt-ie9 .carousel-nav a,
-html.lt-ie9 .carousel-nav a:link,
-html.lt-ie9 .carousel-nav a:visited {
+html.no-not-selector .carousel-nav a,
+html.no-not-selector .carousel-nav a:link,
+html.no-not-selector .carousel-nav a:visited {
   color: white;
 }
 .carousel-nav a:not(.btn),
@@ -471,9 +474,9 @@ html.lt-ie9 .carousel-nav a:visited {
 .carousel-nav a:visited:not(.btn) {
   color: white;
 }
-html.lt-ie9 .carousel-nav a:hover,
-html.lt-ie9 .carousel-nav a:focus,
-html.lt-ie9 .carousel-nav a:active {
+html.no-not-selector .carousel-nav a:hover,
+html.no-not-selector .carousel-nav a:focus,
+html.no-not-selector .carousel-nav a:active {
   color: #e0e4f8;
 }
 .carousel-nav a:hover:not(.btn),
@@ -514,9 +517,9 @@ html.lt-ie9 .carousel-nav a:active {
 }
 /***** END CAROUSEL NAV *****/
 /***** START JUMBOTRON CAROUSEL *****/
-html.lt-ie9 .jumbotron-carousel a,
-html.lt-ie9 .jumbotron-carousel a:link,
-html.lt-ie9 .jumbotron-carousel a:visited {
+html.no-not-selector .jumbotron-carousel a,
+html.no-not-selector .jumbotron-carousel a:link,
+html.no-not-selector .jumbotron-carousel a:visited {
   text-decoration: none;
 }
 .jumbotron-carousel a:not(.btn),
@@ -524,9 +527,9 @@ html.lt-ie9 .jumbotron-carousel a:visited {
 .jumbotron-carousel a:visited:not(.btn) {
   text-decoration: none;
 }
-html.lt-ie9 .jumbotron-carousel a:hover,
-html.lt-ie9 .jumbotron-carousel a:focus,
-html.lt-ie9 .jumbotron-carousel a:active {
+html.no-not-selector .jumbotron-carousel a:hover,
+html.no-not-selector .jumbotron-carousel a:focus,
+html.no-not-selector .jumbotron-carousel a:active {
   text-decoration: underline;
 }
 .jumbotron-carousel a:hover:not(.btn),
@@ -540,9 +543,9 @@ html.lt-ie9 .jumbotron-carousel a:active {
   background: black;
   color: white;
 }
-html.lt-ie9 .jumbotron-carousel .jumbotron a,
-html.lt-ie9 .jumbotron-carousel .jumbotron a:link,
-html.lt-ie9 .jumbotron-carousel .jumbotron a:visited {
+html.no-not-selector .jumbotron-carousel .jumbotron a,
+html.no-not-selector .jumbotron-carousel .jumbotron a:link,
+html.no-not-selector .jumbotron-carousel .jumbotron a:visited {
   color: white;
 }
 .jumbotron-carousel .jumbotron a:not(.btn),
@@ -550,9 +553,9 @@ html.lt-ie9 .jumbotron-carousel .jumbotron a:visited {
 .jumbotron-carousel .jumbotron a:visited:not(.btn) {
   color: white;
 }
-html.lt-ie9 .jumbotron-carousel .jumbotron a:hover,
-html.lt-ie9 .jumbotron-carousel .jumbotron a:focus,
-html.lt-ie9 .jumbotron-carousel .jumbotron a:active {
+html.no-not-selector .jumbotron-carousel .jumbotron a:hover,
+html.no-not-selector .jumbotron-carousel .jumbotron a:focus,
+html.no-not-selector .jumbotron-carousel .jumbotron a:active {
   color: #e0e4f8;
 }
 .jumbotron-carousel .jumbotron a:hover:not(.btn),
@@ -977,9 +980,9 @@ html.lt-ie9 .jumbotron-carousel .jumbotron a:active {
   color: white;
   font-size: 16px;
 }
-html.lt-ie9 #more-links a,
-html.lt-ie9 #more-links a:link,
-html.lt-ie9 #more-links a:visited {
+html.no-not-selector #more-links a,
+html.no-not-selector #more-links a:link,
+html.no-not-selector #more-links a:visited {
   color: white;
 }
 #more-links a:not(.btn),
@@ -987,9 +990,9 @@ html.lt-ie9 #more-links a:visited {
 #more-links a:visited:not(.btn) {
   color: white;
 }
-html.lt-ie9 #more-links a:hover,
-html.lt-ie9 #more-links a:focus,
-html.lt-ie9 #more-links a:active {
+html.no-not-selector #more-links a:hover,
+html.no-not-selector #more-links a:focus,
+html.no-not-selector #more-links a:active {
   color: #e0e4f8;
 }
 #more-links a:hover:not(.btn),
@@ -1008,9 +1011,9 @@ html.lt-ie9 #more-links a:active {
 #more-links .megamenu-links-address {
   text-align: left;
 }
-html.lt-ie9 #more-links .megamenu-links-address .telephone a,
-html.lt-ie9 #more-links .megamenu-links-address .telephone a:link,
-html.lt-ie9 #more-links .megamenu-links-address .telephone a:visited {
+html.no-not-selector #more-links .megamenu-links-address .telephone a,
+html.no-not-selector #more-links .megamenu-links-address .telephone a:link,
+html.no-not-selector #more-links .megamenu-links-address .telephone a:visited {
   text-decoration: none;
 }
 #more-links .megamenu-links-address .telephone a:not(.btn),
@@ -1018,9 +1021,9 @@ html.lt-ie9 #more-links .megamenu-links-address .telephone a:visited {
 #more-links .megamenu-links-address .telephone a:visited:not(.btn) {
   text-decoration: none;
 }
-html.lt-ie9 #more-links .megamenu-links-address .telephone a:hover,
-html.lt-ie9 #more-links .megamenu-links-address .telephone a:focus,
-html.lt-ie9 #more-links .megamenu-links-address .telephone a:active {
+html.no-not-selector #more-links .megamenu-links-address .telephone a:hover,
+html.no-not-selector #more-links .megamenu-links-address .telephone a:focus,
+html.no-not-selector #more-links .megamenu-links-address .telephone a:active {
   text-decoration: none;
 }
 #more-links .megamenu-links-address .telephone a:hover:not(.btn),
@@ -1111,9 +1114,9 @@ html.lt-ie9 #more-links .megamenu-links-address .telephone a:active {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
-html.lt-ie9 .megamenu-links .more-links-sitemap a,
-html.lt-ie9 .megamenu-links .more-links-sitemap a:link,
-html.lt-ie9 .megamenu-links .more-links-sitemap a:visited {
+html.no-not-selector .megamenu-links .more-links-sitemap a,
+html.no-not-selector .megamenu-links .more-links-sitemap a:link,
+html.no-not-selector .megamenu-links .more-links-sitemap a:visited {
   color: #333333;
 }
 .megamenu-links .more-links-sitemap a:not(.btn),
@@ -1121,9 +1124,9 @@ html.lt-ie9 .megamenu-links .more-links-sitemap a:visited {
 .megamenu-links .more-links-sitemap a:visited:not(.btn) {
   color: #333333;
 }
-html.lt-ie9 .megamenu-links .more-links-sitemap a:hover,
-html.lt-ie9 .megamenu-links .more-links-sitemap a:focus,
-html.lt-ie9 .megamenu-links .more-links-sitemap a:active {
+html.no-not-selector .megamenu-links .more-links-sitemap a:hover,
+html.no-not-selector .megamenu-links .more-links-sitemap a:focus,
+html.no-not-selector .megamenu-links .more-links-sitemap a:active {
   color: #2c66e8;
 }
 .megamenu-links .more-links-sitemap a:hover:not(.btn),
@@ -1160,9 +1163,9 @@ html.lt-ie9 .megamenu-links .more-links-sitemap a:active {
   margin-top: 20px;
   text-align: center;
 }
-html.lt-ie9 .megamenu-links-address a,
-html.lt-ie9 .megamenu-links-address a:link,
-html.lt-ie9 .megamenu-links-address a:visited {
+html.no-not-selector .megamenu-links-address a,
+html.no-not-selector .megamenu-links-address a:link,
+html.no-not-selector .megamenu-links-address a:visited {
   color: #333333;
 }
 .megamenu-links-address a:not(.btn),
@@ -1170,9 +1173,9 @@ html.lt-ie9 .megamenu-links-address a:visited {
 .megamenu-links-address a:visited:not(.btn) {
   color: #333333;
 }
-html.lt-ie9 .megamenu-links-address a:hover,
-html.lt-ie9 .megamenu-links-address a:focus,
-html.lt-ie9 .megamenu-links-address a:active {
+html.no-not-selector .megamenu-links-address a:hover,
+html.no-not-selector .megamenu-links-address a:focus,
+html.no-not-selector .megamenu-links-address a:active {
   color: #2c66e8;
 }
 .megamenu-links-address a:hover:not(.btn),
@@ -1192,14 +1195,18 @@ html.lt-ie9 .megamenu-links-address a:active {
   display: inline-block;
   padding: 0;
 }
-.lt-ie9 .megamenu-links-address .utility > li {
+html.no-generatedcontent .megamenu-links-address .utility > li {
   margin: 0 0.2em;
 }
-.megamenu-links-address .utility > li:not(:first-child)::before {
+.megamenu-links-address .utility > li:before {
   content: '|';
   margin-left: 0.1em;
   margin-right: 0.2em;
   color: #777777;
+}
+.megamenu-links-address .utility > li:first-child:before {
+  content: '';
+  display: none;
 }
 @media print {
   .megamenu-links-address .utility a[href]:after {
@@ -1208,3 +1215,30 @@ html.lt-ie9 .megamenu-links-address a:active {
 }
 /***** END MORE LINKS FOOTER *****/
 /***** END MAIN CONTENT AREA *****/
+/***** HACKS AND MISC *****/
+html.no-js .id7-masthead .id7-search .id7-search-box,
+html.no-style-update .id7-masthead .id7-search .id7-search-box {
+  border-color: #7b428e;
+}
+html.no-js .id7-masthead .id7-search .fa,
+html.no-style-update .id7-masthead .id7-search .fa,
+html.no-js .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
+html.no-style-update .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
+  color: #7b428e;
+}
+html.no-js .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor,
+html.no-style-update .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+  background: #7b428e;
+}
+html.no-js .form-control:focus,
+html.no-style-update .form-control:focus {
+  border-color: #7b428e;
+}
+html.no-js .id7-page-header,
+html.no-style-update .id7-page-header {
+  background: #7b428e;
+}
+html.no-js .id7-masthead .id7-logo-row nav a,
+html.no-style-update .id7-masthead .id7-logo-row nav a {
+  color: #7b428e !important;
+}

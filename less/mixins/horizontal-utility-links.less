@@ -7,15 +7,20 @@
     display: inline-block;
     padding: 0;
 
-    .lt-ie9 & {
+    html.no-generatedcontent & {
       margin: 0 @spacing;
     }
 
-    &:not(:first-child)::before {
+    &:before {
       content: '|';
       margin-left: (@spacing / 2);
       margin-right: @spacing;
       color: @separator-colour;
+    }
+
+    &:first-child:before {
+      content: '';
+      display: none;
     }
   }
 

@@ -81,7 +81,9 @@ module.exports = function (grunt) {
           'js/account-popover.jquery.js',
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js',
-          'js/wide-tables.jquery.js'
+          'js/wide-tables.jquery.js',
+          'js/not-selector-feature-detect.modernizr.js',
+          'js/style-update-feature-detect.modernizr.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-bundle.js'
       },
@@ -90,7 +92,9 @@ module.exports = function (grunt) {
           'js/account-popover.jquery.js',
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js',
-          'js/wide-tables.jquery.js'
+          'js/wide-tables.jquery.js',
+          'js/not-selector-feature-detect.modernizr.js',
+          'js/style-update-feature-detect.modernizr.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-standalone.js'
       }
