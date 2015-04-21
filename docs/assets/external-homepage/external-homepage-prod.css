@@ -260,8 +260,8 @@ body {
   background-image: url("/dist/images/masthead-logo-bleed-homepage-xs.png");
   background-position: 0 24px;
   background-repeat: no-repeat;
-  -webkit-background-size: 768px 300px;
-          background-size: 768px 300px;
+  -webkit-background-size: 1680px 300px;
+          background-size: 1680px 300px;
 }
 @media (min-width: 768px) {
   .id7-utility-masthead {
@@ -1051,7 +1051,7 @@ html.no-not-selector #more-links .megamenu-links-address .telephone a:active {
   text-align: center;
   font-weight: bold;
   font-size: 16px;
-  padding: 20px 0;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   .more-links-sitemap > li {
@@ -1066,11 +1066,6 @@ html.no-not-selector #more-links .megamenu-links-address .telephone a:active {
   font-weight: normal;
   text-align: left;
   font-size: 14px;
-}
-@media (min-width: 40px) {
-  .more-links-sitemap > li {
-    padding: 20px;
-  }
 }
 #more-links .more-links-sitemap:before,
 #more-links .more-links-sitemap:after {

@@ -39,6 +39,8 @@ id7/
 │   ├── id6a.min.css
 │   └── id6a.min.css.map
 ├── js/
+│   ├── vendor/
+│   │   └── html5shiv-3.7.2.min.js
 │   ├── id7-bundle.js
 │   ├── id7-bundle.min.js
 │   ├── id7-standalone.js
@@ -70,14 +72,9 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 - [lodash](https://github.com/lodash/lodash) >= 2.4.1
 - [Modernizr](https://github.com/Modernizr/Modernizr) >= 2.8.3
 
-Internet Explorer 9 (and earlier) support requires
-
-- [matchMedia](https://github.com/paulirish/matchMedia.js) >= 0.2.0
-
-Internet Explorer 8 (and earlier) support (in order to not receive the "mobile" rendition) requires:
+Internet Explorer 8 (and earlier) support requires:
 
 - [html5shiv](https://github.com/aFarkas/html5shiv) >= 3.7.2
-- [respond](https://github.com/scottjehl/Respond) >= 1.4.2
 
 ## Bugs and feature requests
 

@@ -285,8 +285,8 @@ body {
   background-image: url("/dist/images/masthead-logo-bleed-homepage-xs.png");
   background-position: 0 24px;
   background-repeat: no-repeat;
-  -webkit-background-size: 768px 300px;
-          background-size: 768px 300px;
+  -webkit-background-size: 1680px 300px;
+          background-size: 1680px 300px;
 }
 @media (min-width: 768px) {
   .id7-utility-masthead {
