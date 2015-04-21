@@ -257,7 +257,7 @@ body {
   background: none !important;
 }
 .id7-utility-masthead {
-  background-image: url("/dist/images/masthead-logo-bleed-homepage-xs.png");
+  background-image: url("/dist/images/masthead-logo-bleed-wide-xs.png");
   background-position: 0 24px;
   background-repeat: no-repeat;
   -webkit-background-size: 1680px 300px;
@@ -265,7 +265,7 @@ body {
 }
 @media (min-width: 768px) {
   .id7-utility-masthead {
-    background-image: url("/dist/images/masthead-logo-bleed-homepage-sm.png");
+    background-image: url("/dist/images/masthead-logo-bleed-wide-sm.png");
     background-position: center 24px;
     background-repeat: no-repeat;
     -webkit-background-size: 992px 80px;
@@ -274,14 +274,14 @@ body {
 }
 @media (min-width: 992px) {
   .id7-utility-masthead {
-    background-image: url("/dist/images/masthead-logo-bleed-homepage-md.png");
+    background-image: url("/dist/images/masthead-logo-bleed-wide-md.png");
     -webkit-background-size: 1200px 80px;
             background-size: 1200px 80px;
   }
 }
 @media (min-width: 1200px) {
   .id7-utility-masthead {
-    background-image: url("/dist/images/masthead-logo-bleed-homepage-lg.png");
+    background-image: url("/dist/images/masthead-logo-bleed-wide-lg.png");
     -webkit-background-size: 3000px 80px;
             background-size: 3000px 80px;
   }
@@ -291,22 +291,22 @@ body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .id7-utility-masthead {
-    background-image: url("/dist/images/masthead-logo-bleed-homepage-xs@2x.png");
+    background-image: url("/dist/images/masthead-logo-bleed-wide-xs@2x.png");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 768px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px), only screen and (min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 192dpi) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .id7-utility-masthead {
-    background-image: url("/dist/images/masthead-logo-bleed-homepage-sm@2x.png");
+    background-image: url("/dist/images/masthead-logo-bleed-wide-sm@2x.png");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 992px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 992px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 992px), only screen and (min-device-pixel-ratio: 2) and (min-width: 992px), only screen and (min-resolution: 192dpi) and (min-width: 992px), only screen and (min-resolution: 2dppx) and (min-width: 992px) {
   .id7-utility-masthead {
-    background-image: url("/dist/images/masthead-logo-bleed-homepage-md@2x.png");
+    background-image: url("/dist/images/masthead-logo-bleed-wide-md@2x.png");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1200px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), only screen and (min-resolution: 192dpi) and (min-width: 1200px), only screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .id7-utility-masthead {
-    background-image: url("/dist/images/masthead-logo-bleed-homepage-lg@2x.png");
+    background-image: url("/dist/images/masthead-logo-bleed-wide-lg@2x.png");
   }
 }
 .id7-masthead .id7-logo-row {
