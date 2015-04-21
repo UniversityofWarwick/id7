@@ -401,7 +401,7 @@ body {
   margin-top: 44px;
 }
 .id7-masthead .id7-logo-row nav a {
-  color: white !important;
+  color: white;
 }
 .id7-masthead .id7-logo-row nav ul > li:not(:first-child)::before {
   content: '';
