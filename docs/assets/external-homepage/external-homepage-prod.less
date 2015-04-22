@@ -15,8 +15,13 @@
 @fixed-header-size: (@id7-masthead-bleed-height + @logo-height);
 @body-content-padding: (@fixed-header-size + (@grid-gutter-width / 2));
 
-@caption-icon-width: 258px;
+@caption-icon-width: 256px;
 @caption-icon-height: 128px;
+
+@caption-icon-square: 128px;
+@caption-icon-square-xxs: 96px;
+
+@caption-icon-border-width: 4px;
 
 body {
   position: relative;
@@ -329,7 +334,7 @@ only screen and (                min-resolution: 2dppx) {
     .header-colour(inherit);
 
     h2 {
-      font-size: 22px;
+      font-size: 20px;
     }
 
     p {
@@ -382,13 +387,26 @@ only screen and (                min-resolution: 2dppx) {
       }
 
       .caption-icon {
-        width: @caption-icon-width;
-        height: @caption-icon-height;
+        width: (@caption-icon-width + (@caption-icon-border-width * 2));
+        height: (@caption-icon-height + (@caption-icon-border-width * 2));
 
-        border: 4px solid white;
+        border: @caption-icon-border-width solid white;
         box-shadow: 1px 1px 0 rgba(0,0,0,.2);
 
         margin-top: (@grid-gutter-width / 2);
+      }
+
+      &.caption-icon-square .caption-icon {
+        width: (@caption-icon-square + (@caption-icon-border-width * 2));
+        height: (@caption-icon-square + (@caption-icon-border-width * 2));
+
+        float: left;
+        margin: (@grid-gutter-width / 2) (@grid-gutter-width / 2) (@grid-gutter-width / 2) 0; // none on left
+
+        @media (max-width: 320px) {
+          width: (@caption-icon-square-xxs + (@caption-icon-border-width * 2));
+          height: (@caption-icon-square-xxs + (@caption-icon-border-width * 2));
+        }
       }
     }
   }
@@ -469,6 +487,14 @@ only screen and (                min-resolution: 2dppx) {
         left: 0;
         width: 100%;
         height: 100%;
+
+        .transition(background .15s linear);
+
+        background-color: rgba(255, 255, 255, 0);
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
       }
     }
 
