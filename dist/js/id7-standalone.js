@@ -456,7 +456,7 @@
   });
 })(jQuery);
 
-/*global _:false */
+/*global _:false, Modernizr:false */
 
 (function ($) {
   'use strict';
@@ -511,13 +511,22 @@
 
   $(function () {
     $('input[data-suggest="go"]').each(function (i, el) {
+      // ID-89 On xs, set the min length to 3, not 2, and only show 3 results
+      var minLength = 3;
+      var maxResults = 3;
+
+      if (Modernizr.mq('only all and (min-width: 768px)')) {
+        minLength = 2;
+        maxResults = 6;
+      }
+
       $(el).searchSuggest({
         name: 'go',
         source: function (query, cb) {
-          $.getJSON('//sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=6&prefix=' + encodeURIComponent(query) + '&callback=?', cb);
+          $.getJSON('//sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=' + maxResults + '&prefix=' + encodeURIComponent(query) + '&callback=?', cb);
         },
         displayKey: 'path',
-        minLength: 2,
+        minLength: minLength,
         hint: false,
         templates: {
           suggestion: _.template([

@@ -320,6 +320,7 @@
                     var options = this.options;
                     var fixedHeight = $('.id7-page-header').outerHeight();
                     var onChangePanel = $.proxy(this.onChangePanel, this);
+                    var applyPanelStyles = $.proxy(this.applyPanelStyles, this);
 
                     $(window).on('scrollstop.id7.homepage', function (e) {
                         var scrollY = fixedHeight + $(window).scrollTop();
@@ -331,8 +332,13 @@
                             return offsetY <= scrollY;
                         });
 
-                        var $panel = (beforeScroll.length > 0) ? beforeScroll.last() : $container.find(options.panels + '[data-colour]:visible').first();
-                        onChangePanel($panel);
+                        if (beforeScroll.length == $container.find(options.panels + '[data-colour]:visible').length) {
+                            // We've scrolled past all of them, use Warwick Aubergine
+                            applyPanelStyles('#7b428e');
+                        } else {
+                            var $panel = (beforeScroll.length > 0) ? beforeScroll.last() : $container.find(options.panels + '[data-colour]:visible').first();
+                            onChangePanel($panel);
+                        }
                     });
                 }
             },

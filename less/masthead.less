@@ -196,17 +196,29 @@
     }
 
     .tt-dropdown-menu {
-      width: 100%;
       margin-top: -1px;
       background-color: #fff;
       border: 1px solid #ccc;
       border: 1px solid rgba(0, 0, 0, 0.2);
       .box-shadow(0 5px 10px rgba(0,0,0,.2));
+
+      left: auto !important;
+      right: 0px !important;
+      min-width: 100%;
+      width: (320px - @grid-gutter-width);
+
+      @media (min-width: @screen-md-min) {
+        left: 0px !important;
+        right: auto !important;
+        width: 100%;
+      }
     }
 
     .tt-suggestion {
       padding: 8px 20px;
       line-height: 18px;
+      .hyphens();
+      .text-overflow();
     }
 
     .tt-suggestion + .tt-suggestion {

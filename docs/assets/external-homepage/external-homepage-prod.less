@@ -15,7 +15,7 @@
 @fixed-header-size: (@id7-masthead-bleed-height + @logo-height);
 @body-content-padding: (@fixed-header-size + (@grid-gutter-width / 2));
 
-@caption-icon-width: 128px;
+@caption-icon-width: 258px;
 @caption-icon-height: 128px;
 
 body {
@@ -151,10 +151,10 @@ only screen and (                min-resolution: 2dppx) {
 
   .id7-search-column {
     .make-sm-column(3);
-    float: left;
-    padding-left: @logo-width;
+    float: right;
     margin-left: (-@logo-width);
-    width: 100%;
+    max-width: 50%;
+    padding-left: 0;
 
     @media (min-width: @screen-sm-min) {
       padding-left: (@grid-gutter-width / 2);
@@ -222,6 +222,10 @@ only screen and (                min-resolution: 2dppx) {
       }
     }
   }
+
+  i.fa {
+    font-size: 14px;
+  }
 }
 
 /***** END HOMEPAGE MASTHEAD *****/
@@ -244,9 +248,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 .carousel-nav {
-  .title {
-    .hidden-sm();
-  }
+  text-shadow: 0px 0px 8px #666, 0px 0px 1px #383838;
 
   .link-decoration(none, @hover: underline);
 
@@ -373,16 +375,20 @@ only screen and (                min-resolution: 2dppx) {
 
     .caption {
       .clearfix();
+      text-shadow: 1px 1px 0 rgba(0,0,0,.2);
 
       .caption-content {
         padding: (@grid-gutter-width / 2) 0;
       }
 
       .caption-icon {
-        float: left;
         width: @caption-icon-width;
         height: @caption-icon-height;
-        margin: (@grid-gutter-width / 2) (@grid-gutter-width / 2) (@grid-gutter-width / 2) 0; // none on left
+
+        border: 4px solid white;
+        box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+
+        margin-top: (@grid-gutter-width / 2);
       }
     }
   }
@@ -452,6 +458,17 @@ only screen and (                min-resolution: 2dppx) {
 
       > * {
         position: relative;
+      }
+
+      // Block level link
+      > a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -553,6 +570,16 @@ only screen and (                min-resolution: 2dppx) {
         }
       }
       &.right { align-items: flex-end; }
+
+      // Invalid combinations, top-right will assume top-left
+      &.top.right { align-items: flex-start; }
+
+      // top.center is invalid at sm but valid at md and lg
+      &.top.center { align-items: flex-start; }
+
+      @media (min-width: @screen-md-min) {
+        &.top.center { align-items: center; }
+      }
 
       .caption-content {
         flex: 0 1 auto; // This should be the default, but isn't in IE10/11
