@@ -714,6 +714,7 @@ only screen and (                min-resolution: 2dppx) {
     text-align: center;
     font-weight: bold;
     font-size: 16px;
+    margin: 0;
 
     > i {
       font-size: 2em;
@@ -723,6 +724,8 @@ only screen and (                min-resolution: 2dppx) {
       font-weight: normal;
       text-align: left;
       font-size: @font-size-base;
+
+      li { margin: 0; }
     }
 
     padding: (@grid-gutter-width / 2);
@@ -774,7 +777,7 @@ only screen and (                min-resolution: 2dppx) {
     }
 
     > li {
-      margin-bottom: (@grid-gutter-width / 2);
+      padding: (@grid-gutter-width / 4) (@grid-gutter-width / 2);
 
       + li {
         border-left: 1px solid @gray-lighter;
@@ -800,7 +803,6 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 .megamenu-links-address {
-  margin-top: (@grid-gutter-width / 2);
   text-align: center;
   .link-colour(#333, #2c66e8);
 

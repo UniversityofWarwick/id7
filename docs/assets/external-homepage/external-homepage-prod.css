@@ -1159,6 +1159,7 @@ html.no-not-selector #more-links .megamenu-links-address .telephone a:active {
   text-align: center;
   font-weight: bold;
   font-size: 16px;
+  margin: 0;
   padding: 20px;
 }
 @media (min-width: 768px) {
@@ -1174,6 +1175,9 @@ html.no-not-selector #more-links .megamenu-links-address .telephone a:active {
   font-weight: normal;
   text-align: left;
   font-size: 14px;
+}
+.more-links-sitemap > li ul li {
+  margin: 0;
 }
 #more-links .more-links-sitemap:before,
 #more-links .more-links-sitemap:after {
@@ -1258,7 +1262,7 @@ html.no-not-selector .megamenu-links .more-links-sitemap a:active {
   text-decoration: underline;
 }
 .megamenu-links .more-links-sitemap > li {
-  margin-bottom: 20px;
+  padding: 10px 20px;
 }
 .megamenu-links .more-links-sitemap > li + li {
   border-left: 1px solid #eeeeee;
@@ -1277,7 +1281,6 @@ html.no-not-selector .megamenu-links .more-links-sitemap a:active {
           flex: 0 0 auto;
 }
 .megamenu-links-address {
-  margin-top: 20px;
   text-align: center;
 }
 html.no-not-selector .megamenu-links-address a,
