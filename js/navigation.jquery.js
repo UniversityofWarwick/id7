@@ -63,8 +63,6 @@
       this.onScreenResize();
 
       if (o.trimLinkTitles) this.trimLinkTitles();
-      if (o.fixedNav) this.affixNav();
-      if (o.fixedHeader) this.affixHeader();
 
       this.wireEventHandlers();
     }
@@ -102,7 +100,7 @@
           // Set height in stone
           this.markHeaderFixedPosition();
 
-          var offsetTop = $h1.offset().top;
+          var offsetTop = $('.id7-header-text').offset().top;
           var headerTextHeight = $('.id7-header-text').height();
 
           // FIXME magic number for xs - this comes into play where we have a parent site header
@@ -250,13 +248,27 @@
       },
 
       wireEventHandlers: function wireEventHandlers() {
+        if (document.readyState == 'complete') {
+          if (this.options.fixedNav) this.affixNav();
+          if (this.options.fixedHeader) this.affixHeader();
+        } else {
+          $(window).on('load', $.proxy(function () {
+            if (this.options.fixedNav) this.affixNav();
+            if (this.options.fixedHeader) this.affixHeader();
+          }, this));
+        }
+
         if (this.options.fitToWidth) {
           $(window).on('resize.id7.navigation.onScreenResize', $.proxy(this.onScreenResize, this));
 
           // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
-          $(window).on('load', $.proxy(function (e) {
-            this.onScreenResize(e, true);
-          }, this));
+          if (document.readyState == 'complete') {
+            this.onScreenResize({}, true);
+          } else {
+            $(window).on('load', $.proxy(function (e) {
+              this.onScreenResize(e, true);
+            }, this));
+          }
         }
 
         this.$container.on('click', '.nav > li', function (e) {
