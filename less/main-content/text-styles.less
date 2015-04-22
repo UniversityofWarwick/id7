@@ -69,6 +69,15 @@ blockquote.quotes {
     line-height: 1em;
   }
 
+  &.pull-right, &.blockquote-reverse {
+    border-right: none;
+
+    &::before {
+      margin-left: 4px;
+      content: '\201D';
+    }
+  }
+
   @media print {
     border: none;
   }

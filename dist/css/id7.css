@@ -9352,6 +9352,15 @@ blockquote.quotes::before {
   color: #828c95;
   content: '\201C';
 }
+blockquote.quotes.pull-right,
+blockquote.quotes.blockquote-reverse {
+  border-right: none;
+}
+blockquote.quotes.pull-right::before,
+blockquote.quotes.blockquote-reverse::before {
+  margin-left: 4px;
+  content: '\201D';
+}
 @media print {
   blockquote.quotes {
     border: none;
