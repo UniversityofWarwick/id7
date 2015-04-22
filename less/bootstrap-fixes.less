@@ -3,6 +3,31 @@
   padding: @popover-padding-vertical @popover-padding-horizontal;
 }
 
+.btn {
+  border-radius: @button-border-radius-base;
+}
+
+.btn-lg {
+  border-radius: @button-border-radius-large;
+}
+
+.btn-sm {
+  border-radius: @button-border-radius-small;
+}
+
+.btn-xs {
+  border-radius: @button-border-radius-small;
+}
+
+.btn-group-vertical > .btn {
+  &:first-child:not(:last-child) {
+    border-top-right-radius: @button-border-radius-base;
+  }
+  &:last-child:not(:first-child) {
+    border-bottom-left-radius: @button-border-radius-base;
+  }
+}
+
 // Print styling fixes
 @media print {
   // Don't expand protocol links for tel: or mailto:

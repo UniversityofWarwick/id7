@@ -7616,6 +7616,27 @@ footer .id7-app-footer:after {
 .popover-content {
   padding: 15px 19px;
 }
+.btn {
+  border-radius: 4px;
+}
+.btn-lg,
+.btn-group-lg > .btn {
+  border-radius: 6px;
+}
+.btn-sm,
+.btn-group-sm > .btn {
+  border-radius: 3px;
+}
+.btn-xs,
+.btn-group-xs > .btn {
+  border-radius: 3px;
+}
+.btn-group-vertical > .btn:first-child:not(:last-child) {
+  border-top-right-radius: 4px;
+}
+.btn-group-vertical > .btn:last-child:not(:first-child) {
+  border-bottom-left-radius: 4px;
+}
 @media print {
   a[href^="mailto:"]:after,
   a[href^="tel:"]:after {
