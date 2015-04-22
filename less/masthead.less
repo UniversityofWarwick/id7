@@ -63,6 +63,12 @@
   .id7-header-text {
     .header-colour(@text-color);
     .link-colour(inherit);
+    .link-decoration(underline);
+
+    @media (min-width: @grid-float-breakpoint) {
+      .link-decoration(none);
+    }
+
     padding: 0 20px;
     position: relative;
 

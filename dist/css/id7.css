@@ -8188,6 +8188,48 @@ html.no-not-selector .id7-masthead .id7-header-text a:active {
 .id7-masthead .id7-header-text a:active:not(.btn) {
   color: inherit;
 }
+html.no-not-selector .id7-masthead .id7-header-text a,
+html.no-not-selector .id7-masthead .id7-header-text a:link,
+html.no-not-selector .id7-masthead .id7-header-text a:visited {
+  text-decoration: underline;
+}
+.id7-masthead .id7-header-text a:not(.btn),
+.id7-masthead .id7-header-text a:link:not(.btn),
+.id7-masthead .id7-header-text a:visited:not(.btn) {
+  text-decoration: underline;
+}
+html.no-not-selector .id7-masthead .id7-header-text a:hover,
+html.no-not-selector .id7-masthead .id7-header-text a:focus,
+html.no-not-selector .id7-masthead .id7-header-text a:active {
+  text-decoration: underline;
+}
+.id7-masthead .id7-header-text a:hover:not(.btn),
+.id7-masthead .id7-header-text a:focus:not(.btn),
+.id7-masthead .id7-header-text a:active:not(.btn) {
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  html.no-not-selector .id7-masthead .id7-header-text a,
+  html.no-not-selector .id7-masthead .id7-header-text a:link,
+  html.no-not-selector .id7-masthead .id7-header-text a:visited {
+    text-decoration: none;
+  }
+  .id7-masthead .id7-header-text a:not(.btn),
+  .id7-masthead .id7-header-text a:link:not(.btn),
+  .id7-masthead .id7-header-text a:visited:not(.btn) {
+    text-decoration: none;
+  }
+  html.no-not-selector .id7-masthead .id7-header-text a:hover,
+  html.no-not-selector .id7-masthead .id7-header-text a:focus,
+  html.no-not-selector .id7-masthead .id7-header-text a:active {
+    text-decoration: underline;
+  }
+  .id7-masthead .id7-header-text a:hover:not(.btn),
+  .id7-masthead .id7-header-text a:focus:not(.btn),
+  .id7-masthead .id7-header-text a:active:not(.btn) {
+    text-decoration: underline;
+  }
+}
 .id7-masthead .id7-header-text h1 {
   padding: 12px 0;
   margin: 0;
