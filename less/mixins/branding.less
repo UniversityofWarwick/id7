@@ -290,12 +290,14 @@
   .id7-site-footer {
     background: @id7-site-footer-colour;
     color: contrast(@id7-site-footer-colour);
+    .header-colour(contrast(@id7-site-footer-colour));
     .link-colour(contrast(@id7-site-footer-colour));
   }
 
   .id7-app-footer {
     background: @colour;
     color: contrast(@colour);
+    .header-colour(contrast(@colour));
     .link-colour(contrast(@colour));
   }
 }

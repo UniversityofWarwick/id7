@@ -435,6 +435,20 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   background: #d3d3d3;
   color: #000000;
 }
+.id7-site-footer h1,
+.id7-site-footer h2,
+.id7-site-footer h3,
+.id7-site-footer h4,
+.id7-site-footer h5,
+.id7-site-footer h6,
+.id7-site-footer .h1,
+.id7-site-footer .h2,
+.id7-site-footer .h3,
+.id7-site-footer .h4,
+.id7-site-footer .h5,
+.id7-site-footer .h6 {
+  color: #000000;
+}
 html.no-not-selector .id7-site-footer a,
 html.no-not-selector .id7-site-footer a:link,
 html.no-not-selector .id7-site-footer a:visited {
@@ -474,6 +488,20 @@ html.no-not-selector .id7-site-footer a:active {
 }
 .id7-app-footer {
   background: #7b428e;
+  color: #ffffff;
+}
+.id7-app-footer h1,
+.id7-app-footer h2,
+.id7-app-footer h3,
+.id7-app-footer h4,
+.id7-app-footer h5,
+.id7-app-footer h6,
+.id7-app-footer .h1,
+.id7-app-footer .h2,
+.id7-app-footer .h3,
+.id7-app-footer .h4,
+.id7-app-footer .h5,
+.id7-app-footer .h6 {
   color: #ffffff;
 }
 html.no-not-selector .id7-app-footer a,

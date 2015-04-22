@@ -393,6 +393,20 @@ body.brand-purple .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+body.brand-purple .id7-site-footer h1,
+body.brand-purple .id7-site-footer h2,
+body.brand-purple .id7-site-footer h3,
+body.brand-purple .id7-site-footer h4,
+body.brand-purple .id7-site-footer h5,
+body.brand-purple .id7-site-footer h6,
+body.brand-purple .id7-site-footer .h1,
+body.brand-purple .id7-site-footer .h2,
+body.brand-purple .id7-site-footer .h3,
+body.brand-purple .id7-site-footer .h4,
+body.brand-purple .id7-site-footer .h5,
+body.brand-purple .id7-site-footer .h6 {
+  color: #000000;
+}
 html.no-not-selector body.brand-purple .id7-site-footer a,
 html.no-not-selector body.brand-purple .id7-site-footer a:link,
 html.no-not-selector body.brand-purple .id7-site-footer a:visited {
@@ -432,6 +446,20 @@ body.brand-purple .id7-site-footer a:active:not(.btn) {
 }
 body.brand-purple .id7-app-footer {
   background: #7b428e;
+  color: #ffffff;
+}
+body.brand-purple .id7-app-footer h1,
+body.brand-purple .id7-app-footer h2,
+body.brand-purple .id7-app-footer h3,
+body.brand-purple .id7-app-footer h4,
+body.brand-purple .id7-app-footer h5,
+body.brand-purple .id7-app-footer h6,
+body.brand-purple .id7-app-footer .h1,
+body.brand-purple .id7-app-footer .h2,
+body.brand-purple .id7-app-footer .h3,
+body.brand-purple .id7-app-footer .h4,
+body.brand-purple .id7-app-footer .h5,
+body.brand-purple .id7-app-footer .h6 {
   color: #ffffff;
 }
 html.no-not-selector body.brand-purple .id7-app-footer a,
@@ -954,6 +982,20 @@ body.brand-gray .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+body.brand-gray .id7-site-footer h1,
+body.brand-gray .id7-site-footer h2,
+body.brand-gray .id7-site-footer h3,
+body.brand-gray .id7-site-footer h4,
+body.brand-gray .id7-site-footer h5,
+body.brand-gray .id7-site-footer h6,
+body.brand-gray .id7-site-footer .h1,
+body.brand-gray .id7-site-footer .h2,
+body.brand-gray .id7-site-footer .h3,
+body.brand-gray .id7-site-footer .h4,
+body.brand-gray .id7-site-footer .h5,
+body.brand-gray .id7-site-footer .h6 {
+  color: #000000;
+}
 html.no-not-selector body.brand-gray .id7-site-footer a,
 html.no-not-selector body.brand-gray .id7-site-footer a:link,
 html.no-not-selector body.brand-gray .id7-site-footer a:visited {
@@ -993,6 +1035,20 @@ body.brand-gray .id7-site-footer a:active:not(.btn) {
 }
 body.brand-gray .id7-app-footer {
   background: #828c95;
+  color: #ffffff;
+}
+body.brand-gray .id7-app-footer h1,
+body.brand-gray .id7-app-footer h2,
+body.brand-gray .id7-app-footer h3,
+body.brand-gray .id7-app-footer h4,
+body.brand-gray .id7-app-footer h5,
+body.brand-gray .id7-app-footer h6,
+body.brand-gray .id7-app-footer .h1,
+body.brand-gray .id7-app-footer .h2,
+body.brand-gray .id7-app-footer .h3,
+body.brand-gray .id7-app-footer .h4,
+body.brand-gray .id7-app-footer .h5,
+body.brand-gray .id7-app-footer .h6 {
   color: #ffffff;
 }
 html.no-not-selector body.brand-gray .id7-app-footer a,
@@ -1515,6 +1571,20 @@ body.brand-gold .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+body.brand-gold .id7-site-footer h1,
+body.brand-gold .id7-site-footer h2,
+body.brand-gold .id7-site-footer h3,
+body.brand-gold .id7-site-footer h4,
+body.brand-gold .id7-site-footer h5,
+body.brand-gold .id7-site-footer h6,
+body.brand-gold .id7-site-footer .h1,
+body.brand-gold .id7-site-footer .h2,
+body.brand-gold .id7-site-footer .h3,
+body.brand-gold .id7-site-footer .h4,
+body.brand-gold .id7-site-footer .h5,
+body.brand-gold .id7-site-footer .h6 {
+  color: #000000;
+}
 html.no-not-selector body.brand-gold .id7-site-footer a,
 html.no-not-selector body.brand-gold .id7-site-footer a:link,
 html.no-not-selector body.brand-gold .id7-site-footer a:visited {
@@ -1554,6 +1624,20 @@ body.brand-gold .id7-site-footer a:active:not(.btn) {
 }
 body.brand-gold .id7-app-footer {
   background: #dcbe2d;
+  color: #000000;
+}
+body.brand-gold .id7-app-footer h1,
+body.brand-gold .id7-app-footer h2,
+body.brand-gold .id7-app-footer h3,
+body.brand-gold .id7-app-footer h4,
+body.brand-gold .id7-app-footer h5,
+body.brand-gold .id7-app-footer h6,
+body.brand-gold .id7-app-footer .h1,
+body.brand-gold .id7-app-footer .h2,
+body.brand-gold .id7-app-footer .h3,
+body.brand-gold .id7-app-footer .h4,
+body.brand-gold .id7-app-footer .h5,
+body.brand-gold .id7-app-footer .h6 {
   color: #000000;
 }
 html.no-not-selector body.brand-gold .id7-app-footer a,
@@ -2076,6 +2160,20 @@ body.brand-blue .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+body.brand-blue .id7-site-footer h1,
+body.brand-blue .id7-site-footer h2,
+body.brand-blue .id7-site-footer h3,
+body.brand-blue .id7-site-footer h4,
+body.brand-blue .id7-site-footer h5,
+body.brand-blue .id7-site-footer h6,
+body.brand-blue .id7-site-footer .h1,
+body.brand-blue .id7-site-footer .h2,
+body.brand-blue .id7-site-footer .h3,
+body.brand-blue .id7-site-footer .h4,
+body.brand-blue .id7-site-footer .h5,
+body.brand-blue .id7-site-footer .h6 {
+  color: #000000;
+}
 html.no-not-selector body.brand-blue .id7-site-footer a,
 html.no-not-selector body.brand-blue .id7-site-footer a:link,
 html.no-not-selector body.brand-blue .id7-site-footer a:visited {
@@ -2115,6 +2213,20 @@ body.brand-blue .id7-site-footer a:active:not(.btn) {
 }
 body.brand-blue .id7-app-footer {
   background: #6ca4d4;
+  color: #ffffff;
+}
+body.brand-blue .id7-app-footer h1,
+body.brand-blue .id7-app-footer h2,
+body.brand-blue .id7-app-footer h3,
+body.brand-blue .id7-app-footer h4,
+body.brand-blue .id7-app-footer h5,
+body.brand-blue .id7-app-footer h6,
+body.brand-blue .id7-app-footer .h1,
+body.brand-blue .id7-app-footer .h2,
+body.brand-blue .id7-app-footer .h3,
+body.brand-blue .id7-app-footer .h4,
+body.brand-blue .id7-app-footer .h5,
+body.brand-blue .id7-app-footer .h6 {
   color: #ffffff;
 }
 html.no-not-selector body.brand-blue .id7-app-footer a,
@@ -2637,6 +2749,20 @@ body.brand-orange .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+body.brand-orange .id7-site-footer h1,
+body.brand-orange .id7-site-footer h2,
+body.brand-orange .id7-site-footer h3,
+body.brand-orange .id7-site-footer h4,
+body.brand-orange .id7-site-footer h5,
+body.brand-orange .id7-site-footer h6,
+body.brand-orange .id7-site-footer .h1,
+body.brand-orange .id7-site-footer .h2,
+body.brand-orange .id7-site-footer .h3,
+body.brand-orange .id7-site-footer .h4,
+body.brand-orange .id7-site-footer .h5,
+body.brand-orange .id7-site-footer .h6 {
+  color: #000000;
+}
 html.no-not-selector body.brand-orange .id7-site-footer a,
 html.no-not-selector body.brand-orange .id7-site-footer a:link,
 html.no-not-selector body.brand-orange .id7-site-footer a:visited {
@@ -2676,6 +2802,20 @@ body.brand-orange .id7-site-footer a:active:not(.btn) {
 }
 body.brand-orange .id7-app-footer {
   background: #f1863c;
+  color: #ffffff;
+}
+body.brand-orange .id7-app-footer h1,
+body.brand-orange .id7-app-footer h2,
+body.brand-orange .id7-app-footer h3,
+body.brand-orange .id7-app-footer h4,
+body.brand-orange .id7-app-footer h5,
+body.brand-orange .id7-app-footer h6,
+body.brand-orange .id7-app-footer .h1,
+body.brand-orange .id7-app-footer .h2,
+body.brand-orange .id7-app-footer .h3,
+body.brand-orange .id7-app-footer .h4,
+body.brand-orange .id7-app-footer .h5,
+body.brand-orange .id7-app-footer .h6 {
   color: #ffffff;
 }
 html.no-not-selector body.brand-orange .id7-app-footer a,
@@ -3198,6 +3338,20 @@ body.brand-green .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+body.brand-green .id7-site-footer h1,
+body.brand-green .id7-site-footer h2,
+body.brand-green .id7-site-footer h3,
+body.brand-green .id7-site-footer h4,
+body.brand-green .id7-site-footer h5,
+body.brand-green .id7-site-footer h6,
+body.brand-green .id7-site-footer .h1,
+body.brand-green .id7-site-footer .h2,
+body.brand-green .id7-site-footer .h3,
+body.brand-green .id7-site-footer .h4,
+body.brand-green .id7-site-footer .h5,
+body.brand-green .id7-site-footer .h6 {
+  color: #000000;
+}
 html.no-not-selector body.brand-green .id7-site-footer a,
 html.no-not-selector body.brand-green .id7-site-footer a:link,
 html.no-not-selector body.brand-green .id7-site-footer a:visited {
@@ -3237,6 +3391,20 @@ body.brand-green .id7-site-footer a:active:not(.btn) {
 }
 body.brand-green .id7-app-footer {
   background: #a5ab2a;
+  color: #ffffff;
+}
+body.brand-green .id7-app-footer h1,
+body.brand-green .id7-app-footer h2,
+body.brand-green .id7-app-footer h3,
+body.brand-green .id7-app-footer h4,
+body.brand-green .id7-app-footer h5,
+body.brand-green .id7-app-footer h6,
+body.brand-green .id7-app-footer .h1,
+body.brand-green .id7-app-footer .h2,
+body.brand-green .id7-app-footer .h3,
+body.brand-green .id7-app-footer .h4,
+body.brand-green .id7-app-footer .h5,
+body.brand-green .id7-app-footer .h6 {
   color: #ffffff;
 }
 html.no-not-selector body.brand-green .id7-app-footer a,
@@ -3759,6 +3927,20 @@ body.brand-red .id7-site-footer {
   background: #d3d3d3;
   color: #000000;
 }
+body.brand-red .id7-site-footer h1,
+body.brand-red .id7-site-footer h2,
+body.brand-red .id7-site-footer h3,
+body.brand-red .id7-site-footer h4,
+body.brand-red .id7-site-footer h5,
+body.brand-red .id7-site-footer h6,
+body.brand-red .id7-site-footer .h1,
+body.brand-red .id7-site-footer .h2,
+body.brand-red .id7-site-footer .h3,
+body.brand-red .id7-site-footer .h4,
+body.brand-red .id7-site-footer .h5,
+body.brand-red .id7-site-footer .h6 {
+  color: #000000;
+}
 html.no-not-selector body.brand-red .id7-site-footer a,
 html.no-not-selector body.brand-red .id7-site-footer a:link,
 html.no-not-selector body.brand-red .id7-site-footer a:visited {
@@ -3798,6 +3980,20 @@ body.brand-red .id7-site-footer a:active:not(.btn) {
 }
 body.brand-red .id7-app-footer {
   background: #bd3f4b;
+  color: #ffffff;
+}
+body.brand-red .id7-app-footer h1,
+body.brand-red .id7-app-footer h2,
+body.brand-red .id7-app-footer h3,
+body.brand-red .id7-app-footer h4,
+body.brand-red .id7-app-footer h5,
+body.brand-red .id7-app-footer h6,
+body.brand-red .id7-app-footer .h1,
+body.brand-red .id7-app-footer .h2,
+body.brand-red .id7-app-footer .h3,
+body.brand-red .id7-app-footer .h4,
+body.brand-red .id7-app-footer .h5,
+body.brand-red .id7-app-footer .h6 {
   color: #ffffff;
 }
 html.no-not-selector body.brand-red .id7-app-footer a,
