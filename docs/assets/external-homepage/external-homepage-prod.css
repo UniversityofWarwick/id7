@@ -615,7 +615,7 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
   color: inherit;
 }
 .jumbotron-carousel .jumbotron h2 {
-  font-size: 22px;
+  font-size: 20px;
 }
 .jumbotron-carousel .jumbotron p {
   margin-bottom: 20px;
@@ -665,12 +665,24 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
   padding: 20px 0;
 }
 .jumbotron-carousel .jumbotron .caption .caption-icon {
-  width: 258px;
-  height: 128px;
+  width: 264px;
+  height: 136px;
   border: 4px solid white;
   -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   margin-top: 20px;
+}
+.jumbotron-carousel .jumbotron .caption.caption-icon-square .caption-icon {
+  width: 136px;
+  height: 136px;
+  float: left;
+  margin: 20px 20px 20px 0;
+}
+@media (max-width: 320px) {
+  .jumbotron-carousel .jumbotron .caption.caption-icon-square .caption-icon {
+    width: 104px;
+    height: 104px;
+  }
 }
 @media (min-width: 768px) {
   html.flexbox .jumbotron-carousel .jumbotron {
@@ -775,6 +787,14 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
     left: 0;
     width: 100%;
     height: 100%;
+    -webkit-transition: background 0.15s linear;
+    -o-transition: background 0.15s linear;
+    transition: background 0.15s linear;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-image > a:hover,
+  html.flexbox .jumbotron-carousel .jumbotron .jumbotron-image > a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
   }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-image > .container {
     margin-top: 124px;
