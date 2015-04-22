@@ -7648,9 +7648,6 @@ footer .id7-app-footer:after {
   font-weight: 300;
   font-weight: 400;
 }
-.id7-main-content-area section {
-  margin-bottom: 2rem;
-}
 .id7-main-content-area label {
   font-size: 13px;
   color: #333;
@@ -7914,6 +7911,7 @@ html.no-not-selector .id7-page-header a:active {
 .id7-utility-bar > ul > li {
   display: inline-block;
   padding: 0;
+  margin: 0;
 }
 html.no-generatedcontent .id7-utility-bar > ul > li {
   margin: 0 .4em;
@@ -7982,6 +7980,9 @@ html.no-not-selector .id7-utility-bar a:active {
   padding: 5px 0;
   margin-top: 0;
   font-size: inherit;
+}
+.id7-utility-bar .dropdown-menu > li {
+  margin: 0;
 }
 .id7-utility-bar .dropdown-menu > li > a {
   padding: 1px 20px;
@@ -8333,6 +8334,7 @@ html.no-not-selector .id7-masthead .id7-header-text a:active {
 .id7-masthead .id7-logo-row nav ul > li {
   display: inline-block;
   padding: 0;
+  margin: 0;
 }
 html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
   margin: 0 .2em;
@@ -9311,6 +9313,12 @@ blockquote.quotes::before {
     border: none;
   }
 }
+li {
+  margin-bottom: 6px;
+}
+.dropdown-menu li {
+  margin: 0;
+}
 @media (max-width: 767px) {
   .id7-main-content-area {
     -webkit-hyphens: auto;
@@ -9832,6 +9840,7 @@ footer .id7-app-footer .id7-footer-utility ul {
 footer .id7-app-footer .id7-footer-utility ul > li {
   display: inline-block;
   padding: 0;
+  margin: 0;
 }
 html.no-generatedcontent footer .id7-app-footer .id7-footer-utility ul > li {
   margin: 0 .2em;

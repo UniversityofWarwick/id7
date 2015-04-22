@@ -1348,6 +1348,7 @@ html.no-not-selector .megamenu-links-address a:active {
 .megamenu-links-address .utility > li {
   display: inline-block;
   padding: 0;
+  margin: 0;
 }
 html.no-generatedcontent .megamenu-links-address .utility > li {
   margin: 0 0.2em;
