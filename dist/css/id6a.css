@@ -1,7 +1,7 @@
 #masthead,
 #masthead.transparent {
-  background-color: white;
   color: black;
+  background-color: white;
 }
 html.no-not-selector #masthead a,
 html.no-not-selector #masthead.transparent a,
@@ -59,40 +59,40 @@ html.no-not-selector #search-container ul.index-section li.active a:visited {
 html.no-not-selector #search-container ul.index-section li.active a:hover,
 html.no-not-selector #search-container ul.index-section li.active a:focus,
 html.no-not-selector #search-container ul.index-section li.active a:active {
-  color: #cccccc;
+  color: #ccc;
 }
 #search-container ul.index-section li.active a:hover:not(.btn),
 #search-container ul.index-section li.active a:focus:not(.btn),
 #search-container ul.index-section li.active a:active:not(.btn) {
-  color: #cccccc;
+  color: #ccc;
 }
 #search-container ul.index-section li.active a:hover .new-window-link {
-  color: #cccccc;
+  color: #ccc;
 }
 #search-container ul.index-section li.active a:not(.btn),
 #search-container ul.index-section li.active a:link:not(.btn),
 #search-container ul.index-section li.active a:visited:not(.btn) {
-  -webkit-text-decoration-color: #ffffff;
-  -moz-text-decoration-color: #ffffff;
-       text-decoration-color: #ffffff;
+  -webkit-text-decoration-color: #fff;
+     -moz-text-decoration-color: #fff;
+          text-decoration-color: #fff;
 }
 #search-container ul.index-section li.active a:hover:not(.btn),
 #search-container ul.index-section li.active a:focus:not(.btn),
 #search-container ul.index-section li.active a:active:not(.btn) {
-  -webkit-text-decoration-color: #cccccc;
-  -moz-text-decoration-color: #cccccc;
-       text-decoration-color: #cccccc;
+  -webkit-text-decoration-color: #ccc;
+     -moz-text-decoration-color: #ccc;
+          text-decoration-color: #ccc;
 }
 #search-container ul.index-section {
   display: none;
 }
 #search-container #search-box {
-  border: 1px solid #cccccc;
   padding: 2px 23px 2px 3px;
+  border: 1px solid #ccc;
 }
 #search-container #search-button {
-  margin-left: -20px;
   position: relative;
   top: -3px;
+  margin-left: -20px;
 }
 /*# sourceMappingURL=id6a.css.map */
