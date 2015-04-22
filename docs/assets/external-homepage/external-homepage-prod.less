@@ -145,10 +145,6 @@ only screen and (                min-resolution: 2dppx) {
 
     .make-sm-column(9);
 
-    @media (max-width: @screen-xs-max) {
-      margin-bottom: 0;
-    }
-
     @media (min-width: @grid-float-breakpoint) {
       margin-bottom: 0;
     }
@@ -156,33 +152,10 @@ only screen and (                min-resolution: 2dppx) {
 
   .id7-search-column {
     .make-sm-column(3);
-    float: right;
     margin-left: (-@logo-width);
-    max-width: 50%;
-    padding-left: 0;
 
     @media (min-width: @screen-sm-min) {
-      padding-left: (@grid-gutter-width / 2);
       margin-left: 0;
-    }
-
-    @media (max-width: @screen-sm-max) {
-      .id7-search-box-container .input-lg {
-        // Also make the placeholder text smaller on sm
-
-        &::-moz-placeholder { // Firefox
-          font-size: 11.5px;
-          line-height: 24px;
-        }
-        &:-ms-input-placeholder { // Internet Explorer 10+
-          font-size: 11.5px;
-          line-height: 24px;
-        }
-        &::-webkit-input-placeholder {  // Safari and Chrome
-          font-size: 11.5px;
-          line-height: 24px;
-        }
-      }
     }
   }
 }

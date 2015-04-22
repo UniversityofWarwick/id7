@@ -8087,10 +8087,11 @@ html.no-not-selector .id7-utility-bar .popover.account-information .actions a:ac
 }
 .id7-masthead .id7-logo-column {
   position: relative;
+  float: left;
+  width: 125px;
   min-height: 1px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-bottom: 2px;
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-logo-column {
@@ -8098,21 +8099,45 @@ html.no-not-selector .id7-utility-bar .popover.account-information .actions a:ac
     width: 66.66666667%;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .id7-masthead .id7-logo-column {
-    margin-bottom: 10px;
+    margin-bottom: 2px;
   }
 }
 .id7-masthead .id7-search-column {
   position: relative;
+  float: right;
+  max-width: 50%;
   min-height: 1px;
   padding-right: 20px;
   padding-left: 20px;
+  padding-left: 0;
+  margin-left: -125px;
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-search-column {
     float: left;
     width: 33.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  .id7-masthead .id7-search-column {
+    padding-left: 20px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .id7-masthead .id7-search-column .id7-search-box-container .input-lg::-moz-placeholder {
+    font-size: 11.5px;
+    line-height: 24px;
+  }
+  .id7-masthead .id7-search-column .id7-search-box-container .input-lg:-ms-input-placeholder {
+    font-size: 11.5px;
+    line-height: 24px;
+  }
+  .id7-masthead .id7-search-column .id7-search-box-container .input-lg::-webkit-input-placeholder {
+    font-size: 11.5px;
+    line-height: 24px;
   }
 }
 .id7-masthead .id7-logo-row {
@@ -8397,6 +8422,7 @@ html.no-not-selector .id7-masthead .id7-logo-row nav a:active {
 }
 .id7-masthead .id7-search .id7-search-box-container {
   position: relative;
+  margin-top: 7px;
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-search .id7-search-box-container {

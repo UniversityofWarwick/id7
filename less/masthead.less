@@ -8,15 +8,45 @@
   .id7-logo-column {
     .make-sm-column(8);
 
-    margin-bottom: 2px;
+    float: left;
+    width: @id7-masthead-logo-width-xs;
 
-    @media (max-width: @screen-xs-max) {
-      margin-bottom: 10px;
+    @media (min-width: @grid-float-breakpoint) {
+      margin-bottom: 2px;
     }
   }
 
   .id7-search-column {
     .make-sm-column(4);
+
+    float: right;
+    margin-left: (-@id7-masthead-logo-width-xs);
+    max-width: 50%;
+    padding-left: 0;
+
+    @media (min-width: @screen-sm-min) {
+      padding-left: (@grid-gutter-width / 2);
+      margin-left: 0;
+    }
+
+    @media (max-width: @screen-sm-max) {
+      .id7-search-box-container .input-lg {
+        // Also make the placeholder text smaller on sm
+
+        &::-moz-placeholder { // Firefox
+          font-size: 11.5px;
+          line-height: 24px;
+        }
+        &:-ms-input-placeholder { // Internet Explorer 10+
+          font-size: 11.5px;
+          line-height: 24px;
+        }
+        &::-webkit-input-placeholder {  // Safari and Chrome
+          font-size: 11.5px;
+          line-height: 24px;
+        }
+      }
+    }
   }
 
   .id7-logo-row {
@@ -163,8 +193,10 @@
 
   .id7-search {
     .id7-search-box-container {
+      margin-top: @id7-masthead-search-offset-xs;
+
       @media (min-width: @grid-float-breakpoint) {
-        margin-top: (@id7-masthead-search-offset + (@line-height-computed / 2));
+        margin-top: (@id7-masthead-search-offset-sm + (@line-height-computed / 2));
       }
 
       position: relative;

@@ -342,11 +342,6 @@ body {
     width: 75%;
   }
 }
-@media (max-width: 767px) {
-  .id7-masthead .id7-logo-column {
-    margin-bottom: 0;
-  }
-}
 @media (min-width: 768px) {
   .id7-masthead .id7-logo-column {
     margin-bottom: 0;
@@ -357,10 +352,7 @@ body {
   min-height: 1px;
   padding-left: 20px;
   padding-right: 20px;
-  float: right;
   margin-left: -150px;
-  max-width: 50%;
-  padding-left: 0;
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-search-column {
@@ -370,22 +362,7 @@ body {
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-search-column {
-    padding-left: 20px;
     margin-left: 0;
-  }
-}
-@media (max-width: 991px) {
-  .id7-masthead .id7-search-column .id7-search-box-container .input-lg::-moz-placeholder {
-    font-size: 11.5px;
-    line-height: 24px;
-  }
-  .id7-masthead .id7-search-column .id7-search-box-container .input-lg:-ms-input-placeholder {
-    font-size: 11.5px;
-    line-height: 24px;
-  }
-  .id7-masthead .id7-search-column .id7-search-box-container .input-lg::-webkit-input-placeholder {
-    font-size: 11.5px;
-    line-height: 24px;
   }
 }
 .id7-masthead .id7-search .id7-search-box-container {
