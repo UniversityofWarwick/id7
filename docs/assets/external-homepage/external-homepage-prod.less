@@ -843,3 +843,18 @@ html.no-js, html.no-style-update {
     }
   }
 }
+
+body > a.sr-only-focusable { // "Skip to main content" link
+  top: 0px;
+  left: (@grid-gutter-width / 2);
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+  z-index: 100;
+
+  &:focus, &:active {
+    position: absolute;
+  }
+
+  &, &:link, &:visited, &:hover, &:focus, &:active {
+    color: white;
+  }
+}

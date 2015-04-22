@@ -7677,6 +7677,24 @@ body {
   background-repeat: no-repeat;
   background-position: left top;
 }
+.id7-fixed-width-container > a.sr-only-focusable {
+  top: 0;
+  left: 20px;
+  z-index: 100;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+}
+.id7-fixed-width-container > a.sr-only-focusable:focus,
+.id7-fixed-width-container > a.sr-only-focusable:active {
+  position: absolute;
+}
+.id7-fixed-width-container > a.sr-only-focusable,
+.id7-fixed-width-container > a.sr-only-focusable:link,
+.id7-fixed-width-container > a.sr-only-focusable:visited,
+.id7-fixed-width-container > a.sr-only-focusable:hover,
+.id7-fixed-width-container > a.sr-only-focusable:focus,
+.id7-fixed-width-container > a.sr-only-focusable:active {
+  color: white;
+}
 @media (min-width: 768px) {
   html.flexbox .id7-fixed-width-container {
     display: -webkit-box;

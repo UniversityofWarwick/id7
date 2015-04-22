@@ -1374,3 +1374,21 @@ html.no-js .id7-masthead .id7-logo-row nav a,
 html.no-style-update .id7-masthead .id7-logo-row nav a {
   color: #7b428e !important;
 }
+body > a.sr-only-focusable {
+  top: 0px;
+  left: 20px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+body > a.sr-only-focusable:focus,
+body > a.sr-only-focusable:active {
+  position: absolute;
+}
+body > a.sr-only-focusable,
+body > a.sr-only-focusable:link,
+body > a.sr-only-focusable:visited,
+body > a.sr-only-focusable:hover,
+body > a.sr-only-focusable:focus,
+body > a.sr-only-focusable:active {
+  color: white;
+}
