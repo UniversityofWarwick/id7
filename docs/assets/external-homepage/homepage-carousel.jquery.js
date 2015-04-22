@@ -42,7 +42,7 @@
         ].join('')),
         Defaults: {
             menu: '.carousel-nav',
-            panels: '.jumbotron-carousel > article',
+            panels: '.jumbotron-carousel > article:visible',
             animation: {
                 length: 300,
                 easing: 'swing'

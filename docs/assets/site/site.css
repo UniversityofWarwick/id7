@@ -84,15 +84,13 @@ a:not(.btn),
 a:link:not(.btn),
 a:visited:not(.btn) {
   -webkit-text-decoration-color: #ad76c0;
-  -moz-text-decoration-color: #ad76c0;
-       text-decoration-color: #ad76c0;
+  text-decoration-color: #ad76c0;
 }
 a:hover:not(.btn),
 a:focus:not(.btn),
 a:active:not(.btn) {
   -webkit-text-decoration-color: #3f2248;
-  -moz-text-decoration-color: #3f2248;
-       text-decoration-color: #3f2248;
+  text-decoration-color: #3f2248;
 }
 blockquote.quotes {
   color: #3f2248;
@@ -482,15 +480,13 @@ html.no-not-selector .id7-site-footer a:active {
 .id7-site-footer a:link:not(.btn),
 .id7-site-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #333333;
-  -moz-text-decoration-color: #333333;
-       text-decoration-color: #333333;
+  text-decoration-color: #333333;
 }
 .id7-site-footer a:hover:not(.btn),
 .id7-site-footer a:focus:not(.btn),
 .id7-site-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #000000;
-  -moz-text-decoration-color: #000000;
-       text-decoration-color: #000000;
+  text-decoration-color: #000000;
 }
 .id7-app-footer {
   background: #7b428e;
@@ -537,15 +533,13 @@ html.no-not-selector .id7-app-footer a:active {
 .id7-app-footer a:link:not(.btn),
 .id7-app-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
-  -moz-text-decoration-color: #ffffff;
-       text-decoration-color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 .id7-app-footer a:hover:not(.btn),
 .id7-app-footer a:focus:not(.btn),
 .id7-app-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
-  -moz-text-decoration-color: #cccccc;
-       text-decoration-color: #cccccc;
+  text-decoration-color: #cccccc;
 }
 .id7-masthead .id7-search .id7-search-box {
   border-color: #7b428e;

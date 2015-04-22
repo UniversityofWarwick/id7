@@ -42,15 +42,13 @@ body.brand-purple a:not(.btn),
 body.brand-purple a:link:not(.btn),
 body.brand-purple a:visited:not(.btn) {
   -webkit-text-decoration-color: #ad76c0;
-  -moz-text-decoration-color: #ad76c0;
-       text-decoration-color: #ad76c0;
+  text-decoration-color: #ad76c0;
 }
 body.brand-purple a:hover:not(.btn),
 body.brand-purple a:focus:not(.btn),
 body.brand-purple a:active:not(.btn) {
   -webkit-text-decoration-color: #3f2248;
-  -moz-text-decoration-color: #3f2248;
-       text-decoration-color: #3f2248;
+  text-decoration-color: #3f2248;
 }
 body.brand-purple blockquote.quotes {
   color: #3f2248;
@@ -440,15 +438,13 @@ body.brand-purple .id7-site-footer a:not(.btn),
 body.brand-purple .id7-site-footer a:link:not(.btn),
 body.brand-purple .id7-site-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #333333;
-  -moz-text-decoration-color: #333333;
-       text-decoration-color: #333333;
+  text-decoration-color: #333333;
 }
 body.brand-purple .id7-site-footer a:hover:not(.btn),
 body.brand-purple .id7-site-footer a:focus:not(.btn),
 body.brand-purple .id7-site-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #000000;
-  -moz-text-decoration-color: #000000;
-       text-decoration-color: #000000;
+  text-decoration-color: #000000;
 }
 body.brand-purple .id7-app-footer {
   background: #7b428e;
@@ -495,15 +491,13 @@ body.brand-purple .id7-app-footer a:not(.btn),
 body.brand-purple .id7-app-footer a:link:not(.btn),
 body.brand-purple .id7-app-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
-  -moz-text-decoration-color: #ffffff;
-       text-decoration-color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 body.brand-purple .id7-app-footer a:hover:not(.btn),
 body.brand-purple .id7-app-footer a:focus:not(.btn),
 body.brand-purple .id7-app-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
-  -moz-text-decoration-color: #cccccc;
-       text-decoration-color: #cccccc;
+  text-decoration-color: #cccccc;
 }
 body.brand-purple .id7-masthead .id7-search .id7-search-box {
   border-color: #7b428e;
@@ -643,15 +637,13 @@ body.brand-gray a:not(.btn),
 body.brand-gray a:link:not(.btn),
 body.brand-gray a:visited:not(.btn) {
   -webkit-text-decoration-color: #b9bfc4;
-  -moz-text-decoration-color: #b9bfc4;
-       text-decoration-color: #b9bfc4;
+  text-decoration-color: #b9bfc4;
 }
 body.brand-gray a:hover:not(.btn),
 body.brand-gray a:focus:not(.btn),
 body.brand-gray a:active:not(.btn) {
   -webkit-text-decoration-color: #515960;
-  -moz-text-decoration-color: #515960;
-       text-decoration-color: #515960;
+  text-decoration-color: #515960;
 }
 body.brand-gray blockquote.quotes {
   color: #515960;
@@ -1041,15 +1033,13 @@ body.brand-gray .id7-site-footer a:not(.btn),
 body.brand-gray .id7-site-footer a:link:not(.btn),
 body.brand-gray .id7-site-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #333333;
-  -moz-text-decoration-color: #333333;
-       text-decoration-color: #333333;
+  text-decoration-color: #333333;
 }
 body.brand-gray .id7-site-footer a:hover:not(.btn),
 body.brand-gray .id7-site-footer a:focus:not(.btn),
 body.brand-gray .id7-site-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #000000;
-  -moz-text-decoration-color: #000000;
-       text-decoration-color: #000000;
+  text-decoration-color: #000000;
 }
 body.brand-gray .id7-app-footer {
   background: #828c95;
@@ -1096,15 +1086,13 @@ body.brand-gray .id7-app-footer a:not(.btn),
 body.brand-gray .id7-app-footer a:link:not(.btn),
 body.brand-gray .id7-app-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
-  -moz-text-decoration-color: #ffffff;
-       text-decoration-color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 body.brand-gray .id7-app-footer a:hover:not(.btn),
 body.brand-gray .id7-app-footer a:focus:not(.btn),
 body.brand-gray .id7-app-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
-  -moz-text-decoration-color: #cccccc;
-       text-decoration-color: #cccccc;
+  text-decoration-color: #cccccc;
 }
 body.brand-gray .id7-masthead .id7-search .id7-search-box {
   border-color: #828c95;
@@ -1244,15 +1232,13 @@ body.brand-gold a:not(.btn),
 body.brand-gold a:link:not(.btn),
 body.brand-gold a:visited:not(.btn) {
   -webkit-text-decoration-color: #ebd984;
-  -moz-text-decoration-color: #ebd984;
-       text-decoration-color: #ebd984;
+  text-decoration-color: #ebd984;
 }
 body.brand-gold a:hover:not(.btn),
 body.brand-gold a:focus:not(.btn),
 body.brand-gold a:active:not(.btn) {
   -webkit-text-decoration-color: #8c7817;
-  -moz-text-decoration-color: #8c7817;
-       text-decoration-color: #8c7817;
+  text-decoration-color: #8c7817;
 }
 body.brand-gold blockquote.quotes {
   color: #8c7817;
@@ -1642,15 +1628,13 @@ body.brand-gold .id7-site-footer a:not(.btn),
 body.brand-gold .id7-site-footer a:link:not(.btn),
 body.brand-gold .id7-site-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #333333;
-  -moz-text-decoration-color: #333333;
-       text-decoration-color: #333333;
+  text-decoration-color: #333333;
 }
 body.brand-gold .id7-site-footer a:hover:not(.btn),
 body.brand-gold .id7-site-footer a:focus:not(.btn),
 body.brand-gold .id7-site-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #000000;
-  -moz-text-decoration-color: #000000;
-       text-decoration-color: #000000;
+  text-decoration-color: #000000;
 }
 body.brand-gold .id7-app-footer {
   background: #dcbe2d;
@@ -1697,15 +1681,13 @@ body.brand-gold .id7-app-footer a:not(.btn),
 body.brand-gold .id7-app-footer a:link:not(.btn),
 body.brand-gold .id7-app-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #333333;
-  -moz-text-decoration-color: #333333;
-       text-decoration-color: #333333;
+  text-decoration-color: #333333;
 }
 body.brand-gold .id7-app-footer a:hover:not(.btn),
 body.brand-gold .id7-app-footer a:focus:not(.btn),
 body.brand-gold .id7-app-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #000000;
-  -moz-text-decoration-color: #000000;
-       text-decoration-color: #000000;
+  text-decoration-color: #000000;
 }
 body.brand-gold .id7-masthead .id7-search .id7-search-box {
   border-color: #dcbe2d;
@@ -1845,15 +1827,13 @@ body.brand-blue a:not(.btn),
 body.brand-blue a:link:not(.btn),
 body.brand-blue a:visited:not(.btn) {
   -webkit-text-decoration-color: #bbd5eb;
-  -moz-text-decoration-color: #bbd5eb;
-       text-decoration-color: #bbd5eb;
+  text-decoration-color: #bbd5eb;
 }
 body.brand-blue a:hover:not(.btn),
 body.brand-blue a:focus:not(.btn),
 body.brand-blue a:active:not(.btn) {
   -webkit-text-decoration-color: #3172a9;
-  -moz-text-decoration-color: #3172a9;
-       text-decoration-color: #3172a9;
+  text-decoration-color: #3172a9;
 }
 body.brand-blue blockquote.quotes {
   color: #3172a9;
@@ -2243,15 +2223,13 @@ body.brand-blue .id7-site-footer a:not(.btn),
 body.brand-blue .id7-site-footer a:link:not(.btn),
 body.brand-blue .id7-site-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #333333;
-  -moz-text-decoration-color: #333333;
-       text-decoration-color: #333333;
+  text-decoration-color: #333333;
 }
 body.brand-blue .id7-site-footer a:hover:not(.btn),
 body.brand-blue .id7-site-footer a:focus:not(.btn),
 body.brand-blue .id7-site-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #000000;
-  -moz-text-decoration-color: #000000;
-       text-decoration-color: #000000;
+  text-decoration-color: #000000;
 }
 body.brand-blue .id7-app-footer {
   background: #6ca4d4;
@@ -2298,15 +2276,13 @@ body.brand-blue .id7-app-footer a:not(.btn),
 body.brand-blue .id7-app-footer a:link:not(.btn),
 body.brand-blue .id7-app-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
-  -moz-text-decoration-color: #ffffff;
-       text-decoration-color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 body.brand-blue .id7-app-footer a:hover:not(.btn),
 body.brand-blue .id7-app-footer a:focus:not(.btn),
 body.brand-blue .id7-app-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
-  -moz-text-decoration-color: #cccccc;
-       text-decoration-color: #cccccc;
+  text-decoration-color: #cccccc;
 }
 body.brand-blue .id7-masthead .id7-search .id7-search-box {
   border-color: #6ca4d4;
@@ -2446,15 +2422,13 @@ body.brand-orange a:not(.btn),
 body.brand-orange a:link:not(.btn),
 body.brand-orange a:visited:not(.btn) {
   -webkit-text-decoration-color: #f8c19b;
-  -moz-text-decoration-color: #f8c19b;
-       text-decoration-color: #f8c19b;
+  text-decoration-color: #f8c19b;
 }
 body.brand-orange a:hover:not(.btn),
 body.brand-orange a:focus:not(.btn),
 body.brand-orange a:active:not(.btn) {
   -webkit-text-decoration-color: #ba540d;
-  -moz-text-decoration-color: #ba540d;
-       text-decoration-color: #ba540d;
+  text-decoration-color: #ba540d;
 }
 body.brand-orange blockquote.quotes {
   color: #ba540d;
@@ -2844,15 +2818,13 @@ body.brand-orange .id7-site-footer a:not(.btn),
 body.brand-orange .id7-site-footer a:link:not(.btn),
 body.brand-orange .id7-site-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #333333;
-  -moz-text-decoration-color: #333333;
-       text-decoration-color: #333333;
+  text-decoration-color: #333333;
 }
 body.brand-orange .id7-site-footer a:hover:not(.btn),
 body.brand-orange .id7-site-footer a:focus:not(.btn),
 body.brand-orange .id7-site-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #000000;
-  -moz-text-decoration-color: #000000;
-       text-decoration-color: #000000;
+  text-decoration-color: #000000;
 }
 body.brand-orange .id7-app-footer {
   background: #f1863c;
@@ -2899,15 +2871,13 @@ body.brand-orange .id7-app-footer a:not(.btn),
 body.brand-orange .id7-app-footer a:link:not(.btn),
 body.brand-orange .id7-app-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
-  -moz-text-decoration-color: #ffffff;
-       text-decoration-color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 body.brand-orange .id7-app-footer a:hover:not(.btn),
 body.brand-orange .id7-app-footer a:focus:not(.btn),
 body.brand-orange .id7-app-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
-  -moz-text-decoration-color: #cccccc;
-       text-decoration-color: #cccccc;
+  text-decoration-color: #cccccc;
 }
 body.brand-orange .id7-masthead .id7-search .id7-search-box {
   border-color: #f1863c;
@@ -3047,15 +3017,13 @@ body.brand-green a:not(.btn),
 body.brand-green a:link:not(.btn),
 body.brand-green a:visited:not(.btn) {
   -webkit-text-decoration-color: #d3d962;
-  -moz-text-decoration-color: #d3d962;
-       text-decoration-color: #d3d962;
+  text-decoration-color: #d3d962;
 }
 body.brand-green a:hover:not(.btn),
 body.brand-green a:focus:not(.btn),
 body.brand-green a:active:not(.btn) {
   -webkit-text-decoration-color: #565916;
-  -moz-text-decoration-color: #565916;
-       text-decoration-color: #565916;
+  text-decoration-color: #565916;
 }
 body.brand-green blockquote.quotes {
   color: #565916;
@@ -3445,15 +3413,13 @@ body.brand-green .id7-site-footer a:not(.btn),
 body.brand-green .id7-site-footer a:link:not(.btn),
 body.brand-green .id7-site-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #333333;
-  -moz-text-decoration-color: #333333;
-       text-decoration-color: #333333;
+  text-decoration-color: #333333;
 }
 body.brand-green .id7-site-footer a:hover:not(.btn),
 body.brand-green .id7-site-footer a:focus:not(.btn),
 body.brand-green .id7-site-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #000000;
-  -moz-text-decoration-color: #000000;
-       text-decoration-color: #000000;
+  text-decoration-color: #000000;
 }
 body.brand-green .id7-app-footer {
   background: #a5ab2a;
@@ -3500,15 +3466,13 @@ body.brand-green .id7-app-footer a:not(.btn),
 body.brand-green .id7-app-footer a:link:not(.btn),
 body.brand-green .id7-app-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
-  -moz-text-decoration-color: #ffffff;
-       text-decoration-color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 body.brand-green .id7-app-footer a:hover:not(.btn),
 body.brand-green .id7-app-footer a:focus:not(.btn),
 body.brand-green .id7-app-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
-  -moz-text-decoration-color: #cccccc;
-       text-decoration-color: #cccccc;
+  text-decoration-color: #cccccc;
 }
 body.brand-green .id7-masthead .id7-search .id7-search-box {
   border-color: #a5ab2a;
@@ -3648,15 +3612,13 @@ body.brand-red a:not(.btn),
 body.brand-red a:link:not(.btn),
 body.brand-red a:visited:not(.btn) {
   -webkit-text-decoration-color: #d88a91;
-  -moz-text-decoration-color: #d88a91;
-       text-decoration-color: #d88a91;
+  text-decoration-color: #d88a91;
 }
 body.brand-red a:hover:not(.btn),
 body.brand-red a:focus:not(.btn),
 body.brand-red a:active:not(.btn) {
   -webkit-text-decoration-color: #71262d;
-  -moz-text-decoration-color: #71262d;
-       text-decoration-color: #71262d;
+  text-decoration-color: #71262d;
 }
 body.brand-red blockquote.quotes {
   color: #71262d;
@@ -4046,15 +4008,13 @@ body.brand-red .id7-site-footer a:not(.btn),
 body.brand-red .id7-site-footer a:link:not(.btn),
 body.brand-red .id7-site-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #333333;
-  -moz-text-decoration-color: #333333;
-       text-decoration-color: #333333;
+  text-decoration-color: #333333;
 }
 body.brand-red .id7-site-footer a:hover:not(.btn),
 body.brand-red .id7-site-footer a:focus:not(.btn),
 body.brand-red .id7-site-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #000000;
-  -moz-text-decoration-color: #000000;
-       text-decoration-color: #000000;
+  text-decoration-color: #000000;
 }
 body.brand-red .id7-app-footer {
   background: #bd3f4b;
@@ -4101,15 +4061,13 @@ body.brand-red .id7-app-footer a:not(.btn),
 body.brand-red .id7-app-footer a:link:not(.btn),
 body.brand-red .id7-app-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
-  -moz-text-decoration-color: #ffffff;
-       text-decoration-color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 body.brand-red .id7-app-footer a:hover:not(.btn),
 body.brand-red .id7-app-footer a:focus:not(.btn),
 body.brand-red .id7-app-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
-  -moz-text-decoration-color: #cccccc;
-       text-decoration-color: #cccccc;
+  text-decoration-color: #cccccc;
 }
 body.brand-red .id7-masthead .id7-search .id7-search-box {
   border-color: #bd3f4b;
