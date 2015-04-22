@@ -111,6 +111,9 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
 .id7-main-content-area .boxstyle_.box1 .h6 {
   color: inherit;
 }
+.id7-main-content-area .boxstyle_.box1 blockquote.quotes {
+  color: inherit;
+}
 .id7-main-content-area .boxstyle_.box2 {
   border: 0;
   background: #f2ecf4;
@@ -133,6 +136,9 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
 .id7-main-content-area .boxstyle_.box2 .h4,
 .id7-main-content-area .boxstyle_.box2 .h5,
 .id7-main-content-area .boxstyle_.box2 .h6 {
+  color: inherit;
+}
+.id7-main-content-area .boxstyle_.box2 blockquote.quotes {
   color: inherit;
 }
 .id7-main-content-area .boxstyle_.box3 {
@@ -159,6 +165,9 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
 .id7-main-content-area .boxstyle_.box3 .h6 {
   color: inherit;
 }
+.id7-main-content-area .boxstyle_.box3 blockquote.quotes {
+  color: inherit;
+}
 .id7-main-content-area .boxstyle_.feature-image1 {
   border: 0;
   background: url(../site/site1/banner-image.jpg) top right no-repeat;
@@ -183,6 +192,9 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
 .id7-main-content-area .boxstyle_.feature-image1 .h6 {
   color: inherit;
 }
+.id7-main-content-area .boxstyle_.feature-image1 blockquote.quotes {
+  color: inherit;
+}
 .id7-main-content-area .boxstyle_.feature-image2 {
   border: 0;
   background: url(../site/site3/banner-image.jpg) top right no-repeat;
@@ -205,6 +217,9 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
 .id7-main-content-area .boxstyle_.feature-image2 .h4,
 .id7-main-content-area .boxstyle_.feature-image2 .h5,
 .id7-main-content-area .boxstyle_.feature-image2 .h6 {
+  color: inherit;
+}
+.id7-main-content-area .boxstyle_.feature-image2 blockquote.quotes {
   color: inherit;
 }
 .id7-main-content-area .feature-box {

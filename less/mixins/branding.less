@@ -193,6 +193,14 @@
   .header-colour(@colour);
   .link-colour(@colour);
 
+  blockquote.quotes{
+    color: darken(@colour, 20%);
+
+    &::before {
+      color: @colour;
+    }
+  }
+
   .brand-bg { background: @colour; }
   .brand-text { color: @colour; }
   .brand-border { border-color: @colour; }

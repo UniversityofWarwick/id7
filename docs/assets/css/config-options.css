@@ -52,6 +52,12 @@ body.brand-purple a:active:not(.btn) {
   -moz-text-decoration-color: #3f2248;
        text-decoration-color: #3f2248;
 }
+body.brand-purple blockquote.quotes {
+  color: #3f2248;
+}
+body.brand-purple blockquote.quotes::before {
+  color: #7b428e;
+}
 body.brand-purple .brand-bg {
   background: #7b428e;
 }
@@ -553,6 +559,9 @@ body.brand-purple .boxstyle_.box1 .h5,
 body.brand-purple .boxstyle_.box1 .h6 {
   color: inherit;
 }
+body.brand-purple .boxstyle_.box1 blockquote.quotes {
+  color: inherit;
+}
 body.brand-purple .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
@@ -575,6 +584,9 @@ body.brand-purple .boxstyle_.box2 .h3,
 body.brand-purple .boxstyle_.box2 .h4,
 body.brand-purple .boxstyle_.box2 .h5,
 body.brand-purple .boxstyle_.box2 .h6 {
+  color: inherit;
+}
+body.brand-purple .boxstyle_.box2 blockquote.quotes {
   color: inherit;
 }
 body.brand-purple .boxstyle_.box3 {
@@ -640,6 +652,12 @@ body.brand-gray a:active:not(.btn) {
   -webkit-text-decoration-color: #515960;
   -moz-text-decoration-color: #515960;
        text-decoration-color: #515960;
+}
+body.brand-gray blockquote.quotes {
+  color: #515960;
+}
+body.brand-gray blockquote.quotes::before {
+  color: #828c95;
 }
 body.brand-gray .brand-bg {
   background: #828c95;
@@ -1142,6 +1160,9 @@ body.brand-gray .boxstyle_.box1 .h5,
 body.brand-gray .boxstyle_.box1 .h6 {
   color: inherit;
 }
+body.brand-gray .boxstyle_.box1 blockquote.quotes {
+  color: inherit;
+}
 body.brand-gray .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
@@ -1164,6 +1185,9 @@ body.brand-gray .boxstyle_.box2 .h3,
 body.brand-gray .boxstyle_.box2 .h4,
 body.brand-gray .boxstyle_.box2 .h5,
 body.brand-gray .boxstyle_.box2 .h6 {
+  color: inherit;
+}
+body.brand-gray .boxstyle_.box2 blockquote.quotes {
   color: inherit;
 }
 body.brand-gray .boxstyle_.box3 {
@@ -1229,6 +1253,12 @@ body.brand-gold a:active:not(.btn) {
   -webkit-text-decoration-color: #8c7817;
   -moz-text-decoration-color: #8c7817;
        text-decoration-color: #8c7817;
+}
+body.brand-gold blockquote.quotes {
+  color: #8c7817;
+}
+body.brand-gold blockquote.quotes::before {
+  color: #dcbe2d;
 }
 body.brand-gold .brand-bg {
   background: #dcbe2d;
@@ -1731,6 +1761,9 @@ body.brand-gold .boxstyle_.box1 .h5,
 body.brand-gold .boxstyle_.box1 .h6 {
   color: inherit;
 }
+body.brand-gold .boxstyle_.box1 blockquote.quotes {
+  color: inherit;
+}
 body.brand-gold .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
@@ -1753,6 +1786,9 @@ body.brand-gold .boxstyle_.box2 .h3,
 body.brand-gold .boxstyle_.box2 .h4,
 body.brand-gold .boxstyle_.box2 .h5,
 body.brand-gold .boxstyle_.box2 .h6 {
+  color: inherit;
+}
+body.brand-gold .boxstyle_.box2 blockquote.quotes {
   color: inherit;
 }
 body.brand-gold .boxstyle_.box3 {
@@ -1818,6 +1854,12 @@ body.brand-blue a:active:not(.btn) {
   -webkit-text-decoration-color: #3172a9;
   -moz-text-decoration-color: #3172a9;
        text-decoration-color: #3172a9;
+}
+body.brand-blue blockquote.quotes {
+  color: #3172a9;
+}
+body.brand-blue blockquote.quotes::before {
+  color: #6ca4d4;
 }
 body.brand-blue .brand-bg {
   background: #6ca4d4;
@@ -2320,6 +2362,9 @@ body.brand-blue .boxstyle_.box1 .h5,
 body.brand-blue .boxstyle_.box1 .h6 {
   color: inherit;
 }
+body.brand-blue .boxstyle_.box1 blockquote.quotes {
+  color: inherit;
+}
 body.brand-blue .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
@@ -2342,6 +2387,9 @@ body.brand-blue .boxstyle_.box2 .h3,
 body.brand-blue .boxstyle_.box2 .h4,
 body.brand-blue .boxstyle_.box2 .h5,
 body.brand-blue .boxstyle_.box2 .h6 {
+  color: inherit;
+}
+body.brand-blue .boxstyle_.box2 blockquote.quotes {
   color: inherit;
 }
 body.brand-blue .boxstyle_.box3 {
@@ -2407,6 +2455,12 @@ body.brand-orange a:active:not(.btn) {
   -webkit-text-decoration-color: #ba540d;
   -moz-text-decoration-color: #ba540d;
        text-decoration-color: #ba540d;
+}
+body.brand-orange blockquote.quotes {
+  color: #ba540d;
+}
+body.brand-orange blockquote.quotes::before {
+  color: #f1863c;
 }
 body.brand-orange .brand-bg {
   background: #f1863c;
@@ -2909,6 +2963,9 @@ body.brand-orange .boxstyle_.box1 .h5,
 body.brand-orange .boxstyle_.box1 .h6 {
   color: inherit;
 }
+body.brand-orange .boxstyle_.box1 blockquote.quotes {
+  color: inherit;
+}
 body.brand-orange .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
@@ -2931,6 +2988,9 @@ body.brand-orange .boxstyle_.box2 .h3,
 body.brand-orange .boxstyle_.box2 .h4,
 body.brand-orange .boxstyle_.box2 .h5,
 body.brand-orange .boxstyle_.box2 .h6 {
+  color: inherit;
+}
+body.brand-orange .boxstyle_.box2 blockquote.quotes {
   color: inherit;
 }
 body.brand-orange .boxstyle_.box3 {
@@ -2996,6 +3056,12 @@ body.brand-green a:active:not(.btn) {
   -webkit-text-decoration-color: #565916;
   -moz-text-decoration-color: #565916;
        text-decoration-color: #565916;
+}
+body.brand-green blockquote.quotes {
+  color: #565916;
+}
+body.brand-green blockquote.quotes::before {
+  color: #a5ab2a;
 }
 body.brand-green .brand-bg {
   background: #a5ab2a;
@@ -3498,6 +3564,9 @@ body.brand-green .boxstyle_.box1 .h5,
 body.brand-green .boxstyle_.box1 .h6 {
   color: inherit;
 }
+body.brand-green .boxstyle_.box1 blockquote.quotes {
+  color: inherit;
+}
 body.brand-green .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
@@ -3520,6 +3589,9 @@ body.brand-green .boxstyle_.box2 .h3,
 body.brand-green .boxstyle_.box2 .h4,
 body.brand-green .boxstyle_.box2 .h5,
 body.brand-green .boxstyle_.box2 .h6 {
+  color: inherit;
+}
+body.brand-green .boxstyle_.box2 blockquote.quotes {
   color: inherit;
 }
 body.brand-green .boxstyle_.box3 {
@@ -3585,6 +3657,12 @@ body.brand-red a:active:not(.btn) {
   -webkit-text-decoration-color: #71262d;
   -moz-text-decoration-color: #71262d;
        text-decoration-color: #71262d;
+}
+body.brand-red blockquote.quotes {
+  color: #71262d;
+}
+body.brand-red blockquote.quotes::before {
+  color: #bd3f4b;
 }
 body.brand-red .brand-bg {
   background: #bd3f4b;
@@ -4087,6 +4165,9 @@ body.brand-red .boxstyle_.box1 .h5,
 body.brand-red .boxstyle_.box1 .h6 {
   color: inherit;
 }
+body.brand-red .boxstyle_.box1 blockquote.quotes {
+  color: inherit;
+}
 body.brand-red .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
@@ -4109,6 +4190,9 @@ body.brand-red .boxstyle_.box2 .h3,
 body.brand-red .boxstyle_.box2 .h4,
 body.brand-red .boxstyle_.box2 .h5,
 body.brand-red .boxstyle_.box2 .h6 {
+  color: inherit;
+}
+body.brand-red .boxstyle_.box2 blockquote.quotes {
   color: inherit;
 }
 body.brand-red .boxstyle_.box3 {

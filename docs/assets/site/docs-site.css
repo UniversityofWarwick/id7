@@ -66,6 +66,12 @@ a:active:not(.btn) {
   -moz-text-decoration-color: #3172a9;
        text-decoration-color: #3172a9;
 }
+blockquote.quotes {
+  color: #3172a9;
+}
+blockquote.quotes::before {
+  color: #6ca4d4;
+}
 .brand-bg {
   background: #6ca4d4;
 }
@@ -567,6 +573,9 @@ html.no-not-selector .id7-app-footer a:active {
 .boxstyle_.box1 .h6 {
   color: inherit;
 }
+.boxstyle_.box1 blockquote.quotes {
+  color: inherit;
+}
 .boxstyle_.box2 {
   border: 0;
   background: #eeeeee;
@@ -589,6 +598,9 @@ html.no-not-selector .id7-app-footer a:active {
 .boxstyle_.box2 .h4,
 .boxstyle_.box2 .h5,
 .boxstyle_.box2 .h6 {
+  color: inherit;
+}
+.boxstyle_.box2 blockquote.quotes {
   color: inherit;
 }
 .boxstyle_.box3 {

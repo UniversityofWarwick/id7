@@ -12,6 +12,10 @@
   .filled(@bg, @text-colour: @text-color) when not (@text-colour = inherit) {
     .header-colour(inherit);
     // ID-78 Hanging fire on this for now .link-colour(inherit);
+
+    blockquote.quotes {
+      color: inherit;
+    }
   }
 
   .bordered(@border-colour, @text-colour: inherit) {
