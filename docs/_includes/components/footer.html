@@ -3,11 +3,13 @@
 <p class="lead">The page footer contains common links for the whole application and, optionally, for the site.</p>
 
 {% highlight html %}
-<footer class="id7-page-footer">
-    <div class="id7-site-footer">...</div>
-    <div class="id7-app-footer">...</div>
+<footer class="id7-page-footer id7-footer-coloured">
+  <div class="id7-site-footer">...</div>
+  <div class="id7-app-footer">...</div>
 </footer>
 {% endhighlight %}
+
+<p>The footer <strong>MUST</strong> use one of <code>id7-footer-coloured</code> or <code>id7-footer-divider</code> as detailed below.</p>
 
 <h3>Site footer</h3>
 
@@ -21,3 +23,39 @@ Typical links are for application platform information, copyright, terms of use,
 <p>For applications hosted by IT Services, it is usually appropriate to link to the relevant Sitebuilder pages. You will need to link to
 vendor-specific pages if the application has differing policies. <b>If you link to central pages, you must ensure that your application
 does follow these policies and procedures without conflict.</b></p>
+
+<h3>Coloured footer</h3>
+
+<p>By adding the class <code>id7-footer-coloured</code> to the <code>&lt;footer&gt;</code> element, the site-wide footer will be coloured. You can then add a logo bleed to the app footer by using the following HTML:</p>
+
+{% highlight html %}
+<footer class="id7-page-footer id7-footer-coloured">
+  <div class="id7-site-footer">...</div>
+  <div class="id7-app-footer">
+    <div class="id7-logo-bleed"></div>
+
+    ...
+  </div>
+</footer>
+{% endhighlight %}
+
+<h3>Footer with divider</h3>
+
+<p>By adding the class <code>id7-footer-divider</code> to the <code>&lt;footer&gt;</code> element, the site-wide footer will be white and it is possible to add a divider at the top of it by using the following HTML:
+
+{% highlight html %}
+<footer class="id7-page-footer id7-footer-divider">
+  <div class="id7-site-footer">
+    <div class="id7-horizontal-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" width="1130" height="40" viewBox="0, 0, 1130, 40">
+        <path d="m 0,0 1030.48, 0 22.8,40 16.96,-31.4 16.96,31.4 22.8,-40 20,0" class="divider" stroke="#383838" fill="none" />
+      </svg>
+    </div>
+
+    ...
+  </div>
+  <div class="id7-app-footer">...</div>
+</footer>
+{% endhighlight %}
+
+<p>The divider will be the brand colour.</p>
