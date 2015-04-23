@@ -489,6 +489,7 @@ html.no-not-selector .carousel-nav a:active {
 .carousel-nav ul.nav > li {
   position: static;
   display: list-item;
+  margin: 0;
 }
 .carousel-nav ul.nav > li > a {
   position: static;
