@@ -9830,47 +9830,6 @@ footer .id7-app-footer > .navbar-collapse {
     margin-left: 0;
   }
 }
-@media screen {
-  footer .id7-site-footer .id7-logo-bleed,
-  footer .id7-app-footer .id7-logo-bleed {
-    position: relative;
-    position: absolute;
-    top: 0;
-    right: 10%;
-    width: 81.2392px;
-    height: 40px;
-  }
-  footer .id7-site-footer .id7-logo-bleed::before,
-  footer .id7-app-footer .id7-logo-bleed::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 0;
-    height: 0;
-    content: '';
-    border-top: 40px solid #d3d3d3;
-    border-right: 22.82px solid transparent;
-    border-left: 22.82px solid transparent;
-  }
-  footer .id7-site-footer .id7-logo-bleed::after,
-  footer .id7-app-footer .id7-logo-bleed::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    width: 0;
-    height: 0;
-    content: '';
-    border-top: 40px solid #d3d3d3;
-    border-right: 22.82px solid transparent;
-    border-left: 22.82px solid transparent;
-  }
-  footer .id7-site-footer .id7-logo-bleed + *,
-  footer .id7-app-footer .id7-logo-bleed + * {
-    margin-top: 20px;
-  }
-}
 footer .id7-app-footer {
   font-size: 85%;
 }
@@ -9912,6 +9871,63 @@ footer .id7-app-footer .id7-footer-utility ul > li:first-child:before {
   footer .id7-app-footer .id7-footer-utility ul a[href]:after {
     content: "";
   }
+}
+@media screen {
+  footer .id7-site-footer .id7-logo-bleed,
+  footer .id7-app-footer .id7-logo-bleed {
+    position: relative;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    width: 81.2392px;
+    height: 40px;
+  }
+  footer .id7-site-footer .id7-logo-bleed::before,
+  footer .id7-app-footer .id7-logo-bleed::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 40px solid white;
+    border-right: 22.82px solid transparent;
+    border-left: 22.82px solid transparent;
+  }
+  footer .id7-site-footer .id7-logo-bleed::after,
+  footer .id7-app-footer .id7-logo-bleed::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 40px solid white;
+    border-right: 22.82px solid transparent;
+    border-left: 22.82px solid transparent;
+  }
+  footer .id7-site-footer .id7-logo-bleed + *,
+  footer .id7-app-footer .id7-logo-bleed + * {
+    margin-top: 20px;
+  }
+}
+footer .id7-site-footer .id7-horizontal-divider,
+footer .id7-app-footer .id7-horizontal-divider {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  left: 20px;
+  overflow: hidden;
+}
+footer .id7-site-footer .id7-horizontal-divider > svg,
+footer .id7-app-footer .id7-horizontal-divider > svg {
+  float: right;
+}
+footer .id7-site-footer .id7-horizontal-divider + *,
+footer .id7-app-footer .id7-horizontal-divider + * {
+  margin-top: 20px;
 }
 .id7-non-branded .id7-page-footer .id7-site-footer .id7-logo-bleed,
 .id7-non-branded .id7-page-footer .id7-app-footer .id7-logo-bleed {

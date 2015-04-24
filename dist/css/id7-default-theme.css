@@ -410,115 +410,129 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   border-color: #7b428e;
   border-color: rgba(123, 66, 142, .3);
 }
-.id7-site-footer {
-  color: #000;
-  background: #d3d3d3;
-}
-.id7-site-footer h1,
-.id7-site-footer h2,
-.id7-site-footer h3,
-.id7-site-footer h4,
-.id7-site-footer h5,
-.id7-site-footer h6,
-.id7-site-footer .h1,
-.id7-site-footer .h2,
-.id7-site-footer .h3,
-.id7-site-footer .h4,
-.id7-site-footer .h5,
-.id7-site-footer .h6 {
-  color: #000;
-}
-html.no-not-selector .id7-site-footer a,
-html.no-not-selector .id7-site-footer a:link,
-html.no-not-selector .id7-site-footer a:visited {
-  color: #000;
-}
-.id7-site-footer a:not(.btn),
-.id7-site-footer a:link:not(.btn),
-.id7-site-footer a:visited:not(.btn) {
-  color: #000;
-}
-html.no-not-selector .id7-site-footer a:hover,
-html.no-not-selector .id7-site-footer a:focus,
-html.no-not-selector .id7-site-footer a:active {
-  color: #000;
-}
-.id7-site-footer a:hover:not(.btn),
-.id7-site-footer a:focus:not(.btn),
-.id7-site-footer a:active:not(.btn) {
-  color: #000;
-}
-.id7-site-footer a:hover .new-window-link {
-  color: #000;
-}
-.id7-site-footer a:not(.btn),
-.id7-site-footer a:link:not(.btn),
-.id7-site-footer a:visited:not(.btn) {
-  -webkit-text-decoration-color: #333;
-     -moz-text-decoration-color: #333;
-          text-decoration-color: #333;
-}
-.id7-site-footer a:hover:not(.btn),
-.id7-site-footer a:focus:not(.btn),
-.id7-site-footer a:active:not(.btn) {
-  -webkit-text-decoration-color: #000;
-     -moz-text-decoration-color: #000;
-          text-decoration-color: #000;
-}
-.id7-app-footer {
+.id7-page-footer .id7-app-footer {
   color: #fff;
   background: #7b428e;
 }
-.id7-app-footer h1,
-.id7-app-footer h2,
-.id7-app-footer h3,
-.id7-app-footer h4,
-.id7-app-footer h5,
-.id7-app-footer h6,
-.id7-app-footer .h1,
-.id7-app-footer .h2,
-.id7-app-footer .h3,
-.id7-app-footer .h4,
-.id7-app-footer .h5,
-.id7-app-footer .h6 {
+.id7-page-footer .id7-app-footer h1,
+.id7-page-footer .id7-app-footer h2,
+.id7-page-footer .id7-app-footer h3,
+.id7-page-footer .id7-app-footer h4,
+.id7-page-footer .id7-app-footer h5,
+.id7-page-footer .id7-app-footer h6,
+.id7-page-footer .id7-app-footer .h1,
+.id7-page-footer .id7-app-footer .h2,
+.id7-page-footer .id7-app-footer .h3,
+.id7-page-footer .id7-app-footer .h4,
+.id7-page-footer .id7-app-footer .h5,
+.id7-page-footer .id7-app-footer .h6 {
   color: #fff;
 }
-html.no-not-selector .id7-app-footer a,
-html.no-not-selector .id7-app-footer a:link,
-html.no-not-selector .id7-app-footer a:visited {
+html.no-not-selector .id7-page-footer .id7-app-footer a,
+html.no-not-selector .id7-page-footer .id7-app-footer a:link,
+html.no-not-selector .id7-page-footer .id7-app-footer a:visited {
   color: #fff;
 }
-.id7-app-footer a:not(.btn),
-.id7-app-footer a:link:not(.btn),
-.id7-app-footer a:visited:not(.btn) {
+.id7-page-footer .id7-app-footer a:not(.btn),
+.id7-page-footer .id7-app-footer a:link:not(.btn),
+.id7-page-footer .id7-app-footer a:visited:not(.btn) {
   color: #fff;
 }
-html.no-not-selector .id7-app-footer a:hover,
-html.no-not-selector .id7-app-footer a:focus,
-html.no-not-selector .id7-app-footer a:active {
+html.no-not-selector .id7-page-footer .id7-app-footer a:hover,
+html.no-not-selector .id7-page-footer .id7-app-footer a:focus,
+html.no-not-selector .id7-page-footer .id7-app-footer a:active {
   color: #ccc;
 }
-.id7-app-footer a:hover:not(.btn),
-.id7-app-footer a:focus:not(.btn),
-.id7-app-footer a:active:not(.btn) {
+.id7-page-footer .id7-app-footer a:hover:not(.btn),
+.id7-page-footer .id7-app-footer a:focus:not(.btn),
+.id7-page-footer .id7-app-footer a:active:not(.btn) {
   color: #ccc;
 }
-.id7-app-footer a:hover .new-window-link {
+.id7-page-footer .id7-app-footer a:hover .new-window-link {
   color: #ccc;
 }
-.id7-app-footer a:not(.btn),
-.id7-app-footer a:link:not(.btn),
-.id7-app-footer a:visited:not(.btn) {
+.id7-page-footer .id7-app-footer a:not(.btn),
+.id7-page-footer .id7-app-footer a:link:not(.btn),
+.id7-page-footer .id7-app-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #fff;
      -moz-text-decoration-color: #fff;
           text-decoration-color: #fff;
 }
-.id7-app-footer a:hover:not(.btn),
-.id7-app-footer a:focus:not(.btn),
-.id7-app-footer a:active:not(.btn) {
+.id7-page-footer .id7-app-footer a:hover:not(.btn),
+.id7-page-footer .id7-app-footer a:focus:not(.btn),
+.id7-page-footer .id7-app-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #ccc;
      -moz-text-decoration-color: #ccc;
           text-decoration-color: #ccc;
+}
+.id7-page-footer .id7-horizontal-divider .divider {
+  stroke: #7b428e;
+}
+.id7-page-footer.id7-footer-divider .id7-site-footer {
+  background: white;
+}
+.id7-page-footer.id7-footer-divider .id7-app-footer .id7-logo-bleed::before,
+.id7-page-footer.id7-footer-divider .id7-app-footer .id7-logo-bleed::after {
+  border-top-color: white;
+}
+.id7-page-footer.id7-footer-coloured .id7-site-footer {
+  color: #000;
+  background: #d3d3d3;
+}
+.id7-page-footer.id7-footer-coloured .id7-site-footer h1,
+.id7-page-footer.id7-footer-coloured .id7-site-footer h2,
+.id7-page-footer.id7-footer-coloured .id7-site-footer h3,
+.id7-page-footer.id7-footer-coloured .id7-site-footer h4,
+.id7-page-footer.id7-footer-coloured .id7-site-footer h5,
+.id7-page-footer.id7-footer-coloured .id7-site-footer h6,
+.id7-page-footer.id7-footer-coloured .id7-site-footer .h1,
+.id7-page-footer.id7-footer-coloured .id7-site-footer .h2,
+.id7-page-footer.id7-footer-coloured .id7-site-footer .h3,
+.id7-page-footer.id7-footer-coloured .id7-site-footer .h4,
+.id7-page-footer.id7-footer-coloured .id7-site-footer .h5,
+.id7-page-footer.id7-footer-coloured .id7-site-footer .h6 {
+  color: #000;
+}
+html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a,
+html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:link,
+html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:visited {
+  color: #000;
+}
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:not(.btn),
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:link:not(.btn),
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:visited:not(.btn) {
+  color: #000;
+}
+html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover,
+html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
+html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
+  color: #000;
+}
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:hover:not(.btn),
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:focus:not(.btn),
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:active:not(.btn) {
+  color: #000;
+}
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link {
+  color: #000;
+}
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:not(.btn),
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:link:not(.btn),
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:visited:not(.btn) {
+  -webkit-text-decoration-color: #333;
+     -moz-text-decoration-color: #333;
+          text-decoration-color: #333;
+}
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:hover:not(.btn),
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:focus:not(.btn),
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:active:not(.btn) {
+  -webkit-text-decoration-color: #000;
+     -moz-text-decoration-color: #000;
+          text-decoration-color: #000;
+}
+.id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::before,
+.id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
+  border-top-color: #d3d3d3;
 }
 .id7-masthead .id7-search .id7-search-box {
   border-color: #7b428e;

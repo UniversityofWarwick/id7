@@ -36,3 +36,19 @@
   border-bottom: (@width / 2) solid transparent;
   border-left: @height solid @color;
 }
+
+.triangle-colour(@direction, @colour) when (@direction = up) {
+  border-bottom-color: @colour;
+}
+
+.triangle-colour(@direction, @colour) when (@direction = down) {
+  border-top-color: @colour;
+}
+
+.triangle-colour(@direction, @colour) when (@direction = left) {
+  border-right-color: @colour;
+}
+
+.triangle-colour(@direction, @colour) when (@direction = right) {
+  border-left-color: @colour;
+}

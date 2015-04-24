@@ -30,3 +30,9 @@
 .logo-as-css(@width, @height, @colour) when (@height = auto) {
   .logo-as-css-base(@width, (@width / @logo-triangle-ratio), @colour);
 }
+
+.logo-as-css-colour(@colour) {
+  &::before, &::after {
+    .triangle-colour(down, @colour);
+  }
+}

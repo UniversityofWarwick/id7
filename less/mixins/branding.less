@@ -295,18 +295,44 @@
 }
 
 .apply-footer-brand(@colour) {
-  .id7-site-footer {
-    background: @id7-site-footer-colour;
-    color: contrast(@id7-site-footer-colour);
-    .header-colour(contrast(@id7-site-footer-colour));
-    .link-colour(contrast(@id7-site-footer-colour));
-  }
+  .id7-page-footer {
+    .id7-app-footer {
+      background: @colour;
+      color: contrast(@colour);
+      .header-colour(contrast(@colour));
+      .link-colour(contrast(@colour));
+    }
 
-  .id7-app-footer {
-    background: @colour;
-    color: contrast(@colour);
-    .header-colour(contrast(@colour));
-    .link-colour(contrast(@colour));
+    .id7-horizontal-divider .divider {
+      stroke: @colour;
+    }
+
+    &.id7-footer-divider {
+      .id7-site-footer {
+        background: white;
+      }
+
+      .id7-app-footer {
+        .id7-logo-bleed {
+          .logo-as-css-colour(white);
+        }
+      }
+    }
+
+    &.id7-footer-coloured {
+      .id7-site-footer {
+        background: @id7-site-footer-colour;
+        color: contrast(@id7-site-footer-colour);
+        .header-colour(contrast(@id7-site-footer-colour));
+        .link-colour(contrast(@id7-site-footer-colour));
+      }
+
+      .id7-app-footer {
+        .id7-logo-bleed {
+          .logo-as-css-colour(@id7-site-footer-colour);
+        }
+      }
+    }
   }
 }
 
