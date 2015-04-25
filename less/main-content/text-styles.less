@@ -28,6 +28,7 @@ a {
   font-weight: 700;
 }
 
+// ID-105 Reduce heading sizes on XS
 h1, .h1 { font-size: ceil((@font-size-h1 * @font-scale-xs)); }
 h2, .h2 { font-size: ceil((@font-size-h2 * @font-scale-xs)); }
 h3, .h3 { font-size: ceil((@font-size-h3 * @font-scale-xs)); }
@@ -42,6 +43,21 @@ h6, .h6 { font-size: ceil((@font-size-h6 * @font-scale-xs)); }
   h4, .h4 { font-size: @font-size-h4; }
   h5, .h5 { font-size: @font-size-h5; }
   h6, .h6 { font-size: @font-size-h6; }
+}
+
+// ID-105 Reduce spacing around major headings on XS
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: (@line-height-computed / 2);
+}
+
+@media (min-width: @grid-float-breakpoint) {
+  h1, .h1,
+  h2, .h2,
+  h3, .h3 {
+    margin-top: @line-height-computed;
+  }
 }
 
 h1 {

@@ -8276,7 +8276,7 @@ html.no-not-selector .id7-masthead .id7-header-text a:active {
 .id7-masthead .id7-header-text h1 {
   padding: 12px 0;
   margin: 0;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 24px;
 }
 @media (min-width: 768px) {
@@ -9352,6 +9352,24 @@ h6,
   h6,
   .h6 {
     font-size: 16px;
+  }
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-top: 11px;
+}
+@media (min-width: 768px) {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
+    margin-top: 22px;
   }
 }
 h1 {
