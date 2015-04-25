@@ -254,11 +254,6 @@
           var offsetTop = $('.id7-header-text').offset().top;
           var headerTextHeight = $('.id7-header-text').height();
 
-          // FIXME magic number for xs - this comes into play where we have a parent site header
-          if (headerTextHeight > 52) {
-            offsetTop += (headerTextHeight - 52);
-          }
-
           $h1.affix({
             offset: {
               top: offsetTop
@@ -276,11 +271,6 @@
           offsetTop = $h1.offset().top;
 
           var headerTextHeight = $('.id7-header-text').height();
-
-          // FIXME magic number for xs - this comes into play where we have a parent site header
-          if (headerTextHeight > 52) {
-            offsetTop += (headerTextHeight - 52);
-          }
         } else {
           offsetTop = $nav.offset().top;
         }
