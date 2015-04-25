@@ -104,15 +104,16 @@
 
     h1 {
       font-size: @id7-header-h1-font-size;
+
+      @media (max-width: (@grid-float-breakpoint - 1)) {
+        font-size: 2rem;
+      }
+
       line-height: @id7-header-h1-height;
       margin: 0;
       padding: @id7-header-h1-padding-vertical 0;
 
       &.affix {
-        .id7-parent-site-link {
-          display: none;
-        }
-
         top: 0;
         margin: 0 (-(@grid-gutter-width / 2));
         padding: @id7-header-h1-padding-vertical (@grid-gutter-width / 2);
@@ -141,28 +142,25 @@
     .id7-parent-site-link {
       color: @gray-light;
 
-      @media (max-width: (@grid-float-breakpoint - 1)) {
-        font-size: 1.25rem;
-        display: block;
-      }
+      &::after {
+        .fa();
+        content: @fa-var-play;
+        position: relative;
 
-      @media (min-width: @grid-float-breakpoint) {
-        &::after {
-          .fa();
+        font-size: 10px;
+        top: -2px;
+        margin-left: (@grid-gutter-width / 8);
+
+        @media (min-width: @grid-float-breakpoint) {
           font-size: 12px;
-          content: @fa-var-play;
-          margin-left: (@grid-gutter-width / 5);
-
-          position: relative;
           top: -4px;
+          margin-left: (@grid-gutter-width / 5);
         }
       }
     }
 
     .id7-current-site-link {
-      @media (max-width: (@grid-float-breakpoint - 1)) {
-        font-size: 2rem;
-      }
+
     }
   }
 

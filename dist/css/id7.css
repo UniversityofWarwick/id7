@@ -8280,6 +8280,11 @@ html.no-not-selector .id7-masthead .id7-header-text a:active {
   font-size: 30px;
   line-height: 24px;
 }
+@media (max-width: 767px) {
+  .id7-masthead .id7-header-text h1 {
+    font-size: 2rem;
+  }
+}
 .id7-masthead .id7-header-text h1.affix {
   top: 0;
   z-index: 10;
@@ -8287,9 +8292,6 @@ html.no-not-selector .id7-masthead .id7-header-text a:active {
   padding: 12px 20px;
   margin: 0 -20px;
   background-color: white;
-}
-.id7-masthead .id7-header-text h1.affix .id7-parent-site-link {
-  display: none;
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-header-text h1.affix {
@@ -8316,41 +8318,35 @@ html.no-not-selector .id7-masthead .id7-header-text a:active {
 .id7-masthead .id7-header-text .id7-parent-site-link {
   color: #777;
 }
-@media (max-width: 767px) {
-  .id7-masthead .id7-header-text .id7-parent-site-link {
-    display: block;
-    font-size: 1.25rem;
-  }
+.id7-masthead .id7-header-text .id7-parent-site-link::after {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  margin-left: 5px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  font-size: 10px;
+  content: "\f04b";
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.id7-masthead .id7-header-text .id7-parent-site-link::after.pull-left {
+  margin-right: .3em;
+}
+.id7-masthead .id7-header-text .id7-parent-site-link::after.pull-right {
+  margin-left: .3em;
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-header-text .id7-parent-site-link::after {
-    position: relative;
     top: -4px;
-    display: inline-block;
     margin-left: 8px;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
     font-size: 12px;
-    content: "\f04b";
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-         -o-transform: translate(0, 0);
-            transform: translate(0, 0);
-
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .id7-masthead .id7-header-text .id7-parent-site-link::after.pull-left {
-    margin-right: .3em;
-  }
-  .id7-masthead .id7-header-text .id7-parent-site-link::after.pull-right {
-    margin-left: .3em;
-  }
-}
-@media (max-width: 767px) {
-  .id7-masthead .id7-header-text .id7-current-site-link {
-    font-size: 2rem;
   }
 }
 .id7-masthead .id7-logo-row nav {
