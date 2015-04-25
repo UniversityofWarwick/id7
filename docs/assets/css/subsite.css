@@ -77,13 +77,15 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
 .id7-main-content-area .slideshow .carousel-controls a:link:not(.btn),
 .id7-main-content-area .slideshow .carousel-controls a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
-  text-decoration-color: #ffffff;
+  -moz-text-decoration-color: #ffffff;
+       text-decoration-color: #ffffff;
 }
 .id7-main-content-area .slideshow .carousel-controls a:hover:not(.btn),
 .id7-main-content-area .slideshow .carousel-controls a:focus:not(.btn),
 .id7-main-content-area .slideshow .carousel-controls a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
-  text-decoration-color: #cccccc;
+  -moz-text-decoration-color: #cccccc;
+       text-decoration-color: #cccccc;
 }
 .id7-main-content-area .boxstyle_.box1 {
   border: 0;
@@ -253,6 +255,7 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
   padding: 20px;
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=0);
@@ -313,9 +316,18 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
   margin: 0;
 }
 .id7-main-content-area .nav-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   width: 100%;
 }
 .id7-main-content-area .nav-flex > li {

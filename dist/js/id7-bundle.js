@@ -11929,7 +11929,6 @@ window.Modernizr = (function( window, document, undefined ) {
           this.markHeaderFixedPosition();
 
           var offsetTop = $('.id7-header-text').offset().top;
-          var headerTextHeight = $('.id7-header-text').height();
 
           $h1.affix({
             offset: {
@@ -11946,8 +11945,6 @@ window.Modernizr = (function( window, document, undefined ) {
         var offsetTop;
         if ($h1.length) {
           offsetTop = $h1.offset().top;
-
-          var headerTextHeight = $('.id7-header-text').height();
         } else {
           offsetTop = $nav.offset().top;
         }

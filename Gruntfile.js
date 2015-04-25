@@ -256,8 +256,7 @@ module.exports = function (grunt) {
       options: {
         compatibility: 'ie8',
         keepSpecialComments: '*',
-        noAdvanced: true,
-        sourceMap: true
+        advanced: false
       },
       minifyCore: {
         src: 'dist/css/<%= pkg.name %>.css',
@@ -381,26 +380,6 @@ module.exports = function (grunt) {
       docs: {}
     },
 
-    validation: {
-      options: {
-        charset: 'utf-8',
-        doctype: 'HTML5',
-        failHard: true,
-        reset: true,
-        relaxerror: [
-          'Element img is missing required attribute src.',
-          'Attribute autocomplete not allowed on element input at this point.',
-          'Attribute autocomplete not allowed on element button at this point.',
-          'Bad value separator for attribute role on element li.',
-          'Consider using the h1 element as a top-level heading only \\(all h1 elements are treated as top-level headings by many screen readers and other tools\\).',
-          'The color input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.'
-        ]
-      },
-      files: {
-        src: '_gh_pages/**/*.html'
-      }
-    },
-
     watch: {
       core: {
         files: '<%= jshint.core.src %>',
@@ -431,9 +410,6 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
   require('time-grunt')(grunt);
 
-  // Docs HTML validation task
-  //grunt.registerTask('validate-html', ['jekyll:docs', 'validation']);
-
   var runSubset = function (subset) {
     return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset;
   };
@@ -448,11 +424,6 @@ module.exports = function (grunt) {
   if (runSubset('core')) {
     testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'csslint:dist', 'test-js', 'docs']);
   }
-
-  // Skip HTML validation if running a different subset of the test suite
-  //if (runSubset('validate-html')) {
-  //  testSubtasks.push('validate-html');
-  //}
 
   grunt.registerTask('test', testSubtasks);
   grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jscs:core', 'jscs:test', 'qunit_junit', 'qunit']);
