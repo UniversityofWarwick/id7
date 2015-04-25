@@ -41,10 +41,12 @@
 @id7-header-height-sm: (round(@container-sm / @id7-header-ratio)); // ~240
 @id7-header-height-xs: 200px;
 
-@id7-header-h1-font-size: 30px;
+@id7-header-h1-font-size-sm: 30px;
+@id7-header-h1-font-size-xs: 20px;
+
 @id7-header-h1-height: (1.5 * @main-font-size);
 @id7-header-h1-padding-vertical: (@id7-masthead-bleed-height / 2);
-@id7-affixed-header-height-xs: 52px;
+@id7-affixed-header-height-xs: 48px;
 @id7-affixed-header-height-sm: 48px;
 
 @id7-navigation-height: 35px;
@@ -70,7 +72,7 @@
 @main-font-size: 16px;
 @main-font-weight: 300;
 
-@blockquote-font-size: @main-font-size;
+@blockquote-font-size: inherit;
 
 @headings-font-weight: 400;
 
@@ -98,6 +100,8 @@
 @font-size-h5: 20px;
 @font-size-h6: @main-font-size;
 @id7-h6-font-weight: bold;
+
+@font-scale-xs: 0.85;
 
 @border-radius-base: 0px;
 @border-radius-large: 0px;

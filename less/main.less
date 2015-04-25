@@ -1,11 +1,10 @@
 .id7-main-content-area {
   font-weight: @main-font-weight;
-  font-size: ceil((@main-font-size * 0.85));
+  font-size: ceil((@main-font-size * @font-scale-xs));
   font-weight: 400;
 
   label {
     color: #333;
-    font-size: floor((@main-font-size * 0.85));
   }
 
   @media (min-width: @screen-xs-min) {
