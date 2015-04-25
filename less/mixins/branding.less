@@ -26,14 +26,15 @@
 
 .apply-navbar-brand(@colour, @active-colour: screen(@colour, lighten(black, 30%))) {
   @border-colour: multiply(@colour, darken(white, 10%));
+  @contrast-colour: contrast(@colour, @text-color, white, 50%);
 
   .apply-navbar-brand(@colour,
-    contrast(@colour),
-    contrast(@colour),
-    contrast(@colour),
+    @contrast-colour,
+    @contrast-colour,
+    @contrast-colour,
     @border-colour,
     @active-colour,
-    contrast(@colour),
+    @contrast-colour,
     @border-colour
   );
 }
@@ -227,15 +228,16 @@
 
   .navbar-secondary {
     @secondary-accent-colour: multiply(@secondary-colour, darken(white, 10%));
+    @secondary-contrast-colour: contrast(@secondary-colour, @text-color, white, 50%);
 
     .apply-navbar-brand(
       @secondary-colour,
-      contrast(@secondary-colour),
-      contrast(@secondary-colour),
-      contrast(@secondary-colour),
+      @secondary-contrast-colour,
+      @secondary-contrast-colour,
+      @secondary-contrast-colour,
       @secondary-accent-colour,
       white,
-      contrast(@secondary-colour),
+      @secondary-contrast-colour,
       @secondary-accent-colour
     );
 
@@ -260,15 +262,16 @@
 
   .navbar-tertiary {
     @tertiary-accent-colour: multiply(@id7-navigation-tertiary-background-colour, darken(white, 10%));
+    @tertiary-contrast-colour: contrast(@id7-navigation-tertiary-background-colour, @text-color, white, 50%);
 
     .apply-navbar-brand(
     @id7-navigation-tertiary-background-colour,
-    contrast(@id7-navigation-tertiary-background-colour),
-    contrast(@id7-navigation-tertiary-background-colour),
-    contrast(@id7-navigation-tertiary-background-colour),
+    @tertiary-contrast-colour,
+    @tertiary-contrast-colour,
+    @tertiary-contrast-colour,
     @tertiary-accent-colour,
     white,
-    contrast(@id7-navigation-tertiary-background-colour),
+    @tertiary-contrast-colour,
     @tertiary-accent-colour);
   }
 
@@ -297,10 +300,12 @@
 .apply-footer-brand(@colour) {
   .id7-page-footer {
     .id7-app-footer {
+      @app-footer-text-colour: contrast(@colour, @text-color, white, 50%);
+
       background: @colour;
-      color: contrast(@colour);
-      .header-colour(contrast(@colour));
-      .link-colour(contrast(@colour));
+      color: @app-footer-text-colour;
+      .header-colour(@app-footer-text-colour);
+      .link-colour(@app-footer-text-colour);
     }
 
     .id7-horizontal-divider .divider {
@@ -321,10 +326,12 @@
 
     &.id7-footer-coloured {
       .id7-site-footer {
+        @site-footer-text-colour: contrast(@id7-site-footer-colour, @text-color, white, 50%);
+
         background: @id7-site-footer-colour;
-        color: contrast(@id7-site-footer-colour);
-        .header-colour(contrast(@id7-site-footer-colour));
-        .link-colour(contrast(@id7-site-footer-colour));
+        color: @site-footer-text-colour;
+        .header-colour(@site-footer-text-colour);
+        .link-colour(@site-footer-text-colour);
       }
 
       .id7-app-footer {
@@ -354,7 +361,7 @@
 
     .twitter-typeahead .tt-suggestion.tt-cursor {
       background: @colour;
-      color: contrast(@colour);
+      color: contrast(@colour, @text-color, white, 50%);
     }
   }
 

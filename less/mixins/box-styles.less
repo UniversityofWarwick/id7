@@ -10,8 +10,8 @@
   }
 
   .filled(@bg, @text-colour: @text-color) when not (@text-colour = inherit) {
-    .header-colour(inherit);
-    // ID-78 Hanging fire on this for now .link-colour(inherit);
+    .header-colour(@text-colour);
+    // ID-78 Hanging fire on this for now .link-colour(@text-colour);
 
     blockquote.quotes {
       color: inherit;
@@ -25,7 +25,7 @@
   }
 
   .bordered(@border-colour, @text-colour) when not (@text-colour = inherit) {
-    .header-colour(inherit);
-    // ID-78 Hanging fire on this for now .link-colour(inherit);
+    .header-colour(@text-colour);
+    // ID-78 Hanging fire on this for now .link-colour(@text-colour);
   }
 }

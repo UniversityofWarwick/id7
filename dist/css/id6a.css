@@ -1,6 +1,6 @@
 #masthead,
 #masthead.transparent {
-  color: black;
+  color: #383838;
   background-color: white;
 }
 html.no-not-selector #masthead a,
@@ -9,7 +9,7 @@ html.no-not-selector #masthead a:link,
 html.no-not-selector #masthead.transparent a:link,
 html.no-not-selector #masthead a:visited,
 html.no-not-selector #masthead.transparent a:visited {
-  color: inherit;
+  color: #383838;
 }
 #masthead a:not(.btn),
 #masthead.transparent a:not(.btn),
@@ -17,7 +17,7 @@ html.no-not-selector #masthead.transparent a:visited {
 #masthead.transparent a:link:not(.btn),
 #masthead a:visited:not(.btn),
 #masthead.transparent a:visited:not(.btn) {
-  color: inherit;
+  color: #383838;
 }
 html.no-not-selector #masthead a:hover,
 html.no-not-selector #masthead.transparent a:hover,
@@ -25,7 +25,7 @@ html.no-not-selector #masthead a:focus,
 html.no-not-selector #masthead.transparent a:focus,
 html.no-not-selector #masthead a:active,
 html.no-not-selector #masthead.transparent a:active {
-  color: inherit;
+  color: #050505;
 }
 #masthead a:hover:not(.btn),
 #masthead.transparent a:hover:not(.btn),
@@ -33,7 +33,31 @@ html.no-not-selector #masthead.transparent a:active {
 #masthead.transparent a:focus:not(.btn),
 #masthead a:active:not(.btn),
 #masthead.transparent a:active:not(.btn) {
-  color: inherit;
+  color: #050505;
+}
+#masthead a:hover .new-window-link,
+#masthead.transparent a:hover .new-window-link {
+  color: #050505;
+}
+#masthead a:not(.btn),
+#masthead.transparent a:not(.btn),
+#masthead a:link:not(.btn),
+#masthead.transparent a:link:not(.btn),
+#masthead a:visited:not(.btn),
+#masthead.transparent a:visited:not(.btn) {
+  -webkit-text-decoration-color: #6b6b6b;
+     -moz-text-decoration-color: #6b6b6b;
+          text-decoration-color: #6b6b6b;
+}
+#masthead a:hover:not(.btn),
+#masthead.transparent a:hover:not(.btn),
+#masthead a:focus:not(.btn),
+#masthead.transparent a:focus:not(.btn),
+#masthead a:active:not(.btn),
+#masthead.transparent a:active:not(.btn) {
+  -webkit-text-decoration-color: #050505;
+     -moz-text-decoration-color: #050505;
+          text-decoration-color: #050505;
 }
 #warwick-logo-link {
   background-image: url("../images/id6a-logotype.png");

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-primary{% if page.slug %} hidden-xs{% endif %}" role="navigation">
   <ul class="nav navbar-nav">
-    <li{% if page.slug contains 'getting-started' %} class="active"{% endif %}><a href="{{ site.prefix }}getting-started">Getting started</a></li>
+    <li class="first{% if page.slug contains 'getting-started' %} active{% endif %}"><a href="{{ site.prefix }}getting-started">Getting started</a></li>
     <li{% if page.slug contains 'components' %} class="active"{% endif %}><a href="{{ site.prefix }}components">Components</a></li>
     <li{% if page.slug contains 'javascript' %} class="active"{% endif %}><a href="{{ site.prefix }}javascript">JavaScript</a></li>
     <li class="{% if page.slug contains 'bacon-ipsum' %}next-secondary {% endif %}{% if page.slug contains 'examples' %}active {% endif %}dropdown">

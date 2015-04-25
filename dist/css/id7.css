@@ -8214,22 +8214,39 @@ html.no-not-selector .id7-utility-bar .popover.account-information .actions a:ac
 html.no-not-selector .id7-masthead .id7-header-text a,
 html.no-not-selector .id7-masthead .id7-header-text a:link,
 html.no-not-selector .id7-masthead .id7-header-text a:visited {
-  color: inherit;
+  color: #383838;
 }
 .id7-masthead .id7-header-text a:not(.btn),
 .id7-masthead .id7-header-text a:link:not(.btn),
 .id7-masthead .id7-header-text a:visited:not(.btn) {
-  color: inherit;
+  color: #383838;
 }
 html.no-not-selector .id7-masthead .id7-header-text a:hover,
 html.no-not-selector .id7-masthead .id7-header-text a:focus,
 html.no-not-selector .id7-masthead .id7-header-text a:active {
-  color: inherit;
+  color: #050505;
 }
 .id7-masthead .id7-header-text a:hover:not(.btn),
 .id7-masthead .id7-header-text a:focus:not(.btn),
 .id7-masthead .id7-header-text a:active:not(.btn) {
-  color: inherit;
+  color: #050505;
+}
+.id7-masthead .id7-header-text a:hover .new-window-link {
+  color: #050505;
+}
+.id7-masthead .id7-header-text a:not(.btn),
+.id7-masthead .id7-header-text a:link:not(.btn),
+.id7-masthead .id7-header-text a:visited:not(.btn) {
+  -webkit-text-decoration-color: #6b6b6b;
+     -moz-text-decoration-color: #6b6b6b;
+          text-decoration-color: #6b6b6b;
+}
+.id7-masthead .id7-header-text a:hover:not(.btn),
+.id7-masthead .id7-header-text a:focus:not(.btn),
+.id7-masthead .id7-header-text a:active:not(.btn) {
+  -webkit-text-decoration-color: #050505;
+     -moz-text-decoration-color: #050505;
+          text-decoration-color: #050505;
 }
 html.no-not-selector .id7-masthead .id7-header-text a,
 html.no-not-selector .id7-masthead .id7-header-text a:link,
@@ -8744,7 +8761,7 @@ html.no-not-selector .id7-masthead .id7-logo-row nav a:active {
   background: none;
 }
 .id7-header-image-container .carousel .carousel-indicators li.active::after {
-  color: #000;
+  color: #383838;
 }
 .carousel h1,
 .carousel h2,
@@ -8758,7 +8775,7 @@ html.no-not-selector .id7-masthead .id7-logo-row nav a:active {
 .carousel .h4,
 .carousel .h5,
 .carousel .h6 {
-  color: inherit;
+  color: white;
 }
 html.no-not-selector .carousel a,
 html.no-not-selector .carousel a:link,

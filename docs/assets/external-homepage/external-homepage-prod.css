@@ -590,7 +590,7 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
 .jumbotron-carousel .jumbotron .h4,
 .jumbotron-carousel .jumbotron .h5,
 .jumbotron-carousel .jumbotron .h6 {
-  color: inherit;
+  color: white;
 }
 .jumbotron-carousel .jumbotron h2 {
   font-size: 20px;

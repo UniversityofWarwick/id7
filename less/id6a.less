@@ -7,9 +7,9 @@
 // Override header and masthead colour to white
 #masthead, #masthead.transparent {
   background-color: white;
-  color: black;
+  color: @text-color;
 
-  .link-colour(inherit);
+  .link-colour(@text-color);
 }
 
 // Replace the logo with the new one
