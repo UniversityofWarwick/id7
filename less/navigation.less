@@ -95,18 +95,18 @@
         padding: 0;
       }
 
-      &.first {
+      &:first-child {
         margin-left: 0;
       }
 
-      &.second {
+      &:nth-child(2) {
         @media (min-width: @screen-sm-min) {
           margin-left: 0;
         }
       }
 
       // Arrow background for first breadcrumb in .navbar-secondary
-      &.nav-breadcrumb.first {
+      &.nav-breadcrumb:first-child {
         @media (min-width: @screen-sm-min) {
           display: none;
         }
@@ -127,7 +127,7 @@
       }
 
       // For breadcrumbs in .navbar-secondary
-      &.nav-breadcrumb:not(.first):not(.last):not(.dropdown) {
+      &.nav-breadcrumb:not(:first-child):not(:last-child):not(.dropdown) {
         margin-right: 0.5em;
 
         &::after {
@@ -143,7 +143,7 @@
 
       // bar between breadcrumbs and siblings (if present)
       // bar between siblings
-      &.last + li::before,
+      &:last-child + li::before,
       &:not(.nav-breadcrumb):not(:last-child)::after {
         content: '|';
         font-size: 15px;
@@ -155,7 +155,7 @@
       }
 
       // bar between breadcrumbs and siblings (if present)
-      &.last + li::before {
+      &:last-child + li::before {
         left: 0%;
         margin-left: -3px;
       }
@@ -213,7 +213,7 @@
     }
   }
 
-  .navbar-secondary > li.first::after {
+  .navbar-secondary > li:first-child::after {
     .transition(~"background-color .15s linear, color .15s linear")
   }
 
