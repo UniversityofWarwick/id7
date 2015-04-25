@@ -538,7 +538,7 @@ html.no-not-selector .jumbotron-carousel a:active {
 .jumbotron-carousel .jumbotron {
   margin: 0;
   padding: 0;
-  background: black;
+  background: #7b428e;
   color: white;
 }
 html.no-not-selector .jumbotron-carousel .jumbotron a,

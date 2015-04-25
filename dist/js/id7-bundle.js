@@ -11722,6 +11722,10 @@ window.Modernizr = (function( window, document, undefined ) {
       this.$trigger = o.trigger;
       this.options = o;
 
+      if (typeof this.options.logoutlink === 'undefined') {
+        this.options.logoutlink = this.$trigger.attr('href');
+      }
+
       this.wireEventHandlers();
     }
 
@@ -11729,19 +11733,22 @@ window.Modernizr = (function( window, document, undefined ) {
       wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
 
-        $trigger.on('click', function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          return false;
-        }).popover({
-          container: this.options.container,
-          content: Config.Templates.Popover(this.options),
-          template: this.options.template,
-          html: true,
-          placement: 'bottom',
-          title: 'Account information',
-          trigger: 'click'
-        });
+        $trigger
+          .on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+          })
+          .popover({
+            container: this.options.container,
+            content: Config.Templates.Popover(this.options),
+            template: this.options.template,
+            html: true,
+            placement: 'bottom',
+            title: 'Account information',
+            trigger: 'click'
+          })
+          .html(this.options.name + '<span class="caret"></span>');
 
         // Click away to dismiss
         $('html').on('click.popoverDismiss', function (e) {
