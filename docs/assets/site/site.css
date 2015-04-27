@@ -93,9 +93,84 @@ blockquote.quotes::before {
 }
 .brand-bg {
   background: #7b428e;
+  color: white;
+}
+html.no-not-selector .brand-bg a,
+html.no-not-selector .brand-bg a:link,
+html.no-not-selector .brand-bg a:visited {
+  color: white !important;
+}
+.brand-bg a:not(.btn),
+.brand-bg a:link:not(.btn),
+.brand-bg a:visited:not(.btn) {
+  color: white !important;
+}
+html.no-not-selector .brand-bg a:hover,
+html.no-not-selector .brand-bg a:focus,
+html.no-not-selector .brand-bg a:active {
+  color: #cccccc !important;
+}
+.brand-bg a:hover:not(.btn),
+.brand-bg a:focus:not(.btn),
+.brand-bg a:active:not(.btn) {
+  color: #cccccc !important;
+}
+.brand-bg a:hover .new-window-link {
+  color: #cccccc !important;
+}
+.brand-bg a:not(.btn),
+.brand-bg a:link:not(.btn),
+.brand-bg a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff !important;
+  -moz-text-decoration-color: #ffffff !important;
+       text-decoration-color: #ffffff !important;
+}
+.brand-bg a:hover:not(.btn),
+.brand-bg a:focus:not(.btn),
+.brand-bg a:active:not(.btn) {
+  -webkit-text-decoration-color: #cccccc !important;
+  -moz-text-decoration-color: #cccccc !important;
+       text-decoration-color: #cccccc !important;
 }
 .brand-text {
   color: #7b428e;
+}
+html.no-not-selector .brand-text a,
+html.no-not-selector .brand-text a:link,
+html.no-not-selector .brand-text a:visited {
+  color: #7b428e !important;
+}
+.brand-text a:not(.btn),
+.brand-text a:link:not(.btn),
+.brand-text a:visited:not(.btn) {
+  color: #7b428e !important;
+}
+html.no-not-selector .brand-text a:hover,
+html.no-not-selector .brand-text a:focus,
+html.no-not-selector .brand-text a:active {
+  color: #3f2248 !important;
+}
+.brand-text a:hover:not(.btn),
+.brand-text a:focus:not(.btn),
+.brand-text a:active:not(.btn) {
+  color: #3f2248 !important;
+}
+.brand-text a:hover .new-window-link {
+  color: #3f2248 !important;
+}
+.brand-text a:not(.btn),
+.brand-text a:link:not(.btn),
+.brand-text a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ad76c0 !important;
+  -moz-text-decoration-color: #ad76c0 !important;
+       text-decoration-color: #ad76c0 !important;
+}
+.brand-text a:hover:not(.btn),
+.brand-text a:focus:not(.btn),
+.brand-text a:active:not(.btn) {
+  -webkit-text-decoration-color: #3f2248 !important;
+  -moz-text-decoration-color: #3f2248 !important;
+       text-decoration-color: #3f2248 !important;
 }
 .brand-border {
   border-color: #7b428e;

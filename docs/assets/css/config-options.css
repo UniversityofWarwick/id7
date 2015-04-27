@@ -60,9 +60,84 @@ body.brand-purple blockquote.quotes::before {
 }
 body.brand-purple .brand-bg {
   background: #7b428e;
+  color: white;
+}
+html.no-not-selector body.brand-purple .brand-bg a,
+html.no-not-selector body.brand-purple .brand-bg a:link,
+html.no-not-selector body.brand-purple .brand-bg a:visited {
+  color: white !important;
+}
+body.brand-purple .brand-bg a:not(.btn),
+body.brand-purple .brand-bg a:link:not(.btn),
+body.brand-purple .brand-bg a:visited:not(.btn) {
+  color: white !important;
+}
+html.no-not-selector body.brand-purple .brand-bg a:hover,
+html.no-not-selector body.brand-purple .brand-bg a:focus,
+html.no-not-selector body.brand-purple .brand-bg a:active {
+  color: #cccccc !important;
+}
+body.brand-purple .brand-bg a:hover:not(.btn),
+body.brand-purple .brand-bg a:focus:not(.btn),
+body.brand-purple .brand-bg a:active:not(.btn) {
+  color: #cccccc !important;
+}
+body.brand-purple .brand-bg a:hover .new-window-link {
+  color: #cccccc !important;
+}
+body.brand-purple .brand-bg a:not(.btn),
+body.brand-purple .brand-bg a:link:not(.btn),
+body.brand-purple .brand-bg a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff !important;
+  -moz-text-decoration-color: #ffffff !important;
+       text-decoration-color: #ffffff !important;
+}
+body.brand-purple .brand-bg a:hover:not(.btn),
+body.brand-purple .brand-bg a:focus:not(.btn),
+body.brand-purple .brand-bg a:active:not(.btn) {
+  -webkit-text-decoration-color: #cccccc !important;
+  -moz-text-decoration-color: #cccccc !important;
+       text-decoration-color: #cccccc !important;
 }
 body.brand-purple .brand-text {
   color: #7b428e;
+}
+html.no-not-selector body.brand-purple .brand-text a,
+html.no-not-selector body.brand-purple .brand-text a:link,
+html.no-not-selector body.brand-purple .brand-text a:visited {
+  color: #7b428e !important;
+}
+body.brand-purple .brand-text a:not(.btn),
+body.brand-purple .brand-text a:link:not(.btn),
+body.brand-purple .brand-text a:visited:not(.btn) {
+  color: #7b428e !important;
+}
+html.no-not-selector body.brand-purple .brand-text a:hover,
+html.no-not-selector body.brand-purple .brand-text a:focus,
+html.no-not-selector body.brand-purple .brand-text a:active {
+  color: #3f2248 !important;
+}
+body.brand-purple .brand-text a:hover:not(.btn),
+body.brand-purple .brand-text a:focus:not(.btn),
+body.brand-purple .brand-text a:active:not(.btn) {
+  color: #3f2248 !important;
+}
+body.brand-purple .brand-text a:hover .new-window-link {
+  color: #3f2248 !important;
+}
+body.brand-purple .brand-text a:not(.btn),
+body.brand-purple .brand-text a:link:not(.btn),
+body.brand-purple .brand-text a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ad76c0 !important;
+  -moz-text-decoration-color: #ad76c0 !important;
+       text-decoration-color: #ad76c0 !important;
+}
+body.brand-purple .brand-text a:hover:not(.btn),
+body.brand-purple .brand-text a:focus:not(.btn),
+body.brand-purple .brand-text a:active:not(.btn) {
+  -webkit-text-decoration-color: #3f2248 !important;
+  -moz-text-decoration-color: #3f2248 !important;
+       text-decoration-color: #3f2248 !important;
 }
 body.brand-purple .brand-border {
   border-color: #7b428e;
@@ -675,9 +750,84 @@ body.brand-gray blockquote.quotes::before {
 }
 body.brand-gray .brand-bg {
   background: #828c95;
+  color: white;
+}
+html.no-not-selector body.brand-gray .brand-bg a,
+html.no-not-selector body.brand-gray .brand-bg a:link,
+html.no-not-selector body.brand-gray .brand-bg a:visited {
+  color: white !important;
+}
+body.brand-gray .brand-bg a:not(.btn),
+body.brand-gray .brand-bg a:link:not(.btn),
+body.brand-gray .brand-bg a:visited:not(.btn) {
+  color: white !important;
+}
+html.no-not-selector body.brand-gray .brand-bg a:hover,
+html.no-not-selector body.brand-gray .brand-bg a:focus,
+html.no-not-selector body.brand-gray .brand-bg a:active {
+  color: #cccccc !important;
+}
+body.brand-gray .brand-bg a:hover:not(.btn),
+body.brand-gray .brand-bg a:focus:not(.btn),
+body.brand-gray .brand-bg a:active:not(.btn) {
+  color: #cccccc !important;
+}
+body.brand-gray .brand-bg a:hover .new-window-link {
+  color: #cccccc !important;
+}
+body.brand-gray .brand-bg a:not(.btn),
+body.brand-gray .brand-bg a:link:not(.btn),
+body.brand-gray .brand-bg a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff !important;
+  -moz-text-decoration-color: #ffffff !important;
+       text-decoration-color: #ffffff !important;
+}
+body.brand-gray .brand-bg a:hover:not(.btn),
+body.brand-gray .brand-bg a:focus:not(.btn),
+body.brand-gray .brand-bg a:active:not(.btn) {
+  -webkit-text-decoration-color: #cccccc !important;
+  -moz-text-decoration-color: #cccccc !important;
+       text-decoration-color: #cccccc !important;
 }
 body.brand-gray .brand-text {
   color: #828c95;
+}
+html.no-not-selector body.brand-gray .brand-text a,
+html.no-not-selector body.brand-gray .brand-text a:link,
+html.no-not-selector body.brand-gray .brand-text a:visited {
+  color: #828c95 !important;
+}
+body.brand-gray .brand-text a:not(.btn),
+body.brand-gray .brand-text a:link:not(.btn),
+body.brand-gray .brand-text a:visited:not(.btn) {
+  color: #828c95 !important;
+}
+html.no-not-selector body.brand-gray .brand-text a:hover,
+html.no-not-selector body.brand-gray .brand-text a:focus,
+html.no-not-selector body.brand-gray .brand-text a:active {
+  color: #515960 !important;
+}
+body.brand-gray .brand-text a:hover:not(.btn),
+body.brand-gray .brand-text a:focus:not(.btn),
+body.brand-gray .brand-text a:active:not(.btn) {
+  color: #515960 !important;
+}
+body.brand-gray .brand-text a:hover .new-window-link {
+  color: #515960 !important;
+}
+body.brand-gray .brand-text a:not(.btn),
+body.brand-gray .brand-text a:link:not(.btn),
+body.brand-gray .brand-text a:visited:not(.btn) {
+  -webkit-text-decoration-color: #b9bfc4 !important;
+  -moz-text-decoration-color: #b9bfc4 !important;
+       text-decoration-color: #b9bfc4 !important;
+}
+body.brand-gray .brand-text a:hover:not(.btn),
+body.brand-gray .brand-text a:focus:not(.btn),
+body.brand-gray .brand-text a:active:not(.btn) {
+  -webkit-text-decoration-color: #515960 !important;
+  -moz-text-decoration-color: #515960 !important;
+       text-decoration-color: #515960 !important;
 }
 body.brand-gray .brand-border {
   border-color: #828c95;
@@ -1290,9 +1440,84 @@ body.brand-gold blockquote.quotes::before {
 }
 body.brand-gold .brand-bg {
   background: #dcbe2d;
+  color: #383838;
+}
+html.no-not-selector body.brand-gold .brand-bg a,
+html.no-not-selector body.brand-gold .brand-bg a:link,
+html.no-not-selector body.brand-gold .brand-bg a:visited {
+  color: #383838 !important;
+}
+body.brand-gold .brand-bg a:not(.btn),
+body.brand-gold .brand-bg a:link:not(.btn),
+body.brand-gold .brand-bg a:visited:not(.btn) {
+  color: #383838 !important;
+}
+html.no-not-selector body.brand-gold .brand-bg a:hover,
+html.no-not-selector body.brand-gold .brand-bg a:focus,
+html.no-not-selector body.brand-gold .brand-bg a:active {
+  color: #050505 !important;
+}
+body.brand-gold .brand-bg a:hover:not(.btn),
+body.brand-gold .brand-bg a:focus:not(.btn),
+body.brand-gold .brand-bg a:active:not(.btn) {
+  color: #050505 !important;
+}
+body.brand-gold .brand-bg a:hover .new-window-link {
+  color: #050505 !important;
+}
+body.brand-gold .brand-bg a:not(.btn),
+body.brand-gold .brand-bg a:link:not(.btn),
+body.brand-gold .brand-bg a:visited:not(.btn) {
+  -webkit-text-decoration-color: #6b6b6b !important;
+  -moz-text-decoration-color: #6b6b6b !important;
+       text-decoration-color: #6b6b6b !important;
+}
+body.brand-gold .brand-bg a:hover:not(.btn),
+body.brand-gold .brand-bg a:focus:not(.btn),
+body.brand-gold .brand-bg a:active:not(.btn) {
+  -webkit-text-decoration-color: #050505 !important;
+  -moz-text-decoration-color: #050505 !important;
+       text-decoration-color: #050505 !important;
 }
 body.brand-gold .brand-text {
   color: #dcbe2d;
+}
+html.no-not-selector body.brand-gold .brand-text a,
+html.no-not-selector body.brand-gold .brand-text a:link,
+html.no-not-selector body.brand-gold .brand-text a:visited {
+  color: #dcbe2d !important;
+}
+body.brand-gold .brand-text a:not(.btn),
+body.brand-gold .brand-text a:link:not(.btn),
+body.brand-gold .brand-text a:visited:not(.btn) {
+  color: #dcbe2d !important;
+}
+html.no-not-selector body.brand-gold .brand-text a:hover,
+html.no-not-selector body.brand-gold .brand-text a:focus,
+html.no-not-selector body.brand-gold .brand-text a:active {
+  color: #8c7817 !important;
+}
+body.brand-gold .brand-text a:hover:not(.btn),
+body.brand-gold .brand-text a:focus:not(.btn),
+body.brand-gold .brand-text a:active:not(.btn) {
+  color: #8c7817 !important;
+}
+body.brand-gold .brand-text a:hover .new-window-link {
+  color: #8c7817 !important;
+}
+body.brand-gold .brand-text a:not(.btn),
+body.brand-gold .brand-text a:link:not(.btn),
+body.brand-gold .brand-text a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ebd984 !important;
+  -moz-text-decoration-color: #ebd984 !important;
+       text-decoration-color: #ebd984 !important;
+}
+body.brand-gold .brand-text a:hover:not(.btn),
+body.brand-gold .brand-text a:focus:not(.btn),
+body.brand-gold .brand-text a:active:not(.btn) {
+  -webkit-text-decoration-color: #8c7817 !important;
+  -moz-text-decoration-color: #8c7817 !important;
+       text-decoration-color: #8c7817 !important;
 }
 body.brand-gold .brand-border {
   border-color: #dcbe2d;
@@ -1905,9 +2130,84 @@ body.brand-blue blockquote.quotes::before {
 }
 body.brand-blue .brand-bg {
   background: #6ca4d4;
+  color: white;
+}
+html.no-not-selector body.brand-blue .brand-bg a,
+html.no-not-selector body.brand-blue .brand-bg a:link,
+html.no-not-selector body.brand-blue .brand-bg a:visited {
+  color: white !important;
+}
+body.brand-blue .brand-bg a:not(.btn),
+body.brand-blue .brand-bg a:link:not(.btn),
+body.brand-blue .brand-bg a:visited:not(.btn) {
+  color: white !important;
+}
+html.no-not-selector body.brand-blue .brand-bg a:hover,
+html.no-not-selector body.brand-blue .brand-bg a:focus,
+html.no-not-selector body.brand-blue .brand-bg a:active {
+  color: #cccccc !important;
+}
+body.brand-blue .brand-bg a:hover:not(.btn),
+body.brand-blue .brand-bg a:focus:not(.btn),
+body.brand-blue .brand-bg a:active:not(.btn) {
+  color: #cccccc !important;
+}
+body.brand-blue .brand-bg a:hover .new-window-link {
+  color: #cccccc !important;
+}
+body.brand-blue .brand-bg a:not(.btn),
+body.brand-blue .brand-bg a:link:not(.btn),
+body.brand-blue .brand-bg a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff !important;
+  -moz-text-decoration-color: #ffffff !important;
+       text-decoration-color: #ffffff !important;
+}
+body.brand-blue .brand-bg a:hover:not(.btn),
+body.brand-blue .brand-bg a:focus:not(.btn),
+body.brand-blue .brand-bg a:active:not(.btn) {
+  -webkit-text-decoration-color: #cccccc !important;
+  -moz-text-decoration-color: #cccccc !important;
+       text-decoration-color: #cccccc !important;
 }
 body.brand-blue .brand-text {
   color: #6ca4d4;
+}
+html.no-not-selector body.brand-blue .brand-text a,
+html.no-not-selector body.brand-blue .brand-text a:link,
+html.no-not-selector body.brand-blue .brand-text a:visited {
+  color: #6ca4d4 !important;
+}
+body.brand-blue .brand-text a:not(.btn),
+body.brand-blue .brand-text a:link:not(.btn),
+body.brand-blue .brand-text a:visited:not(.btn) {
+  color: #6ca4d4 !important;
+}
+html.no-not-selector body.brand-blue .brand-text a:hover,
+html.no-not-selector body.brand-blue .brand-text a:focus,
+html.no-not-selector body.brand-blue .brand-text a:active {
+  color: #3172a9 !important;
+}
+body.brand-blue .brand-text a:hover:not(.btn),
+body.brand-blue .brand-text a:focus:not(.btn),
+body.brand-blue .brand-text a:active:not(.btn) {
+  color: #3172a9 !important;
+}
+body.brand-blue .brand-text a:hover .new-window-link {
+  color: #3172a9 !important;
+}
+body.brand-blue .brand-text a:not(.btn),
+body.brand-blue .brand-text a:link:not(.btn),
+body.brand-blue .brand-text a:visited:not(.btn) {
+  -webkit-text-decoration-color: #bbd5eb !important;
+  -moz-text-decoration-color: #bbd5eb !important;
+       text-decoration-color: #bbd5eb !important;
+}
+body.brand-blue .brand-text a:hover:not(.btn),
+body.brand-blue .brand-text a:focus:not(.btn),
+body.brand-blue .brand-text a:active:not(.btn) {
+  -webkit-text-decoration-color: #3172a9 !important;
+  -moz-text-decoration-color: #3172a9 !important;
+       text-decoration-color: #3172a9 !important;
 }
 body.brand-blue .brand-border {
   border-color: #6ca4d4;
@@ -2520,9 +2820,84 @@ body.brand-orange blockquote.quotes::before {
 }
 body.brand-orange .brand-bg {
   background: #f1863c;
+  color: white;
+}
+html.no-not-selector body.brand-orange .brand-bg a,
+html.no-not-selector body.brand-orange .brand-bg a:link,
+html.no-not-selector body.brand-orange .brand-bg a:visited {
+  color: white !important;
+}
+body.brand-orange .brand-bg a:not(.btn),
+body.brand-orange .brand-bg a:link:not(.btn),
+body.brand-orange .brand-bg a:visited:not(.btn) {
+  color: white !important;
+}
+html.no-not-selector body.brand-orange .brand-bg a:hover,
+html.no-not-selector body.brand-orange .brand-bg a:focus,
+html.no-not-selector body.brand-orange .brand-bg a:active {
+  color: #cccccc !important;
+}
+body.brand-orange .brand-bg a:hover:not(.btn),
+body.brand-orange .brand-bg a:focus:not(.btn),
+body.brand-orange .brand-bg a:active:not(.btn) {
+  color: #cccccc !important;
+}
+body.brand-orange .brand-bg a:hover .new-window-link {
+  color: #cccccc !important;
+}
+body.brand-orange .brand-bg a:not(.btn),
+body.brand-orange .brand-bg a:link:not(.btn),
+body.brand-orange .brand-bg a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff !important;
+  -moz-text-decoration-color: #ffffff !important;
+       text-decoration-color: #ffffff !important;
+}
+body.brand-orange .brand-bg a:hover:not(.btn),
+body.brand-orange .brand-bg a:focus:not(.btn),
+body.brand-orange .brand-bg a:active:not(.btn) {
+  -webkit-text-decoration-color: #cccccc !important;
+  -moz-text-decoration-color: #cccccc !important;
+       text-decoration-color: #cccccc !important;
 }
 body.brand-orange .brand-text {
   color: #f1863c;
+}
+html.no-not-selector body.brand-orange .brand-text a,
+html.no-not-selector body.brand-orange .brand-text a:link,
+html.no-not-selector body.brand-orange .brand-text a:visited {
+  color: #f1863c !important;
+}
+body.brand-orange .brand-text a:not(.btn),
+body.brand-orange .brand-text a:link:not(.btn),
+body.brand-orange .brand-text a:visited:not(.btn) {
+  color: #f1863c !important;
+}
+html.no-not-selector body.brand-orange .brand-text a:hover,
+html.no-not-selector body.brand-orange .brand-text a:focus,
+html.no-not-selector body.brand-orange .brand-text a:active {
+  color: #ba540d !important;
+}
+body.brand-orange .brand-text a:hover:not(.btn),
+body.brand-orange .brand-text a:focus:not(.btn),
+body.brand-orange .brand-text a:active:not(.btn) {
+  color: #ba540d !important;
+}
+body.brand-orange .brand-text a:hover .new-window-link {
+  color: #ba540d !important;
+}
+body.brand-orange .brand-text a:not(.btn),
+body.brand-orange .brand-text a:link:not(.btn),
+body.brand-orange .brand-text a:visited:not(.btn) {
+  -webkit-text-decoration-color: #f8c19b !important;
+  -moz-text-decoration-color: #f8c19b !important;
+       text-decoration-color: #f8c19b !important;
+}
+body.brand-orange .brand-text a:hover:not(.btn),
+body.brand-orange .brand-text a:focus:not(.btn),
+body.brand-orange .brand-text a:active:not(.btn) {
+  -webkit-text-decoration-color: #ba540d !important;
+  -moz-text-decoration-color: #ba540d !important;
+       text-decoration-color: #ba540d !important;
 }
 body.brand-orange .brand-border {
   border-color: #f1863c;
@@ -3135,9 +3510,84 @@ body.brand-green blockquote.quotes::before {
 }
 body.brand-green .brand-bg {
   background: #a5ab2a;
+  color: white;
+}
+html.no-not-selector body.brand-green .brand-bg a,
+html.no-not-selector body.brand-green .brand-bg a:link,
+html.no-not-selector body.brand-green .brand-bg a:visited {
+  color: white !important;
+}
+body.brand-green .brand-bg a:not(.btn),
+body.brand-green .brand-bg a:link:not(.btn),
+body.brand-green .brand-bg a:visited:not(.btn) {
+  color: white !important;
+}
+html.no-not-selector body.brand-green .brand-bg a:hover,
+html.no-not-selector body.brand-green .brand-bg a:focus,
+html.no-not-selector body.brand-green .brand-bg a:active {
+  color: #cccccc !important;
+}
+body.brand-green .brand-bg a:hover:not(.btn),
+body.brand-green .brand-bg a:focus:not(.btn),
+body.brand-green .brand-bg a:active:not(.btn) {
+  color: #cccccc !important;
+}
+body.brand-green .brand-bg a:hover .new-window-link {
+  color: #cccccc !important;
+}
+body.brand-green .brand-bg a:not(.btn),
+body.brand-green .brand-bg a:link:not(.btn),
+body.brand-green .brand-bg a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff !important;
+  -moz-text-decoration-color: #ffffff !important;
+       text-decoration-color: #ffffff !important;
+}
+body.brand-green .brand-bg a:hover:not(.btn),
+body.brand-green .brand-bg a:focus:not(.btn),
+body.brand-green .brand-bg a:active:not(.btn) {
+  -webkit-text-decoration-color: #cccccc !important;
+  -moz-text-decoration-color: #cccccc !important;
+       text-decoration-color: #cccccc !important;
 }
 body.brand-green .brand-text {
   color: #a5ab2a;
+}
+html.no-not-selector body.brand-green .brand-text a,
+html.no-not-selector body.brand-green .brand-text a:link,
+html.no-not-selector body.brand-green .brand-text a:visited {
+  color: #a5ab2a !important;
+}
+body.brand-green .brand-text a:not(.btn),
+body.brand-green .brand-text a:link:not(.btn),
+body.brand-green .brand-text a:visited:not(.btn) {
+  color: #a5ab2a !important;
+}
+html.no-not-selector body.brand-green .brand-text a:hover,
+html.no-not-selector body.brand-green .brand-text a:focus,
+html.no-not-selector body.brand-green .brand-text a:active {
+  color: #565916 !important;
+}
+body.brand-green .brand-text a:hover:not(.btn),
+body.brand-green .brand-text a:focus:not(.btn),
+body.brand-green .brand-text a:active:not(.btn) {
+  color: #565916 !important;
+}
+body.brand-green .brand-text a:hover .new-window-link {
+  color: #565916 !important;
+}
+body.brand-green .brand-text a:not(.btn),
+body.brand-green .brand-text a:link:not(.btn),
+body.brand-green .brand-text a:visited:not(.btn) {
+  -webkit-text-decoration-color: #d3d962 !important;
+  -moz-text-decoration-color: #d3d962 !important;
+       text-decoration-color: #d3d962 !important;
+}
+body.brand-green .brand-text a:hover:not(.btn),
+body.brand-green .brand-text a:focus:not(.btn),
+body.brand-green .brand-text a:active:not(.btn) {
+  -webkit-text-decoration-color: #565916 !important;
+  -moz-text-decoration-color: #565916 !important;
+       text-decoration-color: #565916 !important;
 }
 body.brand-green .brand-border {
   border-color: #a5ab2a;
@@ -3750,9 +4200,84 @@ body.brand-red blockquote.quotes::before {
 }
 body.brand-red .brand-bg {
   background: #bd3f4b;
+  color: white;
+}
+html.no-not-selector body.brand-red .brand-bg a,
+html.no-not-selector body.brand-red .brand-bg a:link,
+html.no-not-selector body.brand-red .brand-bg a:visited {
+  color: white !important;
+}
+body.brand-red .brand-bg a:not(.btn),
+body.brand-red .brand-bg a:link:not(.btn),
+body.brand-red .brand-bg a:visited:not(.btn) {
+  color: white !important;
+}
+html.no-not-selector body.brand-red .brand-bg a:hover,
+html.no-not-selector body.brand-red .brand-bg a:focus,
+html.no-not-selector body.brand-red .brand-bg a:active {
+  color: #cccccc !important;
+}
+body.brand-red .brand-bg a:hover:not(.btn),
+body.brand-red .brand-bg a:focus:not(.btn),
+body.brand-red .brand-bg a:active:not(.btn) {
+  color: #cccccc !important;
+}
+body.brand-red .brand-bg a:hover .new-window-link {
+  color: #cccccc !important;
+}
+body.brand-red .brand-bg a:not(.btn),
+body.brand-red .brand-bg a:link:not(.btn),
+body.brand-red .brand-bg a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff !important;
+  -moz-text-decoration-color: #ffffff !important;
+       text-decoration-color: #ffffff !important;
+}
+body.brand-red .brand-bg a:hover:not(.btn),
+body.brand-red .brand-bg a:focus:not(.btn),
+body.brand-red .brand-bg a:active:not(.btn) {
+  -webkit-text-decoration-color: #cccccc !important;
+  -moz-text-decoration-color: #cccccc !important;
+       text-decoration-color: #cccccc !important;
 }
 body.brand-red .brand-text {
   color: #bd3f4b;
+}
+html.no-not-selector body.brand-red .brand-text a,
+html.no-not-selector body.brand-red .brand-text a:link,
+html.no-not-selector body.brand-red .brand-text a:visited {
+  color: #bd3f4b !important;
+}
+body.brand-red .brand-text a:not(.btn),
+body.brand-red .brand-text a:link:not(.btn),
+body.brand-red .brand-text a:visited:not(.btn) {
+  color: #bd3f4b !important;
+}
+html.no-not-selector body.brand-red .brand-text a:hover,
+html.no-not-selector body.brand-red .brand-text a:focus,
+html.no-not-selector body.brand-red .brand-text a:active {
+  color: #71262d !important;
+}
+body.brand-red .brand-text a:hover:not(.btn),
+body.brand-red .brand-text a:focus:not(.btn),
+body.brand-red .brand-text a:active:not(.btn) {
+  color: #71262d !important;
+}
+body.brand-red .brand-text a:hover .new-window-link {
+  color: #71262d !important;
+}
+body.brand-red .brand-text a:not(.btn),
+body.brand-red .brand-text a:link:not(.btn),
+body.brand-red .brand-text a:visited:not(.btn) {
+  -webkit-text-decoration-color: #d88a91 !important;
+  -moz-text-decoration-color: #d88a91 !important;
+       text-decoration-color: #d88a91 !important;
+}
+body.brand-red .brand-text a:hover:not(.btn),
+body.brand-red .brand-text a:focus:not(.btn),
+body.brand-red .brand-text a:active:not(.btn) {
+  -webkit-text-decoration-color: #71262d !important;
+  -moz-text-decoration-color: #71262d !important;
+       text-decoration-color: #71262d !important;
 }
 body.brand-red .brand-border {
   border-color: #bd3f4b;

@@ -197,8 +197,19 @@
     }
   }
 
-  .brand-bg { background: @colour; }
-  .brand-text { color: @colour; }
+  .brand-bg {
+    @contrast-colour: contrast(@colour, @text-color, white, 50%);
+
+    background: @colour;
+    color: @contrast-colour;
+    .link-colour(@contrast-colour) !important;
+  }
+
+  .brand-text {
+    color: @colour;
+    .link-colour(@colour) !important;
+  }
+
   .brand-border { border-color: @colour; }
 
   .id7-utility-masthead {
