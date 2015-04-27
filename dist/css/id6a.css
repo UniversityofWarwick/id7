@@ -111,7 +111,12 @@ html.no-not-selector #search-container ul.index-section li.active a:active {
   display: none;
 }
 #search-container #search-box {
+  height: 25px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 2px 23px 2px 3px;
+  line-height: 25px;
   border: 1px solid #ccc;
 }
 #search-container #search-button {
