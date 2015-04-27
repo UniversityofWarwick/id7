@@ -8,73 +8,74 @@
   min-height: @height;
 }
 
-.id7-header-image-container {
-  .id7-homepage-layout & {
-    &,
-    .carousel > .carousel-inner > .item {
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: @container-sm @id7-header-height-sm;
-    }
-
-    // Set this on #header-image-container to allow the collapsing nav on smallscreens to fill this height up
-    min-height: @id7-header-height-xs;
-
-    @media (min-width: @screen-sm-min) {
-      .header-height(@container-sm, @id7-header-height-sm);
-    }
-
-    @media (min-width: @screen-md-min) {
-      .header-height(@container-md, @id7-header-height-md);
-    }
-
-    @media (min-width: @screen-lg-min) {
-      .header-height(@container-lg, @id7-header-height-lg);
-    }
-  }
-
-  position: relative;
-  .strapline {
-    .container-fluid();
-    .header-colour(white);
-
-    display: none;
-    position: relative;
-
-    @media (min-width: @grid-float-breakpoint) {
-      .id7-homepage-layout & {
-        display: block;
-
-        color: white;
-        background-color: #555555;
-        background-color: rgba(0, 0, 0, 0.8);
-
-        h2 {
-          margin: (@line-height-computed / 2) 0;
-        }
-
-        &.bottom {
-          position: absolute;
-          bottom: 0px;
-        }
-      }
-    }
-  }
-
-  .id7-header-video {
-    height: 100%;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-
-    iframe {
-      height: 130%;
-      margin: -5% -10%;
-      width: 120%;
-      max-width: none;
-    }
-  }
-}
+// TODO reimplement as a jumbotron component
+//.id7-header-image-container {
+//  .id7-homepage-layout & {
+//    &,
+//    .carousel > .carousel-inner > .item {
+//      background-position: 50% 50%;
+//      background-repeat: no-repeat;
+//      background-size: @container-sm @id7-header-height-sm;
+//    }
+//
+//    // Set this on #header-image-container to allow the collapsing nav on smallscreens to fill this height up
+//    min-height: @id7-header-height-xs;
+//
+//    @media (min-width: @screen-sm-min) {
+//      .header-height(@container-sm, @id7-header-height-sm);
+//    }
+//
+//    @media (min-width: @screen-md-min) {
+//      .header-height(@container-md, @id7-header-height-md);
+//    }
+//
+//    @media (min-width: @screen-lg-min) {
+//      .header-height(@container-lg, @id7-header-height-lg);
+//    }
+//  }
+//
+//  position: relative;
+//  .strapline {
+//    .container-fluid();
+//    .header-colour(white);
+//
+//    display: none;
+//    position: relative;
+//
+//    @media (min-width: @grid-float-breakpoint) {
+//      .id7-homepage-layout & {
+//        display: block;
+//
+//        color: white;
+//        background-color: #555555;
+//        background-color: rgba(0, 0, 0, 0.8);
+//
+//        h2 {
+//          margin: (@line-height-computed / 2) 0;
+//        }
+//
+//        &.bottom {
+//          position: absolute;
+//          bottom: 0px;
+//        }
+//      }
+//    }
+//  }
+//
+//  .id7-header-video {
+//    height: 100%;
+//    left: 0;
+//    overflow: hidden;
+//    position: absolute;
+//    top: 0;
+//    width: 100%;
+//    z-index: 0;
+//
+//    iframe {
+//      height: 130%;
+//      margin: -5% -10%;
+//      width: 120%;
+//      max-width: none;
+//    }
+//  }
+//}

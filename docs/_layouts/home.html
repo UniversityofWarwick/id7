@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="id7-homepage-layout {% if page.nonbranded %}id7-non-branded{% endif %} no-js">
+<html lang="en" class="{% if page.nonbranded %}id7-non-branded{% endif %} no-js">
 <head>
   {% include header.html %}
 </head>
@@ -11,23 +11,9 @@
   <header class="id7-page-header">
     {% include utility-masthead.html %}
 
-    <div  class="id7-header-image-container">
-      {% if page.header == 'video' %}
-        {% include header-video.html %}
-      {% elsif page.header == 'carousel' %}
-        {% include header-carousel.html %}
-      {% endif %}
-
-      <!-- Docs master nav -->
-      <div class="id7-navigation">
-        {% include nav/main.html %}
-      </div>
-
-      {% unless page.header == 'carousel' %}
-        <div class="strapline top text-right">
-          <h2>University of Warwick corporate identity</h2>
-        </div>
-      {% endunless %}
+    <!-- Docs master nav -->
+    <div class="id7-navigation">
+      {% include nav/main.html %}
     </div>
   </header>
 

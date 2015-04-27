@@ -1,97 +1,98 @@
-.id7-header-image-container {
-  .carousel {
-    z-index: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-
-    .carousel-inner, .carousel-inner > .item {
-      height: 100%;
-    }
-  }
-
-  .carousel-control {
-    width: 10%;
-
-    .fa {
-      position: absolute;
-      top: 50%;
-      z-index: 5;
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      .fa-2x();
-    }
-
-    &.left .fa {
-      left: 10px;
-    }
-    &.right .fa {
-      right: 10px;
-    }
-
-    .icon-prev,
-    .icon-next {
-      width:  20px;
-      height: 20px;
-      margin-top: -10px;
-      font-family: serif;
-    }
-  }
-
-  .carousel .strapline {
-    display: block;
-
-    color: white;
-    background-color: #555555;
-    background-color: rgba(0, 0, 0, 0.8);
-
-    padding-top: (@grid-gutter-width / 2);
-    padding-bottom: (@grid-gutter-width / 2);
-
-    &.top {
-      position: absolute;
-      top: @navbar-height;
-    }
-    &.bottom {
-      position: absolute;
-      bottom: 0px;
-    }
-  }
-
-  // Change carousel indicators to triangles
-  .carousel .carousel-indicators {
-    z-index: 1;
-
-    li {
-      border: 0;
-      text-indent: 0;
-      width: 14px;
-      height: 14px;
-
-      &::after {
-        .fa();
-        .fa-rotate-90();
-
-        color: @gray-light;
-        content: @fa-var-play;
-
-        position: relative;
-        top: -4px;
-      }
-
-      &.active {
-        background: none;
-
-        &::after {
-          color: @text-color;
-        }
-      }
-    }
-  }
-}
+// TODO reimplement as a jumbotron component
+//.id7-header-image-container {
+//  .carousel {
+//    z-index: 1;
+//    position: absolute;
+//    top: 0px;
+//    left: 0px;
+//    right: 0px;
+//    bottom: 0px;
+//
+//    .carousel-inner, .carousel-inner > .item {
+//      height: 100%;
+//    }
+//  }
+//
+//  .carousel-control {
+//    width: 10%;
+//
+//    .fa {
+//      position: absolute;
+//      top: 50%;
+//      z-index: 5;
+//      display: inline-block;
+//      width: 40px;
+//      height: 40px;
+//      .fa-2x();
+//    }
+//
+//    &.left .fa {
+//      left: 10px;
+//    }
+//    &.right .fa {
+//      right: 10px;
+//    }
+//
+//    .icon-prev,
+//    .icon-next {
+//      width:  20px;
+//      height: 20px;
+//      margin-top: -10px;
+//      font-family: serif;
+//    }
+//  }
+//
+//  .carousel .strapline {
+//    display: block;
+//
+//    color: white;
+//    background-color: #555555;
+//    background-color: rgba(0, 0, 0, 0.8);
+//
+//    padding-top: (@grid-gutter-width / 2);
+//    padding-bottom: (@grid-gutter-width / 2);
+//
+//    &.top {
+//      position: absolute;
+//      top: @navbar-height;
+//    }
+//    &.bottom {
+//      position: absolute;
+//      bottom: 0px;
+//    }
+//  }
+//
+//  // Change carousel indicators to triangles
+//  .carousel .carousel-indicators {
+//    z-index: 1;
+//
+//    li {
+//      border: 0;
+//      text-indent: 0;
+//      width: 14px;
+//      height: 14px;
+//
+//      &::after {
+//        .fa();
+//        .fa-rotate-90();
+//
+//        color: @gray-light;
+//        content: @fa-var-play;
+//
+//        position: relative;
+//        top: -4px;
+//      }
+//
+//      &.active {
+//        background: none;
+//
+//        &::after {
+//          color: @text-color;
+//        }
+//      }
+//    }
+//  }
+//}
 
 // Allow people to use glyphicon classes for carousel controls
 .carousel {

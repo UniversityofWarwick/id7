@@ -1,6 +1,3 @@
-html.site1 .id7-header-image-container {
-  background-image: url("/assets/site/site1/banner-image.jpg");
-}
 html.site1 .id7-fixed-width-container {
   background-image: url("/assets/site/site1/masthead-image.jpg");
 }
@@ -12,9 +9,6 @@ html.site1 .id7-fixed-width-container {
     background-image: url("/assets/site/site1/border-image-right.jpg");
   }
 }
-html.site2 .id7-header-image-container {
-  background-image: url("/assets/site/site2/banner-image.jpg");
-}
 html.site2 .id7-fixed-width-container {
   background-image: url("/assets/site/site2/masthead-image.jpg");
 }
@@ -25,9 +19,6 @@ html.site2 .id7-fixed-width-container {
   html.site2 .id7-right-border {
     background-image: url("/assets/site/site2/border-image-right.jpg");
   }
-}
-html.site3 .id7-header-image-container {
-  background-image: url("/assets/site/site3/banner-image.jpg");
 }
 html.site3 .id7-fixed-width-container {
   background-image: url("/assets/site/site3/masthead-image.jpg");
