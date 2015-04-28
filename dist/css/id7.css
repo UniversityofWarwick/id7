@@ -9256,11 +9256,6 @@ body {
      -moz-font-kerning: normal;
           font-kerning: normal;
 }
-@media (max-width: 767px) {
-  body {
-    text-rendering: optimizeSpeed;
-  }
-}
 .id7-wide-table-wrapper {
   padding-bottom: 2px;
   overflow-x: auto;
