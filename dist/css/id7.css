@@ -4939,7 +4939,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555;
   cursor: default;
-  background-color: transparent;
+  background-color: white;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
@@ -4984,7 +4984,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs.nav-justified > .active > a,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: transparent;
+    border-bottom-color: white;
   }
 }
 .nav-pills > li {
@@ -5052,7 +5052,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs-justified > .active > a,
   .nav-tabs-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus {
-    border-bottom-color: transparent;
+    border-bottom-color: white;
   }
 }
 .tab-content > .tab-pane {
@@ -7633,6 +7633,9 @@ footer .id7-app-footer:after {
 }
 .btn-group-vertical > .btn:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
+}
+.nav-tabs > li.active {
+  background: white;
 }
 @media print {
   a[href^="mailto:"]:after,
