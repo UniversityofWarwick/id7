@@ -538,7 +538,7 @@ html.no-not-selector .jumbotron-carousel a:active {
 .jumbotron-carousel .jumbotron {
   margin: 0;
   padding: 0;
-  background: #7b428e;
+  background: #5b3069;
   color: white;
 }
 html.no-not-selector .jumbotron-carousel .jumbotron a,
@@ -1354,29 +1354,29 @@ html.no-generatedcontent .megamenu-links-address .utility > li {
 /***** HACKS AND MISC *****/
 html.no-js .id7-masthead .id7-search .id7-search-box,
 html.no-style-update .id7-masthead .id7-search .id7-search-box {
-  border-color: #7b428e;
+  border-color: #5b3069;
 }
 html.no-js .id7-masthead .id7-search .fa,
 html.no-style-update .id7-masthead .id7-search .fa,
 html.no-js .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
 html.no-style-update .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
-  color: #7b428e;
+  color: #5b3069;
 }
 html.no-js .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor,
 html.no-style-update .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
-  background: #7b428e;
+  background: #5b3069;
 }
 html.no-js .form-control:focus,
 html.no-style-update .form-control:focus {
-  border-color: #7b428e;
+  border-color: #5b3069;
 }
 html.no-js .id7-page-header,
 html.no-style-update .id7-page-header {
-  background: #7b428e;
+  background: #5b3069;
 }
 html.no-js .id7-masthead .id7-logo-row nav a,
 html.no-style-update .id7-masthead .id7-logo-row nav a {
-  color: #7b428e !important;
+  color: #5b3069 !important;
 }
 body > a.sr-only-focusable {
   top: 0px;

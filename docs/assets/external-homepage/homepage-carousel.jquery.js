@@ -349,7 +349,7 @@
 
                         if (beforeScroll.length == $container.find(options.panels + '[data-colour]:visible').length) {
                             // We've scrolled past all of them, use Warwick Aubergine
-                            applyPanelStyles('#7b428e');
+                            applyPanelStyles('#5b3069');
                         } else {
                             var $panel = (beforeScroll.length > 0) ? beforeScroll.last() : $container.find(options.panels + '[data-colour]:visible').first();
                             onChangePanel($panel);

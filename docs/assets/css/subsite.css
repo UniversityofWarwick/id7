@@ -89,12 +89,12 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
 }
 .id7-main-content-area .boxstyle_.box1 {
   border: 0;
-  background: #cab3d2;
+  background: #bdacc3;
   color: #383838;
 }
 @media print {
   .id7-main-content-area .boxstyle_.box1 {
-    border: 1px solid #cab3d2;
+    border: 1px solid #bdacc3;
   }
 }
 .id7-main-content-area .boxstyle_.box1 h1,
@@ -116,12 +116,12 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
 }
 .id7-main-content-area .boxstyle_.box2 {
   border: 0;
-  background: #f2ecf4;
+  background: #efeaf0;
   color: #383838;
 }
 @media print {
   .id7-main-content-area .boxstyle_.box2 {
-    border: 1px solid #f2ecf4;
+    border: 1px solid #efeaf0;
   }
 }
 .id7-main-content-area .boxstyle_.box2 h1,
@@ -173,11 +173,6 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
   background: url(../site/site1/banner-image.jpg) top right no-repeat;
   color: white;
 }
-@media print {
-  .id7-main-content-area .boxstyle_.feature-image1 {
-    border: 1px solid url(../site/site1/banner-image.jpg) top right no-repeat;
-  }
-}
 .id7-main-content-area .boxstyle_.feature-image1 h1,
 .id7-main-content-area .boxstyle_.feature-image1 h2,
 .id7-main-content-area .boxstyle_.feature-image1 h3,
@@ -199,11 +194,6 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
   border: 0;
   background: url(../site/site3/banner-image.jpg) top right no-repeat;
   color: white;
-}
-@media print {
-  .id7-main-content-area .boxstyle_.feature-image2 {
-    border: 1px solid url(../site/site3/banner-image.jpg) top right no-repeat;
-  }
 }
 .id7-main-content-area .boxstyle_.feature-image2 h1,
 .id7-main-content-area .boxstyle_.feature-image2 h2,

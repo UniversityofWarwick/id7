@@ -1,4 +1,19 @@
 #boxstyle {
+  .image(@bg-image, @text-colour: @text-color) {
+    border: 0;
+    background: @bg-image;
+    color: @text-colour;
+  }
+
+  .image(@bg-image, @text-colour: @text-color) when not (@text-colour = inherit) {
+    .header-colour(@text-colour);
+    // ID-78 Hanging fire on this for now .link-colour(@text-colour);
+
+    blockquote.quotes {
+      color: inherit;
+    }
+  }
+
   .filled(@bg, @text-colour: @text-color) {
     border: 0;
     background: @bg;
@@ -7,6 +22,10 @@
     @media print {
       border: 1px solid @bg;
     }
+  }
+
+  .filled(@bg, @text-colour) when (lightness(@bg) < 50%) {
+    .link-colour(@text-colour);
   }
 
   .filled(@bg, @text-colour: @text-color) when not (@text-colour = inherit) {

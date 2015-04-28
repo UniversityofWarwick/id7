@@ -10,7 +10,7 @@
   }
 }
 html.no-rgba {
-  background: #89b6dd;
+  background: #4d7294;
 }
 h1,
 h2,
@@ -24,53 +24,53 @@ h6,
 .h4,
 .h5,
 .h6 {
-  color: #6ca4d4;
+  color: #204f79;
 }
 html.no-not-selector a,
 html.no-not-selector a:link,
 html.no-not-selector a:visited {
-  color: #6ca4d4;
+  color: #204f79;
 }
 a:not(.btn),
 a:link:not(.btn),
 a:visited:not(.btn) {
-  color: #6ca4d4;
+  color: #204f79;
 }
 html.no-not-selector a:hover,
 html.no-not-selector a:focus,
 html.no-not-selector a:active {
-  color: #3172a9;
+  color: #0b1a28;
 }
 a:hover:not(.btn),
 a:focus:not(.btn),
 a:active:not(.btn) {
-  color: #3172a9;
+  color: #0b1a28;
 }
 a:hover .new-window-link {
-  color: #3172a9;
+  color: #0b1a28;
 }
 a:not(.btn),
 a:link:not(.btn),
 a:visited:not(.btn) {
-  -webkit-text-decoration-color: #bbd5eb;
-  -moz-text-decoration-color: #bbd5eb;
-       text-decoration-color: #bbd5eb;
+  -webkit-text-decoration-color: #3584ca;
+  -moz-text-decoration-color: #3584ca;
+       text-decoration-color: #3584ca;
 }
 a:hover:not(.btn),
 a:focus:not(.btn),
 a:active:not(.btn) {
-  -webkit-text-decoration-color: #3172a9;
-  -moz-text-decoration-color: #3172a9;
-       text-decoration-color: #3172a9;
+  -webkit-text-decoration-color: #0b1a28;
+  -moz-text-decoration-color: #0b1a28;
+       text-decoration-color: #0b1a28;
 }
 blockquote.quotes {
-  color: #3172a9;
+  color: #0b1a28;
 }
 blockquote.quotes::before {
-  color: #6ca4d4;
+  color: #204f79;
 }
 .brand-bg {
-  background: #6ca4d4;
+  background: #204f79;
   color: white;
 }
 html.no-not-selector .brand-bg a,
@@ -111,57 +111,57 @@ html.no-not-selector .brand-bg a:active {
        text-decoration-color: #cccccc !important;
 }
 .brand-text {
-  color: #6ca4d4;
+  color: #204f79;
 }
 html.no-not-selector .brand-text a,
 html.no-not-selector .brand-text a:link,
 html.no-not-selector .brand-text a:visited {
-  color: #6ca4d4 !important;
+  color: #204f79 !important;
 }
 .brand-text a:not(.btn),
 .brand-text a:link:not(.btn),
 .brand-text a:visited:not(.btn) {
-  color: #6ca4d4 !important;
+  color: #204f79 !important;
 }
 html.no-not-selector .brand-text a:hover,
 html.no-not-selector .brand-text a:focus,
 html.no-not-selector .brand-text a:active {
-  color: #3172a9 !important;
+  color: #0b1a28 !important;
 }
 .brand-text a:hover:not(.btn),
 .brand-text a:focus:not(.btn),
 .brand-text a:active:not(.btn) {
-  color: #3172a9 !important;
+  color: #0b1a28 !important;
 }
 .brand-text a:hover .new-window-link {
-  color: #3172a9 !important;
+  color: #0b1a28 !important;
 }
 .brand-text a:not(.btn),
 .brand-text a:link:not(.btn),
 .brand-text a:visited:not(.btn) {
-  -webkit-text-decoration-color: #bbd5eb !important;
-  -moz-text-decoration-color: #bbd5eb !important;
-       text-decoration-color: #bbd5eb !important;
+  -webkit-text-decoration-color: #3584ca !important;
+  -moz-text-decoration-color: #3584ca !important;
+       text-decoration-color: #3584ca !important;
 }
 .brand-text a:hover:not(.btn),
 .brand-text a:focus:not(.btn),
 .brand-text a:active:not(.btn) {
-  -webkit-text-decoration-color: #3172a9 !important;
-  -moz-text-decoration-color: #3172a9 !important;
-       text-decoration-color: #3172a9 !important;
+  -webkit-text-decoration-color: #0b1a28 !important;
+  -moz-text-decoration-color: #0b1a28 !important;
+       text-decoration-color: #0b1a28 !important;
 }
 .brand-border {
-  border-color: #6ca4d4;
+  border-color: #204f79;
 }
 .id7-utility-masthead {
-  background-color: #6ca4d4;
-  background-color: rgba(108, 164, 212, 0.5);
+  background-color: #204f79;
+  background-color: rgba(32, 79, 121, 0.5);
 }
 .id7-utility-masthead::after {
-  background-color: #6ca4d4;
+  background-color: #204f79;
 }
 .id7-navigation .navbar-primary {
-  background-color: #6ca4d4;
+  background-color: #204f79;
 }
 .id7-navigation .navbar-primary .navbar-text {
   color: white;
@@ -172,7 +172,7 @@ html.no-not-selector .brand-text a:active {
 .id7-navigation .navbar-primary .navbar-nav > li:hover,
 .id7-navigation .navbar-primary .navbar-nav > li:focus {
   color: white;
-  background-color: #6194bf;
+  background-color: #1a3f61;
 }
 .id7-navigation .navbar-primary .navbar-nav > li > a,
 .id7-navigation .navbar-primary .navbar-nav > li > a:hover,
@@ -181,7 +181,7 @@ html.no-not-selector .brand-text a:active {
   background: none;
 }
 .id7-navigation .navbar-primary .navbar-nav > li.active.next-secondary::before {
-  border-bottom-color: #c4dbee;
+  border-bottom-color: #a6b9c9;
 }
 .id7-navigation .navbar-primary .navbar-nav > li.active.next-tertiary::before {
   border-bottom-color: #f8f8f8;
@@ -193,7 +193,7 @@ html.no-not-selector .brand-text a:active {
 .id7-navigation .navbar-primary .navbar-nav > .disabled:hover,
 .id7-navigation .navbar-primary .navbar-nav > .disabled:focus {
   color: white;
-  background-color: #6194bf;
+  background-color: #1a3f61;
 }
 .id7-navigation .navbar-primary .navbar-toggle {
   border: none;
@@ -208,16 +208,16 @@ html.no-not-selector .brand-text a:active {
 .id7-navigation .navbar-primary .navbar-nav > .open > a:hover,
 .id7-navigation .navbar-primary .navbar-nav > .open > a:focus {
   color: white;
-  background-color: #6194bf;
+  background-color: #1a3f61;
 }
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu {
-  background-color: #6ca4d4;
+  background-color: #204f79;
 }
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > .dropdown-header {
-  border-color: #6194bf;
+  border-color: #1a3f61;
 }
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu .divider {
-  background-color: #6194bf;
+  background-color: #1a3f61;
 }
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > li > a {
   color: white;
@@ -225,19 +225,19 @@ html.no-not-selector .brand-text a:active {
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > li > a:hover,
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > li > a:focus {
   color: white;
-  background-color: #6194bf;
+  background-color: #1a3f61;
 }
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > .active > a {
-  background-color: #6194bf;
+  background-color: #1a3f61;
 }
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > .active > a::before {
-  border-bottom-color: #c4dbee;
+  border-bottom-color: #a6b9c9;
 }
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > .disabled > a,
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > .disabled > a:hover,
 .id7-navigation .navbar-primary .navbar-nav .dropdown-menu > .disabled > a:focus {
   color: white;
-  background-color: #6194bf;
+  background-color: #1a3f61;
 }
 .id7-navigation .navbar-primary .navbar-link {
   color: white;
@@ -259,21 +259,21 @@ fieldset[disabled] .id7-navigation .navbar-primary .btn-link:focus {
   color: white;
 }
 .navbar-primary .navbar-brand {
-  background-color: #5683aa;
+  background-color: #204f79;
 }
 .navbar-secondary {
-  background-color: #c4dbee;
+  background-color: #a6b9c9;
 }
 .navbar-secondary .navbar-text {
-  color: #383838;
+  color: white;
 }
 .navbar-secondary .navbar-nav > li {
-  color: #383838;
+  color: white;
 }
 .navbar-secondary .navbar-nav > li:hover,
 .navbar-secondary .navbar-nav > li:focus {
-  color: #383838;
-  background-color: #b1c5d6;
+  color: white;
+  background-color: #8594a1;
 }
 .navbar-secondary .navbar-nav > li > a,
 .navbar-secondary .navbar-nav > li > a:hover,
@@ -293,43 +293,43 @@ fieldset[disabled] .id7-navigation .navbar-primary .btn-link:focus {
 .navbar-secondary .navbar-nav > .disabled,
 .navbar-secondary .navbar-nav > .disabled:hover,
 .navbar-secondary .navbar-nav > .disabled:focus {
-  color: #383838;
-  background-color: #b1c5d6;
+  color: white;
+  background-color: #8594a1;
 }
 .navbar-secondary .navbar-toggle {
   border: none;
-  color: #383838;
+  color: white;
 }
 .navbar-secondary .navbar-toggle:hover,
 .navbar-secondary .navbar-toggle:focus {
-  color: #383838;
+  color: white;
   background: none;
 }
 .navbar-secondary .navbar-nav > .open > a,
 .navbar-secondary .navbar-nav > .open > a:hover,
 .navbar-secondary .navbar-nav > .open > a:focus {
-  color: #383838;
-  background-color: #b1c5d6;
+  color: white;
+  background-color: #8594a1;
 }
 .navbar-secondary .navbar-nav .dropdown-menu {
-  background-color: #c4dbee;
+  background-color: #a6b9c9;
 }
 .navbar-secondary .navbar-nav .dropdown-menu > .dropdown-header {
-  border-color: #b1c5d6;
+  border-color: #8594a1;
 }
 .navbar-secondary .navbar-nav .dropdown-menu .divider {
-  background-color: #b1c5d6;
+  background-color: #8594a1;
 }
 .navbar-secondary .navbar-nav .dropdown-menu > li > a {
-  color: #383838;
+  color: white;
 }
 .navbar-secondary .navbar-nav .dropdown-menu > li > a:hover,
 .navbar-secondary .navbar-nav .dropdown-menu > li > a:focus {
-  color: #383838;
-  background-color: #b1c5d6;
+  color: white;
+  background-color: #8594a1;
 }
 .navbar-secondary .navbar-nav .dropdown-menu > .active > a {
-  background-color: #b1c5d6;
+  background-color: #8594a1;
 }
 .navbar-secondary .navbar-nav .dropdown-menu > .active > a::before {
   border-bottom-color: white;
@@ -337,40 +337,40 @@ fieldset[disabled] .id7-navigation .navbar-primary .btn-link:focus {
 .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a,
 .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a:hover,
 .navbar-secondary .navbar-nav .dropdown-menu > .disabled > a:focus {
-  color: #383838;
-  background-color: #b1c5d6;
+  color: white;
+  background-color: #8594a1;
 }
 .navbar-secondary .navbar-link {
-  color: #383838;
+  color: white;
 }
 .navbar-secondary .navbar-link:hover {
-  color: #383838;
+  color: white;
 }
 .navbar-secondary .btn-link {
-  color: #383838;
+  color: white;
 }
 .navbar-secondary .btn-link:hover,
 .navbar-secondary .btn-link:focus {
-  color: #383838;
+  color: white;
 }
 .navbar-secondary .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-secondary .btn-link:hover,
 .navbar-secondary .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-secondary .btn-link:focus {
-  color: #383838;
-}
-.navbar-secondary .navbar-nav > li::after {
-  color: #6ca4d4;
-}
-.navbar-secondary .navbar-nav > li.first {
-  background-color: #6ca4d4;
   color: white;
 }
-.navbar-secondary .navbar-nav > li.first:hover::after {
-  border-right-color: #5683aa;
+.navbar-secondary .navbar-nav > li::after {
+  color: #204f79;
 }
-.navbar-secondary .navbar-nav > li.first::after {
-  border-color: transparent transparent transparent #6ca4d4;
+.navbar-secondary .navbar-nav > li:first-child {
+  background-color: #204f79;
+  color: white;
+}
+.navbar-secondary .navbar-nav > li:first-child:hover::after {
+  border-right-color: #204f79;
+}
+.navbar-secondary .navbar-nav > li:first-child::after {
+  border-color: transparent transparent transparent #204f79;
 }
 .navbar-tertiary {
   background-color: #f8f8f8;
@@ -384,7 +384,7 @@ fieldset[disabled] .navbar-secondary .btn-link:focus {
 .navbar-tertiary .navbar-nav > li:hover,
 .navbar-tertiary .navbar-nav > li:focus {
   color: #383838;
-  background-color: #dfdfdf;
+  background-color: #c6c6c6;
 }
 .navbar-tertiary .navbar-nav > li > a,
 .navbar-tertiary .navbar-nav > li > a:hover,
@@ -405,7 +405,7 @@ fieldset[disabled] .navbar-secondary .btn-link:focus {
 .navbar-tertiary .navbar-nav > .disabled:hover,
 .navbar-tertiary .navbar-nav > .disabled:focus {
   color: #383838;
-  background-color: #dfdfdf;
+  background-color: #c6c6c6;
 }
 .navbar-tertiary .navbar-toggle {
   border: none;
@@ -420,16 +420,16 @@ fieldset[disabled] .navbar-secondary .btn-link:focus {
 .navbar-tertiary .navbar-nav > .open > a:hover,
 .navbar-tertiary .navbar-nav > .open > a:focus {
   color: #383838;
-  background-color: #dfdfdf;
+  background-color: #c6c6c6;
 }
 .navbar-tertiary .navbar-nav .dropdown-menu {
   background-color: #f8f8f8;
 }
 .navbar-tertiary .navbar-nav .dropdown-menu > .dropdown-header {
-  border-color: #dfdfdf;
+  border-color: #c6c6c6;
 }
 .navbar-tertiary .navbar-nav .dropdown-menu .divider {
-  background-color: #dfdfdf;
+  background-color: #c6c6c6;
 }
 .navbar-tertiary .navbar-nav .dropdown-menu > li > a {
   color: #383838;
@@ -437,10 +437,10 @@ fieldset[disabled] .navbar-secondary .btn-link:focus {
 .navbar-tertiary .navbar-nav .dropdown-menu > li > a:hover,
 .navbar-tertiary .navbar-nav .dropdown-menu > li > a:focus {
   color: #383838;
-  background-color: #dfdfdf;
+  background-color: #c6c6c6;
 }
 .navbar-tertiary .navbar-nav .dropdown-menu > .active > a {
-  background-color: #dfdfdf;
+  background-color: #c6c6c6;
 }
 .navbar-tertiary .navbar-nav .dropdown-menu > .active > a::before {
   border-bottom-color: white;
@@ -449,7 +449,7 @@ fieldset[disabled] .navbar-secondary .btn-link:focus {
 .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a:hover,
 .navbar-tertiary .navbar-nav .dropdown-menu > .disabled > a:focus {
   color: #383838;
-  background-color: #dfdfdf;
+  background-color: #c6c6c6;
 }
 .navbar-tertiary .navbar-link {
   color: #383838;
@@ -470,19 +470,13 @@ fieldset[disabled] .navbar-tertiary .btn-link:hover,
 fieldset[disabled] .navbar-tertiary .btn-link:focus {
   color: #383838;
 }
-.opaque-navigation .navbar-primary {
-  background-color: #6ca4d4;
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
 .bordered .id7-left-border,
 .bordered .id7-right-border {
-  border-color: #6ca4d4;
-  border-color: rgba(108, 164, 212, 0.3);
+  border-color: #204f79;
+  border-color: rgba(32, 79, 121, 0.3);
 }
 .id7-page-footer .id7-app-footer {
-  background: #6ca4d4;
+  background: #204f79;
   color: white;
 }
 .id7-page-footer .id7-app-footer h1,
@@ -537,7 +531,7 @@ html.no-not-selector .id7-page-footer .id7-app-footer a:active {
        text-decoration-color: #cccccc;
 }
 .id7-page-footer .id7-horizontal-divider .divider {
-  stroke: #6ca4d4;
+  stroke: #204f79;
 }
 .id7-page-footer.id7-footer-divider .id7-site-footer {
   background: white;
@@ -606,43 +600,43 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   border-top-color: #d3d3d3;
 }
 .id7-masthead .id7-search .id7-search-box {
-  border-color: #6ca4d4;
+  border-color: #204f79;
 }
 .id7-masthead .id7-search .fa {
-  color: #6ca4d4;
-  color: rgba(108, 164, 212, 0.5);
+  color: #204f79;
+  color: rgba(32, 79, 121, 0.5);
   -webkit-transition: color 0.15s linear;
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
 .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
-  color: #6ca4d4;
+  color: #204f79;
 }
 .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
-  background: #6ca4d4;
+  background: #204f79;
   color: white;
 }
 .form-control:focus {
-  border-color: #6ca4d4;
+  border-color: #204f79;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(108, 164, 212, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(108, 164, 212, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(32, 79, 121, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(32, 79, 121, 0.6);
 }
 .carousel .carousel-indicators li::after {
-  color: #6ca4d4;
-  color: rgba(108, 164, 212, 0.3);
+  color: #204f79;
+  color: rgba(32, 79, 121, 0.3);
 }
 .carousel .carousel-indicators li.active::after {
-  color: #6ca4d4;
+  color: #204f79;
 }
 .boxstyle_.box1 {
   border: 0;
-  background: #e2edf6;
+  background: #dee5eb;
   color: #383838;
 }
 @media print {
   .boxstyle_.box1 {
-    border: 1px solid #e2edf6;
+    border: 1px solid #dee5eb;
   }
 }
 .boxstyle_.box1 h1,
@@ -691,12 +685,76 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
 }
 .boxstyle_.box3 {
   background: none;
-  border: 1px solid #6ca4d4;
+  border: 1px solid #204f79;
   color: inherit;
 }
 .boxstyle_.box4 {
   background: none;
   border: 1px solid #777777;
+  color: inherit;
+}
+.boxstyle_.box5 {
+  border: 0;
+  background: #204f79;
+  color: white;
+}
+@media print {
+  .boxstyle_.box5 {
+    border: 1px solid #204f79;
+  }
+}
+html.no-not-selector .boxstyle_.box5 a,
+html.no-not-selector .boxstyle_.box5 a:link,
+html.no-not-selector .boxstyle_.box5 a:visited {
+  color: white;
+}
+.boxstyle_.box5 a:not(.btn),
+.boxstyle_.box5 a:link:not(.btn),
+.boxstyle_.box5 a:visited:not(.btn) {
+  color: white;
+}
+html.no-not-selector .boxstyle_.box5 a:hover,
+html.no-not-selector .boxstyle_.box5 a:focus,
+html.no-not-selector .boxstyle_.box5 a:active {
+  color: #cccccc;
+}
+.boxstyle_.box5 a:hover:not(.btn),
+.boxstyle_.box5 a:focus:not(.btn),
+.boxstyle_.box5 a:active:not(.btn) {
+  color: #cccccc;
+}
+.boxstyle_.box5 a:hover .new-window-link {
+  color: #cccccc;
+}
+.boxstyle_.box5 a:not(.btn),
+.boxstyle_.box5 a:link:not(.btn),
+.boxstyle_.box5 a:visited:not(.btn) {
+  -webkit-text-decoration-color: #ffffff;
+  -moz-text-decoration-color: #ffffff;
+       text-decoration-color: #ffffff;
+}
+.boxstyle_.box5 a:hover:not(.btn),
+.boxstyle_.box5 a:focus:not(.btn),
+.boxstyle_.box5 a:active:not(.btn) {
+  -webkit-text-decoration-color: #cccccc;
+  -moz-text-decoration-color: #cccccc;
+       text-decoration-color: #cccccc;
+}
+.boxstyle_.box5 h1,
+.boxstyle_.box5 h2,
+.boxstyle_.box5 h3,
+.boxstyle_.box5 h4,
+.boxstyle_.box5 h5,
+.boxstyle_.box5 h6,
+.boxstyle_.box5 .h1,
+.boxstyle_.box5 .h2,
+.boxstyle_.box5 .h3,
+.boxstyle_.box5 .h4,
+.boxstyle_.box5 .h5,
+.boxstyle_.box5 .h6 {
+  color: white;
+}
+.boxstyle_.box5 blockquote.quotes {
   color: inherit;
 }
 .hll {
@@ -1063,7 +1121,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #7b428e;
+  border-top: 80px solid #5b3069;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1075,7 +1133,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #7b428e;
+  border-top: 80px solid #5b3069;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1092,7 +1150,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #7b428e;
+  border-top: 30px solid #5b3069;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1104,7 +1162,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #7b428e;
+  border-top: 30px solid #5b3069;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1121,7 +1179,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #885599;
+  border-top: 30px solid #6b4578;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1133,7 +1191,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #885599;
+  border-top: 30px solid #6b4578;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1150,7 +1208,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #9568a5;
+  border-top: 30px solid #7c5987;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1162,7 +1220,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #9568a5;
+  border-top: 30px solid #7c5987;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1179,7 +1237,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #a37bb0;
+  border-top: 30px solid #8c6e96;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1191,7 +1249,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #a37bb0;
+  border-top: 30px solid #8c6e96;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1208,7 +1266,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #b08ebb;
+  border-top: 30px solid #9d83a5;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1220,7 +1278,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #b08ebb;
+  border-top: 30px solid #9d83a5;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1237,7 +1295,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #bda1c7;
+  border-top: 30px solid #ad98b4;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1249,7 +1307,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #bda1c7;
+  border-top: 30px solid #ad98b4;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1266,7 +1324,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #cab3d2;
+  border-top: 30px solid #bdacc3;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1278,7 +1336,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #cab3d2;
+  border-top: 30px solid #bdacc3;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1295,7 +1353,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #d7c6dd;
+  border-top: 30px solid #cec1d2;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1307,7 +1365,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #d7c6dd;
+  border-top: 30px solid #cec1d2;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1324,7 +1382,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e5d9e8;
+  border-top: 30px solid #ded6e1;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1336,7 +1394,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e5d9e8;
+  border-top: 30px solid #ded6e1;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1353,7 +1411,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f2ecf4;
+  border-top: 30px solid #efeaf0;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1365,7 +1423,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f2ecf4;
+  border-top: 30px solid #efeaf0;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1382,7 +1440,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8f6f9;
+  border-top: 30px solid #f7f5f8;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1394,7 +1452,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8f6f9;
+  border-top: 30px solid #f7f5f8;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1412,7 +1470,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #828c95;
+  border-top: 80px solid #3f4246;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1424,7 +1482,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #828c95;
+  border-top: 80px solid #3f4246;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1441,7 +1499,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #828c95;
+  border-top: 30px solid #3f4246;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1453,7 +1511,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #828c95;
+  border-top: 30px solid #3f4246;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1470,7 +1528,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #8f98a0;
+  border-top: 30px solid #525559;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1482,7 +1540,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #8f98a0;
+  border-top: 30px solid #525559;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1499,7 +1557,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #9ba3aa;
+  border-top: 30px solid #65686b;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1511,7 +1569,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #9ba3aa;
+  border-top: 30px solid #65686b;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1528,7 +1586,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #a8afb5;
+  border-top: 30px solid #797b7e;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1540,7 +1598,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #a8afb5;
+  border-top: 30px solid #797b7e;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1557,7 +1615,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #b4babf;
+  border-top: 30px solid #8c8e90;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1569,7 +1627,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #b4babf;
+  border-top: 30px solid #8c8e90;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1586,7 +1644,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #c1c6ca;
+  border-top: 30px solid #9fa1a3;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1598,7 +1656,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #c1c6ca;
+  border-top: 30px solid #9fa1a3;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1615,7 +1673,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #cdd1d5;
+  border-top: 30px solid #b2b3b5;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1627,7 +1685,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #cdd1d5;
+  border-top: 30px solid #b2b3b5;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1644,7 +1702,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #dadddf;
+  border-top: 30px solid #c5c6c8;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1656,7 +1714,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #dadddf;
+  border-top: 30px solid #c5c6c8;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1673,7 +1731,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e6e8ea;
+  border-top: 30px solid #d9d9da;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1685,7 +1743,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e6e8ea;
+  border-top: 30px solid #d9d9da;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1702,7 +1760,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f3f4f4;
+  border-top: 30px solid #ececed;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1714,7 +1772,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f3f4f4;
+  border-top: 30px solid #ececed;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1731,7 +1789,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f9f9fa;
+  border-top: 30px solid #f5f6f6;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1743,7 +1801,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f9f9fa;
+  border-top: 30px solid #f5f6f6;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1761,7 +1819,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #dcbe2d;
+  border-top: 80px solid #996b00;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1773,7 +1831,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #dcbe2d;
+  border-top: 80px solid #996b00;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1790,7 +1848,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #dcbe2d;
+  border-top: 30px solid #996b00;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1802,7 +1860,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #dcbe2d;
+  border-top: 30px solid #996b00;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1819,7 +1877,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e0c542;
+  border-top: 30px solid #a37a19;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1831,7 +1889,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e0c542;
+  border-top: 30px solid #a37a19;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1848,7 +1906,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e3cb57;
+  border-top: 30px solid #ad8933;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1860,7 +1918,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e3cb57;
+  border-top: 30px solid #ad8933;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1877,7 +1935,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e7d26c;
+  border-top: 30px solid #b8974d;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1889,7 +1947,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e7d26c;
+  border-top: 30px solid #b8974d;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1906,7 +1964,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #ead881;
+  border-top: 30px solid #c2a666;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1918,7 +1976,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #ead881;
+  border-top: 30px solid #c2a666;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1935,7 +1993,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #eedf96;
+  border-top: 30px solid #ccb580;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1947,7 +2005,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #eedf96;
+  border-top: 30px solid #ccb580;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1964,7 +2022,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f1e5ab;
+  border-top: 30px solid #d6c499;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1976,7 +2034,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f1e5ab;
+  border-top: 30px solid #d6c499;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1993,7 +2051,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f5ebc0;
+  border-top: 30px solid #e0d3b3;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2005,7 +2063,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f5ebc0;
+  border-top: 30px solid #e0d3b3;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2022,7 +2080,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8f2d5;
+  border-top: 30px solid #ebe1cc;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2034,7 +2092,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8f2d5;
+  border-top: 30px solid #ebe1cc;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2051,7 +2109,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fcf9ea;
+  border-top: 30px solid #f5f0e6;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2063,7 +2121,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fcf9ea;
+  border-top: 30px solid #f5f0e6;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2080,7 +2138,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fdfcf4;
+  border-top: 30px solid #faf8f2;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2092,7 +2150,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fdfcf4;
+  border-top: 30px solid #faf8f2;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2110,7 +2168,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #f5ca21;
+  border-top: 80px solid #ffc233;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2122,7 +2180,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #f5ca21;
+  border-top: 80px solid #ffc233;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2139,7 +2197,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f5ca21;
+  border-top: 30px solid #ffc233;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2151,7 +2209,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f5ca21;
+  border-top: 30px solid #ffc233;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2168,7 +2226,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f6cf37;
+  border-top: 30px solid #ffc847;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2180,7 +2238,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f6cf37;
+  border-top: 30px solid #ffc847;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2197,7 +2255,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f7d54d;
+  border-top: 30px solid #ffce5c;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2209,7 +2267,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f7d54d;
+  border-top: 30px solid #ffce5c;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2226,7 +2284,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8da64;
+  border-top: 30px solid #ffd470;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2238,7 +2296,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8da64;
+  border-top: 30px solid #ffd470;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2255,7 +2313,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f9df7a;
+  border-top: 30px solid #ffda85;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2267,7 +2325,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f9df7a;
+  border-top: 30px solid #ffda85;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2284,7 +2342,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fae590;
+  border-top: 30px solid #ffe199;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2296,7 +2354,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fae590;
+  border-top: 30px solid #ffe199;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2313,7 +2371,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fbeaa6;
+  border-top: 30px solid #ffe7ad;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2325,7 +2383,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fbeaa6;
+  border-top: 30px solid #ffe7ad;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2342,7 +2400,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fcefbc;
+  border-top: 30px solid #ffedc2;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2354,7 +2412,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fcefbc;
+  border-top: 30px solid #ffedc2;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2371,7 +2429,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fdf4d3;
+  border-top: 30px solid #fff3d6;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2383,7 +2441,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fdf4d3;
+  border-top: 30px solid #fff3d6;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2400,7 +2458,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fefae9;
+  border-top: 30px solid #fff9eb;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2412,7 +2470,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fefae9;
+  border-top: 30px solid #fff9eb;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2429,7 +2487,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fffcf4;
+  border-top: 30px solid #fffcf5;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2441,7 +2499,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fffcf4;
+  border-top: 30px solid #fffcf5;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2459,7 +2517,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #f1863c;
+  border-top: 80px solid #be410c;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2471,7 +2529,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #f1863c;
+  border-top: 80px solid #be410c;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2488,7 +2546,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f1863c;
+  border-top: 30px solid #be410c;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2500,7 +2558,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f1863c;
+  border-top: 30px solid #be410c;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2517,7 +2575,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f29250;
+  border-top: 30px solid #c55424;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2529,7 +2587,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f29250;
+  border-top: 30px solid #c55424;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2546,7 +2604,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f49e63;
+  border-top: 30px solid #cb673d;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2558,7 +2616,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f49e63;
+  border-top: 30px solid #cb673d;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2575,7 +2633,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f5aa77;
+  border-top: 30px solid #d27a55;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2587,7 +2645,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f5aa77;
+  border-top: 30px solid #d27a55;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2604,7 +2662,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f7b68a;
+  border-top: 30px solid #d88d6d;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2616,7 +2674,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f7b68a;
+  border-top: 30px solid #d88d6d;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2633,7 +2691,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8c39e;
+  border-top: 30px solid #dfa085;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2645,7 +2703,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8c39e;
+  border-top: 30px solid #dfa085;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2662,7 +2720,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f9cfb1;
+  border-top: 30px solid #e5b39e;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2674,7 +2732,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f9cfb1;
+  border-top: 30px solid #e5b39e;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2691,7 +2749,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fbdbc4;
+  border-top: 30px solid #ebc6b6;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2703,7 +2761,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fbdbc4;
+  border-top: 30px solid #ebc6b6;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2720,7 +2778,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fce7d8;
+  border-top: 30px solid #f2d9ce;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2732,7 +2790,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fce7d8;
+  border-top: 30px solid #f2d9ce;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2749,7 +2807,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fef3ec;
+  border-top: 30px solid #f9ece7;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2761,7 +2819,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fef3ec;
+  border-top: 30px solid #f9ece7;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2778,7 +2836,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fef9f5;
+  border-top: 30px solid #fcf5f3;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2790,7 +2848,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fef9f5;
+  border-top: 30px solid #fcf5f3;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2808,7 +2866,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #f89d3c;
+  border-top: 80px solid #f47920;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2820,7 +2878,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #f89d3c;
+  border-top: 80px solid #f47920;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2837,7 +2895,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f89d3c;
+  border-top: 30px solid #f47920;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2849,7 +2907,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f89d3c;
+  border-top: 30px solid #f47920;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2866,7 +2924,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f9a750;
+  border-top: 30px solid #f58636;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2878,7 +2936,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f9a750;
+  border-top: 30px solid #f58636;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2895,7 +2953,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f9b163;
+  border-top: 30px solid #f6944d;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2907,7 +2965,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f9b163;
+  border-top: 30px solid #f6944d;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2924,7 +2982,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #faba77;
+  border-top: 30px solid #f7a163;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2936,7 +2994,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #faba77;
+  border-top: 30px solid #f7a163;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2953,7 +3011,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fbc48a;
+  border-top: 30px solid #f8af79;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2965,7 +3023,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fbc48a;
+  border-top: 30px solid #f8af79;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2982,7 +3040,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fbce9e;
+  border-top: 30px solid #fabc90;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2994,7 +3052,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fbce9e;
+  border-top: 30px solid #fabc90;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3011,7 +3069,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fcd8b1;
+  border-top: 30px solid #fbc9a6;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3023,7 +3081,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fcd8b1;
+  border-top: 30px solid #fbc9a6;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3040,7 +3098,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fde2c4;
+  border-top: 30px solid #fcd7bc;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3052,7 +3110,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fde2c4;
+  border-top: 30px solid #fcd7bc;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3069,7 +3127,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #feebd8;
+  border-top: 30px solid #fde4d2;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3081,7 +3139,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #feebd8;
+  border-top: 30px solid #fde4d2;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3098,7 +3156,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fef5ec;
+  border-top: 30px solid #fef2e9;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3110,7 +3168,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fef5ec;
+  border-top: 30px solid #fef2e9;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3127,7 +3185,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fffaf5;
+  border-top: 30px solid #fef8f4;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3139,7 +3197,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fffaf5;
+  border-top: 30px solid #fef8f4;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3157,7 +3215,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #bd3f4b;
+  border-top: 80px solid #89102c;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3169,7 +3227,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #bd3f4b;
+  border-top: 80px solid #89102c;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3186,7 +3244,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #bd3f4b;
+  border-top: 30px solid #89102c;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3198,7 +3256,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #bd3f4b;
+  border-top: 30px solid #89102c;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3215,7 +3273,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #c4525d;
+  border-top: 30px solid #952841;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3227,7 +3285,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #c4525d;
+  border-top: 30px solid #952841;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3244,7 +3302,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #ca656f;
+  border-top: 30px solid #a14056;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3256,7 +3314,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #ca656f;
+  border-top: 30px solid #a14056;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3273,7 +3331,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #d17981;
+  border-top: 30px solid #ac586b;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3285,7 +3343,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #d17981;
+  border-top: 30px solid #ac586b;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3302,7 +3360,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #d78c93;
+  border-top: 30px solid #b87080;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3314,7 +3372,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #d78c93;
+  border-top: 30px solid #b87080;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3331,7 +3389,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #de9fa5;
+  border-top: 30px solid #c48895;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3343,7 +3401,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #de9fa5;
+  border-top: 30px solid #c48895;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3360,7 +3418,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e5b2b7;
+  border-top: 30px solid #d09fab;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3372,7 +3430,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e5b2b7;
+  border-top: 30px solid #d09fab;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3389,7 +3447,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #ebc5c9;
+  border-top: 30px solid #dcb7c0;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3401,7 +3459,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #ebc5c9;
+  border-top: 30px solid #dcb7c0;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3418,7 +3476,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f2d9db;
+  border-top: 30px solid #e7cfd5;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3430,7 +3488,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f2d9db;
+  border-top: 30px solid #e7cfd5;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3447,7 +3505,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8eced;
+  border-top: 30px solid #f3e7ea;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3459,7 +3517,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8eced;
+  border-top: 30px solid #f3e7ea;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3476,7 +3534,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fcf5f6;
+  border-top: 30px solid #f9f3f4;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3488,7 +3546,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fcf5f6;
+  border-top: 30px solid #f9f3f4;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3855,7 +3913,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #a5ab2a;
+  border-top: 80px solid #797906;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3867,7 +3925,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #a5ab2a;
+  border-top: 80px solid #797906;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3884,7 +3942,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #a5ab2a;
+  border-top: 30px solid #797906;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3896,7 +3954,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #a5ab2a;
+  border-top: 30px solid #797906;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3913,7 +3971,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #aeb33f;
+  border-top: 30px solid #86861f;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3925,7 +3983,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #aeb33f;
+  border-top: 30px solid #86861f;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3942,7 +4000,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #b7bc55;
+  border-top: 30px solid #949438;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3954,7 +4012,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #b7bc55;
+  border-top: 30px solid #949438;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3971,7 +4029,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #c0c46a;
+  border-top: 30px solid #a1a151;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3983,7 +4041,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #c0c46a;
+  border-top: 30px solid #a1a151;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4000,7 +4058,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #c9cd7f;
+  border-top: 30px solid #afaf6a;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4012,7 +4070,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #c9cd7f;
+  border-top: 30px solid #afaf6a;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4029,7 +4087,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #d2d594;
+  border-top: 30px solid #bcbc83;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4041,7 +4099,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #d2d594;
+  border-top: 30px solid #bcbc83;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4058,7 +4116,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #dbddaa;
+  border-top: 30px solid #c9c99b;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4070,7 +4128,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #dbddaa;
+  border-top: 30px solid #c9c99b;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4087,7 +4145,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e4e6bf;
+  border-top: 30px solid #d7d7b4;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4099,7 +4157,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e4e6bf;
+  border-top: 30px solid #d7d7b4;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4116,7 +4174,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #edeed4;
+  border-top: 30px solid #e4e4cd;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4128,7 +4186,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #edeed4;
+  border-top: 30px solid #e4e4cd;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4145,7 +4203,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f6f7ea;
+  border-top: 30px solid #f2f2e6;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4157,7 +4215,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f6f7ea;
+  border-top: 30px solid #f2f2e6;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4174,7 +4232,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fbfbf4;
+  border-top: 30px solid #f8f8f3;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4186,7 +4244,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #fbfbf4;
+  border-top: 30px solid #f8f8f3;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4204,7 +4262,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #59c1a5;
+  border-top: 80px solid #7ecbb6;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4216,7 +4274,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #59c1a5;
+  border-top: 80px solid #7ecbb6;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4233,7 +4291,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #59c1a5;
+  border-top: 30px solid #7ecbb6;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4245,7 +4303,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #59c1a5;
+  border-top: 30px solid #7ecbb6;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4262,7 +4320,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #6ac7ae;
+  border-top: 30px solid #8bd0bd;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4274,7 +4332,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #6ac7ae;
+  border-top: 30px solid #8bd0bd;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4291,7 +4349,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #7acdb7;
+  border-top: 30px solid #98d5c5;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4303,7 +4361,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #7acdb7;
+  border-top: 30px solid #98d5c5;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4320,7 +4378,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #8bd4c0;
+  border-top: 30px solid #a5dbcc;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4332,7 +4390,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #8bd4c0;
+  border-top: 30px solid #a5dbcc;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4349,7 +4407,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #9bdac9;
+  border-top: 30px solid #b2e0d3;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4361,7 +4419,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #9bdac9;
+  border-top: 30px solid #b2e0d3;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4378,7 +4436,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #ace0d2;
+  border-top: 30px solid #bfe5db;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4390,7 +4448,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #ace0d2;
+  border-top: 30px solid #bfe5db;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4407,7 +4465,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #bde6db;
+  border-top: 30px solid #cbeae2;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4419,7 +4477,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #bde6db;
+  border-top: 30px solid #cbeae2;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4436,7 +4494,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #cdece4;
+  border-top: 30px solid #d8efe9;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4448,7 +4506,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #cdece4;
+  border-top: 30px solid #d8efe9;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4465,7 +4523,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #def3ed;
+  border-top: 30px solid #e5f5f0;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4477,7 +4535,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #def3ed;
+  border-top: 30px solid #e5f5f0;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4494,7 +4552,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #eef9f6;
+  border-top: 30px solid #f2faf8;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4506,7 +4564,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #eef9f6;
+  border-top: 30px solid #f2faf8;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4523,7 +4581,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f7fcfb;
+  border-top: 30px solid #f9fcfb;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4535,7 +4593,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f7fcfb;
+  border-top: 30px solid #f9fcfb;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4553,7 +4611,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #6ca4d4;
+  border-top: 80px solid #204f79;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4565,7 +4623,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #6ca4d4;
+  border-top: 80px solid #204f79;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4582,7 +4640,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #6ca4d4;
+  border-top: 30px solid #204f79;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4594,7 +4652,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #6ca4d4;
+  border-top: 30px solid #204f79;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4611,7 +4669,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #7badd8;
+  border-top: 30px solid #366186;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4623,7 +4681,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #7badd8;
+  border-top: 30px solid #366186;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4640,7 +4698,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #89b6dd;
+  border-top: 30px solid #4d7294;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4652,7 +4710,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #89b6dd;
+  border-top: 30px solid #4d7294;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4669,7 +4727,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #98bfe1;
+  border-top: 30px solid #6384a1;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4681,7 +4739,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #98bfe1;
+  border-top: 30px solid #6384a1;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4698,7 +4756,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #a7c8e5;
+  border-top: 30px solid #7995af;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4710,7 +4768,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #a7c8e5;
+  border-top: 30px solid #7995af;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4727,7 +4785,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #b5d2ea;
+  border-top: 30px solid #90a7bc;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4739,7 +4797,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #b5d2ea;
+  border-top: 30px solid #90a7bc;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4756,7 +4814,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #c4dbee;
+  border-top: 30px solid #a6b9c9;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4768,7 +4826,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #c4dbee;
+  border-top: 30px solid #a6b9c9;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4785,7 +4843,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #d3e4f2;
+  border-top: 30px solid #bccad7;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4797,7 +4855,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #d3e4f2;
+  border-top: 30px solid #bccad7;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4814,7 +4872,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e2edf6;
+  border-top: 30px solid #d2dce4;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4826,7 +4884,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e2edf6;
+  border-top: 30px solid #d2dce4;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4843,7 +4901,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f0f6fb;
+  border-top: 30px solid #e9edf2;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4855,7 +4913,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f0f6fb;
+  border-top: 30px solid #e9edf2;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4872,7 +4930,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8fafd;
+  border-top: 30px solid #f4f6f8;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4884,7 +4942,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f8fafd;
+  border-top: 30px solid #f4f6f8;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4902,7 +4960,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #07bbdb;
+  border-top: 80px solid #00b2dd;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4914,7 +4972,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 45.64px solid transparent;
   border-right: 45.64px solid transparent;
-  border-top: 80px solid #07bbdb;
+  border-top: 80px solid #00b2dd;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4931,7 +4989,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #07bbdb;
+  border-top: 30px solid #00b2dd;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4943,7 +5001,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #07bbdb;
+  border-top: 30px solid #00b2dd;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4960,7 +5018,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #20c2df;
+  border-top: 30px solid #19bae0;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -4972,7 +5030,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #20c2df;
+  border-top: 30px solid #19bae0;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -4989,7 +5047,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #39c9e2;
+  border-top: 30px solid #33c1e4;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -5001,7 +5059,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #39c9e2;
+  border-top: 30px solid #33c1e4;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -5018,7 +5076,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #51cfe6;
+  border-top: 30px solid #4dc9e7;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -5030,7 +5088,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #51cfe6;
+  border-top: 30px solid #4dc9e7;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -5047,7 +5105,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #6ad6e9;
+  border-top: 30px solid #66d1eb;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -5059,7 +5117,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #6ad6e9;
+  border-top: 30px solid #66d1eb;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -5076,7 +5134,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #83dded;
+  border-top: 30px solid #80d9ee;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -5088,7 +5146,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #83dded;
+  border-top: 30px solid #80d9ee;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -5105,7 +5163,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #9ce4f1;
+  border-top: 30px solid #99e0f1;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -5117,7 +5175,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #9ce4f1;
+  border-top: 30px solid #99e0f1;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -5134,7 +5192,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #b5ebf4;
+  border-top: 30px solid #b3e8f5;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -5146,7 +5204,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #b5ebf4;
+  border-top: 30px solid #b3e8f5;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -5163,7 +5221,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #cdf1f8;
+  border-top: 30px solid #ccf0f8;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -5175,7 +5233,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #cdf1f8;
+  border-top: 30px solid #ccf0f8;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -5192,7 +5250,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e6f8fb;
+  border-top: 30px solid #e6f7fc;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -5204,7 +5262,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #e6f8fb;
+  border-top: 30px solid #e6f7fc;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -5221,7 +5279,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f3fcfd;
+  border-top: 30px solid #f2fbfd;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -5233,7 +5291,7 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
   height: 0;
   border-left: 17.115px solid transparent;
   border-right: 17.115px solid transparent;
-  border-top: 30px solid #f3fcfd;
+  border-top: 30px solid #f2fbfd;
   position: absolute;
   top: 0px;
   right: 0px;

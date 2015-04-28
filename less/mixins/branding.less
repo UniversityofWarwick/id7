@@ -20,7 +20,7 @@
 }
 
 .apply-navbar-brand(@colour, @active-colour: screen(@colour, lighten(black, 30%))) {
-  @border-colour: multiply(@colour, darken(white, 10%));
+  @border-colour: multiply(@colour, darken(white, 20%));
   @contrast-colour: contrast(@colour, @text-color, white, 50%);
 
   .apply-navbar-brand(@colour,
@@ -120,7 +120,7 @@
     .dropdown-menu {
       background-color: @bg;
 
-      @dropdown-accent-colour: multiply(@bg, darken(white, 10%));
+      @dropdown-accent-colour: multiply(@bg, darken(white, 20%));
 
       > .dropdown-header {
         border-color: @dropdown-accent-colour;
@@ -220,20 +220,21 @@
     background-color: @colour;
   }
 
-  //@secondary-colour: screen(@bright-colour, lighten(black, 40%));
+  @primary-colour: @colour;
+  //@primary-colour: screen(@colour, lighten(black, 20%));
   @secondary-colour: screen(@colour, lighten(black, 60%));
 
   .id7-navigation .navbar-primary {
-    .apply-navbar-brand(@colour, @secondary-colour);
+    .apply-navbar-brand(@primary-colour, @secondary-colour);
   }
 
-  @breadcrumbs-colour: multiply(@colour, darken(white, 20%));
+  @breadcrumbs-colour: @colour;
   .navbar-primary .navbar-brand {
     background-color: @breadcrumbs-colour;
   }
 
   .navbar-secondary {
-    @secondary-accent-colour: multiply(@secondary-colour, darken(white, 10%));
+    @secondary-accent-colour: multiply(@secondary-colour, darken(white, 20%));
     @secondary-contrast-colour: contrast(@secondary-colour, @text-color, white, 50%);
 
     .apply-navbar-brand(
@@ -249,41 +250,37 @@
 
     .navbar-nav {
       > li::after {
-        color: @colour;
+        color: @primary-colour;
       }
 
-      > li.first {
-        background-color: @colour;
+      > li:first-child {
+        background-color: @primary-colour;
         color: white;
 
         &:hover::after {
           border-right-color: @breadcrumbs-colour;
         }
         &::after {
-          border-color: transparent transparent transparent @colour;
+          border-color: transparent transparent transparent @primary-colour;
         }
       }
     }
   }
 
   .navbar-tertiary {
-    @tertiary-accent-colour: multiply(@id7-navigation-tertiary-background-colour, darken(white, 10%));
+    @tertiary-accent-colour: multiply(@id7-navigation-tertiary-background-colour, darken(white, 20%));
     @tertiary-contrast-colour: contrast(@id7-navigation-tertiary-background-colour, @text-color, white, 50%);
 
     .apply-navbar-brand(
-    @id7-navigation-tertiary-background-colour,
-    @tertiary-contrast-colour,
-    @tertiary-contrast-colour,
-    @tertiary-contrast-colour,
-    @tertiary-accent-colour,
-    white,
-    @tertiary-contrast-colour,
-    @tertiary-accent-colour);
-  }
-
-  .opaque-navigation .navbar-primary {
-    background-color: @colour;
-    .transition(none);
+      @id7-navigation-tertiary-background-colour,
+      @tertiary-contrast-colour,
+      @tertiary-contrast-colour,
+      @tertiary-contrast-colour,
+      @tertiary-accent-colour,
+      white,
+      @tertiary-contrast-colour,
+      @tertiary-accent-colour
+    );
   }
 
   &.bordered {
@@ -392,7 +389,7 @@
 .apply-boxstyles-brand(@colour) {
   .boxstyle_ {
     &.box1 {
-      #boxstyle > .filled(screen(@colour, lighten(black, 80%)));
+      #boxstyle > .filled(screen(@colour, lighten(black, 85%)));
     }
 
     &.box2 {
@@ -405,6 +402,10 @@
 
     &.box4 {
       #boxstyle > .bordered(@gray-light);
+    }
+
+    &.box5 {
+      #boxstyle > .filled(@colour, white);
     }
   }
 }
