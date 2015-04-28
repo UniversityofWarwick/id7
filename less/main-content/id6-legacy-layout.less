@@ -17,12 +17,14 @@
   @media (min-width: @screen-sm-min) {
     > .column-1, #column-1 {
       .make-sm-column(@left);
-      .hyphenate-small-columns(@left);
+      // ID-112 don't hyphenate any more
+      //.hyphenate-small-columns(@left);
     }
 
     > .column-2, #column-2 {
       .make-sm-column(@right);
-      .hyphenate-small-columns(@right);
+      // ID-112 don't hyphenate any more
+      //.hyphenate-small-columns(@right);
     }
   }
 }

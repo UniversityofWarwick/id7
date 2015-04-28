@@ -9243,17 +9243,6 @@ li {
 .dropdown-menu li {
   margin: 0;
 }
-@media (max-width: 767px) {
-  .id7-main-content-area {
-    -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-            hyphens: auto;
-    word-wrap: break-word;
-
-        -ms-hyphens: auto;
-         -o-hyphens: auto;
-  }
-}
 .id7-wide-table-wrapper {
   padding-bottom: 2px;
   overflow-x: auto;
@@ -9299,18 +9288,6 @@ li {
   .layout-75-25 #column-2 {
     float: left;
     width: 25%;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .layout-75-25 > .column-2,
-  .layout-75-25 #column-2 {
-    -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-            hyphens: auto;
-    word-wrap: break-word;
-
-        -ms-hyphens: auto;
-         -o-hyphens: auto;
   }
 }
 .layout-50-50 {
@@ -9387,18 +9364,6 @@ li {
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
-  .layout-25-75 > .column-1,
-  .layout-25-75 #column-1 {
-    -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-            hyphens: auto;
-    word-wrap: break-word;
-
-        -ms-hyphens: auto;
-         -o-hyphens: auto;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
   .layout-25-75 > .column-2,
   .layout-25-75 #column-2 {
     float: left;
@@ -9436,18 +9401,6 @@ li {
   .layout-33-66 #column-1 {
     float: left;
     width: 33.33333333%;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .layout-33-66 > .column-1,
-  .layout-33-66 #column-1 {
-    -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-            hyphens: auto;
-    word-wrap: break-word;
-
-        -ms-hyphens: auto;
-         -o-hyphens: auto;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -9495,18 +9448,6 @@ li {
   .layout-66-33 #column-2 {
     float: left;
     width: 33.33333333%;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .layout-66-33 > .column-2,
-  .layout-66-33 #column-2 {
-    -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-            hyphens: auto;
-    word-wrap: break-word;
-
-        -ms-hyphens: auto;
-         -o-hyphens: auto;
   }
 }
 .show-smallscreen {
