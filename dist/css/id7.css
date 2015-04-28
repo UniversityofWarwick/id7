@@ -8877,12 +8877,15 @@ html.no-not-selector .id7-navigation a:active {
 .id7-navigation-marker {
   display: none;
 }
+.id7-main-content-area {
+  overflow-x: auto;
+  background: white;
+}
 .id7-main-content-area > header {
   padding-right: 20px;
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
-  background: white;
 }
 @media (min-width: 768px) {
   .id7-main-content-area > header {
@@ -8926,7 +8929,6 @@ html.no-not-selector .id7-navigation a:active {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
-  background: white;
 }
 @media (min-width: 768px) {
   .id7-main-content-area > .id7-main-content {
