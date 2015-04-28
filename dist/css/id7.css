@@ -7656,7 +7656,7 @@ footer .id7-app-footer:after {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .id7-main-content-area .id7-main-content > .layout > .column-1 > .column-1-content > p {
     padding-right: 4rem;
   }
