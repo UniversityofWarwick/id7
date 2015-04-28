@@ -130,3 +130,16 @@ li {
 //    .hyphens();
 //  }
 //}
+
+// ID-113
+body {
+  text-rendering: optimizeLegibility;
+
+  @media (max-width: @screen-xs-max) {
+    text-rendering: optimizeSpeed;
+  }
+
+  font-feature-settings: "kern", "liga", "dlig"; /* standard */
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+  font-kerning: normal;
+}
