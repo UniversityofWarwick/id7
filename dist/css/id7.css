@@ -7651,7 +7651,7 @@ footer .id7-app-footer:after {
 .id7-main-content-area label {
   color: #555;
 }
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .id7-main-content-area {
     font-size: 16px;
   }
