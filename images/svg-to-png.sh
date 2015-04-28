@@ -8,7 +8,7 @@ TRANSPARENT=${5:-true}
 
 if [ "$TRANSPARENT" = true ]; then
 	# Export the SVG as a PNG with a white background (so it's black on white)
-	inkscape $SVG --export-background=white --export-png=.tmp.png
+	inkscape $SVG --export-background=white --export-png=.tmp.png -d 300
 
 	# Create a temporary SVG that loads the temporary image
 	cat >.tmp.svg <<EOF
@@ -34,7 +34,7 @@ if [ "$TRANSPARENT" = true ]; then
 	</defs>
 
 	<g filter="url(#invert)">
-		<image xlink:href=".tmp.png" filter="url(#maskfilter)" />
+		<image xlink:href=".tmp.png" filter="url(#maskfilter)" width="${WIDTH}" height="${HEIGHT}" />
 	</g>
 </svg>
 
