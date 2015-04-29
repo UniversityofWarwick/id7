@@ -7643,6 +7643,10 @@ footer .id7-app-footer:after {
     content: "";
   }
 }
+html.no-touch .modal-open {
+  padding-right: 0 !important;
+  overflow: initial;
+}
 .id7-main-content-area {
   font-size: 14px;
   font-weight: 300;
@@ -8899,8 +8903,12 @@ html.no-not-selector .id7-navigation a:active {
   display: none;
 }
 .id7-main-content-area {
-  overflow-x: auto;
   background: white;
+}
+@media (max-width: 767px) {
+  .id7-main-content-area {
+    overflow-x: auto;
+  }
 }
 .id7-main-content-area > header {
   padding-right: 20px;
