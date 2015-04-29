@@ -403,17 +403,15 @@
           }, this));
         }
 
-        if (this.options.fitToWidth) {
-          $(window).on('resize.id7.navigation.onScreenResize', $.proxy(this.onScreenResize, this));
+        $(window).on('resize.id7.navigation.onScreenResize', $.proxy(this.onScreenResize, this));
 
-          // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
-          if (document.readyState == 'complete') {
-            this.onScreenResize({}, true);
-          } else {
-            $(window).on('load', $.proxy(function (e) {
-              this.onScreenResize(e, true);
-            }, this));
-          }
+        // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
+        if (document.readyState == 'complete') {
+          this.onScreenResize({}, true);
+        } else {
+          $(window).on('load', $.proxy(function (e) {
+            this.onScreenResize(e, true);
+          }, this));
         }
 
         this.$container.on('click', '.nav > li', function (e) {
