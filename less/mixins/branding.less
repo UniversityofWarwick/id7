@@ -4,7 +4,7 @@
   @border-image-left: "border-image-left.jpg",
   @border-image-right: "border-image-right.jpg") {
 
-  .id7-fixed-width-container {
+  .id7-utility-masthead {
     background-image: url("@{basedir}/@{masthead-image}");
   }
 
@@ -180,7 +180,7 @@
   }
 }
 
-.apply-brand(@colour, @bright-colour: screen(@colour, lighten(black, 20%))) {
+.apply-brand(@colour) {
   // For older browsers where .id7-left-border and .id7-right-border don't display
   html.no-rgba {
     background: screen(@colour, lighten(black, 20%));
@@ -213,16 +213,16 @@
   .brand-border { border-color: @colour; }
 
   .id7-utility-masthead {
-    background-color: @colour;
-    background-color: fadeout(@colour, 50%);
+    background-color: screen(@colour, lighten(black, 40%));
   }
+
+  // Colour of the "WARWICK" text on the logo
   .id7-utility-masthead::after {
     background-color: @colour;
   }
 
   @primary-colour: @colour;
-  //@primary-colour: screen(@colour, lighten(black, 20%));
-  @secondary-colour: screen(@colour, lighten(black, 60%));
+  @secondary-colour: screen(@colour, lighten(black, 40%));
 
   .id7-navigation .navbar-primary {
     .apply-navbar-brand(@primary-colour, @secondary-colour);
