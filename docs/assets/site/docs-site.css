@@ -53,15 +53,13 @@ a:not(.btn),
 a:link:not(.btn),
 a:visited:not(.btn) {
   -webkit-text-decoration-color: #3584ca;
-  -moz-text-decoration-color: #3584ca;
-       text-decoration-color: #3584ca;
+  text-decoration-color: #3584ca;
 }
 a:hover:not(.btn),
 a:focus:not(.btn),
 a:active:not(.btn) {
   -webkit-text-decoration-color: #0b1a28;
-  -moz-text-decoration-color: #0b1a28;
-       text-decoration-color: #0b1a28;
+  text-decoration-color: #0b1a28;
 }
 blockquote.quotes {
   color: #0b1a28;
@@ -100,15 +98,13 @@ html.no-not-selector .brand-bg a:active {
 .brand-bg a:link:not(.btn),
 .brand-bg a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff !important;
-  -moz-text-decoration-color: #ffffff !important;
-       text-decoration-color: #ffffff !important;
+  text-decoration-color: #ffffff !important;
 }
 .brand-bg a:hover:not(.btn),
 .brand-bg a:focus:not(.btn),
 .brand-bg a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc !important;
-  -moz-text-decoration-color: #cccccc !important;
-       text-decoration-color: #cccccc !important;
+  text-decoration-color: #cccccc !important;
 }
 .brand-text {
   color: #204f79;
@@ -140,15 +136,13 @@ html.no-not-selector .brand-text a:active {
 .brand-text a:link:not(.btn),
 .brand-text a:visited:not(.btn) {
   -webkit-text-decoration-color: #3584ca !important;
-  -moz-text-decoration-color: #3584ca !important;
-       text-decoration-color: #3584ca !important;
+  text-decoration-color: #3584ca !important;
 }
 .brand-text a:hover:not(.btn),
 .brand-text a:focus:not(.btn),
 .brand-text a:active:not(.btn) {
   -webkit-text-decoration-color: #0b1a28 !important;
-  -moz-text-decoration-color: #0b1a28 !important;
-       text-decoration-color: #0b1a28 !important;
+  text-decoration-color: #0b1a28 !important;
 }
 .brand-border {
   border-color: #204f79;
@@ -519,15 +513,13 @@ html.no-not-selector .id7-page-footer .id7-app-footer a:active {
 .id7-page-footer .id7-app-footer a:link:not(.btn),
 .id7-page-footer .id7-app-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
-  -moz-text-decoration-color: #ffffff;
-       text-decoration-color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 .id7-page-footer .id7-app-footer a:hover:not(.btn),
 .id7-page-footer .id7-app-footer a:focus:not(.btn),
 .id7-page-footer .id7-app-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
-  -moz-text-decoration-color: #cccccc;
-       text-decoration-color: #cccccc;
+  text-decoration-color: #cccccc;
 }
 .id7-page-footer .id7-horizontal-divider .divider {
   stroke: #204f79;
@@ -584,15 +576,13 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:link:not(.btn),
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:visited:not(.btn) {
   -webkit-text-decoration-color: #6b6b6b;
-  -moz-text-decoration-color: #6b6b6b;
-       text-decoration-color: #6b6b6b;
+  text-decoration-color: #6b6b6b;
 }
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover:not(.btn),
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus:not(.btn),
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:active:not(.btn) {
   -webkit-text-decoration-color: #050505;
-  -moz-text-decoration-color: #050505;
-       text-decoration-color: #050505;
+  text-decoration-color: #050505;
 }
 .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::before,
 .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
@@ -729,15 +719,13 @@ html.no-not-selector .boxstyle_.box5 a:active {
 .boxstyle_.box5 a:link:not(.btn),
 .boxstyle_.box5 a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
-  -moz-text-decoration-color: #ffffff;
-       text-decoration-color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 .boxstyle_.box5 a:hover:not(.btn),
 .boxstyle_.box5 a:focus:not(.btn),
 .boxstyle_.box5 a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
-  -moz-text-decoration-color: #cccccc;
-       text-decoration-color: #cccccc;
+  text-decoration-color: #cccccc;
 }
 .boxstyle_.box5 h1,
 .boxstyle_.box5 h2,

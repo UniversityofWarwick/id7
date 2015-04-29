@@ -35,7 +35,7 @@
         ].join('')),
         NavCSSTemplate: _.template([
             '<% _.each(panels, function (panel) { %>',
-                '.carousel-nav a[href="#<%= panel.id %>"]:hover {',
+                '.carousel-nav a[href="#<%= panel.id %>"]:hover, .carousel-nav li.active a[href="#<%= panel.id %>"] {',
                     'color: <%= panel.lighter_colour %>;',
                 '}',
             '<% }); %>'
