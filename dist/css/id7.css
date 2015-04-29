@@ -9279,13 +9279,13 @@ li {
 }
 body {
   text-rendering: optimizeLegibility;
-  -webkit-font-feature-settings: "kern", "liga", "dlig";
-     -moz-font-feature-settings: "kern", "liga", "dlig";
-          font-feature-settings: "kern", "liga", "dlig";
+  -webkit-font-feature-settings: "kern", "liga";
+     -moz-font-feature-settings: "kern", "liga";
+          font-feature-settings: "kern", "liga";
   /* standard */
-  -webkit-font-variant-ligatures: common-ligatures discretionary-ligatures;
-     -moz-font-variant-ligatures: common-ligatures discretionary-ligatures;
-          font-variant-ligatures: common-ligatures discretionary-ligatures;
+  -webkit-font-variant-ligatures: common-ligatures;
+     -moz-font-variant-ligatures: common-ligatures;
+          font-variant-ligatures: common-ligatures;
   -webkit-font-kerning: normal;
      -moz-font-kerning: normal;
           font-kerning: normal;
