@@ -287,7 +287,7 @@
 
     function attach(i, element) {
       var $container = $(element);
-      var nav = new Navigation($.extend(o, {
+      var nav = new Navigation($.extend({}, $container.data(), o, {
         container: $container
       }));
 

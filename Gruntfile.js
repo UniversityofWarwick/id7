@@ -78,6 +78,7 @@ module.exports = function (grunt) {
           'js/vendor/typeahead.jquery-0.10.5.js',
           'js/vendor/lodash-2.4.1.js',
           'js/vendor/modernizr-2.8.3.js',
+          'js/vendor/jquery.doubleScroll-0.4.js',
           'js/account-popover.jquery.js',
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js',

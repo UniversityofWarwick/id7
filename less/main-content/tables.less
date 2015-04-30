@@ -1,9 +1,27 @@
 // If tables are wider than the content, just scroll the table, not the whole page
-.id7-wide-table-wrapper {
-  overflow-x: auto;
-  padding-bottom: 2px;
+.id7-wide-table-wrapper-container {
+  margin-bottom: @line-height-computed;
+
+  > .id7-wide-table-wrapper {
+    overflow-x: auto;
+
+    > table {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .id7-table-wrapper-popout {
-  font-size: 90%;
+  .small();
+}
+
+.id7-wide-table-popout-modal {
+  .modal-dialog {
+    width: 90%;
+  }
+
+  .modal-body {
+    max-height: 80vh;
+    overflow: auto;
+  }
 }

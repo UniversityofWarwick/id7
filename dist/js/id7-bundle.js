@@ -11673,6 +11673,117 @@ window.Modernizr = (function( window, document, undefined ) {
 
 })(this, this.document);
 
+/*
+ * @name DoubleScroll
+ * @desc displays scroll bar on top and on the bottom of the div
+ * @requires jQuery
+ *
+ * @author Pawel Suwala - http://suwala.eu/
+ * @author Antoine Vianey - http://www.astek.fr/
+ * @version 0.4 (18-06-2014)
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ * 
+ * Usage:
+ * https://github.com/avianey/jqDoubleScroll
+ */
+
+jQuery.fn.doubleScroll = function(userOptions) {
+    // Default options
+    var options = {
+        contentElement: undefined, // Widest element, if not specified first child element will be used
+        scrollCss: {
+            'overflow-x': 'auto',
+            'overflow-y': 'hidden'
+        },
+        contentCss: {
+            'overflow-x': 'auto',
+            'overflow-y': 'hidden'
+        },
+        onlyIfScroll: true, // top scrollbar is not shown if the bottom one is not present
+        resetOnWindowResize: false, // recompute the top ScrollBar requirements when the window is resized
+        timeToWaitForResize: 30 // wait for the last update event (usefull when browser fire resize event constantly during ressing)
+    };
+    $.extend(true, options, userOptions);
+    // do not modify
+    // internal stuff
+    $.extend(options, {
+        topScrollBarMarkup: '<div class="doubleScroll-scroll-wrapper" style="height: 20px;"><div class="doubleScroll-scroll" style="height: 20px;"></div></div>',
+        topScrollBarWrapperSelector: '.doubleScroll-scroll-wrapper',
+        topScrollBarInnerSelector: '.doubleScroll-scroll'
+    });
+
+    var _showScrollBar = function($self, options) {
+
+        if (options.onlyIfScroll && $self.get(0).scrollWidth <= $self.width()) {
+            // content doesn't scroll
+            // remove any existing occurrence...
+            $self.prev(options.topScrollBarWrapperSelector).remove();
+            return;
+        }
+
+        // add div that will act as an upper scroll only if not already added to the DOM
+        var $topScrollBar = $self.prev(options.topScrollBarWrapperSelector);
+        if ($topScrollBar.length == 0) {
+
+            // creating the scrollbar
+            // added before in the DOM
+            $topScrollBar = $(options.topScrollBarMarkup);
+            $self.before($topScrollBar);
+
+            // apply the css
+            $topScrollBar.css(options.scrollCss);
+            $self.css(options.contentCss);
+
+            // bind upper scroll to bottom scroll
+            $topScrollBar.bind('scroll.doubleScroll', function() {
+                $self.scrollLeft($topScrollBar.scrollLeft());
+            });
+
+            // bind bottom scroll to upper scroll
+            var selfScrollHandler = function() {
+                $topScrollBar.scrollLeft($self.scrollLeft());
+            };
+            $self.bind('scroll.doubleScroll', selfScrollHandler);
+        }
+
+        // find the content element (should be the widest one)
+        var $contentElement;
+        if (options.contentElement !== undefined && $self.find(options.contentElement).length !== 0) {
+            $contentElement = $self.find(options.contentElement);
+        } else {
+            $contentElement = $self.find('>:first-child');
+        }
+
+        // set the width of the wrappers
+        $(options.topScrollBarInnerSelector, $topScrollBar).width($contentElement.outerWidth());
+        $topScrollBar.width($self.width());
+        $topScrollBar.scrollLeft($self.scrollLeft());
+
+    };
+
+    return this.each(function() {
+        var $self = $(this);
+        _showScrollBar($self, options);
+
+        // bind the resize handler
+        // do it once
+        if (options.resetOnWindowResize) {
+            var id;
+            var handler = function(e) {
+                _showScrollBar($self, options);
+            };
+            $(window).bind('resize.doubleScroll', function() {
+                // adding/removing/replacing the scrollbar might resize the window
+                // so the resizing flag will avoid the infinite loop here...
+                clearTimeout(id);
+                id = setTimeout(handler, options.timeToWaitForResize);
+            });
+        }
+    });
+};
 /*global _:false, console:false, JSON:false */
 
 (function ($) {
@@ -12115,7 +12226,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     function attach(i, element) {
       var $container = $(element);
-      var nav = new Navigation($.extend(o, {
+      var nav = new Navigation($.extend({}, $container.data(), o, {
         container: $container
       }));
 
@@ -12173,7 +12284,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     function attach(i, element) {
       var $input = $(element);
-      var searchSuggest = new SearchSuggest($.extend(o, {
+      var searchSuggest = new SearchSuggest($.extend({}, $input.data(), o, {
         input: $input
       }));
 
@@ -12226,13 +12337,46 @@ window.Modernizr = (function( window, document, undefined ) {
 
 })(jQuery);
 
+/*global Modernizr:false */
+
 (function ($) {
   'use strict';
 
   var Config = {
+    Templates: {
+      PopoutLink: [
+        '<span class="id7-table-wrapper-popout">',
+        '(',
+        '<a href="#" data-toggle="id7:popout-table">',
+        'Pop-out table',
+        '</a>',
+        ')',
+        '</span>'
+      ].join(''),
+      Modal: [
+        '<div class="id7-wide-table-popout-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">',
+          '<div class="modal-dialog">',
+            '<div class="modal-content">',
+              '<div class="modal-header">' +
+                '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+                  '<span aria-hidden="true">&times;</span>' +
+                '</button>' +
+                '<span class="modal-title">&nbsp;</span>' +
+              '</div>' +
+              '<div class="modal-body">' +
+              '</div>',
+            '</div>',
+          '</div>',
+        '</div>'
+      ].join('')
+    },
     Defaults: {
+      container: 'id7-wide-table-wrapper-container',
       wrapper: 'id7-wide-table-wrapper', // Set to false to disable
-      popout: false
+      popout: function () {
+        return Modernizr.mq('only all and (min-width: 768px)');
+      },
+      doublescroll: true
     }
   };
 
@@ -12244,31 +12388,87 @@ window.Modernizr = (function( window, document, undefined ) {
     function WideTables(o) {
       o = $.extend({}, Config.Defaults, o);
 
-      // Allow wrapper: true to use the default
-      if (o.wrapper && typeof o.wrapper !== 'string') {
-        o.wrapper = Config.Defaults.wrapper;
+      var self = this;
+
+      function handleTable(i, el) {
+        var $table = $(el);
+
+        // Allow the table's data attributes to override options
+        var options = $.extend({}, o, $table.data());
+
+        // Allow wrapper: true to use the default
+        if (options.wrapper && typeof options.wrapper !== 'string') {
+          options.wrapper = Config.Defaults.wrapper;
+        }
+
+        if (options.container && typeof options.container !== 'string') {
+          options.container = Config.Defaults.container;
+        }
+
+        if (options.wrapper) {
+          self.wrap($table, options.wrapper, options.container);
+
+          var $wrapper = $table.parent();
+          var $container = $wrapper.parent();
+
+          var popout = options.popout;
+          var doublescroll = options.doublescroll;
+
+          if (typeof options.popout == 'function') popout = options.popout();
+          if (typeof options.doublescroll == 'function') popout = options.doublescroll();
+
+          if (popout) self.popout($table, $wrapper, $container);
+          if (doublescroll) self.doubleScroll($table, $wrapper);
+        }
       }
 
-      this.options = o;
+      // SBTWO-5105 check tables after load, in case contents cause resize
+      function onLoad() {
+        self.findWideTables(o.container).each(handleTable);
+      }
 
-      this.findWideTables().each($.proxy(function (i, el) {
-        if (o.wrapper) this.wrap($(el));
-        if (o.popout) this.popout($(el));
-      }, this));
+      $(window).load(onLoad);
     }
 
     $.extend(WideTables.prototype, {
-      findWideTables: function findWideTables() {
-        return this.options.container.find('table').filter(function () {
+      findWideTables: function findWideTables($container) {
+        return $container.find('table').filter(function () {
           var $table = $(this);
           return Math.floor($table.width()) > $table.parent().width();
         });
       },
-      wrap: function wrap($table) {
-        $table.wrap($('<div />').addClass(this.options.wrapper));
+      wrap: function wrap($table, wrapperClass, containerClass) {
+        $table.wrap($('<div />').addClass(containerClass).append($('<div />').addClass(wrapperClass)));
+
+        return $table.parent();
       },
-      popout: function popout($table) {
+      popout: function popout($table, $wrapper, $container) {
+        // sb-no-wrapper-table-popout is legacy
+        if ($table.is(':visible') && !$table.hasClass('sb-no-wrapper-table-popout')) {
+          $container.prepend(Config.Templates.PopoutLink).append(Config.Templates.PopoutLink);
+
+          $container.append(Config.Templates.Modal);
+
+          var $modal = $container.find('> .id7-wide-table-popout-modal').last();
+
+          $container.on('click', '[data-toggle="id7:popout-table"]', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+
+            $modal.find('.modal-body').html($wrapper.html());
+            $modal.modal({
+
+            }).modal('show');
+
+            return false;
+          });
+        }
+
         return $table; // Nothing to do, for now
+      },
+      doubleScroll: function doubleScroll($table, $wrapper) {
+        $wrapper.doubleScroll();
+        return $table;
       }
     });
 
@@ -12280,7 +12480,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     function attach(i, element) {
       var $container = $(element);
-      var wideTables = new WideTables($.extend(o, {
+      var wideTables = new WideTables($.extend({}, $container.data(), o, {
         container: $container
       }));
 

@@ -41,7 +41,7 @@
 
     function attach(i, element) {
       var $input = $(element);
-      var searchSuggest = new SearchSuggest($.extend(o, {
+      var searchSuggest = new SearchSuggest($.extend({}, $input.data(), o, {
         input: $input
       }));
 

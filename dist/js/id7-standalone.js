@@ -445,7 +445,7 @@
 
     function attach(i, element) {
       var $container = $(element);
-      var nav = new Navigation($.extend(o, {
+      var nav = new Navigation($.extend({}, $container.data(), o, {
         container: $container
       }));
 
@@ -503,7 +503,7 @@
 
     function attach(i, element) {
       var $input = $(element);
-      var searchSuggest = new SearchSuggest($.extend(o, {
+      var searchSuggest = new SearchSuggest($.extend({}, $input.data(), o, {
         input: $input
       }));
 
@@ -556,13 +556,46 @@
 
 })(jQuery);
 
+/*global Modernizr:false */
+
 (function ($) {
   'use strict';
 
   var Config = {
+    Templates: {
+      PopoutLink: [
+        '<span class="id7-table-wrapper-popout">',
+        '(',
+        '<a href="#" data-toggle="id7:popout-table">',
+        'Pop-out table',
+        '</a>',
+        ')',
+        '</span>'
+      ].join(''),
+      Modal: [
+        '<div class="id7-wide-table-popout-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">',
+          '<div class="modal-dialog">',
+            '<div class="modal-content">',
+              '<div class="modal-header">' +
+                '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+                  '<span aria-hidden="true">&times;</span>' +
+                '</button>' +
+                '<span class="modal-title">&nbsp;</span>' +
+              '</div>' +
+              '<div class="modal-body">' +
+              '</div>',
+            '</div>',
+          '</div>',
+        '</div>'
+      ].join('')
+    },
     Defaults: {
+      container: 'id7-wide-table-wrapper-container',
       wrapper: 'id7-wide-table-wrapper', // Set to false to disable
-      popout: false
+      popout: function () {
+        return Modernizr.mq('only all and (min-width: 768px)');
+      },
+      doublescroll: true
     }
   };
 
@@ -574,31 +607,87 @@
     function WideTables(o) {
       o = $.extend({}, Config.Defaults, o);
 
-      // Allow wrapper: true to use the default
-      if (o.wrapper && typeof o.wrapper !== 'string') {
-        o.wrapper = Config.Defaults.wrapper;
+      var self = this;
+
+      function handleTable(i, el) {
+        var $table = $(el);
+
+        // Allow the table's data attributes to override options
+        var options = $.extend({}, o, $table.data());
+
+        // Allow wrapper: true to use the default
+        if (options.wrapper && typeof options.wrapper !== 'string') {
+          options.wrapper = Config.Defaults.wrapper;
+        }
+
+        if (options.container && typeof options.container !== 'string') {
+          options.container = Config.Defaults.container;
+        }
+
+        if (options.wrapper) {
+          self.wrap($table, options.wrapper, options.container);
+
+          var $wrapper = $table.parent();
+          var $container = $wrapper.parent();
+
+          var popout = options.popout;
+          var doublescroll = options.doublescroll;
+
+          if (typeof options.popout == 'function') popout = options.popout();
+          if (typeof options.doublescroll == 'function') popout = options.doublescroll();
+
+          if (popout) self.popout($table, $wrapper, $container);
+          if (doublescroll) self.doubleScroll($table, $wrapper);
+        }
       }
 
-      this.options = o;
+      // SBTWO-5105 check tables after load, in case contents cause resize
+      function onLoad() {
+        self.findWideTables(o.container).each(handleTable);
+      }
 
-      this.findWideTables().each($.proxy(function (i, el) {
-        if (o.wrapper) this.wrap($(el));
-        if (o.popout) this.popout($(el));
-      }, this));
+      $(window).load(onLoad);
     }
 
     $.extend(WideTables.prototype, {
-      findWideTables: function findWideTables() {
-        return this.options.container.find('table').filter(function () {
+      findWideTables: function findWideTables($container) {
+        return $container.find('table').filter(function () {
           var $table = $(this);
           return Math.floor($table.width()) > $table.parent().width();
         });
       },
-      wrap: function wrap($table) {
-        $table.wrap($('<div />').addClass(this.options.wrapper));
+      wrap: function wrap($table, wrapperClass, containerClass) {
+        $table.wrap($('<div />').addClass(containerClass).append($('<div />').addClass(wrapperClass)));
+
+        return $table.parent();
       },
-      popout: function popout($table) {
+      popout: function popout($table, $wrapper, $container) {
+        // sb-no-wrapper-table-popout is legacy
+        if ($table.is(':visible') && !$table.hasClass('sb-no-wrapper-table-popout')) {
+          $container.prepend(Config.Templates.PopoutLink).append(Config.Templates.PopoutLink);
+
+          $container.append(Config.Templates.Modal);
+
+          var $modal = $container.find('> .id7-wide-table-popout-modal').last();
+
+          $container.on('click', '[data-toggle="id7:popout-table"]', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+
+            $modal.find('.modal-body').html($wrapper.html());
+            $modal.modal({
+
+            }).modal('show');
+
+            return false;
+          });
+        }
+
         return $table; // Nothing to do, for now
+      },
+      doubleScroll: function doubleScroll($table, $wrapper) {
+        $wrapper.doubleScroll();
+        return $table;
       }
     });
 
@@ -610,7 +699,7 @@
 
     function attach(i, element) {
       var $container = $(element);
-      var wideTables = new WideTables($.extend(o, {
+      var wideTables = new WideTables($.extend({}, $container.data(), o, {
         container: $container
       }));
 
