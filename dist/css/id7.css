@@ -9303,7 +9303,7 @@ body {
   font-size: 85%;
 }
 .id7-wide-table-popout-modal .modal-dialog {
-  width: 90%;
+  max-width: 90%;
 }
 .id7-wide-table-popout-modal .modal-body {
   max-height: 80vh;
