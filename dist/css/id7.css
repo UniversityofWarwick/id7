@@ -7648,6 +7648,8 @@ html.no-touch .modal-open {
   overflow: initial;
 }
 .id7-main-content-area {
+  position: relative;
+  z-index: 0;
   font-size: 14px;
   font-weight: 300;
   font-weight: 400;
