@@ -9309,6 +9309,9 @@ body {
   max-height: 80vh;
   overflow: auto;
 }
+.id7-wide-table-popout-modal .modal-body > table {
+  margin: 0;
+}
 .layout-75-25 {
   margin-right: 0;
   margin-left: 0;
