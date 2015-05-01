@@ -591,7 +591,7 @@
     },
     Defaults: {
       container: 'id7-wide-table-wrapper-container',
-      wrapper: 'id7-wide-table-wrapper', // Set to false to disable
+      wrapper: 'table-responsive', // Set to false to disable
       popout: function () {
         return Modernizr.mq('only all and (min-width: 768px)');
       },
@@ -666,9 +666,7 @@
         if ($table.is(':visible') && !$table.hasClass('sb-no-wrapper-table-popout')) {
           $container.prepend(Config.Templates.PopoutLink).append(Config.Templates.PopoutLink);
 
-          $container.append(Config.Templates.Modal);
-
-          var $modal = $container.find('> .id7-wide-table-popout-modal').last();
+          var $modal = $($.parseHTML(Config.Templates.Modal)).appendTo(document.body);
 
           $container.on('click', '[data-toggle="id7:popout-table"]', function (e) {
             e.stopPropagation();

@@ -11,11 +11,8 @@
     You may optionally use dropdowns to expose children of primary pages on hover.</p>
 
 {% highlight html %}
-<!-- The 160px affix offset is the normal combined height of the preceding utility bar, header and site title -->
-<div data-spy="affix"
-     data-offset-top="160"
-     class="id7-navigation">
-    <!-- remove hidden-xs at site root -->
+<div class="id7-navigation">
+  <!-- remove hidden-xs at site root -->
   <nav class="navbar navbar-primary hidden-xs"
     role="navigation">
     <ul class="nav navbar-nav">
@@ -40,16 +37,16 @@
 
 <p>Secondary navigation is for breadcrumbs, taking you from the site root to the currently visible page's level.
     If you only have two levels in your site, this will only contain the current top-level section, and be hidden in desktop views,
-    only visible on mobile for context. For deeper pages, it will show a breadcrumb trail, using
-    <code>first</code>, <code>second</code>, and <code>active</code> classes to highlight position.</p>
+    only visible on mobile for context. For deeper pages, it will show a breadcrumb trail, using the  <code>active</code> class
+    to highlight position.</p>
 
 {% highlight html %}
 ...
 <nav class="navbar navbar-secondary"
      role="navigation">
   <ul class="nav navbar-nav">
-    <li class="nav-breadcrumb first"><a href="/first">First sub-section</a></li>
-    <li class="nav-breadcrumb second last active"><a href="/second">Second sub-section</a></li>
+    <li class="nav-breadcrumb"><a href="/first">First sub-section</a></li>
+    <li class="nav-breadcrumb active"><a href="/second">Second sub-section</a></li>
   </ul>
 </nav>
 ...

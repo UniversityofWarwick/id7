@@ -17,7 +17,8 @@
     "dist/images/masthead-logo-bleed-sm.png",
     "dist/images/masthead-logo-bleed-sm@2x.png",
     "dist/images/masthead-logo-bleed-xs.png",
-    "dist/images/masthead-logo-bleed-xs@2x.png"
+    "dist/images/masthead-logo-bleed-xs@2x.png",
+    "dist/templates/base.html"
   ],
   "ignore": [
     "/.*",

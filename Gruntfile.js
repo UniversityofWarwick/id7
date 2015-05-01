@@ -336,6 +336,16 @@ module.exports = function (grunt) {
         expand: true,
         src: 'dist/**/*',
         dest: 'docs/'
+      },
+      templates: {
+        expand: true,
+        src: 'templates/*',
+        dest: 'dist/'
+      },
+      templatesToDocs: {
+        expand: true,
+        src: 'templates/*',
+        dest: 'docs/_includes'
       }
     },
 
@@ -397,6 +407,22 @@ module.exports = function (grunt) {
             dest: 'id7-<%= pkg.version %>-dist'
           }
         ]
+      },
+      id6a: {
+        options: {
+          archive: 'id6a-<%= pkg.version %>-dist.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['css/id6a.*', 'images/id6a-logotype*'],
+            dest: 'id6a-<%= pkg.version %>-dist'
+          }
+        ]
       }
     },
 
@@ -411,7 +437,7 @@ module.exports = function (grunt) {
       },
       less: {
         files: 'less/**/*.less',
-        tasks: ['less-compile', 'autoprefixer:core', 'autoprefixer:defaultTheme', 'autoprefixer:id6a', 'copy:fonts', 'copy:images', 'copy:docs']
+        tasks: ['less-compile', 'autoprefixer:core', 'autoprefixer:defaultTheme', 'autoprefixer:id6a', 'copy:fonts', 'copy:templates', 'copy:images', 'copy:docs']
       }
     },
 
@@ -456,13 +482,13 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:defaultTheme', 'autoprefixer:id6a', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyDefaultTheme', 'cssmin:minifyID6a']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'copy:vendorjs']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'copy:templates', 'copy:images', 'dist-js', 'copy:vendorjs']);
 
   // Default task.
-  grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'copy:vendorjs', 'test']);
+  grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:templates', 'copy:images', 'copy:vendorjs', 'test']);
 
   // Docs task.
-  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'markdown:readme', 'less:compileDocs', 'autoprefixer:docs', 'autoprefixer:docsSite', 'autoprefixer:homepage', 'jekyll:docs']);
+  grunt.registerTask('docs', ['clean:docs', 'copy:docs', 'copy:templatesToDocs', 'markdown:readme', 'less:compileDocs', 'autoprefixer:docs', 'autoprefixer:docsSite', 'autoprefixer:homepage', 'jekyll:docs']);
 
   grunt.registerTask('dist-homepage-css', ['less:compileDocs', 'autoprefixer:homepage', 'csscomb:distHomepage', 'replace:homepage', 'cssmin:minifyHomepage']);
   grunt.registerTask('dist-homepage-js', ['concat:homepage', 'uglify:homepage']);

@@ -11,11 +11,11 @@ ID7 is the 7th iteration of the University of Warwick corporate identity. This l
 
 ## Quick start
 
-Four quick start options are available:
+Three quick start options are available:
 
-- [Download the latest release](#).
+- [Download the latest release](https://github.com/UniversityofWarwick/id7/releases/tag/v1.0.0).
 - Clone the repo: `git clone https://github.com/UniversityofWarwick/id7.git`.
-- Install with [Bower](http://bower.io): `bower install https://github.com/UniversityofWarwick/id7.git`.
+- Install with [Bower](http://bower.io): `bower install warwick-id7`.
 
 Read the [Getting started page](getting-started/) for information on the framework contents, templates and examples, and more.
 
@@ -42,7 +42,7 @@ id7/
 │   ├── id7-bundle.min.js
 │   ├── id7-standalone.js
 │   └── id7-standalone.min.js
-└── images/
+├── images/
 │   ├── id6a-logotype.png
 │   ├── id6a-logotype@2x.png
 │   ├── logo.png
@@ -50,13 +50,15 @@ id7/
 │   ├── masthead-logo-bleed-sm@2x.png
 │   ├── masthead-logo-bleed-xs.png
 │   └── masthead-logo-bleed-xs@2x.png
-└── fonts/
-    ├── FontAwesome.otf
-    ├── fontawesome-webfont.eot
-    ├── fontawesome-webfont.svg
-    ├── fontawesome-webfont.ttf
-    ├── fontawesome-webfont.woff
-    └── fontawesome-webfont.woff2
+├── fonts/
+│   ├── FontAwesome.otf
+│   ├── fontawesome-webfont.eot
+│   ├── fontawesome-webfont.svg
+│   ├── fontawesome-webfont.ttf
+│   ├── fontawesome-webfont.woff
+│   └── fontawesome-webfont.woff2
+└── templates/
+    └── base.html
 ```
 
 We provide compiled CSS and JS (`id7.*`), as well as compiled and minified CSS and JS (`id7.min.*`). CSS [source maps](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors) (`id7.*.map`) are available for use with certain browsers' developer tools. The FontAwesome icon font is included, as is an optional ID7 theme.
@@ -95,4 +97,16 @@ Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com
 
 ## Copyright and license
 
-Code and documentation copyright 2015 University of Warwick.
+Bootstrap is licensed under the [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE).
+
+All rights, including copyright, in the code and documentation (including, but not limited to, the University logo, and
+all text, layout, graphics, video and audio material and artwork) are owned or controlled for these purposes by the
+University of Warwick unless otherwise stated.
+
+Content on web pages at Warwick is the responsibility of the page owner and does not necessarily represent the views of
+the University of Warwick.
+
+In accessing the university's web pages, you agree that you may only download the content for your own personal
+non-commercial use. The material on these web pages should not be used, copied, stored or transmitted outside the
+University without the prior written consent of the University or in accordance with the Copyright, Designs and Patents
+Act 1988.
