@@ -381,6 +381,25 @@ module.exports = function (grunt) {
       docs: {}
     },
 
+    compress: {
+      main: {
+        options: {
+          archive: 'id7-<%= pkg.version %>-dist.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**'],
+            dest: 'id7-<%= pkg.version %>-dist'
+          }
+        ]
+      }
+    },
+
     watch: {
       core: {
         files: '<%= jshint.core.src %>',
@@ -448,6 +467,9 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-homepage-css', ['less:compileDocs', 'autoprefixer:homepage', 'csscomb:distHomepage', 'replace:homepage', 'cssmin:minifyHomepage']);
   grunt.registerTask('dist-homepage-js', ['concat:homepage', 'uglify:homepage']);
   grunt.registerTask('homepage-assets', ['dist', 'clean:docs', 'copy:docs', 'dist-homepage-css', 'dist-homepage-js']);
+
+  // Prepare a release
+  grunt.registerTask('prep-release', ['dist', 'docs', 'compress']);
 
   // Run Jekyll and watch for asset changes.
   grunt.registerTask('serve', ['concurrent:serve'])
