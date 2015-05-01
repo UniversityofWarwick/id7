@@ -115,9 +115,7 @@
             e.preventDefault();
 
             $modal.find('.modal-body').html($wrapper.html());
-            $modal.modal({
-
-            }).modal('show');
+            $modal.modal().modal('show');
 
             return false;
           });
