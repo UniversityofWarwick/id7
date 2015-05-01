@@ -45,6 +45,7 @@
     "typeahead.js": ">= 0.10.5",
     "lodash": ">= 2.4.1",
     "html5shiv": ">= 3.7.2",
-    "modernizr": ">= 2.8.3"
+    "modernizr": ">= 2.8.3",
+    "jquery-doublescroll": ">= 0.4"
   }
 }
