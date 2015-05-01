@@ -8189,9 +8189,6 @@ html.no-not-selector .id7-utility-bar .popover.account-information .actions a:ac
   margin-right: -20px;
   margin-left: -20px;
 }
-.id7-masthead .id7-logo-row > .id7-logo img {
-  visibility: hidden;
-}
 @media (min-width: 768px) {
   .id7-masthead {
     background-image: url("../images/masthead-logo-bleed-sm.png");
@@ -8218,7 +8215,10 @@ html.no-not-selector .id7-utility-bar .popover.account-information .actions a:ac
   }
 }
 .id7-masthead .id7-logo a img {
+  width: 100%;
   height: 100%;
+  filter: alpha(opacity=0);
+  opacity: 0;
 }
 .id7-masthead .id7-header-text {
   position: relative;

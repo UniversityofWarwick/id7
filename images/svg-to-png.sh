@@ -45,7 +45,7 @@ EOF
 	rm .tmp.png
 	rm .tmp.svg
 else
-	inkscape $SVG --export-background=white --export-png=$OUTPUT
+	inkscape $SVG --export-background=white --export-png=$OUTPUT --export-width=$WIDTH --export-height=$HEIGHT
 fi
 
 # SVG generation is a bit squiffy around the edges and can generate almost-invisible

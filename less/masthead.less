@@ -52,10 +52,6 @@
   .id7-logo-row {
     .make-row();
     height: @id7-masthead-logo-height-xs;
-
-    > .id7-logo {
-      img { visibility: hidden; }
-    }
   }
 
   background-image: url("@{id7-image-root-dir}/masthead-logo-bleed-xs.png");
@@ -86,7 +82,9 @@
     }
 
     img {
+      width: 100%;
       height: 100%;
+      .opacity(0);
     }
   }
 
