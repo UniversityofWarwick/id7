@@ -101,11 +101,18 @@
           this.markHeaderFixedPosition();
 
           var offsetTop = $('.id7-header-text').offset().top;
+          var headroomOffset = offsetTop;
+
+          if ($('.id7-main-content-area').length > 0) {
+            headroomOffset = $('.id7-main-content-area').offset().top;
+          }
 
           $h1.affix({
             offset: {
               top: offsetTop
             }
+          }).headroom({
+            offset: headroomOffset
           });
         }
       },
@@ -121,10 +128,18 @@
           offsetTop = $nav.offset().top;
         }
 
+        var headroomOffset = offsetTop;
+
+        if ($('.id7-main-content-area').length > 0) {
+          headroomOffset = $('.id7-main-content-area').offset().top;
+        }
+
         $nav.affix({
           offset: {
             top: offsetTop
           }
+        }).headroom({
+          offset: headroomOffset
         });
       },
 

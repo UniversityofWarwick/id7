@@ -61,4 +61,20 @@ $(function () {
 
     ok($el.data('bs.affix'), 'affix instance exists');
   });
+
+  test('should headroom', function () {
+    var $el = $('<div class="affix-top">' +
+                '<nav class="navbar navbar-primary" role="navigation">' +
+                '<ul class="nav navbar-nav">' +
+                '<li><a href="#">Primary nav link</a></li>' +
+                '</ul>' +
+                '</nav>' +
+                '</div>')
+        .appendTo('#qunit-fixture')
+        .id7Navigation({ fitToWidth: false });
+
+    ok($el.data('headroom'), 'headroom instance exists');
+  });
+
+
 });

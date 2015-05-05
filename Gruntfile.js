@@ -79,6 +79,8 @@ module.exports = function (grunt) {
           'js/vendor/lodash-2.4.1.js',
           'js/vendor/modernizr-2.8.3.js',
           'js/vendor/jquery.doubleScroll-0.4.js',
+          'js/vendor/headroom-0.7.0.min.js',
+          'js/vendor/jquery.headroom-0.7.0.min.js',
           'js/account-popover.jquery.js',
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js',
