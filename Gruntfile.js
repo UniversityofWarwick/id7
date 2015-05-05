@@ -84,7 +84,8 @@ module.exports = function (grunt) {
           'js/search-suggest.jquery.js',
           'js/wide-tables.jquery.js',
           'js/not-selector-feature-detect.modernizr.js',
-          'js/style-update-feature-detect.modernizr.js'
+          'js/style-update-feature-detect.modernizr.js',
+          'js/ie10-viewport-bug-workaround.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-bundle.js'
       },
@@ -95,7 +96,8 @@ module.exports = function (grunt) {
           'js/search-suggest.jquery.js',
           'js/wide-tables.jquery.js',
           'js/not-selector-feature-detect.modernizr.js',
-          'js/style-update-feature-detect.modernizr.js'
+          'js/style-update-feature-detect.modernizr.js',
+          'js/ie10-viewport-bug-workaround.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-standalone.js'
       },
