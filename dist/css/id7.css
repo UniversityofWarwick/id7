@@ -9300,10 +9300,10 @@ body {
 .id7-main-content-area ol ol {
   margin-top: 6px;
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) {
+.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) {
   list-style: none;
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) li:before {
+.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) li:before {
   position: absolute;
   display: inline-block;
   margin-top: 1px;
@@ -9324,27 +9324,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) li:before.pull-left {
+.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) li:before.pull-left {
   margin-right: .3em;
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) li:before.pull-right {
+.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) li:before.pull-right {
   margin-left: .3em;
 }
 @media (min-width: 768px) {
-  .id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) li:before {
+  .id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) li:before {
     line-height: 25px;
   }
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) ul li:before {
+.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) ul li:before {
   filter: alpha(opacity=80);
   opacity: .8;
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) ul ul li:before {
+.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) ul ul li:before {
   font-size: 9.6px;
   filter: alpha(opacity=70);
   opacity: .7;
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) ul ul ul li:before {
+.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) ul ul ul li:before {
   filter: alpha(opacity=60);
   opacity: .6;
 }
