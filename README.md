@@ -31,10 +31,7 @@ id7/
 │   ├── id7.min.css
 │   ├── id7-default-theme.css
 │   ├── id7-default-theme.css.map
-│   ├── id7-default-theme.min.css
-│   ├── id6a.css
-│   ├── id6a.css.map
-│   └── id6a.min.css
+│   └── id7-default-theme.min.css
 ├── js/
 │   ├── vendor/
 │   │   └── html5shiv-3.7.2.min.js
@@ -43,8 +40,6 @@ id7/
 │   ├── id7-standalone.js
 │   └── id7-standalone.min.js
 ├── images/
-│   ├── id6a-logotype.png
-│   ├── id6a-logotype@2x.png
 │   ├── logo.png
 │   ├── masthead-logo-bleed-sm.png
 │   ├── masthead-logo-bleed-sm@2x.png
@@ -69,7 +64,6 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 - [Bootstrap](https://github.com/twbs/bootstrap) >= 3.3.4
 - [typeahead.js](https://github.com/twitter/typeahead.js) >= 0.10.5
 - [lodash](https://github.com/lodash/lodash) >= 2.4.1
-- [Modernizr](https://github.com/Modernizr/Modernizr) >= 2.8.3
 - [Modernizr](https://github.com/Modernizr/Modernizr) >= 2.8.3
 - jQuery doubleScroll >= 0.4 (note that this has been patched in the ID7 build to support concatenation)
 

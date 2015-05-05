@@ -124,4 +124,8 @@ html.no-not-selector #search-container ul.index-section li.active a:active {
   top: -3px;
   margin-left: -20px;
 }
+.is-smallscreen #masthead i.sprite-menu,
+.is-smallscreen #masthead i.sprite-search {
+  background-image: url("../images/id6a-mobile-sprites.png");
+}
 /*# sourceMappingURL=id6a.css.map */

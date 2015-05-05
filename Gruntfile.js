@@ -405,7 +405,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: 'dist/',
-            src: ['**'],
+            src: ['**', '!css/id6a.*', '!images/id6a*'],
             dest: 'id7-<%= pkg.version %>-dist'
           }
         ]
@@ -421,7 +421,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: 'dist/',
-            src: ['css/id6a.*', 'images/id6a-logotype*'],
+            src: ['css/id6a.*', 'images/id6a*'],
             dest: 'id6a-<%= pkg.version %>-dist'
           }
         ]
