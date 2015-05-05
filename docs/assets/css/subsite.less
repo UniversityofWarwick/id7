@@ -210,21 +210,19 @@
 }
 
 ul.branded {
-  .list-unstyled;
-
   > li {
     font-weight: bold;
 
-    &:before {
-      .fa();
-
-      font-size: 12px;
-      content: @fa-var-play;
-      margin-right: (@line-height-computed / 3);
-
-      position: relative;
-      top: -1.5px;
-    }
+    //&:before {
+    //  .fa();
+    //
+    //  font-size: 12px;
+    //  content: @fa-var-play;
+    //  margin-right: (@line-height-computed / 3);
+    //
+    //  position: relative;
+    //  top: -1.5px;
+    //}
 
     &:nth-child(7n + 1):before { color: @id7-brand-purple; }
     &:nth-child(7n + 2):before { color: @id7-brand-gold; }
@@ -263,6 +261,6 @@ blockquote.branded {
     overflow: hidden;
     font-size: 75%;
     line-height: @line-height-small;
-    padding: 3px 0;
+    padding: 3px 110px 3px 0;
   }
 }

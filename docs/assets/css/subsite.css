@@ -456,35 +456,8 @@ html.no-not-selector .id7-main-content-area .slideshow .carousel-controls a:acti
   top: auto;
   left: auto;
 }
-ul.branded {
-  padding-left: 0;
-  list-style: none;
-}
 ul.branded > li {
   font-weight: bold;
-}
-ul.branded > li:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-       -o-transform: translate(0, 0);
-          transform: translate(0, 0);
-  font-size: 12px;
-  content: "\f04b";
-  margin-right: 7.33333333px;
-  position: relative;
-  top: -1.5px;
-}
-ul.branded > li:before.pull-left {
-  margin-right: .3em;
-}
-ul.branded > li:before.pull-right {
-  margin-left: .3em;
 }
 ul.branded > li:nth-child(7n + 1):before {
   color: #5b3069;
@@ -534,5 +507,5 @@ blockquote.branded footer {
   overflow: hidden;
   font-size: 75%;
   line-height: 1.5;
-  padding: 3px 0;
+  padding: 3px 110px 3px 0;
 }
