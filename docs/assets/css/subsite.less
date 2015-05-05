@@ -1,7 +1,4 @@
-@import '../../../less/bootstrap/variables.less';
-@import '../../../less/bootstrap/mixins.less';
-@import '../../../less/variables.less';
-@import '../../../less/mixins.less';
+@import (reference) '../../../less/id7.less';
 
 .id7-main-content-area {
   .row-spacer {
@@ -209,5 +206,63 @@
       top: auto;
       left: auto;
     }
+  }
+}
+
+ul.branded {
+  .list-unstyled;
+
+  > li {
+    font-weight: bold;
+
+    &:before {
+      .fa();
+
+      font-size: 12px;
+      content: @fa-var-play;
+      margin-right: (@line-height-computed / 3);
+
+      position: relative;
+      top: -1.5px;
+    }
+
+    &:nth-child(7n + 1):before { color: @id7-brand-purple; }
+    &:nth-child(7n + 2):before { color: @id7-brand-gold; }
+    &:nth-child(7n + 3):before { color: @id7-brand-red; }
+    &:nth-child(7n + 4):before { color: @id7-brand-green; }
+    &:nth-child(7n + 5):before { color: @id7-brand-blue; }
+    &:nth-child(7n + 6):before { color: @id7-brand-orange; }
+    &:nth-child(7n + 7):before { color: @id7-brand-gray; }
+  }
+}
+
+blockquote.branded {
+  border-left: none;
+  padding: (@line-height-computed / 2);
+
+  color: @id7-brand-default;
+  border-top: 1px solid @id7-brand-default;
+  background: url(/dist/images/logo-divider-purple.svg) right bottom no-repeat;
+  background-size: 1130px 41px;
+
+  footer {
+    color: inherit;
+    &:before { content: none; }
+
+    cite {
+      font-style: normal;
+    }
+  }
+
+  padding-bottom: @grid-gutter-width;
+  position: relative;
+  footer {
+    position: absolute;
+    left: 0px;
+    height: @grid-gutter-width;
+    overflow: hidden;
+    font-size: 75%;
+    line-height: @line-height-small;
+    padding: 3px 0;
   }
 }
