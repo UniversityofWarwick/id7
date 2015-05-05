@@ -7648,8 +7648,6 @@ html.no-touch .modal-open {
   overflow: initial;
 }
 .id7-main-content-area {
-  position: relative;
-  z-index: 0;
   font-size: 14px;
   font-weight: 300;
   font-weight: 400;
@@ -8600,6 +8598,9 @@ html.no-not-selector .id7-masthead .id7-logo-row nav a:active {
 }
 .id7-non-branded .id7-search-box-container {
   margin-top: 11px !important;
+}
+.carousel {
+  z-index: 0;
 }
 .carousel h1,
 .carousel h2,
