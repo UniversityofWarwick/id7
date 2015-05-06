@@ -617,132 +617,498 @@ body.brand-purple .carousel .carousel-indicators li::after {
 body.brand-purple .carousel .carousel-indicators li.active::after {
   color: #5b3069;
 }
-body.brand-purple .boxstyle_.box1 {
+@media (max-width: 767px) {
+  body.brand-purple .boxstyle_.box1,
+  body.brand-purple .boxstyle-sm.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-purple .boxstyle-md.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-purple .boxstyle-lg.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-purple .boxstyle_.box1,
+body.brand-purple .boxstyle-xs.box1,
+body.brand-purple .boxstyle-sm.box1,
+body.brand-purple .boxstyle-md.box1,
+body.brand-purple .boxstyle-lg.box1 {
   border: 0;
   background: #e6e0e9;
   color: #383838;
 }
 @media print {
-  body.brand-purple .boxstyle_.box1 {
+  body.brand-purple .boxstyle_.box1,
+  body.brand-purple .boxstyle-xs.box1,
+  body.brand-purple .boxstyle-sm.box1,
+  body.brand-purple .boxstyle-md.box1,
+  body.brand-purple .boxstyle-lg.box1 {
     border: 1px solid #e6e0e9;
   }
 }
 body.brand-purple .boxstyle_.box1 h1,
+body.brand-purple .boxstyle-xs.box1 h1,
+body.brand-purple .boxstyle-sm.box1 h1,
+body.brand-purple .boxstyle-md.box1 h1,
+body.brand-purple .boxstyle-lg.box1 h1,
 body.brand-purple .boxstyle_.box1 h2,
+body.brand-purple .boxstyle-xs.box1 h2,
+body.brand-purple .boxstyle-sm.box1 h2,
+body.brand-purple .boxstyle-md.box1 h2,
+body.brand-purple .boxstyle-lg.box1 h2,
 body.brand-purple .boxstyle_.box1 h3,
+body.brand-purple .boxstyle-xs.box1 h3,
+body.brand-purple .boxstyle-sm.box1 h3,
+body.brand-purple .boxstyle-md.box1 h3,
+body.brand-purple .boxstyle-lg.box1 h3,
 body.brand-purple .boxstyle_.box1 h4,
+body.brand-purple .boxstyle-xs.box1 h4,
+body.brand-purple .boxstyle-sm.box1 h4,
+body.brand-purple .boxstyle-md.box1 h4,
+body.brand-purple .boxstyle-lg.box1 h4,
 body.brand-purple .boxstyle_.box1 h5,
+body.brand-purple .boxstyle-xs.box1 h5,
+body.brand-purple .boxstyle-sm.box1 h5,
+body.brand-purple .boxstyle-md.box1 h5,
+body.brand-purple .boxstyle-lg.box1 h5,
 body.brand-purple .boxstyle_.box1 h6,
+body.brand-purple .boxstyle-xs.box1 h6,
+body.brand-purple .boxstyle-sm.box1 h6,
+body.brand-purple .boxstyle-md.box1 h6,
+body.brand-purple .boxstyle-lg.box1 h6,
 body.brand-purple .boxstyle_.box1 .h1,
+body.brand-purple .boxstyle-xs.box1 .h1,
+body.brand-purple .boxstyle-sm.box1 .h1,
+body.brand-purple .boxstyle-md.box1 .h1,
+body.brand-purple .boxstyle-lg.box1 .h1,
 body.brand-purple .boxstyle_.box1 .h2,
+body.brand-purple .boxstyle-xs.box1 .h2,
+body.brand-purple .boxstyle-sm.box1 .h2,
+body.brand-purple .boxstyle-md.box1 .h2,
+body.brand-purple .boxstyle-lg.box1 .h2,
 body.brand-purple .boxstyle_.box1 .h3,
+body.brand-purple .boxstyle-xs.box1 .h3,
+body.brand-purple .boxstyle-sm.box1 .h3,
+body.brand-purple .boxstyle-md.box1 .h3,
+body.brand-purple .boxstyle-lg.box1 .h3,
 body.brand-purple .boxstyle_.box1 .h4,
+body.brand-purple .boxstyle-xs.box1 .h4,
+body.brand-purple .boxstyle-sm.box1 .h4,
+body.brand-purple .boxstyle-md.box1 .h4,
+body.brand-purple .boxstyle-lg.box1 .h4,
 body.brand-purple .boxstyle_.box1 .h5,
-body.brand-purple .boxstyle_.box1 .h6 {
+body.brand-purple .boxstyle-xs.box1 .h5,
+body.brand-purple .boxstyle-sm.box1 .h5,
+body.brand-purple .boxstyle-md.box1 .h5,
+body.brand-purple .boxstyle-lg.box1 .h5,
+body.brand-purple .boxstyle_.box1 .h6,
+body.brand-purple .boxstyle-xs.box1 .h6,
+body.brand-purple .boxstyle-sm.box1 .h6,
+body.brand-purple .boxstyle-md.box1 .h6,
+body.brand-purple .boxstyle-lg.box1 .h6 {
   color: #383838;
 }
-body.brand-purple .boxstyle_.box1 blockquote.quotes {
+body.brand-purple .boxstyle_.box1 blockquote.quotes,
+body.brand-purple .boxstyle-xs.box1 blockquote.quotes,
+body.brand-purple .boxstyle-sm.box1 blockquote.quotes,
+body.brand-purple .boxstyle-md.box1 blockquote.quotes,
+body.brand-purple .boxstyle-lg.box1 blockquote.quotes {
   color: inherit;
 }
-body.brand-purple .boxstyle_.box2 {
+@media (max-width: 767px) {
+  body.brand-purple .boxstyle_.box2,
+  body.brand-purple .boxstyle-sm.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-purple .boxstyle-md.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-purple .boxstyle-lg.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-purple .boxstyle_.box2,
+body.brand-purple .boxstyle-xs.box2,
+body.brand-purple .boxstyle-sm.box2,
+body.brand-purple .boxstyle-md.box2,
+body.brand-purple .boxstyle-lg.box2 {
   border: 0;
   background: #eeeeee;
   color: #383838;
 }
 @media print {
-  body.brand-purple .boxstyle_.box2 {
+  body.brand-purple .boxstyle_.box2,
+  body.brand-purple .boxstyle-xs.box2,
+  body.brand-purple .boxstyle-sm.box2,
+  body.brand-purple .boxstyle-md.box2,
+  body.brand-purple .boxstyle-lg.box2 {
     border: 1px solid #eeeeee;
   }
 }
 body.brand-purple .boxstyle_.box2 h1,
+body.brand-purple .boxstyle-xs.box2 h1,
+body.brand-purple .boxstyle-sm.box2 h1,
+body.brand-purple .boxstyle-md.box2 h1,
+body.brand-purple .boxstyle-lg.box2 h1,
 body.brand-purple .boxstyle_.box2 h2,
+body.brand-purple .boxstyle-xs.box2 h2,
+body.brand-purple .boxstyle-sm.box2 h2,
+body.brand-purple .boxstyle-md.box2 h2,
+body.brand-purple .boxstyle-lg.box2 h2,
 body.brand-purple .boxstyle_.box2 h3,
+body.brand-purple .boxstyle-xs.box2 h3,
+body.brand-purple .boxstyle-sm.box2 h3,
+body.brand-purple .boxstyle-md.box2 h3,
+body.brand-purple .boxstyle-lg.box2 h3,
 body.brand-purple .boxstyle_.box2 h4,
+body.brand-purple .boxstyle-xs.box2 h4,
+body.brand-purple .boxstyle-sm.box2 h4,
+body.brand-purple .boxstyle-md.box2 h4,
+body.brand-purple .boxstyle-lg.box2 h4,
 body.brand-purple .boxstyle_.box2 h5,
+body.brand-purple .boxstyle-xs.box2 h5,
+body.brand-purple .boxstyle-sm.box2 h5,
+body.brand-purple .boxstyle-md.box2 h5,
+body.brand-purple .boxstyle-lg.box2 h5,
 body.brand-purple .boxstyle_.box2 h6,
+body.brand-purple .boxstyle-xs.box2 h6,
+body.brand-purple .boxstyle-sm.box2 h6,
+body.brand-purple .boxstyle-md.box2 h6,
+body.brand-purple .boxstyle-lg.box2 h6,
 body.brand-purple .boxstyle_.box2 .h1,
+body.brand-purple .boxstyle-xs.box2 .h1,
+body.brand-purple .boxstyle-sm.box2 .h1,
+body.brand-purple .boxstyle-md.box2 .h1,
+body.brand-purple .boxstyle-lg.box2 .h1,
 body.brand-purple .boxstyle_.box2 .h2,
+body.brand-purple .boxstyle-xs.box2 .h2,
+body.brand-purple .boxstyle-sm.box2 .h2,
+body.brand-purple .boxstyle-md.box2 .h2,
+body.brand-purple .boxstyle-lg.box2 .h2,
 body.brand-purple .boxstyle_.box2 .h3,
+body.brand-purple .boxstyle-xs.box2 .h3,
+body.brand-purple .boxstyle-sm.box2 .h3,
+body.brand-purple .boxstyle-md.box2 .h3,
+body.brand-purple .boxstyle-lg.box2 .h3,
 body.brand-purple .boxstyle_.box2 .h4,
+body.brand-purple .boxstyle-xs.box2 .h4,
+body.brand-purple .boxstyle-sm.box2 .h4,
+body.brand-purple .boxstyle-md.box2 .h4,
+body.brand-purple .boxstyle-lg.box2 .h4,
 body.brand-purple .boxstyle_.box2 .h5,
-body.brand-purple .boxstyle_.box2 .h6 {
+body.brand-purple .boxstyle-xs.box2 .h5,
+body.brand-purple .boxstyle-sm.box2 .h5,
+body.brand-purple .boxstyle-md.box2 .h5,
+body.brand-purple .boxstyle-lg.box2 .h5,
+body.brand-purple .boxstyle_.box2 .h6,
+body.brand-purple .boxstyle-xs.box2 .h6,
+body.brand-purple .boxstyle-sm.box2 .h6,
+body.brand-purple .boxstyle-md.box2 .h6,
+body.brand-purple .boxstyle-lg.box2 .h6 {
   color: #383838;
 }
-body.brand-purple .boxstyle_.box2 blockquote.quotes {
+body.brand-purple .boxstyle_.box2 blockquote.quotes,
+body.brand-purple .boxstyle-xs.box2 blockquote.quotes,
+body.brand-purple .boxstyle-sm.box2 blockquote.quotes,
+body.brand-purple .boxstyle-md.box2 blockquote.quotes,
+body.brand-purple .boxstyle-lg.box2 blockquote.quotes {
   color: inherit;
 }
-body.brand-purple .boxstyle_.box3 {
+body.brand-purple .boxstyle-xs.box3 {
   background: none;
   border: 1px solid #5b3069;
   color: inherit;
 }
-body.brand-purple .boxstyle_.box4 {
+@media (min-width: 768px) {
+  body.brand-purple .boxstyle_.box3,
+  body.brand-purple .boxstyle-sm.box3 {
+    background: none;
+    border: 1px solid #5b3069;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-purple .boxstyle-md.box3 {
+    background: none;
+    border: 1px solid #5b3069;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-purple .boxstyle-lg.box3 {
+    background: none;
+    border: 1px solid #5b3069;
+    color: inherit;
+  }
+}
+body.brand-purple .boxstyle-xs.box4 {
   background: none;
   border: 1px solid #777777;
   color: inherit;
 }
-body.brand-purple .boxstyle_.box5 {
+@media (min-width: 768px) {
+  body.brand-purple .boxstyle_.box4,
+  body.brand-purple .boxstyle-sm.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-purple .boxstyle-md.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-purple .boxstyle-lg.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (max-width: 767px) {
+  body.brand-purple .boxstyle_.box5,
+  body.brand-purple .boxstyle-sm.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-purple .boxstyle-md.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-purple .boxstyle-lg.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-purple .boxstyle_.box5,
+body.brand-purple .boxstyle-xs.box5,
+body.brand-purple .boxstyle-sm.box5,
+body.brand-purple .boxstyle-md.box5,
+body.brand-purple .boxstyle-lg.box5 {
   border: 0;
   background: #5b3069;
   color: white;
 }
 @media print {
-  body.brand-purple .boxstyle_.box5 {
+  body.brand-purple .boxstyle_.box5,
+  body.brand-purple .boxstyle-xs.box5,
+  body.brand-purple .boxstyle-sm.box5,
+  body.brand-purple .boxstyle-md.box5,
+  body.brand-purple .boxstyle-lg.box5 {
     border: 1px solid #5b3069;
   }
 }
 html.no-not-selector body.brand-purple .boxstyle_.box5 a,
+html.no-not-selector body.brand-purple .boxstyle-xs.box5 a,
+html.no-not-selector body.brand-purple .boxstyle-sm.box5 a,
+html.no-not-selector body.brand-purple .boxstyle-md.box5 a,
+html.no-not-selector body.brand-purple .boxstyle-lg.box5 a,
 html.no-not-selector body.brand-purple .boxstyle_.box5 a:link,
-html.no-not-selector body.brand-purple .boxstyle_.box5 a:visited {
+html.no-not-selector body.brand-purple .boxstyle-xs.box5 a:link,
+html.no-not-selector body.brand-purple .boxstyle-sm.box5 a:link,
+html.no-not-selector body.brand-purple .boxstyle-md.box5 a:link,
+html.no-not-selector body.brand-purple .boxstyle-lg.box5 a:link,
+html.no-not-selector body.brand-purple .boxstyle_.box5 a:visited,
+html.no-not-selector body.brand-purple .boxstyle-xs.box5 a:visited,
+html.no-not-selector body.brand-purple .boxstyle-sm.box5 a:visited,
+html.no-not-selector body.brand-purple .boxstyle-md.box5 a:visited,
+html.no-not-selector body.brand-purple .boxstyle-lg.box5 a:visited {
   color: white;
 }
 body.brand-purple .boxstyle_.box5 a:not(.btn),
+body.brand-purple .boxstyle-xs.box5 a:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:not(.btn),
 body.brand-purple .boxstyle_.box5 a:link:not(.btn),
-body.brand-purple .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-purple .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:link:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-purple .boxstyle_.box5 a:visited:not(.btn),
+body.brand-purple .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:visited:not(.btn) {
   color: white;
 }
 html.no-not-selector body.brand-purple .boxstyle_.box5 a:hover,
+html.no-not-selector body.brand-purple .boxstyle-xs.box5 a:hover,
+html.no-not-selector body.brand-purple .boxstyle-sm.box5 a:hover,
+html.no-not-selector body.brand-purple .boxstyle-md.box5 a:hover,
+html.no-not-selector body.brand-purple .boxstyle-lg.box5 a:hover,
 html.no-not-selector body.brand-purple .boxstyle_.box5 a:focus,
-html.no-not-selector body.brand-purple .boxstyle_.box5 a:active {
+html.no-not-selector body.brand-purple .boxstyle-xs.box5 a:focus,
+html.no-not-selector body.brand-purple .boxstyle-sm.box5 a:focus,
+html.no-not-selector body.brand-purple .boxstyle-md.box5 a:focus,
+html.no-not-selector body.brand-purple .boxstyle-lg.box5 a:focus,
+html.no-not-selector body.brand-purple .boxstyle_.box5 a:active,
+html.no-not-selector body.brand-purple .boxstyle-xs.box5 a:active,
+html.no-not-selector body.brand-purple .boxstyle-sm.box5 a:active,
+html.no-not-selector body.brand-purple .boxstyle-md.box5 a:active,
+html.no-not-selector body.brand-purple .boxstyle-lg.box5 a:active {
   color: #cccccc;
 }
 body.brand-purple .boxstyle_.box5 a:hover:not(.btn),
+body.brand-purple .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-purple .boxstyle_.box5 a:focus:not(.btn),
-body.brand-purple .boxstyle_.box5 a:active:not(.btn) {
+body.brand-purple .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-purple .boxstyle_.box5 a:active:not(.btn),
+body.brand-purple .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:active:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:active:not(.btn) {
   color: #cccccc;
 }
-body.brand-purple .boxstyle_.box5 a:hover .new-window-link {
+body.brand-purple .boxstyle_.box5 a:hover .new-window-link,
+body.brand-purple .boxstyle-xs.box5 a:hover .new-window-link,
+body.brand-purple .boxstyle-sm.box5 a:hover .new-window-link,
+body.brand-purple .boxstyle-md.box5 a:hover .new-window-link,
+body.brand-purple .boxstyle-lg.box5 a:hover .new-window-link {
   color: #cccccc;
 }
 body.brand-purple .boxstyle_.box5 a:not(.btn),
+body.brand-purple .boxstyle-xs.box5 a:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:not(.btn),
 body.brand-purple .boxstyle_.box5 a:link:not(.btn),
-body.brand-purple .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-purple .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:link:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-purple .boxstyle_.box5 a:visited:not(.btn),
+body.brand-purple .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
 body.brand-purple .boxstyle_.box5 a:hover:not(.btn),
+body.brand-purple .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-purple .boxstyle_.box5 a:focus:not(.btn),
-body.brand-purple .boxstyle_.box5 a:active:not(.btn) {
+body.brand-purple .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-purple .boxstyle_.box5 a:active:not(.btn),
+body.brand-purple .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-purple .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-purple .boxstyle-md.box5 a:active:not(.btn),
+body.brand-purple .boxstyle-lg.box5 a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
   -moz-text-decoration-color: #cccccc;
        text-decoration-color: #cccccc;
 }
 body.brand-purple .boxstyle_.box5 h1,
+body.brand-purple .boxstyle-xs.box5 h1,
+body.brand-purple .boxstyle-sm.box5 h1,
+body.brand-purple .boxstyle-md.box5 h1,
+body.brand-purple .boxstyle-lg.box5 h1,
 body.brand-purple .boxstyle_.box5 h2,
+body.brand-purple .boxstyle-xs.box5 h2,
+body.brand-purple .boxstyle-sm.box5 h2,
+body.brand-purple .boxstyle-md.box5 h2,
+body.brand-purple .boxstyle-lg.box5 h2,
 body.brand-purple .boxstyle_.box5 h3,
+body.brand-purple .boxstyle-xs.box5 h3,
+body.brand-purple .boxstyle-sm.box5 h3,
+body.brand-purple .boxstyle-md.box5 h3,
+body.brand-purple .boxstyle-lg.box5 h3,
 body.brand-purple .boxstyle_.box5 h4,
+body.brand-purple .boxstyle-xs.box5 h4,
+body.brand-purple .boxstyle-sm.box5 h4,
+body.brand-purple .boxstyle-md.box5 h4,
+body.brand-purple .boxstyle-lg.box5 h4,
 body.brand-purple .boxstyle_.box5 h5,
+body.brand-purple .boxstyle-xs.box5 h5,
+body.brand-purple .boxstyle-sm.box5 h5,
+body.brand-purple .boxstyle-md.box5 h5,
+body.brand-purple .boxstyle-lg.box5 h5,
 body.brand-purple .boxstyle_.box5 h6,
+body.brand-purple .boxstyle-xs.box5 h6,
+body.brand-purple .boxstyle-sm.box5 h6,
+body.brand-purple .boxstyle-md.box5 h6,
+body.brand-purple .boxstyle-lg.box5 h6,
 body.brand-purple .boxstyle_.box5 .h1,
+body.brand-purple .boxstyle-xs.box5 .h1,
+body.brand-purple .boxstyle-sm.box5 .h1,
+body.brand-purple .boxstyle-md.box5 .h1,
+body.brand-purple .boxstyle-lg.box5 .h1,
 body.brand-purple .boxstyle_.box5 .h2,
+body.brand-purple .boxstyle-xs.box5 .h2,
+body.brand-purple .boxstyle-sm.box5 .h2,
+body.brand-purple .boxstyle-md.box5 .h2,
+body.brand-purple .boxstyle-lg.box5 .h2,
 body.brand-purple .boxstyle_.box5 .h3,
+body.brand-purple .boxstyle-xs.box5 .h3,
+body.brand-purple .boxstyle-sm.box5 .h3,
+body.brand-purple .boxstyle-md.box5 .h3,
+body.brand-purple .boxstyle-lg.box5 .h3,
 body.brand-purple .boxstyle_.box5 .h4,
+body.brand-purple .boxstyle-xs.box5 .h4,
+body.brand-purple .boxstyle-sm.box5 .h4,
+body.brand-purple .boxstyle-md.box5 .h4,
+body.brand-purple .boxstyle-lg.box5 .h4,
 body.brand-purple .boxstyle_.box5 .h5,
-body.brand-purple .boxstyle_.box5 .h6 {
+body.brand-purple .boxstyle-xs.box5 .h5,
+body.brand-purple .boxstyle-sm.box5 .h5,
+body.brand-purple .boxstyle-md.box5 .h5,
+body.brand-purple .boxstyle-lg.box5 .h5,
+body.brand-purple .boxstyle_.box5 .h6,
+body.brand-purple .boxstyle-xs.box5 .h6,
+body.brand-purple .boxstyle-sm.box5 .h6,
+body.brand-purple .boxstyle-md.box5 .h6,
+body.brand-purple .boxstyle-lg.box5 .h6 {
   color: white;
 }
-body.brand-purple .boxstyle_.box5 blockquote.quotes {
+body.brand-purple .boxstyle_.box5 blockquote.quotes,
+body.brand-purple .boxstyle-xs.box5 blockquote.quotes,
+body.brand-purple .boxstyle-sm.box5 blockquote.quotes,
+body.brand-purple .boxstyle-md.box5 blockquote.quotes,
+body.brand-purple .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
 body.brand-gray html.no-rgba {
@@ -1364,132 +1730,498 @@ body.brand-gray .carousel .carousel-indicators li::after {
 body.brand-gray .carousel .carousel-indicators li.active::after {
   color: #3f4246;
 }
-body.brand-gray .boxstyle_.box1 {
+@media (max-width: 767px) {
+  body.brand-gray .boxstyle_.box1,
+  body.brand-gray .boxstyle-sm.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-gray .boxstyle-md.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-gray .boxstyle-lg.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-gray .boxstyle_.box1,
+body.brand-gray .boxstyle-xs.box1,
+body.brand-gray .boxstyle-sm.box1,
+body.brand-gray .boxstyle-md.box1,
+body.brand-gray .boxstyle-lg.box1 {
   border: 0;
   background: #e2e3e3;
   color: #383838;
 }
 @media print {
-  body.brand-gray .boxstyle_.box1 {
+  body.brand-gray .boxstyle_.box1,
+  body.brand-gray .boxstyle-xs.box1,
+  body.brand-gray .boxstyle-sm.box1,
+  body.brand-gray .boxstyle-md.box1,
+  body.brand-gray .boxstyle-lg.box1 {
     border: 1px solid #e2e3e3;
   }
 }
 body.brand-gray .boxstyle_.box1 h1,
+body.brand-gray .boxstyle-xs.box1 h1,
+body.brand-gray .boxstyle-sm.box1 h1,
+body.brand-gray .boxstyle-md.box1 h1,
+body.brand-gray .boxstyle-lg.box1 h1,
 body.brand-gray .boxstyle_.box1 h2,
+body.brand-gray .boxstyle-xs.box1 h2,
+body.brand-gray .boxstyle-sm.box1 h2,
+body.brand-gray .boxstyle-md.box1 h2,
+body.brand-gray .boxstyle-lg.box1 h2,
 body.brand-gray .boxstyle_.box1 h3,
+body.brand-gray .boxstyle-xs.box1 h3,
+body.brand-gray .boxstyle-sm.box1 h3,
+body.brand-gray .boxstyle-md.box1 h3,
+body.brand-gray .boxstyle-lg.box1 h3,
 body.brand-gray .boxstyle_.box1 h4,
+body.brand-gray .boxstyle-xs.box1 h4,
+body.brand-gray .boxstyle-sm.box1 h4,
+body.brand-gray .boxstyle-md.box1 h4,
+body.brand-gray .boxstyle-lg.box1 h4,
 body.brand-gray .boxstyle_.box1 h5,
+body.brand-gray .boxstyle-xs.box1 h5,
+body.brand-gray .boxstyle-sm.box1 h5,
+body.brand-gray .boxstyle-md.box1 h5,
+body.brand-gray .boxstyle-lg.box1 h5,
 body.brand-gray .boxstyle_.box1 h6,
+body.brand-gray .boxstyle-xs.box1 h6,
+body.brand-gray .boxstyle-sm.box1 h6,
+body.brand-gray .boxstyle-md.box1 h6,
+body.brand-gray .boxstyle-lg.box1 h6,
 body.brand-gray .boxstyle_.box1 .h1,
+body.brand-gray .boxstyle-xs.box1 .h1,
+body.brand-gray .boxstyle-sm.box1 .h1,
+body.brand-gray .boxstyle-md.box1 .h1,
+body.brand-gray .boxstyle-lg.box1 .h1,
 body.brand-gray .boxstyle_.box1 .h2,
+body.brand-gray .boxstyle-xs.box1 .h2,
+body.brand-gray .boxstyle-sm.box1 .h2,
+body.brand-gray .boxstyle-md.box1 .h2,
+body.brand-gray .boxstyle-lg.box1 .h2,
 body.brand-gray .boxstyle_.box1 .h3,
+body.brand-gray .boxstyle-xs.box1 .h3,
+body.brand-gray .boxstyle-sm.box1 .h3,
+body.brand-gray .boxstyle-md.box1 .h3,
+body.brand-gray .boxstyle-lg.box1 .h3,
 body.brand-gray .boxstyle_.box1 .h4,
+body.brand-gray .boxstyle-xs.box1 .h4,
+body.brand-gray .boxstyle-sm.box1 .h4,
+body.brand-gray .boxstyle-md.box1 .h4,
+body.brand-gray .boxstyle-lg.box1 .h4,
 body.brand-gray .boxstyle_.box1 .h5,
-body.brand-gray .boxstyle_.box1 .h6 {
+body.brand-gray .boxstyle-xs.box1 .h5,
+body.brand-gray .boxstyle-sm.box1 .h5,
+body.brand-gray .boxstyle-md.box1 .h5,
+body.brand-gray .boxstyle-lg.box1 .h5,
+body.brand-gray .boxstyle_.box1 .h6,
+body.brand-gray .boxstyle-xs.box1 .h6,
+body.brand-gray .boxstyle-sm.box1 .h6,
+body.brand-gray .boxstyle-md.box1 .h6,
+body.brand-gray .boxstyle-lg.box1 .h6 {
   color: #383838;
 }
-body.brand-gray .boxstyle_.box1 blockquote.quotes {
+body.brand-gray .boxstyle_.box1 blockquote.quotes,
+body.brand-gray .boxstyle-xs.box1 blockquote.quotes,
+body.brand-gray .boxstyle-sm.box1 blockquote.quotes,
+body.brand-gray .boxstyle-md.box1 blockquote.quotes,
+body.brand-gray .boxstyle-lg.box1 blockquote.quotes {
   color: inherit;
 }
-body.brand-gray .boxstyle_.box2 {
+@media (max-width: 767px) {
+  body.brand-gray .boxstyle_.box2,
+  body.brand-gray .boxstyle-sm.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-gray .boxstyle-md.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-gray .boxstyle-lg.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-gray .boxstyle_.box2,
+body.brand-gray .boxstyle-xs.box2,
+body.brand-gray .boxstyle-sm.box2,
+body.brand-gray .boxstyle-md.box2,
+body.brand-gray .boxstyle-lg.box2 {
   border: 0;
   background: #eeeeee;
   color: #383838;
 }
 @media print {
-  body.brand-gray .boxstyle_.box2 {
+  body.brand-gray .boxstyle_.box2,
+  body.brand-gray .boxstyle-xs.box2,
+  body.brand-gray .boxstyle-sm.box2,
+  body.brand-gray .boxstyle-md.box2,
+  body.brand-gray .boxstyle-lg.box2 {
     border: 1px solid #eeeeee;
   }
 }
 body.brand-gray .boxstyle_.box2 h1,
+body.brand-gray .boxstyle-xs.box2 h1,
+body.brand-gray .boxstyle-sm.box2 h1,
+body.brand-gray .boxstyle-md.box2 h1,
+body.brand-gray .boxstyle-lg.box2 h1,
 body.brand-gray .boxstyle_.box2 h2,
+body.brand-gray .boxstyle-xs.box2 h2,
+body.brand-gray .boxstyle-sm.box2 h2,
+body.brand-gray .boxstyle-md.box2 h2,
+body.brand-gray .boxstyle-lg.box2 h2,
 body.brand-gray .boxstyle_.box2 h3,
+body.brand-gray .boxstyle-xs.box2 h3,
+body.brand-gray .boxstyle-sm.box2 h3,
+body.brand-gray .boxstyle-md.box2 h3,
+body.brand-gray .boxstyle-lg.box2 h3,
 body.brand-gray .boxstyle_.box2 h4,
+body.brand-gray .boxstyle-xs.box2 h4,
+body.brand-gray .boxstyle-sm.box2 h4,
+body.brand-gray .boxstyle-md.box2 h4,
+body.brand-gray .boxstyle-lg.box2 h4,
 body.brand-gray .boxstyle_.box2 h5,
+body.brand-gray .boxstyle-xs.box2 h5,
+body.brand-gray .boxstyle-sm.box2 h5,
+body.brand-gray .boxstyle-md.box2 h5,
+body.brand-gray .boxstyle-lg.box2 h5,
 body.brand-gray .boxstyle_.box2 h6,
+body.brand-gray .boxstyle-xs.box2 h6,
+body.brand-gray .boxstyle-sm.box2 h6,
+body.brand-gray .boxstyle-md.box2 h6,
+body.brand-gray .boxstyle-lg.box2 h6,
 body.brand-gray .boxstyle_.box2 .h1,
+body.brand-gray .boxstyle-xs.box2 .h1,
+body.brand-gray .boxstyle-sm.box2 .h1,
+body.brand-gray .boxstyle-md.box2 .h1,
+body.brand-gray .boxstyle-lg.box2 .h1,
 body.brand-gray .boxstyle_.box2 .h2,
+body.brand-gray .boxstyle-xs.box2 .h2,
+body.brand-gray .boxstyle-sm.box2 .h2,
+body.brand-gray .boxstyle-md.box2 .h2,
+body.brand-gray .boxstyle-lg.box2 .h2,
 body.brand-gray .boxstyle_.box2 .h3,
+body.brand-gray .boxstyle-xs.box2 .h3,
+body.brand-gray .boxstyle-sm.box2 .h3,
+body.brand-gray .boxstyle-md.box2 .h3,
+body.brand-gray .boxstyle-lg.box2 .h3,
 body.brand-gray .boxstyle_.box2 .h4,
+body.brand-gray .boxstyle-xs.box2 .h4,
+body.brand-gray .boxstyle-sm.box2 .h4,
+body.brand-gray .boxstyle-md.box2 .h4,
+body.brand-gray .boxstyle-lg.box2 .h4,
 body.brand-gray .boxstyle_.box2 .h5,
-body.brand-gray .boxstyle_.box2 .h6 {
+body.brand-gray .boxstyle-xs.box2 .h5,
+body.brand-gray .boxstyle-sm.box2 .h5,
+body.brand-gray .boxstyle-md.box2 .h5,
+body.brand-gray .boxstyle-lg.box2 .h5,
+body.brand-gray .boxstyle_.box2 .h6,
+body.brand-gray .boxstyle-xs.box2 .h6,
+body.brand-gray .boxstyle-sm.box2 .h6,
+body.brand-gray .boxstyle-md.box2 .h6,
+body.brand-gray .boxstyle-lg.box2 .h6 {
   color: #383838;
 }
-body.brand-gray .boxstyle_.box2 blockquote.quotes {
+body.brand-gray .boxstyle_.box2 blockquote.quotes,
+body.brand-gray .boxstyle-xs.box2 blockquote.quotes,
+body.brand-gray .boxstyle-sm.box2 blockquote.quotes,
+body.brand-gray .boxstyle-md.box2 blockquote.quotes,
+body.brand-gray .boxstyle-lg.box2 blockquote.quotes {
   color: inherit;
 }
-body.brand-gray .boxstyle_.box3 {
+body.brand-gray .boxstyle-xs.box3 {
   background: none;
   border: 1px solid #3f4246;
   color: inherit;
 }
-body.brand-gray .boxstyle_.box4 {
+@media (min-width: 768px) {
+  body.brand-gray .boxstyle_.box3,
+  body.brand-gray .boxstyle-sm.box3 {
+    background: none;
+    border: 1px solid #3f4246;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-gray .boxstyle-md.box3 {
+    background: none;
+    border: 1px solid #3f4246;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-gray .boxstyle-lg.box3 {
+    background: none;
+    border: 1px solid #3f4246;
+    color: inherit;
+  }
+}
+body.brand-gray .boxstyle-xs.box4 {
   background: none;
   border: 1px solid #777777;
   color: inherit;
 }
-body.brand-gray .boxstyle_.box5 {
+@media (min-width: 768px) {
+  body.brand-gray .boxstyle_.box4,
+  body.brand-gray .boxstyle-sm.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-gray .boxstyle-md.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-gray .boxstyle-lg.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (max-width: 767px) {
+  body.brand-gray .boxstyle_.box5,
+  body.brand-gray .boxstyle-sm.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-gray .boxstyle-md.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-gray .boxstyle-lg.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-gray .boxstyle_.box5,
+body.brand-gray .boxstyle-xs.box5,
+body.brand-gray .boxstyle-sm.box5,
+body.brand-gray .boxstyle-md.box5,
+body.brand-gray .boxstyle-lg.box5 {
   border: 0;
   background: #3f4246;
   color: white;
 }
 @media print {
-  body.brand-gray .boxstyle_.box5 {
+  body.brand-gray .boxstyle_.box5,
+  body.brand-gray .boxstyle-xs.box5,
+  body.brand-gray .boxstyle-sm.box5,
+  body.brand-gray .boxstyle-md.box5,
+  body.brand-gray .boxstyle-lg.box5 {
     border: 1px solid #3f4246;
   }
 }
 html.no-not-selector body.brand-gray .boxstyle_.box5 a,
+html.no-not-selector body.brand-gray .boxstyle-xs.box5 a,
+html.no-not-selector body.brand-gray .boxstyle-sm.box5 a,
+html.no-not-selector body.brand-gray .boxstyle-md.box5 a,
+html.no-not-selector body.brand-gray .boxstyle-lg.box5 a,
 html.no-not-selector body.brand-gray .boxstyle_.box5 a:link,
-html.no-not-selector body.brand-gray .boxstyle_.box5 a:visited {
+html.no-not-selector body.brand-gray .boxstyle-xs.box5 a:link,
+html.no-not-selector body.brand-gray .boxstyle-sm.box5 a:link,
+html.no-not-selector body.brand-gray .boxstyle-md.box5 a:link,
+html.no-not-selector body.brand-gray .boxstyle-lg.box5 a:link,
+html.no-not-selector body.brand-gray .boxstyle_.box5 a:visited,
+html.no-not-selector body.brand-gray .boxstyle-xs.box5 a:visited,
+html.no-not-selector body.brand-gray .boxstyle-sm.box5 a:visited,
+html.no-not-selector body.brand-gray .boxstyle-md.box5 a:visited,
+html.no-not-selector body.brand-gray .boxstyle-lg.box5 a:visited {
   color: white;
 }
 body.brand-gray .boxstyle_.box5 a:not(.btn),
+body.brand-gray .boxstyle-xs.box5 a:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:not(.btn),
 body.brand-gray .boxstyle_.box5 a:link:not(.btn),
-body.brand-gray .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-gray .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:link:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-gray .boxstyle_.box5 a:visited:not(.btn),
+body.brand-gray .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:visited:not(.btn) {
   color: white;
 }
 html.no-not-selector body.brand-gray .boxstyle_.box5 a:hover,
+html.no-not-selector body.brand-gray .boxstyle-xs.box5 a:hover,
+html.no-not-selector body.brand-gray .boxstyle-sm.box5 a:hover,
+html.no-not-selector body.brand-gray .boxstyle-md.box5 a:hover,
+html.no-not-selector body.brand-gray .boxstyle-lg.box5 a:hover,
 html.no-not-selector body.brand-gray .boxstyle_.box5 a:focus,
-html.no-not-selector body.brand-gray .boxstyle_.box5 a:active {
+html.no-not-selector body.brand-gray .boxstyle-xs.box5 a:focus,
+html.no-not-selector body.brand-gray .boxstyle-sm.box5 a:focus,
+html.no-not-selector body.brand-gray .boxstyle-md.box5 a:focus,
+html.no-not-selector body.brand-gray .boxstyle-lg.box5 a:focus,
+html.no-not-selector body.brand-gray .boxstyle_.box5 a:active,
+html.no-not-selector body.brand-gray .boxstyle-xs.box5 a:active,
+html.no-not-selector body.brand-gray .boxstyle-sm.box5 a:active,
+html.no-not-selector body.brand-gray .boxstyle-md.box5 a:active,
+html.no-not-selector body.brand-gray .boxstyle-lg.box5 a:active {
   color: #cccccc;
 }
 body.brand-gray .boxstyle_.box5 a:hover:not(.btn),
+body.brand-gray .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-gray .boxstyle_.box5 a:focus:not(.btn),
-body.brand-gray .boxstyle_.box5 a:active:not(.btn) {
+body.brand-gray .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-gray .boxstyle_.box5 a:active:not(.btn),
+body.brand-gray .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:active:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:active:not(.btn) {
   color: #cccccc;
 }
-body.brand-gray .boxstyle_.box5 a:hover .new-window-link {
+body.brand-gray .boxstyle_.box5 a:hover .new-window-link,
+body.brand-gray .boxstyle-xs.box5 a:hover .new-window-link,
+body.brand-gray .boxstyle-sm.box5 a:hover .new-window-link,
+body.brand-gray .boxstyle-md.box5 a:hover .new-window-link,
+body.brand-gray .boxstyle-lg.box5 a:hover .new-window-link {
   color: #cccccc;
 }
 body.brand-gray .boxstyle_.box5 a:not(.btn),
+body.brand-gray .boxstyle-xs.box5 a:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:not(.btn),
 body.brand-gray .boxstyle_.box5 a:link:not(.btn),
-body.brand-gray .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-gray .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:link:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-gray .boxstyle_.box5 a:visited:not(.btn),
+body.brand-gray .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
 body.brand-gray .boxstyle_.box5 a:hover:not(.btn),
+body.brand-gray .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-gray .boxstyle_.box5 a:focus:not(.btn),
-body.brand-gray .boxstyle_.box5 a:active:not(.btn) {
+body.brand-gray .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-gray .boxstyle_.box5 a:active:not(.btn),
+body.brand-gray .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-gray .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-gray .boxstyle-md.box5 a:active:not(.btn),
+body.brand-gray .boxstyle-lg.box5 a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
   -moz-text-decoration-color: #cccccc;
        text-decoration-color: #cccccc;
 }
 body.brand-gray .boxstyle_.box5 h1,
+body.brand-gray .boxstyle-xs.box5 h1,
+body.brand-gray .boxstyle-sm.box5 h1,
+body.brand-gray .boxstyle-md.box5 h1,
+body.brand-gray .boxstyle-lg.box5 h1,
 body.brand-gray .boxstyle_.box5 h2,
+body.brand-gray .boxstyle-xs.box5 h2,
+body.brand-gray .boxstyle-sm.box5 h2,
+body.brand-gray .boxstyle-md.box5 h2,
+body.brand-gray .boxstyle-lg.box5 h2,
 body.brand-gray .boxstyle_.box5 h3,
+body.brand-gray .boxstyle-xs.box5 h3,
+body.brand-gray .boxstyle-sm.box5 h3,
+body.brand-gray .boxstyle-md.box5 h3,
+body.brand-gray .boxstyle-lg.box5 h3,
 body.brand-gray .boxstyle_.box5 h4,
+body.brand-gray .boxstyle-xs.box5 h4,
+body.brand-gray .boxstyle-sm.box5 h4,
+body.brand-gray .boxstyle-md.box5 h4,
+body.brand-gray .boxstyle-lg.box5 h4,
 body.brand-gray .boxstyle_.box5 h5,
+body.brand-gray .boxstyle-xs.box5 h5,
+body.brand-gray .boxstyle-sm.box5 h5,
+body.brand-gray .boxstyle-md.box5 h5,
+body.brand-gray .boxstyle-lg.box5 h5,
 body.brand-gray .boxstyle_.box5 h6,
+body.brand-gray .boxstyle-xs.box5 h6,
+body.brand-gray .boxstyle-sm.box5 h6,
+body.brand-gray .boxstyle-md.box5 h6,
+body.brand-gray .boxstyle-lg.box5 h6,
 body.brand-gray .boxstyle_.box5 .h1,
+body.brand-gray .boxstyle-xs.box5 .h1,
+body.brand-gray .boxstyle-sm.box5 .h1,
+body.brand-gray .boxstyle-md.box5 .h1,
+body.brand-gray .boxstyle-lg.box5 .h1,
 body.brand-gray .boxstyle_.box5 .h2,
+body.brand-gray .boxstyle-xs.box5 .h2,
+body.brand-gray .boxstyle-sm.box5 .h2,
+body.brand-gray .boxstyle-md.box5 .h2,
+body.brand-gray .boxstyle-lg.box5 .h2,
 body.brand-gray .boxstyle_.box5 .h3,
+body.brand-gray .boxstyle-xs.box5 .h3,
+body.brand-gray .boxstyle-sm.box5 .h3,
+body.brand-gray .boxstyle-md.box5 .h3,
+body.brand-gray .boxstyle-lg.box5 .h3,
 body.brand-gray .boxstyle_.box5 .h4,
+body.brand-gray .boxstyle-xs.box5 .h4,
+body.brand-gray .boxstyle-sm.box5 .h4,
+body.brand-gray .boxstyle-md.box5 .h4,
+body.brand-gray .boxstyle-lg.box5 .h4,
 body.brand-gray .boxstyle_.box5 .h5,
-body.brand-gray .boxstyle_.box5 .h6 {
+body.brand-gray .boxstyle-xs.box5 .h5,
+body.brand-gray .boxstyle-sm.box5 .h5,
+body.brand-gray .boxstyle-md.box5 .h5,
+body.brand-gray .boxstyle-lg.box5 .h5,
+body.brand-gray .boxstyle_.box5 .h6,
+body.brand-gray .boxstyle-xs.box5 .h6,
+body.brand-gray .boxstyle-sm.box5 .h6,
+body.brand-gray .boxstyle-md.box5 .h6,
+body.brand-gray .boxstyle-lg.box5 .h6 {
   color: white;
 }
-body.brand-gray .boxstyle_.box5 blockquote.quotes {
+body.brand-gray .boxstyle_.box5 blockquote.quotes,
+body.brand-gray .boxstyle-xs.box5 blockquote.quotes,
+body.brand-gray .boxstyle-sm.box5 blockquote.quotes,
+body.brand-gray .boxstyle-md.box5 blockquote.quotes,
+body.brand-gray .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
 body.brand-gold html.no-rgba {
@@ -2111,132 +2843,498 @@ body.brand-gold .carousel .carousel-indicators li::after {
 body.brand-gold .carousel .carousel-indicators li.active::after {
   color: #996b00;
 }
-body.brand-gold .boxstyle_.box1 {
+@media (max-width: 767px) {
+  body.brand-gold .boxstyle_.box1,
+  body.brand-gold .boxstyle-sm.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-gold .boxstyle-md.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-gold .boxstyle-lg.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-gold .boxstyle_.box1,
+body.brand-gold .boxstyle-xs.box1,
+body.brand-gold .boxstyle-sm.box1,
+body.brand-gold .boxstyle-md.box1,
+body.brand-gold .boxstyle-lg.box1 {
   border: 0;
   background: #f0e9d9;
   color: #383838;
 }
 @media print {
-  body.brand-gold .boxstyle_.box1 {
+  body.brand-gold .boxstyle_.box1,
+  body.brand-gold .boxstyle-xs.box1,
+  body.brand-gold .boxstyle-sm.box1,
+  body.brand-gold .boxstyle-md.box1,
+  body.brand-gold .boxstyle-lg.box1 {
     border: 1px solid #f0e9d9;
   }
 }
 body.brand-gold .boxstyle_.box1 h1,
+body.brand-gold .boxstyle-xs.box1 h1,
+body.brand-gold .boxstyle-sm.box1 h1,
+body.brand-gold .boxstyle-md.box1 h1,
+body.brand-gold .boxstyle-lg.box1 h1,
 body.brand-gold .boxstyle_.box1 h2,
+body.brand-gold .boxstyle-xs.box1 h2,
+body.brand-gold .boxstyle-sm.box1 h2,
+body.brand-gold .boxstyle-md.box1 h2,
+body.brand-gold .boxstyle-lg.box1 h2,
 body.brand-gold .boxstyle_.box1 h3,
+body.brand-gold .boxstyle-xs.box1 h3,
+body.brand-gold .boxstyle-sm.box1 h3,
+body.brand-gold .boxstyle-md.box1 h3,
+body.brand-gold .boxstyle-lg.box1 h3,
 body.brand-gold .boxstyle_.box1 h4,
+body.brand-gold .boxstyle-xs.box1 h4,
+body.brand-gold .boxstyle-sm.box1 h4,
+body.brand-gold .boxstyle-md.box1 h4,
+body.brand-gold .boxstyle-lg.box1 h4,
 body.brand-gold .boxstyle_.box1 h5,
+body.brand-gold .boxstyle-xs.box1 h5,
+body.brand-gold .boxstyle-sm.box1 h5,
+body.brand-gold .boxstyle-md.box1 h5,
+body.brand-gold .boxstyle-lg.box1 h5,
 body.brand-gold .boxstyle_.box1 h6,
+body.brand-gold .boxstyle-xs.box1 h6,
+body.brand-gold .boxstyle-sm.box1 h6,
+body.brand-gold .boxstyle-md.box1 h6,
+body.brand-gold .boxstyle-lg.box1 h6,
 body.brand-gold .boxstyle_.box1 .h1,
+body.brand-gold .boxstyle-xs.box1 .h1,
+body.brand-gold .boxstyle-sm.box1 .h1,
+body.brand-gold .boxstyle-md.box1 .h1,
+body.brand-gold .boxstyle-lg.box1 .h1,
 body.brand-gold .boxstyle_.box1 .h2,
+body.brand-gold .boxstyle-xs.box1 .h2,
+body.brand-gold .boxstyle-sm.box1 .h2,
+body.brand-gold .boxstyle-md.box1 .h2,
+body.brand-gold .boxstyle-lg.box1 .h2,
 body.brand-gold .boxstyle_.box1 .h3,
+body.brand-gold .boxstyle-xs.box1 .h3,
+body.brand-gold .boxstyle-sm.box1 .h3,
+body.brand-gold .boxstyle-md.box1 .h3,
+body.brand-gold .boxstyle-lg.box1 .h3,
 body.brand-gold .boxstyle_.box1 .h4,
+body.brand-gold .boxstyle-xs.box1 .h4,
+body.brand-gold .boxstyle-sm.box1 .h4,
+body.brand-gold .boxstyle-md.box1 .h4,
+body.brand-gold .boxstyle-lg.box1 .h4,
 body.brand-gold .boxstyle_.box1 .h5,
-body.brand-gold .boxstyle_.box1 .h6 {
+body.brand-gold .boxstyle-xs.box1 .h5,
+body.brand-gold .boxstyle-sm.box1 .h5,
+body.brand-gold .boxstyle-md.box1 .h5,
+body.brand-gold .boxstyle-lg.box1 .h5,
+body.brand-gold .boxstyle_.box1 .h6,
+body.brand-gold .boxstyle-xs.box1 .h6,
+body.brand-gold .boxstyle-sm.box1 .h6,
+body.brand-gold .boxstyle-md.box1 .h6,
+body.brand-gold .boxstyle-lg.box1 .h6 {
   color: #383838;
 }
-body.brand-gold .boxstyle_.box1 blockquote.quotes {
+body.brand-gold .boxstyle_.box1 blockquote.quotes,
+body.brand-gold .boxstyle-xs.box1 blockquote.quotes,
+body.brand-gold .boxstyle-sm.box1 blockquote.quotes,
+body.brand-gold .boxstyle-md.box1 blockquote.quotes,
+body.brand-gold .boxstyle-lg.box1 blockquote.quotes {
   color: inherit;
 }
-body.brand-gold .boxstyle_.box2 {
+@media (max-width: 767px) {
+  body.brand-gold .boxstyle_.box2,
+  body.brand-gold .boxstyle-sm.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-gold .boxstyle-md.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-gold .boxstyle-lg.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-gold .boxstyle_.box2,
+body.brand-gold .boxstyle-xs.box2,
+body.brand-gold .boxstyle-sm.box2,
+body.brand-gold .boxstyle-md.box2,
+body.brand-gold .boxstyle-lg.box2 {
   border: 0;
   background: #eeeeee;
   color: #383838;
 }
 @media print {
-  body.brand-gold .boxstyle_.box2 {
+  body.brand-gold .boxstyle_.box2,
+  body.brand-gold .boxstyle-xs.box2,
+  body.brand-gold .boxstyle-sm.box2,
+  body.brand-gold .boxstyle-md.box2,
+  body.brand-gold .boxstyle-lg.box2 {
     border: 1px solid #eeeeee;
   }
 }
 body.brand-gold .boxstyle_.box2 h1,
+body.brand-gold .boxstyle-xs.box2 h1,
+body.brand-gold .boxstyle-sm.box2 h1,
+body.brand-gold .boxstyle-md.box2 h1,
+body.brand-gold .boxstyle-lg.box2 h1,
 body.brand-gold .boxstyle_.box2 h2,
+body.brand-gold .boxstyle-xs.box2 h2,
+body.brand-gold .boxstyle-sm.box2 h2,
+body.brand-gold .boxstyle-md.box2 h2,
+body.brand-gold .boxstyle-lg.box2 h2,
 body.brand-gold .boxstyle_.box2 h3,
+body.brand-gold .boxstyle-xs.box2 h3,
+body.brand-gold .boxstyle-sm.box2 h3,
+body.brand-gold .boxstyle-md.box2 h3,
+body.brand-gold .boxstyle-lg.box2 h3,
 body.brand-gold .boxstyle_.box2 h4,
+body.brand-gold .boxstyle-xs.box2 h4,
+body.brand-gold .boxstyle-sm.box2 h4,
+body.brand-gold .boxstyle-md.box2 h4,
+body.brand-gold .boxstyle-lg.box2 h4,
 body.brand-gold .boxstyle_.box2 h5,
+body.brand-gold .boxstyle-xs.box2 h5,
+body.brand-gold .boxstyle-sm.box2 h5,
+body.brand-gold .boxstyle-md.box2 h5,
+body.brand-gold .boxstyle-lg.box2 h5,
 body.brand-gold .boxstyle_.box2 h6,
+body.brand-gold .boxstyle-xs.box2 h6,
+body.brand-gold .boxstyle-sm.box2 h6,
+body.brand-gold .boxstyle-md.box2 h6,
+body.brand-gold .boxstyle-lg.box2 h6,
 body.brand-gold .boxstyle_.box2 .h1,
+body.brand-gold .boxstyle-xs.box2 .h1,
+body.brand-gold .boxstyle-sm.box2 .h1,
+body.brand-gold .boxstyle-md.box2 .h1,
+body.brand-gold .boxstyle-lg.box2 .h1,
 body.brand-gold .boxstyle_.box2 .h2,
+body.brand-gold .boxstyle-xs.box2 .h2,
+body.brand-gold .boxstyle-sm.box2 .h2,
+body.brand-gold .boxstyle-md.box2 .h2,
+body.brand-gold .boxstyle-lg.box2 .h2,
 body.brand-gold .boxstyle_.box2 .h3,
+body.brand-gold .boxstyle-xs.box2 .h3,
+body.brand-gold .boxstyle-sm.box2 .h3,
+body.brand-gold .boxstyle-md.box2 .h3,
+body.brand-gold .boxstyle-lg.box2 .h3,
 body.brand-gold .boxstyle_.box2 .h4,
+body.brand-gold .boxstyle-xs.box2 .h4,
+body.brand-gold .boxstyle-sm.box2 .h4,
+body.brand-gold .boxstyle-md.box2 .h4,
+body.brand-gold .boxstyle-lg.box2 .h4,
 body.brand-gold .boxstyle_.box2 .h5,
-body.brand-gold .boxstyle_.box2 .h6 {
+body.brand-gold .boxstyle-xs.box2 .h5,
+body.brand-gold .boxstyle-sm.box2 .h5,
+body.brand-gold .boxstyle-md.box2 .h5,
+body.brand-gold .boxstyle-lg.box2 .h5,
+body.brand-gold .boxstyle_.box2 .h6,
+body.brand-gold .boxstyle-xs.box2 .h6,
+body.brand-gold .boxstyle-sm.box2 .h6,
+body.brand-gold .boxstyle-md.box2 .h6,
+body.brand-gold .boxstyle-lg.box2 .h6 {
   color: #383838;
 }
-body.brand-gold .boxstyle_.box2 blockquote.quotes {
+body.brand-gold .boxstyle_.box2 blockquote.quotes,
+body.brand-gold .boxstyle-xs.box2 blockquote.quotes,
+body.brand-gold .boxstyle-sm.box2 blockquote.quotes,
+body.brand-gold .boxstyle-md.box2 blockquote.quotes,
+body.brand-gold .boxstyle-lg.box2 blockquote.quotes {
   color: inherit;
 }
-body.brand-gold .boxstyle_.box3 {
+body.brand-gold .boxstyle-xs.box3 {
   background: none;
   border: 1px solid #996b00;
   color: inherit;
 }
-body.brand-gold .boxstyle_.box4 {
+@media (min-width: 768px) {
+  body.brand-gold .boxstyle_.box3,
+  body.brand-gold .boxstyle-sm.box3 {
+    background: none;
+    border: 1px solid #996b00;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-gold .boxstyle-md.box3 {
+    background: none;
+    border: 1px solid #996b00;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-gold .boxstyle-lg.box3 {
+    background: none;
+    border: 1px solid #996b00;
+    color: inherit;
+  }
+}
+body.brand-gold .boxstyle-xs.box4 {
   background: none;
   border: 1px solid #777777;
   color: inherit;
 }
-body.brand-gold .boxstyle_.box5 {
+@media (min-width: 768px) {
+  body.brand-gold .boxstyle_.box4,
+  body.brand-gold .boxstyle-sm.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-gold .boxstyle-md.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-gold .boxstyle-lg.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (max-width: 767px) {
+  body.brand-gold .boxstyle_.box5,
+  body.brand-gold .boxstyle-sm.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-gold .boxstyle-md.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-gold .boxstyle-lg.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-gold .boxstyle_.box5,
+body.brand-gold .boxstyle-xs.box5,
+body.brand-gold .boxstyle-sm.box5,
+body.brand-gold .boxstyle-md.box5,
+body.brand-gold .boxstyle-lg.box5 {
   border: 0;
   background: #996b00;
   color: white;
 }
 @media print {
-  body.brand-gold .boxstyle_.box5 {
+  body.brand-gold .boxstyle_.box5,
+  body.brand-gold .boxstyle-xs.box5,
+  body.brand-gold .boxstyle-sm.box5,
+  body.brand-gold .boxstyle-md.box5,
+  body.brand-gold .boxstyle-lg.box5 {
     border: 1px solid #996b00;
   }
 }
 html.no-not-selector body.brand-gold .boxstyle_.box5 a,
+html.no-not-selector body.brand-gold .boxstyle-xs.box5 a,
+html.no-not-selector body.brand-gold .boxstyle-sm.box5 a,
+html.no-not-selector body.brand-gold .boxstyle-md.box5 a,
+html.no-not-selector body.brand-gold .boxstyle-lg.box5 a,
 html.no-not-selector body.brand-gold .boxstyle_.box5 a:link,
-html.no-not-selector body.brand-gold .boxstyle_.box5 a:visited {
+html.no-not-selector body.brand-gold .boxstyle-xs.box5 a:link,
+html.no-not-selector body.brand-gold .boxstyle-sm.box5 a:link,
+html.no-not-selector body.brand-gold .boxstyle-md.box5 a:link,
+html.no-not-selector body.brand-gold .boxstyle-lg.box5 a:link,
+html.no-not-selector body.brand-gold .boxstyle_.box5 a:visited,
+html.no-not-selector body.brand-gold .boxstyle-xs.box5 a:visited,
+html.no-not-selector body.brand-gold .boxstyle-sm.box5 a:visited,
+html.no-not-selector body.brand-gold .boxstyle-md.box5 a:visited,
+html.no-not-selector body.brand-gold .boxstyle-lg.box5 a:visited {
   color: white;
 }
 body.brand-gold .boxstyle_.box5 a:not(.btn),
+body.brand-gold .boxstyle-xs.box5 a:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:not(.btn),
 body.brand-gold .boxstyle_.box5 a:link:not(.btn),
-body.brand-gold .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-gold .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:link:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-gold .boxstyle_.box5 a:visited:not(.btn),
+body.brand-gold .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:visited:not(.btn) {
   color: white;
 }
 html.no-not-selector body.brand-gold .boxstyle_.box5 a:hover,
+html.no-not-selector body.brand-gold .boxstyle-xs.box5 a:hover,
+html.no-not-selector body.brand-gold .boxstyle-sm.box5 a:hover,
+html.no-not-selector body.brand-gold .boxstyle-md.box5 a:hover,
+html.no-not-selector body.brand-gold .boxstyle-lg.box5 a:hover,
 html.no-not-selector body.brand-gold .boxstyle_.box5 a:focus,
-html.no-not-selector body.brand-gold .boxstyle_.box5 a:active {
+html.no-not-selector body.brand-gold .boxstyle-xs.box5 a:focus,
+html.no-not-selector body.brand-gold .boxstyle-sm.box5 a:focus,
+html.no-not-selector body.brand-gold .boxstyle-md.box5 a:focus,
+html.no-not-selector body.brand-gold .boxstyle-lg.box5 a:focus,
+html.no-not-selector body.brand-gold .boxstyle_.box5 a:active,
+html.no-not-selector body.brand-gold .boxstyle-xs.box5 a:active,
+html.no-not-selector body.brand-gold .boxstyle-sm.box5 a:active,
+html.no-not-selector body.brand-gold .boxstyle-md.box5 a:active,
+html.no-not-selector body.brand-gold .boxstyle-lg.box5 a:active {
   color: #cccccc;
 }
 body.brand-gold .boxstyle_.box5 a:hover:not(.btn),
+body.brand-gold .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-gold .boxstyle_.box5 a:focus:not(.btn),
-body.brand-gold .boxstyle_.box5 a:active:not(.btn) {
+body.brand-gold .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-gold .boxstyle_.box5 a:active:not(.btn),
+body.brand-gold .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:active:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:active:not(.btn) {
   color: #cccccc;
 }
-body.brand-gold .boxstyle_.box5 a:hover .new-window-link {
+body.brand-gold .boxstyle_.box5 a:hover .new-window-link,
+body.brand-gold .boxstyle-xs.box5 a:hover .new-window-link,
+body.brand-gold .boxstyle-sm.box5 a:hover .new-window-link,
+body.brand-gold .boxstyle-md.box5 a:hover .new-window-link,
+body.brand-gold .boxstyle-lg.box5 a:hover .new-window-link {
   color: #cccccc;
 }
 body.brand-gold .boxstyle_.box5 a:not(.btn),
+body.brand-gold .boxstyle-xs.box5 a:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:not(.btn),
 body.brand-gold .boxstyle_.box5 a:link:not(.btn),
-body.brand-gold .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-gold .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:link:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-gold .boxstyle_.box5 a:visited:not(.btn),
+body.brand-gold .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
 body.brand-gold .boxstyle_.box5 a:hover:not(.btn),
+body.brand-gold .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-gold .boxstyle_.box5 a:focus:not(.btn),
-body.brand-gold .boxstyle_.box5 a:active:not(.btn) {
+body.brand-gold .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-gold .boxstyle_.box5 a:active:not(.btn),
+body.brand-gold .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-gold .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-gold .boxstyle-md.box5 a:active:not(.btn),
+body.brand-gold .boxstyle-lg.box5 a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
   -moz-text-decoration-color: #cccccc;
        text-decoration-color: #cccccc;
 }
 body.brand-gold .boxstyle_.box5 h1,
+body.brand-gold .boxstyle-xs.box5 h1,
+body.brand-gold .boxstyle-sm.box5 h1,
+body.brand-gold .boxstyle-md.box5 h1,
+body.brand-gold .boxstyle-lg.box5 h1,
 body.brand-gold .boxstyle_.box5 h2,
+body.brand-gold .boxstyle-xs.box5 h2,
+body.brand-gold .boxstyle-sm.box5 h2,
+body.brand-gold .boxstyle-md.box5 h2,
+body.brand-gold .boxstyle-lg.box5 h2,
 body.brand-gold .boxstyle_.box5 h3,
+body.brand-gold .boxstyle-xs.box5 h3,
+body.brand-gold .boxstyle-sm.box5 h3,
+body.brand-gold .boxstyle-md.box5 h3,
+body.brand-gold .boxstyle-lg.box5 h3,
 body.brand-gold .boxstyle_.box5 h4,
+body.brand-gold .boxstyle-xs.box5 h4,
+body.brand-gold .boxstyle-sm.box5 h4,
+body.brand-gold .boxstyle-md.box5 h4,
+body.brand-gold .boxstyle-lg.box5 h4,
 body.brand-gold .boxstyle_.box5 h5,
+body.brand-gold .boxstyle-xs.box5 h5,
+body.brand-gold .boxstyle-sm.box5 h5,
+body.brand-gold .boxstyle-md.box5 h5,
+body.brand-gold .boxstyle-lg.box5 h5,
 body.brand-gold .boxstyle_.box5 h6,
+body.brand-gold .boxstyle-xs.box5 h6,
+body.brand-gold .boxstyle-sm.box5 h6,
+body.brand-gold .boxstyle-md.box5 h6,
+body.brand-gold .boxstyle-lg.box5 h6,
 body.brand-gold .boxstyle_.box5 .h1,
+body.brand-gold .boxstyle-xs.box5 .h1,
+body.brand-gold .boxstyle-sm.box5 .h1,
+body.brand-gold .boxstyle-md.box5 .h1,
+body.brand-gold .boxstyle-lg.box5 .h1,
 body.brand-gold .boxstyle_.box5 .h2,
+body.brand-gold .boxstyle-xs.box5 .h2,
+body.brand-gold .boxstyle-sm.box5 .h2,
+body.brand-gold .boxstyle-md.box5 .h2,
+body.brand-gold .boxstyle-lg.box5 .h2,
 body.brand-gold .boxstyle_.box5 .h3,
+body.brand-gold .boxstyle-xs.box5 .h3,
+body.brand-gold .boxstyle-sm.box5 .h3,
+body.brand-gold .boxstyle-md.box5 .h3,
+body.brand-gold .boxstyle-lg.box5 .h3,
 body.brand-gold .boxstyle_.box5 .h4,
+body.brand-gold .boxstyle-xs.box5 .h4,
+body.brand-gold .boxstyle-sm.box5 .h4,
+body.brand-gold .boxstyle-md.box5 .h4,
+body.brand-gold .boxstyle-lg.box5 .h4,
 body.brand-gold .boxstyle_.box5 .h5,
-body.brand-gold .boxstyle_.box5 .h6 {
+body.brand-gold .boxstyle-xs.box5 .h5,
+body.brand-gold .boxstyle-sm.box5 .h5,
+body.brand-gold .boxstyle-md.box5 .h5,
+body.brand-gold .boxstyle-lg.box5 .h5,
+body.brand-gold .boxstyle_.box5 .h6,
+body.brand-gold .boxstyle-xs.box5 .h6,
+body.brand-gold .boxstyle-sm.box5 .h6,
+body.brand-gold .boxstyle-md.box5 .h6,
+body.brand-gold .boxstyle-lg.box5 .h6 {
   color: white;
 }
-body.brand-gold .boxstyle_.box5 blockquote.quotes {
+body.brand-gold .boxstyle_.box5 blockquote.quotes,
+body.brand-gold .boxstyle-xs.box5 blockquote.quotes,
+body.brand-gold .boxstyle-sm.box5 blockquote.quotes,
+body.brand-gold .boxstyle-md.box5 blockquote.quotes,
+body.brand-gold .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
 body.brand-blue html.no-rgba {
@@ -2858,132 +3956,498 @@ body.brand-blue .carousel .carousel-indicators li::after {
 body.brand-blue .carousel .carousel-indicators li.active::after {
   color: #204f79;
 }
-body.brand-blue .boxstyle_.box1 {
+@media (max-width: 767px) {
+  body.brand-blue .boxstyle_.box1,
+  body.brand-blue .boxstyle-sm.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-blue .boxstyle-md.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-blue .boxstyle-lg.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-blue .boxstyle_.box1,
+body.brand-blue .boxstyle-xs.box1,
+body.brand-blue .boxstyle-sm.box1,
+body.brand-blue .boxstyle-md.box1,
+body.brand-blue .boxstyle-lg.box1 {
   border: 0;
   background: #dee5eb;
   color: #383838;
 }
 @media print {
-  body.brand-blue .boxstyle_.box1 {
+  body.brand-blue .boxstyle_.box1,
+  body.brand-blue .boxstyle-xs.box1,
+  body.brand-blue .boxstyle-sm.box1,
+  body.brand-blue .boxstyle-md.box1,
+  body.brand-blue .boxstyle-lg.box1 {
     border: 1px solid #dee5eb;
   }
 }
 body.brand-blue .boxstyle_.box1 h1,
+body.brand-blue .boxstyle-xs.box1 h1,
+body.brand-blue .boxstyle-sm.box1 h1,
+body.brand-blue .boxstyle-md.box1 h1,
+body.brand-blue .boxstyle-lg.box1 h1,
 body.brand-blue .boxstyle_.box1 h2,
+body.brand-blue .boxstyle-xs.box1 h2,
+body.brand-blue .boxstyle-sm.box1 h2,
+body.brand-blue .boxstyle-md.box1 h2,
+body.brand-blue .boxstyle-lg.box1 h2,
 body.brand-blue .boxstyle_.box1 h3,
+body.brand-blue .boxstyle-xs.box1 h3,
+body.brand-blue .boxstyle-sm.box1 h3,
+body.brand-blue .boxstyle-md.box1 h3,
+body.brand-blue .boxstyle-lg.box1 h3,
 body.brand-blue .boxstyle_.box1 h4,
+body.brand-blue .boxstyle-xs.box1 h4,
+body.brand-blue .boxstyle-sm.box1 h4,
+body.brand-blue .boxstyle-md.box1 h4,
+body.brand-blue .boxstyle-lg.box1 h4,
 body.brand-blue .boxstyle_.box1 h5,
+body.brand-blue .boxstyle-xs.box1 h5,
+body.brand-blue .boxstyle-sm.box1 h5,
+body.brand-blue .boxstyle-md.box1 h5,
+body.brand-blue .boxstyle-lg.box1 h5,
 body.brand-blue .boxstyle_.box1 h6,
+body.brand-blue .boxstyle-xs.box1 h6,
+body.brand-blue .boxstyle-sm.box1 h6,
+body.brand-blue .boxstyle-md.box1 h6,
+body.brand-blue .boxstyle-lg.box1 h6,
 body.brand-blue .boxstyle_.box1 .h1,
+body.brand-blue .boxstyle-xs.box1 .h1,
+body.brand-blue .boxstyle-sm.box1 .h1,
+body.brand-blue .boxstyle-md.box1 .h1,
+body.brand-blue .boxstyle-lg.box1 .h1,
 body.brand-blue .boxstyle_.box1 .h2,
+body.brand-blue .boxstyle-xs.box1 .h2,
+body.brand-blue .boxstyle-sm.box1 .h2,
+body.brand-blue .boxstyle-md.box1 .h2,
+body.brand-blue .boxstyle-lg.box1 .h2,
 body.brand-blue .boxstyle_.box1 .h3,
+body.brand-blue .boxstyle-xs.box1 .h3,
+body.brand-blue .boxstyle-sm.box1 .h3,
+body.brand-blue .boxstyle-md.box1 .h3,
+body.brand-blue .boxstyle-lg.box1 .h3,
 body.brand-blue .boxstyle_.box1 .h4,
+body.brand-blue .boxstyle-xs.box1 .h4,
+body.brand-blue .boxstyle-sm.box1 .h4,
+body.brand-blue .boxstyle-md.box1 .h4,
+body.brand-blue .boxstyle-lg.box1 .h4,
 body.brand-blue .boxstyle_.box1 .h5,
-body.brand-blue .boxstyle_.box1 .h6 {
+body.brand-blue .boxstyle-xs.box1 .h5,
+body.brand-blue .boxstyle-sm.box1 .h5,
+body.brand-blue .boxstyle-md.box1 .h5,
+body.brand-blue .boxstyle-lg.box1 .h5,
+body.brand-blue .boxstyle_.box1 .h6,
+body.brand-blue .boxstyle-xs.box1 .h6,
+body.brand-blue .boxstyle-sm.box1 .h6,
+body.brand-blue .boxstyle-md.box1 .h6,
+body.brand-blue .boxstyle-lg.box1 .h6 {
   color: #383838;
 }
-body.brand-blue .boxstyle_.box1 blockquote.quotes {
+body.brand-blue .boxstyle_.box1 blockquote.quotes,
+body.brand-blue .boxstyle-xs.box1 blockquote.quotes,
+body.brand-blue .boxstyle-sm.box1 blockquote.quotes,
+body.brand-blue .boxstyle-md.box1 blockquote.quotes,
+body.brand-blue .boxstyle-lg.box1 blockquote.quotes {
   color: inherit;
 }
-body.brand-blue .boxstyle_.box2 {
+@media (max-width: 767px) {
+  body.brand-blue .boxstyle_.box2,
+  body.brand-blue .boxstyle-sm.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-blue .boxstyle-md.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-blue .boxstyle-lg.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-blue .boxstyle_.box2,
+body.brand-blue .boxstyle-xs.box2,
+body.brand-blue .boxstyle-sm.box2,
+body.brand-blue .boxstyle-md.box2,
+body.brand-blue .boxstyle-lg.box2 {
   border: 0;
   background: #eeeeee;
   color: #383838;
 }
 @media print {
-  body.brand-blue .boxstyle_.box2 {
+  body.brand-blue .boxstyle_.box2,
+  body.brand-blue .boxstyle-xs.box2,
+  body.brand-blue .boxstyle-sm.box2,
+  body.brand-blue .boxstyle-md.box2,
+  body.brand-blue .boxstyle-lg.box2 {
     border: 1px solid #eeeeee;
   }
 }
 body.brand-blue .boxstyle_.box2 h1,
+body.brand-blue .boxstyle-xs.box2 h1,
+body.brand-blue .boxstyle-sm.box2 h1,
+body.brand-blue .boxstyle-md.box2 h1,
+body.brand-blue .boxstyle-lg.box2 h1,
 body.brand-blue .boxstyle_.box2 h2,
+body.brand-blue .boxstyle-xs.box2 h2,
+body.brand-blue .boxstyle-sm.box2 h2,
+body.brand-blue .boxstyle-md.box2 h2,
+body.brand-blue .boxstyle-lg.box2 h2,
 body.brand-blue .boxstyle_.box2 h3,
+body.brand-blue .boxstyle-xs.box2 h3,
+body.brand-blue .boxstyle-sm.box2 h3,
+body.brand-blue .boxstyle-md.box2 h3,
+body.brand-blue .boxstyle-lg.box2 h3,
 body.brand-blue .boxstyle_.box2 h4,
+body.brand-blue .boxstyle-xs.box2 h4,
+body.brand-blue .boxstyle-sm.box2 h4,
+body.brand-blue .boxstyle-md.box2 h4,
+body.brand-blue .boxstyle-lg.box2 h4,
 body.brand-blue .boxstyle_.box2 h5,
+body.brand-blue .boxstyle-xs.box2 h5,
+body.brand-blue .boxstyle-sm.box2 h5,
+body.brand-blue .boxstyle-md.box2 h5,
+body.brand-blue .boxstyle-lg.box2 h5,
 body.brand-blue .boxstyle_.box2 h6,
+body.brand-blue .boxstyle-xs.box2 h6,
+body.brand-blue .boxstyle-sm.box2 h6,
+body.brand-blue .boxstyle-md.box2 h6,
+body.brand-blue .boxstyle-lg.box2 h6,
 body.brand-blue .boxstyle_.box2 .h1,
+body.brand-blue .boxstyle-xs.box2 .h1,
+body.brand-blue .boxstyle-sm.box2 .h1,
+body.brand-blue .boxstyle-md.box2 .h1,
+body.brand-blue .boxstyle-lg.box2 .h1,
 body.brand-blue .boxstyle_.box2 .h2,
+body.brand-blue .boxstyle-xs.box2 .h2,
+body.brand-blue .boxstyle-sm.box2 .h2,
+body.brand-blue .boxstyle-md.box2 .h2,
+body.brand-blue .boxstyle-lg.box2 .h2,
 body.brand-blue .boxstyle_.box2 .h3,
+body.brand-blue .boxstyle-xs.box2 .h3,
+body.brand-blue .boxstyle-sm.box2 .h3,
+body.brand-blue .boxstyle-md.box2 .h3,
+body.brand-blue .boxstyle-lg.box2 .h3,
 body.brand-blue .boxstyle_.box2 .h4,
+body.brand-blue .boxstyle-xs.box2 .h4,
+body.brand-blue .boxstyle-sm.box2 .h4,
+body.brand-blue .boxstyle-md.box2 .h4,
+body.brand-blue .boxstyle-lg.box2 .h4,
 body.brand-blue .boxstyle_.box2 .h5,
-body.brand-blue .boxstyle_.box2 .h6 {
+body.brand-blue .boxstyle-xs.box2 .h5,
+body.brand-blue .boxstyle-sm.box2 .h5,
+body.brand-blue .boxstyle-md.box2 .h5,
+body.brand-blue .boxstyle-lg.box2 .h5,
+body.brand-blue .boxstyle_.box2 .h6,
+body.brand-blue .boxstyle-xs.box2 .h6,
+body.brand-blue .boxstyle-sm.box2 .h6,
+body.brand-blue .boxstyle-md.box2 .h6,
+body.brand-blue .boxstyle-lg.box2 .h6 {
   color: #383838;
 }
-body.brand-blue .boxstyle_.box2 blockquote.quotes {
+body.brand-blue .boxstyle_.box2 blockquote.quotes,
+body.brand-blue .boxstyle-xs.box2 blockquote.quotes,
+body.brand-blue .boxstyle-sm.box2 blockquote.quotes,
+body.brand-blue .boxstyle-md.box2 blockquote.quotes,
+body.brand-blue .boxstyle-lg.box2 blockquote.quotes {
   color: inherit;
 }
-body.brand-blue .boxstyle_.box3 {
+body.brand-blue .boxstyle-xs.box3 {
   background: none;
   border: 1px solid #204f79;
   color: inherit;
 }
-body.brand-blue .boxstyle_.box4 {
+@media (min-width: 768px) {
+  body.brand-blue .boxstyle_.box3,
+  body.brand-blue .boxstyle-sm.box3 {
+    background: none;
+    border: 1px solid #204f79;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-blue .boxstyle-md.box3 {
+    background: none;
+    border: 1px solid #204f79;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-blue .boxstyle-lg.box3 {
+    background: none;
+    border: 1px solid #204f79;
+    color: inherit;
+  }
+}
+body.brand-blue .boxstyle-xs.box4 {
   background: none;
   border: 1px solid #777777;
   color: inherit;
 }
-body.brand-blue .boxstyle_.box5 {
+@media (min-width: 768px) {
+  body.brand-blue .boxstyle_.box4,
+  body.brand-blue .boxstyle-sm.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-blue .boxstyle-md.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-blue .boxstyle-lg.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (max-width: 767px) {
+  body.brand-blue .boxstyle_.box5,
+  body.brand-blue .boxstyle-sm.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-blue .boxstyle-md.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-blue .boxstyle-lg.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-blue .boxstyle_.box5,
+body.brand-blue .boxstyle-xs.box5,
+body.brand-blue .boxstyle-sm.box5,
+body.brand-blue .boxstyle-md.box5,
+body.brand-blue .boxstyle-lg.box5 {
   border: 0;
   background: #204f79;
   color: white;
 }
 @media print {
-  body.brand-blue .boxstyle_.box5 {
+  body.brand-blue .boxstyle_.box5,
+  body.brand-blue .boxstyle-xs.box5,
+  body.brand-blue .boxstyle-sm.box5,
+  body.brand-blue .boxstyle-md.box5,
+  body.brand-blue .boxstyle-lg.box5 {
     border: 1px solid #204f79;
   }
 }
 html.no-not-selector body.brand-blue .boxstyle_.box5 a,
+html.no-not-selector body.brand-blue .boxstyle-xs.box5 a,
+html.no-not-selector body.brand-blue .boxstyle-sm.box5 a,
+html.no-not-selector body.brand-blue .boxstyle-md.box5 a,
+html.no-not-selector body.brand-blue .boxstyle-lg.box5 a,
 html.no-not-selector body.brand-blue .boxstyle_.box5 a:link,
-html.no-not-selector body.brand-blue .boxstyle_.box5 a:visited {
+html.no-not-selector body.brand-blue .boxstyle-xs.box5 a:link,
+html.no-not-selector body.brand-blue .boxstyle-sm.box5 a:link,
+html.no-not-selector body.brand-blue .boxstyle-md.box5 a:link,
+html.no-not-selector body.brand-blue .boxstyle-lg.box5 a:link,
+html.no-not-selector body.brand-blue .boxstyle_.box5 a:visited,
+html.no-not-selector body.brand-blue .boxstyle-xs.box5 a:visited,
+html.no-not-selector body.brand-blue .boxstyle-sm.box5 a:visited,
+html.no-not-selector body.brand-blue .boxstyle-md.box5 a:visited,
+html.no-not-selector body.brand-blue .boxstyle-lg.box5 a:visited {
   color: white;
 }
 body.brand-blue .boxstyle_.box5 a:not(.btn),
+body.brand-blue .boxstyle-xs.box5 a:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:not(.btn),
 body.brand-blue .boxstyle_.box5 a:link:not(.btn),
-body.brand-blue .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-blue .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:link:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-blue .boxstyle_.box5 a:visited:not(.btn),
+body.brand-blue .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:visited:not(.btn) {
   color: white;
 }
 html.no-not-selector body.brand-blue .boxstyle_.box5 a:hover,
+html.no-not-selector body.brand-blue .boxstyle-xs.box5 a:hover,
+html.no-not-selector body.brand-blue .boxstyle-sm.box5 a:hover,
+html.no-not-selector body.brand-blue .boxstyle-md.box5 a:hover,
+html.no-not-selector body.brand-blue .boxstyle-lg.box5 a:hover,
 html.no-not-selector body.brand-blue .boxstyle_.box5 a:focus,
-html.no-not-selector body.brand-blue .boxstyle_.box5 a:active {
+html.no-not-selector body.brand-blue .boxstyle-xs.box5 a:focus,
+html.no-not-selector body.brand-blue .boxstyle-sm.box5 a:focus,
+html.no-not-selector body.brand-blue .boxstyle-md.box5 a:focus,
+html.no-not-selector body.brand-blue .boxstyle-lg.box5 a:focus,
+html.no-not-selector body.brand-blue .boxstyle_.box5 a:active,
+html.no-not-selector body.brand-blue .boxstyle-xs.box5 a:active,
+html.no-not-selector body.brand-blue .boxstyle-sm.box5 a:active,
+html.no-not-selector body.brand-blue .boxstyle-md.box5 a:active,
+html.no-not-selector body.brand-blue .boxstyle-lg.box5 a:active {
   color: #cccccc;
 }
 body.brand-blue .boxstyle_.box5 a:hover:not(.btn),
+body.brand-blue .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-blue .boxstyle_.box5 a:focus:not(.btn),
-body.brand-blue .boxstyle_.box5 a:active:not(.btn) {
+body.brand-blue .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-blue .boxstyle_.box5 a:active:not(.btn),
+body.brand-blue .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:active:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:active:not(.btn) {
   color: #cccccc;
 }
-body.brand-blue .boxstyle_.box5 a:hover .new-window-link {
+body.brand-blue .boxstyle_.box5 a:hover .new-window-link,
+body.brand-blue .boxstyle-xs.box5 a:hover .new-window-link,
+body.brand-blue .boxstyle-sm.box5 a:hover .new-window-link,
+body.brand-blue .boxstyle-md.box5 a:hover .new-window-link,
+body.brand-blue .boxstyle-lg.box5 a:hover .new-window-link {
   color: #cccccc;
 }
 body.brand-blue .boxstyle_.box5 a:not(.btn),
+body.brand-blue .boxstyle-xs.box5 a:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:not(.btn),
 body.brand-blue .boxstyle_.box5 a:link:not(.btn),
-body.brand-blue .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-blue .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:link:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-blue .boxstyle_.box5 a:visited:not(.btn),
+body.brand-blue .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
 body.brand-blue .boxstyle_.box5 a:hover:not(.btn),
+body.brand-blue .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-blue .boxstyle_.box5 a:focus:not(.btn),
-body.brand-blue .boxstyle_.box5 a:active:not(.btn) {
+body.brand-blue .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-blue .boxstyle_.box5 a:active:not(.btn),
+body.brand-blue .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-blue .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-blue .boxstyle-md.box5 a:active:not(.btn),
+body.brand-blue .boxstyle-lg.box5 a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
   -moz-text-decoration-color: #cccccc;
        text-decoration-color: #cccccc;
 }
 body.brand-blue .boxstyle_.box5 h1,
+body.brand-blue .boxstyle-xs.box5 h1,
+body.brand-blue .boxstyle-sm.box5 h1,
+body.brand-blue .boxstyle-md.box5 h1,
+body.brand-blue .boxstyle-lg.box5 h1,
 body.brand-blue .boxstyle_.box5 h2,
+body.brand-blue .boxstyle-xs.box5 h2,
+body.brand-blue .boxstyle-sm.box5 h2,
+body.brand-blue .boxstyle-md.box5 h2,
+body.brand-blue .boxstyle-lg.box5 h2,
 body.brand-blue .boxstyle_.box5 h3,
+body.brand-blue .boxstyle-xs.box5 h3,
+body.brand-blue .boxstyle-sm.box5 h3,
+body.brand-blue .boxstyle-md.box5 h3,
+body.brand-blue .boxstyle-lg.box5 h3,
 body.brand-blue .boxstyle_.box5 h4,
+body.brand-blue .boxstyle-xs.box5 h4,
+body.brand-blue .boxstyle-sm.box5 h4,
+body.brand-blue .boxstyle-md.box5 h4,
+body.brand-blue .boxstyle-lg.box5 h4,
 body.brand-blue .boxstyle_.box5 h5,
+body.brand-blue .boxstyle-xs.box5 h5,
+body.brand-blue .boxstyle-sm.box5 h5,
+body.brand-blue .boxstyle-md.box5 h5,
+body.brand-blue .boxstyle-lg.box5 h5,
 body.brand-blue .boxstyle_.box5 h6,
+body.brand-blue .boxstyle-xs.box5 h6,
+body.brand-blue .boxstyle-sm.box5 h6,
+body.brand-blue .boxstyle-md.box5 h6,
+body.brand-blue .boxstyle-lg.box5 h6,
 body.brand-blue .boxstyle_.box5 .h1,
+body.brand-blue .boxstyle-xs.box5 .h1,
+body.brand-blue .boxstyle-sm.box5 .h1,
+body.brand-blue .boxstyle-md.box5 .h1,
+body.brand-blue .boxstyle-lg.box5 .h1,
 body.brand-blue .boxstyle_.box5 .h2,
+body.brand-blue .boxstyle-xs.box5 .h2,
+body.brand-blue .boxstyle-sm.box5 .h2,
+body.brand-blue .boxstyle-md.box5 .h2,
+body.brand-blue .boxstyle-lg.box5 .h2,
 body.brand-blue .boxstyle_.box5 .h3,
+body.brand-blue .boxstyle-xs.box5 .h3,
+body.brand-blue .boxstyle-sm.box5 .h3,
+body.brand-blue .boxstyle-md.box5 .h3,
+body.brand-blue .boxstyle-lg.box5 .h3,
 body.brand-blue .boxstyle_.box5 .h4,
+body.brand-blue .boxstyle-xs.box5 .h4,
+body.brand-blue .boxstyle-sm.box5 .h4,
+body.brand-blue .boxstyle-md.box5 .h4,
+body.brand-blue .boxstyle-lg.box5 .h4,
 body.brand-blue .boxstyle_.box5 .h5,
-body.brand-blue .boxstyle_.box5 .h6 {
+body.brand-blue .boxstyle-xs.box5 .h5,
+body.brand-blue .boxstyle-sm.box5 .h5,
+body.brand-blue .boxstyle-md.box5 .h5,
+body.brand-blue .boxstyle-lg.box5 .h5,
+body.brand-blue .boxstyle_.box5 .h6,
+body.brand-blue .boxstyle-xs.box5 .h6,
+body.brand-blue .boxstyle-sm.box5 .h6,
+body.brand-blue .boxstyle-md.box5 .h6,
+body.brand-blue .boxstyle-lg.box5 .h6 {
   color: white;
 }
-body.brand-blue .boxstyle_.box5 blockquote.quotes {
+body.brand-blue .boxstyle_.box5 blockquote.quotes,
+body.brand-blue .boxstyle-xs.box5 blockquote.quotes,
+body.brand-blue .boxstyle-sm.box5 blockquote.quotes,
+body.brand-blue .boxstyle-md.box5 blockquote.quotes,
+body.brand-blue .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
 body.brand-orange html.no-rgba {
@@ -3605,132 +5069,498 @@ body.brand-orange .carousel .carousel-indicators li::after {
 body.brand-orange .carousel .carousel-indicators li.active::after {
   color: #be410c;
 }
-body.brand-orange .boxstyle_.box1 {
+@media (max-width: 767px) {
+  body.brand-orange .boxstyle_.box1,
+  body.brand-orange .boxstyle-sm.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-orange .boxstyle-md.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-orange .boxstyle-lg.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-orange .boxstyle_.box1,
+body.brand-orange .boxstyle-xs.box1,
+body.brand-orange .boxstyle-sm.box1,
+body.brand-orange .boxstyle-md.box1,
+body.brand-orange .boxstyle-lg.box1 {
   border: 0;
   background: #f5e3db;
   color: #383838;
 }
 @media print {
-  body.brand-orange .boxstyle_.box1 {
+  body.brand-orange .boxstyle_.box1,
+  body.brand-orange .boxstyle-xs.box1,
+  body.brand-orange .boxstyle-sm.box1,
+  body.brand-orange .boxstyle-md.box1,
+  body.brand-orange .boxstyle-lg.box1 {
     border: 1px solid #f5e3db;
   }
 }
 body.brand-orange .boxstyle_.box1 h1,
+body.brand-orange .boxstyle-xs.box1 h1,
+body.brand-orange .boxstyle-sm.box1 h1,
+body.brand-orange .boxstyle-md.box1 h1,
+body.brand-orange .boxstyle-lg.box1 h1,
 body.brand-orange .boxstyle_.box1 h2,
+body.brand-orange .boxstyle-xs.box1 h2,
+body.brand-orange .boxstyle-sm.box1 h2,
+body.brand-orange .boxstyle-md.box1 h2,
+body.brand-orange .boxstyle-lg.box1 h2,
 body.brand-orange .boxstyle_.box1 h3,
+body.brand-orange .boxstyle-xs.box1 h3,
+body.brand-orange .boxstyle-sm.box1 h3,
+body.brand-orange .boxstyle-md.box1 h3,
+body.brand-orange .boxstyle-lg.box1 h3,
 body.brand-orange .boxstyle_.box1 h4,
+body.brand-orange .boxstyle-xs.box1 h4,
+body.brand-orange .boxstyle-sm.box1 h4,
+body.brand-orange .boxstyle-md.box1 h4,
+body.brand-orange .boxstyle-lg.box1 h4,
 body.brand-orange .boxstyle_.box1 h5,
+body.brand-orange .boxstyle-xs.box1 h5,
+body.brand-orange .boxstyle-sm.box1 h5,
+body.brand-orange .boxstyle-md.box1 h5,
+body.brand-orange .boxstyle-lg.box1 h5,
 body.brand-orange .boxstyle_.box1 h6,
+body.brand-orange .boxstyle-xs.box1 h6,
+body.brand-orange .boxstyle-sm.box1 h6,
+body.brand-orange .boxstyle-md.box1 h6,
+body.brand-orange .boxstyle-lg.box1 h6,
 body.brand-orange .boxstyle_.box1 .h1,
+body.brand-orange .boxstyle-xs.box1 .h1,
+body.brand-orange .boxstyle-sm.box1 .h1,
+body.brand-orange .boxstyle-md.box1 .h1,
+body.brand-orange .boxstyle-lg.box1 .h1,
 body.brand-orange .boxstyle_.box1 .h2,
+body.brand-orange .boxstyle-xs.box1 .h2,
+body.brand-orange .boxstyle-sm.box1 .h2,
+body.brand-orange .boxstyle-md.box1 .h2,
+body.brand-orange .boxstyle-lg.box1 .h2,
 body.brand-orange .boxstyle_.box1 .h3,
+body.brand-orange .boxstyle-xs.box1 .h3,
+body.brand-orange .boxstyle-sm.box1 .h3,
+body.brand-orange .boxstyle-md.box1 .h3,
+body.brand-orange .boxstyle-lg.box1 .h3,
 body.brand-orange .boxstyle_.box1 .h4,
+body.brand-orange .boxstyle-xs.box1 .h4,
+body.brand-orange .boxstyle-sm.box1 .h4,
+body.brand-orange .boxstyle-md.box1 .h4,
+body.brand-orange .boxstyle-lg.box1 .h4,
 body.brand-orange .boxstyle_.box1 .h5,
-body.brand-orange .boxstyle_.box1 .h6 {
+body.brand-orange .boxstyle-xs.box1 .h5,
+body.brand-orange .boxstyle-sm.box1 .h5,
+body.brand-orange .boxstyle-md.box1 .h5,
+body.brand-orange .boxstyle-lg.box1 .h5,
+body.brand-orange .boxstyle_.box1 .h6,
+body.brand-orange .boxstyle-xs.box1 .h6,
+body.brand-orange .boxstyle-sm.box1 .h6,
+body.brand-orange .boxstyle-md.box1 .h6,
+body.brand-orange .boxstyle-lg.box1 .h6 {
   color: #383838;
 }
-body.brand-orange .boxstyle_.box1 blockquote.quotes {
+body.brand-orange .boxstyle_.box1 blockquote.quotes,
+body.brand-orange .boxstyle-xs.box1 blockquote.quotes,
+body.brand-orange .boxstyle-sm.box1 blockquote.quotes,
+body.brand-orange .boxstyle-md.box1 blockquote.quotes,
+body.brand-orange .boxstyle-lg.box1 blockquote.quotes {
   color: inherit;
 }
-body.brand-orange .boxstyle_.box2 {
+@media (max-width: 767px) {
+  body.brand-orange .boxstyle_.box2,
+  body.brand-orange .boxstyle-sm.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-orange .boxstyle-md.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-orange .boxstyle-lg.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-orange .boxstyle_.box2,
+body.brand-orange .boxstyle-xs.box2,
+body.brand-orange .boxstyle-sm.box2,
+body.brand-orange .boxstyle-md.box2,
+body.brand-orange .boxstyle-lg.box2 {
   border: 0;
   background: #eeeeee;
   color: #383838;
 }
 @media print {
-  body.brand-orange .boxstyle_.box2 {
+  body.brand-orange .boxstyle_.box2,
+  body.brand-orange .boxstyle-xs.box2,
+  body.brand-orange .boxstyle-sm.box2,
+  body.brand-orange .boxstyle-md.box2,
+  body.brand-orange .boxstyle-lg.box2 {
     border: 1px solid #eeeeee;
   }
 }
 body.brand-orange .boxstyle_.box2 h1,
+body.brand-orange .boxstyle-xs.box2 h1,
+body.brand-orange .boxstyle-sm.box2 h1,
+body.brand-orange .boxstyle-md.box2 h1,
+body.brand-orange .boxstyle-lg.box2 h1,
 body.brand-orange .boxstyle_.box2 h2,
+body.brand-orange .boxstyle-xs.box2 h2,
+body.brand-orange .boxstyle-sm.box2 h2,
+body.brand-orange .boxstyle-md.box2 h2,
+body.brand-orange .boxstyle-lg.box2 h2,
 body.brand-orange .boxstyle_.box2 h3,
+body.brand-orange .boxstyle-xs.box2 h3,
+body.brand-orange .boxstyle-sm.box2 h3,
+body.brand-orange .boxstyle-md.box2 h3,
+body.brand-orange .boxstyle-lg.box2 h3,
 body.brand-orange .boxstyle_.box2 h4,
+body.brand-orange .boxstyle-xs.box2 h4,
+body.brand-orange .boxstyle-sm.box2 h4,
+body.brand-orange .boxstyle-md.box2 h4,
+body.brand-orange .boxstyle-lg.box2 h4,
 body.brand-orange .boxstyle_.box2 h5,
+body.brand-orange .boxstyle-xs.box2 h5,
+body.brand-orange .boxstyle-sm.box2 h5,
+body.brand-orange .boxstyle-md.box2 h5,
+body.brand-orange .boxstyle-lg.box2 h5,
 body.brand-orange .boxstyle_.box2 h6,
+body.brand-orange .boxstyle-xs.box2 h6,
+body.brand-orange .boxstyle-sm.box2 h6,
+body.brand-orange .boxstyle-md.box2 h6,
+body.brand-orange .boxstyle-lg.box2 h6,
 body.brand-orange .boxstyle_.box2 .h1,
+body.brand-orange .boxstyle-xs.box2 .h1,
+body.brand-orange .boxstyle-sm.box2 .h1,
+body.brand-orange .boxstyle-md.box2 .h1,
+body.brand-orange .boxstyle-lg.box2 .h1,
 body.brand-orange .boxstyle_.box2 .h2,
+body.brand-orange .boxstyle-xs.box2 .h2,
+body.brand-orange .boxstyle-sm.box2 .h2,
+body.brand-orange .boxstyle-md.box2 .h2,
+body.brand-orange .boxstyle-lg.box2 .h2,
 body.brand-orange .boxstyle_.box2 .h3,
+body.brand-orange .boxstyle-xs.box2 .h3,
+body.brand-orange .boxstyle-sm.box2 .h3,
+body.brand-orange .boxstyle-md.box2 .h3,
+body.brand-orange .boxstyle-lg.box2 .h3,
 body.brand-orange .boxstyle_.box2 .h4,
+body.brand-orange .boxstyle-xs.box2 .h4,
+body.brand-orange .boxstyle-sm.box2 .h4,
+body.brand-orange .boxstyle-md.box2 .h4,
+body.brand-orange .boxstyle-lg.box2 .h4,
 body.brand-orange .boxstyle_.box2 .h5,
-body.brand-orange .boxstyle_.box2 .h6 {
+body.brand-orange .boxstyle-xs.box2 .h5,
+body.brand-orange .boxstyle-sm.box2 .h5,
+body.brand-orange .boxstyle-md.box2 .h5,
+body.brand-orange .boxstyle-lg.box2 .h5,
+body.brand-orange .boxstyle_.box2 .h6,
+body.brand-orange .boxstyle-xs.box2 .h6,
+body.brand-orange .boxstyle-sm.box2 .h6,
+body.brand-orange .boxstyle-md.box2 .h6,
+body.brand-orange .boxstyle-lg.box2 .h6 {
   color: #383838;
 }
-body.brand-orange .boxstyle_.box2 blockquote.quotes {
+body.brand-orange .boxstyle_.box2 blockquote.quotes,
+body.brand-orange .boxstyle-xs.box2 blockquote.quotes,
+body.brand-orange .boxstyle-sm.box2 blockquote.quotes,
+body.brand-orange .boxstyle-md.box2 blockquote.quotes,
+body.brand-orange .boxstyle-lg.box2 blockquote.quotes {
   color: inherit;
 }
-body.brand-orange .boxstyle_.box3 {
+body.brand-orange .boxstyle-xs.box3 {
   background: none;
   border: 1px solid #be410c;
   color: inherit;
 }
-body.brand-orange .boxstyle_.box4 {
+@media (min-width: 768px) {
+  body.brand-orange .boxstyle_.box3,
+  body.brand-orange .boxstyle-sm.box3 {
+    background: none;
+    border: 1px solid #be410c;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-orange .boxstyle-md.box3 {
+    background: none;
+    border: 1px solid #be410c;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-orange .boxstyle-lg.box3 {
+    background: none;
+    border: 1px solid #be410c;
+    color: inherit;
+  }
+}
+body.brand-orange .boxstyle-xs.box4 {
   background: none;
   border: 1px solid #777777;
   color: inherit;
 }
-body.brand-orange .boxstyle_.box5 {
+@media (min-width: 768px) {
+  body.brand-orange .boxstyle_.box4,
+  body.brand-orange .boxstyle-sm.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-orange .boxstyle-md.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-orange .boxstyle-lg.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (max-width: 767px) {
+  body.brand-orange .boxstyle_.box5,
+  body.brand-orange .boxstyle-sm.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-orange .boxstyle-md.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-orange .boxstyle-lg.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-orange .boxstyle_.box5,
+body.brand-orange .boxstyle-xs.box5,
+body.brand-orange .boxstyle-sm.box5,
+body.brand-orange .boxstyle-md.box5,
+body.brand-orange .boxstyle-lg.box5 {
   border: 0;
   background: #be410c;
   color: white;
 }
 @media print {
-  body.brand-orange .boxstyle_.box5 {
+  body.brand-orange .boxstyle_.box5,
+  body.brand-orange .boxstyle-xs.box5,
+  body.brand-orange .boxstyle-sm.box5,
+  body.brand-orange .boxstyle-md.box5,
+  body.brand-orange .boxstyle-lg.box5 {
     border: 1px solid #be410c;
   }
 }
 html.no-not-selector body.brand-orange .boxstyle_.box5 a,
+html.no-not-selector body.brand-orange .boxstyle-xs.box5 a,
+html.no-not-selector body.brand-orange .boxstyle-sm.box5 a,
+html.no-not-selector body.brand-orange .boxstyle-md.box5 a,
+html.no-not-selector body.brand-orange .boxstyle-lg.box5 a,
 html.no-not-selector body.brand-orange .boxstyle_.box5 a:link,
-html.no-not-selector body.brand-orange .boxstyle_.box5 a:visited {
+html.no-not-selector body.brand-orange .boxstyle-xs.box5 a:link,
+html.no-not-selector body.brand-orange .boxstyle-sm.box5 a:link,
+html.no-not-selector body.brand-orange .boxstyle-md.box5 a:link,
+html.no-not-selector body.brand-orange .boxstyle-lg.box5 a:link,
+html.no-not-selector body.brand-orange .boxstyle_.box5 a:visited,
+html.no-not-selector body.brand-orange .boxstyle-xs.box5 a:visited,
+html.no-not-selector body.brand-orange .boxstyle-sm.box5 a:visited,
+html.no-not-selector body.brand-orange .boxstyle-md.box5 a:visited,
+html.no-not-selector body.brand-orange .boxstyle-lg.box5 a:visited {
   color: white;
 }
 body.brand-orange .boxstyle_.box5 a:not(.btn),
+body.brand-orange .boxstyle-xs.box5 a:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:not(.btn),
 body.brand-orange .boxstyle_.box5 a:link:not(.btn),
-body.brand-orange .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-orange .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:link:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-orange .boxstyle_.box5 a:visited:not(.btn),
+body.brand-orange .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:visited:not(.btn) {
   color: white;
 }
 html.no-not-selector body.brand-orange .boxstyle_.box5 a:hover,
+html.no-not-selector body.brand-orange .boxstyle-xs.box5 a:hover,
+html.no-not-selector body.brand-orange .boxstyle-sm.box5 a:hover,
+html.no-not-selector body.brand-orange .boxstyle-md.box5 a:hover,
+html.no-not-selector body.brand-orange .boxstyle-lg.box5 a:hover,
 html.no-not-selector body.brand-orange .boxstyle_.box5 a:focus,
-html.no-not-selector body.brand-orange .boxstyle_.box5 a:active {
+html.no-not-selector body.brand-orange .boxstyle-xs.box5 a:focus,
+html.no-not-selector body.brand-orange .boxstyle-sm.box5 a:focus,
+html.no-not-selector body.brand-orange .boxstyle-md.box5 a:focus,
+html.no-not-selector body.brand-orange .boxstyle-lg.box5 a:focus,
+html.no-not-selector body.brand-orange .boxstyle_.box5 a:active,
+html.no-not-selector body.brand-orange .boxstyle-xs.box5 a:active,
+html.no-not-selector body.brand-orange .boxstyle-sm.box5 a:active,
+html.no-not-selector body.brand-orange .boxstyle-md.box5 a:active,
+html.no-not-selector body.brand-orange .boxstyle-lg.box5 a:active {
   color: #cccccc;
 }
 body.brand-orange .boxstyle_.box5 a:hover:not(.btn),
+body.brand-orange .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-orange .boxstyle_.box5 a:focus:not(.btn),
-body.brand-orange .boxstyle_.box5 a:active:not(.btn) {
+body.brand-orange .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-orange .boxstyle_.box5 a:active:not(.btn),
+body.brand-orange .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:active:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:active:not(.btn) {
   color: #cccccc;
 }
-body.brand-orange .boxstyle_.box5 a:hover .new-window-link {
+body.brand-orange .boxstyle_.box5 a:hover .new-window-link,
+body.brand-orange .boxstyle-xs.box5 a:hover .new-window-link,
+body.brand-orange .boxstyle-sm.box5 a:hover .new-window-link,
+body.brand-orange .boxstyle-md.box5 a:hover .new-window-link,
+body.brand-orange .boxstyle-lg.box5 a:hover .new-window-link {
   color: #cccccc;
 }
 body.brand-orange .boxstyle_.box5 a:not(.btn),
+body.brand-orange .boxstyle-xs.box5 a:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:not(.btn),
 body.brand-orange .boxstyle_.box5 a:link:not(.btn),
-body.brand-orange .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-orange .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:link:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-orange .boxstyle_.box5 a:visited:not(.btn),
+body.brand-orange .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
 body.brand-orange .boxstyle_.box5 a:hover:not(.btn),
+body.brand-orange .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-orange .boxstyle_.box5 a:focus:not(.btn),
-body.brand-orange .boxstyle_.box5 a:active:not(.btn) {
+body.brand-orange .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-orange .boxstyle_.box5 a:active:not(.btn),
+body.brand-orange .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-orange .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-orange .boxstyle-md.box5 a:active:not(.btn),
+body.brand-orange .boxstyle-lg.box5 a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
   -moz-text-decoration-color: #cccccc;
        text-decoration-color: #cccccc;
 }
 body.brand-orange .boxstyle_.box5 h1,
+body.brand-orange .boxstyle-xs.box5 h1,
+body.brand-orange .boxstyle-sm.box5 h1,
+body.brand-orange .boxstyle-md.box5 h1,
+body.brand-orange .boxstyle-lg.box5 h1,
 body.brand-orange .boxstyle_.box5 h2,
+body.brand-orange .boxstyle-xs.box5 h2,
+body.brand-orange .boxstyle-sm.box5 h2,
+body.brand-orange .boxstyle-md.box5 h2,
+body.brand-orange .boxstyle-lg.box5 h2,
 body.brand-orange .boxstyle_.box5 h3,
+body.brand-orange .boxstyle-xs.box5 h3,
+body.brand-orange .boxstyle-sm.box5 h3,
+body.brand-orange .boxstyle-md.box5 h3,
+body.brand-orange .boxstyle-lg.box5 h3,
 body.brand-orange .boxstyle_.box5 h4,
+body.brand-orange .boxstyle-xs.box5 h4,
+body.brand-orange .boxstyle-sm.box5 h4,
+body.brand-orange .boxstyle-md.box5 h4,
+body.brand-orange .boxstyle-lg.box5 h4,
 body.brand-orange .boxstyle_.box5 h5,
+body.brand-orange .boxstyle-xs.box5 h5,
+body.brand-orange .boxstyle-sm.box5 h5,
+body.brand-orange .boxstyle-md.box5 h5,
+body.brand-orange .boxstyle-lg.box5 h5,
 body.brand-orange .boxstyle_.box5 h6,
+body.brand-orange .boxstyle-xs.box5 h6,
+body.brand-orange .boxstyle-sm.box5 h6,
+body.brand-orange .boxstyle-md.box5 h6,
+body.brand-orange .boxstyle-lg.box5 h6,
 body.brand-orange .boxstyle_.box5 .h1,
+body.brand-orange .boxstyle-xs.box5 .h1,
+body.brand-orange .boxstyle-sm.box5 .h1,
+body.brand-orange .boxstyle-md.box5 .h1,
+body.brand-orange .boxstyle-lg.box5 .h1,
 body.brand-orange .boxstyle_.box5 .h2,
+body.brand-orange .boxstyle-xs.box5 .h2,
+body.brand-orange .boxstyle-sm.box5 .h2,
+body.brand-orange .boxstyle-md.box5 .h2,
+body.brand-orange .boxstyle-lg.box5 .h2,
 body.brand-orange .boxstyle_.box5 .h3,
+body.brand-orange .boxstyle-xs.box5 .h3,
+body.brand-orange .boxstyle-sm.box5 .h3,
+body.brand-orange .boxstyle-md.box5 .h3,
+body.brand-orange .boxstyle-lg.box5 .h3,
 body.brand-orange .boxstyle_.box5 .h4,
+body.brand-orange .boxstyle-xs.box5 .h4,
+body.brand-orange .boxstyle-sm.box5 .h4,
+body.brand-orange .boxstyle-md.box5 .h4,
+body.brand-orange .boxstyle-lg.box5 .h4,
 body.brand-orange .boxstyle_.box5 .h5,
-body.brand-orange .boxstyle_.box5 .h6 {
+body.brand-orange .boxstyle-xs.box5 .h5,
+body.brand-orange .boxstyle-sm.box5 .h5,
+body.brand-orange .boxstyle-md.box5 .h5,
+body.brand-orange .boxstyle-lg.box5 .h5,
+body.brand-orange .boxstyle_.box5 .h6,
+body.brand-orange .boxstyle-xs.box5 .h6,
+body.brand-orange .boxstyle-sm.box5 .h6,
+body.brand-orange .boxstyle-md.box5 .h6,
+body.brand-orange .boxstyle-lg.box5 .h6 {
   color: white;
 }
-body.brand-orange .boxstyle_.box5 blockquote.quotes {
+body.brand-orange .boxstyle_.box5 blockquote.quotes,
+body.brand-orange .boxstyle-xs.box5 blockquote.quotes,
+body.brand-orange .boxstyle-sm.box5 blockquote.quotes,
+body.brand-orange .boxstyle-md.box5 blockquote.quotes,
+body.brand-orange .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
 body.brand-green html.no-rgba {
@@ -4352,132 +6182,498 @@ body.brand-green .carousel .carousel-indicators li::after {
 body.brand-green .carousel .carousel-indicators li.active::after {
   color: #797906;
 }
-body.brand-green .boxstyle_.box1 {
+@media (max-width: 767px) {
+  body.brand-green .boxstyle_.box1,
+  body.brand-green .boxstyle-sm.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-green .boxstyle-md.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-green .boxstyle-lg.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-green .boxstyle_.box1,
+body.brand-green .boxstyle-xs.box1,
+body.brand-green .boxstyle-sm.box1,
+body.brand-green .boxstyle-md.box1,
+body.brand-green .boxstyle-lg.box1 {
   border: 0;
   background: #ebebda;
   color: #383838;
 }
 @media print {
-  body.brand-green .boxstyle_.box1 {
+  body.brand-green .boxstyle_.box1,
+  body.brand-green .boxstyle-xs.box1,
+  body.brand-green .boxstyle-sm.box1,
+  body.brand-green .boxstyle-md.box1,
+  body.brand-green .boxstyle-lg.box1 {
     border: 1px solid #ebebda;
   }
 }
 body.brand-green .boxstyle_.box1 h1,
+body.brand-green .boxstyle-xs.box1 h1,
+body.brand-green .boxstyle-sm.box1 h1,
+body.brand-green .boxstyle-md.box1 h1,
+body.brand-green .boxstyle-lg.box1 h1,
 body.brand-green .boxstyle_.box1 h2,
+body.brand-green .boxstyle-xs.box1 h2,
+body.brand-green .boxstyle-sm.box1 h2,
+body.brand-green .boxstyle-md.box1 h2,
+body.brand-green .boxstyle-lg.box1 h2,
 body.brand-green .boxstyle_.box1 h3,
+body.brand-green .boxstyle-xs.box1 h3,
+body.brand-green .boxstyle-sm.box1 h3,
+body.brand-green .boxstyle-md.box1 h3,
+body.brand-green .boxstyle-lg.box1 h3,
 body.brand-green .boxstyle_.box1 h4,
+body.brand-green .boxstyle-xs.box1 h4,
+body.brand-green .boxstyle-sm.box1 h4,
+body.brand-green .boxstyle-md.box1 h4,
+body.brand-green .boxstyle-lg.box1 h4,
 body.brand-green .boxstyle_.box1 h5,
+body.brand-green .boxstyle-xs.box1 h5,
+body.brand-green .boxstyle-sm.box1 h5,
+body.brand-green .boxstyle-md.box1 h5,
+body.brand-green .boxstyle-lg.box1 h5,
 body.brand-green .boxstyle_.box1 h6,
+body.brand-green .boxstyle-xs.box1 h6,
+body.brand-green .boxstyle-sm.box1 h6,
+body.brand-green .boxstyle-md.box1 h6,
+body.brand-green .boxstyle-lg.box1 h6,
 body.brand-green .boxstyle_.box1 .h1,
+body.brand-green .boxstyle-xs.box1 .h1,
+body.brand-green .boxstyle-sm.box1 .h1,
+body.brand-green .boxstyle-md.box1 .h1,
+body.brand-green .boxstyle-lg.box1 .h1,
 body.brand-green .boxstyle_.box1 .h2,
+body.brand-green .boxstyle-xs.box1 .h2,
+body.brand-green .boxstyle-sm.box1 .h2,
+body.brand-green .boxstyle-md.box1 .h2,
+body.brand-green .boxstyle-lg.box1 .h2,
 body.brand-green .boxstyle_.box1 .h3,
+body.brand-green .boxstyle-xs.box1 .h3,
+body.brand-green .boxstyle-sm.box1 .h3,
+body.brand-green .boxstyle-md.box1 .h3,
+body.brand-green .boxstyle-lg.box1 .h3,
 body.brand-green .boxstyle_.box1 .h4,
+body.brand-green .boxstyle-xs.box1 .h4,
+body.brand-green .boxstyle-sm.box1 .h4,
+body.brand-green .boxstyle-md.box1 .h4,
+body.brand-green .boxstyle-lg.box1 .h4,
 body.brand-green .boxstyle_.box1 .h5,
-body.brand-green .boxstyle_.box1 .h6 {
+body.brand-green .boxstyle-xs.box1 .h5,
+body.brand-green .boxstyle-sm.box1 .h5,
+body.brand-green .boxstyle-md.box1 .h5,
+body.brand-green .boxstyle-lg.box1 .h5,
+body.brand-green .boxstyle_.box1 .h6,
+body.brand-green .boxstyle-xs.box1 .h6,
+body.brand-green .boxstyle-sm.box1 .h6,
+body.brand-green .boxstyle-md.box1 .h6,
+body.brand-green .boxstyle-lg.box1 .h6 {
   color: #383838;
 }
-body.brand-green .boxstyle_.box1 blockquote.quotes {
+body.brand-green .boxstyle_.box1 blockquote.quotes,
+body.brand-green .boxstyle-xs.box1 blockquote.quotes,
+body.brand-green .boxstyle-sm.box1 blockquote.quotes,
+body.brand-green .boxstyle-md.box1 blockquote.quotes,
+body.brand-green .boxstyle-lg.box1 blockquote.quotes {
   color: inherit;
 }
-body.brand-green .boxstyle_.box2 {
+@media (max-width: 767px) {
+  body.brand-green .boxstyle_.box2,
+  body.brand-green .boxstyle-sm.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-green .boxstyle-md.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-green .boxstyle-lg.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-green .boxstyle_.box2,
+body.brand-green .boxstyle-xs.box2,
+body.brand-green .boxstyle-sm.box2,
+body.brand-green .boxstyle-md.box2,
+body.brand-green .boxstyle-lg.box2 {
   border: 0;
   background: #eeeeee;
   color: #383838;
 }
 @media print {
-  body.brand-green .boxstyle_.box2 {
+  body.brand-green .boxstyle_.box2,
+  body.brand-green .boxstyle-xs.box2,
+  body.brand-green .boxstyle-sm.box2,
+  body.brand-green .boxstyle-md.box2,
+  body.brand-green .boxstyle-lg.box2 {
     border: 1px solid #eeeeee;
   }
 }
 body.brand-green .boxstyle_.box2 h1,
+body.brand-green .boxstyle-xs.box2 h1,
+body.brand-green .boxstyle-sm.box2 h1,
+body.brand-green .boxstyle-md.box2 h1,
+body.brand-green .boxstyle-lg.box2 h1,
 body.brand-green .boxstyle_.box2 h2,
+body.brand-green .boxstyle-xs.box2 h2,
+body.brand-green .boxstyle-sm.box2 h2,
+body.brand-green .boxstyle-md.box2 h2,
+body.brand-green .boxstyle-lg.box2 h2,
 body.brand-green .boxstyle_.box2 h3,
+body.brand-green .boxstyle-xs.box2 h3,
+body.brand-green .boxstyle-sm.box2 h3,
+body.brand-green .boxstyle-md.box2 h3,
+body.brand-green .boxstyle-lg.box2 h3,
 body.brand-green .boxstyle_.box2 h4,
+body.brand-green .boxstyle-xs.box2 h4,
+body.brand-green .boxstyle-sm.box2 h4,
+body.brand-green .boxstyle-md.box2 h4,
+body.brand-green .boxstyle-lg.box2 h4,
 body.brand-green .boxstyle_.box2 h5,
+body.brand-green .boxstyle-xs.box2 h5,
+body.brand-green .boxstyle-sm.box2 h5,
+body.brand-green .boxstyle-md.box2 h5,
+body.brand-green .boxstyle-lg.box2 h5,
 body.brand-green .boxstyle_.box2 h6,
+body.brand-green .boxstyle-xs.box2 h6,
+body.brand-green .boxstyle-sm.box2 h6,
+body.brand-green .boxstyle-md.box2 h6,
+body.brand-green .boxstyle-lg.box2 h6,
 body.brand-green .boxstyle_.box2 .h1,
+body.brand-green .boxstyle-xs.box2 .h1,
+body.brand-green .boxstyle-sm.box2 .h1,
+body.brand-green .boxstyle-md.box2 .h1,
+body.brand-green .boxstyle-lg.box2 .h1,
 body.brand-green .boxstyle_.box2 .h2,
+body.brand-green .boxstyle-xs.box2 .h2,
+body.brand-green .boxstyle-sm.box2 .h2,
+body.brand-green .boxstyle-md.box2 .h2,
+body.brand-green .boxstyle-lg.box2 .h2,
 body.brand-green .boxstyle_.box2 .h3,
+body.brand-green .boxstyle-xs.box2 .h3,
+body.brand-green .boxstyle-sm.box2 .h3,
+body.brand-green .boxstyle-md.box2 .h3,
+body.brand-green .boxstyle-lg.box2 .h3,
 body.brand-green .boxstyle_.box2 .h4,
+body.brand-green .boxstyle-xs.box2 .h4,
+body.brand-green .boxstyle-sm.box2 .h4,
+body.brand-green .boxstyle-md.box2 .h4,
+body.brand-green .boxstyle-lg.box2 .h4,
 body.brand-green .boxstyle_.box2 .h5,
-body.brand-green .boxstyle_.box2 .h6 {
+body.brand-green .boxstyle-xs.box2 .h5,
+body.brand-green .boxstyle-sm.box2 .h5,
+body.brand-green .boxstyle-md.box2 .h5,
+body.brand-green .boxstyle-lg.box2 .h5,
+body.brand-green .boxstyle_.box2 .h6,
+body.brand-green .boxstyle-xs.box2 .h6,
+body.brand-green .boxstyle-sm.box2 .h6,
+body.brand-green .boxstyle-md.box2 .h6,
+body.brand-green .boxstyle-lg.box2 .h6 {
   color: #383838;
 }
-body.brand-green .boxstyle_.box2 blockquote.quotes {
+body.brand-green .boxstyle_.box2 blockquote.quotes,
+body.brand-green .boxstyle-xs.box2 blockquote.quotes,
+body.brand-green .boxstyle-sm.box2 blockquote.quotes,
+body.brand-green .boxstyle-md.box2 blockquote.quotes,
+body.brand-green .boxstyle-lg.box2 blockquote.quotes {
   color: inherit;
 }
-body.brand-green .boxstyle_.box3 {
+body.brand-green .boxstyle-xs.box3 {
   background: none;
   border: 1px solid #797906;
   color: inherit;
 }
-body.brand-green .boxstyle_.box4 {
+@media (min-width: 768px) {
+  body.brand-green .boxstyle_.box3,
+  body.brand-green .boxstyle-sm.box3 {
+    background: none;
+    border: 1px solid #797906;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-green .boxstyle-md.box3 {
+    background: none;
+    border: 1px solid #797906;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-green .boxstyle-lg.box3 {
+    background: none;
+    border: 1px solid #797906;
+    color: inherit;
+  }
+}
+body.brand-green .boxstyle-xs.box4 {
   background: none;
   border: 1px solid #777777;
   color: inherit;
 }
-body.brand-green .boxstyle_.box5 {
+@media (min-width: 768px) {
+  body.brand-green .boxstyle_.box4,
+  body.brand-green .boxstyle-sm.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-green .boxstyle-md.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-green .boxstyle-lg.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (max-width: 767px) {
+  body.brand-green .boxstyle_.box5,
+  body.brand-green .boxstyle-sm.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-green .boxstyle-md.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-green .boxstyle-lg.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-green .boxstyle_.box5,
+body.brand-green .boxstyle-xs.box5,
+body.brand-green .boxstyle-sm.box5,
+body.brand-green .boxstyle-md.box5,
+body.brand-green .boxstyle-lg.box5 {
   border: 0;
   background: #797906;
   color: white;
 }
 @media print {
-  body.brand-green .boxstyle_.box5 {
+  body.brand-green .boxstyle_.box5,
+  body.brand-green .boxstyle-xs.box5,
+  body.brand-green .boxstyle-sm.box5,
+  body.brand-green .boxstyle-md.box5,
+  body.brand-green .boxstyle-lg.box5 {
     border: 1px solid #797906;
   }
 }
 html.no-not-selector body.brand-green .boxstyle_.box5 a,
+html.no-not-selector body.brand-green .boxstyle-xs.box5 a,
+html.no-not-selector body.brand-green .boxstyle-sm.box5 a,
+html.no-not-selector body.brand-green .boxstyle-md.box5 a,
+html.no-not-selector body.brand-green .boxstyle-lg.box5 a,
 html.no-not-selector body.brand-green .boxstyle_.box5 a:link,
-html.no-not-selector body.brand-green .boxstyle_.box5 a:visited {
+html.no-not-selector body.brand-green .boxstyle-xs.box5 a:link,
+html.no-not-selector body.brand-green .boxstyle-sm.box5 a:link,
+html.no-not-selector body.brand-green .boxstyle-md.box5 a:link,
+html.no-not-selector body.brand-green .boxstyle-lg.box5 a:link,
+html.no-not-selector body.brand-green .boxstyle_.box5 a:visited,
+html.no-not-selector body.brand-green .boxstyle-xs.box5 a:visited,
+html.no-not-selector body.brand-green .boxstyle-sm.box5 a:visited,
+html.no-not-selector body.brand-green .boxstyle-md.box5 a:visited,
+html.no-not-selector body.brand-green .boxstyle-lg.box5 a:visited {
   color: white;
 }
 body.brand-green .boxstyle_.box5 a:not(.btn),
+body.brand-green .boxstyle-xs.box5 a:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:not(.btn),
+body.brand-green .boxstyle-md.box5 a:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:not(.btn),
 body.brand-green .boxstyle_.box5 a:link:not(.btn),
-body.brand-green .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-green .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-green .boxstyle-md.box5 a:link:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-green .boxstyle_.box5 a:visited:not(.btn),
+body.brand-green .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-green .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:visited:not(.btn) {
   color: white;
 }
 html.no-not-selector body.brand-green .boxstyle_.box5 a:hover,
+html.no-not-selector body.brand-green .boxstyle-xs.box5 a:hover,
+html.no-not-selector body.brand-green .boxstyle-sm.box5 a:hover,
+html.no-not-selector body.brand-green .boxstyle-md.box5 a:hover,
+html.no-not-selector body.brand-green .boxstyle-lg.box5 a:hover,
 html.no-not-selector body.brand-green .boxstyle_.box5 a:focus,
-html.no-not-selector body.brand-green .boxstyle_.box5 a:active {
+html.no-not-selector body.brand-green .boxstyle-xs.box5 a:focus,
+html.no-not-selector body.brand-green .boxstyle-sm.box5 a:focus,
+html.no-not-selector body.brand-green .boxstyle-md.box5 a:focus,
+html.no-not-selector body.brand-green .boxstyle-lg.box5 a:focus,
+html.no-not-selector body.brand-green .boxstyle_.box5 a:active,
+html.no-not-selector body.brand-green .boxstyle-xs.box5 a:active,
+html.no-not-selector body.brand-green .boxstyle-sm.box5 a:active,
+html.no-not-selector body.brand-green .boxstyle-md.box5 a:active,
+html.no-not-selector body.brand-green .boxstyle-lg.box5 a:active {
   color: #cccccc;
 }
 body.brand-green .boxstyle_.box5 a:hover:not(.btn),
+body.brand-green .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-green .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-green .boxstyle_.box5 a:focus:not(.btn),
-body.brand-green .boxstyle_.box5 a:active:not(.btn) {
+body.brand-green .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-green .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-green .boxstyle_.box5 a:active:not(.btn),
+body.brand-green .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-green .boxstyle-md.box5 a:active:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:active:not(.btn) {
   color: #cccccc;
 }
-body.brand-green .boxstyle_.box5 a:hover .new-window-link {
+body.brand-green .boxstyle_.box5 a:hover .new-window-link,
+body.brand-green .boxstyle-xs.box5 a:hover .new-window-link,
+body.brand-green .boxstyle-sm.box5 a:hover .new-window-link,
+body.brand-green .boxstyle-md.box5 a:hover .new-window-link,
+body.brand-green .boxstyle-lg.box5 a:hover .new-window-link {
   color: #cccccc;
 }
 body.brand-green .boxstyle_.box5 a:not(.btn),
+body.brand-green .boxstyle-xs.box5 a:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:not(.btn),
+body.brand-green .boxstyle-md.box5 a:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:not(.btn),
 body.brand-green .boxstyle_.box5 a:link:not(.btn),
-body.brand-green .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-green .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-green .boxstyle-md.box5 a:link:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-green .boxstyle_.box5 a:visited:not(.btn),
+body.brand-green .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-green .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
 body.brand-green .boxstyle_.box5 a:hover:not(.btn),
+body.brand-green .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-green .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-green .boxstyle_.box5 a:focus:not(.btn),
-body.brand-green .boxstyle_.box5 a:active:not(.btn) {
+body.brand-green .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-green .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-green .boxstyle_.box5 a:active:not(.btn),
+body.brand-green .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-green .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-green .boxstyle-md.box5 a:active:not(.btn),
+body.brand-green .boxstyle-lg.box5 a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
   -moz-text-decoration-color: #cccccc;
        text-decoration-color: #cccccc;
 }
 body.brand-green .boxstyle_.box5 h1,
+body.brand-green .boxstyle-xs.box5 h1,
+body.brand-green .boxstyle-sm.box5 h1,
+body.brand-green .boxstyle-md.box5 h1,
+body.brand-green .boxstyle-lg.box5 h1,
 body.brand-green .boxstyle_.box5 h2,
+body.brand-green .boxstyle-xs.box5 h2,
+body.brand-green .boxstyle-sm.box5 h2,
+body.brand-green .boxstyle-md.box5 h2,
+body.brand-green .boxstyle-lg.box5 h2,
 body.brand-green .boxstyle_.box5 h3,
+body.brand-green .boxstyle-xs.box5 h3,
+body.brand-green .boxstyle-sm.box5 h3,
+body.brand-green .boxstyle-md.box5 h3,
+body.brand-green .boxstyle-lg.box5 h3,
 body.brand-green .boxstyle_.box5 h4,
+body.brand-green .boxstyle-xs.box5 h4,
+body.brand-green .boxstyle-sm.box5 h4,
+body.brand-green .boxstyle-md.box5 h4,
+body.brand-green .boxstyle-lg.box5 h4,
 body.brand-green .boxstyle_.box5 h5,
+body.brand-green .boxstyle-xs.box5 h5,
+body.brand-green .boxstyle-sm.box5 h5,
+body.brand-green .boxstyle-md.box5 h5,
+body.brand-green .boxstyle-lg.box5 h5,
 body.brand-green .boxstyle_.box5 h6,
+body.brand-green .boxstyle-xs.box5 h6,
+body.brand-green .boxstyle-sm.box5 h6,
+body.brand-green .boxstyle-md.box5 h6,
+body.brand-green .boxstyle-lg.box5 h6,
 body.brand-green .boxstyle_.box5 .h1,
+body.brand-green .boxstyle-xs.box5 .h1,
+body.brand-green .boxstyle-sm.box5 .h1,
+body.brand-green .boxstyle-md.box5 .h1,
+body.brand-green .boxstyle-lg.box5 .h1,
 body.brand-green .boxstyle_.box5 .h2,
+body.brand-green .boxstyle-xs.box5 .h2,
+body.brand-green .boxstyle-sm.box5 .h2,
+body.brand-green .boxstyle-md.box5 .h2,
+body.brand-green .boxstyle-lg.box5 .h2,
 body.brand-green .boxstyle_.box5 .h3,
+body.brand-green .boxstyle-xs.box5 .h3,
+body.brand-green .boxstyle-sm.box5 .h3,
+body.brand-green .boxstyle-md.box5 .h3,
+body.brand-green .boxstyle-lg.box5 .h3,
 body.brand-green .boxstyle_.box5 .h4,
+body.brand-green .boxstyle-xs.box5 .h4,
+body.brand-green .boxstyle-sm.box5 .h4,
+body.brand-green .boxstyle-md.box5 .h4,
+body.brand-green .boxstyle-lg.box5 .h4,
 body.brand-green .boxstyle_.box5 .h5,
-body.brand-green .boxstyle_.box5 .h6 {
+body.brand-green .boxstyle-xs.box5 .h5,
+body.brand-green .boxstyle-sm.box5 .h5,
+body.brand-green .boxstyle-md.box5 .h5,
+body.brand-green .boxstyle-lg.box5 .h5,
+body.brand-green .boxstyle_.box5 .h6,
+body.brand-green .boxstyle-xs.box5 .h6,
+body.brand-green .boxstyle-sm.box5 .h6,
+body.brand-green .boxstyle-md.box5 .h6,
+body.brand-green .boxstyle-lg.box5 .h6 {
   color: white;
 }
-body.brand-green .boxstyle_.box5 blockquote.quotes {
+body.brand-green .boxstyle_.box5 blockquote.quotes,
+body.brand-green .boxstyle-xs.box5 blockquote.quotes,
+body.brand-green .boxstyle-sm.box5 blockquote.quotes,
+body.brand-green .boxstyle-md.box5 blockquote.quotes,
+body.brand-green .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
 body.brand-red html.no-rgba {
@@ -5099,131 +7295,497 @@ body.brand-red .carousel .carousel-indicators li::after {
 body.brand-red .carousel .carousel-indicators li.active::after {
   color: #89102c;
 }
-body.brand-red .boxstyle_.box1 {
+@media (max-width: 767px) {
+  body.brand-red .boxstyle_.box1,
+  body.brand-red .boxstyle-sm.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-red .boxstyle-md.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-red .boxstyle-lg.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-red .boxstyle_.box1,
+body.brand-red .boxstyle-xs.box1,
+body.brand-red .boxstyle-sm.box1,
+body.brand-red .boxstyle-md.box1,
+body.brand-red .boxstyle-lg.box1 {
   border: 0;
   background: #eddbdf;
   color: #383838;
 }
 @media print {
-  body.brand-red .boxstyle_.box1 {
+  body.brand-red .boxstyle_.box1,
+  body.brand-red .boxstyle-xs.box1,
+  body.brand-red .boxstyle-sm.box1,
+  body.brand-red .boxstyle-md.box1,
+  body.brand-red .boxstyle-lg.box1 {
     border: 1px solid #eddbdf;
   }
 }
 body.brand-red .boxstyle_.box1 h1,
+body.brand-red .boxstyle-xs.box1 h1,
+body.brand-red .boxstyle-sm.box1 h1,
+body.brand-red .boxstyle-md.box1 h1,
+body.brand-red .boxstyle-lg.box1 h1,
 body.brand-red .boxstyle_.box1 h2,
+body.brand-red .boxstyle-xs.box1 h2,
+body.brand-red .boxstyle-sm.box1 h2,
+body.brand-red .boxstyle-md.box1 h2,
+body.brand-red .boxstyle-lg.box1 h2,
 body.brand-red .boxstyle_.box1 h3,
+body.brand-red .boxstyle-xs.box1 h3,
+body.brand-red .boxstyle-sm.box1 h3,
+body.brand-red .boxstyle-md.box1 h3,
+body.brand-red .boxstyle-lg.box1 h3,
 body.brand-red .boxstyle_.box1 h4,
+body.brand-red .boxstyle-xs.box1 h4,
+body.brand-red .boxstyle-sm.box1 h4,
+body.brand-red .boxstyle-md.box1 h4,
+body.brand-red .boxstyle-lg.box1 h4,
 body.brand-red .boxstyle_.box1 h5,
+body.brand-red .boxstyle-xs.box1 h5,
+body.brand-red .boxstyle-sm.box1 h5,
+body.brand-red .boxstyle-md.box1 h5,
+body.brand-red .boxstyle-lg.box1 h5,
 body.brand-red .boxstyle_.box1 h6,
+body.brand-red .boxstyle-xs.box1 h6,
+body.brand-red .boxstyle-sm.box1 h6,
+body.brand-red .boxstyle-md.box1 h6,
+body.brand-red .boxstyle-lg.box1 h6,
 body.brand-red .boxstyle_.box1 .h1,
+body.brand-red .boxstyle-xs.box1 .h1,
+body.brand-red .boxstyle-sm.box1 .h1,
+body.brand-red .boxstyle-md.box1 .h1,
+body.brand-red .boxstyle-lg.box1 .h1,
 body.brand-red .boxstyle_.box1 .h2,
+body.brand-red .boxstyle-xs.box1 .h2,
+body.brand-red .boxstyle-sm.box1 .h2,
+body.brand-red .boxstyle-md.box1 .h2,
+body.brand-red .boxstyle-lg.box1 .h2,
 body.brand-red .boxstyle_.box1 .h3,
+body.brand-red .boxstyle-xs.box1 .h3,
+body.brand-red .boxstyle-sm.box1 .h3,
+body.brand-red .boxstyle-md.box1 .h3,
+body.brand-red .boxstyle-lg.box1 .h3,
 body.brand-red .boxstyle_.box1 .h4,
+body.brand-red .boxstyle-xs.box1 .h4,
+body.brand-red .boxstyle-sm.box1 .h4,
+body.brand-red .boxstyle-md.box1 .h4,
+body.brand-red .boxstyle-lg.box1 .h4,
 body.brand-red .boxstyle_.box1 .h5,
-body.brand-red .boxstyle_.box1 .h6 {
+body.brand-red .boxstyle-xs.box1 .h5,
+body.brand-red .boxstyle-sm.box1 .h5,
+body.brand-red .boxstyle-md.box1 .h5,
+body.brand-red .boxstyle-lg.box1 .h5,
+body.brand-red .boxstyle_.box1 .h6,
+body.brand-red .boxstyle-xs.box1 .h6,
+body.brand-red .boxstyle-sm.box1 .h6,
+body.brand-red .boxstyle-md.box1 .h6,
+body.brand-red .boxstyle-lg.box1 .h6 {
   color: #383838;
 }
-body.brand-red .boxstyle_.box1 blockquote.quotes {
+body.brand-red .boxstyle_.box1 blockquote.quotes,
+body.brand-red .boxstyle-xs.box1 blockquote.quotes,
+body.brand-red .boxstyle-sm.box1 blockquote.quotes,
+body.brand-red .boxstyle-md.box1 blockquote.quotes,
+body.brand-red .boxstyle-lg.box1 blockquote.quotes {
   color: inherit;
 }
-body.brand-red .boxstyle_.box2 {
+@media (max-width: 767px) {
+  body.brand-red .boxstyle_.box2,
+  body.brand-red .boxstyle-sm.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-red .boxstyle-md.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-red .boxstyle-lg.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-red .boxstyle_.box2,
+body.brand-red .boxstyle-xs.box2,
+body.brand-red .boxstyle-sm.box2,
+body.brand-red .boxstyle-md.box2,
+body.brand-red .boxstyle-lg.box2 {
   border: 0;
   background: #eeeeee;
   color: #383838;
 }
 @media print {
-  body.brand-red .boxstyle_.box2 {
+  body.brand-red .boxstyle_.box2,
+  body.brand-red .boxstyle-xs.box2,
+  body.brand-red .boxstyle-sm.box2,
+  body.brand-red .boxstyle-md.box2,
+  body.brand-red .boxstyle-lg.box2 {
     border: 1px solid #eeeeee;
   }
 }
 body.brand-red .boxstyle_.box2 h1,
+body.brand-red .boxstyle-xs.box2 h1,
+body.brand-red .boxstyle-sm.box2 h1,
+body.brand-red .boxstyle-md.box2 h1,
+body.brand-red .boxstyle-lg.box2 h1,
 body.brand-red .boxstyle_.box2 h2,
+body.brand-red .boxstyle-xs.box2 h2,
+body.brand-red .boxstyle-sm.box2 h2,
+body.brand-red .boxstyle-md.box2 h2,
+body.brand-red .boxstyle-lg.box2 h2,
 body.brand-red .boxstyle_.box2 h3,
+body.brand-red .boxstyle-xs.box2 h3,
+body.brand-red .boxstyle-sm.box2 h3,
+body.brand-red .boxstyle-md.box2 h3,
+body.brand-red .boxstyle-lg.box2 h3,
 body.brand-red .boxstyle_.box2 h4,
+body.brand-red .boxstyle-xs.box2 h4,
+body.brand-red .boxstyle-sm.box2 h4,
+body.brand-red .boxstyle-md.box2 h4,
+body.brand-red .boxstyle-lg.box2 h4,
 body.brand-red .boxstyle_.box2 h5,
+body.brand-red .boxstyle-xs.box2 h5,
+body.brand-red .boxstyle-sm.box2 h5,
+body.brand-red .boxstyle-md.box2 h5,
+body.brand-red .boxstyle-lg.box2 h5,
 body.brand-red .boxstyle_.box2 h6,
+body.brand-red .boxstyle-xs.box2 h6,
+body.brand-red .boxstyle-sm.box2 h6,
+body.brand-red .boxstyle-md.box2 h6,
+body.brand-red .boxstyle-lg.box2 h6,
 body.brand-red .boxstyle_.box2 .h1,
+body.brand-red .boxstyle-xs.box2 .h1,
+body.brand-red .boxstyle-sm.box2 .h1,
+body.brand-red .boxstyle-md.box2 .h1,
+body.brand-red .boxstyle-lg.box2 .h1,
 body.brand-red .boxstyle_.box2 .h2,
+body.brand-red .boxstyle-xs.box2 .h2,
+body.brand-red .boxstyle-sm.box2 .h2,
+body.brand-red .boxstyle-md.box2 .h2,
+body.brand-red .boxstyle-lg.box2 .h2,
 body.brand-red .boxstyle_.box2 .h3,
+body.brand-red .boxstyle-xs.box2 .h3,
+body.brand-red .boxstyle-sm.box2 .h3,
+body.brand-red .boxstyle-md.box2 .h3,
+body.brand-red .boxstyle-lg.box2 .h3,
 body.brand-red .boxstyle_.box2 .h4,
+body.brand-red .boxstyle-xs.box2 .h4,
+body.brand-red .boxstyle-sm.box2 .h4,
+body.brand-red .boxstyle-md.box2 .h4,
+body.brand-red .boxstyle-lg.box2 .h4,
 body.brand-red .boxstyle_.box2 .h5,
-body.brand-red .boxstyle_.box2 .h6 {
+body.brand-red .boxstyle-xs.box2 .h5,
+body.brand-red .boxstyle-sm.box2 .h5,
+body.brand-red .boxstyle-md.box2 .h5,
+body.brand-red .boxstyle-lg.box2 .h5,
+body.brand-red .boxstyle_.box2 .h6,
+body.brand-red .boxstyle-xs.box2 .h6,
+body.brand-red .boxstyle-sm.box2 .h6,
+body.brand-red .boxstyle-md.box2 .h6,
+body.brand-red .boxstyle-lg.box2 .h6 {
   color: #383838;
 }
-body.brand-red .boxstyle_.box2 blockquote.quotes {
+body.brand-red .boxstyle_.box2 blockquote.quotes,
+body.brand-red .boxstyle-xs.box2 blockquote.quotes,
+body.brand-red .boxstyle-sm.box2 blockquote.quotes,
+body.brand-red .boxstyle-md.box2 blockquote.quotes,
+body.brand-red .boxstyle-lg.box2 blockquote.quotes {
   color: inherit;
 }
-body.brand-red .boxstyle_.box3 {
+body.brand-red .boxstyle-xs.box3 {
   background: none;
   border: 1px solid #89102c;
   color: inherit;
 }
-body.brand-red .boxstyle_.box4 {
+@media (min-width: 768px) {
+  body.brand-red .boxstyle_.box3,
+  body.brand-red .boxstyle-sm.box3 {
+    background: none;
+    border: 1px solid #89102c;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-red .boxstyle-md.box3 {
+    background: none;
+    border: 1px solid #89102c;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-red .boxstyle-lg.box3 {
+    background: none;
+    border: 1px solid #89102c;
+    color: inherit;
+  }
+}
+body.brand-red .boxstyle-xs.box4 {
   background: none;
   border: 1px solid #777777;
   color: inherit;
 }
-body.brand-red .boxstyle_.box5 {
+@media (min-width: 768px) {
+  body.brand-red .boxstyle_.box4,
+  body.brand-red .boxstyle-sm.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  body.brand-red .boxstyle-md.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  body.brand-red .boxstyle-lg.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (max-width: 767px) {
+  body.brand-red .boxstyle_.box5,
+  body.brand-red .boxstyle-sm.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  body.brand-red .boxstyle-md.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  body.brand-red .boxstyle-lg.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+body.brand-red .boxstyle_.box5,
+body.brand-red .boxstyle-xs.box5,
+body.brand-red .boxstyle-sm.box5,
+body.brand-red .boxstyle-md.box5,
+body.brand-red .boxstyle-lg.box5 {
   border: 0;
   background: #89102c;
   color: white;
 }
 @media print {
-  body.brand-red .boxstyle_.box5 {
+  body.brand-red .boxstyle_.box5,
+  body.brand-red .boxstyle-xs.box5,
+  body.brand-red .boxstyle-sm.box5,
+  body.brand-red .boxstyle-md.box5,
+  body.brand-red .boxstyle-lg.box5 {
     border: 1px solid #89102c;
   }
 }
 html.no-not-selector body.brand-red .boxstyle_.box5 a,
+html.no-not-selector body.brand-red .boxstyle-xs.box5 a,
+html.no-not-selector body.brand-red .boxstyle-sm.box5 a,
+html.no-not-selector body.brand-red .boxstyle-md.box5 a,
+html.no-not-selector body.brand-red .boxstyle-lg.box5 a,
 html.no-not-selector body.brand-red .boxstyle_.box5 a:link,
-html.no-not-selector body.brand-red .boxstyle_.box5 a:visited {
+html.no-not-selector body.brand-red .boxstyle-xs.box5 a:link,
+html.no-not-selector body.brand-red .boxstyle-sm.box5 a:link,
+html.no-not-selector body.brand-red .boxstyle-md.box5 a:link,
+html.no-not-selector body.brand-red .boxstyle-lg.box5 a:link,
+html.no-not-selector body.brand-red .boxstyle_.box5 a:visited,
+html.no-not-selector body.brand-red .boxstyle-xs.box5 a:visited,
+html.no-not-selector body.brand-red .boxstyle-sm.box5 a:visited,
+html.no-not-selector body.brand-red .boxstyle-md.box5 a:visited,
+html.no-not-selector body.brand-red .boxstyle-lg.box5 a:visited {
   color: white;
 }
 body.brand-red .boxstyle_.box5 a:not(.btn),
+body.brand-red .boxstyle-xs.box5 a:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:not(.btn),
+body.brand-red .boxstyle-md.box5 a:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:not(.btn),
 body.brand-red .boxstyle_.box5 a:link:not(.btn),
-body.brand-red .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-red .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-red .boxstyle-md.box5 a:link:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-red .boxstyle_.box5 a:visited:not(.btn),
+body.brand-red .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-red .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:visited:not(.btn) {
   color: white;
 }
 html.no-not-selector body.brand-red .boxstyle_.box5 a:hover,
+html.no-not-selector body.brand-red .boxstyle-xs.box5 a:hover,
+html.no-not-selector body.brand-red .boxstyle-sm.box5 a:hover,
+html.no-not-selector body.brand-red .boxstyle-md.box5 a:hover,
+html.no-not-selector body.brand-red .boxstyle-lg.box5 a:hover,
 html.no-not-selector body.brand-red .boxstyle_.box5 a:focus,
-html.no-not-selector body.brand-red .boxstyle_.box5 a:active {
+html.no-not-selector body.brand-red .boxstyle-xs.box5 a:focus,
+html.no-not-selector body.brand-red .boxstyle-sm.box5 a:focus,
+html.no-not-selector body.brand-red .boxstyle-md.box5 a:focus,
+html.no-not-selector body.brand-red .boxstyle-lg.box5 a:focus,
+html.no-not-selector body.brand-red .boxstyle_.box5 a:active,
+html.no-not-selector body.brand-red .boxstyle-xs.box5 a:active,
+html.no-not-selector body.brand-red .boxstyle-sm.box5 a:active,
+html.no-not-selector body.brand-red .boxstyle-md.box5 a:active,
+html.no-not-selector body.brand-red .boxstyle-lg.box5 a:active {
   color: #cccccc;
 }
 body.brand-red .boxstyle_.box5 a:hover:not(.btn),
+body.brand-red .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-red .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-red .boxstyle_.box5 a:focus:not(.btn),
-body.brand-red .boxstyle_.box5 a:active:not(.btn) {
+body.brand-red .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-red .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-red .boxstyle_.box5 a:active:not(.btn),
+body.brand-red .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-red .boxstyle-md.box5 a:active:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:active:not(.btn) {
   color: #cccccc;
 }
-body.brand-red .boxstyle_.box5 a:hover .new-window-link {
+body.brand-red .boxstyle_.box5 a:hover .new-window-link,
+body.brand-red .boxstyle-xs.box5 a:hover .new-window-link,
+body.brand-red .boxstyle-sm.box5 a:hover .new-window-link,
+body.brand-red .boxstyle-md.box5 a:hover .new-window-link,
+body.brand-red .boxstyle-lg.box5 a:hover .new-window-link {
   color: #cccccc;
 }
 body.brand-red .boxstyle_.box5 a:not(.btn),
+body.brand-red .boxstyle-xs.box5 a:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:not(.btn),
+body.brand-red .boxstyle-md.box5 a:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:not(.btn),
 body.brand-red .boxstyle_.box5 a:link:not(.btn),
-body.brand-red .boxstyle_.box5 a:visited:not(.btn) {
+body.brand-red .boxstyle-xs.box5 a:link:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:link:not(.btn),
+body.brand-red .boxstyle-md.box5 a:link:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:link:not(.btn),
+body.brand-red .boxstyle_.box5 a:visited:not(.btn),
+body.brand-red .boxstyle-xs.box5 a:visited:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:visited:not(.btn),
+body.brand-red .boxstyle-md.box5 a:visited:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
 body.brand-red .boxstyle_.box5 a:hover:not(.btn),
+body.brand-red .boxstyle-xs.box5 a:hover:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:hover:not(.btn),
+body.brand-red .boxstyle-md.box5 a:hover:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:hover:not(.btn),
 body.brand-red .boxstyle_.box5 a:focus:not(.btn),
-body.brand-red .boxstyle_.box5 a:active:not(.btn) {
+body.brand-red .boxstyle-xs.box5 a:focus:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:focus:not(.btn),
+body.brand-red .boxstyle-md.box5 a:focus:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:focus:not(.btn),
+body.brand-red .boxstyle_.box5 a:active:not(.btn),
+body.brand-red .boxstyle-xs.box5 a:active:not(.btn),
+body.brand-red .boxstyle-sm.box5 a:active:not(.btn),
+body.brand-red .boxstyle-md.box5 a:active:not(.btn),
+body.brand-red .boxstyle-lg.box5 a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
   -moz-text-decoration-color: #cccccc;
        text-decoration-color: #cccccc;
 }
 body.brand-red .boxstyle_.box5 h1,
+body.brand-red .boxstyle-xs.box5 h1,
+body.brand-red .boxstyle-sm.box5 h1,
+body.brand-red .boxstyle-md.box5 h1,
+body.brand-red .boxstyle-lg.box5 h1,
 body.brand-red .boxstyle_.box5 h2,
+body.brand-red .boxstyle-xs.box5 h2,
+body.brand-red .boxstyle-sm.box5 h2,
+body.brand-red .boxstyle-md.box5 h2,
+body.brand-red .boxstyle-lg.box5 h2,
 body.brand-red .boxstyle_.box5 h3,
+body.brand-red .boxstyle-xs.box5 h3,
+body.brand-red .boxstyle-sm.box5 h3,
+body.brand-red .boxstyle-md.box5 h3,
+body.brand-red .boxstyle-lg.box5 h3,
 body.brand-red .boxstyle_.box5 h4,
+body.brand-red .boxstyle-xs.box5 h4,
+body.brand-red .boxstyle-sm.box5 h4,
+body.brand-red .boxstyle-md.box5 h4,
+body.brand-red .boxstyle-lg.box5 h4,
 body.brand-red .boxstyle_.box5 h5,
+body.brand-red .boxstyle-xs.box5 h5,
+body.brand-red .boxstyle-sm.box5 h5,
+body.brand-red .boxstyle-md.box5 h5,
+body.brand-red .boxstyle-lg.box5 h5,
 body.brand-red .boxstyle_.box5 h6,
+body.brand-red .boxstyle-xs.box5 h6,
+body.brand-red .boxstyle-sm.box5 h6,
+body.brand-red .boxstyle-md.box5 h6,
+body.brand-red .boxstyle-lg.box5 h6,
 body.brand-red .boxstyle_.box5 .h1,
+body.brand-red .boxstyle-xs.box5 .h1,
+body.brand-red .boxstyle-sm.box5 .h1,
+body.brand-red .boxstyle-md.box5 .h1,
+body.brand-red .boxstyle-lg.box5 .h1,
 body.brand-red .boxstyle_.box5 .h2,
+body.brand-red .boxstyle-xs.box5 .h2,
+body.brand-red .boxstyle-sm.box5 .h2,
+body.brand-red .boxstyle-md.box5 .h2,
+body.brand-red .boxstyle-lg.box5 .h2,
 body.brand-red .boxstyle_.box5 .h3,
+body.brand-red .boxstyle-xs.box5 .h3,
+body.brand-red .boxstyle-sm.box5 .h3,
+body.brand-red .boxstyle-md.box5 .h3,
+body.brand-red .boxstyle-lg.box5 .h3,
 body.brand-red .boxstyle_.box5 .h4,
+body.brand-red .boxstyle-xs.box5 .h4,
+body.brand-red .boxstyle-sm.box5 .h4,
+body.brand-red .boxstyle-md.box5 .h4,
+body.brand-red .boxstyle-lg.box5 .h4,
 body.brand-red .boxstyle_.box5 .h5,
-body.brand-red .boxstyle_.box5 .h6 {
+body.brand-red .boxstyle-xs.box5 .h5,
+body.brand-red .boxstyle-sm.box5 .h5,
+body.brand-red .boxstyle-md.box5 .h5,
+body.brand-red .boxstyle-lg.box5 .h5,
+body.brand-red .boxstyle_.box5 .h6,
+body.brand-red .boxstyle-xs.box5 .h6,
+body.brand-red .boxstyle-sm.box5 .h6,
+body.brand-red .boxstyle-md.box5 .h6,
+body.brand-red .boxstyle-lg.box5 .h6 {
   color: white;
 }
-body.brand-red .boxstyle_.box5 blockquote.quotes {
+body.brand-red .boxstyle_.box5 blockquote.quotes,
+body.brand-red .boxstyle-xs.box5 blockquote.quotes,
+body.brand-red .boxstyle-sm.box5 blockquote.quotes,
+body.brand-red .boxstyle-md.box5 blockquote.quotes,
+body.brand-red .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }

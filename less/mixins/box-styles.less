@@ -1,50 +1,250 @@
+.make-xs-boxstyle() {
+  margin-bottom: @line-height-computed;
+  padding: (@grid-gutter-width / 2);
+
+  .bordered-headings(none);
+
+  // Avoid breaking box styles when printing
+  @media print {
+    page-break-inside: avoid;
+  }
+}
+
+.make-sm-boxstyle() {
+  margin-bottom: @line-height-computed;
+
+  .bordered-headings(none);
+
+  // Avoid breaking box styles when printing
+  @media print {
+    page-break-inside: avoid;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    padding: (@grid-gutter-width / 2);
+  }
+}
+
+.make-md-boxstyle() {
+  margin-bottom: @line-height-computed;
+
+  .bordered-headings(none);
+
+  // Avoid breaking box styles when printing
+  @media print {
+    page-break-inside: avoid;
+  }
+
+  @media (min-width: @screen-md-min) {
+    padding: (@grid-gutter-width / 2);
+  }
+}
+
+.make-lg-boxstyle() {
+  margin-bottom: @line-height-computed;
+
+  .bordered-headings(none);
+
+  // Avoid breaking box styles when printing
+  @media print {
+    page-break-inside: avoid;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    padding: (@grid-gutter-width / 2);
+  }
+}
+
 #boxstyle {
-  .image(@bg-image, @text-colour: @text-color) {
-    border: 0;
-    background: @bg-image;
-    color: @text-colour;
-  }
+  .image(@class, @bg-image, @text-colour: @text-color) {
+    .apply() {
+      &@{class} {
+        border: 0;
+        background: @bg-image;
+        color: @text-colour;
+      }
+    }
 
-  .image(@bg-image, @text-colour: @text-color) when not (@text-colour = inherit) {
-    .header-colour(@text-colour);
-    // ID-78 Hanging fire on this for now .link-colour(@text-colour);
+    .boxstyle-xs {
+      .apply();
+    }
 
-    blockquote.quotes {
-      color: inherit;
+    .boxstyle_, .boxstyle-sm {
+      @media (min-width: @screen-sm-min) {
+        .apply();
+      }
+    }
+
+    .boxstyle-md {
+      @media (min-width: @screen-md-min) {
+        .apply();
+      }
+    }
+
+    .boxstyle-lg {
+      @media (min-width: @screen-lg-min) {
+        .apply();
+      }
     }
   }
 
-  .filled(@bg, @text-colour: @text-color) {
-    border: 0;
-    background: @bg;
-    color: @text-colour;
+  .image(@class, @bg-image, @text-colour: @text-color) when not (@text-colour = inherit) {
+    .apply() {
+      &@{class} {
+        .header-colour(@text-colour);
+        // ID-78 Hanging fire on this for now .link-colour(@text-colour);
 
-    @media print {
-      border: 1px solid @bg;
+        blockquote.quotes {
+          color: inherit;
+        }
+      }
+    }
+
+    .boxstyle-xs {
+      .apply();
+    }
+
+    .boxstyle_, .boxstyle-sm {
+      @media (min-width: @screen-sm-min) {
+        .apply();
+      }
+    }
+
+    .boxstyle-md {
+      @media (min-width: @screen-md-min) {
+        .apply();
+      }
+    }
+
+    .boxstyle-lg {
+      @media (min-width: @screen-lg-min) {
+        .apply();
+      }
     }
   }
 
-  .filled(@bg, @text-colour) when (lightness(@bg) < 50%) {
-    .link-colour(@text-colour);
-  }
+  .filled(@class, @bg, @text-colour: @text-color) {
+    // Filled boxstyles should flush at widths that the padding isn't added at
+    .flush() {
+      &@{class} {
+        padding: (@grid-gutter-width / 2);
+        margin-left: (-@grid-gutter-width / 2);
+        margin-right: (-@grid-gutter-width / 2);
+      }
+    }
 
-  .filled(@bg, @text-colour: @text-color) when not (@text-colour = inherit) {
-    .header-colour(@text-colour);
-    // ID-78 Hanging fire on this for now .link-colour(@text-colour);
+    .boxstyle_, .boxstyle-sm {
+      @media (max-width: @screen-xs-max) {
+        .flush();
+      }
+    }
 
-    blockquote.quotes {
-      color: inherit;
+    .boxstyle-md {
+      @media (max-width: @screen-sm-max) {
+        .flush();
+      }
+    }
+
+    .boxstyle-lg {
+      @media (max-width: @screen-md-max) {
+        .flush();
+      }
+    }
+
+    .boxstyle_, .boxstyle-xs, .boxstyle-sm, .boxstyle-md, .boxstyle-lg {
+      &@{class} {
+        border: 0;
+        background: @bg;
+        color: @text-colour;
+
+        @media print {
+          border: 1px solid @bg;
+        }
+      }
     }
   }
 
-  .bordered(@border-colour, @text-colour: inherit) {
-    background: none;
-    border: 1px solid @border-colour;
-    color: @text-colour;
+  .filled(@class, @bg, @text-colour) when (lightness(@bg) < 50%) {
+    .boxstyle_, .boxstyle-xs, .boxstyle-sm, .boxstyle-md, .boxstyle-lg {
+      &@{class} {
+        .link-colour(@text-colour);
+      }
+    }
   }
 
-  .bordered(@border-colour, @text-colour) when not (@text-colour = inherit) {
-    .header-colour(@text-colour);
-    // ID-78 Hanging fire on this for now .link-colour(@text-colour);
+  .filled(@class, @bg, @text-colour: @text-color) when not (@text-colour = inherit) {
+    .boxstyle_, .boxstyle-xs, .boxstyle-sm, .boxstyle-md, .boxstyle-lg {
+      &@{class} {
+        .header-colour(@text-colour);
+        // ID-78 Hanging fire on this for now .link-colour(@text-colour);
+
+        blockquote.quotes {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  .bordered(@class, @border-colour, @text-colour: inherit) {
+    .apply() {
+      &@{class} {
+        background: none;
+        border: 1px solid @border-colour;
+        color: @text-colour;
+      }
+    }
+
+    .boxstyle-xs {
+      .apply();
+    }
+
+    .boxstyle_, .boxstyle-sm {
+      @media (min-width: @screen-sm-min) {
+        .apply();
+      }
+    }
+
+    .boxstyle-md {
+      @media (min-width: @screen-md-min) {
+        .apply();
+      }
+    }
+
+    .boxstyle-lg {
+      @media (min-width: @screen-lg-min) {
+        .apply();
+      }
+    }
+  }
+
+  .bordered(@class, @border-colour, @text-colour) when not (@text-colour = inherit) {
+    .apply() {
+      &@{class} {
+        .header-colour(@text-colour);
+        // ID-78 Hanging fire on this for now .link-colour(@text-colour);
+      }
+    }
+
+    .boxstyle-xs {
+      .apply();
+    }
+
+    .boxstyle_, .boxstyle-sm {
+      @media (min-width: @screen-sm-min) {
+        .apply();
+      }
+    }
+
+    .boxstyle-md {
+      @media (min-width: @screen-md-min) {
+        .apply();
+      }
+    }
+
+    .boxstyle-lg {
+      @media (min-width: @screen-lg-min) {
+        .apply();
+      }
+    }
   }
 }

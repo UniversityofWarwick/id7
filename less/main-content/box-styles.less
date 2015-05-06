@@ -1,11 +1,19 @@
-.boxstyle_ {
-  margin: (@grid-gutter-width / 2); // ID6 styling
-  padding: (@grid-gutter-width / 2);
+.boxstyle_ { // legacy
+  .make-sm-boxstyle();
+}
 
-  .bordered-headings(none);
+.boxstyle-xs {
+  .make-xs-boxstyle();
+}
 
-  // Avoid breaking box styles when printing
-  @media print {
-    page-break-inside: avoid;
-  }
+.boxstyle-sm {
+  .make-sm-boxstyle();
+}
+
+.boxstyle-md {
+  .make-md-boxstyle();
+}
+
+.boxstyle-lg {
+  .make-lg-boxstyle();
 }

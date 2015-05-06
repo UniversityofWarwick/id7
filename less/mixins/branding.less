@@ -387,25 +387,9 @@
 }
 
 .apply-boxstyles-brand(@colour) {
-  .boxstyle_ {
-    &.box1 {
-      #boxstyle > .filled(screen(@colour, lighten(black, 85%)));
-    }
-
-    &.box2 {
-      #boxstyle > .filled(@gray-lighter);
-    }
-
-    &.box3 {
-      #boxstyle > .bordered(@colour);
-    }
-
-    &.box4 {
-      #boxstyle > .bordered(@gray-light);
-    }
-
-    &.box5 {
-      #boxstyle > .filled(@colour, white);
-    }
-  }
+  #boxstyle > .filled(~".box1", screen(@colour, lighten(black, 85%)));
+  #boxstyle > .filled(~".box2", @gray-lighter);
+  #boxstyle > .bordered(~".box3", @colour);
+  #boxstyle > .bordered(~".box4", @gray-light);
+  #boxstyle > .filled(~".box5", @colour, white);
 }

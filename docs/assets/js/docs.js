@@ -27,10 +27,8 @@
           top: function () {
             var offsetTop = $sideBar.offset().top;
             var sideBarMargin = parseInt($sideBar.children(0).css('margin-top'), 10);
-            var utilityOuterHeight = $('.id7-utility-bar').height();
-            var navOuterHeight = $('.id7-navigation').height();
 
-            return (this.top = offsetTop - navOuterHeight - utilityOuterHeight - sideBarMargin);
+            return (this.top = offsetTop - sideBarMargin);
           },
           bottom: function () {
             return (this.bottom = $('.id7-page-footer').outerHeight(true));

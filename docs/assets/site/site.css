@@ -650,131 +650,497 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
 .carousel .carousel-indicators li.active::after {
   color: #5b3069;
 }
-.boxstyle_.box1 {
+@media (max-width: 767px) {
+  .boxstyle_.box1,
+  .boxstyle-sm.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  .boxstyle-md.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  .boxstyle-lg.box1 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+.boxstyle_.box1,
+.boxstyle-xs.box1,
+.boxstyle-sm.box1,
+.boxstyle-md.box1,
+.boxstyle-lg.box1 {
   border: 0;
   background: #e6e0e9;
   color: #383838;
 }
 @media print {
-  .boxstyle_.box1 {
+  .boxstyle_.box1,
+  .boxstyle-xs.box1,
+  .boxstyle-sm.box1,
+  .boxstyle-md.box1,
+  .boxstyle-lg.box1 {
     border: 1px solid #e6e0e9;
   }
 }
 .boxstyle_.box1 h1,
+.boxstyle-xs.box1 h1,
+.boxstyle-sm.box1 h1,
+.boxstyle-md.box1 h1,
+.boxstyle-lg.box1 h1,
 .boxstyle_.box1 h2,
+.boxstyle-xs.box1 h2,
+.boxstyle-sm.box1 h2,
+.boxstyle-md.box1 h2,
+.boxstyle-lg.box1 h2,
 .boxstyle_.box1 h3,
+.boxstyle-xs.box1 h3,
+.boxstyle-sm.box1 h3,
+.boxstyle-md.box1 h3,
+.boxstyle-lg.box1 h3,
 .boxstyle_.box1 h4,
+.boxstyle-xs.box1 h4,
+.boxstyle-sm.box1 h4,
+.boxstyle-md.box1 h4,
+.boxstyle-lg.box1 h4,
 .boxstyle_.box1 h5,
+.boxstyle-xs.box1 h5,
+.boxstyle-sm.box1 h5,
+.boxstyle-md.box1 h5,
+.boxstyle-lg.box1 h5,
 .boxstyle_.box1 h6,
+.boxstyle-xs.box1 h6,
+.boxstyle-sm.box1 h6,
+.boxstyle-md.box1 h6,
+.boxstyle-lg.box1 h6,
 .boxstyle_.box1 .h1,
+.boxstyle-xs.box1 .h1,
+.boxstyle-sm.box1 .h1,
+.boxstyle-md.box1 .h1,
+.boxstyle-lg.box1 .h1,
 .boxstyle_.box1 .h2,
+.boxstyle-xs.box1 .h2,
+.boxstyle-sm.box1 .h2,
+.boxstyle-md.box1 .h2,
+.boxstyle-lg.box1 .h2,
 .boxstyle_.box1 .h3,
+.boxstyle-xs.box1 .h3,
+.boxstyle-sm.box1 .h3,
+.boxstyle-md.box1 .h3,
+.boxstyle-lg.box1 .h3,
 .boxstyle_.box1 .h4,
+.boxstyle-xs.box1 .h4,
+.boxstyle-sm.box1 .h4,
+.boxstyle-md.box1 .h4,
+.boxstyle-lg.box1 .h4,
 .boxstyle_.box1 .h5,
-.boxstyle_.box1 .h6 {
+.boxstyle-xs.box1 .h5,
+.boxstyle-sm.box1 .h5,
+.boxstyle-md.box1 .h5,
+.boxstyle-lg.box1 .h5,
+.boxstyle_.box1 .h6,
+.boxstyle-xs.box1 .h6,
+.boxstyle-sm.box1 .h6,
+.boxstyle-md.box1 .h6,
+.boxstyle-lg.box1 .h6 {
   color: #383838;
 }
-.boxstyle_.box1 blockquote.quotes {
+.boxstyle_.box1 blockquote.quotes,
+.boxstyle-xs.box1 blockquote.quotes,
+.boxstyle-sm.box1 blockquote.quotes,
+.boxstyle-md.box1 blockquote.quotes,
+.boxstyle-lg.box1 blockquote.quotes {
   color: inherit;
 }
-.boxstyle_.box2 {
+@media (max-width: 767px) {
+  .boxstyle_.box2,
+  .boxstyle-sm.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  .boxstyle-md.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  .boxstyle-lg.box2 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+.boxstyle_.box2,
+.boxstyle-xs.box2,
+.boxstyle-sm.box2,
+.boxstyle-md.box2,
+.boxstyle-lg.box2 {
   border: 0;
   background: #eeeeee;
   color: #383838;
 }
 @media print {
-  .boxstyle_.box2 {
+  .boxstyle_.box2,
+  .boxstyle-xs.box2,
+  .boxstyle-sm.box2,
+  .boxstyle-md.box2,
+  .boxstyle-lg.box2 {
     border: 1px solid #eeeeee;
   }
 }
 .boxstyle_.box2 h1,
+.boxstyle-xs.box2 h1,
+.boxstyle-sm.box2 h1,
+.boxstyle-md.box2 h1,
+.boxstyle-lg.box2 h1,
 .boxstyle_.box2 h2,
+.boxstyle-xs.box2 h2,
+.boxstyle-sm.box2 h2,
+.boxstyle-md.box2 h2,
+.boxstyle-lg.box2 h2,
 .boxstyle_.box2 h3,
+.boxstyle-xs.box2 h3,
+.boxstyle-sm.box2 h3,
+.boxstyle-md.box2 h3,
+.boxstyle-lg.box2 h3,
 .boxstyle_.box2 h4,
+.boxstyle-xs.box2 h4,
+.boxstyle-sm.box2 h4,
+.boxstyle-md.box2 h4,
+.boxstyle-lg.box2 h4,
 .boxstyle_.box2 h5,
+.boxstyle-xs.box2 h5,
+.boxstyle-sm.box2 h5,
+.boxstyle-md.box2 h5,
+.boxstyle-lg.box2 h5,
 .boxstyle_.box2 h6,
+.boxstyle-xs.box2 h6,
+.boxstyle-sm.box2 h6,
+.boxstyle-md.box2 h6,
+.boxstyle-lg.box2 h6,
 .boxstyle_.box2 .h1,
+.boxstyle-xs.box2 .h1,
+.boxstyle-sm.box2 .h1,
+.boxstyle-md.box2 .h1,
+.boxstyle-lg.box2 .h1,
 .boxstyle_.box2 .h2,
+.boxstyle-xs.box2 .h2,
+.boxstyle-sm.box2 .h2,
+.boxstyle-md.box2 .h2,
+.boxstyle-lg.box2 .h2,
 .boxstyle_.box2 .h3,
+.boxstyle-xs.box2 .h3,
+.boxstyle-sm.box2 .h3,
+.boxstyle-md.box2 .h3,
+.boxstyle-lg.box2 .h3,
 .boxstyle_.box2 .h4,
+.boxstyle-xs.box2 .h4,
+.boxstyle-sm.box2 .h4,
+.boxstyle-md.box2 .h4,
+.boxstyle-lg.box2 .h4,
 .boxstyle_.box2 .h5,
-.boxstyle_.box2 .h6 {
+.boxstyle-xs.box2 .h5,
+.boxstyle-sm.box2 .h5,
+.boxstyle-md.box2 .h5,
+.boxstyle-lg.box2 .h5,
+.boxstyle_.box2 .h6,
+.boxstyle-xs.box2 .h6,
+.boxstyle-sm.box2 .h6,
+.boxstyle-md.box2 .h6,
+.boxstyle-lg.box2 .h6 {
   color: #383838;
 }
-.boxstyle_.box2 blockquote.quotes {
+.boxstyle_.box2 blockquote.quotes,
+.boxstyle-xs.box2 blockquote.quotes,
+.boxstyle-sm.box2 blockquote.quotes,
+.boxstyle-md.box2 blockquote.quotes,
+.boxstyle-lg.box2 blockquote.quotes {
   color: inherit;
 }
-.boxstyle_.box3 {
+.boxstyle-xs.box3 {
   background: none;
   border: 1px solid #5b3069;
   color: inherit;
 }
-.boxstyle_.box4 {
+@media (min-width: 768px) {
+  .boxstyle_.box3,
+  .boxstyle-sm.box3 {
+    background: none;
+    border: 1px solid #5b3069;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  .boxstyle-md.box3 {
+    background: none;
+    border: 1px solid #5b3069;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  .boxstyle-lg.box3 {
+    background: none;
+    border: 1px solid #5b3069;
+    color: inherit;
+  }
+}
+.boxstyle-xs.box4 {
   background: none;
   border: 1px solid #777777;
   color: inherit;
 }
-.boxstyle_.box5 {
+@media (min-width: 768px) {
+  .boxstyle_.box4,
+  .boxstyle-sm.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 992px) {
+  .boxstyle-md.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  .boxstyle-lg.box4 {
+    background: none;
+    border: 1px solid #777777;
+    color: inherit;
+  }
+}
+@media (max-width: 767px) {
+  .boxstyle_.box5,
+  .boxstyle-sm.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991px) {
+  .boxstyle-md.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (max-width: 1199px) {
+  .boxstyle-lg.box5 {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+.boxstyle_.box5,
+.boxstyle-xs.box5,
+.boxstyle-sm.box5,
+.boxstyle-md.box5,
+.boxstyle-lg.box5 {
   border: 0;
   background: #5b3069;
   color: white;
 }
 @media print {
-  .boxstyle_.box5 {
+  .boxstyle_.box5,
+  .boxstyle-xs.box5,
+  .boxstyle-sm.box5,
+  .boxstyle-md.box5,
+  .boxstyle-lg.box5 {
     border: 1px solid #5b3069;
   }
 }
 html.no-not-selector .boxstyle_.box5 a,
+html.no-not-selector .boxstyle-xs.box5 a,
+html.no-not-selector .boxstyle-sm.box5 a,
+html.no-not-selector .boxstyle-md.box5 a,
+html.no-not-selector .boxstyle-lg.box5 a,
 html.no-not-selector .boxstyle_.box5 a:link,
-html.no-not-selector .boxstyle_.box5 a:visited {
+html.no-not-selector .boxstyle-xs.box5 a:link,
+html.no-not-selector .boxstyle-sm.box5 a:link,
+html.no-not-selector .boxstyle-md.box5 a:link,
+html.no-not-selector .boxstyle-lg.box5 a:link,
+html.no-not-selector .boxstyle_.box5 a:visited,
+html.no-not-selector .boxstyle-xs.box5 a:visited,
+html.no-not-selector .boxstyle-sm.box5 a:visited,
+html.no-not-selector .boxstyle-md.box5 a:visited,
+html.no-not-selector .boxstyle-lg.box5 a:visited {
   color: white;
 }
 .boxstyle_.box5 a:not(.btn),
+.boxstyle-xs.box5 a:not(.btn),
+.boxstyle-sm.box5 a:not(.btn),
+.boxstyle-md.box5 a:not(.btn),
+.boxstyle-lg.box5 a:not(.btn),
 .boxstyle_.box5 a:link:not(.btn),
-.boxstyle_.box5 a:visited:not(.btn) {
+.boxstyle-xs.box5 a:link:not(.btn),
+.boxstyle-sm.box5 a:link:not(.btn),
+.boxstyle-md.box5 a:link:not(.btn),
+.boxstyle-lg.box5 a:link:not(.btn),
+.boxstyle_.box5 a:visited:not(.btn),
+.boxstyle-xs.box5 a:visited:not(.btn),
+.boxstyle-sm.box5 a:visited:not(.btn),
+.boxstyle-md.box5 a:visited:not(.btn),
+.boxstyle-lg.box5 a:visited:not(.btn) {
   color: white;
 }
 html.no-not-selector .boxstyle_.box5 a:hover,
+html.no-not-selector .boxstyle-xs.box5 a:hover,
+html.no-not-selector .boxstyle-sm.box5 a:hover,
+html.no-not-selector .boxstyle-md.box5 a:hover,
+html.no-not-selector .boxstyle-lg.box5 a:hover,
 html.no-not-selector .boxstyle_.box5 a:focus,
-html.no-not-selector .boxstyle_.box5 a:active {
+html.no-not-selector .boxstyle-xs.box5 a:focus,
+html.no-not-selector .boxstyle-sm.box5 a:focus,
+html.no-not-selector .boxstyle-md.box5 a:focus,
+html.no-not-selector .boxstyle-lg.box5 a:focus,
+html.no-not-selector .boxstyle_.box5 a:active,
+html.no-not-selector .boxstyle-xs.box5 a:active,
+html.no-not-selector .boxstyle-sm.box5 a:active,
+html.no-not-selector .boxstyle-md.box5 a:active,
+html.no-not-selector .boxstyle-lg.box5 a:active {
   color: #cccccc;
 }
 .boxstyle_.box5 a:hover:not(.btn),
+.boxstyle-xs.box5 a:hover:not(.btn),
+.boxstyle-sm.box5 a:hover:not(.btn),
+.boxstyle-md.box5 a:hover:not(.btn),
+.boxstyle-lg.box5 a:hover:not(.btn),
 .boxstyle_.box5 a:focus:not(.btn),
-.boxstyle_.box5 a:active:not(.btn) {
+.boxstyle-xs.box5 a:focus:not(.btn),
+.boxstyle-sm.box5 a:focus:not(.btn),
+.boxstyle-md.box5 a:focus:not(.btn),
+.boxstyle-lg.box5 a:focus:not(.btn),
+.boxstyle_.box5 a:active:not(.btn),
+.boxstyle-xs.box5 a:active:not(.btn),
+.boxstyle-sm.box5 a:active:not(.btn),
+.boxstyle-md.box5 a:active:not(.btn),
+.boxstyle-lg.box5 a:active:not(.btn) {
   color: #cccccc;
 }
-.boxstyle_.box5 a:hover .new-window-link {
+.boxstyle_.box5 a:hover .new-window-link,
+.boxstyle-xs.box5 a:hover .new-window-link,
+.boxstyle-sm.box5 a:hover .new-window-link,
+.boxstyle-md.box5 a:hover .new-window-link,
+.boxstyle-lg.box5 a:hover .new-window-link {
   color: #cccccc;
 }
 .boxstyle_.box5 a:not(.btn),
+.boxstyle-xs.box5 a:not(.btn),
+.boxstyle-sm.box5 a:not(.btn),
+.boxstyle-md.box5 a:not(.btn),
+.boxstyle-lg.box5 a:not(.btn),
 .boxstyle_.box5 a:link:not(.btn),
-.boxstyle_.box5 a:visited:not(.btn) {
+.boxstyle-xs.box5 a:link:not(.btn),
+.boxstyle-sm.box5 a:link:not(.btn),
+.boxstyle-md.box5 a:link:not(.btn),
+.boxstyle-lg.box5 a:link:not(.btn),
+.boxstyle_.box5 a:visited:not(.btn),
+.boxstyle-xs.box5 a:visited:not(.btn),
+.boxstyle-sm.box5 a:visited:not(.btn),
+.boxstyle-md.box5 a:visited:not(.btn),
+.boxstyle-lg.box5 a:visited:not(.btn) {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
 .boxstyle_.box5 a:hover:not(.btn),
+.boxstyle-xs.box5 a:hover:not(.btn),
+.boxstyle-sm.box5 a:hover:not(.btn),
+.boxstyle-md.box5 a:hover:not(.btn),
+.boxstyle-lg.box5 a:hover:not(.btn),
 .boxstyle_.box5 a:focus:not(.btn),
-.boxstyle_.box5 a:active:not(.btn) {
+.boxstyle-xs.box5 a:focus:not(.btn),
+.boxstyle-sm.box5 a:focus:not(.btn),
+.boxstyle-md.box5 a:focus:not(.btn),
+.boxstyle-lg.box5 a:focus:not(.btn),
+.boxstyle_.box5 a:active:not(.btn),
+.boxstyle-xs.box5 a:active:not(.btn),
+.boxstyle-sm.box5 a:active:not(.btn),
+.boxstyle-md.box5 a:active:not(.btn),
+.boxstyle-lg.box5 a:active:not(.btn) {
   -webkit-text-decoration-color: #cccccc;
   -moz-text-decoration-color: #cccccc;
        text-decoration-color: #cccccc;
 }
 .boxstyle_.box5 h1,
+.boxstyle-xs.box5 h1,
+.boxstyle-sm.box5 h1,
+.boxstyle-md.box5 h1,
+.boxstyle-lg.box5 h1,
 .boxstyle_.box5 h2,
+.boxstyle-xs.box5 h2,
+.boxstyle-sm.box5 h2,
+.boxstyle-md.box5 h2,
+.boxstyle-lg.box5 h2,
 .boxstyle_.box5 h3,
+.boxstyle-xs.box5 h3,
+.boxstyle-sm.box5 h3,
+.boxstyle-md.box5 h3,
+.boxstyle-lg.box5 h3,
 .boxstyle_.box5 h4,
+.boxstyle-xs.box5 h4,
+.boxstyle-sm.box5 h4,
+.boxstyle-md.box5 h4,
+.boxstyle-lg.box5 h4,
 .boxstyle_.box5 h5,
+.boxstyle-xs.box5 h5,
+.boxstyle-sm.box5 h5,
+.boxstyle-md.box5 h5,
+.boxstyle-lg.box5 h5,
 .boxstyle_.box5 h6,
+.boxstyle-xs.box5 h6,
+.boxstyle-sm.box5 h6,
+.boxstyle-md.box5 h6,
+.boxstyle-lg.box5 h6,
 .boxstyle_.box5 .h1,
+.boxstyle-xs.box5 .h1,
+.boxstyle-sm.box5 .h1,
+.boxstyle-md.box5 .h1,
+.boxstyle-lg.box5 .h1,
 .boxstyle_.box5 .h2,
+.boxstyle-xs.box5 .h2,
+.boxstyle-sm.box5 .h2,
+.boxstyle-md.box5 .h2,
+.boxstyle-lg.box5 .h2,
 .boxstyle_.box5 .h3,
+.boxstyle-xs.box5 .h3,
+.boxstyle-sm.box5 .h3,
+.boxstyle-md.box5 .h3,
+.boxstyle-lg.box5 .h3,
 .boxstyle_.box5 .h4,
+.boxstyle-xs.box5 .h4,
+.boxstyle-sm.box5 .h4,
+.boxstyle-md.box5 .h4,
+.boxstyle-lg.box5 .h4,
 .boxstyle_.box5 .h5,
-.boxstyle_.box5 .h6 {
+.boxstyle-xs.box5 .h5,
+.boxstyle-sm.box5 .h5,
+.boxstyle-md.box5 .h5,
+.boxstyle-lg.box5 .h5,
+.boxstyle_.box5 .h6,
+.boxstyle-xs.box5 .h6,
+.boxstyle-sm.box5 .h6,
+.boxstyle-md.box5 .h6,
+.boxstyle-lg.box5 .h6 {
   color: white;
 }
-.boxstyle_.box5 blockquote.quotes {
+.boxstyle_.box5 blockquote.quotes,
+.boxstyle-xs.box5 blockquote.quotes,
+.boxstyle-sm.box5 blockquote.quotes,
+.boxstyle-md.box5 blockquote.quotes,
+.boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
