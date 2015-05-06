@@ -205,6 +205,39 @@ ul.branded {
     &:nth-child(7n + 6):before { color: @id7-brand-orange; }
     &:nth-child(7n + 7):before { color: @id7-brand-gray; }
   }
+
+  list-style: none;
+
+  li:before {
+    .fa();
+    font-size: 12px;
+
+    content: @fa-var-play;
+    position: absolute;
+    margin-left: -18px;
+    margin-top: 1px;
+
+    .opacity(0.9);
+
+    line-height: floor((ceil((@main-font-size * @font-scale-xs)) * @line-height-base));
+
+    @media (min-width: @grid-float-breakpoint) {
+      line-height: floor((@main-font-size * @line-height-base));
+    }
+  }
+
+  ul li:before {
+    .opacity(0.8);
+  }
+
+  ul ul li:before {
+    font-size: (0.8 * 12px);
+    .opacity(0.7);
+  }
+
+  ul ul ul li:before {
+    .opacity(0.6);
+  }
 }
 
 blockquote.branded {

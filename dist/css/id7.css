@@ -9508,53 +9508,28 @@ body {
 .id7-main-content-area ol ol {
   margin-top: 6px;
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) {
-  list-style: none;
+.id7-main-content-area ul {
+  list-style-type: square;
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) li:before {
-  position: absolute;
-  display: inline-block;
-  margin-top: 1px;
-  margin-left: -18px;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  font-size: 12px;
-  line-height: 22px;
-  content: "\f04b";
-  filter: alpha(opacity=90);
-  opacity: .9;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-       -o-transform: translate(0, 0);
-          transform: translate(0, 0);
-
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.id7-main-content-area ul ul,
+.id7-main-content-area ol ul {
+  list-style-type: circle;
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) li:before.pull-left {
-  margin-right: .3em;
+.id7-main-content-area ol ol ul,
+.id7-main-content-area ol ul ul,
+.id7-main-content-area ul ol ul,
+.id7-main-content-area ul ul ul {
+  list-style-type: disc;
 }
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) li:before.pull-right {
-  margin-left: .3em;
-}
-@media (min-width: 768px) {
-  .id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) li:before {
-    line-height: 25px;
-  }
-}
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) ul li:before {
-  filter: alpha(opacity=80);
-  opacity: .8;
-}
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) ul ul li:before {
-  font-size: 9.6px;
-  filter: alpha(opacity=70);
-  opacity: .7;
-}
-.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group):not(.list-unstyled):not(.list-inline) ul ul ul li:before {
-  filter: alpha(opacity=60);
-  opacity: .6;
+.id7-main-content-area ol ol ol ul,
+.id7-main-content-area ol ol ul ul,
+.id7-main-content-area ol ul ol ul,
+.id7-main-content-area ol ul ul ul,
+.id7-main-content-area ul ol ol ul,
+.id7-main-content-area ul ol ul ul,
+.id7-main-content-area ul ul ol ul,
+.id7-main-content-area ul ul ul ul {
+  list-style-type: square;
 }
 .id7-wide-table-wrapper-container {
   margin-bottom: 22px;
