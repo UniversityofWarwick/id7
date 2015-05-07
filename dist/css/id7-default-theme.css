@@ -27,39 +27,29 @@ h6,
 .h6 {
   color: #5b3069;
 }
-html.no-not-selector a,
-html.no-not-selector a:link,
-html.no-not-selector a:visited {
+a,
+a:link,
+a:visited {
   color: #5b3069;
 }
-a:not(.btn),
-a:link:not(.btn),
-a:visited:not(.btn) {
-  color: #5b3069;
-}
-html.no-not-selector a:hover,
-html.no-not-selector a:focus,
-html.no-not-selector a:active {
-  color: #1e1023;
-}
-a:hover:not(.btn),
-a:focus:not(.btn),
-a:active:not(.btn) {
+a:hover,
+a:focus,
+a:active {
   color: #1e1023;
 }
 a:hover .new-window-link {
   color: #1e1023;
 }
-a:not(.btn),
-a:link:not(.btn),
-a:visited:not(.btn) {
+a,
+a:link,
+a:visited {
   -webkit-text-decoration-color: #9850af;
      -moz-text-decoration-color: #9850af;
           text-decoration-color: #9850af;
 }
-a:hover:not(.btn),
-a:focus:not(.btn),
-a:active:not(.btn) {
+a:hover,
+a:focus,
+a:active {
   -webkit-text-decoration-color: #1e1023;
      -moz-text-decoration-color: #1e1023;
           text-decoration-color: #1e1023;
@@ -74,39 +64,29 @@ blockquote.quotes::before {
   color: white;
   background: #5b3069;
 }
-html.no-not-selector .brand-bg a,
-html.no-not-selector .brand-bg a:link,
-html.no-not-selector .brand-bg a:visited {
+.brand-bg a,
+.brand-bg a:link,
+.brand-bg a:visited {
   color: white !important;
 }
-.brand-bg a:not(.btn),
-.brand-bg a:link:not(.btn),
-.brand-bg a:visited:not(.btn) {
-  color: white !important;
-}
-html.no-not-selector .brand-bg a:hover,
-html.no-not-selector .brand-bg a:focus,
-html.no-not-selector .brand-bg a:active {
-  color: #ccc !important;
-}
-.brand-bg a:hover:not(.btn),
-.brand-bg a:focus:not(.btn),
-.brand-bg a:active:not(.btn) {
+.brand-bg a:hover,
+.brand-bg a:focus,
+.brand-bg a:active {
   color: #ccc !important;
 }
 .brand-bg a:hover .new-window-link {
   color: #ccc !important;
 }
-.brand-bg a:not(.btn),
-.brand-bg a:link:not(.btn),
-.brand-bg a:visited:not(.btn) {
+.brand-bg a,
+.brand-bg a:link,
+.brand-bg a:visited {
   -webkit-text-decoration-color: #fff !important;
      -moz-text-decoration-color: #fff !important;
           text-decoration-color: #fff !important;
 }
-.brand-bg a:hover:not(.btn),
-.brand-bg a:focus:not(.btn),
-.brand-bg a:active:not(.btn) {
+.brand-bg a:hover,
+.brand-bg a:focus,
+.brand-bg a:active {
   -webkit-text-decoration-color: #ccc !important;
      -moz-text-decoration-color: #ccc !important;
           text-decoration-color: #ccc !important;
@@ -114,39 +94,29 @@ html.no-not-selector .brand-bg a:active {
 .brand-text {
   color: #5b3069;
 }
-html.no-not-selector .brand-text a,
-html.no-not-selector .brand-text a:link,
-html.no-not-selector .brand-text a:visited {
+.brand-text a,
+.brand-text a:link,
+.brand-text a:visited {
   color: #5b3069 !important;
 }
-.brand-text a:not(.btn),
-.brand-text a:link:not(.btn),
-.brand-text a:visited:not(.btn) {
-  color: #5b3069 !important;
-}
-html.no-not-selector .brand-text a:hover,
-html.no-not-selector .brand-text a:focus,
-html.no-not-selector .brand-text a:active {
-  color: #1e1023 !important;
-}
-.brand-text a:hover:not(.btn),
-.brand-text a:focus:not(.btn),
-.brand-text a:active:not(.btn) {
+.brand-text a:hover,
+.brand-text a:focus,
+.brand-text a:active {
   color: #1e1023 !important;
 }
 .brand-text a:hover .new-window-link {
   color: #1e1023 !important;
 }
-.brand-text a:not(.btn),
-.brand-text a:link:not(.btn),
-.brand-text a:visited:not(.btn) {
+.brand-text a,
+.brand-text a:link,
+.brand-text a:visited {
   -webkit-text-decoration-color: #9850af !important;
      -moz-text-decoration-color: #9850af !important;
           text-decoration-color: #9850af !important;
 }
-.brand-text a:hover:not(.btn),
-.brand-text a:focus:not(.btn),
-.brand-text a:active:not(.btn) {
+.brand-text a:hover,
+.brand-text a:focus,
+.brand-text a:active {
   -webkit-text-decoration-color: #1e1023 !important;
      -moz-text-decoration-color: #1e1023 !important;
           text-decoration-color: #1e1023 !important;
@@ -493,39 +463,29 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-page-footer .id7-app-footer .h6 {
   color: white;
 }
-html.no-not-selector .id7-page-footer .id7-app-footer a,
-html.no-not-selector .id7-page-footer .id7-app-footer a:link,
-html.no-not-selector .id7-page-footer .id7-app-footer a:visited {
+.id7-page-footer .id7-app-footer a,
+.id7-page-footer .id7-app-footer a:link,
+.id7-page-footer .id7-app-footer a:visited {
   color: white;
 }
-.id7-page-footer .id7-app-footer a:not(.btn),
-.id7-page-footer .id7-app-footer a:link:not(.btn),
-.id7-page-footer .id7-app-footer a:visited:not(.btn) {
-  color: white;
-}
-html.no-not-selector .id7-page-footer .id7-app-footer a:hover,
-html.no-not-selector .id7-page-footer .id7-app-footer a:focus,
-html.no-not-selector .id7-page-footer .id7-app-footer a:active {
-  color: #ccc;
-}
-.id7-page-footer .id7-app-footer a:hover:not(.btn),
-.id7-page-footer .id7-app-footer a:focus:not(.btn),
-.id7-page-footer .id7-app-footer a:active:not(.btn) {
+.id7-page-footer .id7-app-footer a:hover,
+.id7-page-footer .id7-app-footer a:focus,
+.id7-page-footer .id7-app-footer a:active {
   color: #ccc;
 }
 .id7-page-footer .id7-app-footer a:hover .new-window-link {
   color: #ccc;
 }
-.id7-page-footer .id7-app-footer a:not(.btn),
-.id7-page-footer .id7-app-footer a:link:not(.btn),
-.id7-page-footer .id7-app-footer a:visited:not(.btn) {
+.id7-page-footer .id7-app-footer a,
+.id7-page-footer .id7-app-footer a:link,
+.id7-page-footer .id7-app-footer a:visited {
   -webkit-text-decoration-color: #fff;
      -moz-text-decoration-color: #fff;
           text-decoration-color: #fff;
 }
-.id7-page-footer .id7-app-footer a:hover:not(.btn),
-.id7-page-footer .id7-app-footer a:focus:not(.btn),
-.id7-page-footer .id7-app-footer a:active:not(.btn) {
+.id7-page-footer .id7-app-footer a:hover,
+.id7-page-footer .id7-app-footer a:focus,
+.id7-page-footer .id7-app-footer a:active {
   -webkit-text-decoration-color: #ccc;
      -moz-text-decoration-color: #ccc;
           text-decoration-color: #ccc;
@@ -558,39 +518,29 @@ html.no-not-selector .id7-page-footer .id7-app-footer a:active {
 .id7-page-footer.id7-footer-coloured .id7-site-footer .h6 {
   color: #383838;
 }
-html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a,
-html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:link,
-html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:visited {
+.id7-page-footer.id7-footer-coloured .id7-site-footer a,
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:link,
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:visited {
   color: #383838;
 }
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:not(.btn),
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:link:not(.btn),
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:visited:not(.btn) {
-  color: #383838;
-}
-html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover,
-html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
-html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
-  color: #050505;
-}
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:hover:not(.btn),
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:focus:not(.btn),
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:active:not(.btn) {
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:hover,
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   color: #050505;
 }
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link {
   color: #050505;
 }
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:not(.btn),
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:link:not(.btn),
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:visited:not(.btn) {
+.id7-page-footer.id7-footer-coloured .id7-site-footer a,
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:link,
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:visited {
   -webkit-text-decoration-color: #6b6b6b;
      -moz-text-decoration-color: #6b6b6b;
           text-decoration-color: #6b6b6b;
 }
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:hover:not(.btn),
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:focus:not(.btn),
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:active:not(.btn) {
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:hover,
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   -webkit-text-decoration-color: #050505;
      -moz-text-decoration-color: #050505;
           text-decoration-color: #050505;
@@ -941,72 +891,38 @@ html.no-not-selector .id7-page-footer.id7-footer-coloured .id7-site-footer a:act
     border: 1px solid #5b3069;
   }
 }
-html.no-not-selector .boxstyle_.box5 a,
-html.no-not-selector .boxstyle-xs.box5 a,
-html.no-not-selector .boxstyle-sm.box5 a,
-html.no-not-selector .boxstyle-md.box5 a,
-html.no-not-selector .boxstyle-lg.box5 a,
-html.no-not-selector .boxstyle_.box5 a:link,
-html.no-not-selector .boxstyle-xs.box5 a:link,
-html.no-not-selector .boxstyle-sm.box5 a:link,
-html.no-not-selector .boxstyle-md.box5 a:link,
-html.no-not-selector .boxstyle-lg.box5 a:link,
-html.no-not-selector .boxstyle_.box5 a:visited,
-html.no-not-selector .boxstyle-xs.box5 a:visited,
-html.no-not-selector .boxstyle-sm.box5 a:visited,
-html.no-not-selector .boxstyle-md.box5 a:visited,
-html.no-not-selector .boxstyle-lg.box5 a:visited {
+.boxstyle_.box5 a,
+.boxstyle-xs.box5 a,
+.boxstyle-sm.box5 a,
+.boxstyle-md.box5 a,
+.boxstyle-lg.box5 a,
+.boxstyle_.box5 a:link,
+.boxstyle-xs.box5 a:link,
+.boxstyle-sm.box5 a:link,
+.boxstyle-md.box5 a:link,
+.boxstyle-lg.box5 a:link,
+.boxstyle_.box5 a:visited,
+.boxstyle-xs.box5 a:visited,
+.boxstyle-sm.box5 a:visited,
+.boxstyle-md.box5 a:visited,
+.boxstyle-lg.box5 a:visited {
   color: white;
 }
-.boxstyle_.box5 a:not(.btn),
-.boxstyle-xs.box5 a:not(.btn),
-.boxstyle-sm.box5 a:not(.btn),
-.boxstyle-md.box5 a:not(.btn),
-.boxstyle-lg.box5 a:not(.btn),
-.boxstyle_.box5 a:link:not(.btn),
-.boxstyle-xs.box5 a:link:not(.btn),
-.boxstyle-sm.box5 a:link:not(.btn),
-.boxstyle-md.box5 a:link:not(.btn),
-.boxstyle-lg.box5 a:link:not(.btn),
-.boxstyle_.box5 a:visited:not(.btn),
-.boxstyle-xs.box5 a:visited:not(.btn),
-.boxstyle-sm.box5 a:visited:not(.btn),
-.boxstyle-md.box5 a:visited:not(.btn),
-.boxstyle-lg.box5 a:visited:not(.btn) {
-  color: white;
-}
-html.no-not-selector .boxstyle_.box5 a:hover,
-html.no-not-selector .boxstyle-xs.box5 a:hover,
-html.no-not-selector .boxstyle-sm.box5 a:hover,
-html.no-not-selector .boxstyle-md.box5 a:hover,
-html.no-not-selector .boxstyle-lg.box5 a:hover,
-html.no-not-selector .boxstyle_.box5 a:focus,
-html.no-not-selector .boxstyle-xs.box5 a:focus,
-html.no-not-selector .boxstyle-sm.box5 a:focus,
-html.no-not-selector .boxstyle-md.box5 a:focus,
-html.no-not-selector .boxstyle-lg.box5 a:focus,
-html.no-not-selector .boxstyle_.box5 a:active,
-html.no-not-selector .boxstyle-xs.box5 a:active,
-html.no-not-selector .boxstyle-sm.box5 a:active,
-html.no-not-selector .boxstyle-md.box5 a:active,
-html.no-not-selector .boxstyle-lg.box5 a:active {
-  color: #ccc;
-}
-.boxstyle_.box5 a:hover:not(.btn),
-.boxstyle-xs.box5 a:hover:not(.btn),
-.boxstyle-sm.box5 a:hover:not(.btn),
-.boxstyle-md.box5 a:hover:not(.btn),
-.boxstyle-lg.box5 a:hover:not(.btn),
-.boxstyle_.box5 a:focus:not(.btn),
-.boxstyle-xs.box5 a:focus:not(.btn),
-.boxstyle-sm.box5 a:focus:not(.btn),
-.boxstyle-md.box5 a:focus:not(.btn),
-.boxstyle-lg.box5 a:focus:not(.btn),
-.boxstyle_.box5 a:active:not(.btn),
-.boxstyle-xs.box5 a:active:not(.btn),
-.boxstyle-sm.box5 a:active:not(.btn),
-.boxstyle-md.box5 a:active:not(.btn),
-.boxstyle-lg.box5 a:active:not(.btn) {
+.boxstyle_.box5 a:hover,
+.boxstyle-xs.box5 a:hover,
+.boxstyle-sm.box5 a:hover,
+.boxstyle-md.box5 a:hover,
+.boxstyle-lg.box5 a:hover,
+.boxstyle_.box5 a:focus,
+.boxstyle-xs.box5 a:focus,
+.boxstyle-sm.box5 a:focus,
+.boxstyle-md.box5 a:focus,
+.boxstyle-lg.box5 a:focus,
+.boxstyle_.box5 a:active,
+.boxstyle-xs.box5 a:active,
+.boxstyle-sm.box5 a:active,
+.boxstyle-md.box5 a:active,
+.boxstyle-lg.box5 a:active {
   color: #ccc;
 }
 .boxstyle_.box5 a:hover .new-window-link,
@@ -1016,40 +932,40 @@ html.no-not-selector .boxstyle-lg.box5 a:active {
 .boxstyle-lg.box5 a:hover .new-window-link {
   color: #ccc;
 }
-.boxstyle_.box5 a:not(.btn),
-.boxstyle-xs.box5 a:not(.btn),
-.boxstyle-sm.box5 a:not(.btn),
-.boxstyle-md.box5 a:not(.btn),
-.boxstyle-lg.box5 a:not(.btn),
-.boxstyle_.box5 a:link:not(.btn),
-.boxstyle-xs.box5 a:link:not(.btn),
-.boxstyle-sm.box5 a:link:not(.btn),
-.boxstyle-md.box5 a:link:not(.btn),
-.boxstyle-lg.box5 a:link:not(.btn),
-.boxstyle_.box5 a:visited:not(.btn),
-.boxstyle-xs.box5 a:visited:not(.btn),
-.boxstyle-sm.box5 a:visited:not(.btn),
-.boxstyle-md.box5 a:visited:not(.btn),
-.boxstyle-lg.box5 a:visited:not(.btn) {
+.boxstyle_.box5 a,
+.boxstyle-xs.box5 a,
+.boxstyle-sm.box5 a,
+.boxstyle-md.box5 a,
+.boxstyle-lg.box5 a,
+.boxstyle_.box5 a:link,
+.boxstyle-xs.box5 a:link,
+.boxstyle-sm.box5 a:link,
+.boxstyle-md.box5 a:link,
+.boxstyle-lg.box5 a:link,
+.boxstyle_.box5 a:visited,
+.boxstyle-xs.box5 a:visited,
+.boxstyle-sm.box5 a:visited,
+.boxstyle-md.box5 a:visited,
+.boxstyle-lg.box5 a:visited {
   -webkit-text-decoration-color: #fff;
      -moz-text-decoration-color: #fff;
           text-decoration-color: #fff;
 }
-.boxstyle_.box5 a:hover:not(.btn),
-.boxstyle-xs.box5 a:hover:not(.btn),
-.boxstyle-sm.box5 a:hover:not(.btn),
-.boxstyle-md.box5 a:hover:not(.btn),
-.boxstyle-lg.box5 a:hover:not(.btn),
-.boxstyle_.box5 a:focus:not(.btn),
-.boxstyle-xs.box5 a:focus:not(.btn),
-.boxstyle-sm.box5 a:focus:not(.btn),
-.boxstyle-md.box5 a:focus:not(.btn),
-.boxstyle-lg.box5 a:focus:not(.btn),
-.boxstyle_.box5 a:active:not(.btn),
-.boxstyle-xs.box5 a:active:not(.btn),
-.boxstyle-sm.box5 a:active:not(.btn),
-.boxstyle-md.box5 a:active:not(.btn),
-.boxstyle-lg.box5 a:active:not(.btn) {
+.boxstyle_.box5 a:hover,
+.boxstyle-xs.box5 a:hover,
+.boxstyle-sm.box5 a:hover,
+.boxstyle-md.box5 a:hover,
+.boxstyle-lg.box5 a:hover,
+.boxstyle_.box5 a:focus,
+.boxstyle-xs.box5 a:focus,
+.boxstyle-sm.box5 a:focus,
+.boxstyle-md.box5 a:focus,
+.boxstyle-lg.box5 a:focus,
+.boxstyle_.box5 a:active,
+.boxstyle-xs.box5 a:active,
+.boxstyle-sm.box5 a:active,
+.boxstyle-md.box5 a:active,
+.boxstyle-lg.box5 a:active {
   -webkit-text-decoration-color: #ccc;
      -moz-text-decoration-color: #ccc;
           text-decoration-color: #ccc;
@@ -1122,5 +1038,9 @@ html.no-not-selector .boxstyle-lg.box5 a:active {
 .boxstyle-md.box5 blockquote.quotes,
 .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
+}
+.pagination > li a,
+.pagination > li span {
+  color: #5b3069;
 }
 /*# sourceMappingURL=id7-default-theme.css.map */

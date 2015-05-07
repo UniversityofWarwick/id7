@@ -66,6 +66,8 @@
 .id7-main-content-area > header:after,
 .id7-main-content-area > .id7-main-content:before,
 .id7-main-content-area > .id7-main-content:after,
+.id7-paging:before,
+.id7-paging:after,
 footer .id7-site-footer:before,
 footer .id7-site-footer:after,
 footer .id7-app-footer:before,
@@ -73,9 +75,7 @@ footer .id7-app-footer:after,
 .id7-utility-bar:before,
 .id7-utility-bar:after,
 .id7-masthead:before,
-.id7-masthead:after,
-.more-links-sitemap:before,
-.more-links-sitemap:after {
+.id7-masthead:after {
   content: " ";
   display: table;
 }
@@ -100,11 +100,11 @@ footer .id7-app-footer:after,
 .id7-masthead .id7-logo-row:after,
 .id7-main-content-area > header:after,
 .id7-main-content-area > .id7-main-content:after,
+.id7-paging:after,
 footer .id7-site-footer:after,
 footer .id7-app-footer:after,
 .id7-utility-bar:after,
-.id7-masthead:after,
-.more-links-sitemap:after {
+.id7-masthead:after {
   clear: both;
 }
 .btn-group-lg > .btn {
@@ -332,59 +332,39 @@ body {
   text-align: right;
   color: white;
 }
-html.no-not-selector .carousel-nav a,
-html.no-not-selector .carousel-nav a:link,
-html.no-not-selector .carousel-nav a:visited {
+.carousel-nav a,
+.carousel-nav a:link,
+.carousel-nav a:visited {
   text-decoration: none;
 }
-.carousel-nav a:not(.btn),
-.carousel-nav a:link:not(.btn),
-.carousel-nav a:visited:not(.btn) {
-  text-decoration: none;
-}
-html.no-not-selector .carousel-nav a:hover,
-html.no-not-selector .carousel-nav a:focus,
-html.no-not-selector .carousel-nav a:active {
+.carousel-nav a:hover,
+.carousel-nav a:focus,
+.carousel-nav a:active {
   text-decoration: underline;
 }
-.carousel-nav a:hover:not(.btn),
-.carousel-nav a:focus:not(.btn),
-.carousel-nav a:active:not(.btn) {
-  text-decoration: underline;
-}
-html.no-not-selector .carousel-nav a,
-html.no-not-selector .carousel-nav a:link,
-html.no-not-selector .carousel-nav a:visited {
+.carousel-nav a,
+.carousel-nav a:link,
+.carousel-nav a:visited {
   color: white;
 }
-.carousel-nav a:not(.btn),
-.carousel-nav a:link:not(.btn),
-.carousel-nav a:visited:not(.btn) {
-  color: white;
-}
-html.no-not-selector .carousel-nav a:hover,
-html.no-not-selector .carousel-nav a:focus,
-html.no-not-selector .carousel-nav a:active {
-  color: #e0e4f8;
-}
-.carousel-nav a:hover:not(.btn),
-.carousel-nav a:focus:not(.btn),
-.carousel-nav a:active:not(.btn) {
+.carousel-nav a:hover,
+.carousel-nav a:focus,
+.carousel-nav a:active {
   color: #e0e4f8;
 }
 .carousel-nav a:hover .new-window-link {
   color: #e0e4f8;
 }
-.carousel-nav a:not(.btn),
-.carousel-nav a:link:not(.btn),
-.carousel-nav a:visited:not(.btn) {
+.carousel-nav a,
+.carousel-nav a:link,
+.carousel-nav a:visited {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
-.carousel-nav a:hover:not(.btn),
-.carousel-nav a:focus:not(.btn),
-.carousel-nav a:active:not(.btn) {
+.carousel-nav a:hover,
+.carousel-nav a:focus,
+.carousel-nav a:active {
   -webkit-text-decoration-color: #e0e4f8;
   -moz-text-decoration-color: #e0e4f8;
        text-decoration-color: #e0e4f8;
@@ -423,24 +403,14 @@ html.no-not-selector .carousel-nav a:active {
 .jumbotron-carousel .jumbotron .col-xs-1, .jumbotron-carousel .jumbotron .col-sm-1, .jumbotron-carousel .jumbotron .col-md-1, .jumbotron-carousel .jumbotron .col-lg-1, .jumbotron-carousel .jumbotron .col-xs-2, .jumbotron-carousel .jumbotron .col-sm-2, .jumbotron-carousel .jumbotron .col-md-2, .jumbotron-carousel .jumbotron .col-lg-2, .jumbotron-carousel .jumbotron .col-xs-3, .jumbotron-carousel .jumbotron .col-sm-3, .jumbotron-carousel .jumbotron .col-md-3, .jumbotron-carousel .jumbotron .col-lg-3, .jumbotron-carousel .jumbotron .col-xs-4, .jumbotron-carousel .jumbotron .col-sm-4, .jumbotron-carousel .jumbotron .col-md-4, .jumbotron-carousel .jumbotron .col-lg-4, .jumbotron-carousel .jumbotron .col-xs-5, .jumbotron-carousel .jumbotron .col-sm-5, .jumbotron-carousel .jumbotron .col-md-5, .jumbotron-carousel .jumbotron .col-lg-5, .jumbotron-carousel .jumbotron .col-xs-6, .jumbotron-carousel .jumbotron .col-sm-6, .jumbotron-carousel .jumbotron .col-md-6, .jumbotron-carousel .jumbotron .col-lg-6, .jumbotron-carousel .jumbotron .col-xs-7, .jumbotron-carousel .jumbotron .col-sm-7, .jumbotron-carousel .jumbotron .col-md-7, .jumbotron-carousel .jumbotron .col-lg-7, .jumbotron-carousel .jumbotron .col-xs-8, .jumbotron-carousel .jumbotron .col-sm-8, .jumbotron-carousel .jumbotron .col-md-8, .jumbotron-carousel .jumbotron .col-lg-8, .jumbotron-carousel .jumbotron .col-xs-9, .jumbotron-carousel .jumbotron .col-sm-9, .jumbotron-carousel .jumbotron .col-md-9, .jumbotron-carousel .jumbotron .col-lg-9, .jumbotron-carousel .jumbotron .col-xs-10, .jumbotron-carousel .jumbotron .col-sm-10, .jumbotron-carousel .jumbotron .col-md-10, .jumbotron-carousel .jumbotron .col-lg-10, .jumbotron-carousel .jumbotron .col-xs-11, .jumbotron-carousel .jumbotron .col-sm-11, .jumbotron-carousel .jumbotron .col-md-11, .jumbotron-carousel .jumbotron .col-lg-11, .jumbotron-carousel .jumbotron .col-xs-12, .jumbotron-carousel .jumbotron .col-sm-12, .jumbotron-carousel .jumbotron .col-md-12, .jumbotron-carousel .jumbotron .col-lg-12:empty {
   min-height: 0;
 }
-html.no-not-selector .jumbotron-carousel a,
-html.no-not-selector .jumbotron-carousel a:link,
-html.no-not-selector .jumbotron-carousel a:visited {
+.jumbotron-carousel a,
+.jumbotron-carousel a:link,
+.jumbotron-carousel a:visited {
   text-decoration: none;
 }
-.jumbotron-carousel a:not(.btn),
-.jumbotron-carousel a:link:not(.btn),
-.jumbotron-carousel a:visited:not(.btn) {
-  text-decoration: none;
-}
-html.no-not-selector .jumbotron-carousel a:hover,
-html.no-not-selector .jumbotron-carousel a:focus,
-html.no-not-selector .jumbotron-carousel a:active {
-  text-decoration: underline;
-}
-.jumbotron-carousel a:hover:not(.btn),
-.jumbotron-carousel a:focus:not(.btn),
-.jumbotron-carousel a:active:not(.btn) {
+.jumbotron-carousel a:hover,
+.jumbotron-carousel a:focus,
+.jumbotron-carousel a:active {
   text-decoration: underline;
 }
 .jumbotron-carousel .jumbotron {
@@ -449,39 +419,29 @@ html.no-not-selector .jumbotron-carousel a:active {
   background: #5b3069;
   color: white;
 }
-html.no-not-selector .jumbotron-carousel .jumbotron a,
-html.no-not-selector .jumbotron-carousel .jumbotron a:link,
-html.no-not-selector .jumbotron-carousel .jumbotron a:visited {
+.jumbotron-carousel .jumbotron a,
+.jumbotron-carousel .jumbotron a:link,
+.jumbotron-carousel .jumbotron a:visited {
   color: white;
 }
-.jumbotron-carousel .jumbotron a:not(.btn),
-.jumbotron-carousel .jumbotron a:link:not(.btn),
-.jumbotron-carousel .jumbotron a:visited:not(.btn) {
-  color: white;
-}
-html.no-not-selector .jumbotron-carousel .jumbotron a:hover,
-html.no-not-selector .jumbotron-carousel .jumbotron a:focus,
-html.no-not-selector .jumbotron-carousel .jumbotron a:active {
-  color: #e0e4f8;
-}
-.jumbotron-carousel .jumbotron a:hover:not(.btn),
-.jumbotron-carousel .jumbotron a:focus:not(.btn),
-.jumbotron-carousel .jumbotron a:active:not(.btn) {
+.jumbotron-carousel .jumbotron a:hover,
+.jumbotron-carousel .jumbotron a:focus,
+.jumbotron-carousel .jumbotron a:active {
   color: #e0e4f8;
 }
 .jumbotron-carousel .jumbotron a:hover .new-window-link {
   color: #e0e4f8;
 }
-.jumbotron-carousel .jumbotron a:not(.btn),
-.jumbotron-carousel .jumbotron a:link:not(.btn),
-.jumbotron-carousel .jumbotron a:visited:not(.btn) {
+.jumbotron-carousel .jumbotron a,
+.jumbotron-carousel .jumbotron a:link,
+.jumbotron-carousel .jumbotron a:visited {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
-.jumbotron-carousel .jumbotron a:hover:not(.btn),
-.jumbotron-carousel .jumbotron a:focus:not(.btn),
-.jumbotron-carousel .jumbotron a:active:not(.btn) {
+.jumbotron-carousel .jumbotron a:hover,
+.jumbotron-carousel .jumbotron a:focus,
+.jumbotron-carousel .jumbotron a:active {
   -webkit-text-decoration-color: #e0e4f8;
   -moz-text-decoration-color: #e0e4f8;
        text-decoration-color: #e0e4f8;
@@ -991,39 +951,29 @@ html.no-not-selector .jumbotron-carousel .jumbotron a:active {
   color: white;
   font-size: 16px;
 }
-html.no-not-selector #more-links a,
-html.no-not-selector #more-links a:link,
-html.no-not-selector #more-links a:visited {
+#more-links a,
+#more-links a:link,
+#more-links a:visited {
   color: white;
 }
-#more-links a:not(.btn),
-#more-links a:link:not(.btn),
-#more-links a:visited:not(.btn) {
-  color: white;
-}
-html.no-not-selector #more-links a:hover,
-html.no-not-selector #more-links a:focus,
-html.no-not-selector #more-links a:active {
-  color: #e0e4f8;
-}
-#more-links a:hover:not(.btn),
-#more-links a:focus:not(.btn),
-#more-links a:active:not(.btn) {
+#more-links a:hover,
+#more-links a:focus,
+#more-links a:active {
   color: #e0e4f8;
 }
 #more-links a:hover .new-window-link {
   color: #e0e4f8;
 }
-#more-links a:not(.btn),
-#more-links a:link:not(.btn),
-#more-links a:visited:not(.btn) {
+#more-links a,
+#more-links a:link,
+#more-links a:visited {
   -webkit-text-decoration-color: #ffffff;
   -moz-text-decoration-color: #ffffff;
        text-decoration-color: #ffffff;
 }
-#more-links a:hover:not(.btn),
-#more-links a:focus:not(.btn),
-#more-links a:active:not(.btn) {
+#more-links a:hover,
+#more-links a:focus,
+#more-links a:active {
   -webkit-text-decoration-color: #e0e4f8;
   -moz-text-decoration-color: #e0e4f8;
        text-decoration-color: #e0e4f8;
@@ -1036,24 +986,14 @@ html.no-not-selector #more-links a:active {
 #more-links .megamenu-links-address {
   text-align: left;
 }
-html.no-not-selector #more-links .megamenu-links-address .telephone a,
-html.no-not-selector #more-links .megamenu-links-address .telephone a:link,
-html.no-not-selector #more-links .megamenu-links-address .telephone a:visited {
+#more-links .megamenu-links-address .telephone a,
+#more-links .megamenu-links-address .telephone a:link,
+#more-links .megamenu-links-address .telephone a:visited {
   text-decoration: none;
 }
-#more-links .megamenu-links-address .telephone a:not(.btn),
-#more-links .megamenu-links-address .telephone a:link:not(.btn),
-#more-links .megamenu-links-address .telephone a:visited:not(.btn) {
-  text-decoration: none;
-}
-html.no-not-selector #more-links .megamenu-links-address .telephone a:hover,
-html.no-not-selector #more-links .megamenu-links-address .telephone a:focus,
-html.no-not-selector #more-links .megamenu-links-address .telephone a:active {
-  text-decoration: none;
-}
-#more-links .megamenu-links-address .telephone a:hover:not(.btn),
-#more-links .megamenu-links-address .telephone a:focus:not(.btn),
-#more-links .megamenu-links-address .telephone a:active:not(.btn) {
+#more-links .megamenu-links-address .telephone a:hover,
+#more-links .megamenu-links-address .telephone a:focus,
+#more-links .megamenu-links-address .telephone a:active {
   text-decoration: none;
 }
 #more-links .megamenu-links-address .utility {
@@ -1065,8 +1005,8 @@ html.no-not-selector #more-links .megamenu-links-address .telephone a:active {
 }
 .more-links-sitemap,
 .more-links-sitemap ul {
-  padding-left: 0 !important;
-  list-style: none !important;
+  padding-left: 0;
+  list-style: none;
 }
 .more-links-sitemap > li {
   position: relative;
@@ -1146,39 +1086,29 @@ html.no-not-selector #more-links .megamenu-links-address .telephone a:active {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
-html.no-not-selector .megamenu-links .more-links-sitemap a,
-html.no-not-selector .megamenu-links .more-links-sitemap a:link,
-html.no-not-selector .megamenu-links .more-links-sitemap a:visited {
+.megamenu-links .more-links-sitemap a,
+.megamenu-links .more-links-sitemap a:link,
+.megamenu-links .more-links-sitemap a:visited {
   color: #333333;
 }
-.megamenu-links .more-links-sitemap a:not(.btn),
-.megamenu-links .more-links-sitemap a:link:not(.btn),
-.megamenu-links .more-links-sitemap a:visited:not(.btn) {
-  color: #333333;
-}
-html.no-not-selector .megamenu-links .more-links-sitemap a:hover,
-html.no-not-selector .megamenu-links .more-links-sitemap a:focus,
-html.no-not-selector .megamenu-links .more-links-sitemap a:active {
-  color: #2c66e8;
-}
-.megamenu-links .more-links-sitemap a:hover:not(.btn),
-.megamenu-links .more-links-sitemap a:focus:not(.btn),
-.megamenu-links .more-links-sitemap a:active:not(.btn) {
+.megamenu-links .more-links-sitemap a:hover,
+.megamenu-links .more-links-sitemap a:focus,
+.megamenu-links .more-links-sitemap a:active {
   color: #2c66e8;
 }
 .megamenu-links .more-links-sitemap a:hover .new-window-link {
   color: #2c66e8;
 }
-.megamenu-links .more-links-sitemap a:not(.btn),
-.megamenu-links .more-links-sitemap a:link:not(.btn),
-.megamenu-links .more-links-sitemap a:visited:not(.btn) {
+.megamenu-links .more-links-sitemap a,
+.megamenu-links .more-links-sitemap a:link,
+.megamenu-links .more-links-sitemap a:visited {
   -webkit-text-decoration-color: #666666;
   -moz-text-decoration-color: #666666;
        text-decoration-color: #666666;
 }
-.megamenu-links .more-links-sitemap a:hover:not(.btn),
-.megamenu-links .more-links-sitemap a:focus:not(.btn),
-.megamenu-links .more-links-sitemap a:active:not(.btn) {
+.megamenu-links .more-links-sitemap a:hover,
+.megamenu-links .more-links-sitemap a:focus,
+.megamenu-links .more-links-sitemap a:active {
   -webkit-text-decoration-color: #2c66e8;
   -moz-text-decoration-color: #2c66e8;
        text-decoration-color: #2c66e8;
@@ -1208,39 +1138,29 @@ html.no-not-selector .megamenu-links .more-links-sitemap a:active {
 .megamenu-links-address {
   text-align: center;
 }
-html.no-not-selector .megamenu-links-address a,
-html.no-not-selector .megamenu-links-address a:link,
-html.no-not-selector .megamenu-links-address a:visited {
+.megamenu-links-address a,
+.megamenu-links-address a:link,
+.megamenu-links-address a:visited {
   color: #333333;
 }
-.megamenu-links-address a:not(.btn),
-.megamenu-links-address a:link:not(.btn),
-.megamenu-links-address a:visited:not(.btn) {
-  color: #333333;
-}
-html.no-not-selector .megamenu-links-address a:hover,
-html.no-not-selector .megamenu-links-address a:focus,
-html.no-not-selector .megamenu-links-address a:active {
-  color: #2c66e8;
-}
-.megamenu-links-address a:hover:not(.btn),
-.megamenu-links-address a:focus:not(.btn),
-.megamenu-links-address a:active:not(.btn) {
+.megamenu-links-address a:hover,
+.megamenu-links-address a:focus,
+.megamenu-links-address a:active {
   color: #2c66e8;
 }
 .megamenu-links-address a:hover .new-window-link {
   color: #2c66e8;
 }
-.megamenu-links-address a:not(.btn),
-.megamenu-links-address a:link:not(.btn),
-.megamenu-links-address a:visited:not(.btn) {
+.megamenu-links-address a,
+.megamenu-links-address a:link,
+.megamenu-links-address a:visited {
   -webkit-text-decoration-color: #666666;
   -moz-text-decoration-color: #666666;
        text-decoration-color: #666666;
 }
-.megamenu-links-address a:hover:not(.btn),
-.megamenu-links-address a:focus:not(.btn),
-.megamenu-links-address a:active:not(.btn) {
+.megamenu-links-address a:hover,
+.megamenu-links-address a:focus,
+.megamenu-links-address a:active {
   -webkit-text-decoration-color: #2c66e8;
   -moz-text-decoration-color: #2c66e8;
        text-decoration-color: #2c66e8;

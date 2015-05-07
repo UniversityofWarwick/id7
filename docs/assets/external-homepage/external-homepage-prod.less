@@ -699,10 +699,12 @@ only screen and (                min-resolution: 2dppx) {
 .more-links-sitemap {
   // Unstyle lists
   &, ul {
-    .list-unstyled() !important;
+    .list-unstyled();
   }
 
-  .make-row();
+  margin-left:  (@grid-gutter-width / -2);
+  margin-right: (@grid-gutter-width / -2);
+
   > li {
     .make-sm-column(3);
 

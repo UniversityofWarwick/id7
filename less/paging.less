@@ -1,0 +1,49 @@
+// ID-132
+.id7-paging {
+  .container();
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.pagination > li {
+  > .show-all {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  > .pagination-jump {
+    padding-left: 0;
+    padding-right: 0;
+
+    &:focus,
+    &:hover,
+    &:active {
+      font-weight: bold;
+      background-color: #f5f5c5;
+    }
+  }
+
+  input {
+    width: 40px;
+    padding: 0;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    line-height: 1;
+    background-color: transparent;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.pager li.current-page-count > span {
+  border: none;
+  border-radius: 0;
+
+  // Add 1px to vertical padding to account for missing border
+  padding: (@padding-base-vertical + 1px) @padding-base-horizontal;
+}

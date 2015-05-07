@@ -1,22 +1,10 @@
 .link-colour(@base, @hover) {
   a, a:link, a:visited {
-    html.no-not-selector & {
-      color: @base;
-    }
-
-    &:not(.btn) {
-      color: @base;
-    }
+    color: @base;
   }
 
   a:hover, a:focus, a:active {
-    html.no-not-selector & {
-      color: @hover;
-    }
-
-    &:not(.btn) {
-      color: @hover;
-    }
+    color: @hover;
   }
 
   a:hover .new-window-link {
@@ -26,17 +14,13 @@
 
 .link-colour(@base, @hover) when not (@base = inherit) {
   a, a:link, a:visited {
-    &:not(.btn) {
-      -webkit-text-decoration-color: lighten(@base, 20%); // Bug in caniuse/autoprefixer
-      text-decoration-color: lighten(@base, 20%);
-    }
+    -webkit-text-decoration-color: lighten(@base, 20%); // Bug in caniuse/autoprefixer
+    text-decoration-color: lighten(@base, 20%);
   }
 
   a:hover, a:focus, a:active {
-    &:not(.btn) {
-      -webkit-text-decoration-color: @hover; // Bug in caniuse/autoprefixer
-      text-decoration-color: @hover;
-    }
+    -webkit-text-decoration-color: @hover; // Bug in caniuse/autoprefixer
+    text-decoration-color: @hover;
   }
 }
 
@@ -46,44 +30,20 @@
 
 .link-colour(@base) when (@base = inherit) {
   a, a:link, a:visited {
-    html.no-not-selector & {
-      color: inherit;
-    }
-
-    &:not(.btn) {
-      color: inherit;
-    }
+    color: inherit;
   }
 
   a:hover, a:focus, a:active {
-    html.no-not-selector & {
-      color: inherit;
-    }
-
-    &:not(.btn) {
-      color: inherit;
-    }
+    color: inherit;
   }
 }
 
 .link-decoration(@base: none, @hover: underline) {
   a, a:link, a:visited {
-    html.no-not-selector & {
-      text-decoration: @base;
-    }
-
-    &:not(.btn) {
-      text-decoration: @base;
-    }
+    text-decoration: @base;
   }
 
   a:hover, a:focus, a:active {
-    html.no-not-selector & {
-      text-decoration: @hover;
-    }
-
-    &:not(.btn) {
-      text-decoration: @hover;
-    }
+    text-decoration: @hover;
   }
 }

@@ -3,58 +3,42 @@
   color: #383838;
   background-color: white;
 }
-html.no-not-selector #masthead a,
-html.no-not-selector #masthead.transparent a,
-html.no-not-selector #masthead a:link,
-html.no-not-selector #masthead.transparent a:link,
-html.no-not-selector #masthead a:visited,
-html.no-not-selector #masthead.transparent a:visited {
+#masthead a,
+#masthead.transparent a,
+#masthead a:link,
+#masthead.transparent a:link,
+#masthead a:visited,
+#masthead.transparent a:visited {
   color: #383838;
 }
-#masthead a:not(.btn),
-#masthead.transparent a:not(.btn),
-#masthead a:link:not(.btn),
-#masthead.transparent a:link:not(.btn),
-#masthead a:visited:not(.btn),
-#masthead.transparent a:visited:not(.btn) {
-  color: #383838;
-}
-html.no-not-selector #masthead a:hover,
-html.no-not-selector #masthead.transparent a:hover,
-html.no-not-selector #masthead a:focus,
-html.no-not-selector #masthead.transparent a:focus,
-html.no-not-selector #masthead a:active,
-html.no-not-selector #masthead.transparent a:active {
-  color: #050505;
-}
-#masthead a:hover:not(.btn),
-#masthead.transparent a:hover:not(.btn),
-#masthead a:focus:not(.btn),
-#masthead.transparent a:focus:not(.btn),
-#masthead a:active:not(.btn),
-#masthead.transparent a:active:not(.btn) {
+#masthead a:hover,
+#masthead.transparent a:hover,
+#masthead a:focus,
+#masthead.transparent a:focus,
+#masthead a:active,
+#masthead.transparent a:active {
   color: #050505;
 }
 #masthead a:hover .new-window-link,
 #masthead.transparent a:hover .new-window-link {
   color: #050505;
 }
-#masthead a:not(.btn),
-#masthead.transparent a:not(.btn),
-#masthead a:link:not(.btn),
-#masthead.transparent a:link:not(.btn),
-#masthead a:visited:not(.btn),
-#masthead.transparent a:visited:not(.btn) {
+#masthead a,
+#masthead.transparent a,
+#masthead a:link,
+#masthead.transparent a:link,
+#masthead a:visited,
+#masthead.transparent a:visited {
   -webkit-text-decoration-color: #6b6b6b;
      -moz-text-decoration-color: #6b6b6b;
           text-decoration-color: #6b6b6b;
 }
-#masthead a:hover:not(.btn),
-#masthead.transparent a:hover:not(.btn),
-#masthead a:focus:not(.btn),
-#masthead.transparent a:focus:not(.btn),
-#masthead a:active:not(.btn),
-#masthead.transparent a:active:not(.btn) {
+#masthead a:hover,
+#masthead.transparent a:hover,
+#masthead a:focus,
+#masthead.transparent a:focus,
+#masthead a:active,
+#masthead.transparent a:active {
   -webkit-text-decoration-color: #050505;
      -moz-text-decoration-color: #050505;
           text-decoration-color: #050505;
@@ -70,39 +54,29 @@ html.no-not-selector #masthead.transparent a:active {
 #search-container ul.index-section li.active {
   background-color: #5b3069;
 }
-html.no-not-selector #search-container ul.index-section li.active a,
-html.no-not-selector #search-container ul.index-section li.active a:link,
-html.no-not-selector #search-container ul.index-section li.active a:visited {
+#search-container ul.index-section li.active a,
+#search-container ul.index-section li.active a:link,
+#search-container ul.index-section li.active a:visited {
   color: white;
 }
-#search-container ul.index-section li.active a:not(.btn),
-#search-container ul.index-section li.active a:link:not(.btn),
-#search-container ul.index-section li.active a:visited:not(.btn) {
-  color: white;
-}
-html.no-not-selector #search-container ul.index-section li.active a:hover,
-html.no-not-selector #search-container ul.index-section li.active a:focus,
-html.no-not-selector #search-container ul.index-section li.active a:active {
-  color: #ccc;
-}
-#search-container ul.index-section li.active a:hover:not(.btn),
-#search-container ul.index-section li.active a:focus:not(.btn),
-#search-container ul.index-section li.active a:active:not(.btn) {
+#search-container ul.index-section li.active a:hover,
+#search-container ul.index-section li.active a:focus,
+#search-container ul.index-section li.active a:active {
   color: #ccc;
 }
 #search-container ul.index-section li.active a:hover .new-window-link {
   color: #ccc;
 }
-#search-container ul.index-section li.active a:not(.btn),
-#search-container ul.index-section li.active a:link:not(.btn),
-#search-container ul.index-section li.active a:visited:not(.btn) {
+#search-container ul.index-section li.active a,
+#search-container ul.index-section li.active a:link,
+#search-container ul.index-section li.active a:visited {
   -webkit-text-decoration-color: #fff;
      -moz-text-decoration-color: #fff;
           text-decoration-color: #fff;
 }
-#search-container ul.index-section li.active a:hover:not(.btn),
-#search-container ul.index-section li.active a:focus:not(.btn),
-#search-container ul.index-section li.active a:active:not(.btn) {
+#search-container ul.index-section li.active a:hover,
+#search-container ul.index-section li.active a:focus,
+#search-container ul.index-section li.active a:active {
   -webkit-text-decoration-color: #ccc;
      -moz-text-decoration-color: #ccc;
           text-decoration-color: #ccc;
