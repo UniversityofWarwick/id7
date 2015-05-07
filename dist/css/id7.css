@@ -9955,8 +9955,14 @@ body :not(iframe)::-webkit-scrollbar-thumb:hover {
     margin-left: 0;
   }
 }
-.id7-main-content .pager a.active,
-.id7-main-content .pagination a.active {
+.id7-main-content .pager .active a:link,
+.id7-main-content .pagination .active a:link,
+.id7-main-content .pager .active a:visited,
+.id7-main-content .pagination .active a:visited,
+.id7-main-content .pager .active a:hover,
+.id7-main-content .pagination .active a:hover,
+.id7-main-content .pager .active a:active,
+.id7-main-content .pagination .active a:active {
   color: white;
 }
 .id7-main-content .pager a:link,
