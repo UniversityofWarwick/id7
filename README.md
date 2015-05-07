@@ -13,7 +13,7 @@ ID7 is the 7th iteration of the University of Warwick corporate identity. This l
 
 Three quick start options are available:
 
-- [Download the latest release](https://github.com/UniversityofWarwick/id7/releases/tag/v1.0.0).
+- [Download the latest release](https://github.com/UniversityofWarwick/id7/releases/tag/v1.0.1).
 - Clone the repo: `git clone https://github.com/UniversityofWarwick/id7.git`.
 - Install with [Bower](http://bower.io): `bower install warwick-id7`.
 
