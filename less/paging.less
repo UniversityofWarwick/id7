@@ -5,61 +5,58 @@
   padding-bottom: 0;
 }
 
-.id7-paging,
-.id7-main-content {
-  .pager,
-  .pagination {
-    .active a {
-      &:link,
-      &:visited,
-      &:hover,
-      &:active {
-        color: white;
-      }
-    }
-
-    a {
-      &:link,
-      &:visited,
-      &:hover,
-      &:active {
-        text-decoration: none;
-      }
+.pager,
+.pagination {
+  .active a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: white;
     }
   }
 
-  .pagination > li {
-    > .show-all {
+  a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+.pagination > li {
+  > .show-all {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  > .pagination-jump {
+    padding-left: 0;
+    padding-right: 0;
+
+    &:focus,
+    &:hover,
+    &:active {
       font-weight: bold;
-      text-transform: uppercase;
+      background-color: #f5f5c5;
     }
+  }
 
-    > .pagination-jump {
-      padding-left: 0;
-      padding-right: 0;
+  input {
+    width: 40px;
+    padding: 0;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    line-height: 1;
+    background-color: transparent;
 
-      &:focus,
-      &:hover,
-      &:active {
-        font-weight: bold;
-        background-color: #f5f5c5;
-      }
-    }
-
-    input {
-      width: 40px;
-      padding: 0;
-      text-align: center;
-      border-radius: 0;
-      border: none;
-      line-height: 1;
-      background-color: transparent;
-
-      &::-webkit-outer-spin-button,
-      &::-webkit-inner-spin-button {
-        margin: 0;
-        -webkit-appearance: none;
-      }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
     }
   }
 }
