@@ -7333,6 +7333,8 @@ button.close {
 .id7-main-content-area > header:after,
 .id7-main-content-area > .id7-main-content:before,
 .id7-main-content-area > .id7-main-content:after,
+.id7-paging:before,
+.id7-paging:after,
 footer .id7-site-footer:before,
 footer .id7-site-footer:after,
 footer .id7-app-footer:before,
@@ -7362,6 +7364,7 @@ footer .id7-app-footer:after {
 .id7-masthead .id7-logo-row:after,
 .id7-main-content-area > header:after,
 .id7-main-content-area > .id7-main-content:after,
+.id7-paging:after,
 footer .id7-site-footer:after,
 footer .id7-app-footer:after {
   clear: both;
@@ -9916,6 +9919,82 @@ body :not(iframe)::-webkit-scrollbar-thumb:horizontal {
 }
 body :not(iframe)::-webkit-scrollbar-thumb:hover {
   background-color: #505050 !important;
+}
+.id7-paging {
+  padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 0;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .id7-paging {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .id7-paging {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .id7-paging {
+    width: 1170px;
+  }
+}
+.id7-paging > .navbar-header,
+.id7-paging > .navbar-collapse {
+  margin-right: -0;
+  margin-left: -0;
+}
+@media (min-width: 768px) {
+  .id7-paging > .navbar-header,
+  .id7-paging > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.id7-main-content .pager a.active,
+.id7-main-content .pagination a.active {
+  color: white;
+}
+.id7-main-content .pager a:link,
+.id7-main-content .pagination a:link,
+.id7-main-content .pager a:visited,
+.id7-main-content .pagination a:visited,
+.id7-main-content .pager a:hover,
+.id7-main-content .pagination a:hover,
+.id7-main-content .pager a:active,
+.id7-main-content .pagination a:active {
+  text-decoration: none;
+}
+.id7-main-content .pagination > li > .show-all {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.id7-main-content .pagination > li > .pagination-jump {
+  padding-right: 0;
+  padding-left: 0;
+}
+.id7-main-content .pagination > li input {
+  width: 40px;
+  padding: 0;
+  line-height: 1;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+}
+.id7-main-content .pagination > li input:focus,
+.id7-main-content .pagination > li input:hover,
+.id7-main-content .pagination > li input:active {
+  font-weight: bold;
+  background-color: #f5f5c5;
+}
+.id7-main-content .pagination > li input::-webkit-outer-spin-button,
+.id7-main-content .pagination > li input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 footer .id7-site-footer,
 footer .id7-app-footer {
