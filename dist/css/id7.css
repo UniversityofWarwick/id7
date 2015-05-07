@@ -7571,6 +7571,8 @@ button.close {
 .id7-main-content-area > header:after,
 .id7-main-content-area > .id7-main-content:before,
 .id7-main-content-area > .id7-main-content:after,
+.id7-paging:before,
+.id7-paging:after,
 footer .id7-site-footer:before,
 footer .id7-site-footer:after,
 footer .id7-app-footer:before,
@@ -7600,6 +7602,7 @@ footer .id7-app-footer:after {
 .id7-masthead .id7-logo-row:after,
 .id7-main-content-area > header:after,
 .id7-main-content-area > .id7-main-content:after,
+.id7-paging:after,
 footer .id7-site-footer:after,
 footer .id7-app-footer:after {
   clear: both;
@@ -9845,6 +9848,89 @@ body :not(iframe)::-webkit-scrollbar-thumb:horizontal {
 }
 body :not(iframe)::-webkit-scrollbar-thumb:hover {
   background-color: #505050 !important;
+}
+.id7-paging {
+  padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 0;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .id7-paging {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .id7-paging {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .id7-paging {
+    width: 1170px;
+  }
+}
+.id7-paging > .navbar-header,
+.id7-paging > .navbar-collapse {
+  margin-right: -0;
+  margin-left: -0;
+}
+@media (min-width: 768px) {
+  .id7-paging > .navbar-header,
+  .id7-paging > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.pager .active a:link,
+.pagination .active a:link,
+.pager .active a:visited,
+.pagination .active a:visited,
+.pager .active a:hover,
+.pagination .active a:hover,
+.pager .active a:active,
+.pagination .active a:active {
+  color: white;
+}
+.pager a:link,
+.pagination a:link,
+.pager a:visited,
+.pagination a:visited,
+.pager a:hover,
+.pagination a:hover,
+.pager a:active,
+.pagination a:active {
+  text-decoration: none;
+}
+.pagination > li > .show-all {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pagination > li > .pagination-jump {
+  padding-right: 0;
+  padding-left: 0;
+}
+.pagination > li > .pagination-jump:focus,
+.pagination > li > .pagination-jump:hover,
+.pagination > li > .pagination-jump:active {
+  font-weight: bold;
+  background-color: #f5f5c5;
+}
+.pagination > li input {
+  width: 40px;
+  padding: 0;
+  line-height: 1;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+.pagination > li input::-webkit-outer-spin-button,
+.pagination > li input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 footer .id7-site-footer,
 footer .id7-app-footer {
