@@ -1027,6 +1027,10 @@ body.brand-purple .boxstyle-md.box5 blockquote.quotes,
 body.brand-purple .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
+body.brand-purple .pagination > li a,
+body.brand-purple .pagination > li span {
+  color: #5b3069;
+}
 body.brand-gray html.no-rgba {
   background: #65686b;
 }
@@ -2055,6 +2059,10 @@ body.brand-gray .boxstyle-sm.box5 blockquote.quotes,
 body.brand-gray .boxstyle-md.box5 blockquote.quotes,
 body.brand-gray .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
+}
+body.brand-gray .pagination > li a,
+body.brand-gray .pagination > li span {
+  color: #3f4246;
 }
 body.brand-gold html.no-rgba {
   background: #ad8933;
@@ -3085,6 +3093,10 @@ body.brand-gold .boxstyle-md.box5 blockquote.quotes,
 body.brand-gold .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
+body.brand-gold .pagination > li a,
+body.brand-gold .pagination > li span {
+  color: #996b00;
+}
 body.brand-blue html.no-rgba {
   background: #4d7294;
 }
@@ -4113,6 +4125,10 @@ body.brand-blue .boxstyle-sm.box5 blockquote.quotes,
 body.brand-blue .boxstyle-md.box5 blockquote.quotes,
 body.brand-blue .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
+}
+body.brand-blue .pagination > li a,
+body.brand-blue .pagination > li span {
+  color: #204f79;
 }
 body.brand-orange html.no-rgba {
   background: #cb673d;
@@ -5143,6 +5159,10 @@ body.brand-orange .boxstyle-md.box5 blockquote.quotes,
 body.brand-orange .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
+body.brand-orange .pagination > li a,
+body.brand-orange .pagination > li span {
+  color: #be410c;
+}
 body.brand-green html.no-rgba {
   background: #949438;
 }
@@ -6172,6 +6192,10 @@ body.brand-green .boxstyle-md.box5 blockquote.quotes,
 body.brand-green .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
+body.brand-green .pagination > li a,
+body.brand-green .pagination > li span {
+  color: #797906;
+}
 body.brand-red html.no-rgba {
   background: #a14056;
 }
@@ -7200,4 +7224,8 @@ body.brand-red .boxstyle-sm.box5 blockquote.quotes,
 body.brand-red .boxstyle-md.box5 blockquote.quotes,
 body.brand-red .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
+}
+body.brand-red .pagination > li a,
+body.brand-red .pagination > li span {
+  color: #89102c;
 }

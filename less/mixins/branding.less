@@ -298,6 +298,8 @@
 
   // Box styles
   .apply-boxstyles-brand(@colour);
+
+  .apply-pagination-brand(@colour);
 }
 
 .apply-footer-brand(@colour) {
@@ -392,4 +394,10 @@
   #boxstyle > .bordered(~".box3", @colour);
   #boxstyle > .bordered(~".box4", @gray-light);
   #boxstyle > .filled(~".box5", @colour, white);
+}
+
+.apply-pagination-brand(@colour) {
+  .pagination > li {
+    a, span { color: @colour; }
+  }
 }

@@ -28,6 +28,13 @@
   }
 }
 
+.pager li {
+  > span, > a {
+    padding: @padding-base-vertical @padding-base-horizontal;
+    border-radius: @button-border-radius-large;
+  }
+}
+
 .nav-tabs > li.active {
   background: @nav-tabs-active-bg;
 
@@ -38,6 +45,23 @@
 
 .button-variant(@color; @background; @border) {
   color: @color !important; // For a.btn
+
+  &:not(.btn-link) {
+    text-decoration: none;
+  }
+}
+
+// Matches .pagination > li > a
+.pager > li > a {
+  text-decoration: none;
+}
+
+a.list-group-item {
+  text-decoration: none;
+}
+
+.dropdown-menu li {
+  margin-bottom: 0;
 }
 
 // Print styling fixes

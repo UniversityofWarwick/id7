@@ -342,10 +342,6 @@ body {
 .carousel-nav a:active {
   text-decoration: underline;
 }
-.carousel-nav a.btn,
-.carousel-nav a.list-group-item {
-  text-decoration: none;
-}
 .carousel-nav a,
 .carousel-nav a:link,
 .carousel-nav a:visited {
@@ -416,10 +412,6 @@ body {
 .jumbotron-carousel a:focus,
 .jumbotron-carousel a:active {
   text-decoration: underline;
-}
-.jumbotron-carousel a.btn,
-.jumbotron-carousel a.list-group-item {
-  text-decoration: none;
 }
 .jumbotron-carousel .jumbotron {
   margin: 0;
@@ -1002,10 +994,6 @@ body {
 #more-links .megamenu-links-address .telephone a:hover,
 #more-links .megamenu-links-address .telephone a:focus,
 #more-links .megamenu-links-address .telephone a:active {
-  text-decoration: none;
-}
-#more-links .megamenu-links-address .telephone a.btn,
-#more-links .megamenu-links-address .telephone a.list-group-item {
   text-decoration: none;
 }
 #more-links .megamenu-links-address .utility {

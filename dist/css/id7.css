@@ -2550,10 +2550,6 @@ a:focus,
 a:active {
   text-decoration: underline;
 }
-a.btn,
-a.list-group-item {
-  text-decoration: none;
-}
 a {
   -webkit-transition: all .3s linear;
   -webkit-transition: color .3s linear, text-decoration-color .15s linear;
@@ -4316,6 +4312,9 @@ fieldset[disabled] .btn-default.active {
   color: #f4f4f4;
   background-color: #333;
 }
+.btn-default:not(.btn-link) {
+  text-decoration: none;
+}
 .btn-primary {
   color: #fff;
   color: #fff !important;
@@ -4361,6 +4360,9 @@ fieldset[disabled] .btn-primary.active {
 .btn-primary .badge {
   color: #666;
   background-color: #fff;
+}
+.btn-primary:not(.btn-link) {
+  text-decoration: none;
 }
 .btn-success {
   color: #fff;
@@ -4408,6 +4410,9 @@ fieldset[disabled] .btn-success.active {
   color: #797906;
   background-color: #fff;
 }
+.btn-success:not(.btn-link) {
+  text-decoration: none;
+}
 .btn-info {
   color: #fff;
   color: #fff !important;
@@ -4453,6 +4458,9 @@ fieldset[disabled] .btn-info.active {
 .btn-info .badge {
   color: #204f79;
   background-color: #fff;
+}
+.btn-info:not(.btn-link) {
+  text-decoration: none;
 }
 .btn-warning {
   color: #fff;
@@ -4500,6 +4508,9 @@ fieldset[disabled] .btn-warning.active {
   color: #be410c;
   background-color: #fff;
 }
+.btn-warning:not(.btn-link) {
+  text-decoration: none;
+}
 .btn-danger {
   color: #fff;
   color: #fff !important;
@@ -4545,6 +4556,9 @@ fieldset[disabled] .btn-danger.active {
 .btn-danger .badge {
   color: #89102c;
   background-color: #fff;
+}
+.btn-danger:not(.btn-link) {
+  text-decoration: none;
 }
 .btn-link {
   font-weight: normal;
@@ -7875,11 +7889,25 @@ footer .id7-app-footer:after {
 .btn-group-vertical > .btn:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
 }
+.pager li > span,
+.pager li > a {
+  padding: 6px 12px;
+  border-radius: 6px;
+}
 .nav-tabs > li.active {
   background: white;
 }
 .nav-tabs > li.active > a {
   margin-right: 0;
+}
+.pager > li > a {
+  text-decoration: none;
+}
+a.list-group-item {
+  text-decoration: none;
+}
+.dropdown-menu li {
+  margin-bottom: 0;
 }
 @media print {
   a[href^="mailto:"]:after,
@@ -8098,10 +8126,6 @@ body {
 .id7-page-header a:focus,
 .id7-page-header a:active {
   text-decoration: underline;
-}
-.id7-page-header a.btn,
-.id7-page-header a.list-group-item {
-  text-decoration: none;
 }
 .id7-page-header h1,
 .id7-page-header h2,
@@ -8491,10 +8515,6 @@ html.no-generatedcontent .id7-utility-bar > ul > li {
 .id7-masthead .id7-header-text a:active {
   text-decoration: underline;
 }
-.id7-masthead .id7-header-text a.btn,
-.id7-masthead .id7-header-text a.list-group-item {
-  text-decoration: none;
-}
 @media (min-width: 768px) {
   .id7-masthead .id7-header-text a,
   .id7-masthead .id7-header-text a:link,
@@ -8505,10 +8525,6 @@ html.no-generatedcontent .id7-utility-bar > ul > li {
   .id7-masthead .id7-header-text a:focus,
   .id7-masthead .id7-header-text a:active {
     text-decoration: underline;
-  }
-  .id7-masthead .id7-header-text a.btn,
-  .id7-masthead .id7-header-text a.list-group-item {
-    text-decoration: none;
   }
 }
 .id7-masthead .id7-header-text h1 {
@@ -8867,10 +8883,6 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
 .id7-navigation a:hover,
 .id7-navigation a:focus,
 .id7-navigation a:active {
-  text-decoration: none;
-}
-.id7-navigation a.btn,
-.id7-navigation a.list-group-item {
   text-decoration: none;
 }
 .id7-navigation .navbar {
@@ -9884,26 +9896,6 @@ body :not(iframe)::-webkit-scrollbar-thumb:hover {
     margin-left: 0;
   }
 }
-.pager .active a:link,
-.pagination .active a:link,
-.pager .active a:visited,
-.pagination .active a:visited,
-.pager .active a:hover,
-.pagination .active a:hover,
-.pager .active a:active,
-.pagination .active a:active {
-  color: white;
-}
-.pager a:link,
-.pagination a:link,
-.pager a:visited,
-.pagination a:visited,
-.pager a:hover,
-.pagination a:hover,
-.pager a:active,
-.pagination a:active {
-  text-decoration: none;
-}
 .pagination > li > .show-all {
   font-weight: bold;
   text-transform: uppercase;
@@ -9931,6 +9923,11 @@ body :not(iframe)::-webkit-scrollbar-thumb:hover {
 .pagination > li input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.pager li.current-page-count > span {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 0;
 }
 footer .id7-site-footer,
 footer .id7-app-footer {

@@ -5,27 +5,6 @@
   padding-bottom: 0;
 }
 
-.pager,
-.pagination {
-  .active a {
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      color: white;
-    }
-  }
-
-  a {
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      text-decoration: none;
-    }
-  }
-}
-
 .pagination > li {
   > .show-all {
     font-weight: bold;
@@ -59,4 +38,12 @@
       -webkit-appearance: none;
     }
   }
+}
+
+.pager li.current-page-count > span {
+  border: none;
+  border-radius: 0;
+
+  // Add 1px to vertical padding to account for missing border
+  padding: (@padding-base-vertical + 1px) @padding-base-horizontal;
 }

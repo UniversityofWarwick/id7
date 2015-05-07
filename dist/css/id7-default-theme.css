@@ -1039,4 +1039,8 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
+.pagination > li a,
+.pagination > li span {
+  color: #5b3069;
+}
 /*# sourceMappingURL=id7-default-theme.css.map */

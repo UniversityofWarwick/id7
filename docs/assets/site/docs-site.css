@@ -1038,6 +1038,10 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .boxstyle-lg.box5 blockquote.quotes {
   color: inherit;
 }
+.pagination > li a,
+.pagination > li span {
+  color: #204f79;
+}
 .hll {
   background-color: #ffffcc;
 }

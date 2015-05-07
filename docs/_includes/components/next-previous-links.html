@@ -1,0 +1,51 @@
+<h2 id="next-previous-links">Next/previous links</h2>
+
+{% highlight html %}
+<nav class="id7-paging">
+  <ul class="pager">
+    <li class="previous">
+      <a href="#">
+        Previous page
+      </a>
+    </li>
+
+    <li class="current-page-count"><span>Page X of Y</span></li>
+
+    <li class="next">
+      <a href="#">
+        Next page
+      </a>
+    </li>
+  </ul>
+</nav>
+{% endhighlight %}
+
+<p>Example:</p>
+
+<ul class="pager">
+  <li class="previous">
+    <a href="#">
+      Previous page
+    </a>
+  </li>
+
+  <li class="current-page-count"><span>Page X of Y</span></li>
+
+  <li class="next">
+    <a href="#">
+      Next page
+    </a>
+  </li>
+</ul>
+
+<h3>Pagination with jump</h3>
+
+<ul class="pagination">
+  <li class="disabled"><a><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i></a></li>
+  <li class="disabled"><a><i class="fa fa-chevron-left"></i></a></li>
+  <li><span class="pagination-jump"><input type="hidden" name="c" value="20"><input class="tipify-nohint limit-to-pages"
+                                                                                    title="Page 1 of 2. Overtype to jump to page." type="number" name="s" value="1" min="1" max="2"></span></li>
+  <li><a class="tipify-nohint" title="Next, page 2" href="?c=20&amp;s=2"><i class="fa fa-chevron-right"></i></a></li>
+  <li class="disabled"><a><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i></a></li>
+  <li><a class="show-all tipify-nohint" title="Show all 26 topics" href="?showAll=true">All</a></li>
+</ul>
