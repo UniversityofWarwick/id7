@@ -1,3 +1,12 @@
+// ID-113
+body {
+  text-rendering: optimizeLegibility;
+
+  font-feature-settings: "kern", "liga"; /* standard */
+  font-variant-ligatures: common-ligatures;
+  font-kerning: normal;
+}
+
 .link-decoration(@base: underline);
 
 a {
@@ -115,59 +124,32 @@ blockquote.quotes {
   }
 }
 
-// Hyphenate on smallscreens
-// ID-112 don't hyphenate any more
-//@media (max-width: (@grid-float-breakpoint - 1)) {
-//  .id7-main-content-area {
-//    .hyphens();
-//  }
-//}
+// ID-127
+ul, ol {
+  padding-left: 30px;
 
-// ID-113
-body {
-  text-rendering: optimizeLegibility;
+  li {
+    margin-bottom: 6px;
+  }
 
-  font-feature-settings: "kern", "liga"; /* standard */
-  font-variant-ligatures: common-ligatures;
-  font-kerning: normal;
+  ul, ol {
+    margin-top: 6px;
+  }
 }
 
-// ID-127
-.id7-main-content-area {
-  ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group), ol {
-    padding-left: 30px;
+ul {
+  list-style-type: square;
+}
 
-    li {
-      margin-bottom: 6px;
-    }
+ul ul, ol ul {
+  list-style-type: circle;
+}
 
-    ul, ol {
-      margin-top: 6px;
-    }
-  }
+ol ol ul, ol ul ul, ul ol ul, ul ul ul {
+  list-style-type: disc;
+}
 
-  ul {
-    &:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) {
-      list-style-type: square;
-    }
-  }
-
-  ul ul, ol ul {
-    &:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) {
-      list-style-type: circle;
-    }
-  }
-
-  ol ol ul, ol ul ul, ul ol ul, ul ul ul {
-    &:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) {
-      list-style-type: disc;
-    }
-  }
-
-  ol ol ol ul, ol ol ul ul, ol ul ol ul, ol ul ul ul,
-  ul ol ol ul, ul ol ul ul, ul ul ol ul, ul ul ul ul {
-    &:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) {
-      list-style-type: square;
-    }
-  }
+ol ol ol ul, ol ol ul ul, ol ul ol ul, ol ul ul ul,
+ul ol ol ul, ul ol ul ul, ul ul ol ul, ul ul ul ul {
+  list-style-type: square;
 }
