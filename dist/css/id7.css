@@ -10001,23 +10001,24 @@ body :not(iframe)::-webkit-scrollbar-thumb:hover {
   padding-right: 0;
   padding-left: 0;
 }
+.id7-paging .pagination > li > .pagination-jump:focus,
+.id7-main-content .pagination > li > .pagination-jump:focus,
+.id7-paging .pagination > li > .pagination-jump:hover,
+.id7-main-content .pagination > li > .pagination-jump:hover,
+.id7-paging .pagination > li > .pagination-jump:active,
+.id7-main-content .pagination > li > .pagination-jump:active {
+  font-weight: bold;
+  background-color: #f5f5c5;
+}
 .id7-paging .pagination > li input,
 .id7-main-content .pagination > li input {
   width: 40px;
   padding: 0;
   line-height: 1;
   text-align: center;
+  background-color: transparent;
   border: none;
   border-radius: 0;
-}
-.id7-paging .pagination > li input:focus,
-.id7-main-content .pagination > li input:focus,
-.id7-paging .pagination > li input:hover,
-.id7-main-content .pagination > li input:hover,
-.id7-paging .pagination > li input:active,
-.id7-main-content .pagination > li input:active {
-  font-weight: bold;
-  background-color: #f5f5c5;
 }
 .id7-paging .pagination > li input::-webkit-outer-spin-button,
 .id7-main-content .pagination > li input::-webkit-outer-spin-button,
