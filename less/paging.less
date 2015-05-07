@@ -8,11 +8,16 @@
 .id7-main-content {
   .pager,
   .pagination {
-    a {
-      &.active {
+    .active a {
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
         color: white;
       }
+    }
 
+    a {
       &:link,
       &:visited,
       &:hover,
