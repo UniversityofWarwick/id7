@@ -37,6 +37,13 @@
     > .pagination-jump {
       padding-left: 0;
       padding-right: 0;
+
+      &:focus,
+      &:hover,
+      &:active {
+        font-weight: bold;
+        background-color: #f5f5c5;
+      }
     }
 
     input {
@@ -46,13 +53,7 @@
       border-radius: 0;
       border: none;
       line-height: 1;
-
-      &:focus,
-      &:hover,
-      &:active {
-        font-weight: bold;
-        background-color: #f5f5c5;
-      }
+      background-color: transparent;
 
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
