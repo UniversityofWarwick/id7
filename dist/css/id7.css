@@ -9508,27 +9508,27 @@ body {
 .id7-main-content-area ol ol {
   margin-top: 6px;
 }
-.id7-main-content-area ul {
+.id7-main-content-area ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) {
   list-style-type: square;
 }
-.id7-main-content-area ul ul,
-.id7-main-content-area ol ul {
+.id7-main-content-area ul ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ol ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) {
   list-style-type: circle;
 }
-.id7-main-content-area ol ol ul,
-.id7-main-content-area ol ul ul,
-.id7-main-content-area ul ol ul,
-.id7-main-content-area ul ul ul {
+.id7-main-content-area ol ol ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ol ul ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ul ol ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ul ul ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) {
   list-style-type: disc;
 }
-.id7-main-content-area ol ol ol ul,
-.id7-main-content-area ol ol ul ul,
-.id7-main-content-area ol ul ol ul,
-.id7-main-content-area ol ul ul ul,
-.id7-main-content-area ul ol ol ul,
-.id7-main-content-area ul ol ul ul,
-.id7-main-content-area ul ul ol ul,
-.id7-main-content-area ul ul ul ul {
+.id7-main-content-area ol ol ol ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ol ol ul ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ol ul ol ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ol ul ul ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ul ol ol ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ul ol ul ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ul ul ol ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group),
+.id7-main-content-area ul ul ul ul:not(.nav):not(.dropdown-menu):not(.breadcrumb):not(.pagination):not(.pager):not(.list-group) {
   list-style-type: square;
 }
 .id7-wide-table-wrapper-container {

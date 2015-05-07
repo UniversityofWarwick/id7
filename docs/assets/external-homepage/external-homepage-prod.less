@@ -1,9 +1,4 @@
-@import '../../../less/bootstrap/variables.less';
-@import '../../../less/bootstrap/mixins.less';
-@import '../../../less/bootstrap/responsive-utilities.less';
-@import '../../../less/font-awesome/variables.less';
-@import '../../../less/variables.less';
-@import '../../../less/mixins.less';
+@import (reference) '../../../less/id7.less';
 
 @logo-width: 150px;
 @logo-height: 80px;
@@ -704,8 +699,7 @@ only screen and (                min-resolution: 2dppx) {
 .more-links-sitemap {
   // Unstyle lists
   &, ul {
-    padding-left: 0;
-    list-style: none;
+    .list-unstyled() !important;
   }
 
   .make-row();
