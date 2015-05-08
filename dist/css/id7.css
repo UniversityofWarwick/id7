@@ -9482,6 +9482,7 @@ audio[height] {
   font-size: 85%;
 }
 .id7-wide-table-popout-modal .modal-dialog {
+  width: auto;
   max-width: 90%;
 }
 .id7-wide-table-popout-modal .modal-body {
