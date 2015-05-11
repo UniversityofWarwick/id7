@@ -49,6 +49,8 @@ body {
 
 // Fix the header
 .id7-page-header {
+  background-color: @id7-brand-default;
+
   position: fixed;
   width: 100%;
   .transition(background-color 0.15s linear);
@@ -589,6 +591,12 @@ only screen and (                min-resolution: 2dppx) {
         }
       }
     }
+
+    @media (min-width: @screen-md-min) {
+      &.jumbotron-panel .caption.center {
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -663,9 +671,19 @@ only screen and (                min-resolution: 2dppx) {
       display: inline;
     }
 
-    .telephone:after {
-      content: ' \2022 ';
-      display: inline;
+    .telephone {
+      margin-right: 0.8em;
+    }
+
+    .utility > li {
+      &:before {
+        content: none;
+      }
+
+      margin-left: 0.6em;
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 }
@@ -714,7 +732,7 @@ only screen and (                min-resolution: 2dppx) {
     margin: 0;
 
     > i {
-      font-size: 2em;
+      font-size: 1.75em;
     }
 
     ul {

@@ -152,6 +152,7 @@ body {
   }
 }
 .id7-page-header {
+  background-color: #5b3069;
   position: fixed;
   width: 100%;
   -webkit-transition: background-color 0.15s linear;
@@ -885,6 +886,11 @@ body {
     width: 100%;
   }
 }
+@media (min-width: 768px) and (min-width: 992px) {
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .caption.center {
+    padding: 0;
+  }
+}
 @media (min-width: 768px) {
   html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-1, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-1, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-1, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-1, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-2, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-2, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-2, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-2, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-3, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-3, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-3, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-3, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-4, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-4, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-4, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-4, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-5, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-5, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-5, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-5, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-6, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-6, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-6, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-6, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-7, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-7, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-7, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-7, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-8, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-8, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-8, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-8, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-9, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-9, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-9, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-9, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-10, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-10, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-10, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-10, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-11, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-11, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-11, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-11, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-xs-12, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-sm-12, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-md-12, html.no-flexbox .jumbotron-carousel .jumbotron-panel .col-lg-12 {
     position: static;
@@ -941,9 +947,17 @@ body {
 .popover.megamenu-links .megamenu-links-address .fax {
   display: inline;
 }
-.popover.megamenu-links .megamenu-links-address .telephone:after {
-  content: ' \2022 ';
-  display: inline;
+.popover.megamenu-links .megamenu-links-address .telephone {
+  margin-right: 0.8em;
+}
+.popover.megamenu-links .megamenu-links-address .utility > li {
+  margin-left: 0.6em;
+}
+.popover.megamenu-links .megamenu-links-address .utility > li:before {
+  content: none;
+}
+.popover.megamenu-links .megamenu-links-address .utility > li:first-child {
+  margin-left: 0;
 }
 #more-links {
   padding: 20px 0;
@@ -1026,7 +1040,7 @@ body {
   }
 }
 .more-links-sitemap > li > i {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 .more-links-sitemap > li ul {
   font-weight: normal;
@@ -1185,7 +1199,7 @@ html.no-generatedcontent .megamenu-links-address .utility > li {
   color: #777777;
 }
 .megamenu-links-address .utility > li:first-child:before {
-  content: '';
+  content: none;
   display: none;
 }
 @media print {

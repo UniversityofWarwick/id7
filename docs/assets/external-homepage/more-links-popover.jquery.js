@@ -48,8 +48,13 @@
                     $trigger.data('previous-hash', window.location.hash);
                     window.location.hash = options.target;
                 }).on('hide.bs.popover', function () {
-                    if ($trigger.data('previous-hash')) {
-                        window.location.hash = $trigger.data('previous-hash');
+                    if ($('.popover.megamenu-links').is(':visible')) {
+                        if ($trigger.data('previous-hash') && $trigger.data('previous-hash') !== '#more-links') {
+                            window.location.hash = $trigger.data('previous-hash');
+                        } else {
+                            // Set us back to the first panel
+                            window.location.hash = $('.jumbotron-carousel > article[id]:visible').first().attr('id');
+                        }
                     }
                 });
 
