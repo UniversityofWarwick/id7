@@ -4,17 +4,29 @@
   @border-image-left: "border-image-left.jpg",
   @border-image-right: "border-image-right.jpg") {
 
-  .id7-utility-masthead {
-    background-image: url("@{basedir}/@{masthead-image}");
-  }
+  .apply-masthead-image("@{basedir}/@{masthead-image}");
+  .apply-left-border-image("@{basedir}/@{border-image-left}");
+  .apply-right-border-image("@{basedir}/@{border-image-right}");
+}
 
+.apply-masthead-image(@url) {
+  .id7-utility-masthead {
+    background-image: url(@url);
+  }
+}
+
+.apply-left-border-image(@url) {
   @media (min-width: @grid-float-breakpoint) {
     .id7-left-border {
-      background-image: url("@{basedir}/@{border-image-left}");
+      background-image: url(@url);
     }
+  }
+}
 
+.apply-right-border-image(@url) {
+  @media (min-width: @grid-float-breakpoint) {
     .id7-right-border {
-      background-image: url("@{basedir}/@{border-image-right}");
+      background-image: url(@url);
     }
   }
 }

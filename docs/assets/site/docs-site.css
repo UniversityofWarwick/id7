@@ -5,6 +5,8 @@
   .id7-left-border {
     background-image: url("/assets/site/docs-site/border-image-left.jpg");
   }
+}
+@media (min-width: 768px) {
   .id7-right-border {
     background-image: url("/assets/site/docs-site/border-image-right.jpg");
   }

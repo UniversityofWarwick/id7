@@ -5,6 +5,8 @@ html.site1 .id7-utility-masthead {
   html.site1 .id7-left-border {
     background-image: url("/assets/site/site1/border-image-left.jpg");
   }
+}
+@media (min-width: 768px) {
   html.site1 .id7-right-border {
     background-image: url("/assets/site/site1/border-image-right.jpg");
   }
@@ -16,6 +18,8 @@ html.site2 .id7-utility-masthead {
   html.site2 .id7-left-border {
     background-image: url("/assets/site/site2/border-image-left.jpg");
   }
+}
+@media (min-width: 768px) {
   html.site2 .id7-right-border {
     background-image: url("/assets/site/site2/border-image-right.jpg");
   }
@@ -27,6 +31,8 @@ html.site3 .id7-utility-masthead {
   html.site3 .id7-left-border {
     background-image: url("/assets/site/site3/border-image-left.jpg");
   }
+}
+@media (min-width: 768px) {
   html.site3 .id7-right-border {
     background-image: url("/assets/site/site3/border-image-right.jpg");
   }
