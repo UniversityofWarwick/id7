@@ -11,11 +11,11 @@
     .container();
 
     // Add the logo to the right hand side when printing
-    @media print {
-      > img.visible-print-block {
-        float: right;
-      }
+    .id7-horizontal-divider {
+      .visible-print-block;
+    }
 
+    @media print {
       > .id7-page-title {
         padding-right: (@id7-print-logo-width + (@grid-gutter-width / 2));
       }
@@ -33,3 +33,4 @@
 @import "main-content/max-widths.less";
 @import "main-content/tables.less";
 @import "main-content/id6-legacy.less";
+@import "main-content/divider.less";

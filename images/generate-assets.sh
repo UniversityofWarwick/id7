@@ -18,8 +18,6 @@
 ./svg-to-png.sh id6a-logotype@2x.svg 272 52 id6a-logotype@2x.png false
 ./svg-to-png.sh id6a-logotype.svg 136 26 id6a-logotype.png false
 
-./svg-to-png.sh print-logo.svg 142 82 print-logo.png false
-
 ./svg-to-png.sh logo-with-descriptor-purple.svg 600 398 logo.png false
 ./svg-to-png.sh logo-purple.svg 600 347 logo-no-descriptor.png false
 

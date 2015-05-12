@@ -2590,6 +2590,11 @@ a .new-window-link:before {
 a:hover .new-window-link {
   color: #5b3069;
 }
+@media print {
+  a[href].no-print-expand:after {
+    content: "";
+  }
+}
 .lead {
   font-weight: 700;
 }
@@ -2676,6 +2681,13 @@ h6,
 h1 {
   padding-bottom: 11px;
   border-bottom: 1px solid #ababab;
+}
+@media print {
+  h1 {
+    padding-bottom: 0;
+    margin-bottom: 11px;
+    border: none;
+  }
 }
 h6,
 .h6 {
@@ -9172,12 +9184,17 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
     margin-left: 0;
   }
 }
+.id7-main-content-area > header .id7-horizontal-divider {
+  display: none !important;
+}
 @media print {
-  .id7-main-content-area > header > img.visible-print-block {
-    float: right;
+  .id7-main-content-area > header .id7-horizontal-divider {
+    display: block !important;
   }
+}
+@media print {
   .id7-main-content-area > header > .id7-page-title {
-    padding-right: 162px;
+    padding-right: 142px;
   }
 }
 .id7-main-content-area > .id7-main-content {
@@ -9871,6 +9888,19 @@ body :not(iframe)::-webkit-scrollbar-thumb:horizontal {
 body :not(iframe)::-webkit-scrollbar-thumb:hover {
   background-color: #505050 !important;
 }
+.id7-horizontal-divider {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  left: 20px;
+  overflow: hidden;
+}
+.id7-horizontal-divider > svg {
+  float: right;
+}
+.id7-horizontal-divider + * {
+  margin-top: 20px;
+}
 .id7-paging {
   padding-top: 0;
   padding-right: 20px;
@@ -10046,22 +10076,6 @@ footer .id7-app-footer .id7-footer-utility ul > li:first-child:before {
   footer .id7-app-footer .id7-logo-bleed + * {
     margin-top: 20px;
   }
-}
-footer .id7-site-footer .id7-horizontal-divider,
-footer .id7-app-footer .id7-horizontal-divider {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  left: 20px;
-  overflow: hidden;
-}
-footer .id7-site-footer .id7-horizontal-divider > svg,
-footer .id7-app-footer .id7-horizontal-divider > svg {
-  float: right;
-}
-footer .id7-site-footer .id7-horizontal-divider + *,
-footer .id7-app-footer .id7-horizontal-divider + * {
-  margin-top: 20px;
 }
 .id7-non-branded .id7-page-footer .id7-site-footer .id7-logo-bleed,
 .id7-non-branded .id7-page-footer .id7-app-footer .id7-logo-bleed {
