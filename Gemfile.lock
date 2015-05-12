@@ -64,7 +64,7 @@ GEM
     redcarpet (3.2.2)
     ref (1.0.5)
     rouge (1.7.4)
-    safe_yaml (1.0.4)
+    safe_yaml (1.0.5)
     sass (3.4.9)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)

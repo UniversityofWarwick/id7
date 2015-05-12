@@ -9,9 +9,9 @@ the version number that you're tagging.
 
 Quite unscientifically;
 
-    perl -i.orig -pe 's/1\.0\.3/1.0.4/g' $(git grep --full-name -l '1\.0\.3')
+    perl -i.orig -pe 's/1\.0\.3/1.0.5/g' $(git grep --full-name -l '1\.0\.3')
     
-Where 1.0.3 is the old version and 1.0.4 is the new version. `.orig` files are gitignored so they won't get pushed to the repo,
+Where 1.0.3 is the old version and 1.0.5 is the new version. `.orig` files are gitignored so they won't get pushed to the repo,
 but if you're bothered by them, you can run
 
     find . -name '*.orig' -delete
