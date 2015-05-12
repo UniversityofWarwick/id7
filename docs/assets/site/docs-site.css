@@ -45,13 +45,15 @@ a,
 a:link,
 a:visited {
   -webkit-text-decoration-color: #3584ca;
-  text-decoration-color: #3584ca;
+  -moz-text-decoration-color: #3584ca;
+       text-decoration-color: #3584ca;
 }
 a:hover,
 a:focus,
 a:active {
   -webkit-text-decoration-color: #0b1a28;
-  text-decoration-color: #0b1a28;
+  -moz-text-decoration-color: #0b1a28;
+       text-decoration-color: #0b1a28;
 }
 blockquote.quotes {
   color: #0b1a28;
@@ -80,13 +82,15 @@ blockquote.quotes::before {
 .brand-bg a:link,
 .brand-bg a:visited {
   -webkit-text-decoration-color: #ffffff !important;
-  text-decoration-color: #ffffff !important;
+  -moz-text-decoration-color: #ffffff !important;
+       text-decoration-color: #ffffff !important;
 }
 .brand-bg a:hover,
 .brand-bg a:focus,
 .brand-bg a:active {
   -webkit-text-decoration-color: #cccccc !important;
-  text-decoration-color: #cccccc !important;
+  -moz-text-decoration-color: #cccccc !important;
+       text-decoration-color: #cccccc !important;
 }
 .brand-text {
   color: #204f79;
@@ -108,13 +112,15 @@ blockquote.quotes::before {
 .brand-text a:link,
 .brand-text a:visited {
   -webkit-text-decoration-color: #3584ca !important;
-  text-decoration-color: #3584ca !important;
+  -moz-text-decoration-color: #3584ca !important;
+       text-decoration-color: #3584ca !important;
 }
 .brand-text a:hover,
 .brand-text a:focus,
 .brand-text a:active {
   -webkit-text-decoration-color: #0b1a28 !important;
-  text-decoration-color: #0b1a28 !important;
+  -moz-text-decoration-color: #0b1a28 !important;
+       text-decoration-color: #0b1a28 !important;
 }
 .brand-border {
   border-color: #204f79;
@@ -475,13 +481,15 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-page-footer .id7-app-footer a:link,
 .id7-page-footer .id7-app-footer a:visited {
   -webkit-text-decoration-color: #ffffff;
-  text-decoration-color: #ffffff;
+  -moz-text-decoration-color: #ffffff;
+       text-decoration-color: #ffffff;
 }
 .id7-page-footer .id7-app-footer a:hover,
 .id7-page-footer .id7-app-footer a:focus,
 .id7-page-footer .id7-app-footer a:active {
   -webkit-text-decoration-color: #cccccc;
-  text-decoration-color: #cccccc;
+  -moz-text-decoration-color: #cccccc;
+       text-decoration-color: #cccccc;
 }
 .id7-page-footer .id7-horizontal-divider .divider {
   stroke: #204f79;
@@ -528,13 +536,15 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:link,
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:visited {
   -webkit-text-decoration-color: #6b6b6b;
-  text-decoration-color: #6b6b6b;
+  -moz-text-decoration-color: #6b6b6b;
+       text-decoration-color: #6b6b6b;
 }
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover,
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   -webkit-text-decoration-color: #050505;
-  text-decoration-color: #050505;
+  -moz-text-decoration-color: #050505;
+       text-decoration-color: #050505;
 }
 .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::before,
 .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
@@ -939,7 +949,8 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .boxstyle-md.box5 a:visited,
 .boxstyle-lg.box5 a:visited {
   -webkit-text-decoration-color: #ffffff;
-  text-decoration-color: #ffffff;
+  -moz-text-decoration-color: #ffffff;
+       text-decoration-color: #ffffff;
 }
 .boxstyle_.box5 a:hover,
 .boxstyle-xs.box5 a:hover,
@@ -957,7 +968,8 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .boxstyle-md.box5 a:active,
 .boxstyle-lg.box5 a:active {
   -webkit-text-decoration-color: #cccccc;
-  text-decoration-color: #cccccc;
+  -moz-text-decoration-color: #cccccc;
+       text-decoration-color: #cccccc;
 }
 .boxstyle_.box5 h1,
 .boxstyle-xs.box5 h1,
