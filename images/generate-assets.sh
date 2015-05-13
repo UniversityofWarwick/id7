@@ -15,8 +15,8 @@
 ./svg-to-png.sh masthead-logo-bleed-wide-lg@2x.svg 6000 160 masthead-logo-bleed-wide-lg@2x.png true 450
 ./svg-to-png.sh masthead-logo-bleed-wide-lg.svg 3000 80 masthead-logo-bleed-wide-lg.png
 
-./svg-to-png.sh id6a-logotype@2x.svg 272 52 id6a-logotype@2x.png false
-./svg-to-png.sh id6a-logotype.svg 136 26 id6a-logotype.png false
+./svg-to-png.sh logotype-colour.svg 272 52 id6a-logotype@2x.png false
+./svg-to-png.sh logotype-colour.svg 136 26 id6a-logotype.png false
 
 ./svg-to-png.sh logo-with-descriptor-purple.svg 600 398 logo.png false
 ./svg-to-png.sh logo-purple.svg 600 347 logo-no-descriptor.png false
