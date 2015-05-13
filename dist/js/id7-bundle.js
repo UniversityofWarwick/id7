@@ -12362,6 +12362,11 @@ window.Modernizr = (function( window, document, undefined ) {
           '?goSearchReferer=' + encodeURIComponent(window.location) +
           '&goSearchQuery=' + encodeURIComponent($(this).data('original-query'));
       });
+
+      // ID-145
+      if ($(el).width() < 88) {
+        $(el).attr('placeholder', 'Search');
+      }
     });
   });
 
