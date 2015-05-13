@@ -12,7 +12,7 @@
 ./svg-to-png.sh masthead-logo-bleed-wide-sm.svg 992 80 masthead-logo-bleed-wide-sm.png
 ./svg-to-png.sh masthead-logo-bleed-wide-md@2x.svg 2400 160 masthead-logo-bleed-wide-md@2x.png
 ./svg-to-png.sh masthead-logo-bleed-wide-md.svg 1200 80 masthead-logo-bleed-wide-md.png
-./svg-to-png.sh masthead-logo-bleed-wide-lg@2x.svg 6000 160 masthead-logo-bleed-wide-lg@2x.png
+./svg-to-png.sh masthead-logo-bleed-wide-lg@2x.svg 6000 160 masthead-logo-bleed-wide-lg@2x.png true 450
 ./svg-to-png.sh masthead-logo-bleed-wide-lg.svg 3000 80 masthead-logo-bleed-wide-lg.png
 
 ./svg-to-png.sh id6a-logotype@2x.svg 272 52 id6a-logotype@2x.png false

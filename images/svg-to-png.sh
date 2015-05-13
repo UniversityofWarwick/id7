@@ -5,10 +5,11 @@ WIDTH=$2
 HEIGHT=$3
 OUTPUT=$4
 TRANSPARENT=${5:-true}
+DPI=${6:-600}
 
 if [ "$TRANSPARENT" = true ]; then
 	# Export the SVG as a PNG with a white background (so it's black on white)
-	inkscape $SVG --export-background=white --export-png=.tmp.png -d 600
+	inkscape $SVG --export-background=white --export-png=.tmp.png -d $DPI
 
 	# Create a temporary SVG that loads the temporary image
 	cat >.tmp.svg <<EOF
