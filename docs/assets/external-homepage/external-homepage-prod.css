@@ -540,6 +540,7 @@ body {
 }
 @media (min-width: 768px) {
   html.flexbox .jumbotron-carousel .jumbotron {
+    height: 800px;
     height: 100vh;
     display: -webkit-box;
     display: -webkit-flex;
@@ -553,13 +554,16 @@ body {
   }
   html.flexbox .jumbotron-carousel .jumbotron .container-fluid {
     width: 100%;
-    height: 100%;
+    height: 800px;
+    height: 100vh;
   }
   html.flexbox .jumbotron-carousel .jumbotron .container-fluid > .row {
-    height: 100%;
+    height: 800px;
+    height: 100vh;
   }
   html.flexbox .jumbotron-carousel .jumbotron .container-fluid > .row > * {
-    height: 100%;
+    height: 800px;
+    height: 100vh;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

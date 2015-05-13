@@ -385,6 +385,7 @@ only screen and (                min-resolution: 2dppx) {
 // Flexbox-y Jumbotrons on desktop
 @media (min-width: @grid-float-breakpoint) {
   html.flexbox .jumbotron-carousel .jumbotron {
+    height: 800px;
     height: 100vh;
 
     // Flex so that the container inside it takes up the full height
@@ -393,13 +394,16 @@ only screen and (                min-resolution: 2dppx) {
 
     .container-fluid {
       width: 100%;
-      height: 100%;
+      height: 800px;
+      height: 100vh;
 
       > .row {
-        height: 100%;
+        height: 800px;
+        height: 100vh;
 
         > * {
-          height: 100%;
+          height: 800px;
+          height: 100vh;
           display: flex;
         }
       }
