@@ -383,10 +383,28 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 // Flexbox-y Jumbotrons on desktop
+.set-jumbotron-height(@height: 100vh, @fallback: 800px) {
+  height: @fallback;
+  height: @height;
+
+  // Source: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587
+  // VH and VW units can cause issues on iOS 7 devices: http://caniuse.com/#feat=viewport-units
+  // To overcome this, create media queries that target the width, height, and orientation of iOS devices.
+
+  // iPad with portrait orientation.
+  @media (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    height: (1024px * (@height / 100vh));
+  }
+
+  // iPad with landscape orientation.
+  @media (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+    height: (768px * (@height / 100vh));
+  }
+}
+
 @media (min-width: @grid-float-breakpoint) {
   html.flexbox .jumbotron-carousel .jumbotron {
-    height: 800px;
-    height: 100vh;
+    .set-jumbotron-height();
 
     // Flex so that the container inside it takes up the full height
     display: flex;
@@ -394,16 +412,13 @@ only screen and (                min-resolution: 2dppx) {
 
     .container-fluid {
       width: 100%;
-      height: 800px;
-      height: 100vh;
+      .set-jumbotron-height();
 
       > .row {
-        height: 800px;
-        height: 100vh;
+        .set-jumbotron-height();
 
         > * {
-          height: 800px;
-          height: 100vh;
+          .set-jumbotron-height();
           display: flex;
         }
       }

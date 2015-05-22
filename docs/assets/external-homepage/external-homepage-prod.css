@@ -835,6 +835,46 @@ body {
     padding: 20px;
   }
 }
+@media (min-width: 768px) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  html.flexbox .jumbotron-carousel .jumbotron {
+    height: 1024px;
+  }
+}
+@media (min-width: 768px) and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  html.flexbox .jumbotron-carousel .jumbotron {
+    height: 768px;
+  }
+}
+@media (min-width: 768px) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid {
+    height: 1024px;
+  }
+}
+@media (min-width: 768px) and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid {
+    height: 768px;
+  }
+}
+@media (min-width: 768px) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid > .row {
+    height: 1024px;
+  }
+}
+@media (min-width: 768px) and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid > .row {
+    height: 768px;
+  }
+}
+@media (min-width: 768px) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid > .row > * {
+    height: 1024px;
+  }
+}
+@media (min-width: 768px) and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  html.flexbox .jumbotron-carousel .jumbotron .container-fluid > .row > * {
+    height: 768px;
+  }
+}
 @media (min-width: 768px) and (min-width: 768px) {
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-1-content,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-1-content,
