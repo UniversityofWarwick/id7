@@ -7933,9 +7933,6 @@ a.list-group-item {
 .dropdown-menu li {
   margin-bottom: 0;
 }
-.btn-toolbar > .btn-group:first-child {
-  margin-left: 0;
-}
 @media print {
   a[href^="mailto:"]:after,
   a[href^="tel:"]:after {
