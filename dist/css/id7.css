@@ -8980,7 +8980,7 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
   padding: 10px;
   padding-top: 6.5px;
   padding-bottom: 6.5px;
-  margin: 0 2px;
+  margin: 0;
   cursor: pointer;
   -webkit-transition: background-color .15s linear, color .15s linear;
        -o-transition: background-color .15s linear, color .15s linear;
@@ -8997,11 +8997,13 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
 }
 @media (min-width: 768px) {
   .id7-navigation .navbar-nav > li:nth-child(2) {
-    margin-left: 0;
+    margin-left: 1px;
   }
 }
 .id7-navigation .navbar-nav > li.nav-breadcrumb:first-child {
+  padding-left: 20px;
   margin-right: 17px;
+  margin-left: -10px;
 }
 @media (min-width: 768px) {
   .id7-navigation .navbar-nav > li.nav-breadcrumb:first-child {
@@ -9065,7 +9067,7 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
 }
 .id7-navigation .navbar-nav > li:not(.nav-breadcrumb):not(:last-child)::after {
   left: 100%;
-  margin-left: 1px;
+  margin-left: -2px;
 }
 .id7-navigation .navbar-nav > li.active {
   font-weight: bold;

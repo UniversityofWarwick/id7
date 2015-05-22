@@ -88,7 +88,7 @@
       padding-bottom: @navbar-padding-vertical;
 
       position: relative;
-      margin: 0 2px;
+      margin: 0;
       float: left;
       cursor: pointer;
       .transition(~"background-color .15s linear, color .15s linear");
@@ -107,7 +107,7 @@
 
       &:nth-child(2) {
         @media (min-width: @screen-sm-min) {
-          margin-left: 0;
+          margin-left: 1px;
         }
       }
 
@@ -118,6 +118,8 @@
         }
 
         margin-right: 17px;
+        margin-left: (@grid-gutter-width / -2);
+        padding-left: @grid-gutter-width;
 
         &::after {
           top: 0;
@@ -169,7 +171,7 @@
       // bar between siblings
       &:not(.nav-breadcrumb):not(:last-child)::after {
         left: 100%;
-        margin-left: 1px;
+        margin-left: -2px;
       }
 
       &.active {
