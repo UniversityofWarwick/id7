@@ -132,7 +132,7 @@ footer .id7-app-footer:after {
   position: absolute;
   top: 20px;
   right: 20px;
-  bottom: 60px;
+  bottom: 30px;
   padding: 20px;
   background-color: #555555;
   background-color: rgba(0, 0, 0, 0.8);
@@ -154,8 +154,8 @@ footer .id7-app-footer:after {
   border: 0;
 }
 .id7-main-content-area .slideshow .carousel-controls {
-  height: 40px;
-  line-height: 40px;
+  height: 20px;
+  line-height: 20px;
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -749,7 +749,7 @@ footer .id7-app-footer:after {
 }
 .id7-main-content-area .feature-box .heading {
   display: inline-block;
-  margin-left: -30px;
+  margin-left: -15px;
   padding: 10px 20px;
 }
 .id7-main-content-area .feature-box .heading h1,
@@ -858,17 +858,17 @@ footer .id7-app-footer:after {
 }
 @media (min-width: 768px) {
   .id7-main-content-area .nav-flex > li {
-    width: 54px;
+    width: 56px;
   }
 }
 @media (min-width: 992px) {
   .id7-main-content-area .nav-flex > li {
-    width: 35px;
+    width: 36px;
   }
 }
 @media (min-width: 1200px) {
   .id7-main-content-area .nav-flex > li {
-    width: 43px;
+    width: 44px;
   }
 }
 .id7-main-content-area .nav-flex > li > a {
@@ -958,7 +958,7 @@ blockquote.branded {
   background: url(/dist/images/logo-divider-purple.svg) right bottom no-repeat;
   -webkit-background-size: 1130px 41px;
           background-size: 1130px 41px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   position: relative;
 }
 blockquote.branded footer {
@@ -973,7 +973,7 @@ blockquote.branded footer cite {
 blockquote.branded footer {
   position: absolute;
   left: 0px;
-  height: 40px;
+  height: 20px;
   overflow: hidden;
   font-size: 75%;
   line-height: 1.5;

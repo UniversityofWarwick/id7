@@ -1,3 +1,21 @@
+.container(@gutter) {
+  .container-fixed(@gutter);
+
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+.container-fluid(@gutter) {
+  .container-fixed(@gutter);
+}
+
 // Fixes for where Bootstrap was designed badly
 .popover-content {
   padding: @popover-padding-vertical @popover-padding-horizontal;

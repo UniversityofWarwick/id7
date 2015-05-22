@@ -1,6 +1,6 @@
 .make-xs-boxstyle() {
   margin-bottom: @line-height-computed;
-  padding: (@grid-gutter-width / 2);
+  padding: @grid-gutter-width;
 
   .bordered-headings(none);
 
@@ -21,7 +21,7 @@
   }
 
   @media (min-width: @screen-sm-min) {
-    padding: (@grid-gutter-width / 2);
+    padding: @grid-gutter-width;
   }
 }
 
@@ -36,7 +36,7 @@
   }
 
   @media (min-width: @screen-md-min) {
-    padding: (@grid-gutter-width / 2);
+    padding: @grid-gutter-width;
   }
 }
 
@@ -51,7 +51,7 @@
   }
 
   @media (min-width: @screen-lg-min) {
-    padding: (@grid-gutter-width / 2);
+    padding: @grid-gutter-width;
   }
 }
 
@@ -127,9 +127,9 @@
     // Filled boxstyles should flush at widths that the padding isn't added at
     .flush() {
       &@{class} {
-        padding: (@grid-gutter-width / 2);
-        margin-left: (-@grid-gutter-width / 2);
-        margin-right: (-@grid-gutter-width / 2);
+        padding: @grid-gutter-width;
+        margin-left: (-@grid-gutter-width);
+        margin-right: (-@grid-gutter-width);
       }
     }
 

@@ -8,7 +8,7 @@
 @carousel-nav-exclusion-zone: 250px;
 
 @fixed-header-size: (@id7-masthead-bleed-height + @logo-height);
-@body-content-padding: (@fixed-header-size + (@grid-gutter-width / 2));
+@body-content-padding: (@fixed-header-size + @grid-gutter-width);
 
 @caption-icon-width: 256px;
 @caption-icon-height: 128px;
@@ -236,7 +236,7 @@ only screen and (                min-resolution: 2dppx) {
   .link-colour(white, #e0e4f8);
 
   ul.nav {
-    padding: 0 (@grid-gutter-width / 2) 0 0;
+    padding: 0 @grid-gutter-width 0 0;
     list-style: none;
     margin: 0;
 
@@ -308,7 +308,7 @@ only screen and (                min-resolution: 2dppx) {
     }
 
     p {
-      margin-bottom: (@grid-gutter-width / 2);
+      margin-bottom: @grid-gutter-width;
       font-weight: 200;
       font-size: @main-font-size;
       padding-right: 0 !important;
@@ -353,7 +353,7 @@ only screen and (                min-resolution: 2dppx) {
       text-shadow: 1px 1px 0 rgba(0,0,0,.2);
 
       .caption-content {
-        padding: (@grid-gutter-width / 2) 0;
+        padding: @grid-gutter-width 0;
       }
 
       .caption-icon {
@@ -363,7 +363,7 @@ only screen and (                min-resolution: 2dppx) {
         border: @caption-icon-border-width solid white;
         box-shadow: 1px 1px 0 rgba(0,0,0,.2);
 
-        margin-top: (@grid-gutter-width / 2);
+        margin-top: @grid-gutter-width;
       }
 
       &.caption-icon-square .caption-icon {
@@ -371,7 +371,7 @@ only screen and (                min-resolution: 2dppx) {
         height: (@caption-icon-square + (@caption-icon-border-width * 2));
 
         float: left;
-        margin: (@grid-gutter-width / 2) (@grid-gutter-width / 2) (@grid-gutter-width / 2) 0; // none on left
+        margin: @grid-gutter-width @grid-gutter-width @grid-gutter-width 0; // none on left
 
         @media (max-width: 320px) {
           width: (@caption-icon-square-xxs + (@caption-icon-border-width * 2));
@@ -489,7 +489,7 @@ only screen and (                min-resolution: 2dppx) {
 
     &.jumbotron-image > .container {
       margin-top: @body-content-padding;
-      margin-bottom: (@grid-gutter-width / 2);
+      margin-bottom: @grid-gutter-width;
     }
 
     &.jumbotron-panel {
@@ -527,7 +527,7 @@ only screen and (                min-resolution: 2dppx) {
             > .column-1-content, > .column-2-content {
               position: relative;
               z-index: 2;
-              padding: 0 (@grid-gutter-width / 2);
+              padding: 0 @grid-gutter-width;
               margin-top: @body-content-padding;
 
               @media (min-width: @screen-sm-min) {
@@ -560,7 +560,7 @@ only screen and (                min-resolution: 2dppx) {
 
       > .container-fluid > .row > * {
         padding-top: @body-content-padding;
-        padding-bottom: (@grid-gutter-width / 2);
+        padding-bottom: @grid-gutter-width;
       }
     }
 
@@ -600,7 +600,7 @@ only screen and (                min-resolution: 2dppx) {
         flex: 0 1 auto; // This should be the default, but isn't in IE10/11
 
         width: 66%;
-        padding: (@grid-gutter-width / 2);
+        padding: @grid-gutter-width;
       }
 
       @media (min-width: @screen-md-min) {
@@ -707,7 +707,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 #more-links {
-  padding: (@grid-gutter-width / 2) 0;
+  padding: @grid-gutter-width 0;
   background: @gray;
   color: white;
   font-size: 16px;
@@ -727,7 +727,7 @@ only screen and (                min-resolution: 2dppx) {
     }
 
     .utility {
-      margin-top: (@grid-gutter-width / 2);
+      margin-top: @grid-gutter-width;
     }
   }
 }
@@ -738,8 +738,8 @@ only screen and (                min-resolution: 2dppx) {
     .list-unstyled();
   }
 
-  margin-left:  (@grid-gutter-width / -2);
-  margin-right: (@grid-gutter-width / -2);
+  margin-left:  -@grid-gutter-width;
+  margin-right: -@grid-gutter-width;
 
   > li {
     .make-sm-column(3);
@@ -761,7 +761,7 @@ only screen and (                min-resolution: 2dppx) {
       li { margin: 0; }
     }
 
-    padding: (@grid-gutter-width / 2);
+    padding: @grid-gutter-width;
   }
 
   // When inside the footer
@@ -810,7 +810,7 @@ only screen and (                min-resolution: 2dppx) {
     }
 
     > li {
-      padding: (@grid-gutter-width / 4) (@grid-gutter-width / 2);
+      padding: (@grid-gutter-width / 2) @grid-gutter-width;
 
       + li {
         border-left: 1px solid @gray-lighter;
@@ -881,7 +881,7 @@ html.no-js, html.no-style-update {
 
 body > a.sr-only-focusable { // "Skip to main content" link
   top: 0px;
-  left: (@grid-gutter-width / 2);
+  left: @grid-gutter-width;
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
   z-index: 100;
 

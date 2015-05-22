@@ -1,8 +1,8 @@
 footer {
   .id7-site-footer, .id7-app-footer {
-    .container-fluid();
+    .container-fluid((@grid-gutter-width * 2));
     position: relative;
-    padding-top: (@grid-gutter-width / 2);
+    padding-top: @grid-gutter-width;
   }
 
   .id7-app-footer {
@@ -19,7 +19,7 @@ footer {
     }
 
     .id7-footer-utility {
-      margin-bottom: (@grid-gutter-width / 2);
+      margin-bottom: @grid-gutter-width;
 
       ul {
         .horizontal-utility-links();
@@ -31,13 +31,13 @@ footer {
   .id7-site-footer, .id7-app-footer {
     @media screen {
       .id7-logo-bleed {
-        .logo-as-css(auto, @grid-gutter-width, white);
+        .logo-as-css(auto, (@grid-gutter-width * 2), white);
         position: absolute;
         top: 0px;
         right: 10%;
 
         + * {
-          margin-top: (@grid-gutter-width / 2);
+          margin-top: @grid-gutter-width;
         }
       }
     }
