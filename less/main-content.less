@@ -8,7 +8,7 @@
   }
 
   > header {
-    .container();
+    .container((@grid-gutter-width * 2));
 
     // Add the logo to the right hand side when printing
     .id7-horizontal-divider {
@@ -17,15 +17,14 @@
 
     @media print {
       > .id7-page-title {
-        padding-right: (@id7-print-logo-width + (@grid-gutter-width / 2));
+        padding-right: (@id7-print-logo-width + @grid-gutter-width);
       }
     }
   }
 
   > .id7-main-content {
-    .container();
-    padding-top: (@grid-gutter-width / 2);
-    padding-bottom: (@grid-gutter-width / 2);
+    .container((@grid-gutter-width * 2));
+    padding: @grid-gutter-width;
   }
 }
 

@@ -3,15 +3,15 @@
 .id7-main-content-area {
   .row-spacer {
     > [class*='col-'] {
-      padding-top: (@grid-gutter-width / 2);
-      padding-bottom: (@grid-gutter-width / 2);
+      padding-top: @grid-gutter-width;
+      padding-bottom: @grid-gutter-width;
     }
   }
 
   .slideshow {
     background: black;
     color: white;
-    margin-bottom: (@grid-gutter-width / 2);
+    margin-bottom: @grid-gutter-width;
 
     .carousel {
       height: 400px;
@@ -32,10 +32,10 @@
         width: 290px;
         max-width: 100%;
         position: absolute;
-        top: (@grid-gutter-width / 2);
-        right: (@grid-gutter-width / 2);
+        top: @grid-gutter-width;
+        right: @grid-gutter-width;
         bottom: (@grid-gutter-width * 1.5);
-        padding: (@grid-gutter-width / 2);
+        padding: @grid-gutter-width;
         background-color: #555555;
         background-color: rgba(0, 0, 0, 0.8);
         overflow: auto;
@@ -73,7 +73,7 @@
 
       display: inline-block;
       margin-left: (-(@grid-gutter-width * 3/4));
-      padding: (@grid-gutter-width / 4) (@grid-gutter-width / 2);
+      padding: (@grid-gutter-width / 2) @grid-gutter-width;
     }
 
     position: relative;
@@ -83,7 +83,7 @@
       bottom: 0px;
       left: 0px;
       width: 100%;
-      padding: (@grid-gutter-width / 2);
+      padding: @grid-gutter-width;
 
       #gradient > .vertical(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
 
@@ -126,8 +126,8 @@
 
     > span {
       position: absolute;
-      left: (@grid-gutter-width / 2);
-      bottom: (@grid-gutter-width / 2);
+      left: @grid-gutter-width;
+      bottom: @grid-gutter-width;
     }
   }
 

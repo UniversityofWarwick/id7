@@ -130,8 +130,8 @@ body {
 .id7-masthead {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media (min-width: 768px) {
   .id7-utility-bar,
@@ -242,8 +242,8 @@ body {
   width: 150px;
   position: relative;
   min-height: 1px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-logo-column {
@@ -259,8 +259,8 @@ body {
 .id7-masthead .id7-search-column {
   position: relative;
   min-height: 1px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: -150px;
 }
 @media (min-width: 768px) {
@@ -944,8 +944,8 @@ body {
   html.no-flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -1068,8 +1068,8 @@ body {
 .more-links-sitemap > li {
   position: relative;
   min-height: 1px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   font-weight: bold;
   font-size: 16px;

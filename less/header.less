@@ -17,13 +17,13 @@
     content: "";
     position: absolute;
     z-index: -1;
-    left: (@grid-gutter-width / 2);
+    left: @grid-gutter-width;
 
     .position-logo-colour-block(@logo-height, @logo-width) {
       @offset: ceil((@logo-height * 2 / 3));
 
       top: (@id7-masthead-bleed-height + @offset);
-      width: (@logo-width - (@grid-gutter-width / 2));
+      width: (@logo-width - @grid-gutter-width);
       height: (@logo-height - @offset);
     }
 
