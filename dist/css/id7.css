@@ -7941,6 +7941,12 @@ a.list-group-item {
   a[href^="tel:"]:after {
     content: "";
   }
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9 !important;
+  }
+  .table-striped > tbody > tr:nth-of-type(odd) > td {
+    background-color: transparent !important;
+  }
 }
 html.no-touch .modal-open {
   padding-right: 0 !important;

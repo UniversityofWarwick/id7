@@ -94,6 +94,17 @@ a.list-group-item {
   a[href^="tel:"]:after {
     content: "";
   }
+
+  // ID-152 re-instate zebra striping on table-striped
+  .table-striped {
+    > tbody > tr:nth-of-type(odd) {
+      background-color: @table-bg-accent !important;
+
+      > td {
+        background-color: transparent !important;
+      }
+    }
+  }
 }
 
 // ID-115
