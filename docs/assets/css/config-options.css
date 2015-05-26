@@ -547,7 +547,8 @@ body.brand-purple .id7-masthead .id7-search .fa {
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-purple .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
+body.brand-purple .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
+body.brand-purple .id7-masthead .id7-search .fa:hover {
   color: #5b3069;
 }
 body.brand-purple .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
@@ -1580,7 +1581,8 @@ body.brand-gray .id7-masthead .id7-search .fa {
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-gray .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
+body.brand-gray .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
+body.brand-gray .id7-masthead .id7-search .fa:hover {
   color: #3f4246;
 }
 body.brand-gray .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
@@ -2613,7 +2615,8 @@ body.brand-gold .id7-masthead .id7-search .fa {
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-gold .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
+body.brand-gold .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
+body.brand-gold .id7-masthead .id7-search .fa:hover {
   color: #996b00;
 }
 body.brand-gold .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
@@ -3646,7 +3649,8 @@ body.brand-blue .id7-masthead .id7-search .fa {
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-blue .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
+body.brand-blue .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
+body.brand-blue .id7-masthead .id7-search .fa:hover {
   color: #204f79;
 }
 body.brand-blue .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
@@ -4679,7 +4683,8 @@ body.brand-orange .id7-masthead .id7-search .fa {
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-orange .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
+body.brand-orange .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
+body.brand-orange .id7-masthead .id7-search .fa:hover {
   color: #be410c;
 }
 body.brand-orange .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
@@ -5712,7 +5717,8 @@ body.brand-green .id7-masthead .id7-search .fa {
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-green .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
+body.brand-green .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
+body.brand-green .id7-masthead .id7-search .fa:hover {
   color: #797906;
 }
 body.brand-green .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
@@ -6745,7 +6751,8 @@ body.brand-red .id7-masthead .id7-search .fa {
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-red .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
+body.brand-red .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
+body.brand-red .id7-masthead .id7-search .fa:hover {
   color: #89102c;
 }
 body.brand-red .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {

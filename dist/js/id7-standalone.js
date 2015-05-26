@@ -530,6 +530,14 @@
 
   $(function () {
     $('input[data-suggest="go"]').each(function (i, el) {
+      // ID-156 find the icon next to it
+      $(el).next('.fa').on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $(el).closest('form').submit();
+      });
+
       // ID-89 On xs, set the min length to 3, not 2, and only show 3 results
       var minLength = 3;
       var maxResults = 3;
