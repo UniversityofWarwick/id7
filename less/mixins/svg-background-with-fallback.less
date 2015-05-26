@@ -1,0 +1,5 @@
+.svg-background-with-fallback(@svg; @fallback; @position: '0% 0%'; @repeat: 'no-repeat') {
+  background: url(@fallback) ~"@{position} @{repeat}";
+  background: none,
+              url(@svg) ~"@{position} @{repeat}";
+}

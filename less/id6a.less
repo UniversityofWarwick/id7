@@ -14,9 +14,7 @@
 
 // Replace the logo with the new one
 #warwick-logo-link {
-  background: url("../images/id6a-logotype.png") no-repeat;
-  background: none,
-              url("../images/logotype-colour.svg") no-repeat;
+  .svg-background-with-fallback("../images/logotype-colour.svg", "../images/id6a-logotype.png");
 }
 
 @media

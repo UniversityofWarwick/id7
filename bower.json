@@ -1,7 +1,7 @@
 {
   "name": "warwick-id7",
   "description": "CSS, JavaScript and sample HTML in order to use the corporate identity on your site",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "http://id7.warwick.ac.uk",
   "main": [
     "less/id7.less",
@@ -13,10 +13,10 @@
     "dist/fonts/fontawesome-webfont.ttf",
     "dist/fonts/fontawesome-webfont.woff",
     "dist/fonts/fontawesome-webfont.woff2",
+    "dist/images/masthead-logo-bleed-sm.svg",
     "dist/images/masthead-logo-bleed-sm.png",
-    "dist/images/masthead-logo-bleed-sm@2x.png",
+    "dist/images/masthead-logo-bleed-xs.svg",
     "dist/images/masthead-logo-bleed-xs.png",
-    "dist/images/masthead-logo-bleed-xs@2x.png",
     "dist/templates/base.html"
   ],
   "ignore": [
