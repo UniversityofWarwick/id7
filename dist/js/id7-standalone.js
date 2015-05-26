@@ -24,7 +24,7 @@
       ].join('')),
       Action: _.template([
         '<div class="btn-group">',
-        '<a href="<%- href %>" class="btn btn-default <%= classes %>"><%= title %></a>',
+        '<a href="<%- href %>" title="<%= tooltip %>" class="btn btn-default <%= classes %>"><%= title %></a>',
         '</div>'
       ].join(''))
     },
@@ -93,14 +93,19 @@
 
         switch (messageType) {
           case 'addAction':
+            _.defaults(data, { classes: '', tooltip: '' });
+
             $popover.find('.actions > .btn-group').prepend(Config.Templates.Action(data));
+            $popover.find('.actions > .btn-group > .btn-group').first().find('[title]:not([title=""])').tooltip({
+              placement: 'bottom'
+            });
             break;
           case 'resizeIframe':
             $popover.find('.account-info iframe').height(data.height);
             break;
           case 'signedOut':
             var loginlink = this.options.loginlink;
-            $popover.find('.actions > .btn-group > .sign-out').replaceWith(Config.Templates.Action({ href:loginlink, classes:'sign-in', title:'Sign in' }));
+            $popover.find('.actions > .btn-group > .sign-out').replaceWith(Config.Templates.Action({ href: loginlink, classes: 'sign-in', title: 'Sign in', tooltip: '' }));
             break;
           default:
             console.error('Unexpected message type: ' + messageType);
