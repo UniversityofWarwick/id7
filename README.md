@@ -41,10 +41,10 @@ id7/
 │   └── id7-standalone.min.js
 ├── images/
 │   ├── logo.png
+│   ├── masthead-logo-bleed-sm.svg
 │   ├── masthead-logo-bleed-sm.png
-│   ├── masthead-logo-bleed-sm@2x.png
-│   ├── masthead-logo-bleed-xs.png
-│   └── masthead-logo-bleed-xs@2x.png
+│   ├── masthead-logo-bleed-xs.svg
+│   └── masthead-logo-bleed-xs.png
 ├── fonts/
 │   ├── FontAwesome.otf
 │   ├── fontawesome-webfont.eot
