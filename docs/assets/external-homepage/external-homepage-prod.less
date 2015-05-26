@@ -70,27 +70,20 @@ body {
 
 .id7-utility-masthead {
   background-color: transparent; // Override default style
-  background: url("/dist/images/masthead-logo-bleed-wide-xs.png") 0 @id7-masthead-bleed-height no-repeat;
-  background: none,
-              url("/dist/images/masthead-logo-bleed-wide-xs.svg") 0 @id7-masthead-bleed-height no-repeat;
+
+  .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-xs.svg', '/dist/images/masthead-logo-bleed-wide-xs.png', "0 @{id7-masthead-bleed-height}");
   background-size: 1680px 300px;
 
   @media (min-width: @screen-sm-min) {
-    background: url("/dist/images/masthead-logo-bleed-wide-sm.png") center @id7-masthead-bleed-height no-repeat;
-    background: none,
-                url("/dist/images/masthead-logo-bleed-wide-sm.svg") center @id7-masthead-bleed-height no-repeat;
+    .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-sm.svg', '/dist/images/masthead-logo-bleed-wide-sm.png', "center @{id7-masthead-bleed-height}");
     background-size: @screen-md-min @id7-masthead-logo-height-sm;
   }
   @media (min-width: @screen-md-min) {
-    background: url("/dist/images/masthead-logo-bleed-wide-md.png") center @id7-masthead-bleed-height no-repeat;
-    background: none,
-                url("/dist/images/masthead-logo-bleed-wide-md.svg") center @id7-masthead-bleed-height no-repeat;
+    .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-md.svg', '/dist/images/masthead-logo-bleed-wide-md.png', "center @{id7-masthead-bleed-height}");
     background-size: @screen-lg-min @id7-masthead-logo-height-sm;
   }
   @media (min-width: @screen-lg-min) {
-    background: url("/dist/images/masthead-logo-bleed-wide-lg.png") center @id7-masthead-bleed-height no-repeat;
-    background: none,
-                url("/dist/images/masthead-logo-bleed-wide-lg.svg") center @id7-masthead-bleed-height no-repeat;
+    .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-lg.svg', '/dist/images/masthead-logo-bleed-wide-lg.png', "center @{id7-masthead-bleed-height}");
     background-size: 3000px @id7-masthead-logo-height-sm;
   }
 

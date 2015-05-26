@@ -54,15 +54,11 @@
     height: @id7-masthead-logo-height-xs;
   }
 
-  background: url("@{id7-image-root-dir}/masthead-logo-bleed-xs.png") no-repeat;
-  background: none,
-              url("@{id7-image-root-dir}/masthead-logo-bleed-xs.svg") no-repeat;
+  .svg-background-with-fallback("@{id7-image-root-dir}/masthead-logo-bleed-xs.svg", "@{id7-image-root-dir}/masthead-logo-bleed-xs.png");
   background-size: 1680px 300px;
 
   @media (min-width: @grid-float-breakpoint) {
-    background: url("@{id7-image-root-dir}/masthead-logo-bleed-sm.png") no-repeat;
-    background: none,
-                url("@{id7-image-root-dir}/masthead-logo-bleed-sm.svg") no-repeat;
+    .svg-background-with-fallback("@{id7-image-root-dir}/masthead-logo-bleed-sm.svg", "@{id7-image-root-dir}/masthead-logo-bleed-sm.png");
     background-size: @container-lg 300px;
 
     .id7-logo-row {
