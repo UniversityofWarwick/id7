@@ -1,7 +1,7 @@
 #masthead,
 #masthead.transparent {
-  color: #383838;
   background-color: white;
+  color: #383838;
 }
 #masthead a,
 #masthead.transparent a,
@@ -30,8 +30,8 @@
 #masthead a:visited,
 #masthead.transparent a:visited {
   -webkit-text-decoration-color: #6b6b6b;
-     -moz-text-decoration-color: #6b6b6b;
-          text-decoration-color: #6b6b6b;
+  -moz-text-decoration-color: #6b6b6b;
+       text-decoration-color: #6b6b6b;
 }
 #masthead a:hover,
 #masthead.transparent a:hover,
@@ -40,15 +40,16 @@
 #masthead a:active,
 #masthead.transparent a:active {
   -webkit-text-decoration-color: #050505;
-     -moz-text-decoration-color: #050505;
-          text-decoration-color: #050505;
+  -moz-text-decoration-color: #050505;
+       text-decoration-color: #050505;
 }
 #warwick-logo-link {
-  background-image: url("../images/id6a-logotype.png");
+  background: url("../images/id6a-logotype.png") no-repeat;
+  background: none, url("../images/logotype-colour.svg") no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #warwick-logo-link {
-    background-image: url("../images/id6a-logotype@2x.png");
+    background-image: url("../images/logotype-colour.svg");
   }
 }
 #search-container ul.index-section li.active {
@@ -62,41 +63,41 @@
 #search-container ul.index-section li.active a:hover,
 #search-container ul.index-section li.active a:focus,
 #search-container ul.index-section li.active a:active {
-  color: #ccc;
+  color: #cccccc;
 }
 #search-container ul.index-section li.active a:hover .new-window-link {
-  color: #ccc;
+  color: #cccccc;
 }
 #search-container ul.index-section li.active a,
 #search-container ul.index-section li.active a:link,
 #search-container ul.index-section li.active a:visited {
-  -webkit-text-decoration-color: #fff;
-     -moz-text-decoration-color: #fff;
-          text-decoration-color: #fff;
+  -webkit-text-decoration-color: #ffffff;
+  -moz-text-decoration-color: #ffffff;
+       text-decoration-color: #ffffff;
 }
 #search-container ul.index-section li.active a:hover,
 #search-container ul.index-section li.active a:focus,
 #search-container ul.index-section li.active a:active {
-  -webkit-text-decoration-color: #ccc;
-     -moz-text-decoration-color: #ccc;
-          text-decoration-color: #ccc;
+  -webkit-text-decoration-color: #cccccc;
+  -moz-text-decoration-color: #cccccc;
+       text-decoration-color: #cccccc;
 }
 #search-container ul.index-section {
   display: none;
 }
 #search-container #search-box {
+  border: 1px solid #cccccc;
+  padding: 2px 23px 2px 3px;
   height: 25px;
+  line-height: 25px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 2px 23px 2px 3px;
-  line-height: 25px;
-  border: 1px solid #ccc;
 }
 #search-container #search-button {
+  margin-left: -20px;
   position: relative;
   top: -3px;
-  margin-left: -20px;
 }
 .is-smallscreen #masthead i.sprite-menu,
 .is-smallscreen #masthead i.sprite-search {

@@ -328,12 +328,12 @@ module.exports = function (grunt) {
       },
       images: {
         expand: true,
-        src: ['images/**/*', '!images/*.sh', '!images/*.svg'],
+        src: ['images/**/*', '!images/*.sh', '!images/src', '!images/src/**/*'],
         dest: 'dist/'
       },
       vendorjs: {
         expand: true,
-        src: 'js/vendor/*',
+        src: ['js/vendor/*', '!js/vendor/bootstrap-3.3.2'],
         dest: 'dist/'
       },
       docs: {

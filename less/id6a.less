@@ -14,7 +14,9 @@
 
 // Replace the logo with the new one
 #warwick-logo-link {
-  background-image: url("../images/id6a-logotype.png");
+  background: url("../images/id6a-logotype.png") no-repeat;
+  background: none,
+              url("../images/logotype-colour.svg") no-repeat;
 }
 
 @media
@@ -25,7 +27,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   #warwick-logo-link {
-    background-image: url("../images/id6a-logotype@2x.png");
+    background-image: url("../images/logotype-colour.svg");
   }
 }
 
