@@ -8436,7 +8436,8 @@ html.no-generatedcontent .id7-utility-bar > ul > li {
   margin-left: -10px;
 }
 html.no-svg .id7-masthead,
-html.no-svgfilters .id7-masthead {
+html.no-svgfilters .id7-masthead,
+html.no-smil .id7-masthead {
   background: url("../images/masthead-logo-bleed-xs.png") 0 0 no-repeat;
 }
 @media (min-width: 768px) {
@@ -8446,7 +8447,8 @@ html.no-svgfilters .id7-masthead {
             background-size: 1170px 300px;
   }
   html.no-svg .id7-masthead,
-  html.no-svgfilters .id7-masthead {
+  html.no-svgfilters .id7-masthead,
+  html.no-smil .id7-masthead {
     background: url("../images/masthead-logo-bleed-sm.png") 0 0 no-repeat;
   }
   .id7-masthead .id7-logo-row {
