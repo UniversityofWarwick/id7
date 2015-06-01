@@ -8367,8 +8367,7 @@ html.no-generatedcontent .id7-utility-bar > ul > li {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
-  background: url("../images/masthead-logo-bleed-xs.png") 0 0 no-repeat;
-  background: none, url("../images/masthead-logo-bleed-xs.svg") 0 0 no-repeat;
+  background: url("../images/masthead-logo-bleed-xs.svg") 0 0 no-repeat;
   -webkit-background-size: 1680px 300px;
           background-size: 1680px 300px;
 }
@@ -8436,12 +8435,19 @@ html.no-generatedcontent .id7-utility-bar > ul > li {
   margin-right: -10px;
   margin-left: -10px;
 }
+html.no-svg .id7-masthead,
+html.no-svgfilters .id7-masthead {
+  background: url("../images/masthead-logo-bleed-xs.png") 0 0 no-repeat;
+}
 @media (min-width: 768px) {
   .id7-masthead {
-    background: url("../images/masthead-logo-bleed-sm.png") 0 0 no-repeat;
-    background: none, url("../images/masthead-logo-bleed-sm.svg") 0 0 no-repeat;
+    background: url("../images/masthead-logo-bleed-sm.svg") 0 0 no-repeat;
     -webkit-background-size: 1170px 300px;
             background-size: 1170px 300px;
+  }
+  html.no-svg .id7-masthead,
+  html.no-svgfilters .id7-masthead {
+    background: url("../images/masthead-logo-bleed-sm.png") 0 0 no-repeat;
   }
   .id7-masthead .id7-logo-row {
     height: 80px;
