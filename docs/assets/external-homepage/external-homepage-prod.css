@@ -633,10 +633,10 @@ html.no-svgfilters .id7-utility-masthead {
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-image > a,
   html.flexbox .jumbotron-carousel .jumbotron .jumbotron-image > a {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     -webkit-transition: background 0.15s linear;
     -o-transition: background 0.15s linear;
     transition: background 0.15s linear;
@@ -647,8 +647,7 @@ html.no-svgfilters .id7-utility-masthead {
     background-color: rgba(255, 255, 255, 0.2);
   }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-image > .container {
-    margin-top: 124px;
-    margin-bottom: 20px;
+    margin-top: 104px;
   }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .container-fluid,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .container-fluid {
@@ -726,8 +725,7 @@ html.no-svgfilters .id7-utility-masthead {
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 > .column-2-content {
     position: relative;
     z-index: 2;
-    padding: 0 20px;
-    margin-top: 124px;
+    margin-top: 104px;
   }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1 > .column-2-content .caption-content,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 > .column-2-content .caption-content,
@@ -750,10 +748,11 @@ html.no-svgfilters .id7-utility-masthead {
             justify-content: flex-start;
   }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel > .container-fluid > .row > * {
-    padding-top: 124px;
-    padding-bottom: 20px;
+    padding-top: 104px;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption {
+    margin-left: -10px;
+    margin-right: -10px;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
@@ -824,6 +823,7 @@ html.no-svgfilters .id7-utility-masthead {
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
     width: 66%;
+    margin: 20px;
     padding: 20px;
   }
 }
@@ -918,12 +918,15 @@ html.no-svgfilters .id7-utility-masthead {
 }
 @media (min-width: 768px) and (min-width: 992px) {
   html.flexbox .jumbotron-carousel .jumbotron .caption.center .caption-content {
-    width: 100%;
+    width: auto;
   }
 }
-@media (min-width: 768px) and (min-width: 992px) {
+@media (min-width: 768px) and (min-width: 768px) {
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .caption.center {
     padding: 0;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .caption.center .caption-content {
+    width: auto;
   }
 }
 @media (min-width: 768px) {

@@ -8,7 +8,6 @@
 @carousel-nav-exclusion-zone: 250px;
 
 @fixed-header-size: (@id7-masthead-bleed-height + @logo-height);
-@body-content-padding: (@fixed-header-size + @grid-gutter-width);
 
 @caption-icon-width: 256px;
 @caption-icon-height: 128px;
@@ -203,7 +202,7 @@ body {
 
   position: fixed;
   right: 0;
-  top: @body-content-padding;
+  top: (@fixed-header-size + @grid-gutter-width);
   z-index: 10;
   text-align: right;
 
@@ -449,8 +448,6 @@ body {
         height: 100%;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
 
         .transition(background .15s linear);
 
@@ -463,8 +460,7 @@ body {
     }
 
     &.jumbotron-image > .container {
-      margin-top: @body-content-padding;
-      margin-bottom: @grid-gutter-width;
+      margin-top: @fixed-header-size;
     }
 
     &.jumbotron-panel {
@@ -502,8 +498,7 @@ body {
             > .column-1-content, > .column-2-content {
               position: relative;
               z-index: 2;
-              padding: 0 @grid-gutter-width;
-              margin-top: @body-content-padding;
+              margin-top: @fixed-header-size;
 
               @media (min-width: @screen-sm-min) {
                 width: (@container-sm / 2);
@@ -534,12 +529,12 @@ body {
       }
 
       > .container-fluid > .row > * {
-        padding-top: @body-content-padding;
-        padding-bottom: @grid-gutter-width;
+        padding-top: @fixed-header-size;
       }
     }
 
     .caption {
+      .make-row();
       flex: 1 1 auto;
 
       display: flex;
@@ -575,19 +570,24 @@ body {
         flex: 0 1 auto; // This should be the default, but isn't in IE10/11
 
         width: 66%;
+        margin: @grid-gutter-width;
         padding: @grid-gutter-width;
       }
 
       @media (min-width: @screen-md-min) {
         &.center .caption-content {
-          width: 100%;
+          width: auto;
         }
       }
     }
 
-    @media (min-width: @screen-md-min) {
+    @media (min-width: @grid-float-breakpoint) {
       &.jumbotron-panel .caption.center {
         padding: 0;
+
+        .caption-content {
+          width: auto;
+        }
       }
     }
   }
