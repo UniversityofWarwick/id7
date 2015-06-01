@@ -1,7 +1,7 @@
 .svg-background-with-fallback(@svg; @fallback; @position: '0% 0%'; @repeat: 'no-repeat') {
   background: url(@svg) ~"@{position} @{repeat}";
 
-  html.no-svg &, html.no-svgfilters & {
+  html.no-svg &, html.no-svgfilters &, html.no-smil & { // smil used to detect IE, naughty. SHAME
     background: url(@fallback) ~"@{position} @{repeat}";
   }
 }
