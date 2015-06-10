@@ -175,7 +175,8 @@ body {
           background-size: 1680px 300px;
 }
 html.no-svg .id7-utility-masthead,
-html.no-svgfilters .id7-utility-masthead {
+html.no-svgfilters .id7-utility-masthead,
+html.no-smil .id7-utility-masthead {
   background: url('/dist/images/masthead-logo-bleed-wide-xs.png') 0 24px no-repeat;
 }
 @media (min-width: 768px) {
@@ -185,7 +186,8 @@ html.no-svgfilters .id7-utility-masthead {
             background-size: 992px 80px;
   }
   html.no-svg .id7-utility-masthead,
-  html.no-svgfilters .id7-utility-masthead {
+  html.no-svgfilters .id7-utility-masthead,
+  html.no-smil .id7-utility-masthead {
     background: url('/dist/images/masthead-logo-bleed-wide-sm.png') center 24px no-repeat;
   }
 }
@@ -196,7 +198,8 @@ html.no-svgfilters .id7-utility-masthead {
             background-size: 1200px 80px;
   }
   html.no-svg .id7-utility-masthead,
-  html.no-svgfilters .id7-utility-masthead {
+  html.no-svgfilters .id7-utility-masthead,
+  html.no-smil .id7-utility-masthead {
     background: url('/dist/images/masthead-logo-bleed-wide-md.png') center 24px no-repeat;
   }
 }
@@ -207,7 +210,8 @@ html.no-svgfilters .id7-utility-masthead {
             background-size: 3000px 80px;
   }
   html.no-svg .id7-utility-masthead,
-  html.no-svgfilters .id7-utility-masthead {
+  html.no-svgfilters .id7-utility-masthead,
+  html.no-smil .id7-utility-masthead {
     background: url('/dist/images/masthead-logo-bleed-wide-lg.png') center 24px no-repeat;
   }
 }
@@ -761,61 +765,56 @@ html.no-svgfilters .id7-utility-masthead {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption,
   html.flexbox .jumbotron-carousel .jumbotron .caption.middle {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  html.flexbox .jumbotron-carousel .jumbotron .caption.top {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  html.flexbox .jumbotron-carousel .jumbotron .caption.bottom {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  html.flexbox .jumbotron-carousel .jumbotron .caption,
-  html.flexbox .jumbotron-carousel .jumbotron .caption.left {
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  html.flexbox .jumbotron-carousel .jumbotron .caption.center {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  html.flexbox .jumbotron-carousel .jumbotron .caption.right {
+  html.flexbox .jumbotron-carousel .jumbotron .caption.top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption.bottom {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
             align-items: flex-end;
   }
+  html.flexbox .jumbotron-carousel .jumbotron .caption,
+  html.flexbox .jumbotron-carousel .jumbotron .caption.left {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption.center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  html.flexbox .jumbotron-carousel .jumbotron .caption.right {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
   html.flexbox .jumbotron-carousel .jumbotron .caption.top.right {
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption.top.center {
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption .caption-content {
     -webkit-box-flex: 0;
@@ -910,10 +909,10 @@ html.no-svgfilters .id7-utility-masthead {
 }
 @media (min-width: 768px) and (min-width: 992px) {
   html.flexbox .jumbotron-carousel .jumbotron .caption.top.center {
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media (min-width: 768px) and (min-width: 992px) {

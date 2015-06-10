@@ -538,32 +538,31 @@ body {
       flex: 1 1 auto;
 
       display: flex;
-      flex-direction: column;
 
       // Default .middle .left
 
       // Vertical alignment
-      &, &.middle { justify-content: center; }
-      &.top { justify-content: flex-start; }
-      &.bottom { justify-content: flex-end; }
+      &, &.middle { align-items: center; }
+      &.top { align-items: flex-start; }
+      &.bottom { align-items: flex-end; }
 
-      &, &.left { align-items: flex-start; }
-      &.center { align-items: center;
+      &, &.left { justify-content: flex-start; }
+      &.center { justify-content: center;
         // Padding for exclusion zone on right
         @media (min-width: @screen-md-min) {
           padding: 0 @carousel-nav-exclusion-zone;
         }
       }
-      &.right { align-items: flex-end; }
+      &.right { justify-content: flex-end; }
 
       // Invalid combinations, top-right will assume top-left
-      &.top.right { align-items: flex-start; }
+      &.top.right { justify-content: flex-start; }
 
       // top.center is invalid at sm but valid at md and lg
-      &.top.center { align-items: flex-start; }
+      &.top.center { justify-content: flex-start; }
 
       @media (min-width: @screen-md-min) {
-        &.top.center { align-items: center; }
+        &.top.center { justify-content: center; }
       }
 
       .caption-content {
