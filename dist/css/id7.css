@@ -10140,6 +10140,36 @@ footer .id7-app-footer .id7-footer-utility ul > li:first-child:before {
             flex: auto;
   }
 }
+.pull-xs-left {
+  float: left;
+}
+.pull-xs-right {
+  float: right;
+}
+@media (min-width: 768px) {
+  .pull-sm-left {
+    float: left;
+  }
+  .pull-sm-right {
+    float: right;
+  }
+}
+@media (min-width: 992px) {
+  .pull-md-left {
+    float: left;
+  }
+  .pull-md-right {
+    float: right;
+  }
+}
+@media (min-width: 1200px) {
+  .pull-lg-left {
+    float: left;
+  }
+  .pull-lg-right {
+    float: right;
+  }
+}
 .flush-left {
   margin-left: -20px;
 }
