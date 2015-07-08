@@ -8115,11 +8115,6 @@ body {
             transform: translate(585px, 0);
   }
 }
-.id7-left-border,
-.id7-right-border {
-  jerry: 1920px;
-  kerry: 1200px;
-}
 @media (min-width: 1921px), (min-height: 1201px) {
   .id7-left-border,
   .id7-right-border {
