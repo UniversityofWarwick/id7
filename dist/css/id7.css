@@ -8005,7 +8005,7 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
-    min-height: 100vh;
+    height: 100vh;
             flex-direction: column;
 
     -webkit-box-orient: vertical;

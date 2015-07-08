@@ -27,7 +27,7 @@ body {
   // Stretch the content down to the footer, using Flexbox
   @media (min-width: @grid-float-breakpoint) {
     html.flexbox & {
-      min-height: 100vh;
+      height: 100vh; // Screw you IE ID-163
       display: flex;
       flex-direction: column;
 
