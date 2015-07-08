@@ -8005,7 +8005,7 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
-    height: 100vh;
+    min-height: 100vh;
             flex-direction: column;
 
     -webkit-box-orient: vertical;
@@ -8064,22 +8064,22 @@ body {
   }
 }
 @media (min-width: 768px) {
-  html.no-flexbox .id7-left-border,
-  html.no-flexbox .id7-right-border {
+  .id7-left-border,
+  .id7-right-border {
     position: fixed;
     top: 0;
     z-index: 0;
     width: 50%;
     height: 100%;
   }
-  html.no-flexbox .id7-left-border {
+  .id7-left-border {
     left: 0;
     -webkit-transform: translate(-375px, 0);
         -ms-transform: translate(-375px, 0);
          -o-transform: translate(-375px, 0);
             transform: translate(-375px, 0);
   }
-  html.no-flexbox .id7-right-border {
+  .id7-right-border {
     right: 0;
     -webkit-transform: translate(375px, 0);
         -ms-transform: translate(375px, 0);
@@ -8088,13 +8088,13 @@ body {
   }
 }
 @media (min-width: 992px) {
-  html.no-flexbox .id7-left-border {
+  .id7-left-border {
     -webkit-transform: translate(-485px, 0);
         -ms-transform: translate(-485px, 0);
          -o-transform: translate(-485px, 0);
             transform: translate(-485px, 0);
   }
-  html.no-flexbox .id7-right-border {
+  .id7-right-border {
     -webkit-transform: translate(485px, 0);
         -ms-transform: translate(485px, 0);
          -o-transform: translate(485px, 0);
@@ -8102,45 +8102,90 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  html.no-flexbox .id7-left-border {
+  .id7-left-border {
     -webkit-transform: translate(-585px, 0);
         -ms-transform: translate(-585px, 0);
          -o-transform: translate(-585px, 0);
             transform: translate(-585px, 0);
   }
-  html.no-flexbox .id7-right-border {
+  .id7-right-border {
     -webkit-transform: translate(585px, 0);
         -ms-transform: translate(585px, 0);
          -o-transform: translate(585px, 0);
             transform: translate(585px, 0);
   }
 }
-@media (min-width: 768px) {
-  html.flexbox body {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display:         flex;
-  }
-  html.flexbox .id7-left-border,
-  html.flexbox .id7-right-border {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-  }
-  html.flexbox .id7-fixed-width-container {
-    margin: 0;
-
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-  }
+.id7-left-border,
+.id7-right-border {
+  jerry: 1920px;
+  kerry: 1200px;
 }
 @media (min-width: 1921px), (min-height: 1201px) {
-  html.flexbox .id7-left-border,
-  html.flexbox .id7-right-border {
+  .id7-left-border,
+  .id7-right-border {
+    -webkit-background-size: 455px 1456px;
+            background-size: 455px 1456px;
+  }
+}
+@media (min-width: 2081px), (min-height: 1301px) {
+  .id7-left-border,
+  .id7-right-border {
+    -webkit-background-size: 535px 1712px;
+            background-size: 535px 1712px;
+  }
+}
+@media (min-width: 2241px), (min-height: 1401px) {
+  .id7-left-border,
+  .id7-right-border {
+    -webkit-background-size: 615px 1968px;
+            background-size: 615px 1968px;
+  }
+}
+@media (min-width: 2401px), (min-height: 1501px) {
+  .id7-left-border,
+  .id7-right-border {
+    -webkit-background-size: 695px 2224px;
+            background-size: 695px 2224px;
+  }
+}
+@media (min-width: 2561px), (min-height: 1601px) {
+  .id7-left-border,
+  .id7-right-border {
+    -webkit-background-size: 775px 2480px;
+            background-size: 775px 2480px;
+  }
+}
+@media (min-width: 2721px), (min-height: 1701px) {
+  .id7-left-border,
+  .id7-right-border {
+    -webkit-background-size: 855px 2736px;
+            background-size: 855px 2736px;
+  }
+}
+@media (min-width: 2881px), (min-height: 1801px) {
+  .id7-left-border,
+  .id7-right-border {
+    -webkit-background-size: 935px 2992px;
+            background-size: 935px 2992px;
+  }
+}
+@media (min-width: 3041px), (min-height: 1901px) {
+  .id7-left-border,
+  .id7-right-border {
+    -webkit-background-size: 1015px 3248px;
+            background-size: 1015px 3248px;
+  }
+}
+@media (min-width: 3201px), (min-height: 2001px) {
+  .id7-left-border,
+  .id7-right-border {
+    -webkit-background-size: 1095px 3504px;
+            background-size: 1095px 3504px;
+  }
+}
+@media (min-width: 3361px), (min-height: 2101px) {
+  .id7-left-border,
+  .id7-right-border {
     -webkit-background-size: cover;
             background-size: cover;
   }
