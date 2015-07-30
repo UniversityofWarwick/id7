@@ -7,9 +7,13 @@
   border-radius: .1em;
 }
 
-// MM 11/12/14 Remove these, they come from Bootstrap anyway and we get warnings from csslint otherwise
-//.pull-right { float: right; }
-//.pull-left { float: left; }
+.@{fa-css-prefix}-pull-left { float: left; }
+.@{fa-css-prefix}-pull-right { float: right; }
+
+.@{fa-css-prefix} {
+  &.@{fa-css-prefix}-pull-left { margin-right: .3em; }
+  &.@{fa-css-prefix}-pull-right { margin-left: .3em; }
+}
 
 .@{fa-css-prefix} {
   &.pull-left { margin-right: .3em; }
