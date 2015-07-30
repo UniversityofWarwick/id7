@@ -224,6 +224,15 @@
 
   .brand-border { border-color: @colour; }
 
+  @btn-brand-color:  contrast(@colour, @text-color, white, 50%);
+  @btn-brand-bg:     @colour;
+  @btn-brand-border: darken(@btn-brand-bg, 5%);
+
+  // Brand colour button variant
+  .btn-brand {
+    .button-variant(@btn-brand-color; @btn-brand-bg; @btn-brand-border);
+  }
+
   .id7-utility-masthead {
     background-color: screen(@colour, lighten(black, 30%));
   }
