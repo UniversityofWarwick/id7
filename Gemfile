@@ -3,4 +3,5 @@ source "https://rubygems.org"
 gem 'jekyll'
 gem 'jekyll-less'
 gem 'therubyracer'
-gem "rouge"
+gem 'rouge'
+gem 'json'
