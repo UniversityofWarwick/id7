@@ -60,7 +60,8 @@
 
       this.options = o;
 
-      this.onScreenResize();
+      if (this.options.fixedHeader) this.markHeaderFixedPosition();
+      if (this.options.fixedNav) this.markFixedPosition();
 
       if (o.trimLinkTitles) this.trimLinkTitles();
 
@@ -141,26 +142,6 @@
         }).headroom({
           offset: headroomOffset
         });
-      },
-
-      _screenConfig: function screenConfig() {
-        return _.find(Config.ScreenSizes, function (screenConfig) {
-          return screenConfig.test();
-        });
-      },
-
-      onScreenResize: function onResize(e, force) {
-        // Which stop-point are we on?
-        var screenConfig = this._screenConfig();
-
-        // Early exit if the width is the same. xs is variable width so can't be clever :(
-        if (!force && screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
-
-        if (this.options.fitToWidth) this.fitToWidth(screenConfig);
-        if (this.options.fixedHeader) this.markHeaderFixedPosition();
-        if (this.options.fixedNav) this.markFixedPosition();
-
-        this.lastScreenConfig = screenConfig.name;
       },
 
       fitToWidth: function fitToWidth(screenConfig) {
@@ -260,16 +241,11 @@
           }, this));
         }
 
-        $(window).on('resize.id7.navigation.onScreenResize', $.proxy(this.onScreenResize, this));
-
-        // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
-        if (document.readyState == 'complete') {
-          this.onScreenResize({}, true);
-        } else {
-          $(window).on('load', $.proxy(function (e) {
-            this.onScreenResize(e, true);
-          }, this));
-        }
+        $(window).on('id7:reflow', $.proxy(function (e, screenConfig) {
+          if (this.options.fitToWidth) this.fitToWidth(screenConfig);
+          if (this.options.fixedHeader) this.markHeaderFixedPosition();
+          if (this.options.fixedNav) this.markFixedPosition();
+        }, this));
 
         this.$container.on('click', '.nav > li', function (e) {
           var $targetLink = $(e.target).closest('a');
