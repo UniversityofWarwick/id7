@@ -42,6 +42,7 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.2.1)
       listen (~> 2.7)
+    json (1.8.1)
     kramdown (1.7.0)
     less (2.6.0)
       commonjs (~> 0.2.7)
@@ -81,5 +82,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-less
+  json
   rouge
   therubyracer

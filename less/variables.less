@@ -141,15 +141,31 @@
 
 @brand-primary: #204f79;
 @brand-success: #596e31;
-@brand-info: #666;
-//@brand-warning: @id7-brand-orange; ?????
-//@brand-danger: #204f79; ?????
+@brand-info: #239b92;
+@brand-warning: lighten(@id7-brand-orange, 10%);
+@brand-danger: #af2723;
 
-@state-success-text: #596e31;
-@state-success-bg: #e0e5d9;
-@state-info-text: #204f79;
-@state-info-bg: #d9edf7;
-@state-warning-text: #ffffff; // what?
-@state-warning-bg: #666666;
-@state-danger-text: #7d3837;
-@state-danger-bg: #ffc0c0;
+@state-success-text: darken(@brand-success, 10%);
+@state-success-bg: lighten(@brand-success, 55%);
+@state-info-text: darken(@brand-info, 10%);
+@state-info-bg: lighten(@brand-info, 55%);
+@state-warning-text: darken(@id7-brand-orange, 10%);
+@state-warning-bg: lighten(@id7-brand-orange, 50%);
+@state-danger-text: darken(@brand-danger, 10%);
+@state-danger-bg: lighten(@brand-danger, 40%);
+
+@alert-success-bg: lighten(@brand-success, 55%);
+@alert-success-text: @text-color;
+@alert-success-border: darken(spin(@alert-success-bg, -10), 5%);
+
+@alert-info-bg: lighten(@brand-info, 55%);
+@alert-info-text: @text-color;
+@alert-info-border: darken(spin(@alert-info-bg, -10), 5%);
+
+@alert-warning-bg: lighten(@id7-brand-orange, 50%);
+@alert-warning-text: @text-color;
+@alert-warning-border: darken(spin(@alert-warning-bg, -10), 5%);
+
+@alert-danger-bg: #af2723;
+@alert-danger-text: white;
+@alert-danger-border: @alert-danger-bg;
