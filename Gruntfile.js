@@ -62,7 +62,7 @@ module.exports = function (grunt) {
       },
       bundle: {
         src: [
-          'js/vendor/jquery-1.11.1.min.js',
+          'js/vendor/jquery-1.11.3.min.js',
           'js/vendor/bootstrap-3.3.5/transition.js',
           'js/vendor/bootstrap-3.3.5/alert.js',
           'js/vendor/bootstrap-3.3.5/button.js',
@@ -75,8 +75,8 @@ module.exports = function (grunt) {
           'js/vendor/bootstrap-3.3.5/scrollspy.js',
           'js/vendor/bootstrap-3.3.5/tab.js',
           'js/vendor/bootstrap-3.3.5/affix.js',
-          'js/vendor/typeahead.jquery-0.10.5.js',
-          'js/vendor/lodash-2.4.1.js',
+          'js/vendor/typeahead.jquery-0.11.1.js',
+          'js/vendor/lodash-3.10.0.js',
           'js/vendor/modernizr-2.8.3.js',
           'js/vendor/jquery.doubleScroll-0.4.js',
           'js/vendor/headroom-0.7.0.min.js',
