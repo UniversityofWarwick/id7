@@ -61,14 +61,6 @@
   }
 }
 
-.button-variant(@color; @background; @border) {
-  color: @color !important; // For a.btn
-
-  &:not(.btn-link) {
-    text-decoration: none;
-  }
-}
-
 // Matches .pagination > li > a
 .pager > li > a {
   text-decoration: none;
@@ -106,4 +98,52 @@ a.list-group-item {
 html.no-touch .modal-open {
   overflow: initial;
   padding-right: 0 !important;
+}
+
+.label-default {
+  // ID-179 Change the default styling to make it look like a button???
+  color: @label-default-text;
+
+  a& {
+    &:hover,
+    &:focus {
+      color: @label-default-text;
+    }
+  }
+
+  border: 1px solid @label-default-border;
+}
+
+.nav-tabs {
+  > li {
+    > a {
+      text-decoration: none;
+      margin-right: -1px;
+      background-color: @nav-tabs-link-bg;
+      color: @nav-tabs-link-color;
+      border-color: @nav-tabs-link-hover-border-color;
+
+      &:hover,
+      &:focus {
+        background-color: @nav-tabs-link-hover-bg;
+      }
+    }
+
+    &.active {
+      font-weight: bold;
+
+      > a {
+        margin-right: -1px;
+      }
+    }
+
+    &.disabled {
+      > a {
+        &:hover,
+        &:focus {
+          background-color: @nav-tabs-link-bg;
+        }
+      }
+    }
+  }
 }

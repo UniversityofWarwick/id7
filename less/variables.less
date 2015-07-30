@@ -90,8 +90,15 @@
 @navbar-padding-horizontal: 0;
 @navbar-border-radius: 0;
 
+@nav-tabs-link-color: @brand-primary;
+@nav-tabs-link-bg: #f8f8f8;
+@nav-tabs-link-hover-bg: #ebebeb;
+@nav-tabs-link-hover-border-color: @nav-tabs-active-link-hover-border-color;
+
 @nav-tabs-active-bg: white;
 @nav-tabs-active-link-hover-bg: white;
+@nav-tabs-active-link-hover-color: #333;
+
 @nav-tabs-justified-active-link-border-color: white;
 
 @popover-padding-vertical: (@main-font-size - 1px); // 16px
@@ -121,13 +128,28 @@
 @button-border-radius-large: 6px;
 @button-border-radius-small: 3px;
 
-@btn-default-bg: #f4f4f4;
-@btn-primary-bg: #666;
-
 @grid-float-breakpoint-max: 0px; // Don't collapse nav
 
-@brand-primary: @id7-brand-purple;
-@brand-success: @id7-brand-green;
-@brand-info: @id7-brand-blue;
-@brand-warning: @id7-brand-orange;
-@brand-danger: @id7-brand-red;
+@btn-default-bg: #f4f4f4;
+
+@btn-danger-bg: #af2723;
+@btn-danger-color: #fff;
+
+@label-default-bg: #f4f4f4;
+@label-default-text: @btn-default-color;
+@label-default-border: @btn-default-border;
+
+@brand-primary: #204f79;
+@brand-success: #596e31;
+@brand-info: #666;
+//@brand-warning: @id7-brand-orange; ?????
+//@brand-danger: #204f79; ?????
+
+@state-success-text: #596e31;
+@state-success-bg: #e0e5d9;
+@state-info-text: #204f79;
+@state-info-bg: #d9edf7;
+@state-warning-text: #ffffff; // what?
+@state-warning-bg: #666666;
+@state-danger-text: #7d3837;
+@state-danger-bg: #ffc0c0;
