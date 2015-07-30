@@ -81,6 +81,7 @@ module.exports = function (grunt) {
           'js/vendor/jquery.doubleScroll-0.4.js',
           'js/vendor/headroom-0.7.0.min.js',
           'js/vendor/jquery.headroom-0.7.0.min.js',
+          'js/reflow-event.jquery.js',
           'js/account-popover.jquery.js',
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js',
@@ -94,6 +95,7 @@ module.exports = function (grunt) {
       },
       standalone: {
         src: [
+          'js/reflow-event.jquery.js',
           'js/account-popover.jquery.js',
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js',
