@@ -913,10 +913,6 @@ ul.branded li:before {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-       -o-transform: translate(0, 0);
-          transform: translate(0, 0);
   font-size: 12px;
   content: "\f04b";
   position: absolute;
@@ -925,6 +921,12 @@ ul.branded li:before {
   opacity: 0.9;
   filter: alpha(opacity=90);
   line-height: 22px;
+}
+ul.branded li:before.fa-pull-left {
+  margin-right: .3em;
+}
+ul.branded li:before.fa-pull-right {
+  margin-left: .3em;
 }
 ul.branded li:before.pull-left {
   margin-right: .3em;
