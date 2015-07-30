@@ -833,8 +833,10 @@ html.no-js, html.no-style-update {
       color: @id7-brand-default;
     }
 
-    .twitter-typeahead .tt-suggestion.tt-cursor {
-      background: @id7-brand-default;
+    .twitter-typeahead .tt-suggestion {
+      &:hover, &:focus, &.tt-cursor {
+        background: @id7-brand-default;
+      }
     }
   }
 

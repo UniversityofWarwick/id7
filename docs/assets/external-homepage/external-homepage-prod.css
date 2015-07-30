@@ -1257,6 +1257,10 @@ html.no-js .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
 html.no-style-update .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
   color: #5b3069;
 }
+html.no-js .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
+html.no-style-update .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
+html.no-js .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
+html.no-style-update .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
 html.no-js .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor,
 html.no-style-update .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
   background: #5b3069;

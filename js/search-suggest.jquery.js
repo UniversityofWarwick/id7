@@ -18,8 +18,10 @@
       }, {
         name: o.name,
         source: o.source,
-        displayKey: o.displayKey,
-        templates: o.templates
+        display: o.display,
+        templates: o.templates,
+        async: true,
+        limit: 1000
       }).on('keydown', function ($e) {
         var keyCode = $e.which || $e.keyCode;
         switch (keyCode) {
@@ -72,17 +74,19 @@
 
       $(el).searchSuggest({
         name: 'go',
-        source: function (query, cb) {
-          $.getJSON('//sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=' + maxResults + '&prefix=' + encodeURIComponent(query) + '&callback=?', cb);
+        source: function (query, sync, async) {
+          $.getJSON('//sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=' + maxResults + '&prefix=' + encodeURIComponent(query) + '&callback=?', async);
         },
-        displayKey: 'path',
+        display: 'path',
         minLength: minLength,
         hint: false,
         templates: {
           suggestion: _.template([
-            '<p class="go-path"><%= path %></p>',
-            '<p class="go-description"><% if (typeof description !== "undefined") { print(description); } %></p>'
-          ].join(''))
+              '<div>',
+              '<p class="go-path"><%= path %></p>',
+              '<p class="go-description"><% if (typeof description !== "undefined") { print(description); } %></p>',
+              '</div>'
+            ].join(''))
         }
       });
 
@@ -91,7 +95,7 @@
         $(el).data('original-query', query);
       });
 
-      $(el).on('typeahead:selected', function (evt, redirect) {
+      $(el).on('typeahead:select', function (evt, redirect) {
         window.location =
           'http://go.warwick.ac.uk/' + redirect.path +
           '?goSearchReferer=' + encodeURIComponent(window.location) +

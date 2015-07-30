@@ -385,9 +385,12 @@
       color: @colour;
     }
 
-    .twitter-typeahead .tt-suggestion.tt-cursor {
-      background: @colour;
-      color: contrast(@colour, @text-color, white, 50%);
+    .twitter-typeahead .tt-suggestion {
+      &:hover, &:focus, &.tt-cursor {
+        cursor: pointer;
+        background: @colour;
+        color: contrast(@colour, @text-color, white, 50%);
+      }
     }
   }
 

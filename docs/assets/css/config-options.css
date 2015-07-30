@@ -621,7 +621,10 @@ body.brand-purple .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
 body.brand-purple .id7-masthead .id7-search .fa:hover {
   color: #5b3069;
 }
+body.brand-purple .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-purple .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
 body.brand-purple .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+  cursor: pointer;
   background: #5b3069;
   color: white;
 }
@@ -1725,7 +1728,10 @@ body.brand-gray .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
 body.brand-gray .id7-masthead .id7-search .fa:hover {
   color: #3f4246;
 }
+body.brand-gray .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-gray .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
 body.brand-gray .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+  cursor: pointer;
   background: #3f4246;
   color: white;
 }
@@ -2829,7 +2835,10 @@ body.brand-gold .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
 body.brand-gold .id7-masthead .id7-search .fa:hover {
   color: #996b00;
 }
+body.brand-gold .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-gold .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
 body.brand-gold .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+  cursor: pointer;
   background: #996b00;
   color: white;
 }
@@ -3933,7 +3942,10 @@ body.brand-blue .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
 body.brand-blue .id7-masthead .id7-search .fa:hover {
   color: #204f79;
 }
+body.brand-blue .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-blue .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
 body.brand-blue .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+  cursor: pointer;
   background: #204f79;
   color: white;
 }
@@ -5037,7 +5049,10 @@ body.brand-orange .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
 body.brand-orange .id7-masthead .id7-search .fa:hover {
   color: #be410c;
 }
+body.brand-orange .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-orange .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
 body.brand-orange .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+  cursor: pointer;
   background: #be410c;
   color: white;
 }
@@ -6141,7 +6156,10 @@ body.brand-green .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
 body.brand-green .id7-masthead .id7-search .fa:hover {
   color: #797906;
 }
+body.brand-green .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-green .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
 body.brand-green .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+  cursor: pointer;
   background: #797906;
   color: white;
 }
@@ -7245,7 +7263,10 @@ body.brand-red .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
 body.brand-red .id7-masthead .id7-search .fa:hover {
   color: #89102c;
 }
+body.brand-red .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-red .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
 body.brand-red .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+  cursor: pointer;
   background: #89102c;
   color: white;
 }

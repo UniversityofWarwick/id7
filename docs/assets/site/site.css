@@ -660,7 +660,10 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-masthead .id7-search .fa:hover {
   color: #5b3069;
 }
+.id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
+.id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
 .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+  cursor: pointer;
   background: #5b3069;
   color: white;
 }
