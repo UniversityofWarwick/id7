@@ -14,7 +14,7 @@ GEM
     commonjs (0.2.7)
     execjs (2.5.2)
     fast-stemmer (1.0.2)
-    ffi (1.9.8)
+    ffi (1.9.10)
     hitimes (1.2.2)
     jekyll (2.5.3)
       classifier-reborn (~> 2.0)
@@ -42,13 +42,13 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.2.1)
       listen (~> 2.7)
-    json (1.8.1)
-    kramdown (1.7.0)
+    json (1.8.3)
+    kramdown (1.8.0)
     less (2.6.0)
       commonjs (~> 0.2.7)
-    libv8 (3.16.14.7)
-    liquid (2.6.2)
-    listen (2.10.0)
+    libv8 (3.16.14.11)
+    liquid (2.6.3)
+    listen (2.10.1)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -59,14 +59,14 @@ GEM
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
-    rb-fsevent (0.9.4)
+    rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    redcarpet (3.2.3)
-    ref (1.0.5)
-    rouge (1.8.0)
+    redcarpet (3.3.2)
+    ref (2.0.0)
+    rouge (1.9.1)
     safe_yaml (1.0.4)
-    sass (3.4.13)
+    sass (3.4.16)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
@@ -85,3 +85,6 @@ DEPENDENCIES
   json
   rouge
   therubyracer
+
+BUNDLED WITH
+   1.10.5
