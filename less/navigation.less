@@ -233,6 +233,24 @@
   .discreet {
     .opacity(0.4);
   }
+
+  .navbar-primary.navbar-wrapped > .navbar-nav {
+    > li {
+      color: rgba(255, 255, 255, .75);
+
+      &.active {
+        color: #fff;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.important-no-transition * {
+  .transition(~"none") !important
 }
 
 .id7-navigation-marker { display: none; }

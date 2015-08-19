@@ -18224,6 +18224,25 @@ window.Modernizr = (function( window, document, undefined ) {
         });
       },
 
+      updateWrappedState: function updateWrappedState() {
+        this.$container.find('.navbar').each(function () {
+          var $navbar = $(this);
+          var wasWrapped = $navbar.hasClass('navbar-wrapped');
+
+          var $item = $navbar.find('> .nav > li:last');
+          var isWrapped = $item.position().top > 0;
+
+          if (isWrapped != wasWrapped) {
+            $navbar.addClass('important-no-transition');
+            $navbar.toggleClass('navbar-wrapped', isWrapped);
+
+            _.defer(function () {
+              $navbar.removeClass('important-no-transition');
+            });
+          }
+        });
+      },
+
       // Return the total height of affixed elements (whether affixed or not)
       getAffixedHeight: function getAffixedHeight() {
         var height = 0;
@@ -18269,10 +18288,12 @@ window.Modernizr = (function( window, document, undefined ) {
         if (document.readyState == 'complete') {
           if (this.options.fixedNav) this.affixNav();
           if (this.options.fixedHeader) this.affixHeader();
+          this.updateWrappedState();
         } else {
           $(window).on('load', $.proxy(function () {
             if (this.options.fixedNav) this.affixNav();
             if (this.options.fixedHeader) this.affixHeader();
+            this.updateWrappedState();
           }, this));
         }
 
@@ -18280,6 +18301,7 @@ window.Modernizr = (function( window, document, undefined ) {
           if (this.options.fitToWidth) this.fitToWidth(screenConfig);
           if (this.options.fixedHeader) this.markHeaderFixedPosition();
           if (this.options.fixedNav) this.markFixedPosition();
+          this.updateWrappedState();
         }, this));
 
         this.$container.on('click', '.nav > li', function (e) {
