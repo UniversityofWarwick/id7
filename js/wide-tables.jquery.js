@@ -1,6 +1,6 @@
 /*global Modernizr:false */
 
-(function ($) {
+(function($) {
   'use strict';
 
   var Config = {
@@ -16,25 +16,25 @@
       ].join(''),
       Modal: [
         '<div class="id7-wide-table-popout-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">',
-          '<div class="modal-dialog">',
-            '<div class="modal-content">',
-              '<div class="modal-header">' +
-                '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
-                  '<span aria-hidden="true">&times;</span>' +
-                '</button>' +
-                '<span class="modal-title">&nbsp;</span>' +
-              '</div>' +
-              '<div class="modal-body">' +
-              '</div>',
-            '</div>',
-          '</div>',
+        '<div class="modal-dialog">',
+        '<div class="modal-content">',
+        '<div class="modal-header">' +
+        '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+        '<span aria-hidden="true">&times;</span>' +
+        '</button>' +
+        '<span class="modal-title">&nbsp;</span>' +
+        '</div>' +
+        '<div class="modal-body">' +
+        '</div>',
+        '</div>',
+        '</div>',
         '</div>'
       ].join('')
     },
     Defaults: {
       container: 'id7-wide-table-wrapper-container',
       wrapper: 'table-responsive', // Set to false to disable
-      popout: function () {
+      popout: function() {
         return Modernizr.mq('only all and (min-width: 768px)');
       },
       doublescroll: true
@@ -45,7 +45,7 @@
    * Wrap wide tables in a class to allow them to be scrolled without breaking
    * the container, and optionally add in a popout link.
    */
-  var WideTables = (function () {
+  var WideTables = (function() {
     function WideTables(o) {
       o = $.extend({}, Config.Defaults, o);
 
@@ -83,23 +83,20 @@
         }
       }
 
-      // SBTWO-5105 check tables after load, in case contents cause resize
-      function onLoad() {
-        self.findWideTables(o.container).each(handleTable);
-      }
 
-      $(window).load(onLoad);
+      self.findWideTables(o.container).each(handleTable);
+
     }
 
     $.extend(WideTables.prototype, {
       findWideTables: function findWideTables($container) {
-        return $container.find('table').filter(function () {
+        return $container.find('table').filter(function() {
           var $table = $(this);
-          return Math.floor($table.width()) > $table.parent().width();
+          return !$table.data('id7.wide-tables.wrapped') && Math.floor($table.width()) > $table.parent().width();
         });
       },
       wrap: function wrap($table, wrapperClass, containerClass) {
-        $table.wrap($('<div />').addClass(containerClass).append($('<div />').addClass(wrapperClass)));
+        $table.wrap($('<div />').addClass(containerClass).append($('<div />').addClass(wrapperClass))).data('id7.wide-tables.wrapped', true);
 
         return $table.parent();
       },
@@ -110,7 +107,7 @@
 
           var $modal = $($.parseHTML(Config.Templates.Modal)).appendTo(document.body);
 
-          $container.on('click', '[data-toggle="id7:popout-table"]', function (e) {
+          $container.on('click', '[data-toggle="id7:popout-table"]', function(e) {
             e.stopPropagation();
             e.preventDefault();
 
@@ -132,7 +129,7 @@
     return WideTables;
   })();
 
-  $.fn.wideTables = function (o) {
+  $.fn.wideTables = function(o) {
     o = o || {};
 
     function attach(i, element) {
@@ -147,7 +144,8 @@
     return this.each(attach);
   };
 
-  $(function () {
+  // SBTWO-5105 check tables after load, in case contents cause resize
+  $(window).on('load', function() {
     $('.id7-main-content').wideTables();
   });
 
