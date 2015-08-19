@@ -234,18 +234,8 @@
     .opacity(0.4);
   }
 
-  .navbar-primary.navbar-wrapped > .navbar-nav {
-    > li {
-      color: rgba(255, 255, 255, .75);
-
-      &.active {
-        color: #fff;
-
-        &::before {
-          display: none;
-        }
-      }
-    }
+  .navbar-primary.navbar-wrapped > .navbar-nav > li::before {
+    display: none;
   }
 }
 

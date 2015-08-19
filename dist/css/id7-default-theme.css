@@ -203,6 +203,13 @@ fieldset[disabled] .btn-brand.active {
 .id7-navigation .navbar-primary {
   background-color: #5b3069;
 }
+.id7-navigation .navbar-primary.navbar-primary.navbar-wrapped > .navbar-nav > li {
+  color: white;
+}
+.id7-navigation .navbar-primary.navbar-primary.navbar-wrapped > .navbar-nav > li.active,
+.id7-navigation .navbar-primary.navbar-primary.navbar-wrapped > .navbar-nav > li:hover {
+  color: white;
+}
 .id7-navigation .navbar-primary .navbar-text {
   color: white;
 }
@@ -303,6 +310,13 @@ fieldset[disabled] .id7-navigation .navbar-primary .btn-link:focus {
 }
 .navbar-secondary {
   background-color: #8c6e96;
+}
+.navbar-secondary.navbar-primary.navbar-wrapped > .navbar-nav > li {
+  color: white;
+}
+.navbar-secondary.navbar-primary.navbar-wrapped > .navbar-nav > li.active,
+.navbar-secondary.navbar-primary.navbar-wrapped > .navbar-nav > li:hover {
+  color: white;
 }
 .navbar-secondary .navbar-text {
   color: white;
@@ -414,6 +428,13 @@ fieldset[disabled] .navbar-secondary .btn-link:focus {
 }
 .navbar-tertiary {
   background-color: #f8f8f8;
+}
+.navbar-tertiary.navbar-primary.navbar-wrapped > .navbar-nav > li {
+  color: #383838;
+}
+.navbar-tertiary.navbar-primary.navbar-wrapped > .navbar-nav > li.active,
+.navbar-tertiary.navbar-primary.navbar-wrapped > .navbar-nav > li:hover {
+  color: #383838;
 }
 .navbar-tertiary .navbar-text {
   color: #383838;
