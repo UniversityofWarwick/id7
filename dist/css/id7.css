@@ -9419,13 +9419,12 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
 }
 .id7-navigation.affix {
   position: fixed;
-  top: 48px;
+  top: 54px;
   z-index: 10;
   width: 100%;
 }
 @media (min-width: 768px) {
   .id7-navigation.affix {
-    top: 48px;
     width: 750px;
   }
 }
@@ -9451,10 +9450,10 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
           transform: translateY(0%);
 }
 .id7-navigation.affix.headroom--unpinned {
-  -webkit-transform: translateY(-100%) translateY(-50px);
-      -ms-transform: translateY(-100%) translateY(-50px);
-       -o-transform: translateY(-100%) translateY(-50px);
-          transform: translateY(-100%) translateY(-50px);
+  -webkit-transform: translateY(-100%) translateY(-54px);
+      -ms-transform: translateY(-100%) translateY(-54px);
+       -o-transform: translateY(-100%) translateY(-54px);
+          transform: translateY(-100%) translateY(-54px);
 }
 .id7-navigation .dropdown-menu {
   border: 0;

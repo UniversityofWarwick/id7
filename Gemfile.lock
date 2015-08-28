@@ -85,6 +85,3 @@ DEPENDENCIES
   json
   rouge
   therubyracer
-
-BUNDLED WITH
-   1.10.5

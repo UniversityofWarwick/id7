@@ -13,12 +13,11 @@
 
   &.affix {
     position: fixed;
-    top: @id7-affixed-header-height-xs;
+    top: @id7-affixed-header-height;
     width: 100%;
     z-index: 10;
 
     @media (min-width: @screen-sm-min) {
-      top: @id7-affixed-header-height-sm;
       width: @container-sm;
     }
 
@@ -37,7 +36,7 @@
       transform: translateY(0%);
     }
     &.headroom--unpinned {
-      transform: translateY(-100%) translateY(-50px);
+      transform: translateY(-100%) translateY(-@id7-affixed-header-height);
     }
   }
 
