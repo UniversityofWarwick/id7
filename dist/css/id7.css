@@ -9648,6 +9648,14 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
   filter: alpha(opacity=40);
   opacity: .4;
 }
+.id7-navigation .navbar-primary.navbar-wrapped > .navbar-nav > li::before {
+  display: none;
+}
+.important-no-transition * {
+  -webkit-transition: none !important;
+       -o-transition: none !important;
+          transition: none !important;
+}
 .id7-navigation-marker {
   display: none;
 }

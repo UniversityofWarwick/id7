@@ -450,6 +450,25 @@
         });
       },
 
+      updateWrappedState: function updateWrappedState() {
+        this.$container.find('.navbar').each(function () {
+          var $navbar = $(this);
+          var wasWrapped = $navbar.hasClass('navbar-wrapped');
+
+          var $item = $navbar.find('> .nav > li:last');
+          var isWrapped = $item.position().top > 0;
+
+          if (isWrapped != wasWrapped) {
+            $navbar.addClass('important-no-transition');
+            $navbar.toggleClass('navbar-wrapped', isWrapped);
+
+            _.defer(function () {
+              $navbar.removeClass('important-no-transition');
+            });
+          }
+        });
+      },
+
       // Return the total height of affixed elements (whether affixed or not)
       getAffixedHeight: function getAffixedHeight() {
         var height = 0;
@@ -495,10 +514,12 @@
         if (document.readyState == 'complete') {
           if (this.options.fixedNav) this.affixNav();
           if (this.options.fixedHeader) this.affixHeader();
+          this.updateWrappedState();
         } else {
           $(window).on('load', $.proxy(function () {
             if (this.options.fixedNav) this.affixNav();
             if (this.options.fixedHeader) this.affixHeader();
+            this.updateWrappedState();
           }, this));
         }
 
@@ -506,6 +527,7 @@
           if (this.options.fitToWidth) this.fitToWidth(screenConfig);
           if (this.options.fixedHeader) this.markHeaderFixedPosition();
           if (this.options.fixedNav) this.markFixedPosition();
+          this.updateWrappedState();
         }, this));
 
         this.$container.on('click', '.nav > li', function (e) {
@@ -752,23 +774,18 @@
         }
       }
 
-      // SBTWO-5105 check tables after load, in case contents cause resize
-      function onLoad() {
-        self.findWideTables(o.container).each(handleTable);
-      }
-
-      $(window).load(onLoad);
+      self.findWideTables(o.container).each(handleTable);
     }
 
     $.extend(WideTables.prototype, {
       findWideTables: function findWideTables($container) {
         return $container.find('table').filter(function () {
           var $table = $(this);
-          return Math.floor($table.width()) > $table.parent().width();
+          return !$table.data('id7.wide-tables.wrapped') && Math.floor($table.width()) > $table.parent().width();
         });
       },
       wrap: function wrap($table, wrapperClass, containerClass) {
-        $table.wrap($('<div />').addClass(containerClass).append($('<div />').addClass(wrapperClass)));
+        $table.wrap($('<div />').addClass(containerClass).append($('<div />').addClass(wrapperClass))).data('id7.wide-tables.wrapped', true);
 
         return $table.parent();
       },
@@ -816,10 +833,14 @@
     return this.each(attach);
   };
 
-  $(function () {
+  // SBTWO-5105 check tables after load, in case contents cause resize
+  $(window).on('load id7:ready', function () {
     $('.id7-main-content').wideTables();
   });
 
+  $(function () {
+    $(window).trigger('id7:ready');
+  });
 })(jQuery);
 
 /*global Modernizr:false */

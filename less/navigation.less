@@ -233,6 +233,14 @@
   .discreet {
     .opacity(0.4);
   }
+
+  .navbar-primary.navbar-wrapped > .navbar-nav > li::before {
+    display: none;
+  }
+}
+
+.important-no-transition * {
+  .transition(~"none") !important
 }
 
 .id7-navigation-marker { display: none; }

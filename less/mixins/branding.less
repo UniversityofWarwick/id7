@@ -58,6 +58,15 @@
 
   background-color: @bg;
 
+  &.navbar-primary.navbar-wrapped > .navbar-nav > li {
+    color: @link-disabled-colour;
+
+    &.active,
+    &:hover {
+      color: @link-hover-colour;
+    }
+  }
+
   .navbar-text {
     color: @text;
   }
