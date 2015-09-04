@@ -8442,6 +8442,16 @@ a.label-default:focus {
 .nav-tabs > li.disabled > a:focus {
   background-color: #f8f8f8;
 }
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"],
+.radio-inline input[type="checkbox"],
+.radio input[type="checkbox"],
+.checkbox input[type="radio"],
+.checkbox-inline input[type="radio"],
+.radio-inline input[type="radio"],
+.radio input[type="radio"] {
+  margin-top: 7px;
+}
 .id7-main-content-area {
   font-size: 14px;
   font-weight: 300;
