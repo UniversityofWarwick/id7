@@ -9086,6 +9086,8 @@ html.no-smil .id7-masthead {
   margin: 0;
   font-size: 20px;
   line-height: 30px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 @media (min-width: 768px) {
   .id7-masthead .id7-header-text h1 {
@@ -9122,15 +9124,19 @@ html.no-smil .id7-masthead {
 }
 .id7-masthead .id7-header-text h1.affix.headroom--pinned {
   -webkit-transform: translateY(0%);
+  -webkit-transform: translate3d(0, 0, 0) translateY(0%);
       -ms-transform: translateY(0%);
        -o-transform: translateY(0%);
           transform: translateY(0%);
+          transform: translate3d(0, 0, 0) translateY(0%);
 }
 .id7-masthead .id7-header-text h1.affix.headroom--unpinned {
   -webkit-transform: translateY(-100%);
+  -webkit-transform: translate3d(0, 0, 0) translateY(-100%);
       -ms-transform: translateY(-100%);
        -o-transform: translateY(-100%);
           transform: translateY(-100%);
+          transform: translate3d(0, 0, 0) translateY(-100%);
 }
 @media (max-width: 767px) {
   .id7-masthead .id7-header-text h1 {
@@ -9412,6 +9418,8 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
 .id7-navigation {
   position: relative;
   z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .id7-navigation a,
 .id7-navigation a:link,
@@ -9455,15 +9463,19 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
 }
 .id7-navigation.affix.headroom--pinned {
   -webkit-transform: translateY(0%);
+  -webkit-transform: translate3d(0, 0, 0) translateY(0%);
       -ms-transform: translateY(0%);
        -o-transform: translateY(0%);
           transform: translateY(0%);
+          transform: translate3d(0, 0, 0) translateY(0%);
 }
 .id7-navigation.affix.headroom--unpinned {
   -webkit-transform: translateY(-100%) translateY(-54px);
+  -webkit-transform: translate3d(0, 0, 0) translateY(-100%) translateY(-54px);
       -ms-transform: translateY(-100%) translateY(-54px);
        -o-transform: translateY(-100%) translateY(-54px);
           transform: translateY(-100%) translateY(-54px);
+          transform: translate3d(0, 0, 0) translateY(-100%) translateY(-54px);
 }
 .id7-navigation .dropdown-menu {
   border: 0;
