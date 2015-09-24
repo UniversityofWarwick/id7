@@ -11,6 +11,8 @@
     border-width: 0px;
   }
 
+  transform: translate3d(0, 0, 0); // ID-188
+
   &.affix {
     position: fixed;
     top: @id7-affixed-header-height;
@@ -34,9 +36,11 @@
     }
     &.headroom--pinned {
       transform: translateY(0%);
+      transform: translate3d(0, 0, 0) translateY(0%);
     }
     &.headroom--unpinned {
       transform: translateY(-100%) translateY(-@id7-affixed-header-height);
+      transform: translate3d(0, 0, 0) translateY(-100%) translateY(-@id7-affixed-header-height);
     }
   }
 

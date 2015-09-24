@@ -111,6 +111,8 @@
       margin: 0;
       padding: @id7-header-h1-padding-vertical 0;
 
+      transform: translate3d(0, 0, 0); // ID-188
+
       &.affix {
         top: 0;
         margin: 0 (-@grid-gutter-width);
@@ -136,9 +138,11 @@
         }
         &.headroom--pinned {
           transform: translateY(0%);
+          transform: translate3d(0, 0, 0) translateY(0%);
         }
         &.headroom--unpinned {
           transform: translateY(-100%);
+          transform: translate3d(0, 0, 0) translateY(-100%);
         }
       }
 
