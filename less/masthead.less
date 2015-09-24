@@ -300,4 +300,10 @@
   .id7-search-box-container {
     margin-top: (@line-height-computed / 2) !important;
   }
+
+  @media print {
+    .id7-main-content-area > header .id7-horizontal-divider {
+      display: none !important; // ID-189
+    }
+  }
 }
