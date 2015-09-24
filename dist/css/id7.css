@@ -9337,6 +9337,11 @@ html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
 .id7-non-branded .id7-search-box-container {
   margin-top: 11px !important;
 }
+@media print {
+  .id7-non-branded .id7-main-content-area > header .id7-horizontal-divider {
+    display: none !important;
+  }
+}
 .carousel {
   z-index: 0;
 }
