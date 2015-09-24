@@ -807,12 +807,18 @@ body {
       }
     }
 
-    // Flexbox it in browsers that support it to get equal-height columns
-    display: flex;
-    flex-wrap: wrap;
-    > li {
-      flex: 0 0 auto;
+    &:first-child {
+      margin-bottom: 0;
     }
+
+    display: table;
+    width: 100%;
+    > li {
+      float: none;
+      display: table-cell;
+      height: 100%;
+    }
+
   }
 }
 
