@@ -743,16 +743,21 @@ body {
     .clearfix();
 
     @media (max-width: @screen-xs-max) {
-      > li:first-child {
-        padding-top: 0;
-      }
-
-      > li:last-child {
-        padding-bottom: 0;
-      }
-
-      > li + li {
+      > li {
         border-top: 1px solid @gray-light;
+      }
+
+      &:first-child > li:first-child {
+        padding-top: 0;
+        border-top: none;
+      }
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+
+      + ul > li:last-child {
+        padding-bottom: 0;
       }
     }
 
