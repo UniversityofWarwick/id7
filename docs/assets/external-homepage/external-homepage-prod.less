@@ -811,12 +811,10 @@ body {
       margin-bottom: 0;
     }
 
-    display: table;
-    width: 100%;
+    // Flexbox it in browsers that support it to get equal-height columns
+    display: flex;
     > li {
-      float: none;
-      display: table-cell;
-      height: 100%;
+      flex: 0 0 auto;
     }
 
   }

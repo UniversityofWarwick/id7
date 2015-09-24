@@ -1151,8 +1151,10 @@ html.no-smil .id7-utility-masthead {
 .megamenu-links .more-links-sitemap {
   margin-left: -20px;
   margin-right: -20px;
-  display: table;
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .megamenu-links .more-links-sitemap a,
 .megamenu-links .more-links-sitemap a:link,
@@ -1202,9 +1204,10 @@ html.no-smil .id7-utility-masthead {
   margin-bottom: 0;
 }
 .megamenu-links .more-links-sitemap > li {
-  float: none;
-  display: table-cell;
-  height: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .megamenu-links-address {
   text-align: center;
