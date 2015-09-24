@@ -119,7 +119,8 @@ module.exports = function (grunt) {
 
     uglify: {
       options: {
-        preserveComments: 'some'
+        preserveComments: 'some',
+        sourceMap: true
       },
       bundle: {
         src: '<%= concat.bundle.dest %>',
