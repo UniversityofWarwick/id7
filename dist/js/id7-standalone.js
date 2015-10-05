@@ -669,9 +669,11 @@
       });
 
       var tt = $(el).data('ttTypeahead');
-      tt.input.onSync('queryChanged', function (evtName, query) {
-        $(el).data('original-query', query);
-      });
+      if (tt) {
+        tt.input.onSync('queryChanged', function (evtName, query) {
+          $(el).data('original-query', query);
+        });
+      }
 
       $(el).on('typeahead:select', function (evt, redirect) {
         window.location =
