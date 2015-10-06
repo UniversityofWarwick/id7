@@ -1,0 +1,18 @@
+<h2 id="search">Search</h2>
+
+<p class="lead">The search box provides a recognisable way to search across Warwick.</p>
+
+{% highlight html %}
+<div class="id7-search">
+  <form action="http://search.warwick.ac.uk/website" role="search">
+    <input type="hidden" name="source" value="http://warwick.ac.uk/"> <!-- Replace with the current page URL -->
+    <div class="form-group">
+      <label class="sr-only" for="id7-search-box">Search</label>
+      <div class="id7-search-box-container">
+        <input type="search" class="form-control input-lg" id="id7-search-box" name="q" placeholder="Search Warwick" data-suggest="go">
+        <i class="fa fa-search fa-2x"></i>
+      </div>
+    </div>
+  </form>
+</div>
+{% endhighlight %}

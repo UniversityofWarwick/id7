@@ -1,0 +1,74 @@
+.id7-search {
+  font-size: @font-size-base;
+
+  .id7-search-box-container {
+    position: relative;
+  }
+
+  .input-lg {
+    padding-right: (@padding-large-horizontal + @id7-masthead-search-button-width);
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .fa {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+
+    color: @gray-light;
+    cursor: pointer;
+    .transition(color .15s linear);
+  }
+
+  .twitter-typeahead:hover + .fa, .fa:hover {
+    color: black;
+  }
+
+  .twitter-typeahead {
+    width: 100%;
+  }
+
+  .tt-menu {
+    margin-top: -1px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    .box-shadow(0 5px 10px rgba(0,0,0,.2));
+
+    left: auto !important;
+    right: 0px !important;
+    min-width: 100%;
+    width: (320px - (@grid-gutter-width * 2));
+
+    @media (min-width: @screen-md-min) {
+      left: 0px !important;
+      right: auto !important;
+      width: 100%;
+    }
+  }
+
+  .tt-suggestion {
+    padding: 8px 20px;
+    line-height: 18px;
+  }
+
+  .tt-suggestion + .tt-suggestion {
+    border-top: 1px solid #ccc;
+  }
+
+  .tt-suggestion .go-path {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .tt-suggestion .go-description {
+    margin: 0;
+  }
+
+  .twitter-typeahead .tt-suggestion.tt-cursor {
+    cursor: pointer;
+  }
+}
