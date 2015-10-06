@@ -39,7 +39,8 @@
       transform: translate3d(0, 0, 0) translateY(0%);
     }
     &.headroom--unpinned {
-      // ID-193
+      transform: translateY(-100%) translateY(-@id7-affixed-header-height);
+      transform: translate3d(0, 0, 0) translateY(-100%) translateY(-@id7-affixed-header-height);
     }
   }
 
