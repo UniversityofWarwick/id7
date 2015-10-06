@@ -9084,8 +9084,11 @@ html.no-smil .id7-masthead {
 .id7-masthead .id7-header-text h1 {
   padding: 12px 0;
   margin: 0;
+  overflow: hidden;
   font-size: 20px;
   line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -9137,13 +9140,6 @@ html.no-smil .id7-masthead {
        -o-transform: translateY(-100%);
           transform: translateY(-100%);
           transform: translate3d(0, 0, 0) translateY(-100%);
-}
-@media (max-width: 767px) {
-  .id7-masthead .id7-header-text h1 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
 }
 .id7-masthead .id7-header-text .id7-parent-site-link {
   color: #777;
