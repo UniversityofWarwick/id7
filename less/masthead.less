@@ -102,6 +102,7 @@
 
     h1 {
       font-size: @id7-header-h1-font-size-xs;
+      .text-overflow();
 
       @media (min-width: @grid-float-breakpoint) {
         font-size: @id7-header-h1-font-size-sm;
@@ -144,10 +145,6 @@
           transform: translateY(-100%);
           transform: translate3d(0, 0, 0) translateY(-100%);
         }
-      }
-
-      @media (max-width: (@grid-float-breakpoint - 1)) {
-        .text-overflow();
       }
     }
 
