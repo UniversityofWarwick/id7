@@ -144,6 +144,20 @@
         });
       },
 
+      updateNavAffixPosition: function updateNavAffixPosition() {
+        function transform(transforms) {
+          return "-webkit-transform:" + transforms + ";-ms-transform:" + transforms + ";-o-transform:" + transforms + ";transform:" + transforms + ';-webkit-transform:translate3d(0, 0, 0) ' + transforms + ';transform:translate3d(0, 0, 0) ' + transforms;
+        }
+
+        var h1Height = $('.id7-header-text h1').outerHeight() || 0;
+
+        var css = ".id7-navigation.affix{top:" + h1Height + "px}" +
+                  ".id7-navigation.affix.headroom--unpinned{" + transform("translateY(-100%) translateY(-" + h1Height + "px)") + "}";
+
+        $('#id7-navigation-affix-style').remove();
+        $('<style id="id7-navigation-affix-style">' + css + '</style>').appendTo('head');
+      },
+
       fitToWidth: function fitToWidth(screenConfig) {
         var options = this.options;
 
@@ -266,6 +280,7 @@
           if (this.options.fitToWidth) this.fitToWidth(screenConfig);
           if (this.options.fixedHeader) this.markHeaderFixedPosition();
           if (this.options.fixedNav) this.markFixedPosition();
+          if (this.options.fixedNav) this.updateNavAffixPosition();
           this.updateWrappedState();
         }, this));
 
