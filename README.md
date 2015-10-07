@@ -35,10 +35,12 @@ id7/
 ├── js/
 │   ├── vendor/
 │   │   └── html5shiv-3.7.2.min.js
-│   ├── id7-bundle.js
-│   ├── id7-bundle.min.js
-│   ├── id7-standalone.js
-│   └── id7-standalone.min.js
+│   ├── id7-bundle.js
+│   ├── id7-bundle.min.js
+│   ├── id7-bundle.min.js.map
+│   ├── id7-standalone.js
+│   ├── id7-standalone.min.js
+│   ├── id7-standalone.min.js.map
 ├── images/
 │   ├── logo.png
 │   ├── masthead-logo-bleed-sm.svg
@@ -56,7 +58,7 @@ id7/
     └── base.html
 ```
 
-We provide compiled CSS and JS (`id7.*`), as well as compiled and minified CSS and JS (`id7.min.*`). CSS [source maps](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors) (`id7.*.map`) are available for use with certain browsers' developer tools. The FontAwesome icon font is included, as is an optional ID7 theme.
+We provide compiled CSS and JS (`id7.*`), as well as compiled and minified CSS and JS (`id7.min.*`). [CSS](https://developer.chrome.com/devtools/docs/css-preprocessors) and [JS](https://developer.chrome.com/devtools/docs/javascript-debugging#source-maps) source maps (`id7.*.map`) are available for use with certain browsers' developer tools. The FontAwesome icon font is included, as is an optional ID7 theme.
 
 The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The `id7-standalone.js` file doesn't include these, so they will need to be included manually. The dependencies required are:
 
