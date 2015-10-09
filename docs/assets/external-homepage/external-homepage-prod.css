@@ -1309,10 +1309,6 @@ html.no-generatedcontent .megamenu-links-address .utility > li {
 /***** END MORE LINKS FOOTER *****/
 /***** END MAIN CONTENT AREA *****/
 /***** HACKS AND MISC *****/
-html.no-js .id7-masthead .id7-search .id7-search-box,
-html.no-style-update .id7-masthead .id7-search .id7-search-box {
-  border-color: #5b3069;
-}
 html.no-js .id7-masthead .id7-search .fa,
 html.no-style-update .id7-masthead .id7-search .fa,
 html.no-js .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
