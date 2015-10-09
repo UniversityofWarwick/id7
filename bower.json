@@ -1,7 +1,7 @@
 {
   "name": "warwick-id7",
   "description": "CSS, JavaScript and sample HTML in order to use the corporate identity on your site",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "homepage": "http://id7.warwick.ac.uk",
   "main": [
     "less/id7.less",
