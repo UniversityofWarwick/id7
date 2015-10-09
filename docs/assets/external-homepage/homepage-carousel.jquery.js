@@ -5,9 +5,6 @@
 
     var Config = {
         PanelsCSSTemplate: _.template([
-            'body .id7-masthead .id7-search .id7-search-box {',
-                'border-color: <%= colour %>;',
-            '}',
             'body .id7-masthead .id7-search .fa {',
                 'color: rgba(<%= colour_r %>, <%= colour_g %>, <%= colour_b %>, 0.5);',
             '}',

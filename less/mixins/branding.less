@@ -379,18 +379,14 @@
 }
 
 .apply-form-control-brand(@colour) {
-  .id7-masthead .id7-search {
-    .id7-search-box {
-      border-color: @colour;
-    }
-
+  .id7-search {
     .fa {
       color: @colour; // IE 8
       color: fadeout(@colour, 50%);
       .transition(color .15s linear);
     }
 
-    .twitter-typeahead:hover + .fa, .fa:hover {
+    .form-control:hover + .fa, .twitter-typeahead:hover + .fa, .fa:hover {
       color: @colour;
     }
 
