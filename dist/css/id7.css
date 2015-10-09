@@ -2824,8 +2824,19 @@ a:hover .new-window-link {
   color: #204f79;
 }
 @media print {
-  a[href].no-print-expand:after {
+  a[href]:after {
     content: "";
+  }
+  a[href].print-expand:after {
+    content: " (" attr(href) ")";
+  }
+}
+@media print {
+  abbr[title]:after {
+    content: "";
+  }
+  abbr[title].print-expand:after {
+    content: " (" attr(title) ")";
   }
 }
 .lead {

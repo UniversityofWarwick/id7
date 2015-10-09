@@ -32,11 +32,27 @@ a {
     color: @link-color;
   }
 
-  &[href].no-print-expand {
+  &[href] {
     @media print {
       &:after {
         content: "";
       }
+
+      &.print-expand:after {
+        content: " (" attr(href) ")";
+      }
+    }
+  }
+}
+
+abbr[title] {
+  @media print {
+    &:after {
+      content: "";
+    }
+
+    &.print-expand:after {
+      content: " (" attr(title) ")";
     }
   }
 }
