@@ -9548,7 +9548,7 @@ if(k>0){x(k-1)
 }function s(F){var x,B,D;
 B=a("#search-box");
 c.find("> li").not(".more-link").remove();
-var A='<a title="View more search options" href="http://search.warwick.ac.uk/website" rel="nofollow">'+F.data("index-title")+"</a>";
+var A='<a title="View more search options" href="//search.warwick.ac.uk/website" rel="nofollow">'+F.data("index-title")+"</a>";
 var E=F.data("displaymode")=="pane";
 F.clone().empty().prependTo(c).addClass("active").append(A);
 x=B.parent("form");
@@ -9561,7 +9561,7 @@ x.on("submit.searchbox",function(G){G.preventDefault();
 p(x);
 return false
 })
-}else{x.attr("action","http://search.warwick.ac.uk/"+F.data("index-section"))
+}else{x.attr("action","//search.warwick.ac.uk/"+F.data("index-section"))
 }x.find("input[name=source]").remove();
 x.find("input[name=fileFormat]").remove();
 if(F.data("source")){x.prepend(a('<input type="hidden" name="source">').val(F.data("source")))
