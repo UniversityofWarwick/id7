@@ -251,9 +251,9 @@ fieldset[disabled] .btn-brand.active {
   color: white;
   background: none;
 }
-.id7-navigation .navbar-primary .navbar-nav > .open > a,
-.id7-navigation .navbar-primary .navbar-nav > .open > a:hover,
-.id7-navigation .navbar-primary .navbar-nav > .open > a:focus {
+.id7-navigation .navbar-primary .navbar-nav > .open,
+.id7-navigation .navbar-primary .navbar-nav > .open:hover,
+.id7-navigation .navbar-primary .navbar-nav > .open:focus {
   color: white;
   background-color: #492654;
 }
@@ -359,9 +359,9 @@ fieldset[disabled] .id7-navigation .navbar-primary .btn-link:focus {
   color: white;
   background: none;
 }
-.navbar-secondary .navbar-nav > .open > a,
-.navbar-secondary .navbar-nav > .open > a:hover,
-.navbar-secondary .navbar-nav > .open > a:focus {
+.navbar-secondary .navbar-nav > .open,
+.navbar-secondary .navbar-nav > .open:hover,
+.navbar-secondary .navbar-nav > .open:focus {
   color: white;
   background-color: #705878;
 }
@@ -477,9 +477,9 @@ fieldset[disabled] .navbar-secondary .btn-link:focus {
   color: #383838;
   background: none;
 }
-.navbar-tertiary .navbar-nav > .open > a,
-.navbar-tertiary .navbar-nav > .open > a:hover,
-.navbar-tertiary .navbar-nav > .open > a:focus {
+.navbar-tertiary .navbar-nav > .open,
+.navbar-tertiary .navbar-nav > .open:hover,
+.navbar-tertiary .navbar-nav > .open:focus {
   color: #383838;
   background-color: #c6c6c6;
 }

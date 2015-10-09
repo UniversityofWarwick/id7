@@ -252,9 +252,9 @@ fieldset[disabled] .btn-brand.active {
   color: white;
   background: none;
 }
-.id7-navigation .navbar-primary .navbar-nav > .open > a,
-.id7-navigation .navbar-primary .navbar-nav > .open > a:hover,
-.id7-navigation .navbar-primary .navbar-nav > .open > a:focus {
+.id7-navigation .navbar-primary .navbar-nav > .open,
+.id7-navigation .navbar-primary .navbar-nav > .open:hover,
+.id7-navigation .navbar-primary .navbar-nav > .open:focus {
   color: white;
   background-color: #1a3f61;
 }
@@ -360,9 +360,9 @@ fieldset[disabled] .id7-navigation .navbar-primary .btn-link:focus {
   color: white;
   background: none;
 }
-.navbar-secondary .navbar-nav > .open > a,
-.navbar-secondary .navbar-nav > .open > a:hover,
-.navbar-secondary .navbar-nav > .open > a:focus {
+.navbar-secondary .navbar-nav > .open,
+.navbar-secondary .navbar-nav > .open:hover,
+.navbar-secondary .navbar-nav > .open:focus {
   color: white;
   background-color: #4f6981;
 }
@@ -478,9 +478,9 @@ fieldset[disabled] .navbar-secondary .btn-link:focus {
   color: #383838;
   background: none;
 }
-.navbar-tertiary .navbar-nav > .open > a,
-.navbar-tertiary .navbar-nav > .open > a:hover,
-.navbar-tertiary .navbar-nav > .open > a:focus {
+.navbar-tertiary .navbar-nav > .open,
+.navbar-tertiary .navbar-nav > .open:hover,
+.navbar-tertiary .navbar-nav > .open:focus {
   color: #383838;
   background-color: #c6c6c6;
 }
@@ -641,23 +641,21 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
   border-top-color: #d3d3d3;
 }
-.id7-masthead .id7-search .id7-search-box {
-  border-color: #204f79;
-}
-.id7-masthead .id7-search .fa {
+.id7-search .fa {
   color: #204f79;
   color: rgba(32, 79, 121, 0.5);
   -webkit-transition: color 0.15s linear;
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-.id7-masthead .id7-search .twitter-typeahead:hover + .fa,
-.id7-masthead .id7-search .fa:hover {
+.id7-search .form-control:hover + .fa,
+.id7-search .twitter-typeahead:hover + .fa,
+.id7-search .fa:hover {
   color: #204f79;
 }
-.id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
-.id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
-.id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+.id7-search .twitter-typeahead .tt-suggestion:hover,
+.id7-search .twitter-typeahead .tt-suggestion:focus,
+.id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
   cursor: pointer;
   background: #204f79;
   color: white;

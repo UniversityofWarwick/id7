@@ -18243,6 +18243,27 @@ window.Modernizr = (function( window, document, undefined ) {
         });
       },
 
+      updateDropdownBehaviour: function updateDropdownBehaviour(screenConfig) {
+        this.$container.find('.navbar').each(function () {
+          var $navbar = $(this);
+
+          if (screenConfig.name == 'xs') {
+            // Require a click (tap) to open dropdowns
+            $navbar.find('.dropdown-toggle')
+              .attr('data-toggle', 'dropdown')
+              .attr('role', 'button')
+              .attr('aria-expanded', false);
+          } else {
+            // Allow hovering to open dropdowns
+            $navbar.find('.dropdown-toggle')
+              .removeAttr('data-toggle')
+              .removeAttr('role')
+              .removeAttr('aria-expanded')
+              .parent().removeClass('open');
+          }
+        });
+      },
+
       // Return the total height of affixed elements (whether affixed or not)
       getAffixedHeight: function getAffixedHeight() {
         var height = 0;
@@ -18302,6 +18323,7 @@ window.Modernizr = (function( window, document, undefined ) {
           if (this.options.fixedHeader) this.markHeaderFixedPosition();
           if (this.options.fixedNav) this.markFixedPosition();
           this.updateWrappedState();
+          this.updateDropdownBehaviour(screenConfig);
         }, this));
 
         this.$container.on('click', '.nav > li', function (e) {

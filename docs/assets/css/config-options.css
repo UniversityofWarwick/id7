@@ -239,9 +239,9 @@ body.brand-purple .id7-navigation .navbar-primary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-purple .id7-navigation .navbar-primary .navbar-nav > .open > a,
-body.brand-purple .id7-navigation .navbar-primary .navbar-nav > .open > a:hover,
-body.brand-purple .id7-navigation .navbar-primary .navbar-nav > .open > a:focus {
+body.brand-purple .id7-navigation .navbar-primary .navbar-nav > .open,
+body.brand-purple .id7-navigation .navbar-primary .navbar-nav > .open:hover,
+body.brand-purple .id7-navigation .navbar-primary .navbar-nav > .open:focus {
   color: white;
   background-color: #492654;
 }
@@ -347,9 +347,9 @@ body.brand-purple .navbar-secondary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-purple .navbar-secondary .navbar-nav > .open > a,
-body.brand-purple .navbar-secondary .navbar-nav > .open > a:hover,
-body.brand-purple .navbar-secondary .navbar-nav > .open > a:focus {
+body.brand-purple .navbar-secondary .navbar-nav > .open,
+body.brand-purple .navbar-secondary .navbar-nav > .open:hover,
+body.brand-purple .navbar-secondary .navbar-nav > .open:focus {
   color: white;
   background-color: #705878;
 }
@@ -465,9 +465,9 @@ body.brand-purple .navbar-tertiary .navbar-toggle:focus {
   color: #383838;
   background: none;
 }
-body.brand-purple .navbar-tertiary .navbar-nav > .open > a,
-body.brand-purple .navbar-tertiary .navbar-nav > .open > a:hover,
-body.brand-purple .navbar-tertiary .navbar-nav > .open > a:focus {
+body.brand-purple .navbar-tertiary .navbar-nav > .open,
+body.brand-purple .navbar-tertiary .navbar-nav > .open:hover,
+body.brand-purple .navbar-tertiary .navbar-nav > .open:focus {
   color: #383838;
   background-color: #c6c6c6;
 }
@@ -628,23 +628,21 @@ body.brand-purple .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo
 body.brand-purple .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
   border-top-color: #d3d3d3;
 }
-body.brand-purple .id7-masthead .id7-search .id7-search-box {
-  border-color: #5b3069;
-}
-body.brand-purple .id7-masthead .id7-search .fa {
+body.brand-purple .id7-search .fa {
   color: #5b3069;
   color: rgba(91, 48, 105, 0.5);
   -webkit-transition: color 0.15s linear;
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-purple .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
-body.brand-purple .id7-masthead .id7-search .fa:hover {
+body.brand-purple .id7-search .form-control:hover + .fa,
+body.brand-purple .id7-search .twitter-typeahead:hover + .fa,
+body.brand-purple .id7-search .fa:hover {
   color: #5b3069;
 }
-body.brand-purple .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
-body.brand-purple .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
-body.brand-purple .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+body.brand-purple .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-purple .id7-search .twitter-typeahead .tt-suggestion:focus,
+body.brand-purple .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
   cursor: pointer;
   background: #5b3069;
   color: white;
@@ -1367,9 +1365,9 @@ body.brand-gray .id7-navigation .navbar-primary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-gray .id7-navigation .navbar-primary .navbar-nav > .open > a,
-body.brand-gray .id7-navigation .navbar-primary .navbar-nav > .open > a:hover,
-body.brand-gray .id7-navigation .navbar-primary .navbar-nav > .open > a:focus {
+body.brand-gray .id7-navigation .navbar-primary .navbar-nav > .open,
+body.brand-gray .id7-navigation .navbar-primary .navbar-nav > .open:hover,
+body.brand-gray .id7-navigation .navbar-primary .navbar-nav > .open:focus {
   color: white;
   background-color: #323538;
 }
@@ -1475,9 +1473,9 @@ body.brand-gray .navbar-secondary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-gray .navbar-secondary .navbar-nav > .open > a,
-body.brand-gray .navbar-secondary .navbar-nav > .open > a:hover,
-body.brand-gray .navbar-secondary .navbar-nav > .open > a:focus {
+body.brand-gray .navbar-secondary .navbar-nav > .open,
+body.brand-gray .navbar-secondary .navbar-nav > .open:hover,
+body.brand-gray .navbar-secondary .navbar-nav > .open:focus {
   color: white;
   background-color: #606264;
 }
@@ -1593,9 +1591,9 @@ body.brand-gray .navbar-tertiary .navbar-toggle:focus {
   color: #383838;
   background: none;
 }
-body.brand-gray .navbar-tertiary .navbar-nav > .open > a,
-body.brand-gray .navbar-tertiary .navbar-nav > .open > a:hover,
-body.brand-gray .navbar-tertiary .navbar-nav > .open > a:focus {
+body.brand-gray .navbar-tertiary .navbar-nav > .open,
+body.brand-gray .navbar-tertiary .navbar-nav > .open:hover,
+body.brand-gray .navbar-tertiary .navbar-nav > .open:focus {
   color: #383838;
   background-color: #c6c6c6;
 }
@@ -1756,23 +1754,21 @@ body.brand-gray .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-b
 body.brand-gray .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
   border-top-color: #d3d3d3;
 }
-body.brand-gray .id7-masthead .id7-search .id7-search-box {
-  border-color: #3f4246;
-}
-body.brand-gray .id7-masthead .id7-search .fa {
+body.brand-gray .id7-search .fa {
   color: #3f4246;
   color: rgba(63, 66, 70, 0.5);
   -webkit-transition: color 0.15s linear;
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-gray .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
-body.brand-gray .id7-masthead .id7-search .fa:hover {
+body.brand-gray .id7-search .form-control:hover + .fa,
+body.brand-gray .id7-search .twitter-typeahead:hover + .fa,
+body.brand-gray .id7-search .fa:hover {
   color: #3f4246;
 }
-body.brand-gray .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
-body.brand-gray .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
-body.brand-gray .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+body.brand-gray .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-gray .id7-search .twitter-typeahead .tt-suggestion:focus,
+body.brand-gray .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
   cursor: pointer;
   background: #3f4246;
   color: white;
@@ -2495,9 +2491,9 @@ body.brand-gold .id7-navigation .navbar-primary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-gold .id7-navigation .navbar-primary .navbar-nav > .open > a,
-body.brand-gold .id7-navigation .navbar-primary .navbar-nav > .open > a:hover,
-body.brand-gold .id7-navigation .navbar-primary .navbar-nav > .open > a:focus {
+body.brand-gold .id7-navigation .navbar-primary .navbar-nav > .open,
+body.brand-gold .id7-navigation .navbar-primary .navbar-nav > .open:hover,
+body.brand-gold .id7-navigation .navbar-primary .navbar-nav > .open:focus {
   color: white;
   background-color: #7a5600;
 }
@@ -2603,9 +2599,9 @@ body.brand-gold .navbar-secondary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-gold .navbar-secondary .navbar-nav > .open > a,
-body.brand-gold .navbar-secondary .navbar-nav > .open > a:hover,
-body.brand-gold .navbar-secondary .navbar-nav > .open > a:focus {
+body.brand-gold .navbar-secondary .navbar-nav > .open,
+body.brand-gold .navbar-secondary .navbar-nav > .open:hover,
+body.brand-gold .navbar-secondary .navbar-nav > .open:focus {
   color: white;
   background-color: #93793d;
 }
@@ -2721,9 +2717,9 @@ body.brand-gold .navbar-tertiary .navbar-toggle:focus {
   color: #383838;
   background: none;
 }
-body.brand-gold .navbar-tertiary .navbar-nav > .open > a,
-body.brand-gold .navbar-tertiary .navbar-nav > .open > a:hover,
-body.brand-gold .navbar-tertiary .navbar-nav > .open > a:focus {
+body.brand-gold .navbar-tertiary .navbar-nav > .open,
+body.brand-gold .navbar-tertiary .navbar-nav > .open:hover,
+body.brand-gold .navbar-tertiary .navbar-nav > .open:focus {
   color: #383838;
   background-color: #c6c6c6;
 }
@@ -2884,23 +2880,21 @@ body.brand-gold .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-b
 body.brand-gold .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
   border-top-color: #d3d3d3;
 }
-body.brand-gold .id7-masthead .id7-search .id7-search-box {
-  border-color: #996b00;
-}
-body.brand-gold .id7-masthead .id7-search .fa {
+body.brand-gold .id7-search .fa {
   color: #996b00;
   color: rgba(153, 107, 0, 0.5);
   -webkit-transition: color 0.15s linear;
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-gold .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
-body.brand-gold .id7-masthead .id7-search .fa:hover {
+body.brand-gold .id7-search .form-control:hover + .fa,
+body.brand-gold .id7-search .twitter-typeahead:hover + .fa,
+body.brand-gold .id7-search .fa:hover {
   color: #996b00;
 }
-body.brand-gold .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
-body.brand-gold .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
-body.brand-gold .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+body.brand-gold .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-gold .id7-search .twitter-typeahead .tt-suggestion:focus,
+body.brand-gold .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
   cursor: pointer;
   background: #996b00;
   color: white;
@@ -3623,9 +3617,9 @@ body.brand-blue .id7-navigation .navbar-primary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-blue .id7-navigation .navbar-primary .navbar-nav > .open > a,
-body.brand-blue .id7-navigation .navbar-primary .navbar-nav > .open > a:hover,
-body.brand-blue .id7-navigation .navbar-primary .navbar-nav > .open > a:focus {
+body.brand-blue .id7-navigation .navbar-primary .navbar-nav > .open,
+body.brand-blue .id7-navigation .navbar-primary .navbar-nav > .open:hover,
+body.brand-blue .id7-navigation .navbar-primary .navbar-nav > .open:focus {
   color: white;
   background-color: #1a3f61;
 }
@@ -3731,9 +3725,9 @@ body.brand-blue .navbar-secondary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-blue .navbar-secondary .navbar-nav > .open > a,
-body.brand-blue .navbar-secondary .navbar-nav > .open > a:hover,
-body.brand-blue .navbar-secondary .navbar-nav > .open > a:focus {
+body.brand-blue .navbar-secondary .navbar-nav > .open,
+body.brand-blue .navbar-secondary .navbar-nav > .open:hover,
+body.brand-blue .navbar-secondary .navbar-nav > .open:focus {
   color: white;
   background-color: #4f6981;
 }
@@ -3849,9 +3843,9 @@ body.brand-blue .navbar-tertiary .navbar-toggle:focus {
   color: #383838;
   background: none;
 }
-body.brand-blue .navbar-tertiary .navbar-nav > .open > a,
-body.brand-blue .navbar-tertiary .navbar-nav > .open > a:hover,
-body.brand-blue .navbar-tertiary .navbar-nav > .open > a:focus {
+body.brand-blue .navbar-tertiary .navbar-nav > .open,
+body.brand-blue .navbar-tertiary .navbar-nav > .open:hover,
+body.brand-blue .navbar-tertiary .navbar-nav > .open:focus {
   color: #383838;
   background-color: #c6c6c6;
 }
@@ -4012,23 +4006,21 @@ body.brand-blue .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-b
 body.brand-blue .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
   border-top-color: #d3d3d3;
 }
-body.brand-blue .id7-masthead .id7-search .id7-search-box {
-  border-color: #204f79;
-}
-body.brand-blue .id7-masthead .id7-search .fa {
+body.brand-blue .id7-search .fa {
   color: #204f79;
   color: rgba(32, 79, 121, 0.5);
   -webkit-transition: color 0.15s linear;
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-blue .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
-body.brand-blue .id7-masthead .id7-search .fa:hover {
+body.brand-blue .id7-search .form-control:hover + .fa,
+body.brand-blue .id7-search .twitter-typeahead:hover + .fa,
+body.brand-blue .id7-search .fa:hover {
   color: #204f79;
 }
-body.brand-blue .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
-body.brand-blue .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
-body.brand-blue .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+body.brand-blue .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-blue .id7-search .twitter-typeahead .tt-suggestion:focus,
+body.brand-blue .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
   cursor: pointer;
   background: #204f79;
   color: white;
@@ -4751,9 +4743,9 @@ body.brand-orange .id7-navigation .navbar-primary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-orange .id7-navigation .navbar-primary .navbar-nav > .open > a,
-body.brand-orange .id7-navigation .navbar-primary .navbar-nav > .open > a:hover,
-body.brand-orange .id7-navigation .navbar-primary .navbar-nav > .open > a:focus {
+body.brand-orange .id7-navigation .navbar-primary .navbar-nav > .open,
+body.brand-orange .id7-navigation .navbar-primary .navbar-nav > .open:hover,
+body.brand-orange .id7-navigation .navbar-primary .navbar-nav > .open:focus {
   color: white;
   background-color: #98340a;
 }
@@ -4859,9 +4851,9 @@ body.brand-orange .navbar-secondary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-orange .navbar-secondary .navbar-nav > .open > a,
-body.brand-orange .navbar-secondary .navbar-nav > .open > a:hover,
-body.brand-orange .navbar-secondary .navbar-nav > .open > a:focus {
+body.brand-orange .navbar-secondary .navbar-nav > .open,
+body.brand-orange .navbar-secondary .navbar-nav > .open:hover,
+body.brand-orange .navbar-secondary .navbar-nav > .open:focus {
   color: white;
   background-color: #a86244;
 }
@@ -4977,9 +4969,9 @@ body.brand-orange .navbar-tertiary .navbar-toggle:focus {
   color: #383838;
   background: none;
 }
-body.brand-orange .navbar-tertiary .navbar-nav > .open > a,
-body.brand-orange .navbar-tertiary .navbar-nav > .open > a:hover,
-body.brand-orange .navbar-tertiary .navbar-nav > .open > a:focus {
+body.brand-orange .navbar-tertiary .navbar-nav > .open,
+body.brand-orange .navbar-tertiary .navbar-nav > .open:hover,
+body.brand-orange .navbar-tertiary .navbar-nav > .open:focus {
   color: #383838;
   background-color: #c6c6c6;
 }
@@ -5140,23 +5132,21 @@ body.brand-orange .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo
 body.brand-orange .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
   border-top-color: #d3d3d3;
 }
-body.brand-orange .id7-masthead .id7-search .id7-search-box {
-  border-color: #be410c;
-}
-body.brand-orange .id7-masthead .id7-search .fa {
+body.brand-orange .id7-search .fa {
   color: #be410c;
   color: rgba(190, 65, 12, 0.5);
   -webkit-transition: color 0.15s linear;
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-orange .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
-body.brand-orange .id7-masthead .id7-search .fa:hover {
+body.brand-orange .id7-search .form-control:hover + .fa,
+body.brand-orange .id7-search .twitter-typeahead:hover + .fa,
+body.brand-orange .id7-search .fa:hover {
   color: #be410c;
 }
-body.brand-orange .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
-body.brand-orange .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
-body.brand-orange .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+body.brand-orange .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-orange .id7-search .twitter-typeahead .tt-suggestion:focus,
+body.brand-orange .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
   cursor: pointer;
   background: #be410c;
   color: white;
@@ -5879,9 +5869,9 @@ body.brand-green .id7-navigation .navbar-primary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-green .id7-navigation .navbar-primary .navbar-nav > .open > a,
-body.brand-green .id7-navigation .navbar-primary .navbar-nav > .open > a:hover,
-body.brand-green .id7-navigation .navbar-primary .navbar-nav > .open > a:focus {
+body.brand-green .id7-navigation .navbar-primary .navbar-nav > .open,
+body.brand-green .id7-navigation .navbar-primary .navbar-nav > .open:hover,
+body.brand-green .id7-navigation .navbar-primary .navbar-nav > .open:focus {
   color: white;
   background-color: #616105;
 }
@@ -5987,9 +5977,9 @@ body.brand-green .navbar-secondary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-green .navbar-secondary .navbar-nav > .open > a,
-body.brand-green .navbar-secondary .navbar-nav > .open > a:hover,
-body.brand-green .navbar-secondary .navbar-nav > .open > a:focus {
+body.brand-green .navbar-secondary .navbar-nav > .open,
+body.brand-green .navbar-secondary .navbar-nav > .open:hover,
+body.brand-green .navbar-secondary .navbar-nav > .open:focus {
   color: white;
   background-color: #818141;
 }
@@ -6105,9 +6095,9 @@ body.brand-green .navbar-tertiary .navbar-toggle:focus {
   color: #383838;
   background: none;
 }
-body.brand-green .navbar-tertiary .navbar-nav > .open > a,
-body.brand-green .navbar-tertiary .navbar-nav > .open > a:hover,
-body.brand-green .navbar-tertiary .navbar-nav > .open > a:focus {
+body.brand-green .navbar-tertiary .navbar-nav > .open,
+body.brand-green .navbar-tertiary .navbar-nav > .open:hover,
+body.brand-green .navbar-tertiary .navbar-nav > .open:focus {
   color: #383838;
   background-color: #c6c6c6;
 }
@@ -6268,23 +6258,21 @@ body.brand-green .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-
 body.brand-green .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
   border-top-color: #d3d3d3;
 }
-body.brand-green .id7-masthead .id7-search .id7-search-box {
-  border-color: #797906;
-}
-body.brand-green .id7-masthead .id7-search .fa {
+body.brand-green .id7-search .fa {
   color: #797906;
   color: rgba(121, 121, 6, 0.5);
   -webkit-transition: color 0.15s linear;
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-green .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
-body.brand-green .id7-masthead .id7-search .fa:hover {
+body.brand-green .id7-search .form-control:hover + .fa,
+body.brand-green .id7-search .twitter-typeahead:hover + .fa,
+body.brand-green .id7-search .fa:hover {
   color: #797906;
 }
-body.brand-green .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
-body.brand-green .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
-body.brand-green .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+body.brand-green .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-green .id7-search .twitter-typeahead .tt-suggestion:focus,
+body.brand-green .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
   cursor: pointer;
   background: #797906;
   color: white;
@@ -7007,9 +6995,9 @@ body.brand-red .id7-navigation .navbar-primary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-red .id7-navigation .navbar-primary .navbar-nav > .open > a,
-body.brand-red .id7-navigation .navbar-primary .navbar-nav > .open > a:hover,
-body.brand-red .id7-navigation .navbar-primary .navbar-nav > .open > a:focus {
+body.brand-red .id7-navigation .navbar-primary .navbar-nav > .open,
+body.brand-red .id7-navigation .navbar-primary .navbar-nav > .open:hover,
+body.brand-red .id7-navigation .navbar-primary .navbar-nav > .open:focus {
   color: white;
   background-color: #6e0d23;
 }
@@ -7115,9 +7103,9 @@ body.brand-red .navbar-secondary .navbar-toggle:focus {
   color: white;
   background: none;
 }
-body.brand-red .navbar-secondary .navbar-nav > .open > a,
-body.brand-red .navbar-secondary .navbar-nav > .open > a:hover,
-body.brand-red .navbar-secondary .navbar-nav > .open > a:focus {
+body.brand-red .navbar-secondary .navbar-nav > .open,
+body.brand-red .navbar-secondary .navbar-nav > .open:hover,
+body.brand-red .navbar-secondary .navbar-nav > .open:focus {
   color: white;
   background-color: #8a4656;
 }
@@ -7233,9 +7221,9 @@ body.brand-red .navbar-tertiary .navbar-toggle:focus {
   color: #383838;
   background: none;
 }
-body.brand-red .navbar-tertiary .navbar-nav > .open > a,
-body.brand-red .navbar-tertiary .navbar-nav > .open > a:hover,
-body.brand-red .navbar-tertiary .navbar-nav > .open > a:focus {
+body.brand-red .navbar-tertiary .navbar-nav > .open,
+body.brand-red .navbar-tertiary .navbar-nav > .open:hover,
+body.brand-red .navbar-tertiary .navbar-nav > .open:focus {
   color: #383838;
   background-color: #c6c6c6;
 }
@@ -7396,23 +7384,21 @@ body.brand-red .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bl
 body.brand-red .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::after {
   border-top-color: #d3d3d3;
 }
-body.brand-red .id7-masthead .id7-search .id7-search-box {
-  border-color: #89102c;
-}
-body.brand-red .id7-masthead .id7-search .fa {
+body.brand-red .id7-search .fa {
   color: #89102c;
   color: rgba(137, 16, 44, 0.5);
   -webkit-transition: color 0.15s linear;
   -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
-body.brand-red .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
-body.brand-red .id7-masthead .id7-search .fa:hover {
+body.brand-red .id7-search .form-control:hover + .fa,
+body.brand-red .id7-search .twitter-typeahead:hover + .fa,
+body.brand-red .id7-search .fa:hover {
   color: #89102c;
 }
-body.brand-red .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
-body.brand-red .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
-body.brand-red .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+body.brand-red .id7-search .twitter-typeahead .tt-suggestion:hover,
+body.brand-red .id7-search .twitter-typeahead .tt-suggestion:focus,
+body.brand-red .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
   cursor: pointer;
   background: #89102c;
   color: white;
