@@ -8916,7 +8916,9 @@ html.no-generatedcontent .id7-utility-bar > ul > li {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
-  background: url("../images/masthead-logo-bleed-xs.svg") 0 0 no-repeat;
+  background-image: url("../images/masthead-logo-bleed-xs.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   -webkit-background-size: 1680px 300px;
           background-size: 1680px 300px;
 }
@@ -8986,19 +8988,33 @@ html.no-generatedcontent .id7-utility-bar > ul > li {
 }
 html.no-svg .id7-masthead,
 html.no-svgfilters .id7-masthead,
-html.no-smil .id7-masthead {
-  background: url("../images/masthead-logo-bleed-xs.png") 0 0 no-repeat;
+html.no-smil .id7-masthead,
+html.safari .id7-masthead {
+  background-image: url("../images/masthead-logo-bleed-xs.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  html.safari .id7-masthead {
+    background-image: url("../images/masthead-logo-bleed-xs@2x.png");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  html.safari .id7-masthead {
+    background-image: url("../images/masthead-logo-bleed-xs@3x.png");
+  }
 }
 @media (min-width: 768px) {
   .id7-masthead {
-    background: url("../images/masthead-logo-bleed-sm.svg") 0 0 no-repeat;
+    background-image: url("../images/masthead-logo-bleed-sm.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
     -webkit-background-size: 1170px 300px;
             background-size: 1170px 300px;
   }
   html.no-svg .id7-masthead,
   html.no-svgfilters .id7-masthead,
-  html.no-smil .id7-masthead {
-    background: url("../images/masthead-logo-bleed-sm.png") 0 0 no-repeat;
+  html.no-smil .id7-masthead,
+  html.safari .id7-masthead {
+    background-image: url("../images/masthead-logo-bleed-sm.png");
   }
   .id7-masthead .id7-logo-row {
     height: 80px;
@@ -9006,6 +9022,16 @@ html.no-smil .id7-masthead {
   .id7-masthead .id7-logo-row > .id7-logo {
     float: left;
     width: 180px;
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  html.safari .id7-masthead {
+    background-image: url("../images/masthead-logo-bleed-sm@2x.png");
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3) {
+  html.safari .id7-masthead {
+    background-image: url("../images/masthead-logo-bleed-sm@3x.png");
   }
 }
 .id7-masthead .id7-logo a {
