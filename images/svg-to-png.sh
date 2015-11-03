@@ -7,6 +7,12 @@ OUTPUT=$4
 TRANSPARENT=${5:-true}
 DPI=${6:-600}
 
+if [ "$SCALE" != "" ]; then
+    OUTPUT="$(basename "$OUTPUT" .png)@${SCALE}x.png"
+    let "WIDTH = $WIDTH * $SCALE"
+    let "HEIGHT = $HEIGHT * $SCALE"
+fi
+
 if [ "$TRANSPARENT" = true ]; then
 	# Export the SVG as a PNG with a white background (so it's black on white)
 	inkscape $SVG --export-background=white --export-png=.tmp.png -d $DPI

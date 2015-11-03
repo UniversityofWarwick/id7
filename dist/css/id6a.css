@@ -44,14 +44,27 @@
           text-decoration-color: #050505;
 }
 #warwick-logo-link {
-  background: url("../images/logotype-colour.svg") 0 0 no-repeat;
+  background-image: url("../images/logotype-colour.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   -webkit-background-size: 136px 26px;
           background-size: 136px 26px;
 }
 html.no-svg #warwick-logo-link,
 html.no-svgfilters #warwick-logo-link,
-html.no-smil #warwick-logo-link {
-  background: url("../images/id6a-logotype.png") 0 0 no-repeat;
+html.no-smil #warwick-logo-link,
+html.safari #warwick-logo-link {
+  background-image: url("../images/id6a-logotype.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  html.safari #warwick-logo-link {
+    background-image: url("../images/id6a-logotype@2x.png");
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  html.safari #warwick-logo-link {
+    background-image: url("../images/id6a-logotype@3x.png");
+  }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #warwick-logo-link {

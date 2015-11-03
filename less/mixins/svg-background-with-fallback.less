@@ -1,7 +1,20 @@
-.svg-background-with-fallback(@svg; @fallback; @position: '0% 0%'; @repeat: 'no-repeat') {
-  background: url(@svg) ~"@{position} @{repeat}";
+.svg-background-with-fallback(@svg; @fallback; @position: 0% 0%; @repeat: no-repeat) {
+  // Separate properties to avoid resetting background-size
+  background-image: ~'url("@{svg}.svg")';
+  background-position: @position;
+  background-repeat: @repeat;
 
-  html.no-svg &, html.no-svgfilters &, html.no-smil & { // smil used to detect IE, naughty. SHAME
-    background: url(@fallback) ~"@{position} @{repeat}";
+  html.no-svg &, html.no-svgfilters &, html.no-smil &, html.safari & { // smil used to detect IE, naughty. SHAME
+    background-image: ~'url("@{fallback}.png")';
+  }
+
+  html.safari & {
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      background-image: ~'url("@{fallback}@2x.png")';
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 3) {
+      background-image: ~'url("@{fallback}@3x.png")';
+    }
   }
 }
