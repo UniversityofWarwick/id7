@@ -89,7 +89,8 @@ module.exports = function (grunt) {
           'js/not-selector-feature-detect.modernizr.js',
           'js/style-update-feature-detect.modernizr.js',
           'js/svg-filters-feature-detect.modernizr.js',
-          'js/ie10-viewport-bug-workaround.js'
+          'js/ie10-viewport-bug-workaround.js',
+          'js/safari-user-agent-test.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-bundle.js'
       },

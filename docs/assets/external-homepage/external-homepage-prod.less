@@ -70,19 +70,19 @@ body {
 .id7-utility-masthead {
   background-color: transparent; // Override default style
 
-  .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-xs.svg', '/dist/images/masthead-logo-bleed-wide-xs.png', "0 @{id7-masthead-bleed-height}");
+  .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-xs', '/dist/images/masthead-logo-bleed-wide-xs', 0 @id7-masthead-bleed-height);
   background-size: 1680px 300px;
 
   @media (min-width: @screen-sm-min) {
-    .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-sm.svg', '/dist/images/masthead-logo-bleed-wide-sm.png', "center @{id7-masthead-bleed-height}");
+    .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-sm', '/dist/images/masthead-logo-bleed-wide-sm', center @id7-masthead-bleed-height);
     background-size: @screen-md-min @id7-masthead-logo-height-sm;
   }
   @media (min-width: @screen-md-min) {
-    .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-md.svg', '/dist/images/masthead-logo-bleed-wide-md.png', "center @{id7-masthead-bleed-height}");
+    .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-md', '/dist/images/masthead-logo-bleed-wide-md', center @id7-masthead-bleed-height);
     background-size: @screen-lg-min @id7-masthead-logo-height-sm;
   }
   @media (min-width: @screen-lg-min) {
-    .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-lg.svg', '/dist/images/masthead-logo-bleed-wide-lg.png', "center @{id7-masthead-bleed-height}");
+    .svg-background-with-fallback('/dist/images/masthead-logo-bleed-wide-lg', '/dist/images/masthead-logo-bleed-wide-lg', center @id7-masthead-bleed-height);
     background-size: 3000px @id7-masthead-logo-height-sm;
   }
 
