@@ -87,10 +87,10 @@ module.exports = function (grunt) {
           'js/search-suggest.jquery.js',
           'js/wide-tables.jquery.js',
           'js/not-selector-feature-detect.modernizr.js',
+          'js/safari-user-agent-detect.modernizr.js',
           'js/style-update-feature-detect.modernizr.js',
           'js/svg-filters-feature-detect.modernizr.js',
-          'js/ie10-viewport-bug-workaround.js',
-          'js/safari-user-agent-test.js'
+          'js/ie10-viewport-bug-workaround.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-bundle.js'
       },
