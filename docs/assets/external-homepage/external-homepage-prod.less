@@ -23,7 +23,7 @@ body {
   // On smallscreen and non-flexbox, don't allow the body to go underneath the fixed header
   margin-top: @fixed-header-size;
 
-  @media (min-width: @grid-float-breakpoint) {
+  @media screen and (min-width: @grid-float-breakpoint) {
     html.flexbox & {
       margin-top: 0;
     }
@@ -164,7 +164,7 @@ body {
   .more-links-trigger {
     display: none;
 
-    @media (min-width: @grid-float-breakpoint) {
+    @media screen and (min-width: @grid-float-breakpoint) {
       html.flexbox & {
         display: inline-block;
       }
@@ -188,7 +188,7 @@ body {
 .carousel-nav {
   display: none;
 
-  @media (min-width: @grid-float-breakpoint) {
+  @media screen and (min-width: @grid-float-breakpoint) {
     html.flexbox & {
       display: block;
     }
@@ -376,7 +376,7 @@ body {
   }
 }
 
-@media (min-width: @grid-float-breakpoint) {
+@media screen and (min-width: @grid-float-breakpoint) {
   html.flexbox .jumbotron-carousel .jumbotron {
     .set-jumbotron-height();
 
@@ -687,7 +687,7 @@ body {
   font-size: 16px;
   .link-colour(white, #e0e4f8);
 
-  @media (min-width: @grid-float-breakpoint) {
+  @media screen and (min-width: @grid-float-breakpoint) {
     html.flexbox & {
       display: none;
     }

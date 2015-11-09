@@ -25,7 +25,7 @@ body {
   }
 
   // Stretch the content down to the footer, using Flexbox
-  @media (min-width: @grid-float-breakpoint) {
+  @media screen and (min-width: @grid-float-breakpoint) {
     html.flexbox & {
       height: 100vh; // Screw you IE ID-163
       display: flex;
