@@ -76,5 +76,17 @@ $(function () {
     ok($el.data('headroom'), 'headroom instance exists');
   });
 
+  test('should not throw an error on empty navigation', function () {
+    var $el = $('<div>' +
+                '<nav class="navbar navbar-primary" role="navigation">' +
+                '<ul class="nav navbar-nav">' +
+                '</ul>' +
+                '</nav>' +
+                '</div>')
+        .appendTo('#qunit-fixture')
+        .id7Navigation({ fitToWidth: false });
+
+    ok($el.data('id7.navigation'), 'navigation instance exists');
+  });
 
 });
