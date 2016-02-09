@@ -10386,60 +10386,6 @@ table[cellpadding="0"] th {
 .id7-main-content-area table:not(.table):not([role="presentation"]):not([border="0"]) .table {
   background-color: transparent;
 }
-body {
-  scrollbar-face-color: #505050;
-  scrollbar-arrow-color: #fff;
-  scrollbar-track-color: #dcdcdc;
-  scrollbar-shadow-color: #505050;
-  scrollbar-highlight-color: #505050;
-  scrollbar-3dlight-color: #505050;
-  scrollbar-darkshadow-color: #505050;
-}
-body :not(iframe)::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
-  cursor: pointer;
-}
-body :not(iframe)::-webkit-scrollbar-button:vertical:start:decrement {
-  display: block;
-  height: 12px;
-  background: url("../images/scrollbar/scrollbar-up.png") no-repeat top left;
-}
-body :not(iframe)::-webkit-scrollbar-button:vertical:end:increment {
-  display: block;
-  height: 12px;
-  background: url("../images/scrollbar/scrollbar-down.png") no-repeat bottom left;
-}
-body :not(iframe)::-webkit-scrollbar-button:horizontal:start:decrement {
-  display: block;
-  width: 12px;
-  height: 12px;
-  background: url("../images/scrollbar/scrollbar-left.png") no-repeat top left;
-}
-body :not(iframe)::-webkit-scrollbar-button:horizontal:end:increment {
-  display: block;
-  width: 12px;
-  height: 12px;
-  background: url("../images/scrollbar/scrollbar-right.png") no-repeat bottom right;
-}
-body :not(iframe)::-webkit-scrollbar-track-piece {
-  background-color: #dcdcdc;
-}
-body :not(iframe)::-webkit-scrollbar-thumb {
-  background-color: #aaa;
-  -webkit-transition: background-color .2s linear;
-       -o-transition: background-color .2s linear;
-          transition: background-color .2s linear;
-}
-body :not(iframe)::-webkit-scrollbar-thumb:vertical {
-  height: 0;
-}
-body :not(iframe)::-webkit-scrollbar-thumb:horizontal {
-  width: 0;
-}
-body :not(iframe)::-webkit-scrollbar-thumb:hover {
-  background-color: #505050 !important;
-}
 .id7-horizontal-divider {
   position: absolute;
   top: 0;
