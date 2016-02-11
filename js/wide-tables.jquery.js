@@ -90,7 +90,11 @@
       findWideTables: function findWideTables($container) {
         return $container.find('table').filter(function () {
           var $table = $(this);
-          return !$table.data('id7.wide-tables.wrapped') && Math.floor($table.width()) > $table.parent().width();
+          var originalMaxWidth = $table.css('max-width');
+          $table.css('max-width', 'none');
+          var tooWide = !$table.data('id7.wide-tables.wrapped') && Math.floor($table.width()) > $table.parent().width();
+          $table.css('max-width', originalMaxWidth);
+          return tooWide;
         });
       },
       wrap: function wrap($table, wrapperClass, containerClass) {
