@@ -10547,6 +10547,12 @@ footer .id7-app-footer .id7-footer-utility ul > li:first-child:before {
     margin-top: 20px;
   }
 }
+@media print {
+  footer .id7-site-footer,
+  footer .id7-app-footer {
+    border-top: 1px solid #383838;
+  }
+}
 .id7-non-branded .id7-page-footer .id7-site-footer .id7-logo-bleed,
 .id7-non-branded .id7-page-footer .id7-app-footer .id7-logo-bleed {
   display: none;
