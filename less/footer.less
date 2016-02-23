@@ -42,6 +42,24 @@ footer {
       }
     }
   }
+
+  @media print {
+    &.id7-footer-coloured .id7-site-footer::before {
+      border-top: 1px solid @text-color;
+      display: block;
+      margin-bottom: @grid-gutter-width;
+    }
+
+    .id7-site-footer::after {
+      border-bottom: 1px solid @text-color;
+      display: block;
+      margin-top: @grid-gutter-width;
+    }
+
+    .id7-horizontal-divider .divider {
+      stroke: @text-color !important;
+    }
+  }
 }
 
 .id7-non-branded {

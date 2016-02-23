@@ -10547,6 +10547,21 @@ footer .id7-app-footer .id7-footer-utility ul > li:first-child:before {
     margin-top: 20px;
   }
 }
+@media print {
+  footer.id7-footer-coloured .id7-site-footer::before {
+    display: block;
+    margin-bottom: 20px;
+    border-top: 1px solid #383838;
+  }
+  footer .id7-site-footer::after {
+    display: block;
+    margin-top: 20px;
+    border-bottom: 1px solid #383838;
+  }
+  footer .id7-horizontal-divider .divider {
+    stroke: #383838 !important;
+  }
+}
 .id7-non-branded .id7-page-footer .id7-site-footer .id7-logo-bleed,
 .id7-non-branded .id7-page-footer .id7-app-footer .id7-logo-bleed {
   display: none;
