@@ -39,6 +39,7 @@
         ].join('')),
         Defaults: {
             menu: '.carousel-nav',
+            logo: '.id7-logo a',
             panels: '.jumbotron-carousel > article:visible',
             animation: {
                 length: 300,
@@ -230,16 +231,20 @@
                 var $container = this.$container;
                 var options = this.options;
 
-                var $menu = $container.find(this.options.menu);
+                var $menu = $container.find(options.menu);
+                var $logo = $(options.logo);
                 var onChangePanel = $.proxy(this.onChangePanel, this);
 
                 $menu.find('a[href^="#"]').off('click.id7.homepage');
+                $logo.off('click.id7.homepage');
+
+                // Link the logo to the first item in the menu
+                $logo.attr('href', $menu.find('a[href^="#"]').first().attr('href'));
 
                 if (isDesktop) {
                     $container.scrollspy({ target: options.menu }); // Idempotent, safe to call multiple times
 
-                    // Smooth scroll
-                    $menu.find('a[href^="#"]').on('click.id7.homepage', function (e) {
+                    var smoothScrollToTarget = function (e) {
                         // prevent default anchor click behavior
                         e.preventDefault();
 
@@ -255,7 +260,10 @@
                                 window.location.hash = hash;
                             }
                         });
-                    });
+                    };
+
+                    $menu.find('a[href^="#"]').on('click.id7.homepage', smoothScrollToTarget);
+                    $logo.on('click.id7.homepage', smoothScrollToTarget);
 
                     if ($('#homepage-style-rules-nav').is(':empty')) {
                         var panelColours = [];
