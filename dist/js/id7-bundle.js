@@ -17949,8 +17949,11 @@ window.Modernizr = (function( window, document, undefined ) {
             placement: 'bottom',
             title: 'Account information',
             trigger: 'click'
-          })
-          .html(this.options.name + '<span class="caret"></span>');
+          });
+
+        if (this.options.name) {
+          $trigger.html(this.options.name + '<span class="caret"></span>');
+        }
 
         // Click away to dismiss
         $('html').on('click.popoverDismiss', function (e) {
