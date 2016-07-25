@@ -152,3 +152,12 @@ html.no-touch .modal-open {
     margin-top: 7px;
   }
 }
+
+// ID-214
+.dropdown-menu > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    #gradient > .vertical(#d0d0d0, darken(#d0d0d0, 5%));
+  }
+}
