@@ -1,4 +1,4 @@
-/*global _:false, Modernizr:false */
+/*global Modernizr:false */
 
 (function ($) {
   'use strict';
@@ -56,11 +56,11 @@
   $(function () {
     function escapeHtml(unsafe) {
       return unsafe
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#039;");
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
     }
 
     $('input[data-suggest="go"]').each(function (i, el) {
@@ -90,7 +90,7 @@
         minLength: minLength,
         hint: false,
         templates: {
-          suggestion: function(opts) { var o = escapeHtml(opts); return '<div><p class="go-path">' + o.path + '</p><p class="go-description">' + typeof o.description !== 'undefined' ? o.description : '' + '</p></div>'; }
+          suggestion: function (o) { return '<div><p class="go-path">' + escapeHtml(o.path) + '</p><p class="go-description">' + typeof o.description !== 'undefined' ? escapeHtml(o.description) : '' + '</p></div>'; }
         }
       });
 

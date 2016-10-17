@@ -83,10 +83,11 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 ### Running sample site locally
 
 1. Install Ruby and `gem install bundler`
-2. From the root `/id7` directory, run `bundle install` to install dependent gems.
-3. From the root `/id7` directory, run `grunt` to generate CSS/JS, which is used on the sample site.
-4. From the root `/id7` directory, run `grunt serve` in the command line.
-5. Open <http://localhost:9001> in your browser, et voilà.
+1. From the root `/id7` directory, run `bundle install` to install dependent gems.
+1. From the root `/id7` directory, run `npm install` to install node.js dependencies.
+1. From the root `/id7` directory, run `grunt` to generate CSS/JS, which is used on the sample site.
+1. From the root `/id7` directory, run `grunt serve` in the command line.
+1. Open <http://localhost:9001> in your browser, et voilà.
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
 
