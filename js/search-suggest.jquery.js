@@ -54,6 +54,15 @@
   };
 
   $(function () {
+    function escapeHtml(unsafe) {
+      return unsafe
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+    }
+
     $('input[data-suggest="go"]').each(function (i, el) {
       // ID-156 find the icon next to it
       $(el).next('.fa').on('click', function (e) {
@@ -81,12 +90,7 @@
         minLength: minLength,
         hint: false,
         templates: {
-          suggestion: _.template([
-              '<div>',
-              '<p class="go-path"><%= path %></p>',
-              '<p class="go-description"><% if (typeof description !== "undefined") { print(description); } %></p>',
-              '</div>'
-            ].join(''))
+          suggestion: function(opts) { var o = escapeHtml(opts); return '<div><p class="go-path">' + o.path + '</p><p class="go-description">' + typeof o.description !== 'undefined' ? o.description : '' + '</p></div>'; }
         }
       });
 

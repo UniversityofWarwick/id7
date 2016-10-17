@@ -77,7 +77,7 @@ module.exports = function (grunt) {
           'js/vendor/bootstrap-3.3.5/affix.js',
           'js/vendor/typeahead.jquery-0.11.1.js',
           'js/vendor/lodash-3.10.0.js',
-          'js/vendor/modernizr-2.8.3.js',
+          'js/vendor/modernizr-3.3.1-custom.js',
           'js/vendor/jquery.doubleScroll-0.4.js',
           'js/vendor/headroom-0.7.0.min.js',
           'js/vendor/jquery.headroom-0.7.0.min.js',
@@ -88,8 +88,6 @@ module.exports = function (grunt) {
           'js/wide-tables.jquery.js',
           'js/not-selector-feature-detect.modernizr.js',
           'js/safari-user-agent-detect.modernizr.js',
-          'js/style-update-feature-detect.modernizr.js',
-          'js/svg-filters-feature-detect.modernizr.js',
           'js/ie10-viewport-bug-workaround.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-bundle.js'
@@ -102,8 +100,6 @@ module.exports = function (grunt) {
           'js/search-suggest.jquery.js',
           'js/wide-tables.jquery.js',
           'js/not-selector-feature-detect.modernizr.js',
-          'js/style-update-feature-detect.modernizr.js',
-          'js/svg-filters-feature-detect.modernizr.js',
           'js/ie10-viewport-bug-workaround.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-standalone.js'

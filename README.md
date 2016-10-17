@@ -34,7 +34,6 @@ id7/
 │   └── id7-default-theme.min.css
 ├── js/
 │   ├── vendor/
-│   │   └── html5shiv-3.7.2.min.js
 │   ├── id7-bundle.js
 │   ├── id7-bundle.min.js
 │   ├── id7-bundle.min.js.map
