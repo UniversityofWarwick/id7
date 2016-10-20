@@ -16244,6 +16244,16 @@
         root._ = _;
     }
 }.call(this));
+// polyfill which used to be in Modernizr 2
+if(typeof Function.prototype.bind == 'undefined') {
+    Function.prototype.bind = function(target) {
+        var f = this;
+        return function() {
+            return f.apply(target, arguments);
+        };
+    };
+}
+
 /*!
  * modernizr v3.3.1
  * Build https://modernizr.com/download?-flexbox-generatedcontent-mediaqueries-rgba-smil-svg-svgfilters-touchevents-addtest-mq-setclasses-shiv-dontmin
