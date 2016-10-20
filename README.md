@@ -7,6 +7,7 @@ ID7 is the 7th iteration of the University of Warwick corporate identity. This l
 - [Quick start](#quick-start)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Documentation](#documentation)
+- [Breaking changes](#breaking-changes)
 - [Copyright and license](#copyright-and-license)
 
 ## Quick start
@@ -65,12 +66,12 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 - [Bootstrap](https://github.com/twbs/bootstrap) >= 3.3.5
 - [typeahead.js](https://github.com/twitter/typeahead.js) >= 0.11.1
 - [lodash](https://github.com/lodash/lodash) >= 3.10.0
-- [Modernizr](https://github.com/Modernizr/Modernizr) >= 2.8.3
+- [Modernizr](https://modernizr.com/download?-flexbox-generatedcontent-mediaqueries-rgba-smil-svg-svgfilters-touchevents-addtest-mq-setclasses-shiv-dontmin) >= 3.3.1 (the minimum necessary tests are specified with this link)
 - jQuery doubleScroll >= 0.4 (note that this has been patched in the ID7 build to support concatenation)
 
 Internet Explorer 8 (and earlier) support requires:
 
-- [html5shiv](https://github.com/aFarkas/html5shiv) >= 3.7.2
+- [html5shiv](https://github.com/aFarkas/html5shiv) >= 3.7.2 (can be included in Modernizr builds)
 
 ## Bugs and feature requests
 
@@ -82,14 +83,20 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 
 ### Running sample site locally
 
-1. Install Ruby and `gem install bundler`
-1. From the root `/id7` directory, run `bundle install` to install dependent gems.
-1. From the root `/id7` directory, run `npm install` to install node.js dependencies.
-1. From the root `/id7` directory, run `grunt` to generate CSS/JS, which is used on the sample site.
-1. From the root `/id7` directory, run `grunt serve` in the command line.
+1. Install Ruby and run `gem install bundler`.
+1. Install node.js.
+1. In the root `/id7` directory:
+    1. Run `bundle install` to install dependent gems.
+    1. Run `npm install -g grunt-cli && npm install -d` to install grunt and other node.js dependencies.
+    1. Run `grunt` to generate CSS/JS, which is used on the sample site.
+    1. Run `grunt serve` in the command line.
 1. Open <http://localhost:9001> in your browser, et voilà.
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
+
+## Breaking changes
+
+- **1.2.0** - Now uses a custom Modernizr build (see _What's included_ above) with a minimal range of tests. If your application relies on other tests or shims which were included in previous versions, they will likely fail.
 
 ## Copyright and license
 
