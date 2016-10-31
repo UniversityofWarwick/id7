@@ -3,40 +3,44 @@
 (function ($) {
     'use strict';
 
+    // querySelector
+    Modernizr.addTest('style-update', function () {
+        var doc = window.document;
+        if (!('createElement' in doc && 'createTextNode' in doc)) {
+            return false;
+        }
+
+        try {
+            var el = doc.createElement('style');
+            el.setAttribute('type', 'text/css');
+
+            var contents = doc.createTextNode('modernizr { property: slime; }');
+            el.appendChild(contents);
+
+            return true;
+        } catch (e) {
+            return false;
+        }
+    });
+
+    function escapeHtml(unsafe) {
+        return unsafe
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+    }
+
     var Config = {
-        PanelsCSSTemplate: _.template([
-            'body .id7-masthead .id7-search .fa {',
-                'color: rgba(<%= colour_r %>, <%= colour_g %>, <%= colour_b %>, 0.5);',
-            '}',
-            'body .id7-masthead .id7-search .twitter-typeahead:hover + .fa {',
-                'color: <%= colour %>;',
-            '}',
-            'body .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {',
-                'background: <%= colour %>;',
-            '}',
-            'body .form-control:focus {',
-                'border-color: <%= colour %>;',
-                '-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(<%= colour_r %>, <%= colour_g %>, <%= colour_b %>, 0.6);',
-                'box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(<%= colour_r %>, <%= colour_g %>, <%= colour_b %>, 0.6);',
-            '}',
-            '.id7-page-header {',
-                'background: <%= colour %>;',
-            '}',
-            '.id7-masthead .id7-logo-row nav {',
-                'opacity: 1;',
-                'filter: alpha(opacity=100);',
-            '}',
-            '.id7-masthead .id7-logo-row nav a {',
-                'color: <%= colour %> !important;',
-            '}'
-        ].join('')),
-        NavCSSTemplate: _.template([
-            '<% _.each(panels, function (panel) { %>',
-                '.carousel-nav a[href="#<%= panel.id %>"]:hover, .carousel-nav li.active a[href="#<%= panel.id %>"] {',
-                    'color: <%= panel.lighter_colour %>;',
-                '}',
-            '<% }); %>'
-        ].join('')),
+        PanelsCSSTemplate: function (o) { return 'body .id7-masthead .id7-search .fa {color: rgba(' + escapeHtml(o.colour_r) + ', ' + escapeHtml(o.colour_g) +', ' + escapeHtml(o.colour_b) + ', 0.5);}' +
+            'body .id7-masthead .id7-search .twitter-typeahead:hover + .fa {color: ' + escapeHtml(o.colour) + ';}' +
+            'body .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {background: ' + escapeHtml(o.colour) + ';}' +
+            'body .form-control:focus {border-color: ' + escapeHtml(o.colour) + '; -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(' + escapeHtml(o.colour_r) + ', ' + escapeHtml(o.colour_g) + ', ' + escapeHtml(o.colour_b) + ', 0.6); box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(' + escapeHtml(o.colour_r) + ', ' + escapeHtml(o.colour_g) + ', ' + escapeHtml(o.colour_b) + ', 0.6);}' +
+            '.id7-page-header {background: ' + escapeHtml(o.colour) + ';}' +
+            '.id7-masthead .id7-logo-row nav {opacity: 1; filter: alpha(opacity=100);}' +
+            '.id7-masthead .id7-logo-row nav a {color: ' + escapeHtml(o.colour) + ' !important;}'; },
+        NavCSSTemplate: function (o) { var css = ''; _.each(o.panels, function (panel) { css += '.carousel-nav a[href="#' + escapeHtml(panel.id) + '"]:hover, .carousel-nav li.active a[href="#' + escapeHtml(panel.id) + '"] {color: ' + escapeHtml(panel.lighter_colour) + ';}'; }); return css; },
         Defaults: {
             menu: '.carousel-nav',
             logo: '.id7-logo a',

@@ -1,6 +1,6 @@
 {
   "name": "id7",
-  "version": "1.1.16",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt test",
@@ -36,7 +36,7 @@
     "grunt-jekyll": "~0.4.2",
     "grunt-jscs": "~1.6.0",
     "grunt-markdown": "~0.6.1",
-    "grunt-qunit-junit": "~0.2.0",
+    "grunt-qunit-junit": "~0.3.1",
     "grunt-replace": "~0.8.0",
     "grunt-saucelabs": "~8.6.0",
     "grunt-sed": "twbs/grunt-sed#v0.2.0",

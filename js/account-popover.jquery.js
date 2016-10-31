@@ -3,25 +3,19 @@
 (function ($) {
   'use strict';
 
+  function escapeHtml(unsafe) {
+    return unsafe
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+  }
+
   var Config = {
     Templates: {
-      Popover: _.template([
-        '<div class="account-info">',
-        '<iframe src="<%- iframelink %>" scrolling="no" frameborder="0" allowtransparency="true" seamless></iframe>',
-        '</div>',
-        '<div class="actions">',
-        '<div class="btn-group btn-group-justified">',
-        '<div class="btn-group sign-out">',
-        '<a href="<%- logoutlink %>" class="btn btn-default">Sign out</a>',
-        '</div>',
-        '</div>',
-        '</div>'
-      ].join('')),
-      Action: _.template([
-        '<div class="btn-group">',
-        '<a href="<%- href %>" title="<%= tooltip %>" class="btn btn-default <%= classes %>"><%= title %></a>',
-        '</div>'
-      ].join(''))
+      Popover: function (o) { return '<div class="account-info"><iframe src="' + escapeHtml(o.iframelink) + '" scrolling="no" frameborder="0" allowtransparency="true" seamless sandbox="allow-same-origin allow-scripts allow-top-navigation"></iframe></div><div class="actions"><div class="btn-group btn-group-justified"><div class="btn-group sign-out"><a href="' + escapeHtml(o.logoutlink) + '" class="btn btn-default">Sign out</a></div></div></div>'; },
+      Action: function (o) { return '<div class="btn-group"><a href="' + escapeHtml(o.href) + '" title="' + escapeHtml(o.tooltip) + '" class="btn btn-default ' + escapeHtml(o.classes) + '">' + escapeHtml(o.title) + '</a></div>'; }
     },
     Defaults: {
       container: false,

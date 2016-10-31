@@ -8461,7 +8461,13 @@ a.label-default:focus {
 .checkbox-inline input[type="radio"],
 .radio-inline input[type="radio"],
 .radio input[type="radio"] {
-  margin-top: 7px;
+  margin-top: 6px;
+}
+label.checkbox,
+label.radio,
+label.checkbox-inline,
+label.radio-inline {
+  font-weight: 400;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
