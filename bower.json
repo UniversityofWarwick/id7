@@ -1,7 +1,7 @@
 {
   "name": "warwick-id7",
   "description": "CSS, JavaScript and sample HTML in order to use the corporate identity on your site",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "homepage": "http://id7.warwick.ac.uk",
   "main": [
     "less/id7.less",
@@ -40,12 +40,12 @@
   ],
   "//": {
     "All dependencies are intentionally removed here because they're packaged for inclusion by bower anyway": "",
-    "jquery": ">= 1.11.3",
-    "bootstrap": ">= 3.3.4",
+    "jquery": ">= 1.12.4",
+    "bootstrap": ">= 3.3.7",
     "typeahead.js": ">= 0.11.1",
-    "lodash": ">= 3.10.0",
-    "html5shiv": ">= 3.7.2",
-    "modernizr": ">= 2.8.3",
-    "jquery-doublescroll": ">= 0.4"
+    "lodash": ">= 4.17.2",
+    "html5shiv": ">= 3.7.3",
+    "modernizr": ">= 3.3.1",
+    "jquery-doublescroll": ">= 0.5"
   }
 }

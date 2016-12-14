@@ -167,9 +167,6 @@ blockquote.quotes::before {
 .open > .dropdown-toggle.btn-brand {
   background-image: none;
 }
-.btn-brand.disabled,
-.btn-brand[disabled],
-fieldset[disabled] .btn-brand,
 .btn-brand.disabled:hover,
 .btn-brand[disabled]:hover,
 fieldset[disabled] .btn-brand:hover,
@@ -178,13 +175,7 @@ fieldset[disabled] .btn-brand:hover,
 fieldset[disabled] .btn-brand:focus,
 .btn-brand.disabled.focus,
 .btn-brand[disabled].focus,
-fieldset[disabled] .btn-brand.focus,
-.btn-brand.disabled:active,
-.btn-brand[disabled]:active,
-fieldset[disabled] .btn-brand:active,
-.btn-brand.disabled.active,
-.btn-brand[disabled].active,
-fieldset[disabled] .btn-brand.active {
+fieldset[disabled] .btn-brand.focus {
   background-color: #204f79;
   border-color: #1b4265;
 }
