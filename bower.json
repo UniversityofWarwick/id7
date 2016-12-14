@@ -40,12 +40,12 @@
   ],
   "//": {
     "All dependencies are intentionally removed here because they're packaged for inclusion by bower anyway": "",
-    "jquery": ">= 1.11.3",
-    "bootstrap": ">= 3.3.4",
+    "jquery": ">= 1.12.4",
+    "bootstrap": ">= 3.3.7",
     "typeahead.js": ">= 0.11.1",
-    "lodash": ">= 3.10.0",
-    "html5shiv": ">= 3.7.2",
-    "modernizr": ">= 2.8.3",
-    "jquery-doublescroll": ">= 0.4"
+    "lodash": ">= 4.17.2",
+    "html5shiv": ">= 3.7.3",
+    "modernizr": ">= 3.3.1",
+    "jquery-doublescroll": ">= 0.5"
   }
 }

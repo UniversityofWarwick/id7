@@ -62,16 +62,16 @@ We provide compiled CSS and JS (`id7.*`), as well as compiled and minified CSS a
 
 The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The `id7-standalone.js` file doesn't include these, so they will need to be included manually. The dependencies required are:
 
-- [jQuery](https://github.com/jquery/jquery) >= 1.11.3
-- [Bootstrap](https://github.com/twbs/bootstrap) >= 3.3.5
+- [jQuery](https://github.com/jquery/jquery) >= 1.12.4
+- [Bootstrap](https://github.com/twbs/bootstrap) >= 3.3.7
 - [typeahead.js](https://github.com/twitter/typeahead.js) >= 0.11.1
-- [lodash](https://github.com/lodash/lodash) >= 3.10.0
+- [lodash](https://github.com/lodash/lodash) >= 4.17.2
 - [Modernizr](https://modernizr.com/download?-flexbox-generatedcontent-mediaqueries-rgba-smil-svg-svgfilters-touchevents-addtest-mq-setclasses-shiv-dontmin) >= 3.3.1 (the minimum necessary tests are specified with this link)
-- jQuery doubleScroll >= 0.4 (note that this has been patched in the ID7 build to support concatenation)
+- jQuery doubleScroll >= 0.5
 
 Internet Explorer 8 (and earlier) support requires:
 
-- [html5shiv](https://github.com/aFarkas/html5shiv) >= 3.7.2 (can be included in Modernizr builds)
+- [html5shiv](https://github.com/aFarkas/html5shiv) >= 3.7.3 (can be included in Modernizr builds)
 
 ## Bugs and feature requests
 

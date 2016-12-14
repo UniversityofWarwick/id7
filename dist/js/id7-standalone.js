@@ -905,6 +905,23 @@
   });
 })();
 
+/*global Modernizr:false */
+
+// ID-199
+//
+// :'(
+
+(function () {
+  'use strict';
+
+  Modernizr.addTest('safari', function () {
+    var ua = window.navigator.userAgent;
+
+    return ua.indexOf('Safari/') >= 0 && ua.indexOf('Chrome/') == -1;
+  });
+})();
+
+
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
  * Copyright 2014 Twitter, Inc.

@@ -154,9 +154,6 @@ body.brand-purple .btn-brand.active,
 .open > .dropdown-togglebody.brand-purple .btn-brand {
   background-image: none;
 }
-body.brand-purple .btn-brand.disabled,
-body.brand-purple .btn-brand[disabled],
-fieldset[disabled] body.brand-purple .btn-brand,
 body.brand-purple .btn-brand.disabled:hover,
 body.brand-purple .btn-brand[disabled]:hover,
 fieldset[disabled] body.brand-purple .btn-brand:hover,
@@ -165,13 +162,7 @@ body.brand-purple .btn-brand[disabled]:focus,
 fieldset[disabled] body.brand-purple .btn-brand:focus,
 body.brand-purple .btn-brand.disabled.focus,
 body.brand-purple .btn-brand[disabled].focus,
-fieldset[disabled] body.brand-purple .btn-brand.focus,
-body.brand-purple .btn-brand.disabled:active,
-body.brand-purple .btn-brand[disabled]:active,
-fieldset[disabled] body.brand-purple .btn-brand:active,
-body.brand-purple .btn-brand.disabled.active,
-body.brand-purple .btn-brand[disabled].active,
-fieldset[disabled] body.brand-purple .btn-brand.active {
+fieldset[disabled] body.brand-purple .btn-brand.focus {
   background-color: #5b3069;
   border-color: #4c2858;
 }
@@ -1280,9 +1271,6 @@ body.brand-gray .btn-brand.active,
 .open > .dropdown-togglebody.brand-gray .btn-brand {
   background-image: none;
 }
-body.brand-gray .btn-brand.disabled,
-body.brand-gray .btn-brand[disabled],
-fieldset[disabled] body.brand-gray .btn-brand,
 body.brand-gray .btn-brand.disabled:hover,
 body.brand-gray .btn-brand[disabled]:hover,
 fieldset[disabled] body.brand-gray .btn-brand:hover,
@@ -1291,13 +1279,7 @@ body.brand-gray .btn-brand[disabled]:focus,
 fieldset[disabled] body.brand-gray .btn-brand:focus,
 body.brand-gray .btn-brand.disabled.focus,
 body.brand-gray .btn-brand[disabled].focus,
-fieldset[disabled] body.brand-gray .btn-brand.focus,
-body.brand-gray .btn-brand.disabled:active,
-body.brand-gray .btn-brand[disabled]:active,
-fieldset[disabled] body.brand-gray .btn-brand:active,
-body.brand-gray .btn-brand.disabled.active,
-body.brand-gray .btn-brand[disabled].active,
-fieldset[disabled] body.brand-gray .btn-brand.active {
+fieldset[disabled] body.brand-gray .btn-brand.focus {
   background-color: #3f4246;
   border-color: #333539;
 }
@@ -2406,9 +2388,6 @@ body.brand-gold .btn-brand.active,
 .open > .dropdown-togglebody.brand-gold .btn-brand {
   background-image: none;
 }
-body.brand-gold .btn-brand.disabled,
-body.brand-gold .btn-brand[disabled],
-fieldset[disabled] body.brand-gold .btn-brand,
 body.brand-gold .btn-brand.disabled:hover,
 body.brand-gold .btn-brand[disabled]:hover,
 fieldset[disabled] body.brand-gold .btn-brand:hover,
@@ -2417,13 +2396,7 @@ body.brand-gold .btn-brand[disabled]:focus,
 fieldset[disabled] body.brand-gold .btn-brand:focus,
 body.brand-gold .btn-brand.disabled.focus,
 body.brand-gold .btn-brand[disabled].focus,
-fieldset[disabled] body.brand-gold .btn-brand.focus,
-body.brand-gold .btn-brand.disabled:active,
-body.brand-gold .btn-brand[disabled]:active,
-fieldset[disabled] body.brand-gold .btn-brand:active,
-body.brand-gold .btn-brand.disabled.active,
-body.brand-gold .btn-brand[disabled].active,
-fieldset[disabled] body.brand-gold .btn-brand.active {
+fieldset[disabled] body.brand-gold .btn-brand.focus {
   background-color: #996b00;
   border-color: #805900;
 }
@@ -3532,9 +3505,6 @@ body.brand-blue .btn-brand.active,
 .open > .dropdown-togglebody.brand-blue .btn-brand {
   background-image: none;
 }
-body.brand-blue .btn-brand.disabled,
-body.brand-blue .btn-brand[disabled],
-fieldset[disabled] body.brand-blue .btn-brand,
 body.brand-blue .btn-brand.disabled:hover,
 body.brand-blue .btn-brand[disabled]:hover,
 fieldset[disabled] body.brand-blue .btn-brand:hover,
@@ -3543,13 +3513,7 @@ body.brand-blue .btn-brand[disabled]:focus,
 fieldset[disabled] body.brand-blue .btn-brand:focus,
 body.brand-blue .btn-brand.disabled.focus,
 body.brand-blue .btn-brand[disabled].focus,
-fieldset[disabled] body.brand-blue .btn-brand.focus,
-body.brand-blue .btn-brand.disabled:active,
-body.brand-blue .btn-brand[disabled]:active,
-fieldset[disabled] body.brand-blue .btn-brand:active,
-body.brand-blue .btn-brand.disabled.active,
-body.brand-blue .btn-brand[disabled].active,
-fieldset[disabled] body.brand-blue .btn-brand.active {
+fieldset[disabled] body.brand-blue .btn-brand.focus {
   background-color: #204f79;
   border-color: #1b4265;
 }
@@ -4658,9 +4622,6 @@ body.brand-orange .btn-brand.active,
 .open > .dropdown-togglebody.brand-orange .btn-brand {
   background-image: none;
 }
-body.brand-orange .btn-brand.disabled,
-body.brand-orange .btn-brand[disabled],
-fieldset[disabled] body.brand-orange .btn-brand,
 body.brand-orange .btn-brand.disabled:hover,
 body.brand-orange .btn-brand[disabled]:hover,
 fieldset[disabled] body.brand-orange .btn-brand:hover,
@@ -4669,13 +4630,7 @@ body.brand-orange .btn-brand[disabled]:focus,
 fieldset[disabled] body.brand-orange .btn-brand:focus,
 body.brand-orange .btn-brand.disabled.focus,
 body.brand-orange .btn-brand[disabled].focus,
-fieldset[disabled] body.brand-orange .btn-brand.focus,
-body.brand-orange .btn-brand.disabled:active,
-body.brand-orange .btn-brand[disabled]:active,
-fieldset[disabled] body.brand-orange .btn-brand:active,
-body.brand-orange .btn-brand.disabled.active,
-body.brand-orange .btn-brand[disabled].active,
-fieldset[disabled] body.brand-orange .btn-brand.active {
+fieldset[disabled] body.brand-orange .btn-brand.focus {
   background-color: #be410c;
   border-color: #a6390a;
 }
@@ -5784,9 +5739,6 @@ body.brand-green .btn-brand.active,
 .open > .dropdown-togglebody.brand-green .btn-brand {
   background-image: none;
 }
-body.brand-green .btn-brand.disabled,
-body.brand-green .btn-brand[disabled],
-fieldset[disabled] body.brand-green .btn-brand,
 body.brand-green .btn-brand.disabled:hover,
 body.brand-green .btn-brand[disabled]:hover,
 fieldset[disabled] body.brand-green .btn-brand:hover,
@@ -5795,13 +5747,7 @@ body.brand-green .btn-brand[disabled]:focus,
 fieldset[disabled] body.brand-green .btn-brand:focus,
 body.brand-green .btn-brand.disabled.focus,
 body.brand-green .btn-brand[disabled].focus,
-fieldset[disabled] body.brand-green .btn-brand.focus,
-body.brand-green .btn-brand.disabled:active,
-body.brand-green .btn-brand[disabled]:active,
-fieldset[disabled] body.brand-green .btn-brand:active,
-body.brand-green .btn-brand.disabled.active,
-body.brand-green .btn-brand[disabled].active,
-fieldset[disabled] body.brand-green .btn-brand.active {
+fieldset[disabled] body.brand-green .btn-brand.focus {
   background-color: #797906;
   border-color: #616105;
 }
@@ -6910,9 +6856,6 @@ body.brand-red .btn-brand.active,
 .open > .dropdown-togglebody.brand-red .btn-brand {
   background-image: none;
 }
-body.brand-red .btn-brand.disabled,
-body.brand-red .btn-brand[disabled],
-fieldset[disabled] body.brand-red .btn-brand,
 body.brand-red .btn-brand.disabled:hover,
 body.brand-red .btn-brand[disabled]:hover,
 fieldset[disabled] body.brand-red .btn-brand:hover,
@@ -6921,13 +6864,7 @@ body.brand-red .btn-brand[disabled]:focus,
 fieldset[disabled] body.brand-red .btn-brand:focus,
 body.brand-red .btn-brand.disabled.focus,
 body.brand-red .btn-brand[disabled].focus,
-fieldset[disabled] body.brand-red .btn-brand.focus,
-body.brand-red .btn-brand.disabled:active,
-body.brand-red .btn-brand[disabled]:active,
-fieldset[disabled] body.brand-red .btn-brand:active,
-body.brand-red .btn-brand.disabled.active,
-body.brand-red .btn-brand[disabled].active,
-fieldset[disabled] body.brand-red .btn-brand.active {
+fieldset[disabled] body.brand-red .btn-brand.focus {
   background-color: #89102c;
   border-color: #720d25;
 }
