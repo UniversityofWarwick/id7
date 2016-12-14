@@ -331,13 +331,6 @@ th {
 .fa.fa-pull-right {
   margin-left: .3em;
 }
-/* Deprecated as of 4.4.0 */
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
 .fa.pull-left {
   margin-right: .3em;
 }
@@ -6326,11 +6319,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar-left {
-    float: left;
     float: left !important;
   }
   .navbar-right {
-    float: right;
     float: right !important;
     margin-right: -0;
   }
@@ -9053,7 +9044,6 @@ body {
   white-space: nowrap;
 }
 .id7-utility-bar > ul {
-  float: right;
   float: right !important;
   padding-left: 0;
   margin: 0;
