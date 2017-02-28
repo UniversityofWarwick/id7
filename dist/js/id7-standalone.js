@@ -702,7 +702,7 @@
         minLength: minLength,
         hint: false,
         templates: {
-          suggestion: function (o) { return '<div><p class="go-path">' + escapeHtml(o.path) + '</p><p class="go-description">' + typeof o.description !== 'undefined' ? escapeHtml(o.description) : '' + '</p></div>'; }
+          suggestion: function (o) { return '<div><p class="go-path">' + escapeHtml(o.path) + '</p><p class="go-description">' + (typeof o.description !== 'undefined' ? escapeHtml(o.description) : '') + '</p></div>'; }
         }
       });
 
