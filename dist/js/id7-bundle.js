@@ -1100,7 +1100,8 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
 
       this.$backdrop = $(document.createElement('div'))
         .addClass('modal-backdrop ' + animate)
-        .appendTo(this.$body)
+		  .appendTo(this.$element.parent()) // PATCH MM 31/07/15 ID-93 https://bugs.elab.warwick.ac.uk/browse/ID-93?focusedCommentId=109114&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-109114
+		//.appendTo(this.$body)
 
       this.$element.on('click.dismiss.bs.modal', $.proxy(function (e) {
         if (this.ignoreBackdropClick) {
