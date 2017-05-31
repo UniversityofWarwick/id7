@@ -54,12 +54,30 @@
 
     max-width: 100%;
     width: @id7-account-popover-width;
+    height: @id7-account-popover-height;
+    padding: 0;
+
+    .popover-inner, .popover-content {
+      height: 100%;
+      padding: 0;
+    }
+
+    .popover-content {
+      display: flex;
+      flex-direction: column;
+
+      .account-info {
+        flex: 1;
+      }
+
+      .actions {
+        flex: 0;
+      }
+    }
 
     .account-info {
-      margin-bottom: 9px;
-
       iframe {
-        height: 80px;
+        height: 100%;
         width: 100%;
       }
     }
@@ -73,10 +91,6 @@
 
       background: @id7-account-popover-actions-bg;
       border-top: 1px solid @id7-account-popover-actions-border;
-
-      margin-left: (-(@popover-padding-horizontal + 1px));
-      margin-right: (-(@popover-padding-horizontal + 1px));
-      margin-bottom: (-(@popover-padding-vertical + 1px));
 
       .btn-group-justified {
         border-spacing: (@line-height-computed / 2);
