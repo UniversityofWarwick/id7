@@ -29,9 +29,9 @@
 #masthead.transparent a:link,
 #masthead a:visited,
 #masthead.transparent a:visited {
-  -webkit-text-decoration-color: #6b6b6b;
-     -moz-text-decoration-color: #6b6b6b;
-          text-decoration-color: #6b6b6b;
+  -webkit-text-decoration-color: #747474;
+     -moz-text-decoration-color: #747474;
+          text-decoration-color: #747474;
 }
 #masthead a:hover,
 #masthead.transparent a:hover,
