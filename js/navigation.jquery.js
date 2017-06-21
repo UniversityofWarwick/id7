@@ -46,10 +46,10 @@
         append: '&hellip;'
       }
     },
-	  HeadroomEvents: {
-		  onPin : function() {$(this).trigger('id7:headroom:onPin');},
-		  onUnpin : function() {$(this).trigger('id7:headroom:onUnpin');}
-	  }
+    HeadroomEvents: {
+      onPin : function() {$(this).trigger('id7:headroom:onPin');},
+      onUnpin : function() {$(this).trigger('id7:headroom:onUnpin');}
+    }
   };
 
   var Navigation = (function () {
