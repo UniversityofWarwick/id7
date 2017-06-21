@@ -23169,8 +23169,8 @@ if(typeof Function.prototype.bind == 'undefined') {
       }
     },
     HeadroomEvents: {
-      onPin : function () { $(this).trigger('id7:headroom:onPin'); },
-      onUnpin : function () { $(this).trigger('id7:headroom:onUnpin'); }
+      onPin : function () { $(this.elem).trigger('id7:headroom:onPin'); },
+      onUnpin : function () { $(this.elem).trigger('id7:headroom:onUnpin'); }
     }
   };
 
