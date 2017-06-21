@@ -1,6 +1,6 @@
 {
   "name": "id7",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "private": true,
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt test",
