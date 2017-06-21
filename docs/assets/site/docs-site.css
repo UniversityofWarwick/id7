@@ -44,9 +44,9 @@ a:hover .new-window-link {
 a,
 a:link,
 a:visited {
-  -webkit-text-decoration-color: #3584ca;
-  -moz-text-decoration-color: #3584ca;
-       text-decoration-color: #3584ca;
+  -webkit-text-decoration-color: #6384a1;
+  -moz-text-decoration-color: #6384a1;
+       text-decoration-color: #6384a1;
 }
 a:hover,
 a:focus,
@@ -111,9 +111,9 @@ blockquote.quotes::before {
 .brand-text a,
 .brand-text a:link,
 .brand-text a:visited {
-  -webkit-text-decoration-color: #3584ca !important;
-  -moz-text-decoration-color: #3584ca !important;
-       text-decoration-color: #3584ca !important;
+  -webkit-text-decoration-color: #6384a1 !important;
+  -moz-text-decoration-color: #6384a1 !important;
+       text-decoration-color: #6384a1 !important;
 }
 .brand-text a:hover,
 .brand-text a:focus,
@@ -617,9 +617,9 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-page-footer.id7-footer-coloured .id7-site-footer a,
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:link,
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:visited {
-  -webkit-text-decoration-color: #6b6b6b;
-  -moz-text-decoration-color: #6b6b6b;
-       text-decoration-color: #6b6b6b;
+  -webkit-text-decoration-color: #747474;
+  -moz-text-decoration-color: #747474;
+       text-decoration-color: #747474;
 }
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover,
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,

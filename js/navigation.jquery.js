@@ -47,8 +47,8 @@
       }
     },
     HeadroomEvents: {
-      onPin : function() {$(this).trigger('id7:headroom:onPin');},
-      onUnpin : function() {$(this).trigger('id7:headroom:onUnpin');}
+      onPin : function () { $(this).trigger('id7:headroom:onPin'); },
+      onUnpin : function () { $(this).trigger('id7:headroom:onUnpin'); }
     }
   };
 

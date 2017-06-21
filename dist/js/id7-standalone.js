@@ -304,6 +304,10 @@
         maxLength: 60,
         append: '&hellip;'
       }
+    },
+    HeadroomEvents: {
+      onPin : function () { $(this).trigger('id7:headroom:onPin'); },
+      onUnpin : function () { $(this).trigger('id7:headroom:onUnpin'); }
     }
   };
 
@@ -367,13 +371,13 @@
             headroomOffset = $('.id7-main-content-area').offset().top;
           }
 
+          var headroomConfig = $.extend(Config.HeadroomEvents, { offset: headroomOffset });
+
           $h1.affix({
             offset: {
               top: offsetTop
             }
-          }).headroom({
-            offset: headroomOffset
-          });
+          }).headroom(headroomConfig);
         }
       },
 
@@ -394,13 +398,13 @@
           headroomOffset = $('.id7-main-content-area').offset().top;
         }
 
+        var headroomConfig = $.extend(Config.HeadroomEvents, { offset: headroomOffset });
+
         $nav.affix({
           offset: {
             top: offsetTop
           }
-        }).headroom({
-          offset: headroomOffset
-        });
+        }).headroom(headroomConfig);
       },
 
       fitToWidth: function fitToWidth(screenConfig) {
