@@ -68,19 +68,19 @@
         var $trigger = this.$trigger;
 
         if (this.options.name) {
-          var badgeHtml = ' <span class="fa-stack id7-notifications-badge">  <i class="fa fa-circle fa-stack-2x"></i>  <strong class="fa-stack-1x brand-text counter-value">X</strong> </span>';
+          var badgeHtml = ' <span class="fa-stack id7-notifications-badge">  <i class="fa fa-circle fa-stack-2x"></i>  <strong class="fa-stack-1x fa fa-spinner fa-spin brand-text counter-value"></strong> </span>';
           $trigger.html(this.options.name + badgeHtml + ' <span class="caret"></span>');
         }
 
         var $badge = $trigger.find(".id7-notifications-badge");
-        $badge.hide();
 
         $trigger
           .on('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
             $trigger.popover('toggle');
-            $badge.hide();
+            $badge.find(".counter-value").text("0");
+            $badge.removeClass("animating");
             return false;
           })
           .popover({
@@ -97,8 +97,8 @@
           var that = this;
           fetchNotificationData(this.options.notificationsApi, function(data) {
             var unreads = Math.min(data.unreads, 99);
+            $badge.find(".counter-value").removeClass('fa-spinner').removeClass('fa-spin').addClass('slideInDown').text(unreads);
             if (unreads > 0) {
-              $badge.find(".counter-value").text(unreads);
               $badge.fadeIn().addClass("animating");
               that.options.iframelink = that.options.iframelink + 'notifications';
               $trigger.data('bs.popover').options.content = Config.Templates.Popover(that.options);
