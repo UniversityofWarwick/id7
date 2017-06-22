@@ -49,13 +49,16 @@
     }
   }
 
-  .popover.account-information {
-    text-shadow: none;
-
-    max-width: 100%;
-    width: @id7-account-popover-width;
-    height: @id7-account-popover-height;
+  .popover.my-warwick {
+    width: @id7-mw-popover-width;
+    max-height: @id7-mw-popover-height;
+    height: 80vh;
     padding: 0;
+  }
+
+  .popover.account-information, .popover.my-warwick {
+    text-shadow: none;
+    max-width: 100%;
 
     .popover-inner, .popover-content {
       height: 100%;
@@ -95,6 +98,15 @@
       .btn-group-justified {
         border-spacing: (@line-height-computed / 2);
       }
+    }
+  }
+
+  .popover.account-information {
+    width: @id7-account-popover-width;
+    height: auto;
+
+    .popover-content .account-info {
+      padding: 15px 19px;
     }
   }
 }
