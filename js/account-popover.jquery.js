@@ -99,7 +99,7 @@
             var unreads = Math.min(data.unreads, 99);
             if (unreads > 0) {
               $badge.find(".counter-value").text(unreads);
-              $badge.fadeIn();
+              $badge.fadeIn().addClass("animating");
               that.options.iframelink = that.options.iframelink + 'notifications';
               $trigger.data('bs.popover').options.content = Config.Templates.Popover(that.options);
             }
