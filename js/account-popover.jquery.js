@@ -37,14 +37,14 @@
 
   var fetchNotificationData = (function(endpoint, callback) {
     // avoid fetch for compatibility
-      $.ajax({
-          url: endpoint,
-          success: callback,
-          dataType: "json",
-          xhrFields: {
-            withCredentials: true
-          }
-      });
+    $.ajax({
+      url: endpoint,
+      success: callback,
+      dataType: "json",
+      xhrFields: {
+        withCredentials: true
+      }
+    });
   });
 
   /**
