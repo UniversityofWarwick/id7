@@ -1227,9 +1227,9 @@ html.safari .id7-utility-masthead {
 .megamenu-links .more-links-sitemap a,
 .megamenu-links .more-links-sitemap a:link,
 .megamenu-links .more-links-sitemap a:visited {
-  -webkit-text-decoration-color: #666666;
-  -moz-text-decoration-color: #666666;
-       text-decoration-color: #666666;
+  -webkit-text-decoration-color: #707070;
+  -moz-text-decoration-color: #707070;
+       text-decoration-color: #707070;
 }
 .megamenu-links .more-links-sitemap a:hover,
 .megamenu-links .more-links-sitemap a:focus,
@@ -1283,9 +1283,9 @@ html.safari .id7-utility-masthead {
 .megamenu-links-address a,
 .megamenu-links-address a:link,
 .megamenu-links-address a:visited {
-  -webkit-text-decoration-color: #666666;
-  -moz-text-decoration-color: #666666;
-       text-decoration-color: #666666;
+  -webkit-text-decoration-color: #707070;
+  -moz-text-decoration-color: #707070;
+       text-decoration-color: #707070;
 }
 .megamenu-links-address a:hover,
 .megamenu-links-address a:focus,
@@ -1350,9 +1350,9 @@ html.no-generatedcontent .megamenu-links-address .utility > li {
 .megamenu-links-address .social-media a,
 .megamenu-links-address .social-media a:link,
 .megamenu-links-address .social-media a:visited {
-  -webkit-text-decoration-color: #aaaaaa;
-  -moz-text-decoration-color: #aaaaaa;
-       text-decoration-color: #aaaaaa;
+  -webkit-text-decoration-color: #a0a0a0;
+  -moz-text-decoration-color: #a0a0a0;
+       text-decoration-color: #a0a0a0;
 }
 .megamenu-links-address .social-media a:hover,
 .megamenu-links-address .social-media a:focus,

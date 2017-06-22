@@ -14,8 +14,8 @@
 
 .link-colour(@base, @hover) when not (@base = inherit) {
   a, a:link, a:visited {
-    -webkit-text-decoration-color: lighten(@base, 20%); // Bug in caniuse/autoprefixer
-    text-decoration-color: lighten(@base, 20%);
+    -webkit-text-decoration-color: screen(@base, lighten(black, 30%)); // Bug in caniuse/autoprefixer
+    text-decoration-color: screen(@base, lighten(black, 30%));
   }
 
   a:hover, a:focus, a:active {
