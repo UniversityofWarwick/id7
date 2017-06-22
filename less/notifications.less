@@ -1,0 +1,51 @@
+.id7-notifications-badge {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+.id7-notifications-badge + .caret {
+  margin-left: 1px;
+}
+
+.id7-notifications-badge.animating {
+  opacity: 1;
+  animation-name: flash;
+  animation-duration: 5s;
+  animation-delay: 5s;
+  animation-iteration-count: 5;
+}
+
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  animation: slideInDown 0.3s;
+}
+
+// Animate.css
+@keyframes flash {
+  from, 10%, to {
+    opacity: 1;
+  }
+
+  5%, 15% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1; // no-op
+  }
+}

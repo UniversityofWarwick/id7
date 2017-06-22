@@ -14,12 +14,15 @@
 
   var Config = {
     Templates: {
-      Popover: function (o) { return '<div class="account-info"><iframe src="' + escapeHtml(o.iframelink) + '" scrolling="auto" frameborder="0" allowtransparency="true" seamless sandbox="allow-same-origin allow-scripts allow-top-navigation allow-forms allow-popups"></iframe></div><div class="actions"><div class="btn-group btn-group-justified"><div class="btn-group sign-out"><a href="' + escapeHtml(o.logoutlink) + '" class="btn btn-default">Sign out</a></div></div></div>'; },
+      Popover: function (o) { return '<div class="account-info"><iframe src="' + escapeHtml(o.iframelink + "?embedded") + '" scrolling="auto" frameborder="0" allowtransparency="true" seamless sandbox="allow-same-origin allow-scripts allow-top-navigation allow-forms allow-popups"></iframe></div><div class="actions"><div class="btn-group btn-group-justified"><div class="btn-group sign-out"><a href="' + escapeHtml(o.logoutlink) + '" class="btn btn-default">Sign out</a></div></div></div>'; },
       Action: function (o) { return '<div class="btn-group"><a href="' + escapeHtml(o.href) + '" title="' + escapeHtml(o.tooltip) + '" class="btn btn-default ' + escapeHtml(o.classes) + '">' + escapeHtml(o.title) + '</a></div>'; }
     },
     Defaults: {
       container: false,
-      iframelink: 'https://my-dev.warwick.ac.uk/?embedded',
+      iframelink: 'https://my-dev.warwick.ac.uk/',
+      notificationsApi: 'https://my-dev.warwick.ac.uk/api/id7/notifications/unreads',
+      showNotificationsBadge: true,
+      maxNumberNotifications: 99,
       template: [
         '<div class="popover account-information">',
         '<div class="arrow"></div>',
@@ -31,6 +34,18 @@
     },
     MessagePrefix: 'message.id7.account-popover.'
   };
+
+  var fetchNotificationData = (function(endpoint, callback) {
+    // avoid fetch for compatibility
+    $.ajax({
+      url: endpoint,
+      success: callback,
+      dataType: "json",
+      xhrFields: {
+        withCredentials: true
+      }
+    });
+  });
 
   /**
    * Display a popover with account information
@@ -52,11 +67,20 @@
       wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
 
+        if (this.options.name) {
+          var badgeHtml = ' <span class="fa-stack id7-notifications-badge">  <i class="fa fa-circle fa-stack-2x"></i>  <strong class="fa-stack-1x fa fa-spinner fa-spin brand-text counter-value"></strong> </span>';
+          $trigger.html(this.options.name + badgeHtml + ' <span class="caret"></span>');
+        }
+
+        var $badge = $trigger.find(".id7-notifications-badge");
+
         $trigger
           .on('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
             $trigger.popover('toggle');
+            $badge.find(".counter-value").text("0");
+            $badge.removeClass("animating");
             return false;
           })
           .popover({
@@ -69,8 +93,17 @@
             trigger: 'manual'
           });
 
-        if (this.options.name) {
-          $trigger.html(this.options.name + '<span class="caret"></span>');
+        if (this.options.showNotificationsBadge) {
+          var that = this;
+          fetchNotificationData(this.options.notificationsApi, function(data) {
+            var unreads = Math.min(data.unreads, 99);
+            $badge.find(".counter-value").removeClass('fa-spinner').removeClass('fa-spin').addClass('slideInDown').text(unreads);
+            if (unreads > 0) {
+              $badge.fadeIn().addClass("animating");
+              that.options.iframelink = that.options.iframelink + 'notifications';
+              $trigger.data('bs.popover').options.content = Config.Templates.Popover(that.options);
+            }
+          });
         }
 
         // Click away to dismiss
