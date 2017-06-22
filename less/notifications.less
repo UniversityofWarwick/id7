@@ -1,7 +1,33 @@
 .id7-notifications-badge {
-  font-size: 0.8em
+  font-size: 0.8em;
+  animation-name: bounce;
+  transform-origin: center bottom;
+  animation-duration: 1s;
+  animation-delay: 5s;
 }
 
 .id7-notifications-badge + .caret {
   margin-left: 1px;
+}
+
+// Animate.css
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -3px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-1px,0);
+  }
 }
