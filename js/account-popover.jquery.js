@@ -14,7 +14,7 @@
 
   var Config = {
     Templates: {
-      Popover: function (o) { return '<div class="account-info"><iframe src="' + escapeHtml(o.useMwIframe ? o.iframelink + "?embedded" : o.legacyIframeLink) + '" scrolling="auto" frameborder="0" allowtransparency="true" seamless sandbox="allow-same-origin allow-scripts allow-top-navigation allow-forms allow-popups"></iframe></div><div class="actions"><div class="btn-group btn-group-justified"><div class="btn-group sign-out"><a href="' + escapeHtml(o.logoutlink) + '" class="btn btn-default">Sign out</a></div></div></div>'; },
+      Popover: function (o) { return '<div class="account-info"><iframe src="' + escapeHtml(o.useMwIframe ? o.iframelink + '?embedded' : o.legacyIframeLink) + '" scrolling="auto" frameborder="0" allowtransparency="true" seamless sandbox="allow-same-origin allow-scripts allow-top-navigation allow-forms allow-popups"></iframe></div><div class="actions"><div class="btn-group btn-group-justified"><div class="btn-group sign-out"><a href="' + escapeHtml(o.logoutlink) + '" class="btn btn-default">Sign out</a></div></div></div>'; },
       Action: function (o) { return '<div class="btn-group"><a href="' + escapeHtml(o.href) + '" title="' + escapeHtml(o.tooltip) + '" class="btn btn-default ' + escapeHtml(o.classes) + '">' + escapeHtml(o.title) + '</a></div>'; }
     },
     Defaults: {
@@ -26,7 +26,7 @@
       useMwIframe: true,
       maxNumberNotifications: 99,
       template: [
-        '<div class="popover $className">',
+        '<div class="popover my-warwick">',
         '<div class="arrow"></div>',
         '<div class="popover-inner">',
         '<div class="popover-content"><p></p></div>',
@@ -86,13 +86,13 @@
           $trigger.html(this.options.name + badgeHtml + ' <span class="caret"></span>');
         }
 
-        var $badge = $trigger.find(".id7-notifications-badge");
+        var $badge = $trigger.find('.id7-notifications-badge');
         $trigger.on('click', function (e) {
           e.preventDefault();
           e.stopPropagation();
           $trigger.popover('toggle');
-          $badge.find(".counter-value:not(.fa-exclamation-triangle):not(.fa-spinner)").text("0");
-          $badge.removeClass("animating");
+          $badge.find('.counter-value:not(.fa-exclamation-triangle):not(.fa-spinner)').text('0');
+          $badge.removeClass('animating');
           return false;
         });
         this.createPopover($trigger);
@@ -101,14 +101,14 @@
           var that = this;
           fetchNotificationData(this.options.notificationsApi, function(data) {
             var unreads = Math.min(data.unreads, 99);
-            $badge.find(".counter-value").removeClass('fa-spinner').removeClass('fa-spin').addClass('slideInDown').text(unreads);
+            $badge.find('.counter-value').removeClass('fa-spinner').removeClass('fa-spin').addClass('slideInDown').text(unreads);
             if (unreads > 0) {
-              $badge.fadeIn().addClass("animating");
+              $badge.fadeIn().addClass('animating');
               that.options.iframelink = that.options.iframelink + 'notifications';
               $trigger.data('bs.popover').options.content = Config.Templates.Popover(that.options);
             }
           }, function() {
-            $badge.find(".counter-value").removeClass('fa-spinner')
+            $badge.find('.counter-value').removeClass('fa-spinner')
               .removeClass('fa-spin').addClass('fa-exclamation-triangle');
             $badge.attr('title', 'There was a problem communicating with the MyWarwick notifications service');
           });
@@ -127,15 +127,15 @@
           this.options.useMwIframe = !(screenConfig.name === 'xs')
             && $(window).height() >= 700;
 
-          if ($trigger.data("bs.popover") !== undefined) {
+          if ($trigger.data('bs.popover') !== undefined) {
             $trigger.data('bs.popover').options.content = Config.Templates.Popover(this.options);
 
-            var toAdd = this.options.useMwIframe ? "my-warwick" : "account-information";
-            var $bsPopover = $trigger.data("bs.popover");
-            $bsPopover.tip().removeClass("account-information", "my-warwick").addClass(toAdd);
+            var toAdd = this.options.useMwIframe ? 'my-warwick' : 'account-information';
+            var $bsPopover = $trigger.data('bs.popover');
+            $bsPopover.tip().removeClass('account-information', 'my-warwick').addClass(toAdd);
 
             // trigger a reposition if the popover is open
-            if ($bsPopover.tip().hasClass("in")) {
+            if ($bsPopover.tip().hasClass('in')) {
               $trigger.popover('show');
             }
           }
