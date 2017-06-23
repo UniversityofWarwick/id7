@@ -66,13 +66,19 @@
       this.wireEventHandlers();
     }
 
-    function transformTemplate(opts) {
-      return opts.template
-        .replace("\$className", opts.useMwIframe ? "my-warwick" : "account-information");
-    }
-
     $.extend(AccountPopover.prototype, {
-      wireEventHandlers: function wireEventHandlers() {
+      createPopover: function ($trigger) {
+        var opts = {
+          container: this.options.container,
+          content: Config.Templates.Popover(this.options),
+          template: this.options.template,
+          html: true,
+          placement: 'bottom',
+          title: 'Account information',
+          trigger: 'manual'
+        };
+        $trigger.popover(opts);
+      }, wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
 
         if (this.options.name) {
@@ -81,25 +87,15 @@
         }
 
         var $badge = $trigger.find(".id7-notifications-badge");
-
-        $trigger
-          .on('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            $trigger.popover('toggle');
-            $badge.find(".counter-value:not(.fa-exclamation-triangle):not(.fa-spinner)").text("0");
-            $badge.removeClass("animating");
-            return false;
-          })
-          .popover({
-            container: this.options.container,
-            content: Config.Templates.Popover(this.options),
-            template: transformTemplate(this.options),
-            html: true,
-            placement: 'bottom',
-            title: 'Account information',
-            trigger: 'manual'
-          });
+        $trigger.on('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $trigger.popover('toggle');
+          $badge.find(".counter-value:not(.fa-exclamation-triangle):not(.fa-spinner)").text("0");
+          $badge.removeClass("animating");
+          return false;
+        });
+        this.createPopover($trigger);
 
         if (this.options.showNotificationsBadge) {
           var that = this;
@@ -128,23 +124,20 @@
 
         // Smaller screens get the old popover
         $(window).on('id7:reflow', $.proxy(function (e, screenConfig) {
-          this.options.useMwIframe = !(screenConfig.name === 'xs' || screenConfig.name === 'sm')
+          this.options.useMwIframe = !(screenConfig.name === 'xs')
             && $(window).height() >= 700;
-          console.log("Reflow: " + $(window).height());
 
-          $trigger.data('bs.popover').options.content = Config.Templates.Popover(this.options);
-          $trigger.data('bs.popover').options.template = transformTemplate(this.options);
+          if ($trigger.data("bs.popover") !== undefined) {
+            $trigger.data('bs.popover').options.content = Config.Templates.Popover(this.options);
 
-          if ($trigger.data("bs.popover").tip().hasClass("in")) {
-            if (this.options.useMwIframe) {
-              $("nav.id7-utility-bar .popover")
-                .removeClass("account-information").addClass("my-warwick");
-            } else {
-              $("nav.id7-utility-bar .popover")
-                .removeClass("my-warwick").addClass("account-information");
+            var toAdd = this.options.useMwIframe ? "my-warwick" : "account-information";
+            var $bsPopover = $trigger.data("bs.popover");
+            $bsPopover.tip().removeClass("account-information", "my-warwick").addClass(toAdd);
+
+            // trigger a reposition if the popover is open
+            if ($bsPopover.tip().hasClass("in")) {
+              $trigger.popover('show');
             }
-            //trigger a reposition:
-            $trigger.popover('show');
           }
         }, this));
       },
