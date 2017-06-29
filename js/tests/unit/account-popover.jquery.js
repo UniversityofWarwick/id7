@@ -16,7 +16,7 @@ $(function () {
     }
   })
 
-  test('should return jquery collection containing the element', function () {
+  test('should return jquery collecption containing the element', function () {
     var $el = $('<div/>');
     var $accountPopover = $el.accountPopover({ logoutlink: 'http://websignon.warwick.ac.uk/logout' });
     ok($accountPopover instanceof $, 'returns jquery collection');
@@ -28,9 +28,9 @@ $(function () {
       .appendTo('#qunit-fixture')
       .accountPopover({ logoutlink: 'http://websignon.warwick.ac.uk/logout' }).popover('show');
 
-    notEqual($('.popover.account-information.fade.in').length, 0, 'popover was inserted');
+    notEqual($('.popover.hybrid-overlay.fade.in').length, 0, 'popover was inserted');
     $popover.popover('hide');
-    equal($('.popover.account-information.fade.in').length, 0, 'popover removed');
+    equal($('.popover.hybrid-overlay.fade.in').length, 0, 'popover removed');
   });
 
 
@@ -56,14 +56,15 @@ $(function () {
     var $popover = $('<a href="#">Account information</a>')
         .appendTo('#qunit-fixture')
         .accountPopover({
-          iframelink: 'http://websignon.warwick.ac.uk/origin/account',
+          useMwIframe: false,
+          legacyIframeLink: 'http://websignon.warwick.ac.uk/origin/account',
           logoutlink: 'http://websignon.warwick.ac.uk/logout'
         });
 
     $popover.popover('show');
 
-    equal($('.popover.account-information .account-info iframe').attr('src'), 'http://websignon.warwick.ac.uk/origin/account', 'iframe link inserted correctly');
-    equal($('.popover.account-information .btn-default').attr('href'), 'http://websignon.warwick.ac.uk/logout', 'logout link correctly inserted');
+    equal($('.popover.hybrid-overlay .account-info iframe').attr('src'), 'http://websignon.warwick.ac.uk/origin/account', 'iframe link inserted correctly');
+    equal($('.popover.hybrid-overlay .btn-default').attr('href'), 'http://websignon.warwick.ac.uk/logout', 'logout link correctly inserted');
   });
 
   test('should respect custom template', function () {
@@ -86,16 +87,16 @@ $(function () {
   test('popover should be dismissed by clicking outside it', function () {
     $('<a href="#">Account information</a>')
         .appendTo('#qunit-fixture')
-        .accountPopover({ logoutlink: 'http://websignon.warwick.ac.uk/logout' }).popover('show');
+        .accountPopover({ logoutlink: 'http://websignon.warwick.ac.uk/logout', useMwIframe: false }).popover('show');
 
-    notEqual($('.popover.account-information.fade.in').length, 0, 'popover was inserted');
+    notEqual($('.popover.hybrid-overlay.fade.in').length, 0, 'popover was inserted');
 
     // Not dismissed by clicking inside the popover itself
-    $('.popover.account-information.fade.in').trigger('click');
-    notEqual($('.popover.account-information.fade.in').length, 0, 'popover was inserted');
+    $('.popover.hybrid-overlay.fade.in').trigger('click');
+    notEqual($('.popover.hybrid-overlay.fade.in').length, 0, 'popover was inserted');
 
     $('html').trigger('click');
-    equal($('.popover.account-information.fade.in').length, 0, 'popover removed');
+    equal($('.popover.hybrid-overlay.fade.in').length, 0, 'popover removed');
   });
 
 });
