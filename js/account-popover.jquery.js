@@ -201,7 +201,7 @@
             var $trigger = $(this);
             var accountPopover = $trigger.data('id7.account-popover');
 
-            if (accountPopover.options.iframelink.indexOf(origin) !== 0 && accountPopover.options.legacyIframeLink.indexOf(origin)) {
+            if (accountPopover.options.iframelink.indexOf(origin) !== 0 && accountPopover.options.legacyIframeLink.indexOf(origin) !== 0) {
               console.error('Ignored message of type ' + messageType + ' because origin ' + origin + ' didn\'t match iframe link ' + accountPopover.options.iframelink);
             } else {
               accountPopover.onMessage(messageType, data);
