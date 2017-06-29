@@ -49,11 +49,19 @@
     }
   }
 
-  .popover.my-warwick {
+  .popover.my-warwick:not(.account-information) {
     width: @id7-mw-popover-width;
     max-height: @id7-mw-popover-height;
     height: 80vh;
     padding: 0;
+
+    .arrow {
+      border-bottom-color: #8C6E96;
+    }
+
+    .arrow:after {
+      border-bottom-color: #8C6E96;
+    }
   }
 
   .popover.account-information, .popover.my-warwick {
