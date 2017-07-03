@@ -135,8 +135,10 @@
             $bsPopover.tip().removeClass('account-information', 'my-warwick').addClass(toAdd);
 
             // trigger a reposition if the popover is open
+            // Note that this ends up reloading the iFrame, so remove the loaded class
             if ($bsPopover.tip().hasClass('in')) {
               $trigger.popover('show');
+              $trigger.next('.popover').removeClass('loading');
             }
           }
         }, this));
@@ -155,6 +157,9 @@
             break;
           case 'resizeIframe':
             $popover.find('.account-info iframe').height(data.height);
+            break;
+          case 'layoutDidMount':
+            $popover.addClass("loaded");
             break;
           case 'signedOut':
             var loginlink = this.options.loginlink;

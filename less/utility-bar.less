@@ -55,6 +55,9 @@
     height: 80vh;
     padding: 0;
 
+  }
+
+  .popover.my-warwick.loaded:not(.account-information) {
     .arrow {
       border-bottom-color: #8C6E96;
     }
@@ -67,6 +70,10 @@
   .popover.account-information, .popover.my-warwick {
     text-shadow: none;
     max-width: 100%;
+
+    .arrow, .arrow:after {
+      transition: 0.3s border ease-in-out;
+    }
 
     .popover-inner, .popover-content {
       height: 100%;
