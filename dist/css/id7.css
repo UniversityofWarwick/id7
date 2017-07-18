@@ -11078,7 +11078,7 @@ footer .id7-app-footer .id7-footer-utility ul > li:first-child:before {
   font-size: .8em;
   opacity: .5;
 }
-.id7-notifications-badge .brand-text {
+.id7-notifications-badge .brand-text:not(.fa) {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .id7-notifications-badge + .caret {

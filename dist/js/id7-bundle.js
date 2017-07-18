@@ -23046,7 +23046,7 @@ if(typeof Function.prototype.bind == 'undefined') {
         $trigger.popover(opts);
       },
       featureFlagTest: function featureFlagTest($trigger) {
-        return $trigger.data('mw-functionality') === 'true';
+        return $trigger.data('mw-functionality');
       },
       wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
