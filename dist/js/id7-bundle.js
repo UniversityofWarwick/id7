@@ -22492,7 +22492,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
         $trigger.popover(opts);
       },
       featureFlagTest: function featureFlagTest($trigger) {
-        return $trigger.data('mw-functionality') === 'true';
+        return $trigger.data('mw-functionality');
       },
       wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
