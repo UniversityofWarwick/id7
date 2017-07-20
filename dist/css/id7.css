@@ -9191,9 +9191,9 @@ html.no-generatedcontent .id7-utility-bar > ul > li {
 .id7-utility-bar .popover.account-information .popover-content .actions,
 .id7-utility-bar .popover.my-warwick .popover-content .actions {
   -webkit-box-flex: 0;
-  -webkit-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .id7-utility-bar .actions {
   background: #f7f7f7;
