@@ -9039,9 +9039,9 @@ body {
 }
 .id7-utility-bar .popover.account-information .popover-content .actions {
   -webkit-box-flex: 0;
-  -webkit-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .id7-utility-bar .popover.account-information .account-info iframe {
   width: 100%;
