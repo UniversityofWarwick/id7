@@ -237,6 +237,8 @@
           this.options.useMwIframe = screenConfig.name !== 'xs'
             && $(window).height() >= 700 && this.featureFlagTest($trigger);
 
+          $trigger.find('.id7-notifications-badge').toggle(this.options.useMwIframe);
+
           if ($trigger.data('bs.popover') !== undefined) {
             $trigger.data('bs.popover').options.content = Config.Templates.Popover(this.options);
 
