@@ -86,7 +86,6 @@
         return iPadInUse;
       },
       isMwFeatureAvailable: function isMwFeatureAvailable($trigger) {
-        /* global alert */
         return $trigger.data('mw-functionality') && !this.isBlacklistedDevice();
       },
       wireEventHandlers: function wireEventHandlers() {
