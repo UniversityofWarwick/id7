@@ -182,15 +182,21 @@
         };
         $trigger.popover(opts);
       },
-      featureFlagTest: function featureFlagTest($trigger) {
-        return $trigger.data('mw-functionality');
+      isBlacklistedDevice: function isBlacklistedDevice() {
+        var userAgent = navigator.userAgent;
+        var iPadInUse = userAgent.indexOf('iPad') !== -1;
+        // ref https://stackoverflow.com/questions/45171905/
+        return iPadInUse;
+      },
+      isMwFeatureAvailable: function isMwFeatureAvailable($trigger) {
+        return $trigger.data('mw-functionality') && !this.isBlacklistedDevice();
       },
       wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
 
         if (this.options.name) {
           var badgeHtml = ' <span class="fa-stack id7-notifications-badge">  <i class="fa fa-circle fa-stack-2x"></i>  <strong class="fa-stack-1x fa fa-spinner fa-spin brand-text counter-value"></strong> </span>';
-          if (!this.featureFlagTest($trigger) || !this.options.showNotificationsBadge) {
+          if (!this.isMwFeatureAvailable($trigger) || !this.options.showNotificationsBadge) {
             badgeHtml = '';
           }
           $trigger.html(this.options.name + badgeHtml + ' <span class="caret"></span>');
@@ -207,7 +213,7 @@
         });
         this.createPopover($trigger);
 
-        if (this.options.showNotificationsBadge && this.featureFlagTest($trigger)) {
+        if (this.options.showNotificationsBadge && this.isMwFeatureAvailable($trigger)) {
           var that = this;
           fetchNotificationData(this.options.notificationsApi, function (data) {
             var unreads = Math.min(data.unreads, 99);
@@ -235,14 +241,14 @@
         // Smaller screens get the old popover
         $(window).on('id7:reflow', $.proxy(function (e, screenConfig) {
           this.options.useMwIframe = screenConfig.name !== 'xs'
-            && $(window).height() >= 700 && this.featureFlagTest($trigger);
+            && $(window).height() >= 700 && this.isMwFeatureAvailable($trigger);
 
           $trigger.find('.id7-notifications-badge').toggle(this.options.useMwIframe);
 
           if ($trigger.data('bs.popover') !== undefined) {
             $trigger.data('bs.popover').options.content = Config.Templates.Popover(this.options);
 
-            var toAdd = this.options.useMwIframe && this.featureFlagTest($trigger) ? 'my-warwick' : 'account-information';
+            var toAdd = this.options.useMwIframe && this.isMwFeatureAvailable($trigger) ? 'my-warwick' : 'account-information';
             var $bsPopover = $trigger.data('bs.popover');
             $bsPopover.tip().removeClass('account-information', 'my-warwick').addClass(toAdd);
 
