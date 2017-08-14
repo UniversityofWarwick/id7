@@ -47,8 +47,7 @@
   background-image: url("../images/logotype-colour.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  -webkit-background-size: 136px 26px;
-          background-size: 136px 26px;
+  background-size: 136px 26px;
 }
 html.no-svgfilters #warwick-logo-link,
 html.ie-or-edge #warwick-logo-link,
@@ -65,7 +64,7 @@ html.safari #warwick-logo-link {
     background-image: url("../images/id6a-logotype@3x.png");
   }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #warwick-logo-link {
     background-image: url("../images/logotype-colour.svg");
   }
@@ -105,9 +104,7 @@ html.safari #warwick-logo-link {
 }
 #search-container #search-box {
   height: 25px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 2px 23px 2px 3px;
   line-height: 25px;
   border: 1px solid #ccc;

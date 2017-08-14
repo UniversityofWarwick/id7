@@ -158,8 +158,6 @@ body {
   background-color: #5b3069;
   position: fixed;
   width: 100%;
-  -webkit-transition: background-color 0.15s linear;
-  -o-transition: background-color 0.15s linear;
   transition: background-color 0.15s linear;
   z-index: 30;
   top: 0;
@@ -176,8 +174,7 @@ body {
   background-image: url("/dist/images/masthead-logo-bleed-wide-xs.svg");
   background-position: 0 24px;
   background-repeat: no-repeat;
-  -webkit-background-size: 1680px 300px;
-          background-size: 1680px 300px;
+  background-size: 1680px 300px;
 }
 html.no-svgfilters .id7-utility-masthead,
 html.ie-or-edge .id7-utility-masthead,
@@ -199,8 +196,7 @@ html.safari .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-sm.svg");
     background-position: center 24px;
     background-repeat: no-repeat;
-    -webkit-background-size: 992px 80px;
-            background-size: 992px 80px;
+    background-size: 992px 80px;
   }
   html.no-svgfilters .id7-utility-masthead,
   html.ie-or-edge .id7-utility-masthead,
@@ -223,8 +219,7 @@ html.safari .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-md.svg");
     background-position: center 24px;
     background-repeat: no-repeat;
-    -webkit-background-size: 1200px 80px;
-            background-size: 1200px 80px;
+    background-size: 1200px 80px;
   }
   html.no-svgfilters .id7-utility-masthead,
   html.ie-or-edge .id7-utility-masthead,
@@ -247,8 +242,7 @@ html.safari .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-lg.svg");
     background-position: center 24px;
     background-repeat: no-repeat;
-    -webkit-background-size: 3000px 80px;
-            background-size: 3000px 80px;
+    background-size: 3000px 80px;
   }
   html.no-svgfilters .id7-utility-masthead,
   html.ie-or-edge .id7-utility-masthead,
@@ -569,8 +563,7 @@ html.safari .id7-utility-masthead {
   width: 264px;
   height: 136px;
   border: 4px solid white;
-  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   margin-top: 20px;
 }
 .jumbotron-carousel .jumbotron .caption.caption-icon-square .caption-icon {
@@ -589,12 +582,9 @@ html.safari .id7-utility-masthead {
   html.flexbox .jumbotron-carousel .jumbotron {
     height: 800px;
     height: 100vh;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
@@ -611,53 +601,41 @@ html.safari .id7-utility-masthead {
   html.flexbox .jumbotron-carousel .jumbotron .container-fluid > .row > * {
     height: 800px;
     height: 100vh;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
   html.flexbox .jumbotron-carousel .jumbotron .container {
-    -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   html.flexbox .jumbotron-carousel .jumbotron .container .row,
   html.flexbox .jumbotron-carousel .jumbotron .container .layout {
-    -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
   }
   html.flexbox .jumbotron-carousel .jumbotron .container .row > *,
   html.flexbox .jumbotron-carousel .jumbotron .container .layout > * {
-    -webkit-box-flex: 1;
     -webkit-flex: auto;
         -ms-flex: auto;
             flex: auto;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
@@ -666,8 +644,7 @@ html.safari .id7-utility-masthead {
   html.flexbox .jumbotron-carousel .jumbotron .jumbotron-image {
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size: cover;
-            background-size: cover;
+    background-size: cover;
     position: relative;
   }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-image.overlay::before,
@@ -692,8 +669,6 @@ html.safari .id7-utility-masthead {
     height: 100%;
     top: 0;
     left: 0;
-    -webkit-transition: background 0.15s linear;
-    -o-transition: background 0.15s linear;
     transition: background 0.15s linear;
     background-color: rgba(255, 255, 255, 0);
   }
@@ -706,8 +681,6 @@ html.safari .id7-utility-masthead {
   }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .container-fluid,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .container-fluid {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
@@ -716,7 +689,6 @@ html.safari .id7-utility-masthead {
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout {
-    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
@@ -725,12 +697,9 @@ html.safari .id7-utility-masthead {
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row > *,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout > *,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout > * {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
@@ -739,12 +708,9 @@ html.safari .id7-utility-masthead {
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row > *.flex-vertical,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout > *.flex-vertical,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout > *.flex-vertical {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
@@ -755,11 +721,9 @@ html.safari .id7-utility-masthead {
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .row > *.flex-vertical > .row,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container .layout > *.flex-vertical > .row,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid .layout > *.flex-vertical > .row {
-    -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -790,14 +754,12 @@ html.safari .id7-utility-masthead {
   }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-1,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-1 {
-    -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container > .layout > .column-2,
   html.flexbox .jumbotron-carousel .jumbotron.jumbotron-panel .container-fluid > .layout > .column-2 {
-    -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -808,67 +770,56 @@ html.safari .id7-utility-masthead {
   html.flexbox .jumbotron-carousel .jumbotron .caption {
     margin-left: -10px;
     margin-right: -10px;
-    -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption,
   html.flexbox .jumbotron-carousel .jumbotron .caption.middle {
-    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption.top {
-    -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption.bottom {
-    -webkit-box-align: end;
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
             align-items: flex-end;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption,
   html.flexbox .jumbotron-carousel .jumbotron .caption.left {
-    -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption.center {
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption.right {
-    -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption.top.right {
-    -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption.top.center {
-    -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
   html.flexbox .jumbotron-carousel .jumbotron .caption .caption-content {
-    -webkit-box-flex: 0;
     -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
@@ -960,7 +911,6 @@ html.safari .id7-utility-masthead {
 }
 @media screen and (min-width: 768px) and (min-width: 992px) {
   html.flexbox .jumbotron-carousel .jumbotron .caption.top.center {
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1202,7 +1152,6 @@ html.safari .id7-utility-masthead {
 .megamenu-links .more-links-sitemap {
   margin-left: -20px;
   margin-right: -20px;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1255,7 +1204,6 @@ html.safari .id7-utility-masthead {
   margin-bottom: 0;
 }
 .megamenu-links .more-links-sitemap > li {
-  -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
