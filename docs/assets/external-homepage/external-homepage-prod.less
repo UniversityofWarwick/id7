@@ -64,7 +64,7 @@ body {
 // Change the masthead imagery
 // Remove the image from the masthead itself, as we put it on the utility-masthead
 .id7-masthead {
-  background: none !important; // Important to fix IE8 media tag precedence
+  background: none;
 }
 
 .id7-utility-masthead {
@@ -180,7 +180,7 @@ body {
 
 /***** START MAIN CONTENT AREA *****/
 .id7-main-content-area > .id7-main-content {
-  width: 100% !important; // Important fixes bug in IE8 where media query takes precedence
+  width: 100%;
   padding: 0;
 }
 
@@ -842,7 +842,7 @@ body {
 /***** END MAIN CONTENT AREA *****/
 
 /***** HACKS AND MISC *****/
-html.no-js, html.no-style-update {
+html.no-js {
   .id7-masthead .id7-search {
     .fa, .twitter-typeahead:hover + .fa {
       color: @id7-brand-default;

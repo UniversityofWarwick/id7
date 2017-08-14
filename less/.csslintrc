@@ -19,5 +19,6 @@
 
   "ids": false,
   "font-faces": false,
-  "overqualified-elements": false
+  "overqualified-elements": false,
+  "fallback-colors": false
 }

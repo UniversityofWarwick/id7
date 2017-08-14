@@ -202,11 +202,6 @@
 }
 
 .apply-brand(@colour) {
-  // For older browsers where .id7-left-border and .id7-right-border don't display
-  html.no-rgba {
-    background: screen(@colour, lighten(black, 20%));
-  }
-
   .header-colour(@colour);
   .link-colour(@colour);
 
@@ -315,7 +310,6 @@
 
   &.bordered {
     .id7-left-border, .id7-right-border {
-      border-color: @colour; // IE8
       border-color: fadeout(@colour, 70%);
     }
   }

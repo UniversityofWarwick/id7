@@ -62,7 +62,7 @@ module.exports = function (grunt) {
       },
       bundle: {
         src: [
-          'js/vendor/jquery-1.12.4.min.js',
+          'js/vendor/jquery-3.2.1.min.js',
           'js/vendor/bootstrap-3.3.7/transition.js',
           'js/vendor/bootstrap-3.3.7/alert.js',
           'js/vendor/bootstrap-3.3.7/button.js',
@@ -76,8 +76,8 @@ module.exports = function (grunt) {
           'js/vendor/bootstrap-3.3.7/tab.js',
           'js/vendor/bootstrap-3.3.7/affix.js',
           'js/vendor/typeahead.jquery-0.11.1.js',
-          'js/vendor/lodash-4.17.2.js',
-          'js/vendor/modernizr-3.3.1-custom.js',
+          'js/vendor/lodash-4.17.4.js',
+          'js/vendor/modernizr-3.5.0-custom.js',
           'js/vendor/jquery.doubleScroll-0.5.js',
           'js/vendor/headroom-0.9.3.min.js',
           'js/vendor/jquery.headroom-0.9.3.min.js',
@@ -86,8 +86,8 @@ module.exports = function (grunt) {
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js',
           'js/wide-tables.jquery.js',
-          'js/not-selector-feature-detect.modernizr.js',
           'js/safari-user-agent-detect.modernizr.js',
+          'js/ie-or-edge-user-agent-detect.modernizr.js',
           'js/ie10-viewport-bug-workaround.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-bundle.js'
@@ -99,7 +99,8 @@ module.exports = function (grunt) {
           'js/navigation.jquery.js',
           'js/search-suggest.jquery.js',
           'js/wide-tables.jquery.js',
-          'js/not-selector-feature-detect.modernizr.js',
+          'js/safari-user-agent-detect.modernizr.js',
+          'js/ie-or-edge-user-agent-detect.modernizr.js',
           'js/ie10-viewport-bug-workaround.js'
         ],
         dest: 'dist/js/<%= pkg.name %>-standalone.js'

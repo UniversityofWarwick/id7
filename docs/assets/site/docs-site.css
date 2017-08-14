@@ -11,9 +11,6 @@
     background-image: url("/assets/site/docs-site/border-image-right.jpg");
   }
 }
-html.no-rgba {
-  background: #4d7294;
-}
 h1,
 h2,
 h3,
@@ -525,7 +522,6 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 }
 .bordered .id7-left-border,
 .bordered .id7-right-border {
-  border-color: #204f79;
   border-color: rgba(32, 79, 121, 0.3);
 }
 .id7-page-footer .id7-app-footer {

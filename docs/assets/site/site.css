@@ -37,9 +37,6 @@ html.site3 .id7-utility-masthead {
     background-image: url("/assets/site/site3/border-image-right.jpg");
   }
 }
-html.no-rgba {
-  background: #7c5987;
-}
 h1,
 h2,
 h3,
@@ -551,7 +548,6 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 }
 .bordered .id7-left-border,
 .bordered .id7-right-border {
-  border-color: #5b3069;
   border-color: rgba(91, 48, 105, 0.3);
 }
 .id7-page-footer .id7-app-footer {

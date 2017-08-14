@@ -169,7 +169,7 @@ body {
   display: none;
 }
 .id7-masthead {
-  background: none !important;
+  background: none;
 }
 .id7-utility-masthead {
   background-color: transparent;
@@ -179,9 +179,8 @@ body {
   -webkit-background-size: 1680px 300px;
           background-size: 1680px 300px;
 }
-html.no-svg .id7-utility-masthead,
 html.no-svgfilters .id7-utility-masthead,
-html.no-smil .id7-utility-masthead,
+html.ie-or-edge .id7-utility-masthead,
 html.safari .id7-utility-masthead {
   background-image: url("/dist/images/masthead-logo-bleed-wide-xs.png");
 }
@@ -203,9 +202,8 @@ html.safari .id7-utility-masthead {
     -webkit-background-size: 992px 80px;
             background-size: 992px 80px;
   }
-  html.no-svg .id7-utility-masthead,
   html.no-svgfilters .id7-utility-masthead,
-  html.no-smil .id7-utility-masthead,
+  html.ie-or-edge .id7-utility-masthead,
   html.safari .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-sm.png");
   }
@@ -228,9 +226,8 @@ html.safari .id7-utility-masthead {
     -webkit-background-size: 1200px 80px;
             background-size: 1200px 80px;
   }
-  html.no-svg .id7-utility-masthead,
   html.no-svgfilters .id7-utility-masthead,
-  html.no-smil .id7-utility-masthead,
+  html.ie-or-edge .id7-utility-masthead,
   html.safari .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-md.png");
   }
@@ -253,9 +250,8 @@ html.safari .id7-utility-masthead {
     -webkit-background-size: 3000px 80px;
             background-size: 3000px 80px;
   }
-  html.no-svg .id7-utility-masthead,
   html.no-svgfilters .id7-utility-masthead,
-  html.no-smil .id7-utility-masthead,
+  html.ie-or-edge .id7-utility-masthead,
   html.safari .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-lg.png");
   }
@@ -362,7 +358,7 @@ html.safari .id7-utility-masthead {
 /***** END HOMEPAGE MASTHEAD *****/
 /***** START MAIN CONTENT AREA *****/
 .id7-main-content-area > .id7-main-content {
-  width: 100% !important;
+  width: 100%;
   padding: 0;
 }
 /***** START CAROUSEL NAV *****/
@@ -1304,9 +1300,6 @@ html.safari .id7-utility-masthead {
   padding: 0;
   margin: 0;
 }
-html.no-generatedcontent .megamenu-links-address .utility > li {
-  margin: 0 0.2em;
-}
 .megamenu-links-address .utility > li:before {
   content: '|';
   margin-left: 0.1em;
@@ -1365,29 +1358,21 @@ html.no-generatedcontent .megamenu-links-address .utility > li {
 /***** END MAIN CONTENT AREA *****/
 /***** HACKS AND MISC *****/
 html.no-js .id7-masthead .id7-search .fa,
-html.no-style-update .id7-masthead .id7-search .fa,
-html.no-js .id7-masthead .id7-search .twitter-typeahead:hover + .fa,
-html.no-style-update .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
+html.no-js .id7-masthead .id7-search .twitter-typeahead:hover + .fa {
   color: #5b3069;
 }
 html.no-js .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
-html.no-style-update .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:hover,
 html.no-js .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
-html.no-style-update .id7-masthead .id7-search .twitter-typeahead .tt-suggestion:focus,
-html.no-js .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor,
-html.no-style-update .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
+html.no-js .id7-masthead .id7-search .twitter-typeahead .tt-suggestion.tt-cursor {
   background: #5b3069;
 }
-html.no-js .form-control:focus,
-html.no-style-update .form-control:focus {
+html.no-js .form-control:focus {
   border-color: #5b3069;
 }
-html.no-js .id7-page-header,
-html.no-style-update .id7-page-header {
+html.no-js .id7-page-header {
   background: #5b3069;
 }
-html.no-js .id7-masthead .id7-logo-row nav a,
-html.no-style-update .id7-masthead .id7-logo-row nav a {
+html.no-js .id7-masthead .id7-logo-row nav a {
   color: #5b3069 !important;
 }
 body > a.sr-only-focusable {

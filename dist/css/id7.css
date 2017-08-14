@@ -9055,9 +9055,6 @@ body {
   padding: 0;
   margin: 0;
 }
-html.no-generatedcontent .id7-utility-bar > ul > li {
-  margin: 0 .4em;
-}
 .id7-utility-bar > ul > li:before {
   margin-right: .4em;
   margin-left: .2em;
@@ -9257,9 +9254,8 @@ html.no-generatedcontent .id7-utility-bar > ul > li {
   margin-right: -10px;
   margin-left: -10px;
 }
-html.no-svg .id7-masthead,
 html.no-svgfilters .id7-masthead,
-html.no-smil .id7-masthead,
+html.ie-or-edge .id7-masthead,
 html.safari .id7-masthead {
   background-image: url("../images/masthead-logo-bleed-xs.png");
 }
@@ -9281,9 +9277,8 @@ html.safari .id7-masthead {
     -webkit-background-size: 1170px 300px;
             background-size: 1170px 300px;
   }
-  html.no-svg .id7-masthead,
   html.no-svgfilters .id7-masthead,
-  html.no-smil .id7-masthead,
+  html.ie-or-edge .id7-masthead,
   html.safari .id7-masthead {
     background-image: url("../images/masthead-logo-bleed-sm.png");
   }
@@ -9510,9 +9505,6 @@ html.safari .id7-masthead {
   display: inline-block;
   padding: 0;
   margin: 0;
-}
-html.no-generatedcontent .id7-masthead .id7-logo-row nav ul > li {
-  margin: 0 .2em;
 }
 .id7-masthead .id7-logo-row nav ul > li:before {
   margin-right: .2em;
@@ -10758,9 +10750,6 @@ footer .id7-app-footer .id7-footer-utility ul > li {
   display: inline-block;
   padding: 0;
   margin: 0;
-}
-html.no-generatedcontent footer .id7-app-footer .id7-footer-utility ul > li {
-  margin: 0 .2em;
 }
 footer .id7-app-footer .id7-footer-utility ul > li:before {
   margin-right: .2em;

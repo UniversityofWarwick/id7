@@ -50,9 +50,8 @@
   -webkit-background-size: 136px 26px;
           background-size: 136px 26px;
 }
-html.no-svg #warwick-logo-link,
 html.no-svgfilters #warwick-logo-link,
-html.no-smil #warwick-logo-link,
+html.ie-or-edge #warwick-logo-link,
 html.safari #warwick-logo-link {
   background-image: url("../images/id6a-logotype.png");
 }
