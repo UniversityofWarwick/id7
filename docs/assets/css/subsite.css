@@ -778,9 +778,6 @@ footer .id7-app-footer:after {
   left: 0px;
   width: 100%;
   padding: 20px;
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=0);
@@ -841,12 +838,9 @@ footer .id7-app-footer:after {
   margin: 0;
 }
 .id7-main-content-area .nav-flex {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
@@ -961,8 +955,7 @@ blockquote.branded {
   color: #5b3069;
   border-top: 1px solid #5b3069;
   background: url(/dist/images/logo-divider-purple.svg) right bottom no-repeat;
-  -webkit-background-size: 1130px 41px;
-          background-size: 1130px 41px;
+  background-size: 1130px 41px;
   padding-bottom: 20px;
   position: relative;
 }

@@ -4,7 +4,7 @@
   background-position: @position;
   background-repeat: @repeat;
 
-  html.no-svg &, html.no-svgfilters &, html.no-smil &, html.safari & { // smil used to detect IE, naughty. SHAME
+  html.no-svgfilters &, html.ie-or-edge &, html.safari & {
     background-image: ~'url("@{fallback}.png")';
   }
 

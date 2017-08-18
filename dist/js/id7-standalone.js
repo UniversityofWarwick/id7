@@ -891,23 +891,33 @@
 
 /*global Modernizr:false */
 
+// ID-199
+//
+// :'(
+
 (function () {
   'use strict';
-  // querySelector
-  Modernizr.addTest('not-selector', function () {
-    var doc = window.document;
-    if (!('querySelectorAll' in doc)) {
-      return false;
-    }
 
-    try {
-      doc.querySelectorAll(':not(html)');
-      return true;
-    } catch (e) {
-      return false;
-    }
+  Modernizr.addTest('safari', function () {
+    var ua = window.navigator.userAgent;
+
+    return ua.indexOf('Safari/') >= 0 && ua.indexOf('Chrome/') == -1;
   });
 })();
+
+
+/*global Modernizr:false */
+
+(function () {
+  'use strict';
+
+  Modernizr.addTest('ie-or-edge', function () {
+    var ua = window.navigator.userAgent;
+
+    return /MSIE 10/i.test(ua) || /MSIE 9/i.test(ua) || /rv:11.0/i.test(ua) || /Edge\/\d./i.test(ua);
+  });
+})();
+
 
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
