@@ -39,7 +39,7 @@
 		// do not modify
 		// internal stuff
 		$.extend(options, {
-			topScrollBarMarkup: '<div class="doubleScroll-scroll-wrapper" style="height: 20px;"><div class="doubleScroll-scroll" style="height: 20px;"></div></div>',
+			topScrollBarMarkup: '<div class="doubleScroll-scroll-wrapper"><div class="doubleScroll-scroll"></div></div>',
 			topScrollBarWrapperSelector: '.doubleScroll-scroll-wrapper',
 			topScrollBarInnerSelector: '.doubleScroll-scroll'
 		});
@@ -61,6 +61,8 @@
 				// creating the scrollbar
 				// added before in the DOM
 				$topScrollBar = $(options.topScrollBarMarkup);
+				$topScrollBar.css("height", "20px");
+				$topScrollBar.find(".doubleScroll-scroll").css("height", "20px");
 				$self.before($topScrollBar);
 
 				// apply the css
