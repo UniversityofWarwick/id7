@@ -16,7 +16,7 @@ Three quick start options are available:
 
 - [Download the latest release](https://github.com/UniversityofWarwick/id7/releases/latest).
 - Clone the repo: `git clone https://github.com/UniversityofWarwick/id7.git`.
-- Install with [npm](https://www.npmjs.com): `npm install UniversityofWarwick/id7#v1.4.0 --save`
+- Install with [npm](https://www.npmjs.com): `npm install UniversityofWarwick/id7#v1.4.1 --save`
 - Install with [Bower](http://bower.io): `bower install warwick-id7`.
 
 Read the [Getting started page](getting-started/) for information on the framework contents, templates and examples, and more.
