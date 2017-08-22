@@ -3044,36 +3044,50 @@ a {
   transition: all .3s linear;
   transition: color .3s linear, text-decoration-color .15s linear;
 }
-a .new-window-link {
+a .new-window-link,
+a .insecure-link {
   display: inline-block;
   padding-left: 3px;
   margin-right: 2px;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   font-size: 12px;
-  color: #777;
   transition: color .3s linear;
 
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-a .new-window-link.fa-pull-left {
+a .new-window-link.fa-pull-left,
+a .insecure-link.fa-pull-left {
   margin-right: .3em;
 }
-a .new-window-link.fa-pull-right {
+a .new-window-link.fa-pull-right,
+a .insecure-link.fa-pull-right {
   margin-left: .3em;
 }
-a .new-window-link.pull-left {
+a .new-window-link.pull-left,
+a .insecure-link.pull-left {
   margin-right: .3em;
 }
-a .new-window-link.pull-right {
+a .new-window-link.pull-right,
+a .insecure-link.pull-right {
   margin-left: .3em;
+}
+a .new-window-link {
+  color: #777;
 }
 a .new-window-link:before {
   content: "\f08e";
 }
-a:hover .new-window-link {
+a .insecure-link {
+  color: #af2723;
+}
+a .insecure-link:before {
+  content: "\f13e";
+}
+a:hover .new-window-link,
+a:hover .insecure-link {
   color: #204f79;
 }
 @media print {
@@ -8609,6 +8623,24 @@ label.radio-inline {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd0d0d0', endColorstr='#ffc3c3c3', GradientType=0);
   background-repeat: repeat-x;
 }
+.alert-danger a,
+.alert-danger a:link,
+.alert-danger a:visited {
+  color: inherit;
+}
+.alert-danger a:hover,
+.alert-danger a:focus,
+.alert-danger a:active {
+  color: inherit;
+}
+.alert-danger a .new-window-link,
+.alert-danger a .insecure-link {
+  color: inherit;
+}
+.alert-danger a:hover .new-window-link,
+.alert-danger a:hover .insecure-link {
+  color: inherit;
+}
 .id7-main-content-area {
   font-size: 14px;
   font-weight: 300;
@@ -8658,21 +8690,25 @@ body {
 }
 @media screen and (min-width: 768px) {
   html.flexbox .id7-fixed-width-container {
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
+    display:         flex;
     height: 100vh;
-        flex-direction: column;
+            flex-direction: column;
 
-    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
   }
   html.flexbox .id7-fixed-width-container .id7-main-content-area {
-    -ms-flex: 1 0 auto;
-        flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
   html.flexbox .id7-fixed-width-container .id7-page-header,
   html.flexbox .id7-fixed-width-container .id7-page-footer {
+    -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
-    flex-shrink: 0;
+            flex-shrink: 0;
   }
 }
 @media (min-width: 768px) {
@@ -8930,19 +8966,22 @@ body {
 .id7-utility-bar a:active {
   color: #ccc;
 }
-.id7-utility-bar a:hover .new-window-link {
+.id7-utility-bar a:hover .new-window-link,
+.id7-utility-bar a:hover .insecure-link {
   color: #ccc;
 }
 .id7-utility-bar a,
 .id7-utility-bar a:link,
 .id7-utility-bar a:visited {
   -webkit-text-decoration-color: #fff;
+     -moz-text-decoration-color: #fff;
           text-decoration-color: #fff;
 }
 .id7-utility-bar a:hover,
 .id7-utility-bar a:focus,
 .id7-utility-bar a:active {
   -webkit-text-decoration-color: #ccc;
+     -moz-text-decoration-color: #ccc;
           text-decoration-color: #ccc;
 }
 .id7-utility-bar .caret {
@@ -9003,19 +9042,22 @@ body {
 .id7-utility-bar .popover.account-information .actions a:active {
   color: #000;
 }
-.id7-utility-bar .popover.account-information .actions a:hover .new-window-link {
+.id7-utility-bar .popover.account-information .actions a:hover .new-window-link,
+.id7-utility-bar .popover.account-information .actions a:hover .insecure-link {
   color: #000;
 }
 .id7-utility-bar .popover.account-information .actions a,
 .id7-utility-bar .popover.account-information .actions a:link,
 .id7-utility-bar .popover.account-information .actions a:visited {
   -webkit-text-decoration-color: #707070;
+     -moz-text-decoration-color: #707070;
           text-decoration-color: #707070;
 }
 .id7-utility-bar .popover.account-information .actions a:hover,
 .id7-utility-bar .popover.account-information .actions a:focus,
 .id7-utility-bar .popover.account-information .actions a:active {
   -webkit-text-decoration-color: #000;
+     -moz-text-decoration-color: #000;
           text-decoration-color: #000;
 }
 .id7-utility-bar .popover.account-information .actions a:hover,
@@ -9189,19 +9231,22 @@ html.safari .id7-masthead {
 .id7-masthead .id7-header-text a:active {
   color: #050505;
 }
-.id7-masthead .id7-header-text a:hover .new-window-link {
+.id7-masthead .id7-header-text a:hover .new-window-link,
+.id7-masthead .id7-header-text a:hover .insecure-link {
   color: #050505;
 }
 .id7-masthead .id7-header-text a,
 .id7-masthead .id7-header-text a:link,
 .id7-masthead .id7-header-text a:visited {
   -webkit-text-decoration-color: #747474;
+     -moz-text-decoration-color: #747474;
           text-decoration-color: #747474;
 }
 .id7-masthead .id7-header-text a:hover,
 .id7-masthead .id7-header-text a:focus,
 .id7-masthead .id7-header-text a:active {
   -webkit-text-decoration-color: #050505;
+     -moz-text-decoration-color: #050505;
           text-decoration-color: #050505;
 }
 .id7-masthead .id7-header-text a,
@@ -9368,19 +9413,22 @@ html.safari .id7-masthead {
 .id7-masthead .id7-logo-row nav a:active {
   color: #000;
 }
-.id7-masthead .id7-logo-row nav a:hover .new-window-link {
+.id7-masthead .id7-logo-row nav a:hover .new-window-link,
+.id7-masthead .id7-logo-row nav a:hover .insecure-link {
   color: #000;
 }
 .id7-masthead .id7-logo-row nav a,
 .id7-masthead .id7-logo-row nav a:link,
 .id7-masthead .id7-logo-row nav a:visited {
   -webkit-text-decoration-color: #707070;
+     -moz-text-decoration-color: #707070;
           text-decoration-color: #707070;
 }
 .id7-masthead .id7-logo-row nav a:hover,
 .id7-masthead .id7-logo-row nav a:focus,
 .id7-masthead .id7-logo-row nav a:active {
   -webkit-text-decoration-color: #000;
+     -moz-text-decoration-color: #000;
           text-decoration-color: #000;
 }
 .id7-masthead .id7-logo-row:hover nav {
@@ -9443,19 +9491,22 @@ html.safari .id7-masthead {
 .carousel a:active {
   color: #ccc;
 }
-.carousel a:hover .new-window-link {
+.carousel a:hover .new-window-link,
+.carousel a:hover .insecure-link {
   color: #ccc;
 }
 .carousel a,
 .carousel a:link,
 .carousel a:visited {
   -webkit-text-decoration-color: #fff;
+     -moz-text-decoration-color: #fff;
           text-decoration-color: #fff;
 }
 .carousel a:hover,
 .carousel a:focus,
 .carousel a:active {
   -webkit-text-decoration-color: #ccc;
+     -moz-text-decoration-color: #ccc;
           text-decoration-color: #ccc;
 }
 .carousel-control .glyphicon {
@@ -10648,84 +10699,104 @@ footer .id7-app-footer .id7-footer-utility ul > li:first-child:before {
   margin-top: 0;
 }
 .equal-height-xs {
+  display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  display:         flex;
 }
 .equal-height-xs > [class*='col-'] {
+  display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-      flex-direction: column;
+  display:         flex;
+          flex-direction: column;
 
-  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
 }
 .equal-height-xs > [class*='col-'] > * {
-  -ms-flex: auto;
-      flex: auto;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
 }
 @media (min-width: 768px) {
   .equal-height {
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
+    display:         flex;
   }
   .equal-height > [class*='col-'] {
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-        flex-direction: column;
+    display:         flex;
+            flex-direction: column;
 
-    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
   }
   .equal-height > [class*='col-'] > * {
-    -ms-flex: auto;
-        flex: auto;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
   }
   .equal-height-sm {
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
+    display:         flex;
   }
   .equal-height-sm > [class*='col-'] {
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-        flex-direction: column;
+    display:         flex;
+            flex-direction: column;
 
-    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
   }
   .equal-height-sm > [class*='col-'] > * {
-    -ms-flex: auto;
-        flex: auto;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
   }
 }
 @media (min-width: 992px) {
   .equal-height-md {
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
+    display:         flex;
   }
   .equal-height-md > [class*='col-'] {
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-        flex-direction: column;
+    display:         flex;
+            flex-direction: column;
 
-    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
   }
   .equal-height-md > [class*='col-'] > * {
-    -ms-flex: auto;
-        flex: auto;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
   }
 }
 @media (min-width: 1200px) {
   .equal-height-lg {
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
+    display:         flex;
   }
   .equal-height-lg > [class*='col-'] {
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-        flex-direction: column;
+    display:         flex;
+            flex-direction: column;
 
-    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
   }
   .equal-height-lg > [class*='col-'] > * {
-    -ms-flex: auto;
-        flex: auto;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
   }
 }
 .pull-xs-left {

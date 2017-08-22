@@ -35,7 +35,8 @@ a:focus,
 a:active {
   color: #0b1a28;
 }
-a:hover .new-window-link {
+a:hover .new-window-link,
+a:hover .insecure-link {
   color: #0b1a28;
 }
 a,
@@ -72,7 +73,8 @@ blockquote.quotes::before {
 .brand-bg a:active {
   color: #cccccc !important;
 }
-.brand-bg a:hover .new-window-link {
+.brand-bg a:hover .new-window-link,
+.brand-bg a:hover .insecure-link {
   color: #cccccc !important;
 }
 .brand-bg a,
@@ -102,7 +104,8 @@ blockquote.quotes::before {
 .brand-text a:active {
   color: #0b1a28 !important;
 }
-.brand-text a:hover .new-window-link {
+.brand-text a:hover .new-window-link,
+.brand-text a:hover .insecure-link {
   color: #0b1a28 !important;
 }
 .brand-text a,
@@ -552,7 +555,8 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-page-footer .id7-app-footer a:active {
   color: #cccccc;
 }
-.id7-page-footer .id7-app-footer a:hover .new-window-link {
+.id7-page-footer .id7-app-footer a:hover .new-window-link,
+.id7-page-footer .id7-app-footer a:hover .insecure-link {
   color: #cccccc;
 }
 .id7-page-footer .id7-app-footer a,
@@ -607,7 +611,8 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   color: #050505;
 }
-.id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link {
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link,
+.id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .insecure-link {
   color: #050505;
 }
 .id7-page-footer.id7-footer-coloured .id7-site-footer a,
@@ -1007,7 +1012,12 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .boxstyle-xs.box5 a:hover .new-window-link,
 .boxstyle-sm.box5 a:hover .new-window-link,
 .boxstyle-md.box5 a:hover .new-window-link,
-.boxstyle-lg.box5 a:hover .new-window-link {
+.boxstyle-lg.box5 a:hover .new-window-link,
+.boxstyle_.box5 a:hover .insecure-link,
+.boxstyle-xs.box5 a:hover .insecure-link,
+.boxstyle-sm.box5 a:hover .insecure-link,
+.boxstyle-md.box5 a:hover .insecure-link,
+.boxstyle-lg.box5 a:hover .insecure-link {
   color: #cccccc;
 }
 .boxstyle_.box5 a,

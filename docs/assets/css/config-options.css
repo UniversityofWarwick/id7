@@ -22,7 +22,8 @@ body.brand-purple a:focus,
 body.brand-purple a:active {
   color: #1e1023;
 }
-body.brand-purple a:hover .new-window-link {
+body.brand-purple a:hover .new-window-link,
+body.brand-purple a:hover .insecure-link {
   color: #1e1023;
 }
 body.brand-purple a,
@@ -59,7 +60,8 @@ body.brand-purple .brand-bg a:focus,
 body.brand-purple .brand-bg a:active {
   color: #cccccc !important;
 }
-body.brand-purple .brand-bg a:hover .new-window-link {
+body.brand-purple .brand-bg a:hover .new-window-link,
+body.brand-purple .brand-bg a:hover .insecure-link {
   color: #cccccc !important;
 }
 body.brand-purple .brand-bg a,
@@ -89,7 +91,8 @@ body.brand-purple .brand-text a:focus,
 body.brand-purple .brand-text a:active {
   color: #1e1023 !important;
 }
-body.brand-purple .brand-text a:hover .new-window-link {
+body.brand-purple .brand-text a:hover .new-window-link,
+body.brand-purple .brand-text a:hover .insecure-link {
   color: #1e1023 !important;
 }
 body.brand-purple .brand-text a,
@@ -539,7 +542,8 @@ body.brand-purple .id7-page-footer .id7-app-footer a:focus,
 body.brand-purple .id7-page-footer .id7-app-footer a:active {
   color: #cccccc;
 }
-body.brand-purple .id7-page-footer .id7-app-footer a:hover .new-window-link {
+body.brand-purple .id7-page-footer .id7-app-footer a:hover .new-window-link,
+body.brand-purple .id7-page-footer .id7-app-footer a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-purple .id7-page-footer .id7-app-footer a,
@@ -594,7 +598,8 @@ body.brand-purple .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
 body.brand-purple .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   color: #050505;
 }
-body.brand-purple .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link {
+body.brand-purple .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link,
+body.brand-purple .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .insecure-link {
   color: #050505;
 }
 body.brand-purple .id7-page-footer.id7-footer-coloured .id7-site-footer a,
@@ -994,7 +999,12 @@ body.brand-purple .boxstyle_.box5 a:hover .new-window-link,
 body.brand-purple .boxstyle-xs.box5 a:hover .new-window-link,
 body.brand-purple .boxstyle-sm.box5 a:hover .new-window-link,
 body.brand-purple .boxstyle-md.box5 a:hover .new-window-link,
-body.brand-purple .boxstyle-lg.box5 a:hover .new-window-link {
+body.brand-purple .boxstyle-lg.box5 a:hover .new-window-link,
+body.brand-purple .boxstyle_.box5 a:hover .insecure-link,
+body.brand-purple .boxstyle-xs.box5 a:hover .insecure-link,
+body.brand-purple .boxstyle-sm.box5 a:hover .insecure-link,
+body.brand-purple .boxstyle-md.box5 a:hover .insecure-link,
+body.brand-purple .boxstyle-lg.box5 a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-purple .boxstyle_.box5 a,
@@ -1132,7 +1142,8 @@ body.brand-gray a:focus,
 body.brand-gray a:active {
   color: #0f0f10;
 }
-body.brand-gray a:hover .new-window-link {
+body.brand-gray a:hover .new-window-link,
+body.brand-gray a:hover .insecure-link {
   color: #0f0f10;
 }
 body.brand-gray a,
@@ -1169,7 +1180,8 @@ body.brand-gray .brand-bg a:focus,
 body.brand-gray .brand-bg a:active {
   color: #cccccc !important;
 }
-body.brand-gray .brand-bg a:hover .new-window-link {
+body.brand-gray .brand-bg a:hover .new-window-link,
+body.brand-gray .brand-bg a:hover .insecure-link {
   color: #cccccc !important;
 }
 body.brand-gray .brand-bg a,
@@ -1199,7 +1211,8 @@ body.brand-gray .brand-text a:focus,
 body.brand-gray .brand-text a:active {
   color: #0f0f10 !important;
 }
-body.brand-gray .brand-text a:hover .new-window-link {
+body.brand-gray .brand-text a:hover .new-window-link,
+body.brand-gray .brand-text a:hover .insecure-link {
   color: #0f0f10 !important;
 }
 body.brand-gray .brand-text a,
@@ -1649,7 +1662,8 @@ body.brand-gray .id7-page-footer .id7-app-footer a:focus,
 body.brand-gray .id7-page-footer .id7-app-footer a:active {
   color: #cccccc;
 }
-body.brand-gray .id7-page-footer .id7-app-footer a:hover .new-window-link {
+body.brand-gray .id7-page-footer .id7-app-footer a:hover .new-window-link,
+body.brand-gray .id7-page-footer .id7-app-footer a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-gray .id7-page-footer .id7-app-footer a,
@@ -1704,7 +1718,8 @@ body.brand-gray .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
 body.brand-gray .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   color: #050505;
 }
-body.brand-gray .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link {
+body.brand-gray .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link,
+body.brand-gray .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .insecure-link {
   color: #050505;
 }
 body.brand-gray .id7-page-footer.id7-footer-coloured .id7-site-footer a,
@@ -2104,7 +2119,12 @@ body.brand-gray .boxstyle_.box5 a:hover .new-window-link,
 body.brand-gray .boxstyle-xs.box5 a:hover .new-window-link,
 body.brand-gray .boxstyle-sm.box5 a:hover .new-window-link,
 body.brand-gray .boxstyle-md.box5 a:hover .new-window-link,
-body.brand-gray .boxstyle-lg.box5 a:hover .new-window-link {
+body.brand-gray .boxstyle-lg.box5 a:hover .new-window-link,
+body.brand-gray .boxstyle_.box5 a:hover .insecure-link,
+body.brand-gray .boxstyle-xs.box5 a:hover .insecure-link,
+body.brand-gray .boxstyle-sm.box5 a:hover .insecure-link,
+body.brand-gray .boxstyle-md.box5 a:hover .insecure-link,
+body.brand-gray .boxstyle-lg.box5 a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-gray .boxstyle_.box5 a,
@@ -2242,7 +2262,8 @@ body.brand-gold a:focus,
 body.brand-gold a:active {
   color: #332400;
 }
-body.brand-gold a:hover .new-window-link {
+body.brand-gold a:hover .new-window-link,
+body.brand-gold a:hover .insecure-link {
   color: #332400;
 }
 body.brand-gold a,
@@ -2279,7 +2300,8 @@ body.brand-gold .brand-bg a:focus,
 body.brand-gold .brand-bg a:active {
   color: #cccccc !important;
 }
-body.brand-gold .brand-bg a:hover .new-window-link {
+body.brand-gold .brand-bg a:hover .new-window-link,
+body.brand-gold .brand-bg a:hover .insecure-link {
   color: #cccccc !important;
 }
 body.brand-gold .brand-bg a,
@@ -2309,7 +2331,8 @@ body.brand-gold .brand-text a:focus,
 body.brand-gold .brand-text a:active {
   color: #332400 !important;
 }
-body.brand-gold .brand-text a:hover .new-window-link {
+body.brand-gold .brand-text a:hover .new-window-link,
+body.brand-gold .brand-text a:hover .insecure-link {
   color: #332400 !important;
 }
 body.brand-gold .brand-text a,
@@ -2759,7 +2782,8 @@ body.brand-gold .id7-page-footer .id7-app-footer a:focus,
 body.brand-gold .id7-page-footer .id7-app-footer a:active {
   color: #cccccc;
 }
-body.brand-gold .id7-page-footer .id7-app-footer a:hover .new-window-link {
+body.brand-gold .id7-page-footer .id7-app-footer a:hover .new-window-link,
+body.brand-gold .id7-page-footer .id7-app-footer a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-gold .id7-page-footer .id7-app-footer a,
@@ -2814,7 +2838,8 @@ body.brand-gold .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
 body.brand-gold .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   color: #050505;
 }
-body.brand-gold .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link {
+body.brand-gold .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link,
+body.brand-gold .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .insecure-link {
   color: #050505;
 }
 body.brand-gold .id7-page-footer.id7-footer-coloured .id7-site-footer a,
@@ -3214,7 +3239,12 @@ body.brand-gold .boxstyle_.box5 a:hover .new-window-link,
 body.brand-gold .boxstyle-xs.box5 a:hover .new-window-link,
 body.brand-gold .boxstyle-sm.box5 a:hover .new-window-link,
 body.brand-gold .boxstyle-md.box5 a:hover .new-window-link,
-body.brand-gold .boxstyle-lg.box5 a:hover .new-window-link {
+body.brand-gold .boxstyle-lg.box5 a:hover .new-window-link,
+body.brand-gold .boxstyle_.box5 a:hover .insecure-link,
+body.brand-gold .boxstyle-xs.box5 a:hover .insecure-link,
+body.brand-gold .boxstyle-sm.box5 a:hover .insecure-link,
+body.brand-gold .boxstyle-md.box5 a:hover .insecure-link,
+body.brand-gold .boxstyle-lg.box5 a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-gold .boxstyle_.box5 a,
@@ -3352,7 +3382,8 @@ body.brand-blue a:focus,
 body.brand-blue a:active {
   color: #0b1a28;
 }
-body.brand-blue a:hover .new-window-link {
+body.brand-blue a:hover .new-window-link,
+body.brand-blue a:hover .insecure-link {
   color: #0b1a28;
 }
 body.brand-blue a,
@@ -3389,7 +3420,8 @@ body.brand-blue .brand-bg a:focus,
 body.brand-blue .brand-bg a:active {
   color: #cccccc !important;
 }
-body.brand-blue .brand-bg a:hover .new-window-link {
+body.brand-blue .brand-bg a:hover .new-window-link,
+body.brand-blue .brand-bg a:hover .insecure-link {
   color: #cccccc !important;
 }
 body.brand-blue .brand-bg a,
@@ -3419,7 +3451,8 @@ body.brand-blue .brand-text a:focus,
 body.brand-blue .brand-text a:active {
   color: #0b1a28 !important;
 }
-body.brand-blue .brand-text a:hover .new-window-link {
+body.brand-blue .brand-text a:hover .new-window-link,
+body.brand-blue .brand-text a:hover .insecure-link {
   color: #0b1a28 !important;
 }
 body.brand-blue .brand-text a,
@@ -3869,7 +3902,8 @@ body.brand-blue .id7-page-footer .id7-app-footer a:focus,
 body.brand-blue .id7-page-footer .id7-app-footer a:active {
   color: #cccccc;
 }
-body.brand-blue .id7-page-footer .id7-app-footer a:hover .new-window-link {
+body.brand-blue .id7-page-footer .id7-app-footer a:hover .new-window-link,
+body.brand-blue .id7-page-footer .id7-app-footer a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-blue .id7-page-footer .id7-app-footer a,
@@ -3924,7 +3958,8 @@ body.brand-blue .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
 body.brand-blue .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   color: #050505;
 }
-body.brand-blue .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link {
+body.brand-blue .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link,
+body.brand-blue .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .insecure-link {
   color: #050505;
 }
 body.brand-blue .id7-page-footer.id7-footer-coloured .id7-site-footer a,
@@ -4324,7 +4359,12 @@ body.brand-blue .boxstyle_.box5 a:hover .new-window-link,
 body.brand-blue .boxstyle-xs.box5 a:hover .new-window-link,
 body.brand-blue .boxstyle-sm.box5 a:hover .new-window-link,
 body.brand-blue .boxstyle-md.box5 a:hover .new-window-link,
-body.brand-blue .boxstyle-lg.box5 a:hover .new-window-link {
+body.brand-blue .boxstyle-lg.box5 a:hover .new-window-link,
+body.brand-blue .boxstyle_.box5 a:hover .insecure-link,
+body.brand-blue .boxstyle-xs.box5 a:hover .insecure-link,
+body.brand-blue .boxstyle-sm.box5 a:hover .insecure-link,
+body.brand-blue .boxstyle-md.box5 a:hover .insecure-link,
+body.brand-blue .boxstyle-lg.box5 a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-blue .boxstyle_.box5 a,
@@ -4462,7 +4502,8 @@ body.brand-orange a:focus,
 body.brand-orange a:active {
   color: #5e2006;
 }
-body.brand-orange a:hover .new-window-link {
+body.brand-orange a:hover .new-window-link,
+body.brand-orange a:hover .insecure-link {
   color: #5e2006;
 }
 body.brand-orange a,
@@ -4499,7 +4540,8 @@ body.brand-orange .brand-bg a:focus,
 body.brand-orange .brand-bg a:active {
   color: #cccccc !important;
 }
-body.brand-orange .brand-bg a:hover .new-window-link {
+body.brand-orange .brand-bg a:hover .new-window-link,
+body.brand-orange .brand-bg a:hover .insecure-link {
   color: #cccccc !important;
 }
 body.brand-orange .brand-bg a,
@@ -4529,7 +4571,8 @@ body.brand-orange .brand-text a:focus,
 body.brand-orange .brand-text a:active {
   color: #5e2006 !important;
 }
-body.brand-orange .brand-text a:hover .new-window-link {
+body.brand-orange .brand-text a:hover .new-window-link,
+body.brand-orange .brand-text a:hover .insecure-link {
   color: #5e2006 !important;
 }
 body.brand-orange .brand-text a,
@@ -4979,7 +5022,8 @@ body.brand-orange .id7-page-footer .id7-app-footer a:focus,
 body.brand-orange .id7-page-footer .id7-app-footer a:active {
   color: #cccccc;
 }
-body.brand-orange .id7-page-footer .id7-app-footer a:hover .new-window-link {
+body.brand-orange .id7-page-footer .id7-app-footer a:hover .new-window-link,
+body.brand-orange .id7-page-footer .id7-app-footer a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-orange .id7-page-footer .id7-app-footer a,
@@ -5034,7 +5078,8 @@ body.brand-orange .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
 body.brand-orange .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   color: #050505;
 }
-body.brand-orange .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link {
+body.brand-orange .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link,
+body.brand-orange .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .insecure-link {
   color: #050505;
 }
 body.brand-orange .id7-page-footer.id7-footer-coloured .id7-site-footer a,
@@ -5434,7 +5479,12 @@ body.brand-orange .boxstyle_.box5 a:hover .new-window-link,
 body.brand-orange .boxstyle-xs.box5 a:hover .new-window-link,
 body.brand-orange .boxstyle-sm.box5 a:hover .new-window-link,
 body.brand-orange .boxstyle-md.box5 a:hover .new-window-link,
-body.brand-orange .boxstyle-lg.box5 a:hover .new-window-link {
+body.brand-orange .boxstyle-lg.box5 a:hover .new-window-link,
+body.brand-orange .boxstyle_.box5 a:hover .insecure-link,
+body.brand-orange .boxstyle-xs.box5 a:hover .insecure-link,
+body.brand-orange .boxstyle-sm.box5 a:hover .insecure-link,
+body.brand-orange .boxstyle-md.box5 a:hover .insecure-link,
+body.brand-orange .boxstyle-lg.box5 a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-orange .boxstyle_.box5 a,
@@ -5572,7 +5622,8 @@ body.brand-green a:focus,
 body.brand-green a:active {
   color: #181801;
 }
-body.brand-green a:hover .new-window-link {
+body.brand-green a:hover .new-window-link,
+body.brand-green a:hover .insecure-link {
   color: #181801;
 }
 body.brand-green a,
@@ -5609,7 +5660,8 @@ body.brand-green .brand-bg a:focus,
 body.brand-green .brand-bg a:active {
   color: #cccccc !important;
 }
-body.brand-green .brand-bg a:hover .new-window-link {
+body.brand-green .brand-bg a:hover .new-window-link,
+body.brand-green .brand-bg a:hover .insecure-link {
   color: #cccccc !important;
 }
 body.brand-green .brand-bg a,
@@ -5639,7 +5691,8 @@ body.brand-green .brand-text a:focus,
 body.brand-green .brand-text a:active {
   color: #181801 !important;
 }
-body.brand-green .brand-text a:hover .new-window-link {
+body.brand-green .brand-text a:hover .new-window-link,
+body.brand-green .brand-text a:hover .insecure-link {
   color: #181801 !important;
 }
 body.brand-green .brand-text a,
@@ -6089,7 +6142,8 @@ body.brand-green .id7-page-footer .id7-app-footer a:focus,
 body.brand-green .id7-page-footer .id7-app-footer a:active {
   color: #cccccc;
 }
-body.brand-green .id7-page-footer .id7-app-footer a:hover .new-window-link {
+body.brand-green .id7-page-footer .id7-app-footer a:hover .new-window-link,
+body.brand-green .id7-page-footer .id7-app-footer a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-green .id7-page-footer .id7-app-footer a,
@@ -6144,7 +6198,8 @@ body.brand-green .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
 body.brand-green .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   color: #050505;
 }
-body.brand-green .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link {
+body.brand-green .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link,
+body.brand-green .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .insecure-link {
   color: #050505;
 }
 body.brand-green .id7-page-footer.id7-footer-coloured .id7-site-footer a,
@@ -6544,7 +6599,12 @@ body.brand-green .boxstyle_.box5 a:hover .new-window-link,
 body.brand-green .boxstyle-xs.box5 a:hover .new-window-link,
 body.brand-green .boxstyle-sm.box5 a:hover .new-window-link,
 body.brand-green .boxstyle-md.box5 a:hover .new-window-link,
-body.brand-green .boxstyle-lg.box5 a:hover .new-window-link {
+body.brand-green .boxstyle-lg.box5 a:hover .new-window-link,
+body.brand-green .boxstyle_.box5 a:hover .insecure-link,
+body.brand-green .boxstyle-xs.box5 a:hover .insecure-link,
+body.brand-green .boxstyle-sm.box5 a:hover .insecure-link,
+body.brand-green .boxstyle-md.box5 a:hover .insecure-link,
+body.brand-green .boxstyle-lg.box5 a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-green .boxstyle_.box5 a,
@@ -6682,7 +6742,8 @@ body.brand-red a:focus,
 body.brand-red a:active {
   color: #2e050f;
 }
-body.brand-red a:hover .new-window-link {
+body.brand-red a:hover .new-window-link,
+body.brand-red a:hover .insecure-link {
   color: #2e050f;
 }
 body.brand-red a,
@@ -6719,7 +6780,8 @@ body.brand-red .brand-bg a:focus,
 body.brand-red .brand-bg a:active {
   color: #cccccc !important;
 }
-body.brand-red .brand-bg a:hover .new-window-link {
+body.brand-red .brand-bg a:hover .new-window-link,
+body.brand-red .brand-bg a:hover .insecure-link {
   color: #cccccc !important;
 }
 body.brand-red .brand-bg a,
@@ -6749,7 +6811,8 @@ body.brand-red .brand-text a:focus,
 body.brand-red .brand-text a:active {
   color: #2e050f !important;
 }
-body.brand-red .brand-text a:hover .new-window-link {
+body.brand-red .brand-text a:hover .new-window-link,
+body.brand-red .brand-text a:hover .insecure-link {
   color: #2e050f !important;
 }
 body.brand-red .brand-text a,
@@ -7199,7 +7262,8 @@ body.brand-red .id7-page-footer .id7-app-footer a:focus,
 body.brand-red .id7-page-footer .id7-app-footer a:active {
   color: #cccccc;
 }
-body.brand-red .id7-page-footer .id7-app-footer a:hover .new-window-link {
+body.brand-red .id7-page-footer .id7-app-footer a:hover .new-window-link,
+body.brand-red .id7-page-footer .id7-app-footer a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-red .id7-page-footer .id7-app-footer a,
@@ -7254,7 +7318,8 @@ body.brand-red .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
 body.brand-red .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   color: #050505;
 }
-body.brand-red .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link {
+body.brand-red .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .new-window-link,
+body.brand-red .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover .insecure-link {
   color: #050505;
 }
 body.brand-red .id7-page-footer.id7-footer-coloured .id7-site-footer a,
@@ -7654,7 +7719,12 @@ body.brand-red .boxstyle_.box5 a:hover .new-window-link,
 body.brand-red .boxstyle-xs.box5 a:hover .new-window-link,
 body.brand-red .boxstyle-sm.box5 a:hover .new-window-link,
 body.brand-red .boxstyle-md.box5 a:hover .new-window-link,
-body.brand-red .boxstyle-lg.box5 a:hover .new-window-link {
+body.brand-red .boxstyle-lg.box5 a:hover .new-window-link,
+body.brand-red .boxstyle_.box5 a:hover .insecure-link,
+body.brand-red .boxstyle-xs.box5 a:hover .insecure-link,
+body.brand-red .boxstyle-sm.box5 a:hover .insecure-link,
+body.brand-red .boxstyle-md.box5 a:hover .insecure-link,
+body.brand-red .boxstyle-lg.box5 a:hover .insecure-link {
   color: #cccccc;
 }
 body.brand-red .boxstyle_.box5 a,
