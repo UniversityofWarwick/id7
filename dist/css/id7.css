@@ -8690,25 +8690,21 @@ body {
 }
 @media screen and (min-width: 768px) {
   html.flexbox .id7-fixed-width-container {
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
     height: 100vh;
-            flex-direction: column;
+        flex-direction: column;
 
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+    -ms-flex-direction: column;
   }
   html.flexbox .id7-fixed-width-container .id7-main-content-area {
-    -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
   }
   html.flexbox .id7-fixed-width-container .id7-page-header,
   html.flexbox .id7-fixed-width-container .id7-page-footer {
-    -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
-            flex-shrink: 0;
+    flex-shrink: 0;
   }
 }
 @media (min-width: 768px) {
@@ -8974,14 +8970,12 @@ body {
 .id7-utility-bar a:link,
 .id7-utility-bar a:visited {
   -webkit-text-decoration-color: #fff;
-     -moz-text-decoration-color: #fff;
           text-decoration-color: #fff;
 }
 .id7-utility-bar a:hover,
 .id7-utility-bar a:focus,
 .id7-utility-bar a:active {
   -webkit-text-decoration-color: #ccc;
-     -moz-text-decoration-color: #ccc;
           text-decoration-color: #ccc;
 }
 .id7-utility-bar .caret {
@@ -9050,14 +9044,12 @@ body {
 .id7-utility-bar .popover.account-information .actions a:link,
 .id7-utility-bar .popover.account-information .actions a:visited {
   -webkit-text-decoration-color: #707070;
-     -moz-text-decoration-color: #707070;
           text-decoration-color: #707070;
 }
 .id7-utility-bar .popover.account-information .actions a:hover,
 .id7-utility-bar .popover.account-information .actions a:focus,
 .id7-utility-bar .popover.account-information .actions a:active {
   -webkit-text-decoration-color: #000;
-     -moz-text-decoration-color: #000;
           text-decoration-color: #000;
 }
 .id7-utility-bar .popover.account-information .actions a:hover,
@@ -9239,14 +9231,12 @@ html.safari .id7-masthead {
 .id7-masthead .id7-header-text a:link,
 .id7-masthead .id7-header-text a:visited {
   -webkit-text-decoration-color: #747474;
-     -moz-text-decoration-color: #747474;
           text-decoration-color: #747474;
 }
 .id7-masthead .id7-header-text a:hover,
 .id7-masthead .id7-header-text a:focus,
 .id7-masthead .id7-header-text a:active {
   -webkit-text-decoration-color: #050505;
-     -moz-text-decoration-color: #050505;
           text-decoration-color: #050505;
 }
 .id7-masthead .id7-header-text a,
@@ -9421,14 +9411,12 @@ html.safari .id7-masthead {
 .id7-masthead .id7-logo-row nav a:link,
 .id7-masthead .id7-logo-row nav a:visited {
   -webkit-text-decoration-color: #707070;
-     -moz-text-decoration-color: #707070;
           text-decoration-color: #707070;
 }
 .id7-masthead .id7-logo-row nav a:hover,
 .id7-masthead .id7-logo-row nav a:focus,
 .id7-masthead .id7-logo-row nav a:active {
   -webkit-text-decoration-color: #000;
-     -moz-text-decoration-color: #000;
           text-decoration-color: #000;
 }
 .id7-masthead .id7-logo-row:hover nav {
@@ -9499,14 +9487,12 @@ html.safari .id7-masthead {
 .carousel a:link,
 .carousel a:visited {
   -webkit-text-decoration-color: #fff;
-     -moz-text-decoration-color: #fff;
           text-decoration-color: #fff;
 }
 .carousel a:hover,
 .carousel a:focus,
 .carousel a:active {
   -webkit-text-decoration-color: #ccc;
-     -moz-text-decoration-color: #ccc;
           text-decoration-color: #ccc;
 }
 .carousel-control .glyphicon {
@@ -10699,104 +10685,84 @@ footer .id7-app-footer .id7-footer-utility ul > li:first-child:before {
   margin-top: 0;
 }
 .equal-height-xs {
-  display: -webkit-flex;
   display: -ms-flexbox;
-  display:         flex;
+  display: flex;
 }
 .equal-height-xs > [class*='col-'] {
-  display: -webkit-flex;
   display: -ms-flexbox;
-  display:         flex;
-          flex-direction: column;
+  display: flex;
+      flex-direction: column;
 
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
+  -ms-flex-direction: column;
 }
 .equal-height-xs > [class*='col-'] > * {
-  -webkit-flex: auto;
-      -ms-flex: auto;
-          flex: auto;
+  -ms-flex: auto;
+      flex: auto;
 }
 @media (min-width: 768px) {
   .equal-height {
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
   }
   .equal-height > [class*='col-'] {
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
-            flex-direction: column;
+    display: flex;
+        flex-direction: column;
 
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+    -ms-flex-direction: column;
   }
   .equal-height > [class*='col-'] > * {
-    -webkit-flex: auto;
-        -ms-flex: auto;
-            flex: auto;
+    -ms-flex: auto;
+        flex: auto;
   }
   .equal-height-sm {
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
   }
   .equal-height-sm > [class*='col-'] {
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
-            flex-direction: column;
+    display: flex;
+        flex-direction: column;
 
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+    -ms-flex-direction: column;
   }
   .equal-height-sm > [class*='col-'] > * {
-    -webkit-flex: auto;
-        -ms-flex: auto;
-            flex: auto;
+    -ms-flex: auto;
+        flex: auto;
   }
 }
 @media (min-width: 992px) {
   .equal-height-md {
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
   }
   .equal-height-md > [class*='col-'] {
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
-            flex-direction: column;
+    display: flex;
+        flex-direction: column;
 
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+    -ms-flex-direction: column;
   }
   .equal-height-md > [class*='col-'] > * {
-    -webkit-flex: auto;
-        -ms-flex: auto;
-            flex: auto;
+    -ms-flex: auto;
+        flex: auto;
   }
 }
 @media (min-width: 1200px) {
   .equal-height-lg {
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
   }
   .equal-height-lg > [class*='col-'] {
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
-            flex-direction: column;
+    display: flex;
+        flex-direction: column;
 
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+    -ms-flex-direction: column;
   }
   .equal-height-lg > [class*='col-'] > * {
-    -webkit-flex: auto;
-        -ms-flex: auto;
-            flex: auto;
+    -ms-flex: auto;
+        flex: auto;
   }
 }
 .pull-xs-left {
