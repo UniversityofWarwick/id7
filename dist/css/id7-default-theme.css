@@ -42,14 +42,12 @@ a,
 a:link,
 a:visited {
   -webkit-text-decoration-color: #8c6e96;
-     -moz-text-decoration-color: #8c6e96;
           text-decoration-color: #8c6e96;
 }
 a:hover,
 a:focus,
 a:active {
   -webkit-text-decoration-color: #1e1023;
-     -moz-text-decoration-color: #1e1023;
           text-decoration-color: #1e1023;
 }
 blockquote.quotes {
@@ -80,14 +78,12 @@ blockquote.quotes::before {
 .brand-bg a:link,
 .brand-bg a:visited {
   -webkit-text-decoration-color: #fff !important;
-     -moz-text-decoration-color: #fff !important;
           text-decoration-color: #fff !important;
 }
 .brand-bg a:hover,
 .brand-bg a:focus,
 .brand-bg a:active {
   -webkit-text-decoration-color: #ccc !important;
-     -moz-text-decoration-color: #ccc !important;
           text-decoration-color: #ccc !important;
 }
 .brand-text {
@@ -111,14 +107,12 @@ blockquote.quotes::before {
 .brand-text a:link,
 .brand-text a:visited {
   -webkit-text-decoration-color: #8c6e96 !important;
-     -moz-text-decoration-color: #8c6e96 !important;
           text-decoration-color: #8c6e96 !important;
 }
 .brand-text a:hover,
 .brand-text a:focus,
 .brand-text a:active {
   -webkit-text-decoration-color: #1e1023 !important;
-     -moz-text-decoration-color: #1e1023 !important;
           text-decoration-color: #1e1023 !important;
 }
 .brand-border {
@@ -562,14 +556,12 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-page-footer .id7-app-footer a:link,
 .id7-page-footer .id7-app-footer a:visited {
   -webkit-text-decoration-color: #fff;
-     -moz-text-decoration-color: #fff;
           text-decoration-color: #fff;
 }
 .id7-page-footer .id7-app-footer a:hover,
 .id7-page-footer .id7-app-footer a:focus,
 .id7-page-footer .id7-app-footer a:active {
   -webkit-text-decoration-color: #ccc;
-     -moz-text-decoration-color: #ccc;
           text-decoration-color: #ccc;
 }
 .id7-page-footer .id7-horizontal-divider .divider {
@@ -618,14 +610,12 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:link,
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:visited {
   -webkit-text-decoration-color: #747474;
-     -moz-text-decoration-color: #747474;
           text-decoration-color: #747474;
 }
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:hover,
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:focus,
 .id7-page-footer.id7-footer-coloured .id7-site-footer a:active {
   -webkit-text-decoration-color: #050505;
-     -moz-text-decoration-color: #050505;
           text-decoration-color: #050505;
 }
 .id7-page-footer.id7-footer-coloured .id7-app-footer .id7-logo-bleed::before,
@@ -1035,7 +1025,6 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .boxstyle-md.box5 a:visited,
 .boxstyle-lg.box5 a:visited {
   -webkit-text-decoration-color: #fff;
-     -moz-text-decoration-color: #fff;
           text-decoration-color: #fff;
 }
 .boxstyle_.box5 a:hover,
@@ -1054,7 +1043,6 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .boxstyle-md.box5 a:active,
 .boxstyle-lg.box5 a:active {
   -webkit-text-decoration-color: #ccc;
-     -moz-text-decoration-color: #ccc;
           text-decoration-color: #ccc;
 }
 .boxstyle_.box5 h1,
