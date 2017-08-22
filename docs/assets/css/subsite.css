@@ -175,7 +175,8 @@ footer .id7-app-footer:after {
 .id7-main-content-area .slideshow .carousel-controls a:active {
   color: #cccccc;
 }
-.id7-main-content-area .slideshow .carousel-controls a:hover .new-window-link {
+.id7-main-content-area .slideshow .carousel-controls a:hover .new-window-link,
+.id7-main-content-area .slideshow .carousel-controls a:hover .insecure-link {
   color: #cccccc;
 }
 .id7-main-content-area .slideshow .carousel-controls a,

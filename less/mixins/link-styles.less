@@ -7,8 +7,12 @@
     color: @hover;
   }
 
-  a:hover .new-window-link {
-    color: @hover;
+  a {
+    &:hover {
+      .new-window-link, .insecure-link {
+        color: @hover;
+      }
+    }
   }
 }
 
@@ -35,6 +39,18 @@
 
   a:hover, a:focus, a:active {
     color: inherit;
+  }
+
+  a {
+    .new-window-link, .insecure-link {
+      color: inherit;
+    }
+
+    &:hover {
+      .new-window-link, .insecure-link {
+        color: inherit;
+      }
+    }
   }
 }
 

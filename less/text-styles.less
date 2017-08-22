@@ -15,21 +15,34 @@ a {
 }
 
 a {
-  .new-window-link {
+  .new-window-link, .insecure-link {
     .fa();
     font-size: @font-size-small;
     padding-left: 3px;
     margin-right: 2px;
-    color: @gray-light;
     .transition(color 0.3s linear);
+  }
+
+  .new-window-link {
+    color: @gray-light;
 
     &:before {
       content: @fa-var-external-link;
     }
   }
 
-  &:hover .new-window-link {
-    color: @link-color;
+  .insecure-link {
+    color: @brand-danger;
+
+    &:before {
+      content: @fa-var-unlock-alt;
+    }
+  }
+
+  &:hover {
+    .new-window-link, .insecure-link {
+      color: @link-color;
+    }
   }
 
   &[href] {
