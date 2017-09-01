@@ -16,7 +16,7 @@ $(function () {
     }
   })
 
-  test('should return jquery collecption containing the element', function () {
+  test('should return jQuery collection containing the element', function () {
     var $el = $('<div/>');
     var $accountPopover = $el.accountPopover({ logoutlink: 'http://websignon.warwick.ac.uk/logout' });
     ok($accountPopover instanceof $, 'returns jquery collection');
