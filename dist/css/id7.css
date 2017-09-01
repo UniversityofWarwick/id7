@@ -8641,6 +8641,9 @@ label.radio-inline {
 .alert-danger a:hover .insecure-link {
   color: inherit;
 }
+.caret {
+  border-top: 4px solid;
+}
 .id7-main-content-area {
   font-size: 14px;
   font-weight: 300;
@@ -9007,82 +9010,107 @@ body {
 .id7-utility-bar .dropdown-menu > li.divider {
   margin: 5px 0;
 }
-.id7-utility-bar .popover.account-information {
-  width: 360px;
-  max-width: 100%;
-  height: 640px;
+.id7-utility-bar .popover.my-warwick:not(.account-information) {
+  width: 390px;
+  height: 80vh;
+  max-height: 1200px;
   padding: 0;
+}
+.id7-utility-bar .popover.my-warwick.loaded:not(.account-information) .arrow {
+  border-bottom-color: #8c6e96;
+}
+.id7-utility-bar .popover.my-warwick.loaded:not(.account-information) .arrow:after {
+  border-bottom-color: #8c6e96;
+}
+.id7-utility-bar .popover.account-information,
+.id7-utility-bar .popover.my-warwick {
+  max-width: 100%;
   text-shadow: none;
 }
+.id7-utility-bar .popover.account-information .arrow,
+.id7-utility-bar .popover.my-warwick .arrow,
+.id7-utility-bar .popover.account-information .arrow:after,
+.id7-utility-bar .popover.my-warwick .arrow:after {
+  transition: .3s border ease-in-out;
+}
 .id7-utility-bar .popover.account-information .popover-inner,
-.id7-utility-bar .popover.account-information .popover-content {
+.id7-utility-bar .popover.my-warwick .popover-inner,
+.id7-utility-bar .popover.account-information .popover-content,
+.id7-utility-bar .popover.my-warwick .popover-content {
   height: 100%;
   padding: 0;
 }
-.id7-utility-bar .popover.account-information .popover-content {
-  display: -webkit-box;
-  display: -webkit-flex;
+.id7-utility-bar .popover.account-information .popover-content,
+.id7-utility-bar .popover.my-warwick .popover-content {
   display: -ms-flexbox;
-  display:         flex;
-          flex-direction: column;
+  display: flex;
+      flex-direction: column;
 
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
+  -ms-flex-direction: column;
 }
-.id7-utility-bar .popover.account-information .popover-content .account-info {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.id7-utility-bar .popover.account-information .popover-content .account-info,
+.id7-utility-bar .popover.my-warwick .popover-content .account-info {
+  height: 100%;
+
+  -ms-flex: 1;
+      flex: 1;
 }
-.id7-utility-bar .popover.account-information .popover-content .actions {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-}
-.id7-utility-bar .popover.account-information .account-info iframe {
+.id7-utility-bar .popover.account-information .popover-content .account-info iframe,
+.id7-utility-bar .popover.my-warwick .popover-content .account-info iframe {
   width: 100%;
   height: 100%;
 }
-.id7-utility-bar .popover.account-information .actions {
+.id7-utility-bar .popover.account-information .popover-content .actions,
+.id7-utility-bar .popover.my-warwick .popover-content .actions {
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+}
+.id7-utility-bar .actions {
   background: #f7f7f7;
   border-top: 1px solid #ebebeb;
 }
-.id7-utility-bar .popover.account-information .actions a,
-.id7-utility-bar .popover.account-information .actions a:link,
-.id7-utility-bar .popover.account-information .actions a:visited {
+.id7-utility-bar .actions a,
+.id7-utility-bar .actions a:link,
+.id7-utility-bar .actions a:visited {
   color: #333;
 }
-.id7-utility-bar .popover.account-information .actions a:hover,
-.id7-utility-bar .popover.account-information .actions a:focus,
-.id7-utility-bar .popover.account-information .actions a:active {
+.id7-utility-bar .actions a:hover,
+.id7-utility-bar .actions a:focus,
+.id7-utility-bar .actions a:active {
   color: #000;
 }
-.id7-utility-bar .popover.account-information .actions a:hover .new-window-link,
-.id7-utility-bar .popover.account-information .actions a:hover .insecure-link {
+.id7-utility-bar .actions a:hover .new-window-link,
+.id7-utility-bar .actions a:hover .insecure-link {
   color: #000;
 }
-.id7-utility-bar .popover.account-information .actions a,
-.id7-utility-bar .popover.account-information .actions a:link,
-.id7-utility-bar .popover.account-information .actions a:visited {
+.id7-utility-bar .actions a,
+.id7-utility-bar .actions a:link,
+.id7-utility-bar .actions a:visited {
   -webkit-text-decoration-color: #707070;
           text-decoration-color: #707070;
 }
-.id7-utility-bar .popover.account-information .actions a:hover,
-.id7-utility-bar .popover.account-information .actions a:focus,
-.id7-utility-bar .popover.account-information .actions a:active {
+.id7-utility-bar .actions a:hover,
+.id7-utility-bar .actions a:focus,
+.id7-utility-bar .actions a:active {
   -webkit-text-decoration-color: #000;
           text-decoration-color: #000;
 }
-.id7-utility-bar .popover.account-information .actions a:hover,
-.id7-utility-bar .popover.account-information .actions a:focus {
+.id7-utility-bar .actions a:hover,
+.id7-utility-bar .actions a:focus {
   text-decoration: none;
 }
-.id7-utility-bar .popover.account-information .actions .btn-group-justified {
+.id7-utility-bar .actions .btn-group-justified {
   border-spacing: 11px;
+}
+.id7-utility-bar .popover.account-information {
+  width: 320px;
+  height: auto;
+}
+.id7-utility-bar .popover.account-information .popover-content .account-info {
+  padding: 15px 19px;
+}
+.id7-utility-bar .popover.account-information .popover-content .account-info iframe {
+  height: 80px;
 }
 .id7-masthead {
   padding-right: 20px;
@@ -10835,5 +10863,86 @@ footer .id7-app-footer .id7-footer-utility ul > li:first-child:before {
 }
 .flush-bottom {
   margin-bottom: -20px;
+}
+.id7-notifications-badge {
+  font-size: .8em;
+  opacity: .5;
+}
+.id7-notifications-badge .brand-text:not(.fa) {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.id7-notifications-badge + .caret {
+  margin-left: 1px;
+}
+.id7-notifications-badge.animating {
+  opacity: 1;
+  -webkit-animation-name: flash;
+          animation-name: flash;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
+}
+@-webkit-keyframes slideInDown {
+  from {
+    visibility: visible;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    visibility: visible;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+.slideInDown {
+  -webkit-animation: slideInDown .3s;
+          animation: slideInDown .3s;
+}
+@-webkit-keyframes flash {
+  from,
+  10%,
+  to {
+    opacity: 1;
+  }
+  5%,
+  15% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  from,
+  10%,
+  to {
+    opacity: 1;
+  }
+  5%,
+  15% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=id7.css.map */
