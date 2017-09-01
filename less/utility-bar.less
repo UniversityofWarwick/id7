@@ -49,38 +49,86 @@
     }
   }
 
-  .popover.account-information {
+  .popover.my-warwick:not(.account-information) {
+    width: @id7-mw-popover-width;
+    max-height: @id7-mw-popover-height;
+    height: 80vh;
+    padding: 0;
+
+  }
+
+  .popover.my-warwick.loaded:not(.account-information) {
+    .arrow {
+      border-bottom-color: #8C6E96;
+    }
+
+    .arrow:after {
+      border-bottom-color: #8C6E96;
+    }
+  }
+
+  .popover.account-information, .popover.my-warwick {
     text-shadow: none;
-
     max-width: 100%;
+
+    .arrow, .arrow:after {
+      transition: 0.3s border ease-in-out;
+    }
+
+    .popover-inner, .popover-content {
+      height: 100%;
+      padding: 0;
+    }
+
+    .popover-content {
+      display: flex;
+      flex-direction: column;
+
+      .account-info {
+        height: 100%; // fix for Chrome expanding popover
+        iframe {
+          height: 100%;
+          width: 100%;
+        }
+        flex: 1;
+      }
+
+      .actions {
+        flex: 0 0 auto;
+      }
+    }
+  }
+
+  .actions {
+    .link-colour(@gray-dark);
+
+    a:hover, a:focus {
+      text-decoration: none;
+    }
+
+    background: @id7-account-popover-actions-bg;
+    border-top: 1px solid @id7-account-popover-actions-border;
+
+    .btn-group-justified {
+      border-spacing: (@line-height-computed / 2);
+    }
+  }
+
+  .popover.account-information {
     width: @id7-account-popover-width;
+    height: auto;
 
-    .account-info {
-      margin-bottom: 9px;
+    .popover-content .account-info {
+      padding: 15px 19px;
+    }
 
-      iframe {
-        height: 80px;
-        width: 100%;
+    .popover-content {
+      .account-info {
+        iframe {
+          height: 80px;
+        }
       }
     }
 
-    .actions {
-      .link-colour(@gray-dark);
-
-      a:hover, a:focus {
-        text-decoration: none;
-      }
-
-      background: @id7-account-popover-actions-bg;
-      border-top: 1px solid @id7-account-popover-actions-border;
-
-      margin-left: (-(@popover-padding-horizontal + 1px));
-      margin-right: (-(@popover-padding-horizontal + 1px));
-      margin-bottom: (-(@popover-padding-vertical + 1px));
-
-      .btn-group-justified {
-        border-spacing: (@line-height-computed / 2);
-      }
-    }
   }
 }

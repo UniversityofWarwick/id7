@@ -22426,14 +22426,19 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
   var Config = {
     Templates: {
-      Popover: function (o) { return '<div class="account-info"><iframe src="' + escapeHtml(o.iframelink) + '" scrolling="no" frameborder="0" allowtransparency="true" seamless sandbox="allow-same-origin allow-scripts allow-top-navigation"></iframe></div><div class="actions"><div class="btn-group btn-group-justified"><div class="btn-group sign-out"><a href="' + escapeHtml(o.logoutlink) + '" class="btn btn-default">Sign out</a></div></div></div>'; },
+      Popover: function (o) { return '<div class="account-info"><iframe src="' + escapeHtml(o.useMwIframe ? o.iframelink + '?embedded' : o.legacyIframeLink) + '" scrolling="auto" frameborder="0" allowtransparency="true" seamless sandbox="allow-same-origin allow-scripts allow-top-navigation allow-forms allow-popups"></iframe></div><div class="actions"><div class="btn-group btn-group-justified"><div class="btn-group sign-out"><a href="' + escapeHtml(o.logoutlink) + '" class="btn btn-default">Sign out</a></div></div></div>'; },
       Action: function (o) { return '<div class="btn-group"><a href="' + escapeHtml(o.href) + '" title="' + escapeHtml(o.tooltip) + '" class="btn btn-default ' + escapeHtml(o.classes) + '">' + escapeHtml(o.title) + '</a></div>'; }
     },
     Defaults: {
       container: false,
-      iframelink: 'https://websignon.warwick.ac.uk/origin/account/popover',
+      iframelink: 'https://my-dev.warwick.ac.uk/',
+      notificationsApi: 'https://my-dev.warwick.ac.uk/api/id7/notifications/unreads',
+      legacyIframeLink: 'https://websignon.warwick.ac.uk/origin/account/popover',
+      showNotificationsBadge: true,
+      useMwIframe: true,
+      maxNumberNotifications: 99,
       template: [
-        '<div class="popover account-information">',
+        '<div class="popover my-warwick hybrid-overlay">',
         '<div class="arrow"></div>',
         '<div class="popover-inner">',
         '<div class="popover-content"><p></p></div>',
@@ -22443,6 +22448,19 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
     },
     MessagePrefix: 'message.id7.account-popover.'
   };
+
+  var fetchNotificationData = (function (endpoint, callback, errorHandler) {
+    // avoid fetch for compatibility
+    $.ajax({
+      url: endpoint,
+      success: callback,
+      error: errorHandler,
+      dataType: 'json',
+      xhrFields: {
+        withCredentials: true
+      }
+    });
+  });
 
   /**
    * Display a popover with account information
@@ -22461,28 +22479,64 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
     }
 
     $.extend(AccountPopover.prototype, {
+      createPopover: function ($trigger) {
+        var opts = {
+          container: this.options.container,
+          content: Config.Templates.Popover(this.options),
+          template: this.options.template,
+          html: true,
+          placement: 'bottom',
+          title: 'Account information',
+          trigger: 'manual'
+        };
+        $trigger.popover(opts);
+      },
+      isBlacklistedDevice: function isBlacklistedDevice() {
+        var userAgent = navigator.userAgent;
+        var iPadInUse = userAgent.indexOf('iPad') !== -1;
+        // ref https://stackoverflow.com/questions/45171905/
+        return iPadInUse;
+      },
+      isMwFeatureAvailable: function isMwFeatureAvailable($trigger) {
+        return $trigger.data('mw-functionality') && !this.isBlacklistedDevice();
+      },
       wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
 
-        $trigger
-          .on('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            $trigger.popover('toggle');
-            return false;
-          })
-          .popover({
-            container: this.options.container,
-            content: Config.Templates.Popover(this.options),
-            template: this.options.template,
-            html: true,
-            placement: 'bottom',
-            title: 'Account information',
-            trigger: 'manual'
-          });
-
         if (this.options.name) {
-          $trigger.html(this.options.name + '<span class="caret"></span>');
+          var badgeHtml = ' <span class="fa-stack id7-notifications-badge">  <i class="fa fa-circle fa-stack-2x"></i>  <strong class="fa-stack-1x fa fa-spinner fa-spin brand-text counter-value"></strong> </span>';
+          if (!this.isMwFeatureAvailable($trigger) || !this.options.showNotificationsBadge) {
+            badgeHtml = '';
+          }
+          $trigger.html(this.options.name + badgeHtml + ' <span class="caret"></span>');
+        }
+
+        var $badge = $trigger.find('.id7-notifications-badge');
+        $trigger.on('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $trigger.popover('toggle');
+          $badge.find('.counter-value:not(.fa-exclamation-triangle):not(.fa-spinner)').text('0');
+          $badge.removeClass('animating');
+          return false;
+        });
+        this.createPopover($trigger);
+
+        if (this.options.showNotificationsBadge && this.isMwFeatureAvailable($trigger)) {
+          var that = this;
+          fetchNotificationData(this.options.notificationsApi, function (data) {
+            var unreads = Math.min(data.unreads, 99);
+            $badge.find('.counter-value').removeClass('fa-spinner').removeClass('fa-spin').addClass('slideInDown').text(unreads);
+            if (unreads > 0) {
+              $badge.fadeIn().addClass('animating');
+              that.options.iframelink = that.options.iframelink + 'notifications';
+              $trigger.data('bs.popover').options.content = Config.Templates.Popover(that.options);
+            }
+          }, function () {
+            $badge.find('.counter-value').removeClass('fa-spinner')
+              .removeClass('fa-spin').addClass('fa-exclamation-triangle');
+            $badge.attr('title', 'There was a problem communicating with the MyWarwick notifications service');
+          });
         }
 
         // Click away to dismiss
@@ -22492,6 +22546,29 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
             $trigger.popover('hide');
           }
         });
+
+        // Smaller screens get the old popover
+        $(window).on('id7:reflow', $.proxy(function (e, screenConfig) {
+          this.options.useMwIframe = screenConfig.name !== 'xs'
+            && $(window).height() >= 700 && this.isMwFeatureAvailable($trigger);
+
+          $trigger.find('.id7-notifications-badge').toggle(this.options.useMwIframe);
+
+          if ($trigger.data('bs.popover') !== undefined) {
+            $trigger.data('bs.popover').options.content = Config.Templates.Popover(this.options);
+
+            var toAdd = this.options.useMwIframe && this.isMwFeatureAvailable($trigger) ? 'my-warwick' : 'account-information';
+            var $bsPopover = $trigger.data('bs.popover');
+            $bsPopover.tip().removeClass('account-information', 'my-warwick').addClass(toAdd);
+
+            // trigger a reposition if the popover is open
+            // Note that this ends up reloading the iFrame, so remove the loaded class
+            if ($bsPopover.tip().hasClass('in')) {
+              $trigger.popover('show');
+              $trigger.next('.popover').removeClass('loading');
+            }
+          }
+        }, this));
       },
       onMessage: function onMessage(messageType, data) {
         var $popover = this.$trigger.next('.popover');
@@ -22507,6 +22584,9 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
             break;
           case 'resizeIframe':
             $popover.find('.account-info iframe').height(data.height);
+            break;
+          case 'layoutDidMount':
+            $popover.addClass('loaded');
             break;
           case 'signedOut':
             var loginlink = this.options.loginlink;
@@ -22553,7 +22633,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
             var $trigger = $(this);
             var accountPopover = $trigger.data('id7.account-popover');
 
-            if (accountPopover.options.iframelink.indexOf(origin) !== 0) {
+            if (accountPopover.options.iframelink.indexOf(origin) !== 0 && accountPopover.options.legacyIframeLink.indexOf(origin) !== 0) {
               console.error('Ignored message of type ' + messageType + ' because origin ' + origin + ' didn\'t match iframe link ' + accountPopover.options.iframelink);
             } else {
               accountPopover.onMessage(messageType, data);
