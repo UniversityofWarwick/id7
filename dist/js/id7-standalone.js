@@ -122,8 +122,8 @@
     },
     Defaults: {
       container: false,
-      iframelink: 'https://my-dev.warwick.ac.uk/',
-      notificationsApi: 'https://my-dev.warwick.ac.uk/api/id7/notifications/unreads',
+      iframelink: 'https://my.warwick.ac.uk/',
+      notificationsApi: 'https://my.warwick.ac.uk/api/id7/notifications/unreads',
       legacyIframeLink: 'https://websignon.warwick.ac.uk/origin/account/popover',
       showNotificationsBadge: true,
       useMwIframe: true,
@@ -241,7 +241,7 @@
         // Smaller screens get the old popover
         $(window).on('id7:reflow', $.proxy(function (e, screenConfig) {
           this.options.useMwIframe = screenConfig.name !== 'xs'
-            && $(window).height() >= 700 && this.isMwFeatureAvailable($trigger);
+            && $(window).height() >= 600 && this.isMwFeatureAvailable($trigger);
 
           $trigger.find('.id7-notifications-badge').toggle(this.options.useMwIframe);
 
