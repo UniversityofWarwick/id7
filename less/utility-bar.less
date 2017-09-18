@@ -54,7 +54,6 @@
     max-height: @id7-mw-popover-height;
     height: 80vh;
     padding: 0;
-
   }
 
   .popover.my-warwick.loaded:not(.account-information) {
@@ -70,20 +69,20 @@
   .popover.account-information, .popover.my-warwick {
     text-shadow: none;
     max-width: 100%;
+    display: flex !important;
 
     .arrow, .arrow:after {
       transition: 0.3s border ease-in-out;
     }
 
     .popover-inner, .popover-content {
-      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
       padding: 0;
     }
 
     .popover-content {
-      display: flex;
-      flex-direction: column;
-
       .account-info {
         height: 100%; // fix for Chrome expanding popover
         iframe {

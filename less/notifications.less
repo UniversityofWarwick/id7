@@ -1,21 +1,23 @@
 .id7-notifications-badge {
   font-size: 0.8em;
   opacity: 0.5;
-  .brand-text:not(.fa) {
+  margin-left: 2px;
+
+  + .caret {
+    margin-left: 2px;
+  }
+
+  .counter-value:not(.fa-exclamation-triangle):not(.fa-spinner) {
     font-family: @font-family-sans-serif;
   }
-}
 
-.id7-notifications-badge + .caret {
-  margin-left: 1px;
-}
-
-.id7-notifications-badge.animating {
-  opacity: 1;
-  animation-name: flash;
-  animation-duration: 5s;
-  animation-delay: 5s;
-  animation-iteration-count: 5;
+  &.animating {
+    opacity: 1;
+    animation-name: flash;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: 5;
+  }
 }
 
 @keyframes slideInDown {

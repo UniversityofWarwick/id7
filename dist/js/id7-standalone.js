@@ -195,11 +195,11 @@
         var $trigger = this.$trigger;
 
         if (this.options.name) {
-          var badgeHtml = ' <span class="fa-stack id7-notifications-badge">  <i class="fa fa-circle fa-stack-2x"></i>  <strong class="fa-stack-1x fa fa-spinner fa-spin brand-text counter-value"></strong> </span>';
+          var badgeHtml = '<span class="fa-stack id7-notifications-badge">  <i class="fa fa-circle fa-stack-2x"></i>  <strong class="fa-stack-1x fa fa-spinner fa-spin brand-text counter-value"></strong> </span>';
           if (!this.isMwFeatureAvailable($trigger) || !this.options.showNotificationsBadge) {
             badgeHtml = '';
           }
-          $trigger.html(this.options.name + badgeHtml + ' <span class="caret"></span>');
+          $trigger.html(this.options.name + badgeHtml + '<span class="caret"></span>');
         }
 
         var $badge = $trigger.find('.id7-notifications-badge');
