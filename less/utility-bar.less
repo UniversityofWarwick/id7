@@ -66,6 +66,24 @@
     }
   }
 
+  .my-warwick-popover-theme(@n, @colour) {
+    .popover.my-warwick.loaded.theme-transparent-@{n}:not(.account-information) {
+      .arrow {
+        border-bottom-color: @colour;
+      }
+
+      .arrow:after {
+        border-bottom-color: @colour;
+      }
+    }
+  }
+
+  .my-warwick-popover-theme(1, #8C6E96);
+  .my-warwick-popover-theme(2, #AC554E);
+  .my-warwick-popover-theme(3, #338888);
+  .my-warwick-popover-theme(4, #2F6B88);
+  .my-warwick-popover-theme(5, #A35138);
+
   .popover.account-information, .popover.my-warwick {
     text-shadow: none;
     max-width: 100%;
