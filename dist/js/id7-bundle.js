@@ -22587,6 +22587,10 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
             break;
           case 'layoutDidMount':
             $popover.addClass('loaded');
+            this.updateColourTheme(data.colourTheme);
+            break;
+          case 'colourThemeChange':
+            this.updateColourTheme(data.colourTheme);
             break;
           case 'signedOut':
             var loginlink = this.options.loginlink;
@@ -22595,6 +22599,11 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
           default:
             console.error('Unexpected message type: ' + messageType);
         }
+      },
+      updateColourTheme: function updateColourTheme(colourTheme) {
+        this.$trigger.next('.popover').removeClass(function (i, className) {
+          return $.grep(className.split(' '), function (singleClass) { return singleClass.indexOf('theme-') === 0; }).join(' ');
+        }).addClass('theme-' + colourTheme);
       }
     });
 
