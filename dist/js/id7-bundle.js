@@ -22498,7 +22498,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
         return iPadInUse;
       },
       isMwFeatureAvailable: function isMwFeatureAvailable($trigger) {
-        return $trigger.data('mw-functionality') && !this.isBlacklistedDevice();
+        return !this.isBlacklistedDevice();
       },
       wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
