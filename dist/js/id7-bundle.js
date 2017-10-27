@@ -23220,6 +23220,8 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
     $.extend(WideTables.prototype, {
       findWideTables: function findWideTables($container) {
         return $container.find('table').filter(function () {
+          return $(this).parents('.no-wide-tables').length === 0;
+        }).filter(function () {
           var $table = $(this);
           var originalMaxWidth = $table.css('max-width');
           $table.css('max-width', 'none');
