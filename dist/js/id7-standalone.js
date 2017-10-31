@@ -193,6 +193,8 @@
       },
       wireEventHandlers: function wireEventHandlers() {
         var $trigger = this.$trigger;
+        var that = this;
+        var iframeLink = this.options.iframelink;
 
         if (this.options.name) {
           var badgeHtml = '<span class="fa-stack id7-notifications-badge">  <i class="fa fa-circle fa-stack-2x"></i>  <strong class="fa-stack-1x fa fa-spinner fa-spin brand-text counter-value"></strong> </span>';
@@ -208,19 +210,20 @@
           e.stopPropagation();
           $trigger.popover('toggle');
           $badge.find('.counter-value:not(.fa-exclamation-triangle):not(.fa-spinner)').text('0');
+          that.options.iframelink = iframeLink;
+          $trigger.data('bs.popover').options.content = Config.Templates.Popover(that.options);
           $badge.removeClass('animating');
           return false;
         });
         this.createPopover($trigger);
 
         if (this.options.showNotificationsBadge && this.isMwFeatureAvailable()) {
-          var that = this;
           fetchNotificationData(this.options.notificationsApi, function (data) {
             var unreads = Math.min(data.unreads, 99);
             $badge.find('.counter-value').removeClass('fa-spinner').removeClass('fa-spin').addClass('slideInDown').text(unreads);
             if (unreads > 0) {
               $badge.fadeIn().addClass('animating');
-              that.options.iframelink = that.options.iframelink + 'notifications';
+              that.options.iframelink = iframeLink + 'alerts';
               $trigger.data('bs.popover').options.content = Config.Templates.Popover(that.options);
             }
           }, function () {
