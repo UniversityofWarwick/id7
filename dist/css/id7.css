@@ -8974,34 +8974,44 @@ body {
 .id7-utility-bar .popover.my-warwick.loaded:not(.account-information) .arrow:after {
   border-bottom-color: #8c6e96;
 }
-.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-1:not(.account-information) .arrow {
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-1:not(.account-information) .arrow,
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-1--high-contrast:not(.account-information) .arrow {
   border-bottom-color: #8c6e96;
 }
-.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-1:not(.account-information) .arrow:after {
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-1:not(.account-information) .arrow:after,
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-1--high-contrast:not(.account-information) .arrow:after {
   border-bottom-color: #8c6e96;
 }
-.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-2:not(.account-information) .arrow {
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-2:not(.account-information) .arrow,
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-2--high-contrast:not(.account-information) .arrow {
   border-bottom-color: #ac554e;
 }
-.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-2:not(.account-information) .arrow:after {
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-2:not(.account-information) .arrow:after,
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-2--high-contrast:not(.account-information) .arrow:after {
   border-bottom-color: #ac554e;
 }
-.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-3:not(.account-information) .arrow {
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-3:not(.account-information) .arrow,
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-3--high-contrast:not(.account-information) .arrow {
   border-bottom-color: #388;
 }
-.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-3:not(.account-information) .arrow:after {
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-3:not(.account-information) .arrow:after,
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-3--high-contrast:not(.account-information) .arrow:after {
   border-bottom-color: #388;
 }
-.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-4:not(.account-information) .arrow {
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-4:not(.account-information) .arrow,
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-4--high-contrast:not(.account-information) .arrow {
   border-bottom-color: #2f6b88;
 }
-.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-4:not(.account-information) .arrow:after {
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-4:not(.account-information) .arrow:after,
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-4--high-contrast:not(.account-information) .arrow:after {
   border-bottom-color: #2f6b88;
 }
-.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-5:not(.account-information) .arrow {
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-5:not(.account-information) .arrow,
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-5--high-contrast:not(.account-information) .arrow {
   border-bottom-color: #a35138;
 }
-.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-5:not(.account-information) .arrow:after {
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-5:not(.account-information) .arrow:after,
+.id7-utility-bar .popover.my-warwick.loaded.theme-transparent-5--high-contrast:not(.account-information) .arrow:after {
   border-bottom-color: #a35138;
 }
 .id7-utility-bar .popover.account-information,
