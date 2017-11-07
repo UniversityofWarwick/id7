@@ -22522,6 +22522,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
           that.options.iframelink = iframeLink;
           $trigger.data('bs.popover').options.content = Config.Templates.Popover(that.options);
           $badge.removeClass('animating');
+          $trigger.blur();
           return false;
         });
         this.createPopover($trigger);
