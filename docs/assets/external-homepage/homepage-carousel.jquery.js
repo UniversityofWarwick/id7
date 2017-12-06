@@ -25,6 +25,7 @@
       menu: '.carousel-nav',
       logo: '.id7-logo a',
       panels: '.jumbotron-carousel > article:visible',
+      menuSelector: 'a',
       animation: {
         length: 300,
         easing: 'swing'
@@ -193,7 +194,9 @@
         } else if (isDesktop) {
           // First time init
           $container.panelSnap({
+            $menu: $(options.menu),
             panelSelector: options.panels,
+            menuSelector: options.menuSelector,
             slideSpeed: options.animation.length,
             easing: options.animation.easing,
             keyboardNavigation: options.keyboardNavigation,

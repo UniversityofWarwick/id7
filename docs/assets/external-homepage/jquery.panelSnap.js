@@ -1,11 +1,18 @@
+/**
+ * Copyright (c) 2013-present, Guido Bouman
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/* global jQuery */
+
 // Utility for creating objects in older browsers
 if ( typeof Object.create !== 'function' ) {
   Object.create = function( obj ) {
-
     function F() {}
     F.prototype = obj;
     return new F();
-
   };
 }
 
@@ -17,30 +24,8 @@ if ( typeof Object.create !== 'function' ) {
  * - jQuery 1.7 or higher (no jQuery.migrate needed)
  *
  * https://github.com/guidobouman/jquery-panelsnap
- *
- * Copyright 2013, Guido Bouman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- * Date: Wed Feb 13 16:05:00 2013 +0100
  */
-(function($, window, document, undefined) {
+(function ($, window, document) {
   'use strict';
 
   var pluginName = 'panelSnap';
@@ -54,7 +39,6 @@ if ( typeof Object.create !== 'function' ) {
     scrollOffset: 0,
 
     init: function(options, container) {
-
       var self = this;
 
       self.container = container;
@@ -68,7 +52,7 @@ if ( typeof Object.create !== 'function' ) {
         self.$snapContainer = $(document.scrollingElement || document.documentElement);
 
         var ua = navigator.userAgent;
-        if(~ua.indexOf('WebKit') && !~ua.indexOf('Chrome')) {
+        if (ua.indexOf('WebKit') !== -1 && ua.indexOf('Chrome') === -1) {
           self.$snapContainer = $('body');
         }
       }
@@ -85,11 +69,9 @@ if ( typeof Object.create !== 'function' ) {
       }
 
       return self;
-
     },
 
     bind: function() {
-
       var self = this;
 
       self.bindProxied(self.$eventContainer, 'scrollstop', self.scrollStop);
@@ -114,25 +96,19 @@ if ( typeof Object.create !== 'function' ) {
       if (self.options.navigation.buttons.$prevButton) {
         self.bindProxied(self.options.navigation.buttons.$prevButton, 'click', self.capturePrevClick);
       }
-
     },
 
     bindProxied: function($element, event, method, selector) {
-
       var self = this;
 
       selector = typeof selector === 'string' ? selector : null;
 
       $element.on(event + self.options.namespace, selector, $.proxy(function(e) {
-
         return method.call(self, e);
-
       }, self));
-
     },
 
     destroy: function() {
-
       var self = this;
 
       // Gotta love namespaced events!
@@ -145,12 +121,11 @@ if ( typeof Object.create !== 'function' ) {
       }
 
       self.$container.removeData(storageName);
-
     },
 
     scrollStop: function(e) {
-
       var self = this;
+      var $target;
 
       e.stopPropagation();
 
@@ -187,9 +162,9 @@ if ( typeof Object.create !== 'function' ) {
         return;
       }
 
-      var $target = panelsInViewPort.eq(panelNumber);
-      var maxOffset = self.$container[0].scrollHeight - self.scrollInterval;
+      $target = panelsInViewPort.eq(panelNumber);
 
+      var maxOffset = self.$container[0].scrollHeight - self.scrollInterval;
       if (offset <= 0 || offset >= maxOffset) {
         // Only activate, prevent stuttering
         self.activatePanel($target);
@@ -198,11 +173,9 @@ if ( typeof Object.create !== 'function' ) {
       } else {
         self.snapToPanel($target);
       }
-
     },
 
     getPanelsInViewport: function() {
-
       var self = this;
 
       var viewport = { top: self.$snapContainer.scrollTop() };
@@ -227,8 +200,7 @@ if ( typeof Object.create !== 'function' ) {
       return panels;
     },
 
-    mouseWheel: function(e) {
-
+    mouseWheel: function () {
       var self = this;
 
       // This event only fires when the user actually scrolls with their input device.
@@ -239,19 +211,15 @@ if ( typeof Object.create !== 'function' ) {
         self.$snapContainer.stop(true);
         self.isSnapping = false;
       }
-
     },
 
-    mouseDown: function(e) {
-
+    mouseDown: function () {
       var self = this;
 
       self.isMouseDown = true;
-
     },
 
     mouseUp: function(e) {
-
       var self = this;
 
       self.isMouseDown = false;
@@ -259,11 +227,9 @@ if ( typeof Object.create !== 'function' ) {
       if(self.scrollOffset !== self.$snapContainer.scrollTop()) {
         self.scrollStop(e);
       }
-
     },
 
     keyDown: function(e) {
-
       var self = this;
 
       var nav = self.options.navigation;
@@ -276,6 +242,9 @@ if ( typeof Object.create !== 'function' ) {
         case nav.keys.prevKey:
         case nav.keys.nextKey:
           e.preventDefault();
+          break;
+
+        // no default
       }
 
       if (self.isSnapping) {
@@ -286,15 +255,16 @@ if ( typeof Object.create !== 'function' ) {
         case nav.keys.prevKey:
           self.snapTo('prev', nav.wrapAround);
           break;
+
         case nav.keys.nextKey:
           self.snapTo('next', nav.wrapAround);
           break;
-      }
 
+        // no default
+      }
     },
 
     captureNextClick: function(e) {
-
       var self = this;
 
       e.preventDefault();
@@ -304,11 +274,9 @@ if ( typeof Object.create !== 'function' ) {
       }
 
       self.snapTo('next', self.options.navigation.wrapAround);
-
     },
 
     capturePrevClick: function(e) {
-
       var self = this;
 
       e.preventDefault();
@@ -318,11 +286,9 @@ if ( typeof Object.create !== 'function' ) {
       }
 
       self.snapTo('prev', self.options.navigation.wrapAround);
-
     },
 
-    resize: function(e) {
-
+    resize: function () {
       var self = this;
 
       if(!self.enabled) {
@@ -332,24 +298,21 @@ if ( typeof Object.create !== 'function' ) {
       var $target = self.getPanel('.active');
 
       self.snapToPanel($target);
-
     },
 
     captureMenuClick: function(e) {
-
       var self = this;
 
-      var panel = $(e.currentTarget).data('panel');
-      var $target = self.getPanel('[data-panel="' + panel + '"]');
+      // Use href instead of data-panel to make it easy for the homepage admins
+      var panel = $(e.currentTarget).attr('href');
+      var $target = self.getPanel(panel);
 
       self.snapToPanel($target);
 
       return false;
-
     },
 
     snapToPanel: function($target) {
-
       var self = this;
 
       if (!$target.jquery) {
@@ -373,7 +336,6 @@ if ( typeof Object.create !== 'function' ) {
       self.$snapContainer.stop(true).delay(self.options.delay).animate({
         scrollTop: scrollTarget
       }, self.options.slideSpeed, self.options.easing, function() {
-
         // Set scrollOffset to scrollTop
         // (not to scrollTarget since on iPad those sometimes differ)
         self.scrollOffset = self.$snapContainer.scrollTop();
@@ -385,11 +347,9 @@ if ( typeof Object.create !== 'function' ) {
 
         self.activatePanel($target);
       });
-
     },
 
     activatePanel: function($target) {
-
       var self = this;
 
       self.getPanel('.active').removeClass('active');
@@ -435,11 +395,9 @@ if ( typeof Object.create !== 'function' ) {
 
       self.options.onActivate.call(self, $target);
       self.$container.trigger('panelsnap:activate', [$target]);
-
     },
 
     getPanel: function(selector) {
-
       var self = this;
 
       if(typeof selector === 'undefined') {
@@ -447,11 +405,9 @@ if ( typeof Object.create !== 'function' ) {
       }
 
       return $(self.options.panelSelector + selector, self.$container);
-
     },
 
     snapTo: function(target, wrap) {
-
       var self = this;
 
       if(typeof wrap !== 'boolean') {
@@ -464,61 +420,51 @@ if ( typeof Object.create !== 'function' ) {
 
       switch(target) {
         case 'prev':
-
           $target = $panels.eq(index - 1);
-          if(index < 1 && !wrap)
-          {
+          if (index < 1 && !wrap) {
             $target = []; // Clear target, because negative indexes wrap automatically
           }
           break;
 
         case 'next':
-
           $target = $panels.eq(index + 1);
-          if($target.length < 1 && wrap)
-          {
+          if ($target.length < 1 && wrap) {
             $target = $panels.filter(':first');
           }
           break;
 
         case 'first':
-
           $target = $panels.filter(':first');
           break;
 
         case 'last':
-
           $target = $panels.filter(':last');
           break;
+
+        // no default
       }
 
       if($target.length > 0) {
         self.snapToPanel($target);
       }
-
     },
 
     enable: function() {
-
       var self = this;
 
       // Gather scrollOffset for next scroll
       self.scrollOffset = self.$snapContainer.scrollTop();
 
       self.enabled = true;
-
     },
 
     disable: function() {
-
       var self = this;
 
       self.enabled = false;
-
     },
 
     toggle: function() {
-
       var self = this;
 
       if(self.enabled) {
@@ -526,17 +472,14 @@ if ( typeof Object.create !== 'function' ) {
       } else {
         self.enable();
       }
-
     }
 
   };
 
   $.fn[pluginName] = function(options) {
-
     var args = Array.prototype.slice.call(arguments);
 
     return this.each(function() {
-
       var pluginInstance = $.data(this, storageName);
       if(typeof options === 'object' || options === 'init' || ! options) {
         if(!pluginInstance) {
@@ -548,22 +491,17 @@ if ( typeof Object.create !== 'function' ) {
           $.data(this, storageName, pluginInstance);
         } else {
           $.error('Plugin is already initialized for this object.');
-          return;
         }
       } else if(!pluginInstance) {
         $.error('Plugin is not initialized for this object yet.');
-        return;
       } else if(pluginInstance[options]) {
         var method = options;
         options = args.slice(1);
         pluginInstance[method].apply(pluginInstance, options);
       } else {
         $.error('Method ' +  options + ' does not exist on jQuery.panelSnap.');
-        return;
       }
-
     });
-
   };
 
   $.fn[pluginName].options = {
@@ -591,8 +529,7 @@ if ( typeof Object.create !== 'function' ) {
       wrapAround: false
     }
   };
-
-})(jQuery, window, document);
+}(jQuery, window, document));
 
 /*!
  * Special flavoured jQuery Mobile scrollstart & scrollstop events.
@@ -600,58 +537,31 @@ if ( typeof Object.create !== 'function' ) {
  *
  * Requires:
  * - jQuery 1.7.1 or higher (no jQuery.migrate needed)
- *
- * Copyright 2013, Guido Bouman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- * Date: Wed Feb 13 16:05:00 2013 +0100
  */
 (function($) {
-
   // Also handles the scrollstop event
   $.event.special.scrollstart = {
 
     enabled: true,
 
     setup: function() {
-
       var thisObject = this;
       var $this = $(thisObject);
-      var scrolling;
       var timer;
       var isTouching;
 
       $this.data('scrollwatch', true);
 
       function trigger(event, scrolling) {
-
         event.type = scrolling ? 'scrollstart' : 'scrollstop';
         $this.trigger(event);
-
       }
 
-      $this.on('touchstart', function(event) {
+      $this.on('touchstart', function () {
         isTouching = true;
       });
 
-      $this.on('touchleave touchcancel touchend', function(event) {
+      $this.on('touchleave touchcancel touchend', function () {
         isTouching = false;
         setTimeout(function () {
           clearTimeout(timer);
@@ -659,7 +569,6 @@ if ( typeof Object.create !== 'function' ) {
       });
 
       $this.on('touchmove scroll', function(event) {
-
         if (isTouching) {
           return;
         }
@@ -678,9 +587,7 @@ if ( typeof Object.create !== 'function' ) {
           $.event.special.scrollstart.scrolling = false;
           trigger(event, false);
         }, 50);
-
       });
-
     }
 
   };
@@ -689,19 +596,16 @@ if ( typeof Object.create !== 'function' ) {
   $.event.special.scrollstop = {
 
     setup: function() {
-
       var thisObject = this;
       var $this = $(thisObject);
 
       if(!$this.data('scrollwatch')) {
         $(this).on('scrollstart', function(){});
       }
-
     }
 
   };
-
-})(jQuery);
+}(jQuery));
 
 /*!
  * Resizestart and resizestop events.
@@ -709,54 +613,26 @@ if ( typeof Object.create !== 'function' ) {
  *
  * Requires:
  * - jQuery 1.7.1 or higher (no jQuery.migrate needed)
- *
- * Copyright 2013, Guido Bouman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- * Date: Fri Oct 25 15:05:00 2013 +0100
  */
 (function($) {
-
   // Also handles the resizestop event
   $.event.special.resizestart = {
 
     enabled: true,
 
     setup: function() {
-
       var thisObject = this;
       var $this = $(thisObject);
-      var resizing;
       var timer;
 
       $this.data('resizewatch', true);
 
       function trigger(event, resizing) {
-
         event.type = resizing ? 'resizestart' : 'resizestop';
         $this.trigger(event);
-
       }
 
       $this.on('resize', function(event) {
-
         if(!$.event.special.resizestart.enabled) {
           return;
         }
@@ -771,9 +647,7 @@ if ( typeof Object.create !== 'function' ) {
           $.event.special.resizestart.resizing = false;
           trigger(event, false);
         }, 200);
-
       });
-
     }
 
   };
@@ -782,19 +656,18 @@ if ( typeof Object.create !== 'function' ) {
   $.event.special.resizestop = {
 
     setup: function() {
-
       var thisObject = this;
       var $this = $(thisObject);
 
       if(!$this.data('resizewatch')) {
         $(this).on('resizestart', function(){});
       }
-
     }
 
   };
+}(jQuery));
 
-})(jQuery);
+/* eslint-disable */
 
 /*! Copyright (c) 2011 Brandon Aaron (http://brandonaaron.net)
  * Licensed under the MIT License (LICENSE.txt).
@@ -884,3 +757,4 @@ if ( typeof Object.create !== 'function' ) {
   }
 
 })(jQuery);
+/* eslint-enable */
