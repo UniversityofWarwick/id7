@@ -653,6 +653,7 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
   color: #5b3069;
   color: rgba(91, 48, 105, 0.5);
   -webkit-transition: color 0.15s linear;
+  -o-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
 .id7-search .form-control:hover + .fa,
@@ -670,6 +671,7 @@ fieldset[disabled] .navbar-tertiary .btn-link:focus {
 .form-control:focus {
   border-color: #5b3069;
   outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(91, 48, 105, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(91, 48, 105, 0.6);
 }
 .carousel .carousel-indicators li::after {

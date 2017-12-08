@@ -165,18 +165,22 @@
         // Which stop-point are we on?
         var isDesktop = this.options.showFullpageImageCarouselTest();
 
-        // Early exit if we're not transitioning
-        if (isDesktop === this.lastIsDesktop) return;
+        // Don't re-init if we're not transitioning
+        if (isDesktop !== this.lastIsDesktop) {
+          this.initPanelSnap(isOnLoad, isDesktop);
+          this.initMenu(isOnLoad, isDesktop);
+          this.initBackgroundImages(isOnLoad, isDesktop);
+          this.initIframes(isOnLoad, isDesktop);
+          this.initBackgroundColours(isOnLoad, isDesktop);
+          this.initHashChangeListener(isOnLoad, isDesktop);
+          this.initCaptionIcons(isOnLoad, isDesktop);
+          this.initScrollWatcher(isOnLoad, isDesktop);
 
-        this.initPanelSnap(isOnLoad, isDesktop);
-        this.initMenu(isOnLoad, isDesktop);
-        this.initBackgroundImages(isOnLoad, isDesktop);
-        this.initBackgroundColours(isOnLoad, isDesktop);
-        this.initHashChangeListener(isOnLoad, isDesktop);
-        this.initCaptionIcons(isOnLoad, isDesktop);
-        this.initScrollWatcher(isOnLoad, isDesktop);
+          this.lastIsDesktop = isDesktop;
+        }
 
-        this.lastIsDesktop = isDesktop;
+        // Warning: be careful about what events you're looking for here
+        this.resizeIframes(isOnLoad, isDesktop);
       },
 
       initPanelSnap: function initPanelSnap(isOnLoad, isDesktop) {
@@ -343,6 +347,61 @@
             'background-image': '',
             'background-position': '',
             'background-size': ''
+          });
+        }
+      },
+
+      initIframes: function initIframes(isOnLoad, isDesktop) {
+        var $container = this.$container;
+
+        // Embedded content (mostly video)
+        if (isDesktop) {
+          $container.find('[data-iframe]').each(function () {
+            var $panel = $(this);
+
+            if ($panel.find('> .iframe-container').length) return;
+
+            $panel.prepend(
+              $('<div />').addClass('iframe-container').append(
+                $('<iframe />')
+                  .attr({
+                    src: $panel.data('iframe'),
+                    frameborder: 0
+                  })
+                  .prop('allowfullscreen', true)
+              )
+            );
+          });
+        } else {
+          $container.find('[data-iframe]').find('> .iframe-container').remove();
+        }
+      },
+
+      resizeIframes: function resizeIframes(isOnLoad, isDesktop) {
+        var $container = this.$container;
+
+        if (isDesktop) {
+          $container.find('[data-iframe]').each(function () {
+            var $panel = $(this);
+            var panelWidth = $panel.width();
+            var panelHeight = $panel.height();
+
+            var aspectRatio = panelWidth / panelHeight;
+            var targetAspectRatio = 1920 / 1080;
+
+            var width, height;
+            if (aspectRatio > targetAspectRatio) {
+              width = panelWidth;
+              height = Math.ceil(panelWidth / targetAspectRatio);
+            } else {
+              height = panelHeight;
+              width = Math.ceil(panelHeight * targetAspectRatio);
+            }
+
+            $panel.find('> .iframe-container > iframe').attr({
+              width: width,
+              height: height
+            });
           });
         }
       },
