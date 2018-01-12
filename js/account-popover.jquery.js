@@ -140,7 +140,7 @@
         });
 
         // Smaller screens get the old popover
-        $(window).on('id7:reflow', $.proxy(function (e, screenConfig) {
+        var onReflow = $.proxy(function (e, screenConfig) {
           this.options.useMwIframe = screenConfig.name !== 'xs'
             && $(window).height() >= 600 && this.isMwFeatureAvailable();
 
@@ -160,7 +160,16 @@
               $trigger.next('.popover').removeClass('loading');
             }
           }
-        }, this));
+        }, this);
+
+        $(window).on('id7:reflow', onReflow);
+
+        // If the document is already loaded this won't be fired as expected, so fire it manually
+        if (document.readyState === 'complete' && typeof $(window).data('id7.reflow') !== 'undefined') {
+          // Call reflow immediately
+          var screenConfig = $(window).data('id7.reflow')._screenConfig();
+          onReflow({}, screenConfig);
+        }
       },
       onMessage: function onMessage(messageType, data) {
         var $popover = this.$trigger.next('.popover');
