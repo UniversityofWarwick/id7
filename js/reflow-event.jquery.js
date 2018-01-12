@@ -66,7 +66,7 @@
         $(window).on('resize.id7.reflow.onScreenResize', $.proxy(this.onScreenResize, this));
 
         // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
-        if (document.readyState == 'complete') {
+        if (document.readyState === 'complete') {
           this.reflow();
         } else {
           $(window).on('load', $.proxy(this.reflow, this));
