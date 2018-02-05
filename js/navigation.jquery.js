@@ -358,7 +358,7 @@
     }
 
     // Change hash for page-reload
-    $('.nav-tabs a').on('shown.bs.tab', function (e) {
+    $('.nav-tabs a').on('shown.bs.tab.id7Navigation', function (e) {
       window.location.hash = e.target.hash;
     });
   });
