@@ -71,7 +71,7 @@
         $(window).on('resize.id7.reflow.onScreenResize', $.proxy(this.onScreenResize, this));
 
         // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
-        if (document.readyState == 'complete') {
+        if (document.readyState === 'complete') {
           this.reflow();
         } else {
           $(window).on('load', $.proxy(this.reflow, this));
@@ -243,7 +243,7 @@
         });
 
         // Smaller screens get the old popover
-        $(window).on('id7:reflow', $.proxy(function (e, screenConfig) {
+        var onReflow = $.proxy(function (e, screenConfig) {
           this.options.useMwIframe = screenConfig.name !== 'xs'
             && $(window).height() >= 600 && this.isMwFeatureAvailable();
 
@@ -263,7 +263,16 @@
               $trigger.next('.popover').removeClass('loading');
             }
           }
-        }, this));
+        }, this);
+
+        $(window).on('id7:reflow', onReflow);
+
+        // If the document is already loaded this won't be fired as expected, so fire it manually
+        if (document.readyState === 'complete' && typeof $(window).data('id7.reflow') !== 'undefined') {
+          // Call reflow immediately
+          var screenConfig = $(window).data('id7.reflow')._screenConfig();
+          onReflow({}, screenConfig);
+        }
       },
       onMessage: function onMessage(messageType, data) {
         var $popover = this.$trigger.next('.popover');
@@ -568,7 +577,7 @@
         this.$container.find('.navbar').each(function () {
           var $navbar = $(this);
 
-          if (screenConfig.name == 'xs') {
+          if (screenConfig.name === 'xs') {
             // Require a click (tap) to open dropdowns
             $navbar.find('.dropdown-toggle')
               .attr('data-toggle', 'dropdown')
@@ -627,7 +636,7 @@
       },
 
       wireEventHandlers: function wireEventHandlers() {
-        if (document.readyState == 'complete') {
+        if (document.readyState === 'complete') {
           if (this.options.fixedNav) this.affixNav();
           if (this.options.fixedHeader) this.affixHeader();
           this.updateWrappedState();
@@ -639,13 +648,22 @@
           }, this));
         }
 
-        $(window).on('id7:reflow', $.proxy(function (e, screenConfig) {
+        var onReflow = $.proxy(function (e, screenConfig) {
           if (this.options.fitToWidth) this.fitToWidth(screenConfig);
           if (this.options.fixedHeader) this.markHeaderFixedPosition();
           if (this.options.fixedNav) this.markFixedPosition();
           this.updateWrappedState();
           this.updateDropdownBehaviour(screenConfig);
-        }, this));
+        }, this);
+
+        $(window).on('id7:reflow', onReflow);
+
+        // If the document is already loaded this won't be fired as expected, so fire it manually
+        if (document.readyState === 'complete' && typeof $(window).data('id7.reflow') !== 'undefined') {
+          // Call reflow immediately
+          var screenConfig = $(window).data('id7.reflow')._screenConfig();
+          onReflow({}, screenConfig);
+        }
 
         this.$container.on('click', '.nav > li', function (e) {
           var $targetLink = $(e.target).closest('a');
@@ -701,7 +719,7 @@
     }
 
     // Change hash for page-reload
-    $('.nav-tabs a').on('shown.bs.tab', function (e) {
+    $('.nav-tabs a').on('shown.bs.tab.id7Navigation', function (e) {
       window.location.hash = e.target.hash;
     });
   });
