@@ -22554,7 +22554,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
         // Smaller screens get the old popover
         var onReflow = $.proxy(function (e, screenConfig) {
           this.options.useMwIframe = screenConfig.name !== 'xs'
-            && $(window).height() >= 600 && this.isMwFeatureAvailable();
+            && $(window).height() >= 580 && this.isMwFeatureAvailable();
 
           $trigger.find('.id7-notifications-badge').toggle(this.options.useMwIframe);
 
