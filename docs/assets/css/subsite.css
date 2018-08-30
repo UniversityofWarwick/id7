@@ -1,119 +1,13 @@
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.btn-group-lg > .btn {
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.3333333;
-  border-radius: 0px;
-}
-.btn-group-sm > .btn {
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 0px;
-}
-.btn-group-xs > .btn {
-  padding: 1px 5px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 0px;
-}
-.dl-horizontal dd:before,
-.dl-horizontal dd:after,
-.container:before,
-.container:after,
-.container-fluid:before,
-.container-fluid:after,
-.row:before,
-.row:after,
-.form-horizontal .form-group:before,
-.form-horizontal .form-group:after,
-.btn-toolbar:before,
-.btn-toolbar:after,
-.btn-group-vertical > .btn-group:before,
-.btn-group-vertical > .btn-group:after,
-.nav:before,
-.nav:after,
-.navbar:before,
-.navbar:after,
-.navbar-header:before,
-.navbar-header:after,
-.navbar-collapse:before,
-.navbar-collapse:after,
-.pager:before,
-.pager:after,
-.panel-body:before,
-.panel-body:after,
-.modal-header:before,
-.modal-header:after,
-.modal-footer:before,
-.modal-footer:after,
-.id7-fixed-width-container:before,
-.id7-fixed-width-container:after,
-.id7-utility-bar:before,
-.id7-utility-bar:after,
-.id7-masthead:before,
-.id7-masthead:after,
-.id7-masthead .id7-masthead-contents:before,
-.id7-masthead .id7-masthead-contents:after,
-.id7-masthead .id7-logo-row:before,
-.id7-masthead .id7-logo-row:after,
-.id7-main-content-area > header:before,
-.id7-main-content-area > header:after,
-.id7-main-content-area > .id7-main-content:before,
-.id7-main-content-area > .id7-main-content:after,
-.id7-paging:before,
-.id7-paging:after,
-footer .id7-site-footer:before,
-footer .id7-site-footer:after,
-footer .id7-app-footer:before,
-footer .id7-app-footer:after {
-  content: " ";
-  display: table;
-}
-.dl-horizontal dd:after,
-.container:after,
-.container-fluid:after,
-.row:after,
-.form-horizontal .form-group:after,
-.btn-toolbar:after,
-.btn-group-vertical > .btn-group:after,
-.nav:after,
-.navbar:after,
-.navbar-header:after,
-.navbar-collapse:after,
-.pager:after,
-.panel-body:after,
-.modal-header:after,
-.modal-footer:after,
-.id7-fixed-width-container:after,
-.id7-utility-bar:after,
-.id7-masthead:after,
-.id7-masthead .id7-masthead-contents:after,
-.id7-masthead .id7-logo-row:after,
-.id7-main-content-area > header:after,
-.id7-main-content-area > .id7-main-content:after,
-.id7-paging:after,
-footer .id7-site-footer:after,
-footer .id7-app-footer:after {
-  clear: both;
-}
-.btn-group-lg > .btn {
-  border-radius: 6px;
-}
-.btn-group-sm > .btn {
-  border-radius: 3px;
-}
-.btn-group-xs > .btn {
-  border-radius: 3px;
-}
-.id7-main-content-area .row-spacer > [class*='col-'] {
+@media screen and (max-width: 767px) {
+}@media (min-width: 768px) {
+}@media (min-width: 768px) {
+}@media (max-width: 0px) {
+}@media (min-width: 768px) {
+}@media (min-width: 768px) {
+}@media (max-width: 0px) {
+}@media (max-width: 0px) {
+}@media (min-width: 768px) {
+}.id7-main-content-area .row-spacer > [class*='col-'] {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -907,12 +801,13 @@ ul.branded > li:nth-child(7n + 7):before {
   color: #3f4246;
 }
 ul.branded li:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
   font-size: 12px;
   content: "\f04b";
   position: absolute;
@@ -923,16 +818,10 @@ ul.branded li:before {
   line-height: 22px;
 }
 ul.branded li:before.fa-pull-left {
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 ul.branded li:before.fa-pull-right {
-  margin-left: .3em;
-}
-ul.branded li:before.pull-left {
-  margin-right: .3em;
-}
-ul.branded li:before.pull-right {
-  margin-left: .3em;
+  margin-left: 0.3em;
 }
 @media (min-width: 768px) {
   ul.branded li:before {

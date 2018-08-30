@@ -49,12 +49,7 @@ id7/
 │   ├── masthead-logo-bleed-xs.svg
 │   └── masthead-logo-bleed-xs.png
 ├── fonts/
-│   ├── FontAwesome.otf
-│   ├── fontawesome-webfont.eot
-│   ├── fontawesome-webfont.svg
-│   ├── fontawesome-webfont.ttf
-│   ├── fontawesome-webfont.woff
-│   └── fontawesome-webfont.woff2
+│   ├── (font files)
 └── templates/
     └── base.html
 ```
@@ -69,6 +64,12 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 - [lodash](https://github.com/lodash/lodash) >= 4.17.4
 - [Modernizr](https://modernizr.com/download?-flexbox-svgfilters-addtest-mq-setclasses-dontmin) >= 3.5.0 (the minimum necessary tests are specified with this link)
 - jQuery doubleScroll >= 0.5
+
+## Icons
+
+Icons are provided by the Font Awesome 5 library. Because our license prevents distribution, this project by default includes Font Awesome 5 Free, which has a good selection of icons built in. If you are a Creator with a license and want to build ID7 with Font Awesome 5 Pro, first [set up NPM with the token](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers), then install the optional package, and then set `@font-awesome-edition: pro;` in your variables when you import `id7.less`.
+
+We include the compatibility layer for Font Awesome 4 icon definitions, so those will continue to work, but we recommend switching to the version 5 definitions when possible.
 
 ## Bugs and feature requests
 

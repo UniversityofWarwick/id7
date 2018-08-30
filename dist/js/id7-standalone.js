@@ -1,9 +1,7 @@
 /*!
  * University of Warwick ID7
  */
-
-
-/*global _:false, Modernizr:false */
+/* globals _:false, Modernizr:false */
 
 (function ($) {
   'use strict';
@@ -11,24 +9,16 @@
     Defaults: {
       screenSizes: [
         {
-          name: 'lg', test: function () {
-          return Modernizr.mq('only all and (min-width: 1200px)');
-        }, container: 1170
+          name: 'lg', test: function () { return Modernizr.mq('only all and (min-width: 1200px)'); }, container: 1170
         },
         {
-          name: 'md', test: function () {
-          return Modernizr.mq('only all and (min-width: 992px)');
-        }, container: 970
+          name: 'md', test: function () { return Modernizr.mq('only all and (min-width: 992px)'); }, container: 970
         },
         {
-          name: 'sm', test: function () {
-          return Modernizr.mq('only all and (min-width: 768px)');
-        }, container: 750
+          name: 'sm', test: function () { return Modernizr.mq('only all and (min-width: 768px)'); }, container: 750
         },
         {
-          name: 'xs', test: function () {
-          return true;
-        }
+          name: 'xs', test: function () { return true; }
         }
       ],
       eventName: 'id7:reflow'
@@ -366,24 +356,16 @@
   var Config = {
     ScreenSizes: [
       {
-        name: 'lg', test: function () {
-        return Modernizr.mq('only all and (min-width: 1200px)');
-      }, container: 1170
+        name: 'lg', test: function () { return Modernizr.mq('only all and (min-width: 1200px)'); }, container: 1170
       },
       {
-        name: 'md', test: function () {
-        return Modernizr.mq('only all and (min-width: 992px)');
-      }, container: 970
+        name: 'md', test: function () { return Modernizr.mq('only all and (min-width: 992px)'); }, container: 970
       },
       {
-        name: 'sm', test: function () {
-        return Modernizr.mq('only all and (min-width: 768px)');
-      }, container: 750
+        name: 'sm', test: function () { return Modernizr.mq('only all and (min-width: 768px)'); }, container: 750
       },
       {
-        name: 'xs', test: function () {
-        return true;
-      }
+        name: 'xs', test: function () { return true; }
       }
     ],
     Templates: {
