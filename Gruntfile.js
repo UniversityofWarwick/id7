@@ -57,7 +57,7 @@ module.exports = function (grunt) {
 
     concat: {
       options: {
-        banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>',
+        banner: '<%= banner %>',
         stripBanners: false
       },
       bundle: {

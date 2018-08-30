@@ -1,9 +1,7 @@
 /*!
  * University of Warwick ID7
  */
-
-
-/*global _:false, Modernizr:false */
+/* eslint-disable, global _:false, Modernizr:false */
 
 (function ($) {
   'use strict';
