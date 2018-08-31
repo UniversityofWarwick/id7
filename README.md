@@ -67,7 +67,7 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 
 ## Icons
 
-Icons are provided by the Font Awesome 5 library. Because our license prevents distribution, this project by default includes Font Awesome 5 Free, which has a good selection of icons built in. If you are a Creator with a license and want to build ID7 with Font Awesome 5 Pro, first [set up NPM with the token](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers), then install the optional package, and then set `@font-awesome-edition: pro;` in your variables when you import `id7.less`.
+Icons are provided by the Font Awesome 5 library. Because our license prevents distribution, this project by default includes Font Awesome 5 Free, which has a good selection of icons built in. If you are a Creator with a license and want to build ID7 with Font Awesome 5 Pro, first [set up NPM with the token](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers), then install the optional package, and then instead of importing `id7`, import `id7-no-fa` and `font-awesome-pro` under the same path.
 
 We include the compatibility layer for Font Awesome 4 icon definitions, so those will continue to work, but we recommend switching to the version 5 definitions when possible.
 
