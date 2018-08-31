@@ -808,6 +808,8 @@ ul.branded li:before {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   font-size: 12px;
   content: "\f04b";
   position: absolute;

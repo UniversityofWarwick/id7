@@ -445,7 +445,7 @@ module.exports = function (grunt) {
         command: 'npm update'
       },
       jekyllServe: {
-        command: 'bin/jekyll serve'
+        command: 'bin/jekyll serve --incremental'
       }
     }
   });

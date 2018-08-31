@@ -13464,7 +13464,8 @@ html.safari .id7-masthead {
 .id7-search .form-group {
   margin-bottom: 0;
 }
-.id7-search .fa {
+.id7-search .fa,
+.id7-search .fas {
   position: absolute;
   top: 9px;
   right: 9px;
