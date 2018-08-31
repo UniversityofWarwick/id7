@@ -7,8 +7,11 @@
     "build": "node_modules/grunt-cli/bin/grunt",
     "serve": "node_modules/grunt-cli/bin/grunt serve"
   },
+  "optionalDependencies": {
+    "@fortawesome/fontawesome-pro": "^5.3.1"
+  },
   "devDependencies": {
-    "@fortawesome/fontawesome-pro": "^5.3.1",
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "btoa": "~1.1.2",
     "clean-css": "^3.4.28",
     "glob": "~5.0.5",

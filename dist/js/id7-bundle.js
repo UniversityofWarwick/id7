@@ -22310,7 +22310,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
  */
 
 !function(a){a&&(a.fn.headroom=function(b){return this.each(function(){var c=a(this),d=c.data("headroom"),e="object"==typeof b&&b;e=a.extend(!0,{},Headroom.options,e),d||(d=new Headroom(this,e),d.init(),c.data("headroom",d)),"string"==typeof b&&(d[b](),"destroy"===b&&c.removeData("headroom"))})},a("[data-headroom]").each(function(){var b=a(this);b.headroom(b.data())}))}(window.Zepto||window.jQuery);
-/* eslint-disable, global _:false, Modernizr:false */
+/* globals _:false, Modernizr:false */
 
 (function ($) {
   'use strict';
@@ -22318,24 +22318,16 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
     Defaults: {
       screenSizes: [
         {
-          name: 'lg', test: function () {
-          return Modernizr.mq('only all and (min-width: 1200px)');
-        }, container: 1170
+          name: 'lg', test: function () { return Modernizr.mq('only all and (min-width: 1200px)'); }, container: 1170
         },
         {
-          name: 'md', test: function () {
-          return Modernizr.mq('only all and (min-width: 992px)');
-        }, container: 970
+          name: 'md', test: function () { return Modernizr.mq('only all and (min-width: 992px)'); }, container: 970
         },
         {
-          name: 'sm', test: function () {
-          return Modernizr.mq('only all and (min-width: 768px)');
-        }, container: 750
+          name: 'sm', test: function () { return Modernizr.mq('only all and (min-width: 768px)'); }, container: 750
         },
         {
-          name: 'xs', test: function () {
-          return true;
-        }
+          name: 'xs', test: function () { return true; }
         }
       ],
       eventName: 'id7:reflow'
@@ -22673,24 +22665,16 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
   var Config = {
     ScreenSizes: [
       {
-        name: 'lg', test: function () {
-        return Modernizr.mq('only all and (min-width: 1200px)');
-      }, container: 1170
+        name: 'lg', test: function () { return Modernizr.mq('only all and (min-width: 1200px)'); }, container: 1170
       },
       {
-        name: 'md', test: function () {
-        return Modernizr.mq('only all and (min-width: 992px)');
-      }, container: 970
+        name: 'md', test: function () { return Modernizr.mq('only all and (min-width: 992px)'); }, container: 970
       },
       {
-        name: 'sm', test: function () {
-        return Modernizr.mq('only all and (min-width: 768px)');
-      }, container: 750
+        name: 'sm', test: function () { return Modernizr.mq('only all and (min-width: 768px)'); }, container: 750
       },
       {
-        name: 'xs', test: function () {
-        return true;
-      }
+        name: 'xs', test: function () { return true; }
       }
     ],
     Templates: {

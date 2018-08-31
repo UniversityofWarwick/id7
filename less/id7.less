@@ -6,30 +6,16 @@
 @import 'bootstrap/normalize.less';
 @import 'bootstrap/print.less';
 
-// We use Font-Awesome instead of glyphicons
-
-// Font-Awesome
-//@import 'font-awesome/variables.less';
-//@import 'font-awesome/mixins.less';
-@import '../node_modules/@fortawesome/fontawesome-pro/less/_variables';
-@import '../node_modules/@fortawesome/fontawesome-pro/less/_mixins';
-@import '../node_modules/@fortawesome/fontawesome-pro/less/_core';
-@import '../node_modules/@fortawesome/fontawesome-pro/less/_shims';
+// Font Awesome 5
+// If you have a Pro license, install the optional NPM package and update this variable
+// https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers
+@font-awesome-edition: free;
+@import "font-awesome-@{font-awesome-edition}";
 
 // ID7 Brand configuration variables
 @import 'variables.less';
 @import 'mixins.less';
 
-//@import 'font-awesome/path.less';
-//@import 'font-awesome/core.less';
-//@import 'font-awesome/larger.less';
-//@import 'font-awesome/fixed-width.less';
-//@import 'font-awesome/list.less';
-//@import 'font-awesome/bordered-pulled.less';
-//@import 'font-awesome/animated.less';
-//@import 'font-awesome/rotated-flipped.less';
-//@import 'font-awesome/stacked.less';
-//@import 'font-awesome/icons.less';
 
 // Bootstrap core CSS
 @import 'bootstrap/scaffolding.less';

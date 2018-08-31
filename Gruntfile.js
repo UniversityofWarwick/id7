@@ -317,8 +317,9 @@ module.exports = function (grunt) {
     copy: {
       fonts: {
         expand: true,
-        src: 'fonts/*',
-        dest: 'dist/'
+        cwd: 'node_modules/@fortawesome/fontawesome-pro/webfonts',
+        src: '*',
+        dest: 'dist/fonts'
       },
       images: {
         expand: true,
