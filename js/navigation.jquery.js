@@ -21,7 +21,7 @@
       moreContainer: [
         '<ul class="nav navbar-nav navbar-right">',
         '<li class="dropdown">',
-        '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-caret-down"></i></a>',
+        '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fas fa-caret-down"></i></a>',
         '<ul class="dropdown-menu" role="menu"></ul>',
         '</li>',
         '</ul>'
