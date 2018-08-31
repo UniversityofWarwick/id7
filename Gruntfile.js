@@ -150,7 +150,7 @@ module.exports = function (grunt) {
     less: {
       compileCore: {
         options: {
-          strictMath: true,
+          strictMath: false, // disabled while https://github.com/FortAwesome/Font-Awesome/issues/13861
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: '<%= pkg.name %>.css.map',
