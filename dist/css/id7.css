@@ -7217,6 +7217,7 @@ html.safari .id7-masthead {
   font-family: 'Font Awesome 5 Free';
   font-size: 10px;
   font-weight: 900;
+  line-height: 10px;
   content: "\f04b";
 }
 @media (min-width: 768px) {
@@ -7224,6 +7225,7 @@ html.safari .id7-masthead {
     top: -4px;
     margin-left: 8px;
     font-size: 12px;
+    line-height: 12px;
   }
 }
 .id7-masthead .id7-logo-row nav {
