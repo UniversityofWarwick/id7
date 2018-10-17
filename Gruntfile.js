@@ -78,7 +78,7 @@ module.exports = function (grunt) {
           'js/vendor/typeahead.jquery-0.11.1.js',
           'js/vendor/lodash-4.17.4.js',
           'js/vendor/modernizr-3.5.0-custom.js',
-          'js/vendor/jquery.doubleScroll-0.5.js',
+          'js/vendor/jquery.doubleScroll-0.6.js',
           'js/vendor/headroom-0.9.4.min.js',
           'js/vendor/jquery.headroom-0.9.4.min.js',
           'js/reflow-event.jquery.js',
