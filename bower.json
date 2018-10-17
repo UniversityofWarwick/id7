@@ -46,6 +46,6 @@
     "lodash": ">= 4.17.4",
     "html5shiv": ">= 3.7.3",
     "modernizr": ">= 3.5.0",
-    "jquery-doublescroll": ">= 0.5"
+    "jquery-doublescroll": ">= 0.6"
   }
 }

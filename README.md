@@ -68,7 +68,7 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 - [typeahead.js](https://github.com/twitter/typeahead.js) >= 0.11.1
 - [lodash](https://github.com/lodash/lodash) >= 4.17.4
 - [Modernizr](https://modernizr.com/download?-flexbox-svgfilters-addtest-mq-setclasses-dontmin) >= 3.5.0 (the minimum necessary tests are specified with this link)
-- jQuery doubleScroll >= 0.5
+- jQuery doubleScroll >= 0.6
 
 ## Bugs and feature requests
 
