@@ -7404,7 +7404,9 @@ html.safari .id7-masthead {
           transition: color .15s linear;
 }
 .id7-search .twitter-typeahead:hover + .fa,
-.id7-search .fa:hover {
+.id7-search .fa:hover,
+.id7-search .twitter-typeahead:hover + .fas,
+.id7-search .fas:hover {
   color: black;
 }
 .id7-search .twitter-typeahead {
