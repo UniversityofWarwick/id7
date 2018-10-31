@@ -3,9 +3,9 @@
   "version": "1.5.2",
   "private": true,
   "scripts": {
-    "test": "node_modules/grunt-cli/bin/grunt test",
-    "build": "node_modules/grunt-cli/bin/grunt",
-    "serve": "node_modules/grunt-cli/bin/grunt serve"
+    "test": "node_modules/.bin/grunt test",
+    "build": "node_modules/.bin/grunt",
+    "serve": "node_modules/.bin/grunt serve"
   },
   "optionalDependencies": {
     "@fortawesome/fontawesome-pro": "^5.3.1"
