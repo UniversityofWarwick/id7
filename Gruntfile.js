@@ -57,7 +57,7 @@ module.exports = function (grunt) {
 
     concat: {
       options: {
-        banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>',
+        banner: '<%= banner %>',
         stripBanners: false
       },
       bundle: {
@@ -150,7 +150,7 @@ module.exports = function (grunt) {
     less: {
       compileCore: {
         options: {
-          strictMath: true,
+          strictMath: false, // disabled while https://github.com/FortAwesome/Font-Awesome/issues/13861
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: '<%= pkg.name %>.css.map',
@@ -317,8 +317,9 @@ module.exports = function (grunt) {
     copy: {
       fonts: {
         expand: true,
-        src: 'fonts/*',
-        dest: 'dist/'
+        cwd: 'node_modules/@fortawesome/fontawesome-pro/webfonts',
+        src: '*',
+        dest: 'dist/fonts'
       },
       images: {
         expand: true,
@@ -444,7 +445,7 @@ module.exports = function (grunt) {
         command: 'npm update'
       },
       jekyllServe: {
-        command: 'bin/jekyll serve'
+        command: 'bin/jekyll serve --incremental'
       }
     }
   });

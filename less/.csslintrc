@@ -20,5 +20,10 @@
   "ids": false,
   "font-faces": false,
   "overqualified-elements": false,
-  "fallback-colors": false
+  "fallback-colors": false,
+  "selector-max": false,
+  "selector-max-approaching": false,
+  "order-alphabetical": false,
+  "duplicate-properties": false,
+  "duplicate-background-images": false
 }
