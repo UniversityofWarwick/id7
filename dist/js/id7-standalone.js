@@ -702,7 +702,11 @@
 
     // Change hash for page-reload
     $('.nav-tabs a').on('shown.bs.tab.id7Navigation', function (e) {
-      window.location.hash = e.target.hash;
+      if ('replaceState' in window.history) {
+        window.history.replaceState({}, null, e.target.hash);
+      } else {
+        window.location.hash = e.target.hash;
+      }
     });
   });
 })(jQuery);
