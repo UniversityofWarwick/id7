@@ -69,7 +69,13 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 
 Icons are provided by the Font Awesome 5 library. Because our license prevents distribution, this project by default includes Font Awesome 5 Free, which has a good selection of icons built in. If you are a Creator with a license and want to build ID7 with Font Awesome 5 Pro, first [set up NPM with the token](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers), then install the optional package, and then instead of importing `id7`, import `id7-no-fa` and `font-awesome-pro` under the same path.
 
-We include the compatibility layer for Font Awesome 4 icon definitions, so those will continue to work, but we recommend switching to the version 5 definitions when possible.
+We don't include the FA4 compatibility layer by default. It can be imported within LESS with:
+
+```less
+@import '@fortawesome/fontawesome-free/less/v4-shims';
+```
+
+Replacing `fontawesome-free` with `fontawesome-pro` if necessary.
 
 ## Bugs and feature requests
 
@@ -96,6 +102,7 @@ Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com
 
 - **1.2.0** - Now uses a custom Modernizr build (see _What's included_ above) with a minimal range of tests. If your application relies on other tests or shims which were included in previous versions, they will likely fail.
 - **1.4.0** - Support for Internet Explorer 8 was removed, and a reduced range of Modernizr tests is used as a result.
+- **1.6.0** - Font Awesome v5 is now used by default instead of v4. Icon identifier references may need to be updated, or the [shim](https://github.com/UniversityofWarwick/id7/#icons) included.
 
 ## Copyright and license
 
