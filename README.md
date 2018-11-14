@@ -87,7 +87,7 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 
 ### Running sample site locally
 
-1. Install Ruby and run `gem install bundler`.
+1. Install Ruby ([< 2.4](https://github.com/brianmario/yajl-ruby/issues/170)) and run `gem install bundler`.
 1. Install node.js.
 1. In the root `/id7` directory:
     1. Run `bundle install` to install dependent gems.
