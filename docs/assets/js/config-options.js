@@ -43,11 +43,6 @@ jQuery(function($) {
         $('.id7-fixed-width-container.shadowed').css('box-shadow', '0 0 ' + blur + 'px rgba(0, 0, 0, ' + opacity + ')');
     }).trigger('change');
 
-    $('#strapline-position').on('change', function(e) {
-        var classes = 'strapline ' + $(this).val();
-        $('.id7-header-image-container .strapline').attr('class', classes);
-    }).trigger('change');
-
     $('#site-imagery').on('change', function(e) {
         var allClasses = $(this).find('option').map(function() { return $(this).attr('value'); }).get();
 

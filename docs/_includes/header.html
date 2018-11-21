@@ -38,6 +38,10 @@
   <link href="{{ site.prefix }}assets/site/docs-site.css" rel="stylesheet" type="text/css">
   {% endunless %}
 
+  {% if page.slug contains 'testcard' or page.slug contains 'bacon-ipsum'  %}
+  <link href="{{ site.prefix }}assets/site/site.css" rel="stylesheet" type="text/css">
+  {% endif %}
+
   {% if page.slug contains 'subsite' %}
   <link href="{{ site.prefix }}assets/site/site.css" rel="stylesheet" type="text/css">
   <link href="{{ site.prefix }}assets/css/subsite.css" rel="stylesheet" type="text/css">

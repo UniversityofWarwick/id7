@@ -16,7 +16,7 @@ Three quick start options are available:
 
 - [Download the latest release](https://github.com/UniversityofWarwick/id7/releases/latest).
 - Clone the repo: `git clone https://github.com/UniversityofWarwick/id7.git`.
-- Install with [npm](https://www.npmjs.com): `npm install UniversityofWarwick/id7#v1.6.2 --save`
+- Install with [npm](https://www.npmjs.com): `npm install UniversityofWarwick/id7#v1.6.3 --save`
 - Install with [Bower](http://bower.io): `bower install warwick-id7`.
 
 Read the [Getting started page](getting-started/) for information on the framework contents, templates and examples, and more.
@@ -87,7 +87,7 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 
 ### Running sample site locally
 
-1. Install Ruby and run `gem install bundler`.
+1. Install Ruby ([< 2.4](https://github.com/brianmario/yajl-ruby/issues/170)) and run `gem install bundler`.
 1. Install node.js.
 1. In the root `/id7` directory:
     1. Run `bundle install` to install dependent gems.
