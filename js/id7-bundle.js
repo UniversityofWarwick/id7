@@ -17,7 +17,7 @@ import 'bootstrap/js/scrollspy';
 import 'bootstrap/js/tab';
 import 'bootstrap/js/affix';
 import 'bootstrap-3-typeahead';
-// 'js/vendor/jquery.doubleScroll-0.6.js',
+import 'jqdoublescroll';
 import 'headroom.js/dist/headroom';
 import 'headroom.js/dist/jQuery.headroom';
 
