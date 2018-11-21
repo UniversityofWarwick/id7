@@ -4,11 +4,11 @@
   background-position: @position;
   background-repeat: @repeat;
 
-  html.no-svgfilters &, html.ie-or-edge &, html.safari & {
+  html.no-svgfilters &, html.ie-or-edge &, html.webkit-idevice & {
     background-image: ~'url("@{fallback}.png")';
   }
 
-  html.safari & {
+  html.webkit-idevice & {
     @media (-webkit-min-device-pixel-ratio: 2) {
       background-image: ~'url("@{fallback}@2x.png")';
     }
