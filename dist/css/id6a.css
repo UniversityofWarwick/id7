@@ -51,16 +51,16 @@
 }
 html.no-svgfilters #warwick-logo-link,
 html.ie-or-edge #warwick-logo-link,
-html.safari #warwick-logo-link {
+html.webkit-idevice #warwick-logo-link {
   background-image: url("../images/id6a-logotype.png");
 }
 @media (-webkit-min-device-pixel-ratio: 2) {
-  html.safari #warwick-logo-link {
+  html.webkit-idevice #warwick-logo-link {
     background-image: url("../images/id6a-logotype@2x.png");
   }
 }
 @media (-webkit-min-device-pixel-ratio: 3) {
-  html.safari #warwick-logo-link {
+  html.webkit-idevice #warwick-logo-link {
     background-image: url("../images/id6a-logotype@3x.png");
   }
 }
