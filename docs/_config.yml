@@ -1,8 +1,0 @@
-# Dependencies
-markdown:         kramdown
-
-# Permalinks
-permalink:        pretty
-
-# Variables
-prefix:           /

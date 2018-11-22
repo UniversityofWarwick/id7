@@ -2,6 +2,7 @@ import path from 'path';
 import EventEmitter from 'events';
 import WebpackNotifierPlugin from 'webpack-notifier';
 import RemovePlugin from 'remove-files-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { ProvidePlugin } from 'webpack';
 
 import PlayFingerprintsPlugin from './build-tooling/PlayFingerprintsPlugin';
@@ -12,24 +13,26 @@ const tooling = require('./build-tooling/webpack.tooling');
 
 const paths = {
   ROOT: __dirname,
-  RELATIVE_ASSETS: 'dist',
   ASSETS: path.join(__dirname, 'dist'),
-  ASSETS_IMAGES: path.join(__dirname, 'dist/images'),
-  RELATIVE_ASSETS_CSS: 'dist/css',
+  ASSETS_IMAGES(basePath) { return path.join(basePath, 'images'); },
+  ASSETS_CSS(basePath) { return path.join(basePath, 'css'); },
+  ASSETS_FONTS(basePath) { return path.join(basePath, 'fonts'); },
   BUNDLE: './js/id7-bundle.js',
-  STANDALONE: './js/id7-standalone.js',
+  HOMEPAGE_JS: './js/external-homepage/hp.js',
   ID7: './less/id7.less',
   ID7_DEFAULT_THEME: './less/default-theme.less',
   ID6A: './less/id6a.less',
   NODE_MODULES: path.join(__dirname, 'node_modules'),
   BOOTSTRAP: path.join(__dirname, 'node_modules/bootstrap'),
+  FONTAWESOME_FONTS: path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts'),
   PUBLIC_PATH: '/static',
+  DOCS_ASSETS: path.join(__dirname, 'docs/dist'),
 };
 
-const commonConfig = merge([
+const commonConfig = basePath => merge([
   {
     output: {
-      path: paths.ASSETS,
+      path: basePath,
       publicPath: paths.PUBLIC_PATH,
     },
     node: {
@@ -37,21 +40,23 @@ const commonConfig = merge([
       global: false,
     },
     plugins: [
-      // Fix Webpack global CSP violation https://github.com/webpack/webpack/issues/6461
       new ProvidePlugin({
+        // Fix Webpack global CSP violation https://github.com/webpack/webpack/issues/6461
         global: require.resolve('./build-tooling/global.js'),
+        jQuery: 'jquery',
+        $: 'jquery',
       }),
       new PlayFingerprintsPlugin(),
       new RemovePlugin({
         before: {
           root: paths.ROOT,
-          include: [paths.RELATIVE_ASSETS],
+          include: [basePath],
         },
         after: {
           root: paths.ROOT,
           test: [
             {
-              folder: paths.RELATIVE_ASSETS_CSS,
+              folder: paths.ASSETS_CSS(basePath),
               method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
             },
           ],
@@ -68,12 +73,20 @@ const commonConfig = merge([
   tooling.transpileJS({
     entry: {
       'js/id7-bundle': paths.BUNDLE,
-      'js/id7-standalone': paths.STANDALONE,
+      'external-homepage/js/hp': paths.HOMEPAGE_JS,
     },
   }),
   tooling.copyLocalImages({
-    dest: paths.ASSETS_IMAGES,
+    dest: paths.ASSETS_IMAGES(basePath),
   }),
+  {
+    plugins: [
+      new CopyWebpackPlugin([{
+        from: paths.FONTAWESOME_FONTS,
+        to: paths.ASSETS_FONTS(basePath),
+      }]),
+    ],
+  },
   tooling.extractCSS({
     entry: {
       'css/id7': paths.ID7,
@@ -105,10 +118,12 @@ const developmentConfig = merge([
   tooling.generateSourceMaps('cheap-module-source-map'),
 ]);
 
-module.exports = ({ production } = {}) => {
+module.exports = ({ production, docs } = {}) => {
   if (production) {
-    return merge(commonConfig, productionConfig);
+    return merge(commonConfig(paths.ASSETS), productionConfig);
+  } else if (docs) {
+    return merge(commonConfig(paths.DOCS_ASSETS), developmentConfig);
   } else {
-    return merge(commonConfig, developmentConfig);
+    return merge(commonConfig(paths.ASSETS), developmentConfig);
   }
 };

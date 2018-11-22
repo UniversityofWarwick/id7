@@ -6,8 +6,8 @@ import Modernizr from 'modernizr';
 // :'(
 
 (function addTest() {
-  Modernizr.addTest('webkit-idevice', () => {
+  Modernizr.addTest('safari', () => {
     const { userAgent } = window.navigator;
-    return userAgent.indexOf('Safari/') >= 0 && userAgent.indexOf('iP') >= 0;
+    return userAgent.indexOf('Safari/') >= 0 && userAgent.indexOf('Chrome/') === -1;
   });
 }());

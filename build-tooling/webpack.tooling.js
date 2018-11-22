@@ -140,6 +140,9 @@ const minify = () => ({
           compress: {
             drop_console: true,
           },
+          output: {
+            comments: /@preserve|@cc_on/,
+          },
         },
       }),
       new OptimizeCssAssetsPlugin({

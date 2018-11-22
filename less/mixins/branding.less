@@ -374,22 +374,20 @@
 
 .apply-form-control-brand(@colour) {
   .id7-search {
-    .fa {
+    .fa, .fas {
       color: @colour; // IE 8
       color: fadeout(@colour, 50%);
       .transition(color .15s linear);
     }
 
-    .form-control:hover + .fa, .twitter-typeahead:hover + .fa, .fa:hover {
+    .form-control:hover + .fa, .typeahead:hover + .fa, .fa:hover,
+    .form-control:hover + .fas, .typeahead:hover + .fas, .fas:hover {
       color: @colour;
     }
 
-    .twitter-typeahead .tt-suggestion {
-      &:hover, &:focus, &.tt-cursor {
-        cursor: pointer;
-        background: @colour;
-        color: contrast(@colour, @text-color, white, 50%);
-      }
+    .typeahead.dropdown-menu > li.active > a {
+      background: @colour;
+      color: contrast(@colour, @text-color, white, 50%);
     }
   }
 

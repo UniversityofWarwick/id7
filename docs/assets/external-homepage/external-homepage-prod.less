@@ -866,12 +866,12 @@ body {
 /***** HACKS AND MISC *****/
 html.no-js {
   .id7-masthead .id7-search {
-    .fa, .twitter-typeahead:hover + .fa {
+    .fa, .typeahead:hover + .fa, .fas, .typeahead:hover + .fas {
       color: @id7-brand-default;
     }
 
-    .twitter-typeahead .tt-suggestion {
-      &:hover, &:focus, &.tt-cursor {
+    .typeahead li.active {
+      &:hover, &:focus {
         background: @id7-brand-default;
       }
     }

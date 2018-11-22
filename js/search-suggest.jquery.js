@@ -15,6 +15,14 @@ function SearchSuggest(options) {
     displayText: o.displayText,
     matcher: () => true, // All data received from the server matches the query
     highlighter: html => html,
+    changeInputOnSelect: false,
+    changeInputOnMove: false,
+    followLinkOnSelect: true,
+    openLinkInNewTab: false,
+    selectOnBlur: false,
+    showHintOnFocus: true,
+    itemLink: o.itemLink,
+    afterSelect: () => $input.trigger('blur'),
   }).on('keydown', ($e) => {
     const keyCode = $e.which || $e.keyCode;
     switch (keyCode) {
@@ -70,17 +78,8 @@ $(() => {
       minLength,
       display: item => item.path,
       displayText: o => `<div><p class="go-path">${_.escape(o.path)}</p><p class="go-description">${(typeof o.description !== 'undefined' ? _.escape(o.description) : '')}</p></div>`,
+      itemLink: item => `https://go.warwick.ac.uk/${item.path}?goSearchReferer=${encodeURIComponent(window.location)}&goSearchQuery=${encodeURIComponent($(el).val())}`,
     });
-
-    // FIXME this is all bs
-    // const tt = $(el).data('ttTypeahead');
-    // tt.input.onSync('queryChanged', function (evtName, query) {
-    //   $(el).data('original-query', query);
-    // });
-    //
-    // $(el).on('typeahead:select', function (evt, redirect) {
-    //   window.location = `https://go.warwick.ac.uk/${redirect.path}?goSearchReferer=${encodeURIComponent(window.location)}&goSearchQuery=${encodeURIComponent($(this).data('original-query'))}`;
-    // });
 
     // ID-145
     if ($(el).width() < 88) {
