@@ -11,7 +11,7 @@ const Config = {
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fas fa-caret-down"></i></a>
           <ul class="dropdown-menu" role="menu"></ul>
         </li>
-      </ul>`,
+      </ul>`.trim(),
     marker: '<div class="id7-navigation-marker"></div>',
   },
   Defaults: {

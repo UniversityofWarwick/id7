@@ -18,7 +18,6 @@ const paths = {
   ASSETS_CSS(basePath) { return path.join(basePath, 'css'); },
   ASSETS_FONTS(basePath) { return path.join(basePath, 'fonts'); },
   BUNDLE: './js/id7-bundle.js',
-  HOMEPAGE_JS: './js/external-homepage/hp.js',
   ID7: './less/id7.less',
   ID7_DEFAULT_THEME: './less/default-theme.less',
   ID6A: './less/id6a.less',
@@ -26,6 +25,8 @@ const paths = {
   BOOTSTRAP: path.join(__dirname, 'node_modules/bootstrap'),
   FONTAWESOME_FONTS: path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts'),
   PUBLIC_PATH: '/static',
+  HOMEPAGE_JS: './js/external-homepage/hp.js',
+  HOMEPAGE_LESS: './less/external-homepage/hp.less',
   DOCS_ASSETS: path.join(__dirname, 'docs/dist'),
 };
 
@@ -70,12 +71,7 @@ const commonConfig = basePath => merge([
     },
   },
   tooling.lintJS(),
-  tooling.transpileJS({
-    entry: {
-      'js/id7-bundle': paths.BUNDLE,
-      'external-homepage/js/hp': paths.HOMEPAGE_JS,
-    },
-  }),
+  tooling.transpileJS(),
   tooling.copyLocalImages({
     dest: paths.ASSETS_IMAGES(basePath),
   }),
@@ -88,15 +84,20 @@ const commonConfig = basePath => merge([
     ],
   },
   tooling.extractCSS({
-    entry: {
-      'css/id7': paths.ID7,
-      'css/id7-default-theme': paths.ID7_DEFAULT_THEME,
-      'css/id6a': paths.ID6A,
-    },
     resolverPaths: [
       paths.NODE_MODULES,
     ],
   }),
+  {
+    entry: {
+      'js/id7-bundle': paths.BUNDLE,
+      'css/id7': paths.ID7,
+      'css/id7-default-theme': paths.ID7_DEFAULT_THEME,
+      'css/id6a': paths.ID6A,
+      'external-homepage/js/hp': paths.HOMEPAGE_JS,
+      'external-homepage/css/hp': paths.HOMEPAGE_LESS,
+    },
+  },
 ]);
 
 const productionConfig = merge([
@@ -118,11 +119,49 @@ const developmentConfig = merge([
   tooling.generateSourceMaps('cheap-module-source-map'),
 ]);
 
+const docsConfig = merge([
+  {
+    entry: {
+      'docs/css/config-options': './docs/assets/css/config-options.less',
+      'docs/css/subsite': './docs/assets/css/subsite.less',
+      'docs/site/docs-site': './docs/assets/site/docs-site.less',
+      'docs/site/site': './docs/assets/site/site.less',
+    },
+  },
+  {
+    plugins: [
+      new CopyWebpackPlugin([
+        {
+          from: './docs/assets/js',
+          to: path.join(paths.DOCS_ASSETS, 'docs/js'),
+        },
+        {
+          from: './docs/assets/images',
+          to: path.join(paths.DOCS_ASSETS, 'docs/images'),
+        },
+        {
+          from: './docs/assets/id6',
+          to: path.join(paths.DOCS_ASSETS, 'docs/id6'),
+        },
+        {
+          from: './docs/assets/external-homepage/images',
+          to: path.join(paths.DOCS_ASSETS, 'docs/external-homepage/images'),
+        },
+        {
+          from: './docs/assets/site',
+          ignore: ['*.less', '*.js'],
+          to: path.join(paths.DOCS_ASSETS, 'docs/site'),
+        },
+      ]),
+    ],
+  },
+]);
+
 module.exports = ({ production, docs } = {}) => {
   if (production) {
     return merge(commonConfig(paths.ASSETS), productionConfig);
   } else if (docs) {
-    return merge(commonConfig(paths.DOCS_ASSETS), developmentConfig);
+    return merge(commonConfig(paths.DOCS_ASSETS), productionConfig, docsConfig);
   } else {
     return merge(commonConfig(paths.ASSETS), developmentConfig);
   }

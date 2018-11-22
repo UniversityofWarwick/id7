@@ -48,7 +48,7 @@ const Config = {
         <div class="popover-inner">
             <div class="popover-content"><p></p></div>
         </div>
-      </div>`,
+      </div>`.trim(),
   },
   MessagePrefix: 'message.id7.account-popover.',
 };

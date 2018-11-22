@@ -28,8 +28,7 @@ const lintJS = () => ({
   },
 });
 
-const transpileJS = ({ entry } = {}) => ({
-  entry,
+const transpileJS = () => ({
   output: {
     chunkFilename: '[name].js',
     filename: '[name].js',
@@ -81,8 +80,7 @@ const copyLocalImages = ({ dest } = {}) => ({
   ],
 });
 
-const extractCSS = ({ entry, resolverPaths } = {}) => ({
-  entry,
+const extractCSS = ({ resolverPaths } = {}) => ({
   module: {
     rules: [
       {

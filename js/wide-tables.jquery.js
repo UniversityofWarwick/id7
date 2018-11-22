@@ -19,7 +19,7 @@ const Config = {
             </div>
           </div>
         </div>
-      </div>`,
+      </div>`.trim(),
   },
   Defaults: {
     container: 'id7-wide-table-wrapper-container',

@@ -2,8 +2,6 @@
 markdown:         kramdown
 highlighter:      rouge
 
-plugins:          ['jekyll-less']
-
 # Permalinks
 permalink:        pretty
 
