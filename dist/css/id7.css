@@ -960,6 +960,13 @@ ul ul ul ul {
 label {
   color: #555;
 }
+abbr[title] {
+  border-bottom: none;
+
+  text-decoration-color: #777;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
 code,
 kbd,
 pre,
