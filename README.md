@@ -107,7 +107,7 @@ In your application you will need to do the following:
 - **1.2.0** - Now uses a custom Modernizr build (see _What's included_ above) with a minimal range of tests. If your application relies on other tests or shims which were included in previous versions, they will likely fail.
 - **1.4.0** - Support for Internet Explorer 8 was removed, and a reduced range of Modernizr tests is used as a result.
 - **1.6.0** - Font Awesome v5 is now used by default instead of v4. Icon identifier references may need to be updated, or the [shim](https://github.com/UniversityofWarwick/id7/#icons) included.
-- **2.0.0** - Now built with Webpack instead of Grunt. Removed non-midified resources from packages. Moved from typeahead.js to bootstrap-3-typeahead.
+- **2.0.0** - Now built with Webpack instead of Grunt. Removed non-minified resources from packages. Moved from typeahead.js to bootstrap-3-typeahead.
 
 ## Copyright and license
 
