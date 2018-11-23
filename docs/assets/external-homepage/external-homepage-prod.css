@@ -77,16 +77,16 @@
 }
 html.no-svgfilters .id7-utility-masthead,
 html.ie-or-edge .id7-utility-masthead,
-html.safari .id7-utility-masthead {
+html.webkit-idevice .id7-utility-masthead {
   background-image: url("/dist/images/masthead-logo-bleed-wide-xs.png");
 }
 @media (-webkit-min-device-pixel-ratio: 2) {
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-xs@2x.png");
   }
 }
 @media (-webkit-min-device-pixel-ratio: 3) {
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-xs@3x.png");
   }
 }
@@ -99,17 +99,17 @@ html.safari .id7-utility-masthead {
   }
   html.no-svgfilters .id7-utility-masthead,
   html.ie-or-edge .id7-utility-masthead,
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-sm.png");
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-sm@2x.png");
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3) {
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-sm@3x.png");
   }
 }
@@ -122,17 +122,17 @@ html.safari .id7-utility-masthead {
   }
   html.no-svgfilters .id7-utility-masthead,
   html.ie-or-edge .id7-utility-masthead,
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-md.png");
   }
 }
 @media (min-width: 992px) and (-webkit-min-device-pixel-ratio: 2) {
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-md@2x.png");
   }
 }
 @media (min-width: 992px) and (-webkit-min-device-pixel-ratio: 3) {
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-md@3x.png");
   }
 }
@@ -145,17 +145,17 @@ html.safari .id7-utility-masthead {
   }
   html.no-svgfilters .id7-utility-masthead,
   html.ie-or-edge .id7-utility-masthead,
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-lg.png");
   }
 }
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) {
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-lg@2x.png");
   }
 }
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3) {
-  html.safari .id7-utility-masthead {
+  html.webkit-idevice .id7-utility-masthead {
     background-image: url("/dist/images/masthead-logo-bleed-wide-lg@3x.png");
   }
 }
@@ -1034,6 +1034,7 @@ html.safari .id7-utility-masthead {
   max-width: 100%;
   width: 970px;
   min-width: 750px;
+  position: fixed;
 }
 @media (max-width: 767px) {
   .popover.megamenu-links {
