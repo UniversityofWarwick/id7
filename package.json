@@ -25,7 +25,7 @@
     "jqdoublescroll": "github:UniversityofWarwick/jqDoubleScroll#df530aeb89a1eef243e009565f3d0743320ac753",
     "lodash-es": "^4.17.11",
     "loglevel": "^1.6.1",
-    "modernizr": "^3.6.0"
+    "modernizr": "github:Modernizr/Modernizr#e8bb3494af6bf25217bf9834590bd6fecd001780"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
