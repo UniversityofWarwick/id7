@@ -1,6 +1,6 @@
 {
   "name": "id7",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "scripts": {
     "watch": "NODE_ENV=development webpack --mode development --watch",
