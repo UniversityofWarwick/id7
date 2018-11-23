@@ -112,7 +112,7 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
                   new ScriptTask()
                     .description("BUNDLE!!!!111111111")
                     .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
-                    .inlineBody("bundle install --path vendor/bundle"),
+                    .inlineBody("if [[ `type -P scl` ]]; then\n  source scl_source enable rh-ruby24\nfi\nbundle install --path vendor/bundle"),
                   new ScriptTask()
                     .description("Remove old test results from previous builds")
                     .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
@@ -120,7 +120,7 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
                   new ScriptTask()
                     .description("npm build with bundle")
                     .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
-                    .inlineBody("bundle exec \t/usr/nodejs/8/bin/npm run-script build"),
+                    .inlineBody("if [[ `type -P scl` ]]; then\n  source scl_source enable rh-ruby24\nfi\nbundle exec \t/usr/nodejs/8/bin/npm run-script build"),
                   new TestParserTask(TestParserTaskProperties.TestType.JUNIT)
                     .description("Parse JUnit results")
                     .resultDirectories("_build/test-reports/*.xml"),
