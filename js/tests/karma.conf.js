@@ -33,6 +33,9 @@ const conf = {
     qunit: {
       showUI: true
     }
+  },
+  junitReporter: {
+    outputDir: '_build/test-reports',
   }
 };
 

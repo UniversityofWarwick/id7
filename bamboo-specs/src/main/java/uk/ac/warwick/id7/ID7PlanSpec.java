@@ -37,52 +37,6 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
     new ID7PlanSpec().publish();
   }
 
-  private static Stage buildStage() {
-    Job job =
-      new Job("Build and check", "BUILD")
-        .tasks(
-          new VcsCheckoutTask()
-            .description("Checkout source from default repository")
-            .checkoutItems(new CheckoutItem().defaultRepository()),
-          new ScriptTask()
-            .description("gradlew clean check war")
-            .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
-            .location(ScriptTaskProperties.Location.FILE)
-            .fileFromPath("gradlew")
-            .argument("clean check war")
-            .environmentVariables("JAVA_OPTS=\"-Xmx256m -Xms128m\""),
-          new ScriptTask()
-            .description("Touch test files so Bamboo doesn't ignore them")
-            .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
-            .location(ScriptTaskProperties.Location.INLINE)
-            .inlineBody("find . -type f -name 'TEST-*.xml' -exec touch {} +")
-        )
-        .requirements(
-          new Requirement("system.jdk.JDK 1.8")
-        );
-
-    job.finalTasks(
-      new TestParserTask(TestParserTaskProperties.TestType.JUNIT)
-        .description("Parse test results")
-        .resultDirectories("**/test-results/**/*.xml")
-    );
-
-    job.artifacts(
-      new Artifact()
-        .name("ROOT.war")
-        .copyPattern("ROOT.war")
-        .location("web/build/libs")
-        .shared(true),
-      new Artifact()
-        .name("api.war")
-        .copyPattern("api.war")
-        .location("api/build/libs")
-        .shared(true)
-    );
-
-    return new Stage("Build Stage").jobs(job);
-  }
-
   @Override
   protected Collection<Plan> builds() {
     return Collections.singletonList(
@@ -117,10 +71,14 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
                     .description("Remove old test results from previous builds")
                     .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
                     .inlineBody("rm -rf _build"),
-                  new ScriptTask()
-                    .description("npm build with bundle")
-                    .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
-                    .inlineBody("if [[ `type -P scl` ]]; then\n  source scl_source enable rh-ruby24\nfi\nbundle exec \t/usr/nodejs/8/bin/npm run-script build"),
+                  new NpmTask()
+                    .description("Build assets")
+                    .nodeExecutable("Node 8")
+                    .command("run-script build"),
+                  new NpmTask()
+                    .description("Test")
+                    .nodeExecutable("Node 8")
+                    .command("run-script test"),
                   new TestParserTask(TestParserTaskProperties.TestType.JUNIT)
                     .description("Parse JUnit results")
                     .resultDirectories("_build/test-reports/*.xml"),
