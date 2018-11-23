@@ -8400,7 +8400,7 @@ for(var b in this.getParams()){a+='<param name="'+b+'" value="'+this.getParam(b)
 }return a
 };
 FlashObject.prototype.getHTML=function(){if(this.embedType=="slideShow"){imageDir=this.getParam("imageDir");
-url="http://www2.warwick.ac.uk/sitebuilder2/render/tocImages.xml?sbrPage="+imageDir+"&showGallery=off&rn="+new Date().getTime();
+url="https://warwick.ac.uk/sitebuilder2/render/tocImages.xml?sbrPage="+imageDir+"&showGallery=off&rn="+new Date().getTime();
 this.addVariable("xmlPath",unescape(url))
 }var a="";
 if(window.ActiveXObject&&navigator.userAgent.indexOf("Mac")==-1){if(this.embedType=="flash"||this.embedType=="slideShow"){a+='<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="'+this.width+'" height="'+this.height+'" id="'+this.id+'">';

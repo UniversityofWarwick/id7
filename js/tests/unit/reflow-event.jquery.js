@@ -1,13 +1,13 @@
-$(function () {
+jQuery(function ($) {
   'use strict';
 
-  module('reflowEvent jquery plugin')
+  QUnit.module('reflowEvent jquery plugin')
 
-  test('should be defined on jquery object', function () {
-    ok($(document.body).reflow, 'reflow method is defined')
+  QUnit.test('should be defined on jquery object', function (assert) {
+    assert.ok($(document.body).reflow, 'reflow method is defined')
   })
 
-  module('reflow', {
+  QUnit.module('reflow', {
     setup: function () {
 
     },
@@ -16,11 +16,11 @@ $(function () {
     }
   })
 
-  test('should return jquery collection containing the element', function () {
+  QUnit.test('should return jquery collection containing the element', function (assert) {
     var $el = $('<div/>');
     var $reflow = $el.reflow();
 
-    ok($reflow instanceof $, 'returns jquery collection');
-    strictEqual($reflow[0], $el[0], 'collection contains element');
+    assert.ok($reflow instanceof $, 'returns jquery collection');
+    assert.strictEqual($reflow[0], $el[0], 'collection contains element');
   });
 });

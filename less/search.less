@@ -25,15 +25,15 @@
     .transition(color .15s linear);
   }
 
-  .twitter-typeahead:hover + .fas, .fas:hover {
+  .typeahead:hover + .fas, .fas:hover {
     color: black;
   }
 
-  .twitter-typeahead {
+  .typeahead {
     width: 100%;
   }
 
-  .tt-menu {
+  .typeahead.dropdown-menu {
     margin-top: -1px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -52,25 +52,26 @@
     }
   }
 
-  .tt-suggestion {
-    padding: 8px 20px;
-    line-height: 18px;
-  }
+  .typeahead.dropdown-menu {
+    padding: 0;
 
-  .tt-suggestion + .tt-suggestion {
-    border-top: 1px solid #ccc;
-  }
+    > li > a {
+      padding: 8px 20px;
+      line-height: 18px;
+      white-space: normal;
+    }
 
-  .tt-suggestion .go-path {
-    font-size: 20px;
-    font-weight: bold;
-  }
+    > li + li {
+      border-top: 1px solid #ccc;
+    }
 
-  .tt-suggestion .go-description {
-    margin: 0;
-  }
+    .go-path {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-  .twitter-typeahead .tt-suggestion.tt-cursor {
-    cursor: pointer;
+    .go-description {
+      margin: 0;
+    }
   }
 }

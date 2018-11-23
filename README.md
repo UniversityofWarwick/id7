@@ -8,16 +8,16 @@ ID7 is the 7th iteration of the University of Warwick corporate identity. This l
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Documentation](#documentation)
 - [Breaking changes](#breaking-changes)
+- [Upgrading from 1.x to 2.x](#upgrading-from-1x-to-2x)
 - [Copyright and license](#copyright-and-license)
 
 ## Quick start
 
 Three quick start options are available:
 
+- Install with [npm](https://www.npmjs.com): `npm i UniversityofWarwick/id7#v2.0.0`
 - [Download the latest release](https://github.com/UniversityofWarwick/id7/releases/latest).
 - Clone the repo: `git clone https://github.com/UniversityofWarwick/id7.git`.
-- Install with [npm](https://www.npmjs.com): `npm install UniversityofWarwick/id7#v1.6.4 --save`
-- Install with [Bower](http://bower.io): `bower install warwick-id7`.
 
 Read the [Getting started page](getting-started/) for information on the framework contents, templates and examples, and more.
 
@@ -29,41 +29,36 @@ Within the download you'll find the following directories and files, logically g
 id7/
 ├── css/
 │   ├── id7.css
-│   ├── id7.css.map
-│   ├── id7.min.css
-│   ├── id7-default-theme.css
-│   ├── id7-default-theme.css.map
-│   └── id7-default-theme.min.css
+│   └── id7-default-theme.css
 ├── js/
-│   ├── vendor/
 │   ├── id7-bundle.js
-│   ├── id7-bundle.min.js
-│   ├── id7-bundle.min.js.map
-│   ├── id7-standalone.js
-│   ├── id7-standalone.min.js
-│   ├── id7-standalone.min.js.map
+│   └── id7-bundle.js.map
 ├── images/
 │   ├── logo.png
 │   ├── masthead-logo-bleed-sm.svg
 │   ├── masthead-logo-bleed-sm.png
 │   ├── masthead-logo-bleed-xs.svg
-│   └── masthead-logo-bleed-xs.png
+│   ├── masthead-logo-bleed-xs.png
+│   └── (and others)
 ├── fonts/
-│   ├── (font files)
+│   └── (font files)
 └── templates/
     └── base.html
 ```
 
-We provide compiled CSS and JS (`id7.*`), as well as compiled and minified CSS and JS (`id7.min.*`). [CSS](https://developer.chrome.com/devtools/docs/css-preprocessors) and [JS](https://developer.chrome.com/devtools/docs/javascript-debugging#source-maps) source maps (`id7.*.map`) are available for use with certain browsers' developer tools. The FontAwesome icon font is included, as is an optional ID7 theme.
+As of v2.0.0, we only provide compiled and minified CSS and JS. See [upgrading from 1.x to 2.x](#upgrading-from-1x-to-2x) for more information.
 
-The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The `id7-standalone.js` file doesn't include these, so they will need to be included manually. The dependencies required are:
+[JS](https://developer.chrome.com/devtools/docs/javascript-debugging#source-maps) source maps (`id7*.map`) are available for use with certain browsers' developer tools. The FontAwesome 5 free icon font is included, as is an optional ID7 theme.
 
-- [jQuery](https://github.com/jquery/jquery) >= 3.2.1
-- [Bootstrap](https://github.com/twbs/bootstrap) >= 3.3.7
-- [typeahead.js](https://github.com/twitter/typeahead.js) >= 0.11.1
-- [lodash](https://github.com/lodash/lodash) >= 4.17.4
-- [Modernizr](https://modernizr.com/download?-flexbox-svgfilters-addtest-mq-setclasses-dontmin) >= 3.5.0 (the minimum necessary tests are specified with this link)
-- jQuery doubleScroll >= 0.6
+The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. These dependencies are:
+
+- [jQuery](https://github.com/jquery/jquery) 3.3.1
+- [Bootstrap](https://github.com/twbs/bootstrap) 3.3.7
+- [bootstrap-3-typeahead](https://github.com/bassjobsen/Bootstrap-3-Typeahead) 4.0.2
+- [headroom.js](https://github.com/WickyNilliams/headroom.js) 0.9.4
+- [lodash](https://github.com/lodash/lodash) 4.17.11
+- [Modernizr](https://modernizr.com/download?-flexbox-svgfilters-webp-addtest-mq-setclasses-dontmin) 3.6.0 (the minimum necessary tests are specified with this link)
+- jQuery doubleScroll 0.6
 
 ## Icons
 
@@ -87,22 +82,32 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 
 ### Running sample site locally
 
-1. Install Ruby ([< 2.4](https://github.com/brianmario/yajl-ruby/issues/170)) and run `gem install bundler`.
+1. Install Ruby and run `gem install bundler`.
 1. Install node.js.
 1. In the root `/id7` directory:
     1. Run `bundle install` to install dependent gems.
-    1. Run `npm install -g grunt-cli && npm install -d` to install grunt and other node.js dependencies.
-    1. Run `grunt` to generate CSS/JS, which is used on the sample site.
-    1. Run `grunt serve` in the command line.
-1. Open <http://localhost:9001> in your browser, et voilà.
+    1. Run `npm i` to install webpack and other node.js dependencies.
+    1. Run `npm run start` in the command line.
+1. Open <http://localhost:8080> in your browser, et voilà.
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
+
+## Upgrading from 1.x to 2.x
+
+From version 2.0.0, ID7 is built with webpack and a slightly different set of resources are delivered with the bundles.
+In your application you will need to do the following:
+
+* Replace references to `id7.min.css` with `id7.css`
+* Replace references to `id7-default-theme.min.css` with `id7-default-theme.css`
+* Replace references to `id7-bundle.min.js` with `id7-bundle.js`
+* `id7-standalone.js` was removed from the distribution; you should build your own bundle if you are using this
 
 ## Breaking changes
 
 - **1.2.0** - Now uses a custom Modernizr build (see _What's included_ above) with a minimal range of tests. If your application relies on other tests or shims which were included in previous versions, they will likely fail.
 - **1.4.0** - Support for Internet Explorer 8 was removed, and a reduced range of Modernizr tests is used as a result.
 - **1.6.0** - Font Awesome v5 is now used by default instead of v4. Icon identifier references may need to be updated, or the [shim](https://github.com/UniversityofWarwick/id7/#icons) included.
+- **2.0.0** - Now built with Webpack instead of Grunt. Removed non-minified resources from packages. Moved from typeahead.js to bootstrap-3-typeahead.
 
 ## Copyright and license
 

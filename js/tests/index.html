@@ -5,47 +5,61 @@
   <title>ID7 Plugin Test Suite</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Transpiled -->
+  <script src="../../dist/js/id7-bundle.js"></script>
+  <script type="text/javascript">
+    window.$ = jQuery;
+  </script>
+
   <!-- Dependencies -->
-  <script src="../vendor/jquery-3.2.1.min.js"></script>
-  <script>$.support.transition = false</script>
-  <script src="../vendor/bootstrap-3.3.7/transition.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/alert.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/button.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/carousel.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/collapse.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/dropdown.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/modal.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/tooltip.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/popover.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/scrollspy.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/tab.js"></script>
-  <script src="../vendor/bootstrap-3.3.7/affix.js"></script>
-  <script src="../vendor/typeahead.jquery-0.11.1.js"></script>
-  <script src="../vendor/lodash-4.17.4.js"></script>
-  <script src="../vendor/modernizr-3.5.0-custom.js"></script>
-  <script src="../vendor/jquery.doubleScroll-0.6.js"></script>
-  <script src="../vendor/headroom-0.9.4.min.js"></script>
-  <script src="../vendor/jquery.headroom-0.9.4.min.js"></script>
+  <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
 
   <!-- QUnit -->
-  <link rel="stylesheet" href="vendor/qunit.css" media="screen">
-  <script src="vendor/qunit.js"></script>
-  <style>
-    #qunit-tests > li.pass {
-      display: none;/* Make it easier to see failing tests in Sauce screencasts */
-    }
+  <link rel="stylesheet" href="../../node_modules/qunit/qunit/qunit.css" media="screen">
+  <script src="../../node_modules/qunit/qunit/qunit.js"></script>
 
-    #qunit-fixture {
-      top: 0;
-      left: 0;
-    }
-  </style>
+  <!-- Sinon -->
+  <script src="../../node_modules/sinon/pkg/sinon-no-sourcemaps.js"></script>
+
+  <!-- Hammer simulator -->
+  <script src="../../node_modules/hammer-simulator/index.js"></script>
+
   <script>
+    // Disable jQuery event aliases to ensure we don't accidentally use any of them
+    [
+      'blur',
+      'focus',
+      'focusin',
+      'focusout',
+      'resize',
+      'scroll',
+      'click',
+      'dblclick',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'mouseover',
+      'mouseout',
+      'mouseenter',
+      'mouseleave',
+      'change',
+      'select',
+      'submit',
+      'keydown',
+      'keypress',
+      'keyup',
+      'contextmenu'
+    ].forEach(function(eventAlias) {
+      $.fn[eventAlias] = function() {
+        throw new Error('Using the ".' + eventAlias + '()" method is not allowed, so that Bootstrap can be compatible with custom jQuery builds which exclude the "event aliases" module that defines said method. See https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#js')
+      }
+    })
     // See https://github.com/axemclion/grunt-saucelabs#test-result-details-with-qunit
     var log = []
-    QUnit.done(function (testResults) {
+    var testName
+    QUnit.done(function(testResults) {
       var tests = []
-      for (var i = 0, len = log.length; i < len; i++) {
+      for (var i = 0; i < log.length; i++) {
         var details = log[i]
         tests.push({
           name: details.name,
@@ -56,34 +70,27 @@
         })
       }
       testResults.tests = tests
-
       window.global_test_results = testResults
-    });
-
-    QUnit.testStart(function (testDetails) {
-      $(window).scrollTop(0)
-      QUnit.log = function (details) {
+    })
+    QUnit.testStart(function(testDetails) {
+      QUnit.log(function(details) {
         if (!details.result) {
           details.name = testDetails.name
           log.push(details)
         }
-      }
-    });
-
-    // Cleanup
-    QUnit.testDone(function () {
-      $('#qunit-fixture').empty()
-    });
+      })
+    })
+    // Display fixture on-screen on iOS to avoid false positives
+    // See https://github.com/twbs/bootstrap/pull/15955
+    if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+      QUnit.begin(function() {
+        $('#qunit-fixture').css({ top: 0, left: 0 })
+      })
+      QUnit.done(function() {
+        $('#qunit-fixture').css({ top: '', left: '' })
+      })
+    }
   </script>
-
-  <!-- Plugin sources -->
-  <script src="../../js/reflow-event.jquery.js"></script>
-  <script src="../../js/account-popover.jquery.js"></script>
-  <script src="../../js/navigation.jquery.js"></script>
-  <script src="../../js/search-suggest.jquery.js"></script>
-  <script src="../../js/wide-tables.jquery.js"></script>
-  <script src="../../js/not-selector-feature-detect.modernizr.js"></script>
-  <script src="../../js/ie10-viewport-bug-workaround.js"></script>
 
   <!-- Unit tests -->
   <script src="unit/reflow-event.jquery.js"></script>
@@ -91,7 +98,6 @@
   <script src="unit/navigation.jquery.js"></script>
   <script src="unit/search-suggest.jquery.js"></script>
   <script src="unit/wide-tables.jquery.js"></script>
-
 </head>
 <body>
 <div id="qunit-container">

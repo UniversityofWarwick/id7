@@ -1,13 +1,13 @@
-$(function () {
+jQuery(function ($) {
   'use strict';
 
-  module('searchSuggest jquery plugin')
+  QUnit.module('searchSuggest jquery plugin')
 
-  test('should be defined on jquery object', function () {
-    ok($(document.body).searchSuggest, 'searchSuggest method is defined')
+  QUnit.test('should be defined on jquery object', function (assert) {
+    assert.ok($(document.body).searchSuggest, 'searchSuggest method is defined')
   })
 
-  module('searchSuggest', {
+  QUnit.module('searchSuggest', {
     setup: function () {
 
     },
@@ -16,7 +16,7 @@ $(function () {
     }
   })
 
-  test('should return jquery collection containing the element', function () {
+  QUnit.test('should return jquery collection containing the element', function (assert) {
     var $el = $('<div/>');
     var $searchSuggest = $el.searchSuggest({
       source: function (query, cb) {
@@ -24,7 +24,7 @@ $(function () {
       }
     });
 
-    ok($searchSuggest instanceof $, 'returns jquery collection');
-    strictEqual($searchSuggest[0], $el[0], 'collection contains element');
+    assert.ok($searchSuggest instanceof $, 'returns jquery collection');
+    assert.strictEqual($searchSuggest[0], $el[0], 'collection contains element');
   });
 });
