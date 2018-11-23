@@ -1,13 +1,13 @@
-$(function () {
+jQuery(function ($) {
   'use strict';
 
-  module('id7Navigation jquery plugin');
+  QUnit.module('id7Navigation jquery plugin');
 
-  test('should be defined on jquery object', function () {
-    ok($(document.body).id7Navigation, 'id7Navigation method is defined');
+  QUnit.test('should be defined on jquery object', function (assert) {
+    assert.ok($(document.body).id7Navigation, 'id7Navigation method is defined');
   });
 
-  module('id7Navigation', {
+  QUnit.module('id7Navigation', {
     setup: function () {
 
     },
@@ -16,22 +16,22 @@ $(function () {
     }
   });
 
-  test('should return jquery collection containing the element', function () {
+  QUnit.test('should return jquery collection containing the element', function (assert) {
     var $el = $('<div/>');
     var $nav = $el.id7Navigation({ fitToWidth: false });
-    ok($nav instanceof $, 'returns jquery collection');
-    strictEqual($nav[0], $el[0], 'collection contains element');
+    assert.ok($nav instanceof $, 'returns jquery collection');
+    assert.strictEqual($nav[0], $el[0], 'collection contains element');
   });
 
-  test('should store navigation instance in navigation data object', function () {
+  QUnit.test('should store navigation instance in navigation data object', function (assert) {
     var $nav = $('<div/>')
         .appendTo('#qunit-fixture')
         .id7Navigation({ fitToWidth: false });
 
-    ok($nav.data('id7.navigation'), 'navigation instance exists');
+    assert.ok($nav.data('id7.navigation'), 'navigation instance exists');
   });
 
-  test('should trim link titles', function () {
+  QUnit.test('should trim link titles', function (assert) {
     var $el = $('<div class="affix-top">' +
                 '<nav class="navbar navbar-primary" role="navigation">' +
                 '<ul class="nav navbar-nav">' +
@@ -43,12 +43,12 @@ $(function () {
         .appendTo('#qunit-fixture')
         .id7Navigation({ fitToWidth: false });
 
-    equal($el.find('li').length, 2, 'should be two links');
-    equal($el.find('li').eq(0).text(), 'Short link title', 'first link title should not have been truncated');
-    equal($el.find('li').eq(1).text(), 'A really long link title that goes over the sixty char…', 'second link title should have been truncated, but not in middle of word');
+    assert.equal($el.find('li').length, 2, 'should be two links');
+    assert.equal($el.find('li').eq(0).text(), 'Short link title', 'first link title should not have been truncated');
+    assert.equal($el.find('li').eq(1).text(), 'A really long link title that goes over the sixty char…', 'second link title should have been truncated, but not in middle of word');
   });
 
-  test('should affix', function () {
+  QUnit.test('should affix', function (assert) {
     var $el = $('<div class="affix-top">' +
                 '<nav class="navbar navbar-primary" role="navigation">' +
                 '<ul class="nav navbar-nav">' +
@@ -59,10 +59,10 @@ $(function () {
         .appendTo('#qunit-fixture')
         .id7Navigation({ fitToWidth: false });
 
-    ok($el.data('bs.affix'), 'affix instance exists');
+    assert.ok($el.data('bs.affix'), 'affix instance exists');
   });
 
-  test('should headroom', function () {
+  QUnit.test('should headroom', function (assert) {
     var $el = $('<div class="affix-top">' +
                 '<nav class="navbar navbar-primary" role="navigation">' +
                 '<ul class="nav navbar-nav">' +
@@ -73,10 +73,10 @@ $(function () {
         .appendTo('#qunit-fixture')
         .id7Navigation({ fitToWidth: false });
 
-    ok($el.data('headroom'), 'headroom instance exists');
+    assert.ok($el.data('headroom'), 'headroom instance exists');
   });
 
-  test('should not throw an error on empty navigation', function () {
+  QUnit.test('should not throw an error on empty navigation', function (assert) {
     var $el = $('<div>' +
                 '<nav class="navbar navbar-primary" role="navigation">' +
                 '<ul class="nav navbar-nav">' +
@@ -86,7 +86,7 @@ $(function () {
         .appendTo('#qunit-fixture')
         .id7Navigation({ fitToWidth: false });
 
-    ok($el.data('id7.navigation'), 'navigation instance exists');
+    assert.ok($el.data('id7.navigation'), 'navigation instance exists');
   });
 
 });

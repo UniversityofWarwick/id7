@@ -3,6 +3,8 @@ import $ from 'jquery';
 import _ from 'lodash-es';
 import log from 'loglevel';
 
+import currentScreenSize from './screen-sizes';
+
 const Config = {
   Templates: {
     /**
@@ -166,7 +168,7 @@ class AccountPopover {
 
     // Smaller screens get the old popover
     const onReflow = $.proxy((e, screenConfig) => {
-      this.options.useMwIframe = screenConfig.name !== 'xs'
+      this.options.useMwIframe = this.options.useMwIframe && screenConfig.name !== 'xs'
         && $(window).height() >= 580 && AccountPopover.isMwFeatureAvailable();
 
       $trigger.find('.id7-notifications-badge').toggle(this.options.useMwIframe);
@@ -192,8 +194,7 @@ class AccountPopover {
     // If the document is already loaded this won't be fired as expected, so fire it manually
     if (document.readyState === 'complete' && typeof $(window).data('id7.reflow') !== 'undefined') {
       // Call reflow immediately
-      const screenConfig = $(window).data('id7.reflow')._screenConfig();
-      onReflow({}, screenConfig);
+      onReflow({}, currentScreenSize());
     }
   }
 

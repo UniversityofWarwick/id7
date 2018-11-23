@@ -4,6 +4,7 @@ import WebpackNotifierPlugin from 'webpack-notifier';
 import RemovePlugin from 'remove-files-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { ProvidePlugin } from 'webpack';
+import ZipPlugin from 'zip-webpack-plugin';
 
 import PlayFingerprintsPlugin from './build-tooling/PlayFingerprintsPlugin';
 import WatchEventsPlugin from './build-tooling/WatchEventsPlugin';
@@ -11,12 +12,15 @@ import WatchEventsPlugin from './build-tooling/WatchEventsPlugin';
 const merge = require('webpack-merge');
 const tooling = require('./build-tooling/webpack.tooling');
 
+const version = require('./package.json').version;
+
 const paths = {
   ROOT: __dirname,
   ASSETS: path.join(__dirname, 'dist'),
   ASSETS_IMAGES(basePath) { return path.join(basePath, 'images'); },
   ASSETS_CSS(basePath) { return path.join(basePath, 'css'); },
   ASSETS_FONTS(basePath) { return path.join(basePath, 'fonts'); },
+  ASSETS_TEMPLATES(basePath) { return path.join(basePath, 'templates'); },
   BUNDLE: './js/id7-bundle.js',
   ID7: './less/id7.less',
   ID7_DEFAULT_THEME: './less/default-theme.less',
@@ -24,6 +28,7 @@ const paths = {
   NODE_MODULES: path.join(__dirname, 'node_modules'),
   BOOTSTRAP: path.join(__dirname, 'node_modules/bootstrap'),
   FONTAWESOME_FONTS: path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts'),
+  TEMPLATES: path.join(__dirname, 'templates'),
   PUBLIC_PATH: '/static',
   HOMEPAGE_JS: './js/external-homepage/hp.js',
   HOMEPAGE_LESS: './less/external-homepage/hp.less',
@@ -77,10 +82,16 @@ const commonConfig = basePath => merge([
   }),
   {
     plugins: [
-      new CopyWebpackPlugin([{
-        from: paths.FONTAWESOME_FONTS,
-        to: paths.ASSETS_FONTS(basePath),
-      }]),
+      new CopyWebpackPlugin([
+        {
+          from: paths.FONTAWESOME_FONTS,
+          to: paths.ASSETS_FONTS(basePath),
+        },
+        {
+          from: paths.TEMPLATES,
+          to: paths.ASSETS_TEMPLATES(basePath),
+        },
+      ]),
     ],
   },
   tooling.extractCSS({
@@ -106,6 +117,20 @@ const productionConfig = merge([
   },
   tooling.minify(),
   tooling.generateSourceMaps('source-map'),
+  {
+    plugins: [
+      new ZipPlugin({
+        filename: `id7-${version}-dist.zip`,
+        pathPrefix: 'id7',
+        exclude: [/^css\/id6a/, /^images\/id6a/],
+      }),
+      new ZipPlugin({
+        filename: `id6a-${version}-dist.zip`,
+        pathPrefix: 'id6a',
+        include: [/^css\/id6a/, /^images\/id6a/],
+      }),
+    ],
+  },
 ]);
 
 const developmentConfig = merge([
