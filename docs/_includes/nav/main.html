@@ -1,16 +1,16 @@
 <nav class="navbar navbar-primary{% if page.slug %} hidden-xs{% endif %}" role="navigation">
   <ul class="nav navbar-nav">
-    <li class="{% if page.slug contains 'getting-started' %} active{% endif %}"><a href="{{ site.prefix }}/getting-started">Getting started</a></li>
-    <li{% if page.slug contains 'components' %} class="active"{% endif %}><a href="{{ site.prefix }}/components">Components</a></li>
+    <li class="{% if page.slug contains 'getting-started' %} active{% endif %}"><a href="/getting-started">Getting started</a></li>
+    <li{% if page.slug contains 'components' %} class="active"{% endif %}><a href="/components">Components</a></li>
     <li class="{% if page.slug contains 'bacon-ipsum' %}next-secondary {% endif %}{% if page.slug contains 'examples' %}active {% endif %}dropdown">
-      <a href="{{ site.prefix }}/examples">Examples</a>
+      <a href="/examples">Examples</a>
       <ul class="dropdown-menu" role="menu">
-        <li{% if page.slug == 'examples/bacon-ipsum' %} class="active"{% endif %}><a href="{{ site.prefix }}/examples/bacon-ipsum">Sample page content</a></li>
-        <li{% if page.slug == 'examples/subsite-homepage' %} class="active"{% endif %}><a href="{{ site.prefix }}/examples/subsite-homepage">Sample subsite homepage</a></li>
-        <li{% if page.slug == 'examples/testcard' %} class="active"{% endif %}><a href="{{ site.prefix }}/examples/testcard">Test card</a></li>
-        <li{% if page.slug == 'examples/bootstrap-testcard' %} class="active"{% endif %}><a href="{{ site.prefix }}/examples/bootstrap-testcard">Bootstrap test card</a></li>
+        <li{% if page.slug == 'examples/bacon-ipsum' %} class="active"{% endif %}><a href="/examples/bacon-ipsum">Sample page content</a></li>
+        <li{% if page.slug == 'examples/subsite-homepage' %} class="active"{% endif %}><a href="/examples/subsite-homepage">Sample subsite homepage</a></li>
+        <li{% if page.slug == 'examples/testcard' %} class="active"{% endif %}><a href="/examples/testcard">Test card</a></li>
+        <li{% if page.slug == 'examples/bootstrap-testcard' %} class="active"{% endif %}><a href="/examples/bootstrap-testcard">Bootstrap test card</a></li>
       </ul>
     </li>
-    <li{% if page.slug contains 'id6a' %} class="active"{% endif %}><a href="{{ site.prefix }}/id6a">ID6a</a></li>
+    <li{% if page.slug contains 'id6a' %} class="active"{% endif %}><a href="/id6a">ID6a</a></li>
   </ul>
 </nav>

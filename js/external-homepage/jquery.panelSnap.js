@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/* global jQuery */
+/* global jQuery:false */
 
 // Utility for creating objects in older browsers
 if ( typeof Object.create !== 'function' ) {

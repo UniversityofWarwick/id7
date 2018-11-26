@@ -19,6 +19,7 @@ const paths = {
   ASSETS: path.join(__dirname, 'dist'),
   ASSETS_IMAGES(basePath) { return path.join(basePath, 'images'); },
   ASSETS_CSS(basePath) { return path.join(basePath, 'css'); },
+  ASSETS_HOMEPAGE_CSS(basePath) { return path.join(basePath, 'external-homepage/css'); },
   ASSETS_FONTS(basePath) { return path.join(basePath, 'fonts'); },
   ASSETS_TEMPLATES(basePath) { return path.join(basePath, 'templates'); },
   BUNDLE: './js/id7-bundle.js',
@@ -63,6 +64,10 @@ const commonConfig = basePath => merge([
           test: [
             {
               folder: paths.ASSETS_CSS(basePath),
+              method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
+            },
+            {
+              folder: paths.ASSETS_HOMEPAGE_CSS(basePath),
               method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
             },
           ],
