@@ -66,10 +66,6 @@ const commonConfig = basePath => merge([
               folder: paths.ASSETS_CSS(basePath),
               method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
             },
-            {
-              folder: paths.ASSETS_HOMEPAGE_CSS(basePath),
-              method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
-            },
           ],
         },
       }),
@@ -110,6 +106,63 @@ const commonConfig = basePath => merge([
       'css/id7': paths.ID7,
       'css/id7-default-theme': paths.ID7_DEFAULT_THEME,
       'css/id6a': paths.ID6A,
+    },
+  },
+]);
+
+const homepageConfig = basePath => merge([
+  {
+    output: {
+      path: basePath,
+      publicPath: paths.PUBLIC_PATH,
+    },
+    node: {
+      // Fix Webpack global CSP violation https://github.com/webpack/webpack/issues/6461
+      global: false,
+    },
+    plugins: [
+      new ProvidePlugin({
+        // Fix Webpack global CSP violation https://github.com/webpack/webpack/issues/6461
+        global: require.resolve('./build-tooling/global.js'),
+      }),
+      new RemovePlugin({
+        before: {
+          root: paths.ROOT,
+          include: [basePath],
+        },
+        after: {
+          root: paths.ROOT,
+          test: [
+            {
+              folder: paths.ASSETS_HOMEPAGE_CSS(basePath),
+              method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
+            },
+          ],
+        },
+      }),
+    ],
+    resolve: {
+      alias: {
+        bootstrap: paths.BOOTSTRAP,
+      },
+    },
+  },
+  tooling.lintJS(),
+  tooling.transpileJS(),
+  tooling.extractCSS({
+    resolverPaths: [
+      paths.NODE_MODULES,
+    ],
+  }),
+  {
+    externals: {
+      jquery: 'jQuery',
+      modernizr: 'Modernizr',
+      'lodash-es': '_',
+    },
+  },
+  {
+    entry: {
       'external-homepage/js/hp': paths.HOMEPAGE_JS,
       'external-homepage/css/hp': paths.HOMEPAGE_LESS,
     },
@@ -188,11 +241,26 @@ const docsConfig = merge([
 ]);
 
 module.exports = ({ production, docs } = {}) => {
+  let mainConfig;
   if (production) {
-    return merge(commonConfig(paths.ASSETS), productionConfig);
+    mainConfig = merge(commonConfig(paths.ASSETS), productionConfig);
   } else if (docs) {
-    return merge(commonConfig(paths.DOCS_ASSETS), productionConfig, docsConfig);
+    mainConfig = merge(commonConfig(paths.DOCS_ASSETS), productionConfig, docsConfig);
   } else {
-    return merge(commonConfig(paths.ASSETS), developmentConfig);
+    mainConfig = merge(commonConfig(paths.ASSETS), developmentConfig);
   }
+
+  let hpConfig;
+  if (production) {
+    hpConfig = merge(homepageConfig(paths.ASSETS), productionConfig);
+  } else if (docs) {
+    hpConfig = merge(homepageConfig(paths.DOCS_ASSETS), productionConfig, docsConfig);
+  } else {
+    hpConfig = merge(homepageConfig(paths.ASSETS), developmentConfig);
+  }
+
+  return [
+    merge(mainConfig, { name: 'main', }),
+    merge(hpConfig, { name: 'homepage', }),
+  ];
 };
