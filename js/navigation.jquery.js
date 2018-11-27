@@ -3,6 +3,7 @@ import $ from 'jquery';
 import _ from 'lodash-es';
 
 import currentScreenSize from './screen-sizes';
+import changeLocationHash from './change-location-hash';
 
 const Config = {
   Templates: {
@@ -334,11 +335,5 @@ $(() => {
   }
 
   // Change hash for page-reload
-  $('.nav-tabs a').on('shown.bs.tab.id7Navigation', (e) => {
-    if ('replaceState' in window.history) {
-      window.history.replaceState({}, null, e.target.hash);
-    } else {
-      window.location.hash = e.target.hash;
-    }
-  });
+  $('.nav-tabs a').on('shown.bs.tab.id7Navigation', e => changeLocationHash(e.target.hash));
 });
