@@ -53,14 +53,6 @@
   }
 }
 
-.nav-tabs > li.active {
-  background: @nav-tabs-active-bg;
-
-  > a {
-    margin-right: 0;
-  }
-}
-
 // Matches .pagination > li > a
 .pager > li > a {
   text-decoration: none;
@@ -130,6 +122,8 @@ html.no-touch .modal-open {
     }
 
     &.active {
+      background: @nav-tabs-active-bg;
+
       > a {
         margin-right: -1px;
       }

@@ -205,7 +205,7 @@
   .header-colour(@colour);
   .link-colour(@colour);
 
-  blockquote.quotes{
+  blockquote.quotes {
     color: darken(@colour, 20%);
 
     &::before {
@@ -324,6 +324,10 @@
   .apply-boxstyles-brand(@colour);
 
   .apply-pagination-brand(@colour);
+
+  .apply-navs-brand(@colour);
+
+  .apply-listgroup-brand(@colour);
 }
 
 .apply-footer-brand(@colour) {
@@ -420,5 +424,92 @@
 .apply-pagination-brand(@colour) {
   .pagination > li {
     a, span { color: @colour; }
+
+    &.active {
+      > a, > span {
+        &,
+        &:hover,
+        &:focus {
+          background-color: @colour;
+          border-color: @colour;
+          color: contrast(@colour, @text-color, white, 50%);
+        }
+      }
+    }
+  }
+}
+
+.apply-navs-brand(@colour) {
+  @border-colour: screen(@colour, darken(white, 50%));
+  @link-bg: screen(@colour, darken(white, 20%));
+  @hover-border-colour: screen(@colour, darken(white, 60%));
+  @link-hover-bg: screen(@colour, darken(white, 30%));
+
+  .nav-tabs {
+    border-bottom-color: @border-colour;
+
+    > li {
+      > a {
+        background-color: @link-bg;
+        border-color: @border-colour;
+
+        &:hover,
+        &:focus {
+          background-color: @link-hover-bg;
+          border-color: @hover-border-colour @hover-border-colour @border-colour;
+        }
+      }
+
+      &.open > a {
+        &,
+        &:hover,
+        &:focus {
+          background-color: @link-hover-bg;
+          border-color: @hover-border-colour @hover-border-colour @border-colour;
+        }
+      }
+
+      &.active {
+        > a {
+          &,
+          &:hover,
+          &:focus {
+            border-color: @border-colour @border-colour transparent;
+          }
+        }
+      }
+
+      &.disabled {
+        > a {
+          color: #555;
+
+          &:hover,
+          &:focus {
+            background-color: @link-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-pills > li.active > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: @colour;
+      color: contrast(@colour, @text-color, white, 50%);
+    }
+  }
+}
+
+.apply-listgroup-brand(@colour) {
+  .list-group-item.active {
+    &,
+    &:hover,
+    &:focus {
+      background-color: @colour;
+      border-color: @colour;
+      color: contrast(@colour, @text-color, white, 50%);
+    }
   }
 }
