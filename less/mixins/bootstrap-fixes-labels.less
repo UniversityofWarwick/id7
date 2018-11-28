@@ -1,0 +1,11 @@
+// Labels, to be used instead of Bootstrap mixin .label-variant(@bg-color; @text-color)
+.lighter-label-variant(@bg-colour; @text-colour) {
+  color: @text-colour;
+  background-color: @bg-colour;
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: darken(@bg-colour, 10%);
+    }
+  }
+}

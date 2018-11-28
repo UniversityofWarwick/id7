@@ -170,3 +170,34 @@ label.checkbox, label.radio, label.checkbox-inline, label.radio-inline {
 .caret {
   border-top: 4px solid;
 }
+
+// ID-256 Achieve greater contrast by having labels on lighter backgrounds
+.label-primary {
+  .lighter-label-variant(lighten(@brand-primary, 50%); darken(@brand-primary, 20%));
+}
+.label-success {
+  .lighter-label-variant(@state-success-bg; darken(@state-success-text, 10%));
+}
+.label-info {
+  .lighter-label-variant(@state-info-bg; darken(@state-info-text, 10%));
+}
+.label-warning {
+  .lighter-label-variant(@state-warning-bg; darken(@state-warning-text, 10%));
+}
+.label-danger {
+  .lighter-label-variant(@state-danger-bg; darken(@state-danger-text, 10%));
+}
+
+// Greater alert contrast
+.alert-success {
+  .lighter-alert-variant(@state-success-bg; darken(@state-success-text, 20%); darken(@state-success-text, 10%));
+}
+.alert-info {
+  .lighter-alert-variant(@state-info-bg; darken(@state-info-text, 20%); darken(@state-info-text, 10%));
+}
+.alert-warning {
+  .lighter-alert-variant(@state-warning-bg; darken(@state-warning-text, 20%); darken(@state-warning-text, 10%));
+}
+.alert-danger {
+  .lighter-alert-variant(@state-danger-bg; darken(@state-danger-text, 20%); darken(@state-danger-text, 10%));
+}

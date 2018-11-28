@@ -1,0 +1,10 @@
+// Alerts, to be used instead of Bootstrap mixin .alert-variant(@bg-color; @border; @text-color)
+.lighter-alert-variant(@bg-colour; @border-colour; @text-colour) {
+  background-color: @bg-colour;
+  border-color: @border-colour;
+  color: @text-colour;
+
+  hr {
+    border-top-color: darken(@border-colour, 5%);
+  }
+}
