@@ -41,27 +41,27 @@ body {
     }
   }
 
-  @media (min-width: @screen-sm-min) {
+  @media screen and (min-width: @screen-sm-min) {
     width: @container-sm;
   }
-  @media (min-width: @screen-md-min) {
+  @media screen and (min-width: @screen-md-min) {
     width: @container-md;
   }
-  @media (min-width: @screen-lg-min) {
+  @media screen and (min-width: @screen-lg-min) {
     width: @container-lg;
   }
 
   position: relative;
   z-index: 1;
 
-  @media (min-width: @grid-float-breakpoint) {
+  @media screen and (min-width: @grid-float-breakpoint) {
     &.shadowed {
       box-shadow: 0 0 25px rgba(0, 0, 0, .1);
     }
   }
 }
 
-@media (min-width: @grid-float-breakpoint) {
+@media screen and (min-width: @grid-float-breakpoint) {
   .id7-left-border {
     background-position: right top;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ body {
   }
 }
 
-@media (min-width: @grid-float-breakpoint) {
+@media screen and (min-width: @grid-float-breakpoint) {
   .id7-left-border, .id7-right-border {
     position: fixed;
     top: 0px;
@@ -103,7 +103,7 @@ body {
   }
 }
 
-@media (min-width: @screen-md-min) {
+@media screen and (min-width: @screen-md-min) {
   .id7-left-border {
     .translate((-(@container-md / 2)), 0);
 
@@ -113,7 +113,7 @@ body {
   }
 }
 
-@media (min-width: @screen-lg-min) {
+@media screen and (min-width: @screen-lg-min) {
   .id7-left-border {
     .translate((-(@container-lg / 2)), 0);
   }
@@ -130,14 +130,14 @@ body {
     @bg-width: ((@max-width - @container-large-desktop) / 2);
     @bg-height: ((@id7-border-image-height / @id7-border-image-width) * @bg-width);
 
-    @media (min-width: (@width + 1)), (min-height: (@height + 1)) {
+    @media screen and (min-width: (@width + 1)), screen and (min-height: (@height + 1)) {
       background-size: @bg-width @bg-height;
     }
 
     .border-image-size-above(@max-width, @max-height);
   }
   .border-image-size-above(@width, @height) when (@width >= 3360px) { // Terminal
-    @media (min-width: (@width + 1)), (min-height: (@height + 1)) {
+    @media screen and (min-width: (@width + 1)), screen and (min-height: (@height + 1)) {
       background-size: cover;
     }
   }
