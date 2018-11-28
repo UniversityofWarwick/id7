@@ -52,8 +52,8 @@ $.fn.searchSuggest = function searchSuggestPlugin(options) {
   return this.each(attach);
 };
 
-$(() => {
-  $('input[data-suggest="go"]').each((i, el) => {
+$.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
+  function attach(i, el) {
     // ID-156 find the icon next to it
     $(el).next('.fa').on('click', (e) => {
       e.preventDefault();
@@ -71,7 +71,7 @@ $(() => {
       maxResults = 6;
     }
 
-    $(el).searchSuggest({
+    $(el).searchSuggest($.extend(options, {
       source: (query, callback) => {
         $.getJSON(`//sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=${maxResults}&prefix=${encodeURIComponent(query)}&callback=?`, callback);
       },
@@ -79,11 +79,15 @@ $(() => {
       display: item => item.path,
       displayText: o => `<div><p class="go-path">${_.escape(o.path)}</p><p class="go-description">${(typeof o.description !== 'undefined' ? _.escape(o.description) : '')}</p></div>`,
       itemLink: item => `https://go.warwick.ac.uk/${item.path}?goSearchReferer=${encodeURIComponent(window.location)}&goSearchQuery=${encodeURIComponent($(el).val())}`,
-    });
+    }));
 
     // ID-145
     if ($(el).width() < 88) {
       $(el).attr('placeholder', 'Search');
     }
-  });
-});
+  }
+
+  return this.each(attach);
+};
+
+$(() => $('input[data-suggest="go"]').goSearchSuggest());
