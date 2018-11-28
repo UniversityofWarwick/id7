@@ -442,8 +442,8 @@
 .apply-navs-brand(@colour) {
   @border-colour: screen(@colour, darken(white, 50%));
   @link-bg: screen(@colour, darken(white, 20%));
-  @hover-border-colour: screen(@colour, darken(white, 60%));
-  @link-hover-bg: screen(@colour, darken(white, 30%));
+  @hover-border-colour: screen(@colour, darken(white, 40%));
+  @link-hover-bg: screen(@colour, darken(white, 10%));
 
   .nav-tabs {
     border-bottom-color: @border-colour;
@@ -452,11 +452,23 @@
       > a {
         background-color: @link-bg;
         border-color: @border-colour;
+        transition: background 0.3s linear;
 
         &:hover,
         &:focus {
           background-color: @link-hover-bg;
           border-color: @hover-border-colour @hover-border-colour @border-colour;
+        }
+
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 3px;
+          top: 0;
+          left: 0;
+          transition: width 0.3s linear;
         }
       }
 
@@ -466,6 +478,11 @@
         &:focus {
           background-color: @link-hover-bg;
           border-color: @hover-border-colour @hover-border-colour @border-colour;
+
+          &::before {
+            background: @colour;
+            width: 100%;
+          }
         }
       }
 
@@ -475,6 +492,22 @@
           &:hover,
           &:focus {
             border-color: @border-colour @border-colour transparent;
+
+            &::before {
+              background: @colour;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      &:not(.disabled) {
+        > a {
+          &:hover, &:focus {
+            &::before {
+              background: @colour;
+              width: 100%;
+            }
           }
         }
       }
