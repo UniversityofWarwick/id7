@@ -1,0 +1,14 @@
+.utility-bar-bg(@id7-utility-bar-bg) {
+  nav.id7-utility-bar {
+    background: @id7-utility-bar-bg !important;
+
+    .linkColours () when (lightness(@id7-utility-bar-bg) > 50%) {
+      .link-colour(@gray);
+
+      > ul li .id7-notifications-badge .counter-value {
+        color: white;
+      }
+    }
+    .linkColours();
+  }
+}
