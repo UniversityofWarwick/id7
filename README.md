@@ -15,7 +15,7 @@ ID7 is the 7th iteration of the University of Warwick corporate identity. This l
 
 Three quick start options are available:
 
-- Install with [npm](https://www.npmjs.com): `npm i UniversityofWarwick/id7#v2.0.1`
+- Install with [npm](https://www.npmjs.com): `npm i UniversityofWarwick/id7#v2.1.0`
 - [Download the latest release](https://github.com/UniversityofWarwick/id7/releases/latest).
 - Clone the repo: `git clone https://github.com/UniversityofWarwick/id7.git`.
 
