@@ -445,7 +445,7 @@
   @hover-border-colour: screen(@colour, darken(white, 40%));
   @link-hover-bg: screen(@colour, darken(white, 10%));
   @active-slab-colour: @colour;
-  @hover-slab-colour: screen(@colour, darken(white, 80%));
+  @hover-slab-colour: screen(@colour, darken(white, 60%));
 
   .nav-tabs {
     border-bottom-color: @border-colour;
@@ -456,21 +456,26 @@
         border-color: @border-colour;
         transition: background 0.3s ease-out;
 
-        &:hover,
-        &:focus {
-          background-color: @link-hover-bg;
-          border-color: @hover-border-colour @hover-border-colour @border-colour;
-        }
-
         &::before {
           display: block;
           position: absolute;
           content: '';
           width: 0;
           height: 3px;
+          background: @hover-slab-colour;
           top: 0;
           left: 0;
           transition: width 0.3s ease-out;
+        }
+
+        &:hover,
+        &:focus {
+          background-color: @link-hover-bg;
+          border-color: @hover-border-colour @hover-border-colour @border-colour;
+
+          &::before {
+            width: 100%;
+          }
         }
       }
 
@@ -503,17 +508,6 @@
         }
       }
 
-      &:not(.disabled) {
-        > a {
-          &:hover, &:focus {
-            &::before {
-              background: @hover-slab-colour;
-              width: 100%;
-            }
-          }
-        }
-      }
-
       &.disabled {
         > a {
           color: #555;
@@ -521,6 +515,10 @@
           &:hover,
           &:focus {
             background-color: @link-bg;
+          }
+
+          &::before {
+            background: transparent;
           }
         }
       }
