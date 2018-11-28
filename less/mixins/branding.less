@@ -205,7 +205,7 @@
   .header-colour(@colour);
   .link-colour(@colour);
 
-  blockquote.quotes{
+  blockquote.quotes {
     color: darken(@colour, 20%);
 
     &::before {
@@ -324,6 +324,10 @@
   .apply-boxstyles-brand(@colour);
 
   .apply-pagination-brand(@colour);
+
+  .apply-navs-brand(@colour);
+
+  .apply-listgroup-brand(@colour);
 }
 
 .apply-footer-brand(@colour) {
@@ -420,5 +424,126 @@
 .apply-pagination-brand(@colour) {
   .pagination > li {
     a, span { color: @colour; }
+
+    &.active {
+      > a, > span {
+        &,
+        &:hover,
+        &:focus {
+          background-color: @colour;
+          border-color: @colour;
+          color: contrast(@colour, @text-color, white, 50%);
+        }
+      }
+    }
+  }
+}
+
+.apply-navs-brand(@colour) {
+  @border-colour: screen(@colour, darken(white, 50%));
+  @link-bg: screen(@colour, darken(white, 20%));
+  @hover-border-colour: screen(@colour, darken(white, 40%));
+  @link-hover-bg: screen(@colour, darken(white, 10%));
+  @active-slab-colour: @colour;
+  @hover-slab-colour: screen(@colour, darken(white, 60%));
+  @transition-timing-function: cubic-bezier(0.44, 0, 0.35, 1);
+
+  .nav-tabs {
+    border-bottom-color: @border-colour;
+
+    > li {
+      > a {
+        background-color: @link-bg;
+        border-color: @border-colour;
+        transition: background 0.3s @transition-timing-function;
+
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 3px;
+          background: @hover-slab-colour;
+          top: 0;
+          left: 0;
+          transition: width 0.3s @transition-timing-function;
+        }
+
+        &:hover,
+        &:focus {
+          background-color: @link-hover-bg;
+          border-color: @hover-border-colour @hover-border-colour @border-colour;
+
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+
+      &.open > a {
+        &,
+        &:hover,
+        &:focus {
+          background-color: @link-hover-bg;
+          border-color: @hover-border-colour @hover-border-colour @border-colour;
+
+          &::before {
+            background: @active-slab-colour;
+            width: 100%;
+          }
+        }
+      }
+
+      &.active {
+        > a {
+          &,
+          &:hover,
+          &:focus {
+            border-color: @border-colour @border-colour transparent;
+
+            &::before {
+              background: @active-slab-colour;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      &.disabled {
+        > a {
+          color: #555;
+
+          &:hover,
+          &:focus {
+            background-color: @link-bg;
+          }
+
+          &::before {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-pills > li.active > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: @colour;
+      color: contrast(@colour, @text-color, white, 50%);
+    }
+  }
+}
+
+.apply-listgroup-brand(@colour) {
+  .list-group-item.active {
+    &,
+    &:hover,
+    &:focus {
+      background-color: @colour;
+      border-color: @colour;
+      color: contrast(@colour, @text-color, white, 50%);
+    }
   }
 }
