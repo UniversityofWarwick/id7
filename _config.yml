@@ -13,5 +13,8 @@ port:             8080
 url:              "https://id7.warwick.ac.uk"
 encoding:         UTF-8
 
+# Variables
+prefix:           /
+
 # Custom variables
 current_version:  2.1.0
