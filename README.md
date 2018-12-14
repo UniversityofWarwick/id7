@@ -8,7 +8,7 @@ ID7 is the 7th iteration of the University of Warwick corporate identity. This l
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Documentation](#documentation)
 - [Breaking changes](#breaking-changes)
-- [Upgrading from 1.x to 2.x](#upgrading-from-1x-to-2x)
+- [Upgrading from 1.x to 2.x](#upgrading-from-1-x-to-2-x)
 - [Copyright and license](#copyright-and-license)
 
 ## Quick start
@@ -46,7 +46,7 @@ id7/
     └── base.html
 ```
 
-As of v2.0.0, we only provide compiled and minified CSS and JS. See [upgrading from 1.x to 2.x](#upgrading-from-1x-to-2x) for more information.
+As of v2.0.0, we only provide compiled and minified CSS and JS. See [upgrading from 1.x to 2.x](#upgrading-from-1-x-to-2-x) for more information.
 
 [JS](https://developer.chrome.com/devtools/docs/javascript-debugging#source-maps) source maps (`id7*.map`) are available for use with certain browsers' developer tools. The FontAwesome 5 free icon font is included, as is an optional ID7 theme.
 
