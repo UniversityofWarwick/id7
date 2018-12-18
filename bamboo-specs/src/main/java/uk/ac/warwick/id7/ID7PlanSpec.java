@@ -60,9 +60,9 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
                     .nodeExecutable("Node 8")
                     .command("prune"),
                   new NpmTask()
-                    .description("npm install")
+                    .description("npm ci")
                     .nodeExecutable("Node 8")
-                    .command("install -d"),
+                    .command("ci"),
                   new ScriptTask()
                     .description("BUNDLE!!!!111111111")
                     .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
