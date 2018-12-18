@@ -3,6 +3,8 @@ matrix:
     - language: ruby
       node_js: 
         - lts
+      before_install:
+        - npm i -g npm
       install:
         - gem install bundler
         - bundler install
