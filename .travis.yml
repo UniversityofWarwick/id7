@@ -1,0 +1,12 @@
+matrix:
+  include:
+    - language: ruby
+      node_js: 
+        - lts
+      install:
+        - gem install bundler
+        - bundler install
+        - npm install --no-optional
+      script:
+        - npm run docs-assets
+        - npm run test
