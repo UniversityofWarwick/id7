@@ -6,7 +6,7 @@ matrix:
       install:
         - gem install bundler
         - bundler install
-        - npm install --no-optional
+        - npm ci
       script:
         - npm run docs-assets
         - npm run test
