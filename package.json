@@ -13,9 +13,6 @@
     "docs-serve": "bundle exec jekyll serve",
     "readme-md2html": "marked README.md > docs/_includes/README.html"
   },
-  "optionalDependencies": {
-    "@fortawesome/fontawesome-pro": "^5.5.0"
-  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.5.0",
     "bootstrap": "^3.4.0",
