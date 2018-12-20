@@ -328,7 +328,7 @@ $(() => {
   // jump to a tab if specified
   const url = document.location.toString();
   if (url.match('#') && url.split('#')[1].length) {
-    const $tabLink = $(`.nav-tabs a[href="#${url.split('#')[1]}]`);
+    const $tabLink = $(`.nav-tabs a[href="#${url.split('#')[1]}"]`);
     if ($tabLink) {
       $tabLink.tab('show');
     }
