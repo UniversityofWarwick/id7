@@ -1,6 +1,6 @@
 import path from 'path';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
-import UglifyWebpackPlugin from 'uglifyjs-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import Autoprefixer from 'autoprefixer';
 import CssNano from 'cssnano';
@@ -132,9 +132,10 @@ const extractCSS = ({ resolverPaths } = {}) => ({
 const minify = () => ({
   optimization: {
     minimizer: [
-      new UglifyWebpackPlugin({
+      new TerserPlugin({
         sourceMap: true,
-        uglifyOptions: {
+        cache: true,
+        terserOptions: {
           compress: {
             drop_console: true,
           },
