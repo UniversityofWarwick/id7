@@ -45,6 +45,11 @@ $.fn.modal.Constructor.prototype.backdrop = function fixBackdropParent(callback)
 
 require('bootstrap/js/tooltip');
 require('bootstrap/js/popover');
+
+// ID-285 Allow iframes in popovers https://getbootstrap.com/docs/3.4/javascript/#js-sanitizer
+const defaultWhitelist = $.fn.tooltip.Constructor.DEFAULTS.whiteList;
+defaultWhitelist.iframe = ['src', 'scrolling', 'frameborder', 'allowtransparency', 'seamless', 'sandbox'];
+
 require('bootstrap/js/scrollspy');
 require('bootstrap/js/tab');
 require('bootstrap/js/affix');
