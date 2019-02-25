@@ -12,7 +12,7 @@ import WatchEventsPlugin from './build-tooling/WatchEventsPlugin';
 const merge = require('webpack-merge');
 const tooling = require('./build-tooling/webpack.tooling');
 
-const version = require('./package.json').version;
+const { version } = require('./package.json');
 
 const paths = {
   ROOT: __dirname,
@@ -260,7 +260,7 @@ module.exports = ({ production, docs } = {}) => {
   }
 
   return [
-    merge(mainConfig, { name: 'main', }),
-    merge(hpConfig, { name: 'homepage', }),
+    merge(mainConfig, { name: 'main' }),
+    merge(hpConfig, { name: 'homepage' }),
   ];
 };

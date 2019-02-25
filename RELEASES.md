@@ -26,3 +26,9 @@ Once the version's released, you'll need to do a GitHub pages deploy. To do this
 node_modules/.bin/npm-run-all --parallel readme-md2html docs-assets
 ./deploy.sh
 ```
+
+## Publishing the package on npmjs.com
+
+You'll need to be a member of the npm `@universityofwarwick` organisation to publish.
+
+Make sure you're logged in to npm with `npm login`, then from the root of the project run `npm publish --access=public` and go through the prompts.
