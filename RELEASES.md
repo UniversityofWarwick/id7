@@ -10,7 +10,6 @@ the version number that you're tagging.
 Edit the version number in the following places:
 
 * Line 3 of `package.json`
-* Line 18 of `README.md`
 * Line 20 of `_config.yml`
 
 ## Running a distribution build

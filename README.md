@@ -15,7 +15,7 @@ ID7 is the 7th iteration of the University of Warwick corporate identity. This l
 
 Three quick start options are available:
 
-- Install with [npm](https://www.npmjs.com): `npm i UniversityofWarwick/id7#v2.2.1`
+- Install with [npm](https://www.npmjs.com): `npm i @universityofwarwick/id7`
 - [Download the latest release](https://github.com/UniversityofWarwick/id7/releases/latest).
 - Clone the repo: `git clone https://github.com/UniversityofWarwick/id7.git`.
 
@@ -53,7 +53,7 @@ As of v2.0.0, we only provide compiled and minified CSS and JS. See [upgrading f
 The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. These dependencies are:
 
 - [jQuery](https://github.com/jquery/jquery) 3.3.1
-- [Bootstrap](https://github.com/twbs/bootstrap) 3.4.0
+- [Bootstrap](https://github.com/twbs/bootstrap) 3.4.1
 - [bootstrap-3-typeahead](https://github.com/bassjobsen/Bootstrap-3-Typeahead) 4.0.2
 - [headroom.js](https://github.com/WickyNilliams/headroom.js) 0.9.4
 - [lodash](https://github.com/lodash/lodash) 4.17.11
