@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import Modernizr from 'modernizr';
 
+import FeatureDetect from '../feature-detect';
 import changeLocationHash from '../change-location-hash';
 
 const Config = {
@@ -86,7 +86,7 @@ $.fn.moreLinksPopover = function initPlugin(o = {}) {
 };
 
 $(() => {
-  if (Modernizr.flexbox) {
+  if (FeatureDetect.cssSupports('display', 'flex')) {
     $('[data-toggle="id7:megamenu-popover"]').moreLinksPopover();
   }
 });

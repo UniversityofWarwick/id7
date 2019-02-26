@@ -1,13 +1,9 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import _ from 'lodash-es';
-import Modernizr from 'modernizr';
 import Headroom from 'headroom.js';
 
 // Expose globals for backwards compatibility
 window.jQuery = $;
-window._ = _;
-window.Modernizr = Modernizr;
 
 // jQuery plugins/modifiers
 require('bootstrap/js/transition');

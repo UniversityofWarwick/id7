@@ -58,6 +58,7 @@ const commonConfig = basePath => merge([
         before: {
           root: paths.ROOT,
           include: [basePath],
+          log: false,
         },
         after: {
           root: paths.ROOT,
@@ -67,6 +68,7 @@ const commonConfig = basePath => merge([
               method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
             },
           ],
+          log: false,
         },
       }),
     ],
@@ -129,6 +131,7 @@ const homepageConfig = basePath => merge([
         before: {
           root: paths.ROOT,
           include: [basePath],
+          log: false,
         },
         after: {
           root: paths.ROOT,
@@ -138,6 +141,7 @@ const homepageConfig = basePath => merge([
               method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
             },
           ],
+          log: false,
         },
       }),
     ],
@@ -157,7 +161,6 @@ const homepageConfig = basePath => merge([
   {
     externals: {
       jquery: 'jQuery',
-      modernizr: 'Modernizr',
       'lodash-es': '_',
     },
   },
