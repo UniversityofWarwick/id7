@@ -33,7 +33,7 @@ export default class FeatureDetect {
 
   addTest(name, result) {
     this.tests[name] = result;
-    FeatureDetect[name] = result;
+    FeatureDetect.prototype[name] = result;
 
     // Detect when DOMReady has already happened
     if (this.$container) {

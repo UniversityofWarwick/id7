@@ -61,6 +61,9 @@ detect.addTest('ie-or-edge', /MSIE 10/i.test(userAgent) || /MSIE 9/i.test(userAg
 
 $(() => detect.addClasses($('html')));
 
+// For legacy
+window.Modernizr = detect;
+
 require('./reflow-event.jquery');
 require('./account-popover.jquery');
 require('./navigation.jquery');
