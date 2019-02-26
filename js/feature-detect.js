@@ -1,5 +1,5 @@
 /* eslint-env browser */
-const matchMedia = window.matchMedia || window.msMatchMedia;
+const matchMedia = window.matchMedia || window.msMatchMedia || (() => false);
 
 export default class FeatureDetect {
   constructor() {
