@@ -10,6 +10,7 @@ slug: getting-started
     {% include getting-started/whats-included.html %}
     {% include getting-started/webpack.html %}
     {% include getting-started/template.html %}
+    {% include getting-started/security-headers.html %}
     {% include getting-started/browser-and-device-support.html %}
   </section>
   <aside class="col-sm-3">
@@ -35,6 +36,14 @@ slug: getting-started
         </li>
         <li>
           <a href="#template">Basic template</a>
+        </li>
+        <li>
+          <a href="#security-headers">Security headers</a>
+          <ul class="nav">
+            <li><a href="#security-headers-csp">Content-Security-Policy</a></li>
+            <li><a href="#security-headers-feature-policy">Feature-Policy</a></li>
+            <li><a href="#security-headers-other">Other headers</a></li>
+          </ul>
         </li>
         <li>
           <a href="#support">Browser and device support</a>
