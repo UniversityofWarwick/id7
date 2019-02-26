@@ -57,7 +57,6 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 - [bootstrap-3-typeahead](https://github.com/bassjobsen/Bootstrap-3-Typeahead) 4.0.2
 - [headroom.js](https://github.com/WickyNilliams/headroom.js) 0.9.4
 - [lodash](https://github.com/lodash/lodash) 4.17.11
-- [Modernizr](https://modernizr.com/download?-flexbox-svgfilters-webp-addtest-mq-setclasses-dontmin) 3.6.0 (the minimum necessary tests are specified with this link)
 - jQuery doubleScroll 0.6
 
 ## Icons
@@ -108,6 +107,7 @@ In your application you will need to do the following:
 - **1.4.0** - Support for Internet Explorer 8 was removed, and a reduced range of Modernizr tests is used as a result.
 - **1.6.0** - Font Awesome v5 is now used by default instead of v4. Icon identifier references may need to be updated, or the [shim](https://github.com/UniversityofWarwick/id7/#icons) included.
 - **2.0.0** - Now built with Webpack instead of Grunt. Removed non-minified resources from packages. Moved from typeahead.js to bootstrap-3-typeahead.
+- **2.3.0** - Modernizr was removed and replaced with a shim just containing the tests used in ID7.
 
 ## Copyright and license
 

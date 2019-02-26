@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import $ from 'jquery';
 import _ from 'lodash-es';
-import Modernizr from 'modernizr';
+import FeatureDetect from './feature-detect';
 
 /**
  * Use Bootstrap 3 typeahead to provide Go.Warwick suggestions on an <input>
@@ -66,7 +66,7 @@ $.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
     let minLength = 3;
     let maxResults = 3;
 
-    if (Modernizr.mq('only all and (min-width: 768px)')) {
+    if (FeatureDetect.mq('only all and (min-width: 768px)')) {
       minLength = 2;
       maxResults = 6;
     }

@@ -1,9 +1,9 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import Modernizr from 'modernizr';
 import _ from 'lodash-es';
 import PanelSnap from 'panelsnap';
 
+import FeatureDetect from '../feature-detect';
 import changeLocationHash from '../change-location-hash';
 
 const Config = {
@@ -39,7 +39,7 @@ const Config = {
     showFullpageImageCarouselTest() {
       // As per ID-94, if a browser can't do Flexbox (and therefore can't do panel layouts),
       // serve the mobile hp
-      return Modernizr.mq('only all and (min-width: 768px)') && Modernizr.flexbox;
+      return FeatureDetect.mq('only all and (min-width: 768px)') && FeatureDetect.cssSupports('display', 'flex');
     },
   },
 };
@@ -452,7 +452,7 @@ class HomepageCarousel {
     if (isOnLoad && !isDesktop && window.location.hash) HomepageCarousel.hashChanged();
     $(window).off('hashchange.id7.homepage');
 
-    if (!Modernizr.mq('only all and (min-width: 768px)')) {
+    if (!FeatureDetect.mq('only all and (min-width: 768px)')) {
       $(window).on('hashchange.id7.homepage', HomepageCarousel.hashChanged);
     }
   }

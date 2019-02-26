@@ -157,7 +157,6 @@ const homepageConfig = basePath => merge([
   {
     externals: {
       jquery: 'jQuery',
-      modernizr: 'Modernizr',
       'lodash-es': '_',
     },
   },

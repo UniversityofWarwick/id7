@@ -1,6 +1,6 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import Modernizr from 'modernizr';
+import FeatureDetect from './feature-detect';
 
 const Config = {
   Templates: {
@@ -25,7 +25,7 @@ const Config = {
     container: 'id7-wide-table-wrapper-container',
     wrapper: 'table-responsive', // Set to false to disable
     popout() {
-      return Modernizr.mq('only all and (min-width: 768px)');
+      return FeatureDetect.mq('only all and (min-width: 768px)');
     },
     doublescroll: true,
   },
