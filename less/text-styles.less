@@ -16,7 +16,13 @@ a {
 
 a {
   .new-window-link, .insecure-link {
-    .fa();
+    .fas();
+    // Partial copy of .fa-icon() from _mixins.less
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
     font-size: @font-size-small;
     padding-left: 3px;
     margin-right: 2px;
