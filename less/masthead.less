@@ -180,7 +180,10 @@
 
     margin-left: @id7-masthead-logo-width-sm;
 
-    .opacity(0);
+    :not(:focus-within) {
+      .opacity(0);
+    }
+
     .transition(opacity 0.15s linear);
     .small();
     
