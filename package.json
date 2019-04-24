@@ -67,7 +67,7 @@
     "sinon": "7.2.4",
     "terser-webpack-plugin": "1.2.2",
     "webpack": "4.29.5",
-    "webpack-bundle-analyzer": "3.0.4",
+    "webpack-bundle-analyzer": "3.3.2",
     "webpack-cli": "3.2.3",
     "webpack-merge": "4.2.1",
     "webpack-notifier": "1.7.0",
