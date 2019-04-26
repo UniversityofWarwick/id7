@@ -13,7 +13,7 @@
     "readme-md2html": "marked README.md > docs/_includes/README.html"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.7.2",
+    "@fortawesome/fontawesome-free": "5.8.1",
     "bootstrap": "3.4.1",
     "bootstrap-3-typeahead": "github:UniversityofWarwick/Bootstrap-3-Typeahead#acada2f8e5d9a70dbb37c1fd152895937a03f8d5",
     "core-js": "2.6.5",
@@ -73,6 +73,9 @@
     "webpack-notifier": "1.7.0",
     "webpack-stream": "5.2.1",
     "zip-webpack-plugin": "3.0.0"
+  },
+  "optionalDependencies": {
+    "@fortawesome/fontawesome-pro": "5.8.1"
   },
   "author": "University of Warwick",
   "license": "ISC",
