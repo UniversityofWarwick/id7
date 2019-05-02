@@ -1,4 +1,71 @@
 @import (reference) '../id7.less';
+
+// Less that we would expect Marketing to be changing as part of maintaining the page
+
+// Accent colours
+@accent-colour: #ffc233; // Used for (e.g.) the background to the CTA button
+@accent-text-colour: @text-color; // Text colour inside the CTA button
+
+@accent-colour-light: #fff3d6; // Used for the background to the infographic boxes
+
+// Text styling and positioning of the text inside the hero imagery
+.hero-image {
+  .callout-button {
+    // Only display at sizes above mobile
+    @media screen and (min-width: @grid-float-breakpoint) {
+      html.flexbox & {
+        h2 {
+          display: block; // Defaults to hidden
+          flex: 0 1 auto;
+
+          // Positioning
+          // sm: - - - - - *********** -
+          // md: - - - - - - ********* -
+          .make-sm-column(6);
+          .make-sm-column-offset(5);
+          .make-md-column(5);
+          .make-md-column-offset(6);
+
+          // Styling of the header "strapline"
+          text-align: center;
+          text-transform: uppercase;
+
+          .hero-image-tagline-line1 {
+            display: block;
+            font-size: 30px;
+            letter-spacing: 7px;
+          }
+
+          .hero-image-tagline-line2 {
+            display: block;
+            font-size: 64px;
+            letter-spacing: 7.2px;
+
+            @media (min-width: @screen-md-min) {
+              font-size: 80px;
+              line-height: 86px;
+            }
+          }
+        }
+
+        .btn {
+          flex: 0 1 auto;
+
+          // Positioning
+          // sm: - - - - - - ******* - -
+          // md: - - - - - - - ***** - -
+          .make-sm-column(4);
+          .make-sm-column-offset(6);
+          .make-md-column(3);
+          .make-md-column-offset(7);
+        }
+      }
+    }
+  }
+}
+
+// End styling for Marketing
+
 @import '../font-awesome-pro.less';
 
 @icon-font-path: '../../fonts';
@@ -9,13 +76,24 @@
 
 @nav-links-margin-top: 50px; // Align with bottom of logotype
 
-@brand-colour: @text-color;
+@brand-colour: #3F4246;
 .apply-brand(@brand-colour);
 
-@accent-colour: #ffc233;
-@accent-text-colour: @text-color;
+.id7-utility-masthead {
+  background-color: @brand-colour;
+}
 
-@accent-colour-light: #fff3d6;
+.id7-left-border, .id7-right-border {
+  background-color: #65686B;
+}
+
+// Fiddle me this
+@media (min-width: @screen-lg-min) {
+  .col-lg-10.col-lg-offset-1 {
+    margin-left: 5%;
+    width: 90%;
+  }
+}
 
 // Make search column smaller
 .id7-masthead {
@@ -356,6 +434,38 @@ body > a.sr-only-focusable { // "Skip to main content" link
 }
 
 /***** INDIVIDUAL BLOCKS *****/
+
+// Increase text size across the page
+.id7-main-content {
+  font-size: floor((@font-size-base * 1.15));
+  @media (min-width: @screen-sm-min) {
+    font-size: floor(@font-size-base * 1.3);
+  }
+
+  .lead {
+    font-size: floor(@font-size-base * 1.3);
+    @media (min-width: @screen-sm-min) {
+      font-size: floor(@font-size-base * 1.5);
+    }
+  }
+}
+
+h2, .h2 { font-size: ceil((36px * @font-scale-xs)); }
+h3, .h3 { font-size: ceil((26px * @font-scale-xs)); }
+
+@media (min-width: @grid-float-breakpoint) {
+  h2, .h2 { font-size: 36px; }
+  h3, .h3 { font-size: 26px; }
+}
+
+h2, .h2 {
+  font-size: 30px;
+
+  @media (min-width: @grid-float-breakpoint) {
+    font-size: 36px;
+  }
+}
+
 .hero-image {
   .full-width;
   .flush-top;
@@ -404,16 +514,6 @@ body > a.sr-only-focusable { // "Skip to main content" link
     bottom: -36px;
     left: 0;
 
-    .btn {
-      font-size: floor((@font-size-base * 1.15));
-      font-weight: bold;
-      line-height: 1.4;
-
-      @media (min-width: @grid-float-breakpoint) {
-        font-size: (@font-size-base * 1.5);
-      }
-    }
-
     h2 {
       display: none;
     }
@@ -431,54 +531,26 @@ body > a.sr-only-focusable { // "Skip to main content" link
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        h2 {
-          display: block;
-          flex: 0 1 auto;
-          .make-sm-column(6);
-          .make-sm-column-offset(5);
-          .make-md-column(5);
-          .make-md-column-offset(6);
-
-          text-align: center;
-          text-transform: uppercase;
-
-          .hero-image-tagline-line1 {
-            display: block;
-            font-size: 30px;
-            letter-spacing: 7px;
-          }
-
-          .hero-image-tagline-line2 {
-            display: block;
-            font-size: 64px;
-            letter-spacing: 13px;
-
-            @media (min-width: @screen-md-min) {
-              font-size: 70px;
-            }
-          }
-        }
-
-        .btn {
-          flex: 0 1 auto;
-          .make-sm-column(4);
-          .make-sm-column-offset(6);
-          .make-md-column(3);
-          .make-md-column-offset(7);
-        }
       }
     }
   }
 }
 
 .course-search {
-  padding: @grid-gutter-width;
+  padding: @grid-gutter-width @grid-gutter-width (@grid-gutter-width * 2);
   margin: 0 (-@grid-gutter-width);
   background: @brand-colour;
   color: white;
 
   .header-colour(white);
+
+  h2 {
+    font-size: ceil((@font-size-h2 * @font-scale-xs));
+
+    @media (min-width: @grid-float-breakpoint) {
+      font-size: @font-size-h2;
+    }
+  }
 
   h2 > label {
     color: inherit;
@@ -524,6 +596,7 @@ body > a.sr-only-focusable { // "Skip to main content" link
   blockquote.infographic {
     background: @accent-colour-light;
     margin: 0 0 @grid-gutter-width;
+    font-weight: bold;
 
     @media screen and (min-width: @grid-float-breakpoint) {
       margin: 0;
@@ -531,75 +604,9 @@ body > a.sr-only-focusable { // "Skip to main content" link
 
     border-left: 0;
 
-    > h3 {
-      line-height: 1;
-      font-size: 4.5em;
-      font-variant: small-caps;
-      font-weight: bold;
-    }
-
-    &.numeric > h3 {
-      @supports (display: grid) {
-        display: grid;
-        grid-template-areas: "number ordinal"
-                             "number qualifier";
-        grid-template-rows: min-content 1fr;
-        grid-template-columns: min-content 1fr;
-        grid-gap: 5px @grid-gutter-width;
-        gap: 5px @grid-gutter-width;
-        height: 120px;
-
-        span {
-          display: block;
-        }
-
-        .number {
-          grid-area: number;
-          font-variant: tabular-nums;
-          font-size: 166.67%;
-        }
-
-        .ordinal {
-          grid-area: ordinal;
-          padding-top: 12px;
-          font-size: 36.67%;
-          font-variant-caps: all-small-caps;
-          margin-left: -@grid-gutter-width;
-
-          font-variant-numeric: ordinal;
-          font-feature-settings: "ordn";
-        }
-
-        .qualifier {
-          grid-area: qualifier;
-          font-size: 40%;
-          font-weight: normal;
-          font-variant-caps: all-small-caps;
-          line-height: 0.7;
-        }
-      }
-    }
-
-    &.non-numeric > h3 {
-      height: 120px;
-
-      span {
-        display: block;
-      }
-
-      .number {
-        text-transform: uppercase;
-      }
-
-      .qualifier {
-        font-size: 40%;
-        font-variant-caps: all-small-caps;
-        padding-left: @grid-gutter-width;
-      }
-    }
-
     footer {
       font-size: inherit;
+      font-weight: normal;
 
       &:before {
         content: '';
@@ -618,7 +625,7 @@ body > a.sr-only-focusable { // "Skip to main content" link
   }
 }
 
-.open-days {
+.event {
   .btn-accent {
     text-align: left;
   }
@@ -633,6 +640,22 @@ body > a.sr-only-focusable { // "Skip to main content" link
 }
 
 .spotlight {
+  h3 {
+    font-size: ceil((@font-size-h3 * @font-scale-xs));
+
+    @media (min-width: @grid-float-breakpoint) {
+      font-size: @font-size-h3;
+    }
+
+    .lead-article & {
+      font-size: ceil((26px * @font-scale-xs));
+
+      @media (min-width: @grid-float-breakpoint) {
+        font-size: 26px;
+      }
+    }
+  }
+
   .lead-article {
     h3 {
       margin-top: (@line-height-computed / 2);
@@ -656,10 +679,14 @@ body > a.sr-only-focusable { // "Skip to main content" link
       .clearfix;
     }
   }
+
+  hr.spacer {
+    margin: (@grid-gutter-width / 2) 0;
+  }
 }
 
 hr.spacer {
-  margin: (@grid-gutter-width / 2) 0;
+  margin: @grid-gutter-width 0;
   border: 0;
 }
 
@@ -750,7 +777,19 @@ hr.spacer {
 .spotlight {
   .fade-out-siblings(~"article");
 
-  h2 {
-    pointer-events: auto;
+  article h3 {
+    transition: 300ms color, 300ms text-decoration, 300ms text-decoration-color;
+  }
+
+  &:hover, &:focus-within {
+    article {
+      &:hover, &:focus-within {
+        h3 {
+          color: #0073BB;
+          text-decoration: underline;
+          text-decoration-color: #0073BB;
+        }
+      }
+    }
   }
 }
