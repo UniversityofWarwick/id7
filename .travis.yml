@@ -1,12 +1,14 @@
 matrix:
   include:
     - language: ruby
+      cache: bundler
       node_js: 
         - lts
       before_install:
         - npm i -g npm
-      install:
+        - gem update --system
         - gem install bundler
+      install:
         - bundler install
         - npm ci
       script:
