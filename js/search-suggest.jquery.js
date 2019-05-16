@@ -9,10 +9,12 @@ import FeatureDetect from './feature-detect';
 function SearchSuggest(options) {
   const o = options || {};
   const $input = o.input;
-  $input.typeahead({
+  $input.attr('autocomplete', 'off').typeahead({
     minLength: o.minLength,
     source: o.source,
     displayText: o.displayText,
+    appendTo: o.appendTo !== undefined ? $(o.appendTo) : undefined,
+    fitToElement: o.fitToElement,
     matcher: () => true, // All data received from the server matches the query
     highlighter: html => html,
     changeInputOnSelect: false,
@@ -71,7 +73,8 @@ $.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
       maxResults = 6;
     }
 
-    $(el).searchSuggest($.extend(options, {
+    const $trigger = $(el);
+    $trigger.searchSuggest($.extend(options, $trigger.data(), {
       source: (query, callback) => {
         $.getJSON(`//sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=${maxResults}&prefix=${encodeURIComponent(query)}&callback=?`, callback);
       },
@@ -82,8 +85,8 @@ $.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
     }));
 
     // ID-145
-    if ($(el).width() < 88) {
-      $(el).attr('placeholder', 'Search');
+    if ($trigger.width() < 88) {
+      $trigger.attr('placeholder', 'Search');
     }
   }
 

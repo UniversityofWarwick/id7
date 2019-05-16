@@ -140,16 +140,33 @@
 }
 
 // Expanding search box
-.id7-utility-masthead {
-  overflow-x: hidden;
-}
+@media (max-width: @screen-xs-max) {
+  .id7-utility-masthead {
+    overflow: hidden;
+  }
 
-.id7-masthead {
-  @media (max-width: @screen-xs-max) {
+  .id7-masthead {
     .id7-search-column {
       left: 100%;
       background: white;
       height: 100%;
+      padding: 0 @grid-gutter-width;
+
+      // Make the placeholder text bigger again
+      .id7-search-box-container .input-lg {
+        &::-moz-placeholder { // Firefox
+          font-size: inherit;
+          line-height: inherit;
+        }
+        &:-ms-input-placeholder { // Internet Explorer 10+
+          font-size: inherit;
+          line-height: inherit;
+        }
+        &::-webkit-input-placeholder {  // Safari and Chrome
+          font-size: inherit;
+          line-height: inherit;
+        }
+      }
     }
 
     transition: transform linear .15s;
@@ -169,6 +186,51 @@
     @media screen and (min-width: @grid-float-breakpoint) {
       top: 64px;
       height: 40px;
+    }
+  }
+
+  .typeahead:hover + .fas, .fas:hover {
+    color: black;
+  }
+
+  .form-control:hover + .fa, .typeahead:hover + .fa, .fa:hover,
+  .form-control:hover + .fas, .typeahead:hover + .fas, .fas:hover {
+    color: @brand-colour;
+  }
+
+  .typeahead.dropdown-menu > li.active > a {
+    background: @brand-colour;
+    color: contrast(@brand-colour, @text-color, white, 50%);
+  }
+
+  .typeahead.dropdown-menu {
+    margin-top: -1px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    .box-shadow(0 5px 10px rgba(0,0,0,.2));
+  }
+
+  .typeahead.dropdown-menu {
+    padding: 0;
+
+    > li > a {
+      padding: 8px 20px;
+      line-height: 18px;
+      white-space: normal;
+    }
+
+    > li + li {
+      border-top: 1px solid #ccc;
+    }
+
+    .go-path {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .go-description {
+      margin: 0;
     }
   }
 }
@@ -268,7 +330,7 @@
   .flush-bottom;
 
   @media screen and (min-width: @grid-float-breakpoint) {
-    html.flexbox & {
+    html.js.flexbox & {
       display: none;
     }
   }
@@ -283,6 +345,10 @@
     .utility, .social-media {
       margin-top: @grid-gutter-width;
     }
+  }
+
+  .back-to-top-link {
+    .visible-xs-block;
   }
 }
 
