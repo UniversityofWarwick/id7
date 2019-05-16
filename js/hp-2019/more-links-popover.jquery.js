@@ -3,6 +3,7 @@ import $ from 'jquery';
 
 import FeatureDetect from '../feature-detect';
 import changeLocationHash from '../change-location-hash';
+import currentScreenSize from '../screen-sizes';
 
 const Config = {
   Defaults: {
@@ -35,6 +36,14 @@ class MoreLinksPopover {
     $trigger.on('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
+
+      if (!FeatureDetect.cssSupports('display', 'flex') || currentScreenSize().name === 'xs') {
+        // Scroll the page to more links
+        $('html, body').animate({
+          scrollTop: $(options.target).offset().top,
+        }, 'slow');
+      }
+
       return false;
     }).popover({
       container: options.container,
@@ -48,10 +57,10 @@ class MoreLinksPopover {
       $trigger.data('previous-hash', window.location.hash);
       changeLocationHash(options.target);
     }).on('hide.bs.popover', () => {
-      if ($('.popover.megamenu-links').is(':visible')) {
-        if ($trigger.data('previous-hash') && $trigger.data('previous-hash') !== '#more-links') {
-          changeLocationHash($trigger.data('previous-hash'));
-        }
+      if ($trigger.data('previous-hash') && $trigger.data('previous-hash') !== '#more-links') {
+        changeLocationHash($trigger.data('previous-hash'));
+      } else {
+        changeLocationHash('');
       }
     });
 
@@ -65,6 +74,17 @@ class MoreLinksPopover {
       if ($(e.target).closest('.popover').length === 0 && $(e.target).closest('.use-popover').length === 0) {
         $trigger.popover('hide');
       }
+    });
+
+    // Back to top link
+    $(options.target).on('click', '.back-to-top-link', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      $trigger.popover('hide');
+      $('html, body').animate({ scrollTop: 0 }, 'slow');
+
+      return false;
     });
   }
 }
@@ -83,7 +103,5 @@ $.fn.moreLinksPopover = function initPlugin(o = {}) {
 };
 
 $(() => {
-  if (FeatureDetect.cssSupports('display', 'flex')) {
-    $('[data-toggle="id7:megamenu-popover"]').moreLinksPopover();
-  }
+  $('[data-toggle="id7:megamenu-popover"]').moreLinksPopover();
 });

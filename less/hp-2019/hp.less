@@ -99,7 +99,7 @@
 .id7-masthead {
   .id7-logo-column {
     float: left;
-    width: @logo-width;
+    width: 100%;
 
     .make-sm-column(9);
 
@@ -109,11 +109,15 @@
   }
 
   .id7-search-column {
-    .make-sm-column(3);
-    margin-left: (-@logo-width);
+    width: 100%;
+    max-width: none;
+    margin: 0;
 
-    @media (min-width: @screen-sm-min) {
-      margin-left: 0;
+    .make-sm-column(3); // sets position: relative
+    position: absolute;
+
+    @media (min-width: @grid-float-breakpoint) {
+      position: relative;
     }
   }
 
@@ -122,6 +126,8 @@
 
     > .id7-logo {
       width: @logo-width;
+      height: 100%;
+      float: left;
     }
   }
 
@@ -130,6 +136,22 @@
 
   @media (min-width: @grid-float-breakpoint) {
     .svg-background-with-fallback("../../images/masthead-logo-bleed-descriptor-sm", "../../images/masthead-logo-bleed-descriptor-sm");
+  }
+}
+
+// Expanding search box
+.id7-masthead {
+  @media (max-width: @screen-xs-max) {
+    .id7-search-column {
+      left: 100%;
+      background: white;
+      height: 100%;
+    }
+
+    transition: transform linear .15s;
+    &.search-expanded {
+      transform: translateX(-100%);
+    }
   }
 }
 
@@ -156,16 +178,31 @@
 
 // Quick links Nav
 .id7-masthead .id7-logo-row nav {
-  margin-left: @logo-width;
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  a { color: white !important; } // Avoid flash of black
+  display: block; // Display, even on xs
+  float: right;
+  margin: 0;
 
-  margin-top: @nav-links-margin-top;
+  i.fa, i.fas, i.fal, i.far, i.fab {
+    font-size: 3em;
+    line-height: @logo-height;
+  }
 
-  // Remove the bar separator, and increase separation
+  @media (min-width: @grid-float-breakpoint) {
+    float: none;
+    margin-left: @logo-width;
+    margin-top: @nav-links-margin-top;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    i.fa, i.fas, i.fal, i.far, i.fab {
+      font-size: 14px;
+      line-height: inherit;
+    }
+  }
+
   ul > li {
+    // Remove the bar separator, and increase separation
     &:not(:first-child)::before {
       content: '';
       margin: 0 0.15em;
@@ -174,24 +211,18 @@
         margin: 0 0.6em;
       }
     }
-  }
 
-  .more-links-trigger {
-    display: none;
+    // Hide on xs (but show the triggers)
+    @media (max-width: @screen-xs-max) {
+      display: none;
 
-    @media screen and (min-width: @grid-float-breakpoint) {
-      html.flexbox & {
+      &.search-trigger, &.more-links-trigger {
         display: inline-block;
       }
     }
   }
 
-  i.fa, i.fas, i.fal, i.far, i.fab {
-    font-size: 14px;
-  }
-
-  // TODO remove once
-  :not(:focus-within) {
+  &:not(:focus-within) {
     .opacity(1);
   }
 }

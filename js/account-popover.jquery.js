@@ -167,7 +167,7 @@ class AccountPopover {
     });
 
     // Smaller screens get the old popover
-    const onReflow = $.proxy((e, screenConfig) => {
+    const onReflow = $.proxy((e, o) => {
       this.options.useMwIframe = this.options.useMwIframe && screenConfig.name !== 'xs'
         && $(window).height() >= 580 && AccountPopover.isMwFeatureAvailable();
 
