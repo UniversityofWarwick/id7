@@ -62,7 +62,7 @@ class CourseSearch {
       maxResults = 20;
     }
 
-    $search.typeahead($.extend({}, options, {
+    $search.attr('autocomplete', 'off').typeahead($.extend({}, options, {
       name: 'course',
       minLength,
       source: (query, sync, async) => {
