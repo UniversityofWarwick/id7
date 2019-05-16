@@ -31,7 +31,7 @@ slug: examples/hp-2019
   <div class="row">
     <div class="col-lg-10 col-lg-offset-1">
       <div class="form">
-        <form action="//search.warwick.ac.uk/website">
+        <form action="//search.warwick.ac.uk/website" class="course-search-form">
           <h2><label for="course-search">Find a course</label></h2>
 
           <input type="hidden" name="source" value="https://warwick.ac.uk/" />
@@ -42,10 +42,18 @@ slug: examples/hp-2019
               <input id="course-search" type="search" name="q" class="form-control input-lg" placeholder="Enter a course name or keyword here">
             </div>
             <div class="col-sm-4">
-              <select name="urlPrefix" class="form-control input-lg" aria-label="Course type">
-                <option value="https://warwick.ac.uk/study/undergraduate/courses">Undergraduate Courses</option>
-                <option value="https://warwick.ac.uk/study/postgraduate/courses">Postgraduate Courses</option>
-              </select>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="urlPrefix" id="urlPrefixUG" value="https://warwick.ac.uk/study/undergraduate/courses-2019" data-paths="/study/undergraduate/courses-2019,/study/undergraduate/courses-2020" checked>
+                  Undergraduate <span class="hidden-sm">Courses</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="urlPrefix" id="urlPrefixPG" value="https://warwick.ac.uk/study/postgraduate/courses-2019" data-paths="/study/postgraduate/courses-2019">
+                  Postgraduate <span class="hidden-sm">Courses</span>
+                </label>
+              </div>
             </div>
             <div class="col-sm-2">
               <button type="submit" class="btn btn-brand btn-block btn-lg">Search <i class="fal fa-chevron-right"></i></button>

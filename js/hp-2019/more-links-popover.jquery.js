@@ -34,17 +34,14 @@ class MoreLinksPopover {
     const { $trigger, options } = this;
 
     $trigger.on('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      if (!FeatureDetect.cssSupports('display', 'flex') || currentScreenSize().name === 'xs') {
-        // Scroll the page to more links
-        $('html, body').animate({
-          scrollTop: $(options.target).offset().top,
-        }, 'slow');
+      if (FeatureDetect.cssSupports('display', 'flex') && currentScreenSize().name !== 'xs') {
+        // Prevent the default behaviour because we're opening a popover
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
       }
 
-      return false;
+      return true;
     }).popover({
       container: options.container,
       content: $(options.target).html(),
@@ -77,15 +74,7 @@ class MoreLinksPopover {
     });
 
     // Back to top link
-    $(options.target).on('click', '.back-to-top-link', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      $trigger.popover('hide');
-      $('html, body').animate({ scrollTop: 0 }, 'slow');
-
-      return false;
-    });
+    $(options.target).on('click', '.back-to-top-link', () => $trigger.popover('hide'));
   }
 }
 

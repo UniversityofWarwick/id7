@@ -57,7 +57,7 @@ $.fn.searchSuggest = function searchSuggestPlugin(options) {
 $.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
   function attach(i, el) {
     // ID-156 find the icon next to it
-    $(el).next('.fa').on('click', (e) => {
+    $(el).next('.fa,.fas,.fal,.fab,.far').on('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
 

@@ -656,6 +656,56 @@ h2, .h2 {
   background: @brand-colour;
   color: white;
 
+  .radio {
+    label {
+      color: inherit;
+      font-size: ceil((@font-size-h3 * @font-scale-xs));
+
+      @media (min-width: @grid-float-breakpoint) {
+        font-size: @font-size-h3;
+      }
+    }
+
+    @media (min-width: @grid-float-breakpoint) {
+      margin: 0;
+
+      &:first-child {
+        margin-top: -15px;
+      }
+    }
+
+    html.js & {
+      input {
+        .sr-only;
+      }
+
+      label {
+        padding: 0;
+      }
+
+      .fa-circle {
+        display: inline;
+        opacity: 0.5;
+      }
+      .fa-dot-circle {
+        display: none;
+      }
+
+      &.selected {
+        .fa-circle {
+          display: none;
+        }
+        .fa-dot-circle {
+          display: inline;
+        }
+      }
+
+      &.focused {
+        .tab-focus();
+      }
+    }
+  }
+
   .header-colour(white);
 
   h2 {
@@ -671,8 +721,9 @@ h2, .h2 {
   }
 
   .btn-brand {
+    .button-variant(white; lighten(@brand-colour, 15%); white);
+
     border-radius: 0;
-    border-color: white;
   }
 
   input, select {
@@ -685,6 +736,37 @@ h2, .h2 {
 
   html & .form-control:focus {
     .tab-focus();
+  }
+
+  .typeahead.dropdown-menu > li.active > a {
+    background: @brand-colour;
+    color: contrast(@brand-colour, @text-color, white, 50%);
+  }
+
+  .typeahead.dropdown-menu {
+    margin-top: -1px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    .box-shadow(0 5px 10px rgba(0,0,0,.2));
+  }
+
+  .typeahead.dropdown-menu {
+    padding: 0;
+
+    > li > a {
+      padding: 8px 20px;
+      line-height: 18px;
+      white-space: normal;
+    }
+
+    > li + li {
+      border-top: 1px solid #ccc;
+    }
+
+    .title {
+      margin: 0;
+    }
   }
 }
 
