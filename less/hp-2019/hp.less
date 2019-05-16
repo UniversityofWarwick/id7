@@ -140,6 +140,10 @@
 }
 
 // Expanding search box
+.id7-utility-masthead {
+  overflow: hidden;
+}
+
 .id7-masthead {
   @media (max-width: @screen-xs-max) {
     .id7-search-column {
@@ -218,6 +222,12 @@
 
       &.search-trigger, &.more-links-trigger {
         display: inline-block;
+      }
+    }
+
+    @media (max-width: @screen-sm-max) {
+      .more-links-hint {
+        .sr-only;
       }
     }
   }
