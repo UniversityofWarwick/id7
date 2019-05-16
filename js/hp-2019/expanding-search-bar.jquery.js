@@ -28,22 +28,7 @@ class ExpandingSearchBar {
     const onReflow = $.proxy(this.onReflow, this);
 
     // Expand when the trigger is clicked or the search box is focused
-    $trigger.on('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      if (!this.isExpanded()) {
-        this.expand();
-
-        // Wait for the animation to complete before focusing to avoid the page
-        // shifting to see the focus
-        setTimeout(() => $target.find('input[type="search"]').first().focus(), 300);
-      }
-
-      return false;
-    });
-
-    // Expand faster
+    // Expand faster by looking for touchstart rather than click
     if ('ontouchstart' in document.documentElement && 'addEventListener' in document) {
       $trigger.each((i, el) => el.addEventListener('touchstart', () => {
         if (!this.isExpanded()) {
@@ -51,9 +36,30 @@ class ExpandingSearchBar {
 
           // Wait for the animation to complete before focusing to avoid the page
           // shifting to see the focus
-          setTimeout(() => $target.find('input[type="search"]').first().focus(), 300);
+          setTimeout(() => $target.find('input[type="search"]').first().focus(), 150);
         }
       }, { passive: true }));
+
+      $trigger.on('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      });
+    } else {
+      $trigger.on('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (!this.isExpanded()) {
+          this.expand();
+
+          // Wait for the animation to complete before focusing to avoid the page
+          // shifting to see the focus
+          setTimeout(() => $target.find('input[type="search"]').first().focus(), 150);
+        }
+
+        return false;
+      });
     }
 
     $target.on('focus input', 'input[type="search"]', expand);
