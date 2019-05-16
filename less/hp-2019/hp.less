@@ -169,7 +169,7 @@
       }
     }
 
-    transition: transform linear .15s;
+    transition: 150ms transform;
     &.search-expanded {
       transform: translateX(-100%);
     }
@@ -726,6 +726,7 @@ h2, .h2 {
 
   .btn-brand {
     .button-variant(white; lighten(@brand-colour, 15%); white);
+    transition: 300ms background-color;
 
     border-radius: 0;
   }
