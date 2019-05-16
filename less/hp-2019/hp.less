@@ -689,8 +689,13 @@ h2, .h2 {
 
       .fa-circle {
         display: inline;
-        opacity: 0.5;
+        transition: 300ms opacity;
+        .opacity(0.5);
       }
+      &:hover .fa-circle {
+        .opacity(1);
+      }
+
       .fa-dot-circle {
         display: none;
       }
