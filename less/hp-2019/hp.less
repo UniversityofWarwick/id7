@@ -75,6 +75,7 @@
 @logo-height: 85px;
 
 @nav-links-margin-top: 50px; // Align with bottom of logotype
+@nav-links-margin-top-lg: 42px; // Align with bottom of logotype
 
 @brand-colour: #3F4246;
 .apply-brand(@brand-colour);
@@ -255,7 +256,7 @@
 
   @media (min-width: @grid-float-breakpoint) {
     float: none;
-    margin-left: @logo-width;
+    margin-left: (@logo-width + @grid-gutter-width);
     margin-top: @nav-links-margin-top;
     font-size: 11.5px;
     font-weight: 600;
@@ -265,6 +266,11 @@
       font-size: 14px;
       line-height: inherit;
     }
+  }
+
+  @media (min-width: @screen-lg-min) {
+    margin-top: @nav-links-margin-top-lg;
+    font-size: 16px;
   }
 
   ul > li {
@@ -659,22 +665,21 @@ h2, .h2 {
   .radio {
     label {
       color: inherit;
-      font-size: ceil((@font-size-h3 * @font-scale-xs));
-
-      @media (min-width: @grid-float-breakpoint) {
-        font-size: @font-size-h3;
-      }
     }
 
     @media (min-width: @grid-float-breakpoint) {
       margin: 0;
 
       &:first-child {
-        margin-top: -15px;
+        margin-top: -6px;
+      }
+
+      + .radio {
+        margin-top: 1px;
       }
 
       &:last-child {
-        margin-bottom: -15px;
+        margin-bottom: -6px;
       }
     }
 
