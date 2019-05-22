@@ -142,11 +142,10 @@
 
 // Expanding search box
 @media (max-width: @screen-xs-max) {
-  .id7-utility-masthead {
-    overflow: hidden;
-  }
-
   .id7-masthead {
+    position: relative; // start a new stacking context
+    overflow: hidden;
+
     .id7-search-column {
       left: 100%;
       background: white;
@@ -170,9 +169,17 @@
       }
     }
 
-    transition: 150ms transform;
+    .id7-masthead-contents {
+      margin: 0 -@grid-gutter-width;
+      transition: 150ms transform, 150ms background-position;
+    }
+
     &.search-expanded {
-      transform: translateX(-100%);
+      background-position-x: 100%;
+
+      .id7-masthead-contents {
+        transform: translateX(-100%);
+      }
     }
   }
 }
@@ -247,7 +254,7 @@
 .id7-masthead .id7-logo-row nav {
   display: block; // Display, even on xs
   float: right;
-  margin: 0;
+  margin: 0 (@grid-gutter-width / 2);
 
   i.fa, i.fas, i.fal, i.far, i.fab {
     font-size: 3em;
@@ -256,8 +263,7 @@
 
   @media (min-width: @grid-float-breakpoint) {
     float: none;
-    margin-left: (@logo-width + @grid-gutter-width);
-    margin-top: @nav-links-margin-top;
+    margin: @nav-links-margin-top 0 0 (@logo-width + @grid-gutter-width);
     font-size: 11.5px;
     font-weight: 600;
     letter-spacing: 1px;
