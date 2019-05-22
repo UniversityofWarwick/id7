@@ -76,3 +76,4 @@ node_modules
 /docs/_config.yml
 
 # Don't ignore /dist because it needs to be in Git for npm
+dist/fonts/fa-light-*

@@ -8,6 +8,9 @@
 ./svg-to-png.sh src/masthead-logo-bleed-wide-md.svg 1200 80 masthead-logo-bleed-wide-md.png
 ./svg-to-png.sh src/masthead-logo-bleed-wide-lg.svg 3000 80 masthead-logo-bleed-wide-lg.png
 
+./svg-to-png.sh src/masthead-logo-bleed-descriptor-sm.svg 1170 300 masthead-logo-bleed-descriptor-sm.png
+./svg-to-png.sh src/masthead-logo-bleed-descriptor-xs.svg 1680 300 masthead-logo-bleed-descriptor-xs.png
+
 ./svg-to-png.sh logotype-colour.svg 136 26 id6a-logotype.png false
 
 ./svg-to-png.sh logo-with-descriptor-purple.svg 600 398 logo.png false
