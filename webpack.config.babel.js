@@ -95,10 +95,6 @@ const commonConfig = basePath => merge([
           to: paths.ASSETS_FONTS(basePath),
         },
         {
-          from: paths.FONTAWESOME_PRO_FONTS,
-          to: paths.ASSETS_FONTS(basePath),
-        },
-        {
           from: paths.TEMPLATES,
           to: paths.ASSETS_TEMPLATES(basePath),
         },
