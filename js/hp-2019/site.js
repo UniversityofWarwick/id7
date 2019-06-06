@@ -4,10 +4,8 @@ import $ from 'jquery';
 
 $(() => {
   const $footer = $('.id7-site-footer');
-  const $mapLocation = $('.map-location', $footer);
-  const $mapColumn = $('.map-column', $footer);
 
-  $mapLocation
-    .on('hover mouseover focus', 'a', () => $mapColumn.addClass('hovered'))
-    .on('blur mouseout', 'a', () => $mapColumn.removeClass('hovered'));
+  $footer
+    .on('hover mouseover focus', '.map-location a, .map-column a', () => $footer.addClass('hovered'))
+    .on('blur mouseout', '.map-location a, .map-column a', () => $footer.removeClass('hovered'));
 });

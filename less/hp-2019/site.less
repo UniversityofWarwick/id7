@@ -19,18 +19,18 @@
   }
 }
 
+@id7-site-footer-colour: #e6e6e6;
+@site-footer-text-colour: contrast(@id7-site-footer-colour, @text-color, white, 50%);
+@site-footer-link-hover-colour: #0073BB;
+
 // Reverse footer colours
 .id7-page-footer {
-  @id7-site-footer-colour: #e6e6e6;
-
   &.id7-footer-coloured {
     .id7-site-footer {
-      @site-footer-text-colour: contrast(@id7-site-footer-colour, @text-color, white, 50%);
-
       background: @id7-site-footer-colour;
       color: @site-footer-text-colour;
       .header-colour(@site-footer-text-colour);
-      .link-colour(@site-footer-text-colour);
+      .link-colour(@site-footer-text-colour, @site-footer-link-hover-colour);
     }
 
     .id7-app-footer {
@@ -62,6 +62,13 @@
 @map-pin-colour: #EF4050;
 
 .id7-site-footer {
+  // When there's no map, add bottom padding to match the top/left/right
+  padding-bottom: @grid-gutter-width;
+
+  @media screen and (min-width: @screen-md-min) {
+    padding-bottom: 0;
+  }
+
   // Avoid being clipped on the .media-left
   .map-location i {
     text-align: center;
@@ -90,9 +97,16 @@
         }
       }
     }
+  }
 
-    // Added by JS when hovering over the link in .map-location
-    &.hovered > a i {
+  // Added by JS when hovering over the links in .map-location or .map-column
+  &.hovered {
+    .map-location a {
+      color: @site-footer-link-hover-colour !important;
+      text-decoration-color: @site-footer-link-hover-colour !important;
+    }
+
+    .map-column > a i {
       &.fa-circle {
         font-size: 18px;
       }
