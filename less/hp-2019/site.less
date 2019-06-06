@@ -1,0 +1,146 @@
+@import (reference) '../id7.less';
+@import (reference) 'hp.less';
+
+.apply-brand(@brand-colour);
+
+.id7-utility-masthead {
+  background-color: @brand-colour;
+}
+
+.id7-left-border, .id7-right-border {
+  background-color: #65686B;
+}
+
+// Fiddle me this
+@media (min-width: @screen-lg-min) {
+  .col-lg-10.col-lg-offset-1 {
+    margin-left: 5%;
+    width: 90%;
+  }
+}
+
+// Reverse footer colours
+.id7-page-footer {
+  @id7-site-footer-colour: #e6e6e6;
+
+  &.id7-footer-coloured {
+    .id7-site-footer {
+      @site-footer-text-colour: contrast(@id7-site-footer-colour, @text-color, white, 50%);
+
+      background: @id7-site-footer-colour;
+      color: @site-footer-text-colour;
+      .header-colour(@site-footer-text-colour);
+      .link-colour(@site-footer-text-colour);
+    }
+
+    .id7-app-footer {
+      .id7-logo-bleed {
+        .logo-as-css-colour(@id7-site-footer-colour);
+      }
+    }
+  }
+
+  .id7-site-footer {
+    font-size: floor((@font-size-base * 1.15));
+    @media (min-width: @screen-sm-min) {
+      font-size: floor(@font-size-base * 1.3);
+    }
+
+    h3 {
+      margin-top: (@line-height-computed / 2);
+      font-size: ceil((26px * @font-scale-xs));
+
+      @media screen and (min-width: @grid-float-breakpoint) {
+        margin-top: @line-height-computed;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+// Map things
+@map-pin-colour: #EF4050;
+
+.id7-site-footer {
+  // Avoid being clipped on the .media-left
+  .map-location i {
+    text-align: center;
+    width: 1em;
+  }
+
+  .map-location i {
+    color: @map-pin-colour;
+    font-size: 26px;
+  }
+
+  .map-column {
+    > a i {
+      transition: 300ms font-size;
+    }
+
+    // Hovering over the column itself on non-touch devices
+    @media (hover: hover) {
+      &:hover > a i {
+        &.fa-circle {
+          font-size: 18px;
+        }
+
+        &.fa-map-marker-alt {
+          font-size: 32px;
+        }
+      }
+    }
+
+    // Added by JS when hovering over the link in .map-location
+    &.hovered > a i {
+      &.fa-circle {
+        font-size: 18px;
+      }
+
+      &.fa-map-marker-alt {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .map-column {
+    display: none;
+
+    @media (min-width: @grid-float-breakpoint) {
+      margin: @grid-gutter-width 0;
+    }
+
+    @media (min-width: @screen-md-min) {
+      display: block;
+      margin-top: -@grid-gutter-width;
+    }
+
+    > a {
+      display: block;
+      position: relative;
+
+      i {
+        position: absolute;
+
+        // Make it so that the pin point is positioned at the top left of the element as that's what we're positioning
+        transform: translateX(-50%) translateY(-100%);
+
+        &.fa-circle {
+          color: @map-pin-colour;
+          font-size: 12px;
+
+          top: 45%;
+          left: 55.2%;
+        }
+
+        &.fa-map-marker-alt {
+          color: white;
+          font-size: 26px;
+
+          top: 49%;
+          left: 55%;
+        }
+      }
+    }
+  }
+}

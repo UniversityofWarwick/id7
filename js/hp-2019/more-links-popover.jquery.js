@@ -7,7 +7,7 @@ import currentScreenSize from '../screen-sizes';
 
 const Config = {
   Defaults: {
-    container: 'body', // Needed to avoid being drawn under the nav carousel which is fixed in the body
+    container: '.id7-page-header', // Needed to avoid being drawn under the nav carousel which is fixed in the body
     template: `
       <div class="popover megamenu-links">
         <div class="arrow"></div>
@@ -33,48 +33,65 @@ class MoreLinksPopover {
   wireEventHandlers() {
     const { $trigger, options } = this;
 
-    $trigger.on('click', (e) => {
-      if (FeatureDetect.cssSupports('display', 'flex') && currentScreenSize().name !== 'xs') {
-        // Prevent the default behaviour because we're opening a popover
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
-      }
+    const isPopoverEnabled = FeatureDetect.cssSupports('display', 'flex');
 
-      return true;
-    }).popover({
-      container: options.container,
-      content: $(options.target).html(),
-      template: options.template,
-      html: true,
-      placement: 'bottom',
-      title: 'More links',
-      trigger: 'click',
-    }).on('show.bs.popover', () => {
-      $trigger.data('previous-hash', window.location.hash);
-      changeLocationHash(options.target);
-    }).on('hide.bs.popover', () => {
-      if ($trigger.data('previous-hash') && $trigger.data('previous-hash') !== '#more-links') {
-        changeLocationHash($trigger.data('previous-hash'));
+    const onReflow = (_ignored_, screenConfig) => {
+      // Handle xs -> xs transitions
+      if (this.lastScreenConfigName === screenConfig.name) return;
+      this.lastScreenConfigName = screenConfig.name;
+
+      if (isPopoverEnabled && screenConfig.name !== 'xs') {
+        $trigger.on('click.id7.homepage', (e) => {
+          // Prevent the default behaviour because we're opening a popover
+          e.preventDefault();
+          return false;
+        }).popover({
+          container: options.container,
+          content: $(options.target).html(),
+          template: options.template,
+          html: true,
+          placement: 'bottom',
+          title: 'More links',
+          trigger: 'click',
+        }).on('show.bs.popover', () => {
+          $trigger.data('previous-hash', window.location.hash);
+          changeLocationHash(options.target);
+        }).on('hide.bs.popover', () => {
+          if ($trigger.data('previous-hash') && $trigger.data('previous-hash') !== '#more-links') {
+            changeLocationHash($trigger.data('previous-hash'));
+          } else {
+            changeLocationHash('');
+          }
+        });
+
+        if ($trigger.is(':visible') && window.location.hash === options.target) {
+          $trigger.popover('show');
+        }
+
+        // Click away to dismiss
+        $('html').on('click.id7.homepage.popoverDismiss', (e) => {
+          // if clicking anywhere other than the popover itself
+          if ($(e.target).closest('.popover').length === 0 && $(e.target).closest('.use-more-links-popover').length === 0) {
+            $trigger.popover('hide');
+          }
+        });
+
+        // Back to top link
+        $(options.target).on('click.id7.homepage', '.back-to-top-link', () => $trigger.popover('hide'));
       } else {
-        changeLocationHash('');
+        $trigger.off('click.id7.homepage').popover('destroy');
+        $('html').off('click.id7.homepage.popoverDismiss');
+        $(options.target).off('click.id7.homepage', '.back-to-top-link');
       }
-    });
+    };
 
-    if ($trigger.is(':visible') && window.location.hash === options.target) {
-      $trigger.popover('show');
+    $(window).on('id7:reflow', onReflow);
+
+    // If the document is already loaded this won't be fired as expected, so fire it manually
+    if (document.readyState === 'complete' && typeof $(window).data('id7.reflow') !== 'undefined') {
+      // Call reflow immediately
+      onReflow({}, currentScreenSize());
     }
-
-    // Click away to dismiss
-    $('html').on('click.popoverDismiss', (e) => {
-      // if clicking anywhere other than the popover itself
-      if ($(e.target).closest('.popover').length === 0 && $(e.target).closest('.use-popover').length === 0) {
-        $trigger.popover('hide');
-      }
-    });
-
-    // Back to top link
-    $(options.target).on('click', '.back-to-top-link', () => $trigger.popover('hide'));
   }
 }
 

@@ -1,4 +1,5 @@
 @import (reference) '../id7.less';
+@import 'site.less';
 
 // Less that we would expect Marketing to be changing as part of maintaining the page
 
@@ -73,23 +74,6 @@
 @nav-links-margin-top-lg: 42px; // Align with bottom of logotype
 
 @brand-colour: #3F4246;
-.apply-brand(@brand-colour);
-
-.id7-utility-masthead {
-  background-color: @brand-colour;
-}
-
-.id7-left-border, .id7-right-border {
-  background-color: #65686B;
-}
-
-// Fiddle me this
-@media (min-width: @screen-lg-min) {
-  .col-lg-10.col-lg-offset-1 {
-    margin-left: 5%;
-    width: 90%;
-  }
-}
 
 // Make search column smaller
 .id7-masthead {
@@ -527,21 +511,6 @@ html {
   }
 }
 
-body > a.sr-only-focusable { // "Skip to main content" link
-  top: 0;
-  left: @grid-gutter-width;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-  z-index: 100;
-
-  &:focus, &:active {
-    position: absolute;
-  }
-
-  &, &:link, &:visited, &:hover, &:focus, &:active {
-    color: white;
-  }
-}
-
 /***** ACCENT UTILITIES *****/
 .btn-accent {
   .button-variant(@accent-text-colour; @accent-colour; transparent);
@@ -577,14 +546,6 @@ h3, .h3 { font-size: ceil((26px * @font-scale-xs)); }
 @media (min-width: @grid-float-breakpoint) {
   h2, .h2 { font-size: 36px; }
   h3, .h3 { font-size: 26px; }
-}
-
-h2, .h2 {
-  font-size: 30px;
-
-  @media (min-width: @grid-float-breakpoint) {
-    font-size: 36px;
-  }
 }
 
 .hero-image {
@@ -887,48 +848,6 @@ h2, .h2 {
 hr.spacer {
   margin: @grid-gutter-width 0;
   border: 0;
-}
-
-// Reverse footer colours
-.id7-page-footer {
-  @id7-site-footer-colour: #e6e6e6;
-
-  &.id7-footer-coloured {
-    .id7-site-footer {
-      @site-footer-text-colour: contrast(@id7-site-footer-colour, @text-color, white, 50%);
-
-      background: @id7-site-footer-colour;
-      color: @site-footer-text-colour;
-      .header-colour(@site-footer-text-colour);
-      .link-colour(@site-footer-text-colour);
-    }
-
-    .id7-app-footer {
-      .id7-logo-bleed {
-        .logo-as-css-colour(@id7-site-footer-colour);
-      }
-    }
-  }
-
-  .map-column {
-    margin-top: @grid-gutter-width;
-
-    @media (min-width: @grid-float-breakpoint) {
-      margin-top: -@grid-gutter-width;
-    }
-  }
-
-  .id7-site-footer {
-    font-size: 1.25em;
-
-    h3 {
-      margin-top: (@line-height-computed / 2);
-
-      @media screen and (min-width: @grid-float-breakpoint) {
-        margin-top: 0;
-      }
-    }
-  }
 }
 
 // Make some elements flush on mobile
