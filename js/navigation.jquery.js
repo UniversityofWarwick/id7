@@ -325,6 +325,10 @@ $.fn.id7Navigation = function navigationPlugin(options) {
 $(() => {
   $('.id7-navigation').id7Navigation();
 
+  if (!document.body.hasAttribute('id')) {
+    document.body.setAttribute('id', 'top');
+  }
+
   // jump to a tab if specified
   const url = document.location.toString();
   if (url.match('#') && url.split('#')[1].length) {
