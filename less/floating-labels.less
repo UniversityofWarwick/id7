@@ -1,0 +1,22 @@
+.floating-label {
+  position: relative;
+  display: flex;
+  flex-flow: column-reverse;
+  label, input {
+    transition: all 0.2s;
+  }
+
+  label {
+    position: absolute;
+    left: 5px;
+    top: -26px;
+    visibility: visible;
+  }
+
+  input:placeholder-shown + label {
+    transform-origin: left bottom;
+    transform: translate(0, 1.5rem) scale(1.5);
+    visibility: hidden;
+  }
+
+}
