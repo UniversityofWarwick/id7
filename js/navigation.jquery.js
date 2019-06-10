@@ -315,13 +315,13 @@ class Navigation {
       const $focus = $(document.activeElement);
 
       const $li = $focus.parent();
-      const isEnterOrDown = ev.key === 'ArrowDown' || ev.key === 'Enter';
-      const isEnterOrUp = ev.key === 'ArrowUp' || ev.key === 'Enter';
+      const isDown = ev.key === 'ArrowDown';
+      const isUp = ev.key === 'ArrowUp';
 
       const dropdownOpen = $li.find('.dropdown-menu').parent().hasClass('open');
 
       // Allow opening and closing the focused dropdown with up/down
-      if ($li.hasClass('dropdown') && ((isEnterOrDown && !dropdownOpen) || (isEnterOrUp && dropdownOpen))) {
+      if ($li.hasClass('dropdown') && ((isDown && !dropdownOpen) || (isUp && dropdownOpen))) {
         $li.find('> a').dropdown('toggle');
         ev.preventDefault();
         const $elementToFocus = dropdownOpen
@@ -377,10 +377,18 @@ class Navigation {
 
     $('.dropdown-menu').each((i, el) => {
       const $el = $(el);
-      if ($el.parent().find('> a').length > 0 && $el.parent().find('> a').attr('data-toggle') !== 'dropdown') {
-        $el.parent().find('> a').attr('data-toggle', 'dropdown-trigger');
-        $el.parent().find('> a').dropdown(); // we added it afterwards, need to manually call dropdown()
+      const $linkElement = $el.parent().find('> a');
+      if ($linkElement.length > 0 && $linkElement.attr('data-toggle') !== 'dropdown') {
+        $linkElement.attr('data-toggle', 'dropdown-trigger');
+        $linkElement.dropdown(); // we added it afterwards, need to manually call dropdown()
       }
+      $linkElement.on('click keypress', (ev) => {
+        if (ev.type !== 'click' && ev.key !== 'Enter') {
+          return;
+        }
+        window.location = $linkElement.attr('href');
+        ev.stopPropagation();
+      });
     });
   }
 
