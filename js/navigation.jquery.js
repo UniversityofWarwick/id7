@@ -316,39 +316,78 @@ class Navigation {
       // Is there a Bootstrap method to test this?
       const dropdownOpen = $li.find('.dropdown-menu').parent().hasClass('open');
 
+      // Necessary for escape/clear to work to close the menu
       if ($li.hasClass('dropdown')) {
-        $focus.attr('data-toggle', 'dropdown')
+        $focus.attr('data-toggle', 'dropdown');
       }
 
+      // Allow opening and closing the focused dropdown with up/down
       if ($li.hasClass('dropdown') && ((isEnterOrDown && !dropdownOpen) || (isEnterOrUp && dropdownOpen))) {
         $li.find('.dropdown-menu').dropdown('toggle');
         ev.preventDefault();
         const $elementToFocus = dropdownOpen
-          ? $li.next().children().first()
-          : $li.find('.dropdown-menu').find('li:first-child a');
+          ? $li.find('a')
+          : $li.find('.dropdown-menu').find('li:first-child a'); // first item of just-opened menu
 
         $elementToFocus.focus();
         return false;
       }
 
-      const arrowRight = ev.keyCode === 39;
+      //                            <li>     <ul class="nav navbar-nav">
+      const primaryNavItemInFocus = $li.parent().hasClass('navbar-nav');
 
-      const primaryNavItemInFocus = $focus.parent().parent().hasClass('navbar-nav');
+      //                          <li>     <ul class="dropdown-menu">
+      const dropdownItemInFocus = $li.parent().hasClass('dropdown-menu');
+
+      // If we hit right with a nav item focused
+      const arrowRight = ev.keyCode === 39;
       if (arrowRight && primaryNavItemInFocus) {
         if ($li.next().length > 0 && $li.next().children().length > 0) {
           $li.next().children().first().focus();
         }
+      } else if (arrowRight && dropdownItemInFocus) {
+        // We're inside a dropdown
+        // Move to the right hand nav element, opening its dropdown
+        // and closing this one in the process
+
+        //                           li.dropdown
+        const $nextNav = $li.parents().eq(1).next();
+        Navigation.openOrFocusNav($li, $nextNav);
+        return false;
       }
 
+      // if we hit left with a nav item focused
       const arrowLeft = ev.keyCode === 37;
       if (arrowLeft && primaryNavItemInFocus) {
         if ($li.prev().length > 0 && $li.prev().children().length > 0) {
           $li.prev().children().first().focus();
         }
+      } else if (arrowLeft && dropdownItemInFocus) {
+        // We're inside a dropdown
+        // Move to the left hand nav element, opening its dropdown
+        // and closing this one in the process
+
+        //                           li.dropdown
+        const $nextNav = $li.parents().eq(1).prev();
+        Navigation.openOrFocusNav($li, $nextNav);
+        return false;
       }
 
       return true;
     });
+  }
+
+  static openOrFocusNav($li, $nextNav) {
+    if ($nextNav.length === 0) {
+      return true;
+    }
+    $li.parents().eq(1).find('.dropdown-menu').dropdown('toggle'); // close ours
+
+    if ($nextNav.hasClass('dropdown')) {
+      $nextNav.find('.dropdown-menu').dropdown('toggle');
+    } else {
+      $nextNav.find('a').focus();
+    }
   }
 }
 
