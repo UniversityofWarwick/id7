@@ -315,8 +315,8 @@ class Navigation {
       const $focus = $(document.activeElement);
 
       const $li = $focus.parent();
-      const isEnterOrDown = ev.keyCode === 40 || ev.keyCode === 13;
-      const isEnterOrUp = ev.keyCode === 38 || ev.keyCode === 13;
+      const isEnterOrDown = ev.key === 'ArrowDown' || ev.key === 'Enter';
+      const isEnterOrUp = ev.key === 'ArrowUp' || ev.key === 'Enter';
 
       const dropdownOpen = $li.find('.dropdown-menu').parent().hasClass('open');
 
@@ -339,7 +339,7 @@ class Navigation {
       const dropdownItemInFocus = $li.parent().hasClass('dropdown-menu');
 
       // If we hit right with a nav item focused
-      const arrowRight = ev.keyCode === 39;
+      const arrowRight = ev.key === 'ArrowRight';
       if (arrowRight && primaryNavItemInFocus) {
         if ($li.next().length > 0 && $li.next().children().length > 0) {
           $li.next().children().first().focus();
@@ -356,7 +356,7 @@ class Navigation {
       }
 
       // if we hit left with a nav item focused
-      const arrowLeft = ev.keyCode === 37;
+      const arrowLeft = ev.key === 'ArrowLeft';
       if (arrowLeft && primaryNavItemInFocus) {
         if ($li.prev().length > 0 && $li.prev().children().length > 0) {
           $li.prev().children().first().focus();
