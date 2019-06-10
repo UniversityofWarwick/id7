@@ -375,8 +375,8 @@ class Navigation {
       return true;
     });
 
-    $(".dropdown-menu").each((i, el) => {
-      let $el = $(el);
+    $('.dropdown-menu').each((i, el) => {
+      const $el = $(el);
       if ($el.parent().find('> a').length > 0 && $el.parent().find('> a').attr('data-toggle') !== 'dropdown') {
         $el.parent().find('> a').attr('data-toggle', 'dropdown-trigger');
         $el.parent().find('> a').dropdown(); // we added it afterwards, need to manually call dropdown()
