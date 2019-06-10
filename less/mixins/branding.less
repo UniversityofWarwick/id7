@@ -71,6 +71,10 @@
     color: @text;
   }
 
+  .navbar-nav li.dropdown ul.dropdown-menu .active::after {
+    border-left-color: @link-active-marker-colour;
+  }
+
   .navbar-nav {
     > li {
       color: @link-colour;
@@ -162,6 +166,7 @@
       }
       > .active > a {
         background-color: @link-hover-bg;
+        background-image: none;
 
         &::before {
           border-bottom-color: @link-active-marker-colour;
