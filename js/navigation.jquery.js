@@ -316,6 +316,10 @@ class Navigation {
       // Is there a Bootstrap method to test this?
       const dropdownOpen = $li.find('.dropdown-menu').parent().hasClass('open');
 
+      if ($li.hasClass('dropdown')) {
+        $focus.attr('data-toggle', 'dropdown')
+      }
+
       if ($li.hasClass('dropdown') && ((isEnterOrDown && !dropdownOpen) || (isEnterOrUp && dropdownOpen))) {
         $li.find('.dropdown-menu').dropdown('toggle');
         ev.preventDefault();
