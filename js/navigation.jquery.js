@@ -316,17 +316,13 @@ class Navigation {
       // Is there a Bootstrap method to test this?
       const dropdownOpen = $li.find('.dropdown-menu').parent().hasClass('open');
 
-      // Necessary for escape/clear to work to close the menu
-      if ($li.hasClass('dropdown')) {
-        $focus.attr('data-toggle', 'dropdown');
-      }
 
       // Allow opening and closing the focused dropdown with up/down
       if ($li.hasClass('dropdown') && ((isEnterOrDown && !dropdownOpen) || (isEnterOrUp && dropdownOpen))) {
-        $li.find('.dropdown-menu').dropdown('toggle');
+        $li.find('> a').dropdown('toggle');
         ev.preventDefault();
         const $elementToFocus = dropdownOpen
-          ? $li.find('a')
+          ? $li.find('> a')
           : $li.find('.dropdown-menu').find('li:first-child a'); // first item of just-opened menu
 
         $elementToFocus.focus();
@@ -375,18 +371,26 @@ class Navigation {
 
       return true;
     });
+
+    $(".dropdown-menu").each((i, el) => {
+      let $el = $(el);
+      if ($el.parent().find('> a').length > 0 && $el.parent().find('> a').attr('data-toggle') !== 'dropdown') {
+        $el.parent().find('> a').attr('data-toggle', 'dropdown-trigger');
+        $el.parent().find('> a').attr('data-toggle', 'dropdown-trigger');
+      }
+    });
   }
 
   static openOrFocusNav($li, $nextNav) {
     if ($nextNav.length === 0) {
       return true;
     }
-    $li.parents().eq(1).find('.dropdown-menu').dropdown('toggle'); // close ours
+    $li.parents().eq(1).find('> a').dropdown('toggle'); // close ours
 
     if ($nextNav.hasClass('dropdown')) {
-      $nextNav.find('.dropdown-menu').dropdown('toggle');
+      $nextNav.find('> a').dropdown('toggle');
     } else {
-      $nextNav.find('a').focus();
+      $nextNav.find('> a').focus();
     }
   }
 }
