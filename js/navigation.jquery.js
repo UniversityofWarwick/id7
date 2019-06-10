@@ -305,7 +305,12 @@ class Navigation {
     if (document.location.hash) this.hashChanged();
     $(window).on('hashchange', $.proxy(this.hashChanged, this));
 
-    // Accessibility
+    // Begin accessibility
+    // Opt-out mechanism (data-no-accessibility="true" on .id7-navigation)
+    if (this.$container.data('no-accessibility') !== undefined) {
+      return;
+    }
+
     this.$container.on('keydown', (ev) => {
       const $focus = $(document.activeElement);
 
@@ -313,9 +318,7 @@ class Navigation {
       const isEnterOrDown = ev.keyCode === 40 || ev.keyCode === 13;
       const isEnterOrUp = ev.keyCode === 38 || ev.keyCode === 13;
 
-      // Is there a Bootstrap method to test this?
       const dropdownOpen = $li.find('.dropdown-menu').parent().hasClass('open');
-
 
       // Allow opening and closing the focused dropdown with up/down
       if ($li.hasClass('dropdown') && ((isEnterOrDown && !dropdownOpen) || (isEnterOrUp && dropdownOpen))) {
@@ -376,19 +379,26 @@ class Navigation {
       let $el = $(el);
       if ($el.parent().find('> a').length > 0 && $el.parent().find('> a').attr('data-toggle') !== 'dropdown') {
         $el.parent().find('> a').attr('data-toggle', 'dropdown-trigger');
-        $el.parent().find('> a').attr('data-toggle', 'dropdown-trigger');
+        $el.parent().find('> a').dropdown(); // we added it afterwards, need to manually call dropdown()
       }
     });
   }
 
+  /**
+   * For a given $nextNav, open its dropdown (if it has one)
+   * or otherwise just focus on it.
+   *
+   * Closes $li's dropdown.
+   */
   static openOrFocusNav($li, $nextNav) {
     if ($nextNav.length === 0) {
-      return true;
+      return;
     }
     $li.parents().eq(1).find('> a').dropdown('toggle'); // close ours
 
     if ($nextNav.hasClass('dropdown')) {
       $nextNav.find('> a').dropdown('toggle');
+      $nextNav.find('> ul > li:first-child > a').focus();
     } else {
       $nextNav.find('> a').focus();
     }
