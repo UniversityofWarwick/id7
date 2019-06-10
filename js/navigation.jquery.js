@@ -304,6 +304,47 @@ class Navigation {
     // Handle in-page bookmarks.
     if (document.location.hash) this.hashChanged();
     $(window).on('hashchange', $.proxy(this.hashChanged, this));
+
+    // Accessibility
+    this.$container.on('keydown', (ev) => {
+      const $focus = $(document.activeElement);
+
+      const $li = $focus.parent();
+      const isEnterOrDown = ev.keyCode === 40 || ev.keyCode === 13;
+      const isEnterOrUp = ev.keyCode === 38 || ev.keyCode === 13;
+
+      // Is there a Bootstrap method to test this?
+      const dropdownOpen = $li.find('.dropdown-menu').parent().hasClass('open');
+
+      if ($li.hasClass('dropdown') && ((isEnterOrDown && !dropdownOpen) || (isEnterOrUp && dropdownOpen))) {
+        $li.find('.dropdown-menu').dropdown('toggle');
+        ev.preventDefault();
+        const $elementToFocus = dropdownOpen
+          ? $li.next().children().first()
+          : $li.find('.dropdown-menu').find('li:first-child a');
+
+        $elementToFocus.focus();
+        return false;
+      }
+
+      const arrowRight = ev.keyCode === 39;
+
+      const primaryNavItemInFocus = $focus.parent().parent().hasClass('navbar-nav');
+      if (arrowRight && primaryNavItemInFocus) {
+        if ($li.next().length > 0 && $li.next().children().length > 0) {
+          $li.next().children().first().focus();
+        }
+      }
+
+      const arrowLeft = ev.keyCode === 37;
+      if (arrowLeft && primaryNavItemInFocus) {
+        if ($li.prev().length > 0 && $li.prev().children().length > 0) {
+          $li.prev().children().first().focus();
+        }
+      }
+
+      return true;
+    });
   }
 }
 
