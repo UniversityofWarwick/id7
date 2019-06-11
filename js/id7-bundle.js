@@ -55,7 +55,7 @@ $.fn.dropdown.Constructor.prototype.keydown = function (e) {
 
   if (!isActive && e.which !== 27 || isActive && e.which === 27) {
     if (e.which === 27) $parent.find('[data-toggle="dropdown"]').trigger('focus');
-    // Begin Warwick
+    // Begin Warwick (don't send click event)
     $(backdrop).remove();
     $('[data-toggle="dropdown"]').each(function () {
       var relatedTarget = { relatedTarget: this };
@@ -76,12 +76,12 @@ $.fn.dropdown.Constructor.prototype.keydown = function (e) {
   if (!$items.length) return;
 
   let index = $items.index(e.target);
+  // Begin Warwick (wrap around)
+  if (e.which === 38) index = (index - 1) % $items.length;         // up
+  if (e.which === 40) index = (index + 1) % $items.length;         // down
+  // End Warwick
 
-  if (e.which === 38 && index > 0)                 index--;         // up
-  if (e.which === 40 && index < $items.length - 1) index++;         // down
-  if (!~index)                                    index = 0;
-
-  $items.eq(index).trigger('focus')
+  $items.eq(index).trigger('focus');
 };
 
 /* eslint-enable */
