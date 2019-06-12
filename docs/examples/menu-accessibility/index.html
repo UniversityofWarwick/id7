@@ -1,0 +1,30 @@
+---
+layout: many-menus
+title: Menu accessibility
+slug: examples/menu-accessibility
+---
+
+<p>This page includes two menus, with accessibility enabled.
+
+    You can use the cursor keys to navigate through the menu system.</p>
+
+<p>If you need to turn off this functionality, set <samp>data-no-accessibility="true"</samp> on
+    your <samp>.id7-navigation</samp> element.</p>
+
+<p>We include support for most things you'd expect. Users can use <kbd>Tab</kbd>/
+    <kbd><i class="fas fa-arrow-left"></i></kbd> and <kbd><i class="fas fa-arrow-right"></i></kbd> to focus primary
+    navigation options. For dropdowns (indicated with a <span class="caret"></span>), users press <kbd><i class="fas fa-arrow-down"></i></kbd>
+    to open the sub-menu. <kbd>Esc</kbd> will close the sub-menu, as will clicking away from the menu.
+</p>
+
+<p>Jumping between sub-menus or other primary navigation items is possible with the cursor keys while a sub-menu is
+    open.
+    We support jumping to a menu item based on its starting letter&mdash;e.g. pressing <kbd>T</kbd> will jump to the
+    first item starting
+    with the letter T, e.g. &ldquo;Test card&rdquo;. The key can be pressed multiple times to cycle through multiple
+    items starting with the same letter.</p>
+
+<p>We include ARIA attributes for the dropdown trigger, the menu element itself and the sub-items inside.
+We also provide a visible orange outline for focused items.</p>
+
+We welcome <a href="mailto:helpdesk@warwick.ac.uk">feedback</a> on the effectiveness of our web pages for visually impaired users.</p>

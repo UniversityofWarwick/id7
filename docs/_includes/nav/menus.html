@@ -2,21 +2,23 @@
   <ul class="nav navbar-nav">
     <li><a href="/">Homepage</a></li>
     <li class="{% if page.slug contains 'bacon-ipsum' %}next-secondary {% endif %}{% if page.slug contains 'examples' %}active {% endif %}dropdown">
-      <a href="/examples/" data-toggle="dropdown">Examples 1</a>
+      <a href="/examples/" data-toggle="dropdown">Examples</a>
       <ul class="dropdown-menu" role="menu">
         <li{% if page.slug == 'examples/bacon-ipsum' %} class="active"{% endif %}><a href="/examples/bacon-ipsum/">Sample page content</a></li>
         <li{% if page.slug == 'examples/subsite-homepage' %} class="active"{% endif %}><a href="/examples/subsite-homepage/">Sample subsite homepage</a></li>
         <li{% if page.slug == 'examples/testcard' %} class="active"{% endif %}><a href="/examples/testcard/">Test card</a></li>
         <li{% if page.slug == 'examples/bootstrap-testcard' %} class="active"{% endif %}><a href="/examples/bootstrap-testcard/">Bootstrap test card</a></li>
+        <li class="{% if page.slug == 'examples/menu-accessibility' %} active{% endif %}"><a href="/examples/menu-accessibility/">Menu accessibility</a></li>
       </ul>
     </li>
     <li class="dropdown">
-      <a href="/examples/" data-toggle="dropdown">Examples 2</a>
+      <a href="/examples/" data-toggle="dropdown">Menu 2</a>
       <ul class="dropdown-menu" role="menu">
         <li><a href="/examples/bacon-ipsum/">Lorem ipsum</a></li>
         <li><a href="/examples/subsite-homepage/">Dolor sit</a></li>
         <li><a href="/examples/subsite-homepage/">Amet</a></li>
       </ul>
     </li>
+    <li><a href="#">Lorem ipsum</a></li>
   </ul>
 </nav>
