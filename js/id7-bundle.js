@@ -41,47 +41,68 @@ function getParent($this) {
 }
 
 $.fn.dropdown.Constructor.prototype.keydown = function (e) {
-  if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return;
+    if ((/input|textarea/i.test(e.target.tagName)) || (!/(38|40|27|32)/.test(e.which) && (e.which < 65 || e.which > 90))) return;
 
-  const $this = $(this);
+    const $this = $(this);
 
-  e.preventDefault();
-  e.stopPropagation();
+    e.preventDefault();
+    e.stopPropagation();
 
-  if ($this.is('.disabled, :disabled')) return;
+    if ($this.is('.disabled, :disabled')) return;
 
-  const $parent = getParent($this);
-  const isActive = $parent.hasClass('open');
+    const $parent = getParent($this);
+    const isActive = $parent.hasClass('open');
 
-  if (!isActive && e.which !== 27 || isActive && e.which === 27) {
-    if (e.which === 27) $parent.find('[data-toggle="dropdown"]').trigger('focus');
-    // Begin Warwick (don't send click event)
-    $(backdrop).remove();
-    $('[data-toggle="dropdown"]').each(function () {
-      var relatedTarget = { relatedTarget: this };
+    if (!isActive && e.which !== 27 || isActive && e.which === 27) {
+        if (e.which === 27) $parent.find('[data-toggle="dropdown"]').trigger('focus');
+        // Begin Warwick (don't send click event)
+        $(backdrop).remove();
+        $('[data-toggle="dropdown"]').each(function () {
+            var relatedTarget = {relatedTarget: this};
 
-      if (!$parent.hasClass('open')) return;
+            if (!$parent.hasClass('open')) return;
 
-      $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget));
+            $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget));
 
-      $this.attr('aria-expanded', 'false');
-      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget));
-    });
+            $this.attr('aria-expanded', 'false');
+            $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget));
+        });
+        // End Warwick
+    }
+
+    const desc = ' li:not(.disabled):visible a';
+    const $items = $parent.find('.dropdown-menu' + desc);
+
+    if (!$items.length) return;
+
+    let index = $items.index(e.target);
+    // Begin Warwick (wrap around)
+    if (e.which === 38) index = (index - 1) % $items.length;         // up
+    if (e.which === 40) index = (index + 1) % $items.length;         // down
+
+    if (e.which >= 65 && e.which <= 90 && $items.length < 100) {
+        console.log("Key press");
+        var letter = e.key;
+        let originalIndex = $items.index(e.target);
+
+        // linear search
+        var $matches = $items.filter(function () { return $(this).text().trim().toLowerCase().indexOf(letter) === 0; });
+        $matches.each(function() {
+            var $el = $(this);
+            var relativeIndex = $items.index($el);
+            if (relativeIndex > originalIndex || $(e.target).text().trim().toLowerCase().charAt(0) !== letter) {
+                index = relativeIndex;
+                return false;
+            }
+        });
+
+        if (index === originalIndex && $matches.length > 0) {
+            index = $items.index($matches.eq(0));
+        }
+    }
     // End Warwick
-  }
 
-  const desc = ' li:not(.disabled):visible a';
-  const $items = $parent.find('.dropdown-menu' + desc);
-
-  if (!$items.length) return;
-
-  let index = $items.index(e.target);
-  // Begin Warwick (wrap around)
-  if (e.which === 38) index = (index - 1) % $items.length;         // up
-  if (e.which === 40) index = (index + 1) % $items.length;         // down
-  // End Warwick
-
-  $items.eq(index).trigger('focus');
+    $items.eq(index).trigger('focus');
 };
 
 /* eslint-enable */
