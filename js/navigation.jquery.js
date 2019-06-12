@@ -382,6 +382,10 @@ class Navigation {
         $linkElement.attr('data-toggle', 'dropdown-trigger');
         $linkElement.dropdown(); // we added it afterwards, need to manually call dropdown()
       }
+      if ($linkElement.length > 0 && $linkElement.attr('aria-haspopup') !== 'true') {
+        $linkElement.attr('aria-haspopup', 'true');
+      }
+      $el.parent().find('> ul > li').attr('role', 'menuitem');
       $linkElement.on('click keypress', (ev) => {
         if (ev.type !== 'click' && ev.key !== 'Enter') {
           return;
