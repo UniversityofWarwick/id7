@@ -163,6 +163,7 @@ class AccountPopover {
       const $target = $(e.target);
       if ($target.closest('.popover').length === 0 && $target.closest('.use-popover').length === 0 && $target.closest($trigger).length === 0) {
         $trigger.popover('hide');
+        $trigger.data('bs.popover').inState.click = false;
       }
     });
 
