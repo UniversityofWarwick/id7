@@ -306,8 +306,8 @@ class Navigation {
     $(window).on('hashchange', $.proxy(this.hashChanged, this));
 
     // Begin accessibility
-    // Opt-out mechanism (data-no-accessibility="true" on .id7-navigation)
-    if (this.$container.data('no-accessibility') !== undefined) {
+    // Opt-out mechanism (data-keyboard="false" on .id7-navigation)
+    if (this.$container.data('keyboard') === "false") {
       return;
     }
 
