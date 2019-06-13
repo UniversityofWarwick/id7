@@ -20,6 +20,7 @@ const Config = {
     fixedNav: true,
     fitToWidth: false,
     collapseSmallscreen: false,
+    keyboard: true,
     trimLinkTitles: {
       maxLength: 60,
       append: '&hellip;',
@@ -307,7 +308,7 @@ class Navigation {
 
     // Begin accessibility
     // Opt-out mechanism (data-keyboard="false" on .id7-navigation)
-    if (this.$container.data('keyboard') === 'false') {
+    if (!this.options.keyboard) {
       return;
     }
 
