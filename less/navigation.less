@@ -56,7 +56,7 @@
       .transition-delay(250ms);
       .transition(~"opacity 0.15s linear");
     }
-    .navbar-nav .dropdown:hover .dropdown-menu {
+    .navbar-nav .dropdown:hover .dropdown-menu, .navbar-nav .dropdown.open .dropdown-menu {
       height: auto;
       visibility:visible;
       .opacity(1);
@@ -198,6 +198,11 @@
         &.dropdown:active::before {
           display: none;
         }
+      }
+
+      &.dropdown > a::after {
+        content: ' ';
+        .caret();
       }
     }
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="{% if page.nonbranded %}id7-non-branded {% endif %}no-js">
+<head>
+  {% include header.html %}
+</head>
+<body>
+<div class="id7-left-border"></div>
+<div class="id7-fixed-width-container">
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+  <header class="id7-page-header">
+    {% include utility-masthead.html %}
+
+    <!-- Docs master nav -->
+    <div class="id7-navigation">
+      {% include nav/menus.html %}
+      <nav class="navbar navbar-secondary" role="navigation">
+        <ul class="nav navbar-nav">
+          <li class="active nav-breadcrumb next-tertiary first last"><a href="/examples/">Examples</a></li>
+        </ul>
+      </nav>
+      <nav class="navbar navbar-tertiary" role="navigation">
+        <ul class="nav navbar-nav">
+          <li class="{% if page.slug == 'examples/bacon-ipsum' %} active{% endif %}"><a href="/examples/bacon-ipsum/">Sample page content</a></li>
+          <li class="{% if page.slug == 'examples/subsite-homepage' %} active{% endif %}"><a href="/examples/subsite-homepage/">Sample subsite homepage</a></li>
+          <li class="{% if page.slug == 'examples/testcard' %} active{% endif %}"><a href="/examples/testcard/">Test card</a></li>
+          <li class="{% if page.slug == 'examples/bootstrap-testcard' %} active{% endif %}"><a href="/examples/bootstrap-testcard/">Bootstrap test card</a></li>
+          <li class="{% if page.slug == 'examples/menu-accessibility' %} active{% endif %}"><a href="/examples/menu-accessibility/">Menu accessibility</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Page content of course! -->
+  <main class="id7-main-content-area" id="main">
+    <header class="id7-main-content-header">
+      <div class="id7-horizontal-divider">
+        {% include divider.html %}
+      </div>
+
+      <div class="id7-page-title">
+        <h1>{{ page.title }}</h1>
+      </div>
+    </header>
+
+    <div class="id7-main-content">
+      {{ content }}
+    </div>
+  </main>
+
+  {% include footer.html %}
+</div>
+<div class="id7-right-border"></div>
+
+</body>
+</html>

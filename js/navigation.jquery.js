@@ -304,6 +304,116 @@ class Navigation {
     // Handle in-page bookmarks.
     if (document.location.hash) this.hashChanged();
     $(window).on('hashchange', $.proxy(this.hashChanged, this));
+
+    // Begin accessibility
+    // Opt-out mechanism (data-keyboard="false" on .id7-navigation)
+    if (this.$container.data('keyboard') === "false") {
+      return;
+    }
+
+    this.$container.on('keydown', (ev) => {
+      const $focus = $(document.activeElement);
+
+      const $li = $focus.parent();
+      const isDown = ev.key === 'ArrowDown';
+      const isUp = ev.key === 'ArrowUp';
+
+      const dropdownOpen = $li.find('.dropdown-menu').parent().hasClass('open');
+
+      // Allow opening and closing the focused dropdown with up/down
+      if ($li.hasClass('dropdown') && ((isDown && !dropdownOpen) || (isUp && dropdownOpen))) {
+        $li.find('> a').dropdown('toggle');
+        ev.preventDefault();
+        const $elementToFocus = dropdownOpen
+          ? $li.find('> a')
+          : $li.find('.dropdown-menu').find('li:first-child a'); // first item of just-opened menu
+
+        $elementToFocus.focus();
+        return false;
+      }
+
+      //                            <li>     <ul class="nav navbar-nav">
+      const primaryNavItemInFocus = $li.parent().hasClass('navbar-nav');
+
+      //                          <li>     <ul class="dropdown-menu">
+      const dropdownItemInFocus = $li.parent().hasClass('dropdown-menu');
+
+      // If we hit right with a nav item focused
+      const arrowRight = ev.key === 'ArrowRight';
+      if (arrowRight && primaryNavItemInFocus) {
+        if ($li.next().length > 0 && $li.next().children().length > 0) {
+          $li.next().children().first().focus();
+        }
+      } else if (arrowRight && dropdownItemInFocus) {
+        // We're inside a dropdown
+        // Move to the right hand nav element, opening its dropdown
+        // and closing this one in the process
+
+        //                           li.dropdown
+        const $nextNav = $li.parents().eq(1).next();
+        Navigation.openOrFocusNav($li, $nextNav);
+        return false;
+      }
+
+      // if we hit left with a nav item focused
+      const arrowLeft = ev.key === 'ArrowLeft';
+      if (arrowLeft && primaryNavItemInFocus) {
+        if ($li.prev().length > 0 && $li.prev().children().length > 0) {
+          $li.prev().children().first().focus();
+        }
+      } else if (arrowLeft && dropdownItemInFocus) {
+        // We're inside a dropdown
+        // Move to the left hand nav element, opening its dropdown
+        // and closing this one in the process
+
+        //                           li.dropdown
+        const $nextNav = $li.parents().eq(1).prev();
+        Navigation.openOrFocusNav($li, $nextNav);
+        return false;
+      }
+
+      return true;
+    });
+
+    $('.dropdown-menu').each((i, el) => {
+      const $el = $(el);
+      const $linkElement = $el.parent().find('> a');
+      if ($linkElement.length > 0 && $linkElement.attr('data-toggle') !== 'dropdown') {
+        $linkElement.attr('data-toggle', 'dropdown-trigger');
+        $linkElement.dropdown(); // we added it afterwards, need to manually call dropdown()
+      }
+      if ($linkElement.length > 0 && $linkElement.attr('aria-haspopup') !== 'true') {
+        $linkElement.attr('aria-haspopup', 'true');
+      }
+      $el.parent().find('> ul > li').attr('role', 'menuitem');
+      $linkElement.on('click keypress', (ev) => {
+        if (ev.type !== 'click' && ev.key !== 'Enter') {
+          return;
+        }
+        window.location = $linkElement.attr('href');
+        ev.stopPropagation();
+      });
+    });
+  }
+
+  /**
+   * For a given $nextNav, open its dropdown (if it has one)
+   * or otherwise just focus on it.
+   *
+   * Closes $li's dropdown.
+   */
+  static openOrFocusNav($li, $nextNav) {
+    if ($nextNav.length === 0) {
+      return;
+    }
+    $li.parents().eq(1).find('> a').dropdown('toggle'); // close ours
+
+    if ($nextNav.hasClass('dropdown')) {
+      $nextNav.find('> a').dropdown('toggle');
+      $nextNav.find('> ul > li:first-child > a').focus();
+    } else {
+      $nextNav.find('> a').focus();
+    }
   }
 }
 
