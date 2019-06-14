@@ -78,6 +78,7 @@ class CourseSearch {
         );
       },
       matcher: () => true, // All data received from the server matches the query
+      sorter: results => results, // Don't sort
       displayText: o => `<div><p class="title">${_.escape(o.title)}</p></div>`,
       highlighter: html => html,
       followLinkOnSelect: true,
