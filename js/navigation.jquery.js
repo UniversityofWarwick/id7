@@ -391,7 +391,9 @@ class Navigation {
         if (ev.type !== 'click' && ev.key !== 'Enter') {
           return;
         }
-        window.location = $linkElement.attr('href');
+        if (typeof $linkElement.attr('href') !== 'undefined') {
+          window.location = $linkElement.attr('href');
+        }
         ev.stopPropagation();
       });
     });
