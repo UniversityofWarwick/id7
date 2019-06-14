@@ -379,8 +379,9 @@ class Navigation {
     $('.dropdown-menu', this.$container).each((i, el) => {
       const $el = $(el);
       const $linkElement = $el.parent().find('> a');
-      if ($linkElement.length > 0 && $linkElement.attr('data-toggle') !== 'dropdown') {
-        $linkElement.attr('data-toggle', 'dropdown-trigger');
+      const EXPECTED_DATA_TOGGLE_VALUE = 'dropdown';
+      if ($linkElement.length > 0 && $linkElement.attr('data-toggle') !== EXPECTED_DATA_TOGGLE_VALUE) {
+        $linkElement.attr('data-toggle', EXPECTED_DATA_TOGGLE_VALUE);
         $linkElement.dropdown(); // we added it afterwards, need to manually call dropdown()
       }
       if ($linkElement.length > 0 && $linkElement.attr('aria-haspopup') !== 'true') {
