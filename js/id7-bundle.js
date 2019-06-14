@@ -81,7 +81,7 @@ $.fn.dropdown.Constructor.prototype.keydown = function (e) {
     if (e.which === 40) index = (index + 1) % $items.length;         // down
 
     if (e.which >= 65 && e.which <= 90 && $items.length < 100) {
-        var letter = e.key;
+        var letter = e.key.toLowerCase();
         let originalIndex = $items.index(e.target);
 
         // linear search
