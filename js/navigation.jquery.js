@@ -376,7 +376,7 @@ class Navigation {
       return true;
     });
 
-    $('.dropdown-menu').each((i, el) => {
+    $('.dropdown-menu', this.$container).each((i, el) => {
       const $el = $(el);
       const $linkElement = $el.parent().find('> a');
       if ($linkElement.length > 0 && $linkElement.attr('data-toggle') !== 'dropdown') {
