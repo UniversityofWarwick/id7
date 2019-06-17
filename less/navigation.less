@@ -204,6 +204,13 @@
         content: ' ';
         .caret();
       }
+
+      @media (hover: none) {
+        &.dropdown > a::after {
+          content: '';
+          display: none;
+        }
+      }
     }
 
     ul.dropdown-menu > li.active {
