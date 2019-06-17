@@ -43,6 +43,10 @@ function getParent($this) {
 $.fn.dropdown.Constructor.prototype.keydown = function (e) {
     if ((/input|textarea/i.test(e.target.tagName)) || (!/(38|40|27|32)/.test(e.which) && (e.which < 65 || e.which > 90))) return;
 
+    if (e.ctrlKey || e.altKey) { // don't hijack user's hotkeys
+        return;
+    }
+
     const $this = $(this);
 
     e.preventDefault();
