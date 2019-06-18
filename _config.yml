@@ -17,4 +17,4 @@ encoding:         UTF-8
 prefix:           /
 
 # Custom variables
-current_version:  2.3.8
+current_version:  2.3.9
