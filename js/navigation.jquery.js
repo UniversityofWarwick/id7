@@ -450,7 +450,7 @@ $(() => {
   const hasSkipToContent = $skipToContent.length === 1;
   const hasPrimaryNav = $mainNav.length === 1;
   const doesNotHaveSkipToNav = $('.sr-only.sr-only-focusable[href="#nav"]').length === 0;
-  if (hasPrimaryNav && typeof $mainNav.attr('id') === 'undefined') {
+  if (hasPrimaryNav && $mainNav.attr('id') === undefined) {
     $mainNav.attr('id', 'primary-nav');
   }
 
