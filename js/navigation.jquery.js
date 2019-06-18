@@ -443,6 +443,25 @@ $(() => {
     document.body.setAttribute('id', 'top');
   }
 
+  // add jump to navigation link if site author hasn't updated template
+  const DEFAULT_NAV_ID = 'primary-nav';
+
+  const $skipToContent = $('.sr-only.sr-only-focusable[href="#main"]');
+  const $mainNav = $('.id7-navigation').first();
+
+  const hasSkipToContent = $skipToContent.length === 1;
+  const hasPrimaryNav = $mainNav.length === 1;
+  const doesNotHaveSkipToNav = $(`.sr-only.sr-only-focusable[href="#${DEFAULT_NAV_ID}"]`).length === 0;
+  if (hasPrimaryNav && $mainNav.attr('id') === undefined) {
+    $mainNav.attr('id', DEFAULT_NAV_ID);
+  }
+
+  if (doesNotHaveSkipToNav && hasSkipToContent && hasPrimaryNav) {
+    const $link = $('<a>').addClass('sr-only').addClass('sr-only-focusable').attr('href', `#${$mainNav.attr('id')}`)
+      .text('Skip to navigation');
+    $skipToContent.after($link);
+  }
+
   // jump to a tab if specified
   const url = document.location.toString();
   if (url.match('#') && url.split('#')[1].length) {
