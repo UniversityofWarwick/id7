@@ -444,14 +444,16 @@ $(() => {
   }
 
   // add jump to navigation link if site author hasn't updated template
+  const DEFAULT_NAV_ID = 'primary-nav';
+
   const $skipToContent = $('.sr-only.sr-only-focusable[href="#main"]');
   const $mainNav = $('.id7-navigation').first();
 
   const hasSkipToContent = $skipToContent.length === 1;
   const hasPrimaryNav = $mainNav.length === 1;
-  const doesNotHaveSkipToNav = $('.sr-only.sr-only-focusable[href="#nav"]').length === 0;
+  const doesNotHaveSkipToNav = $(`.sr-only.sr-only-focusable[href="#${DEFAULT_NAV_ID}"]`).length === 0;
   if (hasPrimaryNav && $mainNav.attr('id') === undefined) {
-    $mainNav.attr('id', 'primary-nav');
+    $mainNav.attr('id', DEFAULT_NAV_ID);
   }
 
   if (doesNotHaveSkipToNav && hasSkipToContent && hasPrimaryNav) {
