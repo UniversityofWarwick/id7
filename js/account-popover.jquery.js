@@ -170,7 +170,7 @@ class AccountPopover {
     // Smaller screens get the old popover
     const onReflow = $.proxy((e, screenConfig) => {
       this.options.useMwIframe = this.options.useMwIframe && screenConfig.name !== 'xs'
-        && $(window).height() >= 580 && AccountPopover.isMwFeatureAvailable();
+        && $(window).height() >= 512 && AccountPopover.isMwFeatureAvailable();
 
       $trigger.find('.id7-notifications-badge').toggle(this.options.useMwIframe);
 
