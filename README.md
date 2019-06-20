@@ -8,7 +8,7 @@ ID7 is the 7th iteration of the University of Warwick corporate identity. This l
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Documentation](#documentation)
 - [Breaking changes](#breaking-changes)
-- [Upgrading from 1.x to 2.x](#upgrading-from-1-x-to-2-x)
+- [Upgrading from 1.x to 2.x](#upgrading-from-1x-to-2x)
 - [Copyright and license](#copyright-and-license)
 
 ## Quick start

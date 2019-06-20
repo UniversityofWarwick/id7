@@ -4,7 +4,7 @@
 .id7-navigation {
   .link-decoration(@hover: none);
   position: relative;
-  z-index: 1;
+  z-index: 3;
 
   .navbar {
     min-height: 0;
@@ -56,7 +56,7 @@
       .transition-delay(250ms);
       .transition(~"opacity 0.15s linear");
     }
-    .navbar-nav .dropdown:hover .dropdown-menu {
+    .navbar-nav .dropdown:hover .dropdown-menu, .navbar-nav .dropdown.open .dropdown-menu {
       height: auto;
       visibility:visible;
       .opacity(1);
@@ -196,6 +196,22 @@
         // hide the triangle on hover if there's a menu
         &.dropdown:hover::before,
         &.dropdown:active::before {
+          display: none;
+        }
+      }
+
+      &.dropdown > a::after {
+        content: ' ';
+        .caret();
+      }
+
+      &.dropdown > a > span.caret {
+        display: none;
+      }
+
+      @media (hover: none) {
+        &.dropdown > a::after {
+          content: '';
           display: none;
         }
       }

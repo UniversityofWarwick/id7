@@ -923,3 +923,12 @@ hr.spacer {
     }
   }
 }
+
+// Smooth scrolling only applies to the 2019 HP
+// ID-306
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

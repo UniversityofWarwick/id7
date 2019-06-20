@@ -1,4 +1,12 @@
+.id7-outline() {
+  outline: 3px solid @focus-outline;
+}
+
 .tab-focus() {
   outline-offset: 0;
-  outline: 3px solid @focus-outline;
+  .id7-outline();
+}
+
+.open > a:focus, .dropdown-menu > .active > a:focus, .dropdown-toggle:focus {
+  .id7-outline();
 }

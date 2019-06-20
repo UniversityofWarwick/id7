@@ -1,7 +1,6 @@
 <nav class="navbar navbar-primary{% if page.slug %} hidden-xs{% endif %}" role="navigation">
   <ul class="nav navbar-nav">
-    <li class="{% if page.slug contains 'getting-started' %} active{% endif %}"><a href="/getting-started/">Getting started</a></li>
-    <li{% if page.slug contains 'components' %} class="active"{% endif %}><a href="/components/">Components</a></li>
+    <li><a href="/">Homepage</a></li>
     <li class="{% if page.slug contains 'bacon-ipsum' %}next-secondary {% endif %}{% if page.slug contains 'examples' %}active {% endif %}dropdown">
       <a href="/examples/" data-toggle="dropdown">Examples</a>
       <ul class="dropdown-menu" role="menu">
@@ -9,9 +8,17 @@
         <li{% if page.slug == 'examples/subsite-homepage' %} class="active"{% endif %}><a href="/examples/subsite-homepage/">Sample subsite homepage</a></li>
         <li{% if page.slug == 'examples/testcard' %} class="active"{% endif %}><a href="/examples/testcard/">Test card</a></li>
         <li{% if page.slug == 'examples/bootstrap-testcard' %} class="active"{% endif %}><a href="/examples/bootstrap-testcard/">Bootstrap test card</a></li>
-        <li><a href="/examples/menu-accessibility/">Menu accessibility</a></li>
+        <li class="{% if page.slug == 'examples/menu-accessibility' %} active{% endif %}"><a href="/examples/menu-accessibility/">Menu accessibility</a></li>
       </ul>
     </li>
-    <li{% if page.slug contains 'id6a' %} class="active"{% endif %}><a href="/id6a/">ID6a</a></li>
+    <li class="dropdown">
+      <a href="/examples/" data-toggle="dropdown">Menu 2</a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="/examples/bacon-ipsum/">Lorem ipsum</a></li>
+        <li><a href="/examples/subsite-homepage/">Dolor sit</a></li>
+        <li><a href="/examples/subsite-homepage/">Amet</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Lorem ipsum</a></li>
   </ul>
 </nav>

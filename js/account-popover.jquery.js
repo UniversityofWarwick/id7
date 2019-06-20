@@ -163,13 +163,14 @@ class AccountPopover {
       const $target = $(e.target);
       if ($target.closest('.popover').length === 0 && $target.closest('.use-popover').length === 0 && $target.closest($trigger).length === 0) {
         $trigger.popover('hide');
+        $trigger.data('bs.popover').inState.click = false;
       }
     });
 
     // Smaller screens get the old popover
     const onReflow = $.proxy((e, screenConfig) => {
       this.options.useMwIframe = this.options.useMwIframe && screenConfig.name !== 'xs'
-        && $(window).height() >= 580 && AccountPopover.isMwFeatureAvailable();
+        && $(window).height() >= 512 && AccountPopover.isMwFeatureAvailable();
 
       $trigger.find('.id7-notifications-badge').toggle(this.options.useMwIframe);
 

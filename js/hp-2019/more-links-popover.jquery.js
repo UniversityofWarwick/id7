@@ -73,6 +73,7 @@ class MoreLinksPopover {
           // if clicking anywhere other than the popover itself
           if ($(e.target).closest('.popover').length === 0 && $(e.target).closest('.use-more-links-popover').length === 0) {
             $trigger.popover('hide');
+            $trigger.data('bs.popover').inState.click = false;
           }
         });
 
