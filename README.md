@@ -52,7 +52,7 @@ As of v2.0.0, we only provide compiled and minified CSS and JS. See [upgrading f
 
 The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. These dependencies are:
 
-- [jQuery](https://github.com/jquery/jquery) 3.4.0
+- [jQuery](https://github.com/jquery/jquery) 3.4.1
 - [Bootstrap](https://github.com/twbs/bootstrap) 3.4.1
 - [bootstrap-3-typeahead](https://github.com/bassjobsen/Bootstrap-3-Typeahead) 4.0.2
 - [headroom.js](https://github.com/WickyNilliams/headroom.js) 0.9.4
