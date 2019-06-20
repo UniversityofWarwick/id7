@@ -10,6 +10,7 @@
     "docs-assets": "NODE_ENV=development webpack --mode development --env.docs",
     "docs-watch": "NODE_ENV=development webpack --mode development --env.docs --watch",
     "docs-serve": "bundle exec jekyll serve",
+    "docs-build": "bundle exec jekyll build",
     "readme-md2html": "marked README.md > docs/_includes/README.html"
   },
   "dependencies": {
