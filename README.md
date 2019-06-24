@@ -74,6 +74,10 @@ Replacing `fontawesome-free` with `fontawesome-pro` if necessary.
 
 Have a bug or a feature request? Contact <webteam@warwick.ac.uk>.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Documentation
 
 Documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <http://id7.warwick.ac.uk>. The docs may also be run locally.
