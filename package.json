@@ -20,7 +20,7 @@
     "core-js": "2.6.5",
     "headroom.js": "0.9.4",
     "jqdoublescroll": "github:UniversityofWarwick/jqDoubleScroll#df530aeb89a1eef243e009565f3d0743320ac753",
-    "jquery": "3.4.0",
+    "jquery": "3.4.1",
     "lodash-es": "4.17.11",
     "loglevel": "1.6.1",
     "panelsnap": "1.2.1"
