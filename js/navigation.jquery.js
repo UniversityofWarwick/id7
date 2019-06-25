@@ -344,6 +344,8 @@ class Navigation {
       if (arrowRight && primaryNavItemInFocus) {
         if ($li.next().length > 0 && $li.next().children().length > 0) {
           $li.next().children().first().focus();
+        } else {
+          Navigation.tryNextNav($focus);
         }
       } else if (arrowRight && dropdownItemInFocus) {
         // We're inside a dropdown
@@ -361,6 +363,8 @@ class Navigation {
       if (arrowLeft && primaryNavItemInFocus) {
         if ($li.prev().length > 0 && $li.prev().children().length > 0) {
           $li.prev().children().first().focus();
+        } else {
+          Navigation.tryPrevNav($focus);
         }
       } else if (arrowLeft && dropdownItemInFocus) {
         // We're inside a dropdown
@@ -417,6 +421,25 @@ class Navigation {
       $nextNav.find('> ul > li:first-child > a').focus();
     } else {
       $nextNav.find('> a').focus();
+    }
+  }
+
+  static tryNextNav($focus) {
+    this.tryNextPrevNav($focus.parents('.navbar'), true);
+  }
+
+  static tryPrevNav($focus) {
+    this.tryNextPrevNav($focus.parents('.navbar'), false);
+  }
+
+  static tryNextPrevNav($el, next) {
+    const $subsequentNav = next ? $el.next('.navbar') : $el.prev('.navbar');
+    const $visibleLinks = $subsequentNav.find('a:visible');
+    if ($subsequentNav.length > 0 && $visibleLinks.length > 0) {
+      const $elementToFocus = next ? $visibleLinks.first() : $visibleLinks.last();
+      $elementToFocus.focus();
+    } else if ($subsequentNav.length > 0) {
+      return this.tryNextPrevNav($subsequentNav.first(), next); // recurse
     }
   }
 }
