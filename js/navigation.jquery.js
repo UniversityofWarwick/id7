@@ -438,9 +438,10 @@ class Navigation {
     if ($subsequentNav.length > 0 && $visibleLinks.length > 0) {
       const $elementToFocus = next ? $visibleLinks.first() : $visibleLinks.last();
       $elementToFocus.focus();
-    } else if ($subsequentNav.length > 0) {
+    } if ($subsequentNav.length > 0) {
       return this.tryNextPrevNav($subsequentNav.first(), next); // recurse
     }
+    return undefined;
   }
 }
 
