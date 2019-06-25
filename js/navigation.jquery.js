@@ -425,11 +425,11 @@ class Navigation {
   }
 
   static tryNextNav($focus) {
-    this.tryNextPrevNav($focus.parents('.navbar'), true);
+    Navigation.tryNextPrevNav($focus.parents('.navbar'), true);
   }
 
   static tryPrevNav($focus) {
-    this.tryNextPrevNav($focus.parents('.navbar'), false);
+    Navigation.tryNextPrevNav($focus.parents('.navbar'), false);
   }
 
   static tryNextPrevNav($el, next) {
