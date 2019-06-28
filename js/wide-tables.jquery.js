@@ -28,6 +28,7 @@ const Config = {
       return FeatureDetect.mq('only all and (min-width: 768px)');
     },
     doublescroll: true,
+    namespace: 'id7:table-responsive',
   },
 };
 
@@ -139,7 +140,7 @@ $.fn.wideTables = function wideTablesPlugin(options) {
       // when mac users have "AUTOMATICALLY show scroll bars" set, the grid would not be able to
       // horizontally scroll at all in non-safari browser(even with magic trackpad).
       $('.table-responsive').css('overflow-x', 'scroll');
-      $('body').on('table-responsive-non-safari-mac-post-init', (e, callback) => {
+      $('body').on(`non-safari-mac-post-init.${Config.Defaults.namespace}`, (e, callback) => {
         if (callback) callback(); // do extra things if needed.
       });
     } else {
