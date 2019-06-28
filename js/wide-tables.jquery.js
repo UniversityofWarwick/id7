@@ -134,14 +134,17 @@ $.fn.wideTables = function wideTablesPlugin(options) {
 
   if (!(navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1)) {
     if (navigator.platform === 'MacIntel') {
-      // on a mac we want to show the scroll bar as we cannot detect system preferences setting for showing/hiding scroll bar
-      // when mac users have "AUTOMATICALLY show scroll bars" set, the grid would not be able to horizontally scroll at all in non-safari browser(even with macgic trackpad).
+      // on a mac we want to show the scroll bar as we cannot detect system preferences setting
+      // for showing/hiding scroll bar.
+      // when mac users have "AUTOMATICALLY show scroll bars" set, the grid would not be able to
+      // horizontally scroll at all in non-safari browser(even with magic trackpad).
       $('.table-responsive').css('overflow-x', 'scroll');
-      $('body').on('table-responsive-non-safari-mac-post-init', function (e, callback) {
+      $('body').on('table-responsive-non-safari-mac-post-init', (e, callback) => {
         if (callback) callback(); // do extra things if needed.
       });
     } else {
-      // it's fine on others because there would be a physical scroll bar, hence in this case we do not want to render 2 scroll bars
+      // it's fine on others because there would be a physical scroll bar,
+      // hence in this case we do not want to render 2 scroll bars
       $('.table-responsive').css('overflow-x', 'hidden');
     }
   }
