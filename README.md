@@ -107,7 +107,7 @@ In your application you will need to do the following:
 ## Horizontal scroll on table-responsive on mac
 `.table-responsive` uses jqDoubleScroll, and by default, we hide the system scrollbar to prevent duplicate scrollbars being rendered. On macOS using a non-Safari browser, this would prevent the user from scrolling horizontally. Hence, in `wide-tables.jquery.js` we explicitly let non-Safari browsers running on macOS render the system scrollbar. Since it is hard to tell how `table-responsive` will be embedded into a page, and one might want to do something extra on top of our special handling, we have an event named `non-safari-mac-post-init.id7:table-responsive` for executing any extra steps if needed which fires after the page is ready. e.g.
 ```
-$('body').on('non-safari-mac-post-init.id7:table-responsive', function () {
+$('body').trigger('non-safari-mac-post-init.id7:table-responsive', function () {
   // add your own code here
 });
 ``` 

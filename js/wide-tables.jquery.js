@@ -121,6 +121,14 @@ class WideTables {
   }
 }
 
+function notSafari() {
+  return !(navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1);
+}
+
+function onMac() {
+  return navigator.platform === 'MacIntel';
+}
+
 $.fn.wideTables = function wideTablesPlugin(options) {
   const o = options || {};
 
@@ -133,21 +141,23 @@ $.fn.wideTables = function wideTablesPlugin(options) {
     $container.data('id7.wide-tables', wideTables);
   }
 
-  if (!(navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1)) {
-    if (navigator.platform === 'MacIntel') {
+  if (notSafari()) {
+    if (onMac()) {
       // show scroll bar on non-safari browsers on mac
       // otherwise mac user would not be able to scroll horizontally
       // because the double scroll element might not be visible
       // (and macgic mouse/trackpad horizontal scroll would not work unless on safari.)
       $('.table-responsive').css('overflow-x', 'scroll');
-      $('body').trigger(`non-safari-mac-post-init.${Config.Defaults.namespace}`);
     } else {
       $('.table-responsive').css('overflow-x', 'hidden');
     }
   }
-
   return this.each(attach);
 };
+
+$(window).on(`non-safari-mac-post-init.${Config.Defaults.namespace}`, (e, callback) => {
+  if (notSafari() && onMac() && callback) callback(); // do extra things if needed.
+});
 
 // SBTWO-5105 check tables after load, in case contents cause resize
 $(window).on('load id7:ready', () => $('.id7-main-content').wideTables());
