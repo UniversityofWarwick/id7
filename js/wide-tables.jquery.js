@@ -140,9 +140,7 @@ $.fn.wideTables = function wideTablesPlugin(options) {
       // because the double scroll element might not be visible
       // (and macgic mouse/trackpad horizontal scroll would not work unless on safari.)
       $('.table-responsive').css('overflow-x', 'scroll');
-      $('body').on(`non-safari-mac-post-init.${Config.Defaults.namespace}`, (e, callback) => {
-        if (callback) callback(); // do extra things if needed.
-      });
+      $('body').trigger(`non-safari-mac-post-init.${Config.Defaults.namespace}`);
     } else {
       $('.table-responsive').css('overflow-x', 'hidden');
     }
