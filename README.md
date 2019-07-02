@@ -104,6 +104,14 @@ In your application you will need to do the following:
 * Replace references to `id7-bundle.min.js` with `id7-bundle.js`
 * `id7-standalone.js` was removed from the distribution; you should build your own bundle if you are using this
 
+## Horizontal scroll on table-responsive on mac
+`.table-responsive` uses jqDoubleScroll, and by default, we hide the system scrollbar to prevent duplicate scrollbars being rendered. On macOS using a non-Safari browser, this would prevent the user from scrolling horizontally. Hence, in `wide-tables.jquery.js` we explicitly let non-Safari browsers running on macOS render the system scrollbar. Since it is hard to tell how `table-responsive` will be embedded into a page, and one might want to do something extra on top of our special handling, we have an event named `non-safari-mac-post-init.id7:table-responsive` for executing any extra steps if needed which fires after the page is ready. e.g.
+```
+$('body').on('non-safari-mac-post-init.id7:table-responsive', function () {
+  // add your own code here
+});
+``` 
+
 ## Breaking changes
 
 - **1.2.0** - Now uses a custom Modernizr build (see _What's included_ above) with a minimal range of tests. If your application relies on other tests or shims which were included in previous versions, they will likely fail.
