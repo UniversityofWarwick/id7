@@ -28,7 +28,6 @@ const Config = {
       return FeatureDetect.mq('only all and (min-width: 768px)');
     },
     doublescroll: true,
-    namespace: 'id7:table-responsive',
   },
 };
 
@@ -140,12 +139,11 @@ $.fn.wideTables = function wideTablesPlugin(options) {
       // because the double scroll element might not be visible
       // (and macgic mouse/trackpad horizontal scroll would not work unless on safari.)
       $('.table-responsive').css('overflow-x', 'scroll');
-      $('body').trigger(`non-safari-mac-post-init.${Config.Defaults.namespace}`);
+      $('.doubleScroll-scroll-wrapper').hide(); // hide double scroll, as this is not needed in this case
     } else {
       $('.table-responsive').css('overflow-x', 'hidden');
     }
   }
-
   return this.each(attach);
 };
 
