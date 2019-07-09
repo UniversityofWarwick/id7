@@ -431,7 +431,7 @@
     a, span { color: @colour; }
 
     &.active {
-      > a, > span {
+      > a, > span:not(.sr-only) {
         &,
         &:hover,
         &:focus {
