@@ -59,7 +59,7 @@ const { userAgent } = window.navigator;
 detect.addTest('safari', userAgent.indexOf('Safari/') >= 0 && userAgent.indexOf('Chrome/') === -1);
 detect.addTest('ie-or-edge', /MSIE 10/i.test(userAgent) || /MSIE 9/i.test(userAgent) || /rv:11.0/i.test(userAgent) || /Edge\/\d./i.test(userAgent));
 
-$(() => detect.addClasses($('html')));
+detect.addClasses($(document.documentElement));
 
 // For legacy
 window.Modernizr = detect;
