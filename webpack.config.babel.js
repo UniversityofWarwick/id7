@@ -19,7 +19,6 @@ const paths = {
   ASSETS: path.join(__dirname, 'dist'),
   ASSETS_IMAGES(basePath) { return path.join(basePath, 'images'); },
   ASSETS_CSS(basePath) { return path.join(basePath, 'css'); },
-  ASSETS_HOMEPAGE_CSS(basePath) { return path.join(basePath, 'external-homepage/css'); },
   ASSETS_HOMEPAGE_2019_CSS(basePath) { return path.join(basePath, 'hp-2019/css'); },
   ASSETS_FONTS(basePath) { return path.join(basePath, 'fonts'); },
   ASSETS_TEMPLATES(basePath) { return path.join(basePath, 'templates'); },
@@ -33,8 +32,6 @@ const paths = {
   FONTAWESOME_PRO_FONTS: path.join(__dirname, 'node_modules/@fortawesome/fontawesome-pro/webfonts'),
   TEMPLATES: path.join(__dirname, 'templates'),
   PUBLIC_PATH: '/static',
-  HOMEPAGE_JS: './js/external-homepage/hp.js',
-  HOMEPAGE_LESS: './less/external-homepage/hp.less',
   HOMEPAGE_2019_JS: './js/hp-2019/hp.js',
   HOMEPAGE_2019_LESS: './less/hp-2019/hp.less',
   DOCS_ASSETS: path.join(__dirname, 'docs/dist'),
@@ -112,66 +109,6 @@ const commonConfig = basePath => merge([
       'css/id7': paths.ID7,
       'css/id7-default-theme': paths.ID7_DEFAULT_THEME,
       'css/id6a': paths.ID6A,
-    },
-  },
-]);
-
-const homepageConfig = basePath => merge([
-  {
-    output: {
-      path: basePath,
-      publicPath: paths.PUBLIC_PATH,
-    },
-    node: {
-      // Fix Webpack global CSP violation https://github.com/webpack/webpack/issues/6461
-      global: false,
-    },
-    plugins: [
-      new ProvidePlugin({
-        // Fix Webpack global CSP violation https://github.com/webpack/webpack/issues/6461
-        global: require.resolve('./build-tooling/global.js'),
-      }),
-      new RemovePlugin({
-        before: {
-          root: paths.ROOT,
-          include: [basePath],
-          log: false,
-        },
-        after: {
-          root: paths.ROOT,
-          test: [
-            {
-              folder: paths.ASSETS_HOMEPAGE_CSS(basePath),
-              method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
-            },
-          ],
-          log: false,
-        },
-      }),
-    ],
-    resolve: {
-      alias: {
-        bootstrap: paths.BOOTSTRAP,
-      },
-    },
-  },
-  tooling.lintJS(),
-  tooling.transpileJS(),
-  tooling.extractCSS({
-    resolverPaths: [
-      paths.NODE_MODULES,
-    ],
-  }),
-  {
-    externals: {
-      jquery: 'jQuery',
-      'lodash-es': '_',
-    },
-  },
-  {
-    entry: {
-      'external-homepage/js/hp': paths.HOMEPAGE_JS,
-      'external-homepage/css/hp': paths.HOMEPAGE_LESS,
     },
   },
 ]);
@@ -294,10 +231,6 @@ const docsConfig = merge([
           to: path.join(paths.DOCS_ASSETS, 'docs/id6'),
         },
         {
-          from: './docs/assets/external-homepage/images',
-          to: path.join(paths.DOCS_ASSETS, 'docs/external-homepage/images'),
-        },
-        {
           from: './docs/assets/hp-2019/images',
           to: path.join(paths.DOCS_ASSETS, 'docs/hp-2019/images'),
         },
@@ -321,15 +254,6 @@ module.exports = ({ production, docs } = {}) => {
     mainConfig = merge(commonConfig(paths.ASSETS), developmentConfig);
   }
 
-  let hpConfig;
-  if (production) {
-    hpConfig = merge(homepageConfig(paths.ASSETS), productionConfig);
-  } else if (docs) {
-    hpConfig = merge(homepageConfig(paths.DOCS_ASSETS), productionConfig, docsConfig);
-  } else {
-    hpConfig = merge(homepageConfig(paths.ASSETS), developmentConfig);
-  }
-
   let hp2019Config;
   if (production) {
     hp2019Config = merge(homepage2019Config(paths.ASSETS), productionConfig);
@@ -341,7 +265,6 @@ module.exports = ({ production, docs } = {}) => {
 
   return [
     merge(mainConfig, { name: 'main' }),
-    merge(hpConfig, { name: 'homepage' }),
     merge(hp2019Config, { name: 'homepage2019' }),
   ];
 };
