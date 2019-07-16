@@ -72,7 +72,7 @@ node_modules
 /docs/dist
 /docs/_includes/README.html
 /docs/.jekyll-metadata
-/dist/external-homepage
+/dist/hp-2019
 /docs/_config.yml
 
 # Don't ignore /dist because it needs to be in Git for npm
