@@ -16,11 +16,13 @@ export default class FeatureDetect {
       return window.CSS.supports(property, value);
     }
 
-    if ('suportsCSS' in window) {
-      return window.suportsCSS(`${property}:${value}`);
+    if ('supportsCSS' in window) {
+      return window.supportsCSS(`${property}:${value}`);
     }
 
-    return false;
+    // As IE11 doesn't support CSS.supports but its flexbox implementation is just
+    // about good-enough, special-case it
+    return property === 'display' && value === 'flex' && /rv:11.0/i.test(window.navigator.userAgent);
   }
 
   static toggleClasses($container, feature, supported) {
