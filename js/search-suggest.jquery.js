@@ -76,7 +76,7 @@ $.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
     const $trigger = $(el);
     $trigger.searchSuggest($.extend(options, $trigger.data(), {
       source: (query, callback) => {
-        $.getJSON(`//sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=${maxResults}&prefix=${encodeURIComponent(query)}&callback=?`, callback);
+        $.getJSON(`https://sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=${maxResults}&prefix=${encodeURIComponent(query)}`, callback);
       },
       minLength,
       display: item => item.path,
