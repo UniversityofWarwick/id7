@@ -17,5 +17,6 @@ jobs:
         npm run build
         bash -c "ls dist/id7*.zip > /github/home/fn.txt"
     - name: Upload to Release
-      runs: ["sh", "-c", "upload-to-release", "$(cat /github/home/fn.txt)"]
+      entrypoint: "sh"
+      args: "-c upload-to-release $(cat /github/home/fn.txt)"
       uses: JasonEtco/upload-to-release@v0.1.1
