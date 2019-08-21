@@ -1,0 +1,24 @@
+name: Publish release
+on: [release]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - name: npm build production artifact
+      run: |
+        npm ci
+        npm run build
+        bash -c "ls dist/id7*.zip > fn.txt"
+        bash -c "cat fn.txt"
+        bash -c "echo $HOME"
+    - name: Upload to Release
+      uses: lol768/upload-to-release@v2.0.3
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -14,9 +14,10 @@ Edit the version number in the following places:
 
 ## Running a distribution build
 
-When you run `npm run build` it will generate production CSS/JS etc. and place `id6-[version]-dist.zip` and 
-`id7-[version]-dist.zip` into the version directories. When you create the release, you can paste the HTML version of the release notes from JIRA (make sure to unindent the
-first line otherwise it will be Markdown'd as code) and attach the zip files.
+When you create the release, you can paste the HTML version of the release notes from JIRA (make sure to unindent the
+first line otherwise it will be Markdown'd as code) and press the Publish button.
+
+GitHub Actions will do the rest and run `npm run build` in order to generate production CSS/JS etc. These will automatically be uploaded to the release you published within a few minutes.
 
 ## Doing a GitHub pages deploy
 
