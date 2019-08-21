@@ -18,6 +18,8 @@ jobs:
         bash -c "ls dist/id7*.zip > $HOME/fn.txt"
     - name: Upload to Release
       uses: JasonEtco/upload-to-release@v0.1.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         entrypoint: "sh"
         args: "-c upload-to-release $(cat $HOME/fn.txt)"
