@@ -82,7 +82,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Documentation
 
-Documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <http://id7.warwick.ac.uk>. The docs may also be run locally.
+Documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted on GitHub Pages at <http://id7.warwick.ac.uk>. The docs may also be run locally.
 
 ### Running sample site locally
 
@@ -94,7 +94,7 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
     1. Run `npm run start` in the command line.
 1. Open <http://localhost:8080> in your browser, et voilà.
 
-Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
+Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
 
 ## Upgrading from 1.x to 2.x
 
