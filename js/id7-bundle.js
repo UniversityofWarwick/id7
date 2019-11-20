@@ -154,6 +154,7 @@ require('bootstrap/js/tab');
 require('bootstrap/js/affix');
 require('bootstrap-3-typeahead');
 require('jqdoublescroll');
+require('./id7-popover');
 
 window.Headroom = Headroom;
 require('headroom.js/dist/jQuery.headroom');

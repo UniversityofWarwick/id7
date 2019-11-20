@@ -1030,9 +1030,11 @@ slug: examples/bootstrap-testcard
         </div>
         <div class="col-lg-6 ">
           <h2>Popovers</h2>
+          <p>ID7 includes a custom <samp>id7Popover</samp> wrapper which implements click-to-dismiss functionality.</p>
+          <p>We allowed this functionality to slowly mature in the Tabula codebase for optimal reliability.</p>
 
           <div class="form-group">
-            <button type="button" class="btn btn-info" onclick="jQuery('.example-popovers button').popover();">Initialize popovers</button>
+            <button type="button" class="btn btn-info" onclick="jQuery('.example-popovers button').id7Popover({trigger: 'click', container: 'body'});">Initialize popovers</button>
           </div>
 
           <div class="example-popovers">
