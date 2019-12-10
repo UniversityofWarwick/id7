@@ -19,6 +19,10 @@ size change for the xs size.</p>
 
 <textarea readonly></textarea>
 
+<p>
+    <a href="#" class="btn btn-primary clear-textarea">Clear</a>
+</p>
+
 <style type="text/css">
     textarea {
         width: 100%;
@@ -26,16 +30,4 @@ size change for the xs size.</p>
         height: 200px;
     }
 </style>
-
-<script>
-    jQuery(function($) {
-        var first = true;
-        $(window).on('id7:reflow', function(evData) {
-            console.log(evData);
-            const $textarea = $("textarea");
-            $textarea.val($textarea.val() + (first ? "" : "\n") + "Received id7:reflow at " + (new Date()));
-            first = false;
-            $textarea.scrollTop($textarea[0].scrollHeight);
-        });
-    });
-</script>
+<script type="text/javascript" src="/dist/docs/js/reflow-events.js" defer></script>
