@@ -2,6 +2,7 @@
 import $ from 'jquery';
 
 import currentScreenSize from './screen-sizes';
+import allScreenSizes from './screen-sizes';
 
 const Config = {
   Defaults: {
@@ -34,7 +35,12 @@ class ReflowEvent {
   }
 
   wireEventHandlers() {
-    $(window).on('resize.id7.reflow.onScreenResize', $.proxy(this.onScreenResize, this));
+    // Get all possible screen sizes from screen-sizes.js
+    // register an event listener on every MediaQueryList
+    const allSizes = allScreenSizes();
+    for (var i = 0; i < allSizes.length; i++) {
+      // allSizes[i].matcher().addListener(a)
+    }
 
     // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
     if (document.readyState === 'complete') {
