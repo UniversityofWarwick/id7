@@ -4,6 +4,12 @@
 
 ID7 is the 7th iteration of the University of Warwick corporate identity. This library provides CSS, JavaScript and sample HTML in order to use the corporate identity on your site.
 
+ID7 is available under an OSS license so that the open-source community can benefit from the various UI components and JavaScript functionality we have implemented.
+
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deployments powered by Netlify" />
+</a> 
+
 ## Table of contents
 
 - [Quick start](#quick-start)
@@ -122,4 +128,4 @@ Bootstrap is licensed under the [MIT license](https://github.com/twbs/bootstrap/
 
 ID7 is licensed under the [ISC license](https://github.com/UniversityofWarwick/id7/blob/master/LICENSE).
 
-Note that Access to the University web-site is subject to the separatem, [published copyright notice](https://warwick.ac.uk/terms/copyright).
+Note that Access to the University web-site is subject to the separate, [published copyright notice](https://warwick.ac.uk/terms/copyright).
