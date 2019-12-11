@@ -7,7 +7,7 @@ ID7 is the 7th iteration of the University of Warwick corporate identity. This l
 ID7 is available under an OSS license so that the open-source community can benefit from the various UI components and JavaScript functionality we have implemented.
 
 <a href="https://www.netlify.com">
-  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg"/>
+  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deployments powered by Netlify" />
 </a> 
 
 ## Table of contents
