@@ -1,7 +1,7 @@
 Code of conduct
 ===============
 
-In line with the university's [Dignity at Warwick](https://warwick.ac.uk/services/equalops/findsupport/dignityatwarwick) and related ED&I policies, we expect all contributors to:
+In line with the university's [Dignity at Warwick](https://warwick.ac.uk/services/equalops/findsupport/dignityatwarwick) and related ED&I (Equality, Diversity and Inclusion) policies, we expect all contributors to:
 
 - Behave in a way that respects the rights and dignity of others
 - Treat others fairly
