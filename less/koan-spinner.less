@@ -1,0 +1,44 @@
+@base-koan-spinner-size: 64px;
+
+.id7-koan-spinner {
+  width: @base-koan-spinner-size;
+  height: @base-koan-spinner-size;
+
+  display: inline-block;
+  line-height: 1;
+
+  .larger(@factor) when (@factor > 0) {
+    .larger((@factor - 1));
+
+    &-@{factor}x {
+      width: (@factor * @base-koan-spinner-size);
+      height: (@factor * @base-koan-spinner-size);
+    }
+  }
+
+  /* makes the font 33% larger relative to the icon container */
+  &-lg {
+    width: (4 * @base-koan-spinner-size / 3);
+    height: (4 * @base-koan-spinner-size / 3);
+    line-height: (3 * @base-koan-spinner-size / 4);
+    vertical-align: -.0667em;
+  }
+
+  &-xs {
+    width: .75 * @base-koan-spinner-size;
+    height: .75 * @base-koan-spinner-size;
+  }
+
+  &-sm {
+    width: .875 * @base-koan-spinner-size;
+    height: .875 * @base-koan-spinner-size;
+  }
+
+  .larger(10);
+}
+
+.id7-koan-spinner__neon {
+  &--top, &--bottom {
+    stroke: @id7-brand-purple;
+  }
+}

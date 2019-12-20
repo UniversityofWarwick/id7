@@ -39,6 +39,10 @@ const transpileJS = () => ({
         test: /\.js$/,
         use: 'babel-loader',
       },
+      {
+        test: /\.svg$/,
+        use: 'svg-inline-loader',
+      },
     ],
   },
 });

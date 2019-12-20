@@ -21,7 +21,8 @@
     "jqdoublescroll": "github:UniversityofWarwick/jqDoubleScroll#df530aeb89a1eef243e009565f3d0743320ac753",
     "jquery": "3.4.1",
     "lodash-es": "4.17.14",
-    "loglevel": "1.6.3"
+    "loglevel": "1.6.3",
+    "svg-inline-loader": "0.8.0"
   },
   "devDependencies": {
     "@babel/core": "7.3.3",
