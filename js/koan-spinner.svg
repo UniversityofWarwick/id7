@@ -86,7 +86,8 @@
         </path>
 
         <path id="middle"
-              d="M 0 72, Q 64 60 112 72"
+              d="M 0 72
+                 Q 64 60, 112 72"
               stroke-width="2"
               fill="none" />
     </defs>
