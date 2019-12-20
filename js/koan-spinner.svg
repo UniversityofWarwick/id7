@@ -39,7 +39,6 @@
 
         <path id="neon-top"
               d="M 5 20 Q 32 32, 64 20 T 112 20 T 192 20 T 256 20"
-              stroke-width="1.5"
               transform="rotate(2)"
               fill="none">
             <animate attributeName="d"
@@ -55,7 +54,6 @@
 
         <path id="neon-middle"
               d="M 0 30 Q 32 32, 64 30 T 112 30 T 192 30 T 256 30"
-              stroke-width="1.5"
               transform="rotate(-1)"
               fill="none">
             <animate attributeName="d"
@@ -71,7 +69,6 @@
 
         <path id="neon-bottom"
               d="M 0 40 Q 32 32, 64 40 T 112 40 T 192 40 T 256 40"
-              stroke-width="1.5"
               transform="rotate(3)"
               fill="none">
             <animate attributeName="d"
@@ -88,14 +85,13 @@
         <path id="middle"
               d="M 0 72
                  Q 64 60, 112 72"
-              stroke-width="2"
               fill="none" />
     </defs>
 
     <use class="id7-koan-spinner__body" clip-path="url(#koan-clip)" xlink:href="#body" fill="url(#koan-background-gradient)" />
     <use class="id7-koan-spinner__bottom" clip-path="url(#koan-clip)" xlink:href="#bottom" fill="#808080" />
-    <use class="id7-koan-spinner__middle" clip-path="url(#koan-clip)" xlink:href="#middle" stroke="#cfcfcf" />
-    <use class="id7-koan-spinner__neon id7-koan-spinner__neon--top" clip-path="url(#koan-clip)" xlink:href="#neon-top" stroke="#14b3b3" />
-    <use class="id7-koan-spinner__neon id7-koan-spinner__neon--middle" clip-path="url(#koan-clip)" xlink:href="#neon-middle" stroke="#14b3b3" />
-    <use class="id7-koan-spinner__neon id7-koan-spinner__neon--bottom" clip-path="url(#koan-clip)" xlink:href="#neon-bottom" stroke="#14b3b3" />
+    <use class="id7-koan-spinner__middle" clip-path="url(#koan-clip)" xlink:href="#middle" stroke="#cfcfcf" stroke-width="2" />
+    <use class="id7-koan-spinner__neon id7-koan-spinner__neon--top" clip-path="url(#koan-clip)" xlink:href="#neon-top" stroke="#14b3b3" stroke-width="1.5" />
+    <use class="id7-koan-spinner__neon id7-koan-spinner__neon--middle" clip-path="url(#koan-clip)" xlink:href="#neon-middle" stroke="#14b3b3" stroke-width="1.5" />
+    <use class="id7-koan-spinner__neon id7-koan-spinner__neon--bottom" clip-path="url(#koan-clip)" xlink:href="#neon-bottom" stroke="#14b3b3" stroke-width="1.5" />
 </svg>
