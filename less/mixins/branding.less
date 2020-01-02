@@ -333,6 +333,8 @@
   .apply-navs-brand(@colour);
 
   .apply-listgroup-brand(@colour);
+
+  .apply-koan-spinner-brand(@colour);
 }
 
 .apply-footer-brand(@colour) {
@@ -549,6 +551,15 @@
       background-color: @colour;
       border-color: @colour;
       color: contrast(@colour, @text-color, white, 50%);
+    }
+  }
+}
+
+
+.apply-koan-spinner-brand(@colour) {
+  .id7-koan-spinner__neon {
+    &--top, &--bottom {
+      stroke: @colour;
     }
   }
 }
