@@ -6,6 +6,19 @@
   },
   "rules": {
     "no-underscore-dangle": "off",
-    "new-cap": "off"
+    "new-cap": "off",
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "ignoredNodes": [
+          "TemplateLiteral"
+        ]
+      }
+    ],
+    "template-curly-spacing": [
+      "off"
+    ]
   }
 }
