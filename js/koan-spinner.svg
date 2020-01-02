@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" version="1.1"
+     focusable="false"
+     class="id7-koan-spinner"
+     viewBox="0 0 112 128">
+
+    <defs>
+        <radialGradient id="koan-background-gradient" cx="1.93" cy="0.5" r="3">
+            <stop offset="0%" stop-color="#e6e6e6" />
+            <stop offset="50%" stop-color="#e6e6e6" />
+            <stop offset="50%" stop-color="#cfcfcf" />
+            <stop offset="100%" stop-color="#cfcfcf" />
+        </radialGradient>
+
+        <path id="body"
+              d="M 48 5
+                 L 16 120
+                 Q 64 128, 96 120
+                 L 64 5
+                 Q 56 0, 48 5"
+              stroke="none" />
+
+        <clipPath id="koan-clip">
+            <!--
+              Everything outside the path will be
+              clipped and therefore invisible.
+            -->
+            <use xlink:href="#body" />
+        </clipPath>
+
+        <path id="bottom"
+              d="M 16 112
+                 Q 64 120, 96 112
+                 L 96 120
+                 Q 64 128, 16 120
+                 L 16 112" />
+
+        <path id="middle"
+              d="M 0 72
+                 Q 64 60, 112 72"
+              fill="none" />
+    </defs>
+
+    <use class="id7-koan-spinner__body" clip-path="url(#koan-clip)" xlink:href="#body" fill="url(#koan-background-gradient)" />
+    <use class="id7-koan-spinner__bottom" clip-path="url(#koan-clip)" xlink:href="#bottom" fill="#808080" />
+    <use class="id7-koan-spinner__middle" clip-path="url(#koan-clip)" xlink:href="#middle" stroke="#cfcfcf" stroke-width="2" />
+
+    <g clip-path="url(#koan-clip)">
+        <g transform="rotate(5)">
+            <path class="id7-koan-spinner__neon id7-koan-spinner__neon--top"
+                  d="M -20 27.5
+                     C 0 10, 10 10, 30 15
+                     C 50 20, 60 20, 80 15
+                     C 100 10, 110 10, 130 15
+                     C 150 20, 160 20, 180 15"
+                  fill="none"
+                  stroke="#14b3b3"
+                  stroke-width="1.5" />
+
+            <path class="id7-koan-spinner__neon id7-koan-spinner__neon--middle"
+                  d="M -20 37.5
+                     C 0 20, 30 20, 90 25
+                     C 150 30, 180 30, 240 25
+                     C 300 20, 330 20, 390 25
+                     C 450 30, 480 30, 540 25"
+                  fill="none"
+                  stroke="#14b3b3"
+                  stroke-width="1.5" />
+
+            <path class="id7-koan-spinner__neon id7-koan-spinner__neon--bottom"
+                  d="M -20 47.5
+                     C 0 30, 10 30, 30 35
+                     C 50 40, 60 40, 80 35
+                     C 100 30, 110 30, 130 35
+                     C 150 40, 160 40, 180 35"
+                  fill="none"
+                  stroke="#14b3b3"
+                  stroke-width="1.5" />
+        </g>
+    </g>
+</svg>

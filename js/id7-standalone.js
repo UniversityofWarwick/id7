@@ -69,3 +69,4 @@ require('./account-popover.jquery');
 require('./navigation.jquery');
 require('./search-suggest.jquery');
 require('./wide-tables.jquery');
+require('./koan-spinner.jquery');

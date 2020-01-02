@@ -1,0 +1,40 @@
+<h2 id="koan-spinners">Koan spinners</h2>
+
+<p>Replaces a <code>&lt;i></code> with a class of <code>id7-koan-spinner</code> with an inline SVG of a rotating Koan.</p>
+
+<i class="id7-koan-spinner id7-koan-spinner--xs" aria-hidden="true"></i>
+<i class="id7-koan-spinner id7-koan-spinner--sm" aria-hidden="true"></i>
+<i class="id7-koan-spinner" aria-hidden="true"></i>
+<i class="id7-koan-spinner id7-koan-spinner--lg" aria-hidden="true"></i>
+<i class="id7-koan-spinner id7-koan-spinner--2x" aria-hidden="true"></i>
+<i class="id7-koan-spinner id7-koan-spinner--3x" aria-hidden="true"></i>
+
+{% highlight html %}
+<i class="id7-koan-spinner" aria-hidden="true"></i>
+{% endhighlight %}
+
+<p>Any attributes you put on the <code>&lt;i></code> are copied across.</p>
+
+<p>Useful class names (in addition to <code>id7-koan-spinner</code>):</p>
+
+<ul>
+  <li><code>id7-koan-spinner--lg</code> - a larger koan</li>
+  <li><code>id7-koan-spinner--sm</code> - a smaller koan</li>
+  <li><code>id7-koan-spinner--xs</code> - a much smaller koan</li>
+  <li><code>id7-koan-spinner--2x</code> (3x, 4x, etc) - double size koan</li>
+  <li><code>id7-koan-spinner--slow</code> - a slow spinning koan</li>
+  <li><code>id7-koan-spinner--fast</code> - a fast spinning koan</li>
+</ul>
+
+<i class="id7-koan-spinner id7-koan-spinner--slow" aria-hidden="true"></i>
+<i class="id7-koan-spinner" aria-hidden="true"></i>
+<i class="id7-koan-spinner id7-koan-spinner--fast" aria-hidden="true"></i>
+
+<p>You can style the SVG using normal CSS, e.g.</p>
+
+{% highlight css %}
+.id7-koan-spinner__neon--middle {
+  stroke: #14b3b3;
+  animation-duration: 2s;
+}
+{% endhighlight %}
