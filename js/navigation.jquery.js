@@ -1,6 +1,7 @@
 /* eslint-env browser */
 import $ from 'jquery';
 import _ from 'lodash-es';
+import Headroom from 'headroom.js';
 
 import currentScreenSize from './screen-sizes';
 import changeLocationHash from './change-location-hash';
@@ -16,8 +17,8 @@ const Config = {
     marker: '<div class="id7-navigation-marker"></div>',
   },
   Defaults: {
-    fixedHeader: true,
-    fixedNav: true,
+    fixedHeader: Headroom.cutsTheMustard,
+    fixedNav: Headroom.cutsTheMustard,
     fitToWidth: false,
     collapseSmallscreen: false,
     keyboard: true,
