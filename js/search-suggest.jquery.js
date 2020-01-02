@@ -16,7 +16,7 @@ function SearchSuggest(options) {
     appendTo: o.appendTo !== undefined ? $(o.appendTo) : undefined,
     fitToElement: o.fitToElement,
     matcher: () => true, // All data received from the server matches the query
-    highlighter: html => html,
+    highlighter: (html) => html,
     changeInputOnSelect: false,
     changeInputOnMove: false,
     followLinkOnSelect: true,
@@ -79,9 +79,9 @@ $.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
         $.getJSON(`https://sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=${maxResults}&prefix=${encodeURIComponent(query)}`, callback);
       },
       minLength,
-      display: item => item.path,
-      displayText: o => `<div><p class="go-path">${_.escape(o.path)}</p><p class="go-description">${(typeof o.description !== 'undefined' ? _.escape(o.description) : '')}</p></div>`,
-      itemLink: item => `https://go.warwick.ac.uk/${item.path}?goSearchReferer=${encodeURIComponent(window.location)}&goSearchQuery=${encodeURIComponent($(el).val())}`,
+      display: (item) => item.path,
+      displayText: (o) => `<div><p class="go-path">${_.escape(o.path)}</p><p class="go-description">${(typeof o.description !== 'undefined' ? _.escape(o.description) : '')}</p></div>`,
+      itemLink: (item) => `https://go.warwick.ac.uk/${item.path}?goSearchReferer=${encodeURIComponent(window.location)}&goSearchQuery=${encodeURIComponent($(el).val())}`,
     }));
 
     // ID-145

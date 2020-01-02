@@ -18,5 +18,5 @@ const ScreenSizes = [
 ];
 
 export default function currentScreenSize() {
-  return _.find(ScreenSizes, screenConfig => screenConfig.test());
+  return _.find(ScreenSizes, (screenConfig) => screenConfig.test());
 }

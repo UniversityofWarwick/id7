@@ -239,7 +239,7 @@ class AccountPopover {
 
   updateColourTheme(colourTheme) {
     this.$trigger.next('.popover')
-      .removeClass((i, className) => $.grep(className.split(' '), singleClass => singleClass.indexOf('theme-') === 0).join(' '))
+      .removeClass((i, className) => $.grep(className.split(' '), (singleClass) => singleClass.indexOf('theme-') === 0).join(' '))
       .addClass(`theme-${colourTheme}`);
   }
 }

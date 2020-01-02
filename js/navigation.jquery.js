@@ -1,6 +1,7 @@
 /* eslint-env browser */
 import $ from 'jquery';
 import _ from 'lodash-es';
+import Headroom from 'headroom.js';
 
 import currentScreenSize from './screen-sizes';
 import changeLocationHash from './change-location-hash';
@@ -16,8 +17,8 @@ const Config = {
     marker: '<div class="id7-navigation-marker"></div>',
   },
   Defaults: {
-    fixedHeader: true,
-    fixedNav: true,
+    fixedHeader: Headroom.cutsTheMustard,
+    fixedNav: Headroom.cutsTheMustard,
     fitToWidth: false,
     collapseSmallscreen: false,
     keyboard: true,
@@ -156,7 +157,7 @@ class Navigation {
       if (!options.collapseSmallscreen || screenConfig.name !== 'xs') {
         const isWrapped = () => _.some(
           _.union($nav.find('> li').get(), $moreContainer.get()),
-          el => $(el).is(':visible') && $(el).position().top > 0,
+          (el) => $(el).is(':visible') && $(el).position().top > 0,
         );
 
         if (isWrapped()) {
@@ -496,5 +497,5 @@ $(() => {
   }
 
   // Change hash for page-reload
-  $('.nav-tabs a').on('shown.bs.tab.id7Navigation', e => changeLocationHash(e.target.hash));
+  $('.nav-tabs a').on('shown.bs.tab.id7Navigation', (e) => changeLocationHash(e.target.hash));
 });

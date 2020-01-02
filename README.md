@@ -63,7 +63,7 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 - [jQuery](https://github.com/jquery/jquery) 3.4.1
 - [Bootstrap](https://github.com/twbs/bootstrap) 3.4.1
 - [bootstrap-3-typeahead](https://github.com/bassjobsen/Bootstrap-3-Typeahead) 4.0.2
-- [headroom.js](https://github.com/WickyNilliams/headroom.js) 0.9.4
+- [headroom.js](https://github.com/WickyNilliams/headroom.js) 0.10.3
 - jQuery doubleScroll 0.6
 
 ## Icons
@@ -121,6 +121,9 @@ In your application you will need to do the following:
 - **2.3.0**:
   - Modernizr was removed and replaced with a shim just containing the tests used in ID7.
   - lodash is no longer exposed as `_` in order to reduce the bundle size
+- **2.6.0**:
+  - Internet Explorer 11 is no longer fully supported
+  - Headroom.js was updated to 0.10.3 which no longer supports IE11 without a polyfill for `Object.assign`. To enable this in IE11, include an `Object.assign` polyfill and then add `data-fixed-header="true" data-fixed-nav="true"` to the `.id7-navigation` element.  
 
 ## Copyright and license
 

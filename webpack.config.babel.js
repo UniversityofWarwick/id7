@@ -58,11 +58,14 @@ const commonConfig = basePath => merge([
       new RemovePlugin({
         before: {
           root: paths.ROOT,
+          allowRootAndOutside: true,
           include: [basePath],
           log: false,
+          trash: false,
         },
         after: {
           root: paths.ROOT,
+          allowRootAndOutside: true,
           test: [
             {
               folder: paths.ASSETS_CSS(basePath),
@@ -70,6 +73,7 @@ const commonConfig = basePath => merge([
             },
           ],
           log: false,
+          trash: false,
         },
       }),
     ],
@@ -131,11 +135,14 @@ const homepage2019Config = basePath => merge([
       new RemovePlugin({
         before: {
           root: paths.ROOT,
+          allowRootAndOutside: true,
           include: [basePath],
           log: false,
+          trash: false,
         },
         after: {
           root: paths.ROOT,
+          allowRootAndOutside: true,
           test: [
             {
               folder: paths.ASSETS_HOMEPAGE_2019_CSS(basePath),
@@ -143,6 +150,7 @@ const homepage2019Config = basePath => merge([
             },
           ],
           log: false,
+          trash: false,
         },
       }),
     ],

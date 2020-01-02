@@ -69,18 +69,18 @@ class CourseSearch {
         const searchQuery = encodeURIComponent(`(title:${query})OR(keywords:${query})OR(title:${query}*)OR(keywords:${query}*)`);
 
         // SBTWO-8712 Search under multiple locations for undergraduate course information
-        const pathQueries = $.map($radios.filter(':checked').data('paths').split(','), path => `path:${path.replace(/\//g, '\\/')}\\/*`);
+        const pathQueries = $.map($radios.filter(':checked').data('paths').split(','), (path) => `path:${path.replace(/\//g, '\\/')}\\/*`);
         const pathQuery = encodeURIComponent(`(${pathQueries.join(' OR ')})`);
 
         $.getJSON(
           `//warwick.ac.uk/ajax/lvsch/query.json?resultsPerPage=${maxResults}&pagenumber=1&q=(${searchQuery})%20AND%20${pathQuery}&fileFormat=text%2Fhtml&callback=?`,
-          results => async(results.results),
+          (results) => async(results.results),
         );
       },
       matcher: () => true, // All data received from the server matches the query
-      sorter: results => results, // Don't sort
-      displayText: o => `<div><p class="title">${_.escape(o.title)}</p></div>`,
-      highlighter: html => html,
+      sorter: (results) => results, // Don't sort
+      displayText: (o) => `<div><p class="title">${_.escape(o.title)}</p></div>`,
+      highlighter: (html) => html,
       followLinkOnSelect: true,
       itemLink: (result) => {
         if (result) {
