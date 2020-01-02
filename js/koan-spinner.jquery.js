@@ -9,6 +9,12 @@ const Config = {
   },
 };
 
+const generateID = (() => {
+  let globalIDCounter = 0;
+  // eslint-disable-next-line no-plusplus
+  return (baseStr) => `${baseStr}${globalIDCounter++}`;
+})();
+
 class KoanSpinner {
   constructor(options) {
     this.options = $.extend({}, Config.Defaults, options);
@@ -42,6 +48,24 @@ class KoanSpinner {
       const $svg = $(koan);
       $.each(attributes, function copyAttribute() {
         $svg.attr(this.name, this.value);
+      });
+
+      // Generate unique (per-page) IDs
+      $svg.find('[id]').each((jindex, def) => {
+        const oldID = $(def).attr('id');
+        const newID = generateID(oldID);
+        $(def).attr('id', newID);
+
+        $svg.find('use,[clip-path^="url(#"],[fill^="url(#"]').each((kindex, e) => {
+          const attrs = $(e).prop('attributes');
+          $.each(attrs, (lindex, attr) => {
+            if (attr.value === `#${oldID}`) {
+              $(e).attr(attr.name, `#${newID}`);
+            } else if (attr.value === `url(#${oldID})`) {
+              $(e).attr(attr.name, `url(#${newID})`);
+            }
+          });
+        });
       });
 
       $(el).replaceWith($svg);
