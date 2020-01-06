@@ -40,7 +40,8 @@ class ReflowEvent {
     for (let i = 0; i < allSizes.length; i += 1) {
       const { matcher, name } = allSizes[i];
       const config = allSizes[i];
-      matcher().addListener(() => {
+      matcher().addListener((e) => {
+        if (!e.matches) return;
         this.options.container.trigger(this.options.eventName, [config]);
         if (name === 'xs') {
           $(window).on('resize.id7.reflow.onScreenResize', $.proxy(this.onScreenResize, this));
