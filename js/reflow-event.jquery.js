@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import $ from 'jquery';
 
-import currentScreenSize, {allScreenSizes} from './screen-sizes';
+import currentScreenSize, { allScreenSizes } from './screen-sizes';
 
 const Config = {
   Defaults: {
@@ -17,36 +17,40 @@ class ReflowEvent {
     this.wireEventHandlers();
   }
 
-  onScreenResize(e, force) {
-    // Which stop-point are we on?
+  onScreenResize() {
     const screenConfig = currentScreenSize();
 
-    // Early exit if the width is the same. xs is variable width so can't be clever :(
-    if (!force && screenConfig.name !== 'xs' && screenConfig.name === this.lastScreenConfig) return;
-
     this.options.container.trigger(this.options.eventName, [screenConfig]);
-
-    this.lastScreenConfig = screenConfig.name;
   }
 
   reflow() {
-    this.onScreenResize({}, true);
+    if (currentScreenSize().name === 'xs') {
+      $(window).on('resize.id7.reflow.onScreenResize', $.proxy(this.onScreenResize, this));
+    } else {
+      $(window).off('resize.id7.reflow.onScreenResize');
+    }
+
+    this.onScreenResize();
   }
 
   wireEventHandlers() {
     // Get all possible screen sizes from screen-sizes.js
     // register an event listener on every MediaQueryList
     const allSizes = allScreenSizes();
-    for (var i = 0; i < allSizes.length; i++) {
+    for (let i = 0; i < allSizes.length; i += 1) {
       console.log(allSizes[i]);
-      let name = allSizes[i].name;
-      let config = allSizes[i];
-      allSizes[i].matcher().addListener(ev => {
-        console.log(name + " fired");
+      const { matcher, name } = allSizes[i];
+      const config = allSizes[i];
+      matcher().addListener(() => {
         this.options.container.trigger(this.options.eventName, [config]);
-        this.lastScreenConfig = name;
+        if (name === 'xs') {
+          $(window).on('resize.id7.reflow.onScreenResize', $.proxy(this.onScreenResize, this));
+        } else {
+          $(window).off('resize.id7.reflow.onScreenResize');
+        }
       });
     }
+
 
     // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
     if (document.readyState === 'complete') {
