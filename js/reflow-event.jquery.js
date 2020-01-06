@@ -38,7 +38,6 @@ class ReflowEvent {
     // register an event listener on every MediaQueryList
     const allSizes = allScreenSizes();
     for (let i = 0; i < allSizes.length; i += 1) {
-      console.log(allSizes[i]);
       const { matcher, name } = allSizes[i];
       const config = allSizes[i];
       matcher().addListener(() => {
