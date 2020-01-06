@@ -40,8 +40,11 @@ class ReflowEvent {
     for (var i = 0; i < allSizes.length; i++) {
       console.log(allSizes[i]);
       let name = allSizes[i].name;
+      let config = allSizes[i];
       allSizes[i].matcher().addListener(ev => {
         console.log(name + " fired");
+        this.options.container.trigger(this.options.eventName, [config]);
+        this.lastScreenConfig = name;
       });
     }
 
