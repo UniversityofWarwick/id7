@@ -20,6 +20,6 @@ export default function currentScreenSize() {
   return _.find(ScreenSizes, screenConfig => screenConfig.matcher().matches);
 }
 
-export default function allScreenSizes() {
+export function allScreenSizes() {
   return ScreenSizes;
 }
