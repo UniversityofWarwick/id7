@@ -1,8 +1,7 @@
 /* eslint-env browser */
 import $ from 'jquery';
 
-import currentScreenSize from './screen-sizes';
-import allScreenSizes from './screen-sizes';
+import currentScreenSize, {allScreenSizes} from './screen-sizes';
 
 const Config = {
   Defaults: {
@@ -39,7 +38,11 @@ class ReflowEvent {
     // register an event listener on every MediaQueryList
     const allSizes = allScreenSizes();
     for (var i = 0; i < allSizes.length; i++) {
-      // allSizes[i].matcher().addListener(a)
+      console.log(allSizes[i]);
+      let name = allSizes[i].name;
+      allSizes[i].matcher().addListener(ev => {
+        console.log(name + " fired");
+      });
     }
 
     // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
