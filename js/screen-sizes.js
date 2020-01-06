@@ -12,7 +12,7 @@ const ScreenSizes = [
     name: 'sm', matcher() { return window.matchMedia('(min-width: 768px)'); }, container: 750,
   },
   {
-    name: 'xs', matcher() { return window.matchMedia('(max-width: 768px)'); },
+    name: 'xs', matcher() { return window.matchMedia('(max-width: 767px)'); },
   },
 ];
 
