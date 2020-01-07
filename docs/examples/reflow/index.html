@@ -1,0 +1,33 @@
+---
+layout: default
+title: Reflow events
+slug: examples/reflow
+---
+
+<p>ID7 includes a reflow plugin which fires <samp>id7:reflow</samp> events when the browser is resized in such a way as
+    to change the current breakpoint (e.g. from lg to md).
+    Event data is an instance of the
+<samp>ReflowEvent</samp> class.</p>
+
+<p>We only expect the event to fire when the size of the main container changes. In other words, you'll receive
+one event on the transitions from [lg to md, md to sm, sm to xs] and an event every time the browser notifies us of a
+size change for the xs size.</p>
+
+<p>Sizes are defined in the aptly-named <samp>screen-sizes.js</samp> source file.</p>
+
+<p>This page shows a message whenever the event is fired. Try resizing your browser:</p>
+
+<textarea readonly></textarea>
+
+<p>
+    <a href="#" class="btn btn-primary clear-textarea">Clear</a>
+</p>
+
+<style type="text/css">
+    textarea {
+        width: 100%;
+        font-family: monospace;
+        height: 200px;
+    }
+</style>
+<script type="text/javascript" src="/dist/docs/js/reflow-events.js" defer></script>
