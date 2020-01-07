@@ -37,9 +37,8 @@ class ReflowEvent {
     // Get all possible screen sizes from screen-sizes.js
     // register an event listener on every MediaQueryList
     const allSizes = allScreenSizes();
-    for (let i = 0; i < allSizes.length; i += 1) {
-      const { matcher, name } = allSizes[i];
-      const config = allSizes[i];
+    allSizes.forEach((config) => {
+      const { matcher, name } = config;
       matcher().addListener((e) => {
         if (!e.matches) return;
         this.options.container.trigger(this.options.eventName, [config]);
@@ -49,7 +48,7 @@ class ReflowEvent {
           $(window).off('resize.id7.reflow.onScreenResize');
         }
       });
-    }
+    });
 
 
     // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
