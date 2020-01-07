@@ -85,7 +85,7 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
                   new ScriptTask()
                     .description("Commit generated dist files back")
                     .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
-                    .inlineBody("git config user.name \"Bamboo\"\ngit config user.email \"$USER@$HOSTNAME\"\ngit add dist\ngit commit -m \"Automated commit of built assets\"\ngit remote add github git@github.com:UniversityofWarwick/id7.git\nssh-keyscan -t rsa github.com > ~/.ssh/known_hosts\ngit push github\nexit 0"))
+                    .inlineBody("git config user.name \"Bamboo\"\ngit config user.email \"11889472+uow-bamboo@users.noreply.github.com\"\ngit add dist\ngit commit -m \"Automated commit of built assets\"\ngit remote add github git@github.com:UniversityofWarwick/id7.git\nssh-keyscan -t rsa github.com > ~/.ssh/known_hosts\ngit push github\nexit 0"))
                 )
         )
         .slackNotifications(SLACK_CHANNEL, false)
