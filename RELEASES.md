@@ -17,16 +17,11 @@ Edit the version number in the following places:
 When you create the release, you can paste the HTML version of the release notes from JIRA (make sure to unindent the
 first line otherwise it will be Markdown'd as code) and press the Publish button.
 
-GitHub Actions will do the rest and run `npm run build` in order to generate production CSS/JS etc. These will automatically be uploaded to the release you published within a few minutes.
+Once the release is published, GitHub Actions will do the rest and run `npm run build` in order to generate production CSS/JS etc. These will automatically be uploaded to the release you published within a few minutes.
 
-## Doing a GitHub pages deploy
+## Netlify deploy
 
-Once the version's released, you'll need to do a GitHub pages deploy. To do this, run the following:
-
-```
-node_modules/.bin/npm-run-all --parallel readme-md2html docs-assets
-./deploy.sh
-```
+Netlify will deploy the static site at https://id7.warwick.ac.uk automatically when `master` is updated, you don't need to run any scripts.
 
 ## Publishing the package on npmjs.com
 
