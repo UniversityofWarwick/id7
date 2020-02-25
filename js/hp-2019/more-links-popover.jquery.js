@@ -7,7 +7,7 @@ import currentScreenSize from '../screen-sizes';
 
 const Config = {
   Defaults: {
-    container: '.id7-page-header', // Needed to avoid being drawn under the nav carousel which is fixed in the body
+    container: '.id7-logo-row', // Needed to avoid being drawn under the nav carousel which is fixed in the body
     template: `
       <div class="popover megamenu-links">
         <div class="arrow"></div>
