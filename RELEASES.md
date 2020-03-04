@@ -7,10 +7,12 @@ the version number that you're tagging.
 
 ## Bumping the version number
 
-Edit the version number in the following places:
+Create a `release/v#.#.#` branch and edit the version number in the following places:
 
 * Line 3 of `package.json`
 * Line 20 of `_config.yml`
+
+Create a pull request and get it approved and merged. 
 
 ## Running a distribution build
 
