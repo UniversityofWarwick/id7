@@ -124,6 +124,8 @@ In your application you will need to do the following:
 - **2.6.0**:
   - Internet Explorer 11 is no longer fully supported
   - Headroom.js was updated to 0.10.3 which no longer supports IE11 without a polyfill for `Object.assign`. To enable this in IE11, include an `Object.assign` polyfill and then add `data-fixed-header="true" data-fixed-nav="true"` to the `.id7-navigation` element.  
+- **2.6.5**:
+  - LESS sources now prefix module imports with a `~` (tilde), which is supported by the Webpack build (and other tools such as Parcel) but if you are building the LESS yourself then you can teach the official LESS compiler to understand tilde prefixes by adding [this plugin](https://github.com/less/less-plugin-npm-import#programmatic-usage).
 
 ## Copyright and license
 
