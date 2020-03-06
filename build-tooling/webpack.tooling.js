@@ -71,7 +71,7 @@ const copyLocalImages = ({ dest } = {}) => ({
   ],
 });
 
-const extractCSS = ({ resolverPaths } = {}) => ({
+const extractCSS = ({ } = {}) => ({
   module: {
     rules: [
       {
@@ -103,7 +103,6 @@ const extractCSS = ({ resolverPaths } = {}) => ({
           {
             loader: 'less-loader',
             options: {
-              paths: resolverPaths,
               relativeUrls: false,
               sourceMap: true,
             },

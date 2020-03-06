@@ -102,11 +102,7 @@ const commonConfig = basePath => merge([
       ]),
     ],
   },
-  tooling.extractCSS({
-    resolverPaths: [
-      paths.NODE_MODULES,
-    ],
-  }),
+  tooling.extractCSS(),
   {
     entry: {
       'js/id7-bundle': paths.BUNDLE,
