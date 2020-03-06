@@ -73,7 +73,7 @@ Icons are provided by the Font Awesome 5 library. Because our license prevents d
 We don't include the FA4 compatibility layer by default. It can be imported within LESS with:
 
 ```less
-@import '@fortawesome/fontawesome-free/less/v4-shims';
+@import '~@fortawesome/fontawesome-free/less/v4-shims';
 ```
 
 Replacing `fontawesome-free` with `fontawesome-pro` if necessary.
