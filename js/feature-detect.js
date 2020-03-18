@@ -25,11 +25,13 @@ export default class FeatureDetect {
     return property === 'display' && value === 'flex' && /rv:11.0/i.test(window.navigator.userAgent);
   }
 
-  static toggleClasses($container, feature, supported) {
+  static toggleClasses(container, feature, supported) {
     if (supported) {
-      $container.removeClass(`no-${feature}`).addClass(feature);
+      container.classList.remove(`no-${feature}`);
+      container.classList.add(feature);
     } else {
-      $container.removeClass(feature).addClass(`no-${feature}`);
+      container.classList.remove(feature);
+      container.classList.add(`no-${feature}`);
     }
   }
 
@@ -38,15 +40,15 @@ export default class FeatureDetect {
     FeatureDetect.prototype[name] = result;
 
     // Detect when DOMReady has already happened
-    if (this.$container) {
-      FeatureDetect.toggleClasses(this.$container, name, result);
+    if (this.container) {
+      FeatureDetect.toggleClasses(this.container, name, result);
     }
   }
 
-  addClasses($container) {
-    this.$container = $container;
+  addClasses(container) {
+    this.container = container;
     Object.keys(this.tests).forEach((name) => {
-      FeatureDetect.toggleClasses($container, name, this.tests[name]);
+      FeatureDetect.toggleClasses(container, name, this.tests[name]);
     });
   }
 }
