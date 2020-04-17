@@ -23,17 +23,14 @@ class KoanSpinner {
 
     // Set up a MutationObserver
     if (typeof MutationObserver !== 'undefined' && this.options.container.length) {
-      const observer = new MutationObserver((objects) => {
-        $.each(objects, (i, mutationRecord) => {
-          if (mutationRecord.type === 'childList' && mutationRecord.addedNodes.length > 0) {
-            this.replaceWithSvg(mutationRecord.target);
-          }
+      this.options.container.each((i, container) => {
+        new MutationObserver(() => {
+          this.replaceWithSvg(container);
+        }).observe(container, {
+          childList: true,
+          subtree: true,
         });
       });
-      this.options.container.each((i, container) => observer.observe(container, {
-        childList: true,
-        subtree: true,
-      }));
     } else {
       // Just run once on DOM ready
       $(() => this.replaceWithSvg());
