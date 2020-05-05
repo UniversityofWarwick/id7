@@ -22,6 +22,7 @@ function SearchSuggest(options) {
     followLinkOnSelect: true,
     openLinkInNewTab: false,
     selectOnBlur: false,
+    selectOnTab: false,
     showHintOnFocus: true,
     itemLink: o.itemLink,
     afterSelect: () => $input.trigger('blur'),
