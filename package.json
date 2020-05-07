@@ -1,6 +1,6 @@
 {
   "name": "@universityofwarwick/id7",
-  "version": "2.6.6",
+  "version": "2.6.7",
   "scripts": {
     "watch": "NODE_ENV=development webpack --mode development --watch",
     "dev": "NODE_ENV=development webpack --mode development",
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.12.0",
-    "@universityofwarwick/bootstrap-3-typeahead": "4.0.3",
+    "@universityofwarwick/bootstrap-3-typeahead": "4.0.4",
     "bootstrap": "3.4.1",
     "headroom.js": "0.10.3",
     "jqdoublescroll": "github:UniversityofWarwick/jqDoubleScroll#df530aeb89a1eef243e009565f3d0743320ac753",
