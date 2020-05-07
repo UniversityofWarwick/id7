@@ -62,7 +62,7 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 
 - [jQuery](https://github.com/jquery/jquery) 3.4.1
 - [Bootstrap](https://github.com/twbs/bootstrap) 3.4.1
-- [bootstrap-3-typeahead](https://github.com/bassjobsen/Bootstrap-3-Typeahead) 4.0.2
+- [bootstrap-3-typeahead](https://github.com/UniversityOfWarwick/Bootstrap-3-Typeahead) 4.0.3
 - [headroom.js](https://github.com/WickyNilliams/headroom.js) 0.10.3
 - jQuery doubleScroll 0.6
 
@@ -96,7 +96,7 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 1. Install node.js.
 1. In the root `/id7` directory:
     1. Run `bundle install` to install dependent gems.
-    1. Run `npm i` to install webpack and other node.js dependencies.
+    1. Run `npm ci` to install webpack and other node.js dependencies.
     1. Run `npm run start` in the command line.
 1. Open <http://localhost:8080> in your browser, et voilà.
 

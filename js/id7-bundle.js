@@ -152,7 +152,7 @@ defaultWhitelist.iframe = ['src', 'scrolling', 'frameborder', 'allowtransparency
 require('bootstrap/js/scrollspy');
 require('bootstrap/js/tab');
 require('bootstrap/js/affix');
-require('bootstrap-3-typeahead');
+require('@universityofwarwick/bootstrap-3-typeahead');
 require('jqdoublescroll');
 require('./id7-popover');
 
