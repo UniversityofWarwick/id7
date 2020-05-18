@@ -403,7 +403,7 @@ class Navigation {
       }
       updateButtonText(false);
       const $button = $('<button class="nav-dropdown-button sr-only sr-only-focusable"></button>')
-          .append($buttonSpan);
+        .append($buttonSpan);
       // Enter key on the button toggles the dropdown
       $button.on('click', (e) => {
         e.preventDefault();
@@ -433,7 +433,7 @@ class Navigation {
   }
 
   /**
-   * Toggle dropdown that contains this li element
+   * Toggle the dropdown that contains this element
    * @param $el jQuery object of any element contained by the .dropdown item
    * @return {boolean} whether the dropdown is now expanded
    */
