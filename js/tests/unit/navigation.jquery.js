@@ -89,4 +89,46 @@ jQuery(function ($) {
     assert.ok($el.data('id7.navigation'), 'navigation instance exists');
   });
 
+  QUnit.test('should be keyboard navigable', (assert) => {
+    var $el = $(`
+      <div>
+        <nav class="navbar navbar-primary" role="navigation">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="/examples/" data-toggle="dropdown">Examples</a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/examples/bacon-ipsum/">Subpage 1</a></li>
+                <li><a href="/examples/subsite-homepage/">Subpage 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      `)
+      .appendTo('#qunit-fixture')
+      .id7Navigation({ fitToWidth: false });
+
+    const $doc = $(document);
+    const $dropdown = $('.dropdown');
+    const $parentLink = $dropdown.find('> a');
+    const $button = $parentLink.next();
+    const $menu = $dropdown.find('ul');
+
+    assert.equal($button.length, 1);
+    assert.equal($button[0].tagName, 'BUTTON');
+
+    assert.equal($parentLink.attr('aria-expanded'), undefined, 'Initial ARIA value');
+    assert.equal($parentLink.attr('aria-haspopup'), 'true', 'Initial ARIA value');
+
+    $button.trigger('click');
+
+    assert.equal($parentLink.attr('aria-expanded'), 'true', 'Expanded ARIA value');
+    assert.equal($button.attr('aria-expanded'), 'true', 'Expanded ARIA value');
+
+    $button.trigger('click');
+
+    assert.equal($parentLink.attr('aria-expanded'), 'false', 'Collapsed ARIA value');
+    assert.equal($button.attr('aria-expanded'), 'false', 'Collapsed ARIA value');
+  });
+
 });
