@@ -91,6 +91,7 @@
       padding-bottom: @navbar-padding-vertical;
 
       position: relative;
+      display: flex;
       margin: 0;
       float: left;
       cursor: pointer;
@@ -200,20 +201,30 @@
         }
       }
 
-      &.dropdown > a::after {
-        content: ' ';
-        .caret();
-      }
 
-      &.dropdown > a > span.caret {
-        display: none;
-      }
+      &.dropdown {
 
-      @media (hover: none) {
-        &.dropdown > a::after {
-          content: '';
+        & > a::after {
+          content: ' ';
+          .caret();
+        }
+
+        // If we provide a real DOM caret, we add this class to hide the pseudo element
+        & > a.has-button-caret::after {
           display: none;
         }
+
+        & > a > span.caret {
+          display: none;
+        }
+
+        @media (hover: none) {
+          & > a::after {
+            content: '';
+            display: none;
+          }
+        }
+
       }
     }
 
@@ -257,6 +268,19 @@
   .navbar-primary.navbar-wrapped > .navbar-nav > li::before {
     display: none;
   }
+
+  button.nav-dropdown-button {
+    background: none;
+    border: none;
+    margin: 0 0 0 4px;
+    padding: 0;
+
+    &:focus {
+      .tab-focus();
+    }
+  }
+
+
 }
 
 .important-no-transition * {

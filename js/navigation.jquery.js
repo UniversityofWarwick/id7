@@ -10,7 +10,7 @@ const Config = {
   Templates: {
     moreContainer: `<ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fas fa-caret-down"></i></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fas fa-caret-down" aria-hidden="true"></i><span class="sr-only">Display more items</span></a>
           <ul class="dropdown-menu" role="menu"></ul>
         </li>
       </ul>`.trim(),
@@ -323,6 +323,7 @@ class Navigation {
       const dropdownOpen = $li.find('.dropdown-menu').parent().hasClass('open');
 
       // Allow opening and closing the focused dropdown with up/down
+      // BUG closing doesn't work because $li is the wrong element
       if ($li.hasClass('dropdown') && ((isDown && !dropdownOpen) || (isUp && dropdownOpen))) {
         $li.find('> a').dropdown('toggle');
         ev.preventDefault();
@@ -392,6 +393,32 @@ class Navigation {
       if ($linkElement.length > 0 && $linkElement.attr('aria-haspopup') !== 'true') {
         $linkElement.attr('aria-haspopup', 'true');
       }
+
+      // Add a separate show-dropdown button for screen readers
+      const $buttonSpan = $('<span></span>');
+      function updateButtonText(expanded) {
+        const verb = expanded ? 'Hide' : 'Show';
+        $buttonSpan.text(`${verb} submenu`);
+        $buttonSpan.append($('<span class="sr-only"></span>').text(` for ${$linkElement.text()}`));
+      }
+      updateButtonText(false);
+      const $button = $('<button class="nav-dropdown-button sr-only sr-only-focusable"></button>')
+          .append($buttonSpan);
+      // Enter key on the button toggles the dropdown
+      $button.on('click', (e) => {
+        e.preventDefault();
+        const expanded = Navigation.toggleDropdown($el);
+        $button.attr('aria-expanded', $linkElement.attr('aria-expanded'));
+        if (expanded) {
+          // Standard dropdown code refocuses the main link, but we just activated the button
+          // so steal focus back
+          $button.focus();
+        }
+        updateButtonText(expanded);
+        return false;
+      });
+      $linkElement.after($button);
+
       $el.parent().find('> ul > li').attr('role', 'menuitem');
       $linkElement.on('click keypress', (ev) => {
         if (ev.type !== 'click' && ev.key !== 'Enter') {
@@ -406,6 +433,17 @@ class Navigation {
   }
 
   /**
+   * Toggle dropdown that contains this li element
+   * @param $el jQuery object of any element contained by the .dropdown item
+   * @return {boolean} whether the dropdown is now expanded
+   */
+  static toggleDropdown($el) {
+    const $a = $el.closest('.dropdown').find('> a');
+    $a.dropdown('toggle');
+    return $a.attr('aria-expanded') === 'true';
+  }
+
+  /**
    * For a given $nextNav, open its dropdown (if it has one)
    * or otherwise just focus on it.
    *
@@ -415,7 +453,7 @@ class Navigation {
     if ($nextNav.length === 0) {
       return;
     }
-    $li.parents().eq(1).find('> a').dropdown('toggle'); // close ours
+    Navigation.toggleDropdown($li); // close current dropdown
 
     if ($nextNav.hasClass('dropdown')) {
       $nextNav.find('> a').dropdown('toggle');
@@ -462,7 +500,8 @@ $.fn.id7Navigation = function navigationPlugin(options) {
 };
 
 $(() => {
-  $('.id7-navigation').id7Navigation();
+  const $navs = $('.id7-navigation');
+  $navs.id7Navigation();
 
   if (!document.body.hasAttribute('id')) {
     document.body.setAttribute('id', 'top');
@@ -472,17 +511,17 @@ $(() => {
   const DEFAULT_NAV_ID = 'primary-nav';
 
   const $skipToContent = $('.sr-only.sr-only-focusable[href="#main"]');
-  const $mainNav = $('.id7-navigation').first();
+  const $primaryNav = $navs.first();
 
   const hasSkipToContent = $skipToContent.length === 1;
-  const hasPrimaryNav = $mainNav.length === 1;
+  const hasPrimaryNav = $primaryNav.length === 1;
   const doesNotHaveSkipToNav = $(`.sr-only.sr-only-focusable[href="#${DEFAULT_NAV_ID}"]`).length === 0;
-  if (hasPrimaryNav && $mainNav.attr('id') === undefined) {
-    $mainNav.attr('id', DEFAULT_NAV_ID);
+  if (hasPrimaryNav && $primaryNav.attr('id') === undefined) {
+    $primaryNav.attr('id', DEFAULT_NAV_ID);
   }
 
   if (doesNotHaveSkipToNav && hasSkipToContent && hasPrimaryNav) {
-    const $link = $('<a>').addClass('sr-only').addClass('sr-only-focusable').attr('href', `#${$mainNav.attr('id')}`)
+    const $link = $('<a>').addClass('sr-only').addClass('sr-only-focusable').attr('href', `#${$primaryNav.attr('id')}`)
       .text('Skip to navigation');
     $skipToContent.after($link);
   }
