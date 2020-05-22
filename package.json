@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.12.0",
-    "@universityofwarwick/bootstrap-3-typeahead": "4.0.4",
+    "@universityofwarwick/bootstrap-3-typeahead": "4.0.5",
     "bootstrap": "3.4.1",
     "headroom.js": "0.10.3",
     "jqdoublescroll": "github:UniversityofWarwick/jqDoubleScroll#df530aeb89a1eef243e009565f3d0743320ac753",
