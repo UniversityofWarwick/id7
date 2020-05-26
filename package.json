@@ -14,7 +14,7 @@
     "readme-md2html": "marked README.md > docs/_includes/README.html"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.12.0",
+    "@fortawesome/fontawesome-free": "5.13.0",
     "@universityofwarwick/bootstrap-3-typeahead": "4.0.5",
     "bootstrap": "3.4.1",
     "headroom.js": "0.10.3",
