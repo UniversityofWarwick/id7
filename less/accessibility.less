@@ -1,11 +1,13 @@
 .id7-outline() {
-  outline: 3px solid transparent;
+  outline: 3px solid @focus-outline;
   color: #0b0c0c !important;
   background-color: @focus-outline !important;
-  box-shadow: 0 -2px @focus-outline, 0 4px #0b0c0c;
+  box-shadow: 0 -2px @focus-outline, 0 6px #0b0c0c;
   text-decoration: none !important;
+  transition-duration: 0s;
 }
 
+// This overrides Bootstrap's own tab-focus mixin which is how it gets applied to most links
 .tab-focus() {
   outline-offset: 0;
   .id7-outline();
