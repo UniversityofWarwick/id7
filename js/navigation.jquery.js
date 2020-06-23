@@ -5,7 +5,7 @@ import Headroom from 'headroom.js';
 
 import currentScreenSize from './screen-sizes';
 import changeLocationHash from './change-location-hash';
-import { getVisibleTextNodesIn } from './dom-utils';
+import { getVisibleTextNodesIn, wrapNode } from './dom-utils';
 
 const Config = {
   Templates: {
@@ -57,6 +57,12 @@ class Navigation {
   trimLinkTitles() {
     const { maxLength, append } = this.options.trimLinkTitles;
 
+    function ariaHiddenSpan() {
+      const span = document.createElement('span');
+      span.setAttribute('aria-hidden', 'true');
+      return span;
+    }
+
     this.$container.find('.nav a').each(function trimTitle() {
       // All text nodes that aren't contained in an .sr-only element
       const textNodes = getVisibleTextNodesIn(this);
@@ -83,6 +89,7 @@ class Navigation {
         } else if (runningLength + textLength <= maxLength) {
           // We're under budget, leave this node as-is and continue
           runningLength += textLength;
+          wrapNode(textNode, ariaHiddenSpan());
         } else {
           // This text node will take us over the limit - let's trim it
 
@@ -104,6 +111,7 @@ class Navigation {
           textNode.textContent = textBuilder.join(' ') + append;
           // Don't really need to do this because overLength=true takes over. Shrug
           runningLength += textNode.length;
+          wrapNode(textNode, ariaHiddenSpan());
         }
       });
 

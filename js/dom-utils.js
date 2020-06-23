@@ -24,3 +24,14 @@ export function getVisibleTextNodesIn(node) {
   walkTextNodes(node);
   return textNodes;
 }
+
+/**
+ * Wrap a node (of any type) with a new Element.
+ * @param {Node} node - existing node to wrap. Must have a parent.
+ * @param {Element}} element - new element that will wrap node.
+ * @returns {void}
+ */
+export function wrapNode(node, element) {
+  node.parentNode.insertBefore(element, node);
+  element.appendChild(node);
+}

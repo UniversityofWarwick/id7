@@ -50,8 +50,8 @@ jQuery(function ($) {
 
     assert.equal($el.find('li').length, 4, 'should be four links');
     assert.equal($el.find('li').eq(0).children().html(), 'Short link title', 'first link title should not have been truncated');
-    assert.equal($el.find('li').eq(1).children().html(), `<span class="sr-only">${tooLong}</span>${tooLongTrunc}`, 'second link title should have been truncated, but not in middle of word');
-    assert.equal($el.find('li').eq(2).children().html(), `<span class="sr-only">${tooLong}</span>${tooLongTrunc}${protectedContent}`, 'third link title should have been truncated, but keep extra markup');
+    assert.equal($el.find('li').eq(1).children().html(), `<span class="sr-only">${tooLong}</span><span aria-hidden="true">${tooLongTrunc}</span>`, 'second link title should have been truncated, but not in middle of word');
+    assert.equal($el.find('li').eq(2).children().html(), `<span class="sr-only">${tooLong}</span><span aria-hidden="true">${tooLongTrunc}</span>${protectedContent}`, 'third link title should have been truncated, but keep extra markup');
     assert.equal($el.find('li').eq(3).children().html(), `A link that isn\'t actually too long but suddenly${protectedContent}`, 'fourth link title should not have been truncated if you exclude the sr-only text');
   });
 
