@@ -17,8 +17,7 @@
         ]
       }
     ],
-    "template-curly-spacing": [
-      "off"
-    ]
+    "template-curly-spacing": "off",
+    "import/prefer-default-export": "off"
   }
 }

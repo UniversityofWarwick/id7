@@ -32,20 +32,27 @@ jQuery(function ($) {
   });
 
   QUnit.test('should trim link titles', function (assert) {
-    var $el = $('<div class="affix-top">' +
-                '<nav class="navbar navbar-primary" role="navigation">' +
-                '<ul class="nav navbar-nav">' +
-                '<li><a href="#">Short link title</a></li>' +
-                '<li><a href="#">A really long link title that goes over the sixty char threshold and needs trimming</a></li>' +
-                '</ul>' +
-                '</nav>' +
-                '</div>')
+    var protectedContent = '<i class="fas fa-padlock" aria-hidden="true"></i><span class="sr-only">Protected content</span>';
+    var tooLong = 'A really long link title that goes over the sixty char threshold and needs trimming';
+    var tooLongTrunc = 'A really long link title that goes over the sixty char…';
+    var $el = $(`<div class="affix-top">
+                <nav class="navbar navbar-primary" role="navigation">
+                <ul class="nav navbar-nav">
+                <li><a href="#">Short link title</a></li>
+                <li><a href="#">${tooLong}</a></li>
+                <li><a href="#">${tooLong}${protectedContent}</a></li>
+                <li><a href="#">A link that isn\'t actually too long but suddenly${protectedContent}</a></li>
+                </ul>
+                </nav>
+                </div>`)
         .appendTo('#qunit-fixture')
         .id7Navigation({ fitToWidth: false });
 
-    assert.equal($el.find('li').length, 2, 'should be two links');
-    assert.equal($el.find('li').eq(0).text(), 'Short link title', 'first link title should not have been truncated');
-    assert.equal($el.find('li').eq(1).text(), 'A really long link title that goes over the sixty char…', 'second link title should have been truncated, but not in middle of word');
+    assert.equal($el.find('li').length, 4, 'should be four links');
+    assert.equal($el.find('li').eq(0).children().html(), 'Short link title', 'first link title should not have been truncated');
+    assert.equal($el.find('li').eq(1).children().html(), `<span class="sr-only">${tooLong}</span><span aria-hidden="true">${tooLongTrunc}</span>`, 'second link title should have been truncated, but not in middle of word');
+    assert.equal($el.find('li').eq(2).children().html(), `<span class="sr-only">${tooLong}</span><span aria-hidden="true">${tooLongTrunc}</span>${protectedContent}`, 'third link title should have been truncated, but keep extra markup');
+    assert.equal($el.find('li').eq(3).children().html(), `A link that isn\'t actually too long but suddenly${protectedContent}`, 'fourth link title should not have been truncated if you exclude the sr-only text');
   });
 
   QUnit.test('should affix', function (assert) {

@@ -5,6 +5,7 @@ import Headroom from 'headroom.js';
 
 import currentScreenSize from './screen-sizes';
 import changeLocationHash from './change-location-hash';
+import { getVisibleTextNodesIn, wrapNode } from './dom-utils';
 
 const Config = {
   Templates: {
@@ -24,7 +25,7 @@ const Config = {
     keyboard: true,
     trimLinkTitles: {
       maxLength: 60,
-      append: '&hellip;',
+      append: '…',
     },
   },
   HeadroomEvents: {
@@ -56,28 +57,65 @@ class Navigation {
   trimLinkTitles() {
     const { maxLength, append } = this.options.trimLinkTitles;
 
-    this.$container.find('.nav a').filter(function isOverLength() {
-      return $.trim($(this).text()).length > maxLength;
-    }).each(function trimTitle() {
-      const $link = $(this);
-      const linkTitle = $.trim($link.text());
+    function ariaHiddenSpan() {
+      const span = document.createElement('span');
+      span.setAttribute('aria-hidden', 'true');
+      return span;
+    }
 
-      // Split on spaces to avoid breaking in the middle of a word
-      const words = linkTitle.split(/\s+/g);
-      const newLinkTitle = [];
+    this.$container.find('.nav a').each(function trimTitle() {
+      // All text nodes that aren't contained in an .sr-only element
+      const textNodes = getVisibleTextNodesIn(this);
+      const originalText = $(textNodes).text();
 
-      $.each(words, (i, word) => {
-        const currentLinkTitle = newLinkTitle.join(' ');
-        if ((`${currentLinkTitle} ${word}`).length > maxLength) {
-          return false; // break
-        }
-
-        newLinkTitle.push(word);
-
+      if (originalText.length <= maxLength) {
         return true;
+      }
+
+      const $link = $(this);
+      $link.prepend($('<span>').addClass('sr-only').text(originalText));
+      $link.attr('title', originalText);
+
+      // Iterate through the text nodes, adding up the length. When we are about to
+      // go over the limit, truncate that last text node and remove all text nodes after that.
+
+      let runningLength = 0;
+      let overLength = false;
+      $.each(textNodes, (i, textNode) => {
+        const textLength = textNode.length;
+        if (overLength) {
+          // We already started trimming, remove the rest of the nodes.
+          textNode.parentNode.removeChild(textNode);
+        } else if (runningLength + textLength <= maxLength) {
+          // We're under budget, leave this node as-is and continue
+          runningLength += textLength;
+          wrapNode(textNode, ariaHiddenSpan());
+        } else {
+          // This text node will take us over the limit - let's trim it
+
+          // Tell outer loop to delete any text nodes after this one.
+          overLength = true;
+
+          // Split into words to avoid stopping mid-word.
+          const words = textNode.textContent.split(/\s+/g);
+          const textBuilder = [];
+          $.each(words, (i2, word) => {
+            if ((`${textBuilder.join(' ')} ${word}`).length > maxLength) {
+              return false; // break
+            }
+            textBuilder.push(word);
+            return true;
+          });
+
+          // eslint-disable-next-line no-param-reassign
+          textNode.textContent = textBuilder.join(' ') + append;
+          // Don't really need to do this because overLength=true takes over. Shrug
+          runningLength += textNode.length;
+          wrapNode(textNode, ariaHiddenSpan());
+        }
       });
 
-      $link.attr('title', linkTitle).text(newLinkTitle.join(' ')).append(append);
+      return true;
     });
   }
 
