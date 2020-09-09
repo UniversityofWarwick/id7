@@ -1,6 +1,6 @@
 {
   "name": "@universityofwarwick/id7",
-  "version": "2.6.7",
+  "version": "2.6.11",
   "scripts": {
     "watch": "NODE_ENV=development webpack --mode development --watch",
     "dev": "NODE_ENV=development webpack --mode development",
@@ -11,7 +11,8 @@
     "docs-watch": "NODE_ENV=development webpack --mode development --env.docs --watch",
     "docs-serve": "bundle exec jekyll serve",
     "docs-build": "bundle exec jekyll build",
-    "readme-md2html": "marked README.md > docs/_includes/README.html"
+    "readme-md2html": "marked README.md > docs/_includes/README.html",
+    "prepublishOnly": "rm -rf ./dist/ && npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.13.0",
