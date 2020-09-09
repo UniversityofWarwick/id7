@@ -14,12 +14,12 @@
     <!-- Docs master nav -->
     <div class="id7-navigation">
       {% include nav/menus.html %}
-      <nav class="navbar navbar-secondary" role="navigation">
+      <nav class="navbar navbar-secondary" role="navigation" aria-label="Secondary navigation">
         <ul class="nav navbar-nav">
           <li class="active nav-breadcrumb next-tertiary first last"><a href="/examples/">Examples</a></li>
         </ul>
       </nav>
-      <nav class="navbar navbar-tertiary" role="navigation">
+      <nav class="navbar navbar-tertiary" role="navigation" aria-label="Tertiary navigation">
         <ul class="nav navbar-nav">
           <li class="{% if page.slug == 'examples/bacon-ipsum' %} active{% endif %}"><a href="/examples/bacon-ipsum/">Sample page content</a></li>
           <li class="{% if page.slug == 'examples/subsite-homepage' %} active{% endif %}"><a href="/examples/subsite-homepage/">Sample subsite homepage</a></li>
