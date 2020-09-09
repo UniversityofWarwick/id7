@@ -158,13 +158,14 @@
       // bar between siblings
       &:last-child + li::before,
       &:not(.nav-breadcrumb):not(:last-child)::after {
-        content: '|';
-        font-size: 15px;
-        font-weight: normal;
+        border-right: 1px solid currentColor;
+        content: ' ';
+        height: 1em;
+        opacity: 0.5;
+        display: inline-block;
         position: absolute;
-        top: 5px;
-        width: 2px;
-        .opacity(0.5);
+        left: 100%;
+        top: calc(50% - 0.535em);
       }
 
       // bar between breadcrumbs and siblings (if present)
@@ -175,8 +176,8 @@
 
       // bar between siblings
       &:not(.nav-breadcrumb):not(:last-child)::after {
-        left: 100%;
-        margin-left: -2px;
+        //left: 100%;
+        //margin-left: -2px;
       }
 
       &.active {
