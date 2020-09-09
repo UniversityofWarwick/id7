@@ -9,10 +9,14 @@
     margin: 0;
 
     &:before {
-      content: '|';
-      margin-left: (@spacing / 2);
-      margin-right: @spacing;
-      color: @separator-colour;
+      border-right: 1px solid @separator-colour;
+      content: '';
+      height: 1em;
+      opacity: 0.5;
+      display: inline-block;
+      margin-left: (@spacing * 0.8);
+      margin-right: (@spacing * 1.8);
+      margin-bottom: -0.25em;
     }
 
     &:first-child:before {
