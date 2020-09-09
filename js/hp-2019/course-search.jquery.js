@@ -82,6 +82,7 @@ class CourseSearch {
       displayText: (o) => `<div><p class="title">${_.escape(o.title)}</p></div>`,
       highlighter: (html) => html,
       followLinkOnSelect: true,
+      showHintOnFocus: false, // ID-381 minLength has no effect unless this is false
       itemLink: (result) => {
         if (result) {
           return result.link;
