@@ -15,7 +15,7 @@ const Config = {
         <iframe src="${_.escape(o.useMwIframe ? `${o.iframelink}?embedded` : o.legacyIframeLink)}" 
                 scrolling="auto" frameborder="0" allowtransparency="true" 
                 seamless 
-                sandbox="allow-same-origin allow-scripts allow-top-navigation allow-forms allow-popups"></iframe>
+                sandbox="allow-same-origin allow-scripts allow-top-navigation allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
         <div class="actions">
           <div class="btn-group btn-group-justified">
