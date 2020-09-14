@@ -149,6 +149,19 @@ body {
   .border-image-size-above(@max-border-image-screen-width, @max-border-image-screen-height);
 }
 
-.id7-left-border, .id7-right-border {
-  .make-large-screen-border-image-sizes();
+.make-border-images() when not (@support-xl-viewport) {
+  .id7-left-border, .id7-right-border {
+    .make-large-screen-border-image-sizes();
+  }
 }
+.make-border-images() when (@support-xl-viewport) and not (@support-2xl-viewport) {
+  .id7-left-border, .id7-right-border {
+    .make-large-screen-border-image-sizes(@max-container-width: @container-xl-desktop);
+  }
+}
+.make-border-images() when (@support-xl-viewport) and (@support-2xl-viewport) {
+  .id7-left-border, .id7-right-border {
+    .make-large-screen-border-image-sizes(@max-container-width: @container-2xl-desktop);
+  }
+}
+.make-border-images();

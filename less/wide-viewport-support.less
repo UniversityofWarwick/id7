@@ -219,14 +219,3 @@
   }
 }
 .make-wide-grid();
-
-.make-wide-border-images() when (@support-xl-viewport) {
-  .id7-left-border, .id7-right-border {
-    .make-large-screen-border-image-sizes(@max-container-width: @container-xl-desktop);
-  }
-}
-.make-wide-border-images() when (@support-xl-viewport) and (@support-2xl-viewport) {
-  .id7-left-border, .id7-right-border {
-    .make-large-screen-border-image-sizes(@max-container-width: @container-2xl-desktop);
-  }
-}
