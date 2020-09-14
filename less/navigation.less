@@ -240,7 +240,7 @@
         content: ' ';
         position: absolute;
         z-index: 2;
-        margin-top: (-@font-size-base + 1 - @nav-triangle-width/2);
+        margin-top: (-@font-size-base-px + 1 - @nav-triangle-width/2);
 
         .triangle(right, @nav-triangle-width, @nav-triangle-height, white);
       }
@@ -249,7 +249,7 @@
 
   .navbar-secondary, .navbar-tertiary {
     .navbar-nav > li:not(.nav-breadcrumb) {
-      font-size: (@font-size-base - 1px);
+      font-size: (@font-size-base - 0.1rem);
     }
   }
 

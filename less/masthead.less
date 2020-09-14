@@ -34,16 +34,16 @@
         // Also make the placeholder text smaller on sm
 
         &::-moz-placeholder { // Firefox
-          font-size: 11.5px;
-          line-height: 24px;
+          font-size: 1.15rem;
+          line-height: 2.4em;
         }
         &:-ms-input-placeholder { // Internet Explorer 10+
-          font-size: 11.5px;
-          line-height: 24px;
+          font-size: 1.15rem;
+          line-height: 2.4em;
         }
         &::-webkit-input-placeholder {  // Safari and Chrome
-          font-size: 11.5px;
-          line-height: 24px;
+          font-size: 1.15rem;
+          line-height: 2.4em;
         }
       }
     }
@@ -159,14 +159,14 @@
         content: @fa-var-play;
         position: relative;
 
-        font-size: 10px;
-        line-height: 10px;
+        font-size: 1rem;
+        line-height: 1;
         top: -2px;
         margin-left: 5px;
 
         @media (min-width: @grid-float-breakpoint) {
-          font-size: 12px;
-          line-height: 12px;
+          font-size: 1.2rem;
+          line-height: 1;
           top: -4px;
           margin-left: 8px;
         }
@@ -190,7 +190,7 @@
     .transition(opacity 0.15s linear);
     .small();
 
-    @line-height-small-computed: floor((@font-size-small * @line-height-small)); // ~17px
+    @line-height-small-computed: (@font-size-small-px * @line-height-small); // ~17px
     margin-top: ((@id7-masthead-logo-height-sm * 5/6) - (@line-height-small-computed / 2));
 
     ul {
