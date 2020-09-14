@@ -208,3 +208,22 @@
 @badge-bg: @text-muted;
 @breadcrumb-active-color: darken(@text-muted, 10%);
 @panel-warning-text: darken(@brand-warning, 10%);
+
+// Wide viewport support
+@support-xl-viewport:       false;
+@support-2xl-viewport:      false;
+
+@container-xl-desktop:      (1540px + @grid-gutter-width);
+@container-xl:              @container-xl-desktop;
+@container-2xl-desktop:     (1840px + @grid-gutter-width);
+@container-2xl:             @container-2xl-desktop;
+
+@screen-xl:                 1600px;
+@screen-xl-min:             @screen-xl;
+@screen-xl-desktop:         @screen-xl-min;
+@screen-2xl:                1900px;
+@screen-2xl-min:            @screen-2xl;
+@screen-2xl-desktop:        @screen-2xl-min;
+
+@screen-lg-max:             (@screen-xl-min - 1);
+@screen-xl-max:             (@screen-2xl-min - 1);

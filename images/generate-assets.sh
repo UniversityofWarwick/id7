@@ -2,6 +2,7 @@
 
 ./svg-to-png.sh src/masthead-logo-bleed-sm.svg 1170 300 masthead-logo-bleed-sm.png
 ./svg-to-png.sh src/masthead-logo-bleed-xs.svg 1680 300 masthead-logo-bleed-xs.png
+./svg-to-png.sh src/masthead-logo-bleed-lg.svg 1870 300 masthead-logo-bleed-lg.png
 
 ./svg-to-png.sh src/masthead-logo-bleed-wide-xs.svg 1680 300 masthead-logo-bleed-wide-xs.png
 ./svg-to-png.sh src/masthead-logo-bleed-wide-sm.svg 992 80 masthead-logo-bleed-wide-sm.png
