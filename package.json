@@ -1,6 +1,6 @@
 {
   "name": "@universityofwarwick/id7",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "scripts": {
     "watch": "NODE_ENV=development webpack --mode development --watch",
     "dev": "NODE_ENV=development webpack --mode development",
