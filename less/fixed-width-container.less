@@ -123,7 +123,7 @@ body {
 }
 
 // @step is the number of x-pixels to create a step at
-.make-large-screen-border-image-sizes(@step: 160) {
+.make-large-screen-border-image-sizes(@step: 160; @max-container-width: @container-large-desktop) {
   .border-image-size-above(@width, @height) when (@width < 3360px) {
     @max-width: (@width + @step);
     @max-height: (@height + ((@height / @width) * @step));
@@ -142,7 +142,7 @@ body {
     }
   }
 
-  @max-border-image-screen-width: ((@id7-border-image-width * 2) + @container-large-desktop); // 1920px
+  @max-border-image-screen-width: ((@id7-border-image-width * 2) + @max-container-width); // 1920px by default
   @max-border-image-screen-height: @id7-border-image-height; // 1200px
 
   // Kickstart
