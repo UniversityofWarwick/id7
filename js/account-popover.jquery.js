@@ -134,6 +134,7 @@ class AccountPopover {
       $trigger.data('bs.popover').options.content = Config.Templates.Popover(that.options);
       $badge.removeClass('animating');
       $trigger.blur();
+      $trigger.attr('aria-expanded', 'true');
       return false;
     });
     this.createPopover($trigger);
@@ -163,6 +164,7 @@ class AccountPopover {
     $('html').on('click.popoverDismiss', (e) => {
       const $target = $(e.target);
       if ($target.closest('.popover').length === 0 && $target.closest('.use-popover').length === 0 && $target.closest($trigger).length === 0) {
+        $trigger.attr('aria-expanded', 'false');
         $trigger.popover('hide');
         $trigger.data('bs.popover').inState.click = false;
       }
@@ -186,6 +188,7 @@ class AccountPopover {
         // Note that this ends up reloading the iFrame, so remove the loaded class
         if ($bsPopover.tip().hasClass('in')) {
           $trigger.popover('show');
+          $trigger.attr('aria-expanded', 'true');
           $trigger.next('.popover').removeClass('loading');
         }
       }
@@ -254,6 +257,7 @@ $.fn.accountPopover = function accountPopoverPlugin(options) {
       trigger: $trigger,
     }));
 
+    $trigger.attr('aria-expanded', 'false');
     $trigger.data('id7.account-popover', accountPopover);
   }
 
