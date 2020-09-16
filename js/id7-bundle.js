@@ -12,6 +12,7 @@ require('bootstrap/js/button');
 require('bootstrap/js/carousel');
 require('bootstrap/js/collapse');
 require('bootstrap/js/dropdown');
+require('./jquery-focussable');
 
 // ID-294 We use non-standard dropdowns that need to have different click actions..
 
