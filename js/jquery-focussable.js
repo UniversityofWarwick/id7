@@ -1,3 +1,4 @@
+/* eslint-disable */
 import $ from 'jquery';
 
 if ($.ui === undefined) {
