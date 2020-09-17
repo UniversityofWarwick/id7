@@ -1,10 +1,6 @@
 /* eslint-disable */
 import $ from 'jquery';
 
-if ($.ui === undefined) {
-    $.ui = {};
-}
-
 // Support: IE 8 only
 // IE 8 doesn't resolve inherit to visible/hidden for computed values
 function visible( element ) {
@@ -16,7 +12,7 @@ function visible( element ) {
     return visibility !== "hidden";
 }
 
-$.ui.focusable = function( element, hasTabindex ) {
+function focusable ( element, hasTabindex ) {
     var map, mapName, img, focusableIfVisible, fieldset,
         nodeName = element.nodeName.toLowerCase();
     if ( "area" === nodeName ) {
@@ -46,11 +42,11 @@ $.ui.focusable = function( element, hasTabindex ) {
         focusableIfVisible = hasTabindex;
     }
     return focusableIfVisible && $( element ).is( ":visible" ) && visible( $( element ) );
-};
+}
 
 $.extend( $.expr[ ":" ], {
     focusable: function( element ) {
-        return $.ui.focusable( element, $.attr( element, "tabindex" ) != null );
+        return focusable( element, $.attr( element, "tabindex" ) != null );
     }
 } );
 
