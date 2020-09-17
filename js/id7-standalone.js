@@ -7,3 +7,5 @@ require('./navigation.jquery');
 require('./search-suggest.jquery');
 require('./wide-tables.jquery');
 require('./koan-spinner.jquery');
+require('./jquery-focussable');
+require('./site-links');
