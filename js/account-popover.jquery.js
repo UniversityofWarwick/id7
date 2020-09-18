@@ -107,6 +107,12 @@ class AccountPopover {
     return !AccountPopover.isBlacklistedDevice();
   }
 
+  dismissPopover() {
+    this.$trigger.attr('aria-expanded', 'false');
+    this.$trigger.popover('hide');
+    this.$trigger.data('bs.popover').inState.click = false;
+  }
+
   wireEventHandlers() {
     const { $trigger } = this;
     const that = this;
@@ -133,7 +139,6 @@ class AccountPopover {
       that.options.iframelink = iframeLink;
       $trigger.data('bs.popover').options.content = Config.Templates.Popover(that.options);
       $badge.removeClass('animating');
-      $trigger.blur();
       $trigger.attr('aria-expanded', 'true');
       return false;
     });
@@ -164,9 +169,7 @@ class AccountPopover {
     $('html').on('click.popoverDismiss', (e) => {
       const $target = $(e.target);
       if ($target.closest('.popover').length === 0 && $target.closest('.use-popover').length === 0 && $target.closest($trigger).length === 0) {
-        $trigger.attr('aria-expanded', 'false');
-        $trigger.popover('hide');
-        $trigger.data('bs.popover').inState.click = false;
+        that.dismissPopover();
       }
     });
 
@@ -236,6 +239,10 @@ class AccountPopover {
           }));
         break;
       }
+      case 'close':
+        this.dismissPopover();
+        this.$trigger.focus();
+        break;
       default:
         log.error(`Unexpected message type: ${messageType}`);
     }
