@@ -166,8 +166,11 @@ class AccountPopover {
     }
 
     // Click away to dismiss
-    $('html').on('click.popoverDismiss', () => {
-      that.dismissPopover();
+    $('html').on('click.popoverDismiss', (e) => {
+      const $target = $(e.target);
+      if ($target.closest('.popover').length === 0 && $target.closest('.use-popover').length === 0 && $target.closest($trigger).length === 0) {
+        that.dismissPopover();
+      }
     });
 
     // Smaller screens get the old popover
