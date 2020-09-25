@@ -78,15 +78,16 @@ abbr[title] {
 
 .lead {
   font-weight: 700;
+  font-size: (@font-size-base * 1.15);
 }
 
 // ID-105 Reduce heading sizes on XS
-h1, .h1 { font-size: ceil((@font-size-h1 * @font-scale-xs)); }
-h2, .h2 { font-size: ceil((@font-size-h2 * @font-scale-xs)); }
-h3, .h3 { font-size: ceil((@font-size-h3 * @font-scale-xs)); }
-h4, .h4 { font-size: ceil((@font-size-h4 * @font-scale-xs)); }
-h5, .h5 { font-size: ceil((@font-size-h5 * @font-scale-xs)); }
-h6, .h6 { font-size: ceil((@font-size-h6 * @font-scale-xs)); }
+h1, .h1 { font-size: (@font-size-h1 * @font-scale-xs); }
+h2, .h2 { font-size: (@font-size-h2 * @font-scale-xs); }
+h3, .h3 { font-size: (@font-size-h3 * @font-scale-xs); }
+h4, .h4 { font-size: (@font-size-h4 * @font-scale-xs); }
+h5, .h5 { font-size: (@font-size-h5 * @font-scale-xs); }
+h6, .h6 { font-size: (@font-size-h6 * @font-scale-xs); }
 
 @media (min-width: @grid-float-breakpoint) {
   h1, .h1 { font-size: @font-size-h1; }
