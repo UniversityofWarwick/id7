@@ -155,20 +155,19 @@
       color: @gray-light;
 
       &::after {
-        .fa();
-        content: @fa-var-play;
-        position: relative;
-
-        font-size: 1rem;
-        line-height: 1;
-        top: -2px;
-        margin-left: 5px;
-
-        @media (min-width: @grid-float-breakpoint) {
-          font-size: 1.2rem;
-          line-height: 1;
-          top: -4px;
+        content: '';
+        @media(max-width: @screen-xs-max) {
+          .triangle(right, 12px, 9px, @gray-light);
+          margin-left: 4px;
+          display: inline-block;
+          position: relative;
+        }
+        @media(min-width: @screen-sm-min) {
+          .triangle(right, 14px, 10px, @gray-light);
+          top: -2px;
           margin-left: 8px;
+          display: inline-block;
+          position: relative;
         }
       }
     }
