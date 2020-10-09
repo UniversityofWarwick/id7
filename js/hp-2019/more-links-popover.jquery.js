@@ -55,6 +55,7 @@ class MoreLinksPopover {
           trigger: 'click',
         }).on('show.bs.popover', () => {
           $trigger.data('previous-hash', window.location.hash);
+          $trigger.attr('aria-expanded', 'true');
           changeLocationHash(options.target);
         }).on('hide.bs.popover', () => {
           if ($trigger.data('previous-hash') && $trigger.data('previous-hash') !== '#more-links') {
@@ -66,6 +67,7 @@ class MoreLinksPopover {
 
         if ($trigger.is(':visible') && window.location.hash === options.target) {
           $trigger.popover('show');
+          $trigger.attr('aria-expanded', 'true');
         }
 
         // Click away to dismiss
@@ -74,6 +76,7 @@ class MoreLinksPopover {
           if ($(e.target).closest('.popover').length === 0 && $(e.target).closest('.use-more-links-popover').length === 0) {
             $trigger.popover('hide');
             $trigger.data('bs.popover').inState.click = false;
+            $trigger.attr('aria-expanded', 'false');
           }
         });
 
