@@ -1,0 +1,34 @@
+// Firefox-specific CSS rules to work around
+// invalid assumptions made in Bootstrap 3
+// (but fixed in Bootstrap 4)
+
+@media screen and (min--moz-device-pixel-ratio: 0) {
+  input[type=date].form-control,
+  input[type=datetime-local].form-control,
+  input[type=month].form-control,
+  input[type=time].form-control {
+    line-height: unset;
+  }
+
+  .input-group-sm input[type=date],
+  .input-group-sm input[type=datetime-local],
+  .input-group-sm input[type=month],
+  .input-group-sm input[type=time],
+  input[type=date].input-sm,
+  input[type=datetime-local].input-sm,
+  input[type=month].input-sm,
+  input[type=time].input-sm {
+    line-height: unset;
+  }
+
+  .input-group-lg input[type=date],
+  .input-group-lg input[type=datetime-local],
+  .input-group-lg input[type=month],
+  .input-group-lg input[type=time],
+  input[type=date].input-lg,
+  input[type=datetime-local].input-lg,
+  input[type=month].input-lg,
+  input[type=time].input-lg {
+    line-height: unset;
+  }
+}
