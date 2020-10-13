@@ -121,7 +121,7 @@ class AccountPopover {
     if (this.options.name) {
       let badgeHtml = `<span class="fa-stack id7-notifications-badge">
         <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
-        <strong class="fa-stack-1x fa fa-spinner fa-spin brand-text counter-value"></strong>
+        <strong class="fa-stack-1x fa fa-spinner fa-spin brand-text counter-value" title="Notifications"></strong>
         <span class="sr-only">notifications</span>
       </span>`;
       if (!AccountPopover.isMwFeatureAvailable() || !this.options.showNotificationsBadge) {
