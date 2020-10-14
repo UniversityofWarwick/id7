@@ -30,6 +30,12 @@ class MoreLinksPopover {
     this.wireEventHandlers();
   }
 
+  hidePopover() {
+    this.$trigger.popover('hide');
+    this.$trigger.attr('aria-expanded', 'false');
+    this.$trigger.data('bs.popover').inState.click = false;
+  }
+
   wireEventHandlers() {
     const { $trigger, options } = this;
 
@@ -63,7 +69,6 @@ class MoreLinksPopover {
           } else {
             changeLocationHash('');
           }
-          $trigger.attr('aria-expanded', 'false');
         });
 
         if ($trigger.is(':visible') && window.location.hash === options.target) {
@@ -71,13 +76,19 @@ class MoreLinksPopover {
           $trigger.attr('aria-expanded', 'true');
         }
 
+        const $html = $('html');
+
         // Click away to dismiss
-        $('html').on('click.id7.homepage.popoverDismiss', (e) => {
+        $html.on('click.id7.homepage.popoverDismiss', (e) => {
           // if clicking anywhere other than the popover itself
           if ($(e.target).closest('.popover').length === 0 && $(e.target).closest('.use-more-links-popover').length === 0) {
-            $trigger.popover('hide');
-            $trigger.data('bs.popover').inState.click = false;
-            $trigger.attr('aria-expanded', 'false');
+            this.hidePopover();
+          }
+        });
+
+        $html.on('keydown', (event) => {
+          if (event.key === 'Escape') {
+            this.hidePopover();
           }
         });
 
@@ -109,13 +120,6 @@ $.fn.moreLinksPopover = function initPlugin(o = {}) {
     }));
 
     $trigger.data('id7.more-links-popover', moreLinksPopover);
-    const $html = $('html');
-    $html.on('keyup', '.megamenu-links', (event) => {
-      if (event.key === 'Escape') {
-        $html.trigger('click.id7.homepage.popoverDismiss');
-        $trigger.focus();
-      }
-    });
   }
 
   return this.each(attach);
