@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.atlassian.bamboo</groupId>
     <artifactId>bamboo-specs-parent</artifactId>
-    <version>6.7.1</version>
+    <version>7.1.1</version>
     <relativePath />
   </parent>
 
@@ -32,7 +32,7 @@
     <dependency>
       <groupId>uk.ac.warwick</groupId>
       <artifactId>warwick-bamboo-specs</artifactId>
-      <version>1.2</version>
+      <version>2.2</version>
     </dependency>
   </dependencies>
 </project>
