@@ -69,6 +69,7 @@ class MoreLinksPopover {
           } else {
             changeLocationHash('');
           }
+          $trigger.attr('aria-expanded', 'false');
         });
 
         if ($trigger.is(':visible') && window.location.hash === options.target) {
