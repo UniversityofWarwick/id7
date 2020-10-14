@@ -63,6 +63,7 @@ class MoreLinksPopover {
           } else {
             changeLocationHash('');
           }
+          $trigger.attr('aria-expanded', 'false');
         });
 
         if ($trigger.is(':visible') && window.location.hash === options.target) {
@@ -84,6 +85,7 @@ class MoreLinksPopover {
         $(options.target).on('click.id7.homepage', '.back-to-top-link', () => $trigger.popover('hide'));
       } else {
         $trigger.off('click.id7.homepage').popover('destroy');
+        $trigger.attr('aria-expanded', 'false');
         $('html').off('click.id7.homepage.popoverDismiss');
         $(options.target).off('click.id7.homepage', '.back-to-top-link');
       }
@@ -107,6 +109,13 @@ $.fn.moreLinksPopover = function initPlugin(o = {}) {
     }));
 
     $trigger.data('id7.more-links-popover', moreLinksPopover);
+    const $html = $('html');
+    $html.on('keyup', '.megamenu-links', (event) => {
+      if (event.key === 'Escape') {
+        $html.trigger('click.id7.homepage.popoverDismiss');
+        $trigger.focus();
+      }
+    });
   }
 
   return this.each(attach);
