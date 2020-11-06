@@ -125,7 +125,7 @@ In your application you will need to do the following:
   - Internet Explorer 11 is no longer fully supported
   - Headroom.js was updated to 0.10.3 which no longer supports IE11 without a polyfill for `Object.assign`. To enable this in IE11, include an `Object.assign` polyfill and then add `data-fixed-header="true" data-fixed-nav="true"` to the `.id7-navigation` element.  
 - **2.8.0**:
-  - Bootstrap typeahead now adds aria- attributes to parent elements. Some implementations may need a wrapper element.
+  - Bootstrap typeahead now adds aria- attributes to parent elements. If you use typeahead directly, ensure your input field is inside a reasonable container element (a Bootstrap column or `.form-group` is fine)
 
 ## Copyright and license
 
