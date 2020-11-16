@@ -203,3 +203,30 @@
   &.green  { .docs-palette-logo(@id7-brand-green); }  &.green-bright  { .docs-palette-logo(@id7-brand-green-bright); }
   &.blue   { .docs-palette-logo(@id7-brand-blue); }   &.blue-bright   { .docs-palette-logo(@id7-brand-blue-bright); }
 }
+
+.swatch-colors(@brandColor) {
+  &.primary {
+    background-color: @brandColor;
+    color: contrast(@brandColor, @text-color, white, 50%)
+  }
+  &.secondary {
+    background-color: screen(@brandColor, lighten(black, 30%));
+    color: contrast(screen(@brandColor, lighten(black, 30%)), @text-color, white, 50%);
+  }
+}
+
+.swatch {
+  padding-left: 5px;
+  &.purple {
+    .swatch-colors(@id7-brand-purple)
+  }
+  &.gray {
+    .swatch-colors(@id7-brand-gray)
+  }
+  &.red {
+    .swatch-colors(@id7-brand-red)
+  }
+  &.blue {
+    .swatch-colors(@id7-brand-blue)
+  }
+}
