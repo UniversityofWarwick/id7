@@ -37,7 +37,8 @@ Within the download you'll find the following directories and files, logically g
 id7/
 ├── css/
 │   ├── id7.css
-│   └── id7-default-theme.css
+│   ├── id7-default-theme.css
+│   └── id7-wide.css
 ├── js/
 │   ├── id7-bundle.js
 │   └── id7-bundle.js.map
