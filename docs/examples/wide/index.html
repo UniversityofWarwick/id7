@@ -1,0 +1,25 @@
+---
+layout: wide
+title: Wide viewport
+slug: examples/wide
+---
+
+<p>By default, the ID7 viewport is constrained to a 1170px (LG) wide container.</p>
+
+<p>
+    Optionally, you can enable one or two additional breakpoints (at 1600px and 1900px) for a 1570px or 1870px wide
+    container (XL and 2XL, respectively).
+</p>
+
+<p>
+    Either include <code>id7-wide.css</code> instead of <code>id7.css</code>, or if you are building your own assets,
+    set the two LessCSS variables:
+</p>
+
+<pre><code class="language-less">@support-xl-viewport: false; // Set to true to add the XL breakpoint at 1600px
+@support-2xl-viewport: false; // Set to true (as well as above) to add the 2XL breakpoint at 1900px</code></pre>
+
+<p>
+    If <code>@support-2xl-viewport</code> is set to <code>true</code>, <code>@support-xl-viewport</code> must also be
+    set to <code>true</code>.
+</p>

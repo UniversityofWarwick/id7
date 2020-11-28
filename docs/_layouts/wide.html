@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="{% if page.nonbranded %}id7-non-branded {% endif %}no-js">
+<head>
+  {% include header-wide.html %}
+</head>
+<body>
+<div class="id7-left-border"></div>
+<div class="id7-fixed-width-container">
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+  <header class="id7-page-header">
+    {% include utility-masthead.html %}
+
+    <!-- Docs master nav -->
+    <div class="id7-navigation">
+      {% include nav/main.html %}
+
+      {% if page.slug contains 'examples/bacon-ipsum/child' %}
+      {% include nav/bacon-ipsum-child-secondary.html %}
+      {% elsif page.slug contains 'examples/bacon-ipsum' %}
+      {% include nav/bacon-ipsum-secondary.html %}
+      {% elsif page.slug contains 'examples' %}
+      {% include nav/examples-secondary.html %}
+      {% elsif page.slug contains 'components' %}
+      {% include nav/components-secondary.html %}
+      {% endif %}
+    </div>
+  </header>
+
+  <!-- Page content of course! -->
+  <main class="id7-main-content-area" id="main">
+    <header class="id7-main-content-header">
+      <div class="id7-horizontal-divider">
+        {% include divider.html %}
+      </div>
+
+      <div class="id7-page-title">
+        <h1>{{ page.title }}</h1>
+      </div>
+    </header>
+
+    <div class="id7-main-content">
+      {{ content }}
+    </div>
+  </main>
+
+  {% include footer.html %}
+</div>
+<div class="id7-right-border"></div>
+
+</body>
+</html>
