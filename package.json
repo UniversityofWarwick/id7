@@ -15,7 +15,7 @@
     "prepublishOnly": "rm -rf ./dist/ && npm run build"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.13.0",
+    "@fortawesome/fontawesome-free": "5.15.1",
     "@universityofwarwick/bootstrap-3-typeahead": "4.1.0",
     "bootstrap": "3.4.1",
     "headroom.js": "0.10.3",
