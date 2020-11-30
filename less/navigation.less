@@ -17,7 +17,7 @@
     position: fixed;
     top: @id7-affixed-header-height;
     width: 100%;
-    z-index: 10;
+    z-index: 20;
 
     @media screen and (min-width: @screen-sm-min) {
       width: @container-sm;
@@ -32,7 +32,7 @@
     }
 
     &.headroom {
-      transition: transform 200ms linear;
+      transition: transform 100ms linear;
     }
     &.headroom--pinned {
       transform: translateY(0%);

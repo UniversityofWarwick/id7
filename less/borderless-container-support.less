@@ -1,0 +1,123 @@
+.apply-masthead-width(@breakpoint-name, @min-width, @max-width) {
+  .id7-utility-masthead {
+    &::before {
+      .svg-background-with-fallback('@{id7-image-root-dir}/masthead-logo-bleed-borderless-@{breakpoint-name}', '@{id7-image-root-dir}/masthead-logo-bleed-borderless-@{breakpoint-name}', 0 @id7-masthead-bleed-height);
+      background-size: @max-width 300px;
+      width: @max-width;
+
+      left: calc(50% - (@max-width / 2));
+    }
+
+    &::after {
+      left: calc((50% - (@min-width / 2)) + @grid-gutter-width);
+    }
+  }
+}
+
+.apply-wide-viewport-support() when (@borderless-container) {
+  @media (min-width: @grid-float-breakpoint) {
+    .id7-left-border, .id7-right-border {
+      display: none;
+      background-image: none !important;
+    }
+  }
+
+  html {
+    overflow-x: hidden; // Avoid horizontal scrollbar
+  }
+
+  // Escape the fixed width container
+  @media (min-width: @grid-float-breakpoint) {
+    // Cancel existing containers
+    .id7-fixed-width-container {
+      width: auto;
+    }
+  }
+
+  // Put contents back in a container
+  .id7-utility-bar,
+  .id7-masthead .id7-masthead-contents,
+  .id7-navigation .navbar .navbar-nav,
+  .id7-site-footer .id7-site-footer-content, .id7-app-footer .id7-app-footer-content {
+    .container(@grid-gutter-width);
+  }
+
+  .id7-utility-bar {
+    padding: 0 @grid-gutter-width;
+  }
+
+  .id7-navigation.affix {
+    width: 100%;
+  }
+
+  @media (max-width: @screen-xs-max) {
+    .id7-masthead .id7-masthead-contents {
+      padding: 0;
+      margin: 0 -(@grid-gutter-width / 2);
+    }
+  }
+
+  // We don't support the right-floated dropdown nav
+  .id7-navigation .navbar-nav {
+    float: none;
+  }
+
+  // Make sure the affixed header text is on a white background
+  .id7-masthead .id7-header-text.affix {
+    &::before, &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: white;
+    }
+
+    &::before {
+      left: -99%;
+    }
+
+    &::after {
+      right: -99%;
+    }
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    .id7-masthead {
+      background: none;
+      padding: 0;
+    }
+
+    .id7-utility-masthead {
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+      }
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .apply-masthead-width('sm', @container-sm, @screen-md-min);
+  }
+  @media (min-width: @screen-md-min) {
+    .apply-masthead-width('md', @container-md, @screen-lg-min);
+  }
+  @media (min-width: @screen-lg-min) {
+    .apply-masthead-width('lg', @container-lg, 3000px);
+  }
+}
+.apply-wide-viewport-support() when (@borderless-container) and (@support-xl-viewport) {
+  @media (min-width: @screen-xl-min) {
+    .apply-masthead-width('xl', @container-xl, 3000px);
+  }
+}
+.apply-wide-viewport-support() when (@borderless-container) and (@support-xl-viewport) and (@support-2xl-viewport) {
+  @media (min-width: @screen-2xl-min) {
+    .apply-masthead-width('2xl', @container-2xl, 3000px);
+  }
+}
+.apply-wide-viewport-support();
