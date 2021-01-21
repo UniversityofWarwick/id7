@@ -908,12 +908,14 @@ body > a.sr-only-focusable { // "Skip to main content" link
 }
 
 /* Fix unwanted border on HP mobile view buttons SBTWO-9448 */
+@media (max-width: @screen-xs-max) {
+  .id7-masthead .id7-logo-row nav ul > li {
+    &.more-links-trigger::before {
+      display: none;
+    }
 
-.id7-masthead .id7-logo-row nav ul>li {
-  &.more-links-trigger:before {
-    display: none;
-  }
-  &.search-trigger:before {
-    display: none;
+    &.search-trigger::before {
+      display: none;
+    }
   }
 }
