@@ -110,10 +110,8 @@ $.fn.dropdown.Constructor.prototype.keydown = function (e) {
 
 /* eslint-enable */
 
-
 $(document).on('keydown.bs.dropdown.data-api', '[data-toggle="dropdown"]', $.fn.dropdown.Constructor.prototype.keydown);
 $(document).on('keydown.bs.dropdown.data-api', '.dropdown-menu', $.fn.dropdown.Constructor.prototype.keydown);
-
 
 require('bootstrap/js/modal');
 

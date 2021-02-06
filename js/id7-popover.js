@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import _ from 'lodash-es';
 
-
 /*
  Customised Popover wrapper. Implements click away to dismiss.
  */
@@ -20,7 +19,6 @@ $.fn.id7Popover = function id7Popover(options) {
   };
   const opts = $.extend({}, defaults, options);
 
-
   $items.on('click', (e) => {
     const $target = $(e.currentTarget);
     $target.tooltip('disable');
@@ -34,7 +32,6 @@ $.fn.id7Popover = function id7Popover(options) {
     e.preventDefault();
     e.stopPropagation();
   });
-
 
   // TAB-7486 If we want the popover to be tabbed into
   // i.e. when we don't have a focus trigger, bind an enter trigger to click

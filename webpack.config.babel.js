@@ -9,7 +9,7 @@ import ZipPlugin from 'zip-webpack-plugin';
 import PlayFingerprintsPlugin from './build-tooling/PlayFingerprintsPlugin';
 import WatchEventsPlugin from './build-tooling/WatchEventsPlugin';
 
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const tooling = require('./build-tooling/webpack.tooling');
 
 const { version } = require('./package.json');
@@ -38,7 +38,7 @@ const paths = {
   DOCS_ASSETS: path.join(__dirname, 'docs/dist'),
 };
 
-const commonConfig = basePath => merge([
+const commonConfig = (basePath) => merge([
   {
     output: {
       path: basePath,
@@ -70,7 +70,7 @@ const commonConfig = basePath => merge([
           test: [
             {
               folder: paths.ASSETS_CSS(basePath),
-              method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
+              method: (filePath) => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
             },
           ],
           log: false,
@@ -91,16 +91,18 @@ const commonConfig = basePath => merge([
   }),
   {
     plugins: [
-      new CopyWebpackPlugin([
-        {
-          from: paths.FONTAWESOME_FONTS,
-          to: paths.ASSETS_FONTS(basePath),
-        },
-        {
-          from: paths.TEMPLATES,
-          to: paths.ASSETS_TEMPLATES(basePath),
-        },
-      ]),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: paths.FONTAWESOME_FONTS,
+            to: paths.ASSETS_FONTS(basePath),
+          },
+          {
+            from: paths.TEMPLATES,
+            to: paths.ASSETS_TEMPLATES(basePath),
+          },
+        ],
+      }),
     ],
   },
   tooling.extractCSS({
@@ -119,7 +121,7 @@ const commonConfig = basePath => merge([
   },
 ]);
 
-const homepage2019Config = basePath => merge([
+const homepage2019Config = (basePath) => merge([
   {
     output: {
       path: basePath,
@@ -148,7 +150,7 @@ const homepage2019Config = basePath => merge([
           test: [
             {
               folder: paths.ASSETS_HOMEPAGE_2019_CSS(basePath),
-              method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
+              method: (filePath) => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
             },
           ],
           log: false,
@@ -227,29 +229,31 @@ const docsConfig = merge([
   },
   {
     plugins: [
-      new CopyWebpackPlugin([
-        {
-          from: './docs/assets/js',
-          to: path.join(paths.DOCS_ASSETS, 'docs/js'),
-        },
-        {
-          from: './docs/assets/images',
-          to: path.join(paths.DOCS_ASSETS, 'docs/images'),
-        },
-        {
-          from: './docs/assets/id6',
-          to: path.join(paths.DOCS_ASSETS, 'docs/id6'),
-        },
-        {
-          from: './docs/assets/hp-2019/images',
-          to: path.join(paths.DOCS_ASSETS, 'docs/hp-2019/images'),
-        },
-        {
-          from: './docs/assets/site',
-          ignore: ['*.less', '*.js'],
-          to: path.join(paths.DOCS_ASSETS, 'docs/site'),
-        },
-      ]),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: './docs/assets/js',
+            to: path.join(paths.DOCS_ASSETS, 'docs/js'),
+          },
+          {
+            from: './docs/assets/images',
+            to: path.join(paths.DOCS_ASSETS, 'docs/images'),
+          },
+          {
+            from: './docs/assets/id6',
+            to: path.join(paths.DOCS_ASSETS, 'docs/id6'),
+          },
+          {
+            from: './docs/assets/hp-2019/images',
+            to: path.join(paths.DOCS_ASSETS, 'docs/hp-2019/images'),
+          },
+          {
+            from: './docs/assets/site',
+            globOptions: { ignore: ['**/*.less', '**/*.js'] },
+            to: path.join(paths.DOCS_ASSETS, 'docs/site'),
+          },
+        ],
+      }),
     ],
   },
 ]);

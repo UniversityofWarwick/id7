@@ -1,4 +1,4 @@
-import path from 'path';
+/* eslint-disable import/no-extraneous-dependencies */
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -6,26 +6,20 @@ import Autoprefixer from 'autoprefixer';
 import CssNano from 'cssnano';
 import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import PostCssSafeParser from 'postcss-safe-parser';
+import ESLintPlugin from 'eslint-webpack-plugin';
 
 const autoprefix = () => ({
   loader: 'postcss-loader',
   options: {
-    plugins: () => [Autoprefixer()],
+    postcssOptions: {
+      plugins: () => [Autoprefixer()],
+    },
     sourceMap: true,
   },
 });
 
 const lintJS = () => ({
-
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        enforce: 'pre',
-        use: 'eslint-loader',
-      },
-    ],
-  },
+  plugins: [new ESLintPlugin()],
 });
 
 const transpileJS = () => ({
@@ -48,7 +42,7 @@ const transpileJS = () => ({
 });
 
 const copyNpmDistAssets = ({ modules, dest } = {}) => {
-  const pairs = modules.map(m => ({
+  const pairs = modules.map((m) => ({
     from: `node_modules/${m}/dist`,
     to: `${dest}/${m}/[1]`,
     test: new RegExp('.*/dist/(.+/[-.a-z0-9@]+\\.(otf|eot|woff|woff2|ttf|js|js.map|gif|png|jpg|svg|ico))$', 'i'),
@@ -56,18 +50,20 @@ const copyNpmDistAssets = ({ modules, dest } = {}) => {
 
   return {
     plugins: [
-      new CopyWebpackPlugin(pairs),
+      new CopyWebpackPlugin({ patterns: pairs }),
     ],
   };
 };
 
 const copyLocalImages = ({ dest } = {}) => ({
   plugins: [
-    new CopyWebpackPlugin([{
-      from: 'images',
-      ignore: ['*.sh', 'src', 'src/**/*'],
-      to: dest,
-    }]),
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: 'images',
+        globOptions: { ignore: ['**/*.sh', '**/src', '**/src/**/*'] },
+        to: dest,
+      }],
+    }),
   ],
 });
 
@@ -103,8 +99,10 @@ const extractCSS = ({ resolverPaths } = {}) => ({
           {
             loader: 'less-loader',
             options: {
-              paths: resolverPaths,
-              relativeUrls: false,
+              lessOptions: {
+                paths: resolverPaths,
+                relativeUrls: false,
+              },
               sourceMap: true,
             },
           },
@@ -118,7 +116,6 @@ const extractCSS = ({ resolverPaths } = {}) => ({
     }),
   ],
 });
-
 
 const minify = () => ({
   optimization: {
@@ -148,7 +145,6 @@ const minify = () => ({
     ],
   },
 });
-
 
 const generateSourceMaps = (devtool) => ({
   devtool,

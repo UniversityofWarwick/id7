@@ -1,4 +1,3 @@
-
 /**
  * Recursively traverses a node for text nodes, but skips any elements with the
  * Bootstrap sr-only class because they are visually hidden.
