@@ -160,3 +160,21 @@ window.Headroom = Headroom;
 require('headroom.js/dist/jQuery.headroom');
 
 require('./id7-standalone');
+
+// bootstrap-3-typeahead uses passive touchstart/touchend listeners but uses jQuery which doesn't
+// create them with the setting by default. Depends on the passiveeventlisteners test added in
+// id7-standalone (id7-default-feature-detect)
+// https://github.com/jquery/jquery/issues/2871#issuecomment-497963776
+if (window.Modernizr.passiveeventlisteners && 'ontouchstart' in document.documentElement && 'addEventListener' in document) {
+  $.event.special.touchstart = {
+    setup(_, ns, handle) {
+      this.addEventListener('touchstart', handle, { passive: true });
+    },
+  };
+
+  $.event.special.touchend = {
+    setup(_, ns, handle) {
+      this.addEventListener('touchend', handle, { passive: true });
+    },
+  };
+}
