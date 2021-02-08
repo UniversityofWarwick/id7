@@ -57,11 +57,11 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
                     .inlineBody("git clean -fdx"),
                   new NpmTask()
                     .description("npm prune")
-                    .nodeExecutable("Node 8")
+                    .nodeExecutable("Node 14")
                     .command("prune"),
                   new NpmTask()
                     .description("npm ci")
-                    .nodeExecutable("Node 8")
+                    .nodeExecutable("Node 14")
                     .command("ci"),
                   new ScriptTask()
                     .description("BUNDLE!!!!111111111")
@@ -73,11 +73,11 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
                     .inlineBody("rm -rf _build"),
                   new NpmTask()
                     .description("Build assets")
-                    .nodeExecutable("Node 8")
+                    .nodeExecutable("Node 14")
                     .command("run-script build"),
                   new NpmTask()
                     .description("Test")
-                    .nodeExecutable("Node 8")
+                    .nodeExecutable("Node 14")
                     .command("run-script test"),
                   new TestParserTask(TestParserTaskProperties.TestType.JUNIT)
                     .description("Parse JUnit results")
