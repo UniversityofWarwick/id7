@@ -29,8 +29,7 @@ function supportsPassiveEventListeners() {
 }
 
 // bootstrap-3-typeahead uses passive touchstart/touchend listeners but uses jQuery which doesn't
-// create them with the setting by default. Depends on the passiveeventlisteners test added in
-// id7-standalone (id7-default-feature-detect)
+// create them with the setting by default.
 // https://github.com/jquery/jquery/issues/2871#issuecomment-497963776
 if (supportsPassiveEventListeners() && 'ontouchstart' in document.documentElement && 'addEventListener' in document) {
   $.event.special.touchstart = {
