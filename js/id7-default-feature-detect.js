@@ -63,6 +63,26 @@ detect.addTest('safari', userAgent.indexOf('Safari/') >= 0 && userAgent.indexOf(
 detect.addTest('ie-or-edge', /MSIE (?:9|7|10)/i.test(userAgent) || /rv:11.0/i.test(userAgent) || /Edge\/\d./i.test(userAgent));
 detect.addTest('embedded-ie', /MSIE 7/i.test(userAgent) && /\.NET/.test(userAgent));
 
+detect.addTest('passiveeventlisteners', () => {
+  let supportsPassiveOption = false;
+
+  try {
+    const opts = Object.defineProperty({}, 'passive', {
+      get: () => {
+        supportsPassiveOption = true;
+        return undefined;
+      },
+    });
+    const noop = () => {};
+    window.addEventListener('testPassiveEventSupport', noop, opts);
+    window.removeEventListener('testPassiveEventSupport', noop, opts);
+  } catch (e) {
+    supportsPassiveOption = false;
+  }
+
+  return supportsPassiveOption;
+});
+
 // Init
 detect.addClasses(document.documentElement);
 
