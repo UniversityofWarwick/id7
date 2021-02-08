@@ -72,6 +72,7 @@ node_modules
 /docs/dist
 /docs/_includes/README.html
 /docs/.jekyll-metadata
+/docs/.jekyll-cache
 /dist/hp-2019
 /docs/_config.yml
 
