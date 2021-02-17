@@ -1,0 +1,61 @@
+---
+layout: borderless
+title: Borderless ID7
+slug: examples/borderless
+---
+
+<p>By default, ID7 constrains all UI elements into the fixed width container (<code>.id7-fixed-width-container</code>).</p>
+
+<p>
+    Some designs call for an approach with the illusion of a fluid width container, but where the content is still
+    constrained within a fixed width container for readibility and accessibility purposes. This can then be supplemented
+    with large hero imagery that breaks out of the fixed width container entirely.
+</p>
+
+<p>
+    Either include <code>id7-borderless.css</code> instead of <code>id7.css</code>, or if you are building your own assets,
+    set the LessCSS variable:
+</p>
+
+<pre><code class="language-less">@borderless-container: false; // Set to true to have a borderless container</code></pre>
+
+<p>
+    With a borderless container, the <code>.id7-left-border</code> and <code>.id7-right-border</code>s are hidden so
+    no imagery is needed. All imagery must now support up to <code>3000px</code> wide, including the masthead image.
+    You may consider using a gradient rather than an image for the masthead, both to save page weight and to reduce
+    the need to generate such images:
+</p>
+
+<pre><code class="language-css">.id7-utility-masthead {
+    background-image: linear-gradient(120deg,#0e7191 20%,#6ee6de 70%,#1b7c97);
+}</code></pre>
+
+<h2>Breaking out of the container</h2>
+
+<p>
+    You can use elements with the class <code>.id7-container-breakout</code> to have elements that are flush to the
+    entire width of the screen (note that you may lose between 10px and 20px at each side of this due to browser
+    limitations when there is a vertical scrollbar).
+</p>
+
+<p>
+    You can use <a href="https://getbootstrap.com/docs/3.4/components/#responsive-embed">Bootstrap responsive embeds</a>
+    to embed content based on an aspect ratio, rather than specifying an explicit width and height. For example:
+</p>
+
+<pre><code class="language-html">&lt;div class="id7-container-breakout">
+    &lt;p class="embed-responsive embed-responsive-3by1">
+        &lt;img class="embed-responsive-item" src="https://picsum.photos/3000/1000">
+    &lt;/p>
+&lt;/div></code></pre>
+
+<p>
+    As well as the default <code>.embed-responsive-16by9</code> and <code>embed-responsive-4by3</code> aspect ratios
+    supported by Bootstrap, ID7 adds three others:
+</p>
+
+<ul>
+    <li><code>.embed-responsive-5by4</code></li>
+    <li><code>.embed-responsive-3by2</code></li>
+    <li><code>.embed-responsive-3by1</code></li>
+</ul>

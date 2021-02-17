@@ -127,6 +127,8 @@ In your application you will need to do the following:
   - Headroom.js was updated to 0.10.3 which no longer supports IE11 without a polyfill for `Object.assign`. To enable this in IE11, include an `Object.assign` polyfill and then add `data-fixed-header="true" data-fixed-nav="true"` to the `.id7-navigation` element.  
 - **2.8.0**:
   - Bootstrap typeahead now adds aria- attributes to parent elements. If you use typeahead directly, ensure your input field is inside a reasonable container element (a Bootstrap column or `.form-group` is fine)
+- **2.9.0**:
+  - The `id7-site-footer` and `id7-app-footer` elements now require a nested content element, `id7-site-footer-content` and `id7-app-footer-content` respectively. The template has been updated to reflect this.
 
 ## Copyright and license
 

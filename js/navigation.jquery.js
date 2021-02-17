@@ -124,12 +124,12 @@ class Navigation {
   }
 
   static affixHeader() {
-    const $h1 = $('.id7-header-text h1');
-    if ($h1.length) {
+    const $header = $('.id7-header-text');
+    if ($header.length) {
       // Set height in stone
       Navigation.markHeaderFixedPosition();
 
-      const offsetTop = $('.id7-header-text').offset().top;
+      const offsetTop = $header.offset().top;
       let headroomOffset = offsetTop;
 
       const $mainContent = $('.id7-main-content-area');
@@ -140,7 +140,7 @@ class Navigation {
 
       const headroomConfig = $.extend(Config.HeadroomEvents, { offset: headroomOffset });
 
-      $h1.affix({
+      $header.affix({
         offset: {
           top: offsetTop,
         },
@@ -151,10 +151,10 @@ class Navigation {
   affixNav() {
     const $nav = this.$container;
 
-    const $h1 = $('.id7-header-text h1');
+    const $header = $('.id7-header-text');
     let offsetTop;
-    if ($h1.length) {
-      offsetTop = $h1.offset().top;
+    if ($header.length) {
+      offsetTop = $header.offset().top;
     } else {
       offsetTop = $nav.offset().top;
     }
@@ -260,7 +260,7 @@ class Navigation {
   // Return the total height of affixed elements (whether affixed or not)
   getAffixedHeight() {
     let height = 0;
-    if (this.options.fixedHeader) height += $('.id7-header-text h1').outerHeight();
+    if (this.options.fixedHeader) height += $('.id7-header-text').outerHeight();
     if (this.options.fixedNav) height += this.$container.outerHeight();
     return height;
   }
@@ -273,17 +273,17 @@ class Navigation {
   }
 
   static markHeaderFixedPosition() {
-    const $headerText = $('.id7-header-text');
-    $headerText.css('height', '');
+    const $header = $('.id7-header-text');
+    const $parent = $header.parent();
+    $parent.css('height', '');
 
-    const $h1 = $('.id7-header-text h1');
-    const isAlreadyAffixed = $h1.hasClass('affix');
+    const isAlreadyAffixed = $header.hasClass('affix');
 
-    if (isAlreadyAffixed) $h1.removeClass('affix');
+    if (isAlreadyAffixed) $header.removeClass('affix');
 
-    $headerText.height($headerText.height());
+    $parent.height($parent.height());
 
-    if (isAlreadyAffixed) $h1.addClass('affix');
+    if (isAlreadyAffixed) $header.addClass('affix');
   }
 
   markFixedPosition() {

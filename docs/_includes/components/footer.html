@@ -4,8 +4,12 @@
 
 {% highlight html %}
 <footer class="id7-page-footer id7-footer-coloured">
-  <div class="id7-site-footer">...</div>
-  <div class="id7-app-footer">...</div>
+  <div class="id7-site-footer">
+    <div class="id7-site-footer-content">...</div>
+  </div>
+  <div class="id7-app-footer">
+    <div class="id7-app-footer-content">...</div>
+  </div>
 </footer>
 {% endhighlight %}
 
@@ -30,11 +34,15 @@ does follow these policies and procedures without conflict.</b></p>
 
 {% highlight html %}
 <footer class="id7-page-footer id7-footer-coloured">
-  <div class="id7-site-footer">...</div>
+  <div class="id7-site-footer">
+    <div class="id7-site-footer-content">...</div>
+  </div>
   <div class="id7-app-footer">
-    <div class="id7-logo-bleed"></div>
+    <div class="id7-app-footer-content">
+      <div class="id7-logo-bleed"></div>
 
-    ...
+      ...
+    </div>
   </div>
 </footer>
 {% endhighlight %}
@@ -46,13 +54,17 @@ does follow these policies and procedures without conflict.</b></p>
 {% highlight html %}
 <footer class="id7-page-footer id7-footer-divider">
   <div class="id7-site-footer">
-    <div class="id7-horizontal-divider">
-      {% include divider.html %}
-    </div>
+    <div class="id7-site-footer-content">
+      <div class="id7-horizontal-divider">
+        {% include divider.html %}
+      </div>
 
-    ...
+      ...
+    </div>
   </div>
-  <div class="id7-app-footer">...</div>
+  <div class="id7-app-footer">
+    <div class="id7-app-footer-content">...</div>
+  </div>
 </footer>
 {% endhighlight %}
 

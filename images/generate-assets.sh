@@ -9,6 +9,12 @@
 ./svg-to-png.sh src/masthead-logo-bleed-wide-md.svg 1200 80 masthead-logo-bleed-wide-md.png
 ./svg-to-png.sh src/masthead-logo-bleed-wide-lg.svg 3000 80 masthead-logo-bleed-wide-lg.png
 
+./svg-to-png.sh src/masthead-logo-bleed-borderless-sm.svg 992 80 masthead-logo-bleed-borderless-sm.png
+./svg-to-png.sh src/masthead-logo-bleed-borderless-md.svg 1200 80 masthead-logo-bleed-borderless-md.png
+./svg-to-png.sh src/masthead-logo-bleed-borderless-lg.svg 3000 80 masthead-logo-bleed-borderless-lg.png
+./svg-to-png.sh src/masthead-logo-bleed-borderless-xl.svg 3000 80 masthead-logo-bleed-borderless-xl.png
+./svg-to-png.sh src/masthead-logo-bleed-borderless-2xl.svg 3000 80 masthead-logo-bleed-borderless-2xl.png
+
 ./svg-to-png.sh src/masthead-logo-bleed-descriptor-sm.svg 1170 300 masthead-logo-bleed-descriptor-sm.png
 ./svg-to-png.sh src/masthead-logo-bleed-descriptor-xs.svg 1680 300 masthead-logo-bleed-descriptor-xs.png
 
