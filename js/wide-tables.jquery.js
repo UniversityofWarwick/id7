@@ -60,11 +60,10 @@ class WideTables {
         const $wrapper = $table.parent();
         const $container = $wrapper.parent();
 
-        let { popout } = options;
-        const { doublescroll } = options;
+        let { popout, doublescroll } = options;
 
         if (typeof options.popout === 'function') popout = options.popout();
-        if (typeof options.doublescroll === 'function') popout = options.doublescroll();
+        if (typeof options.doublescroll === 'function') doublescroll = options.doublescroll();
 
         if (popout) WideTables.popout($table, $wrapper, $container);
         if (doublescroll) WideTables.doubleScroll($table, $wrapper);

@@ -68,3 +68,4 @@ detect.addClasses(document.documentElement);
 
 // For legacy
 window.Modernizr = detect;
+window.Modernizr.mq = FeatureDetect.mq;

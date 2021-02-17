@@ -3,6 +3,8 @@ import $ from 'jquery';
 import _ from 'lodash-es';
 import FeatureDetect from './feature-detect';
 
+require('./bootstrap-3-typeahead.jquery');
+
 /**
  * Use Bootstrap 3 typeahead to provide Go.Warwick suggestions on an <input>
  */

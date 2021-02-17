@@ -1,11 +1,15 @@
 /* eslint-env browser */
 import $ from 'jquery';
 import _ from 'lodash-es';
-import Headroom from 'headroom.js';
 
 import currentScreenSize from './screen-sizes';
 import changeLocationHash from './change-location-hash';
 import { getVisibleTextNodesIn, wrapNode } from './dom-utils';
+
+// Get Headroom from window instead of importing it so that if an app doesn't want to use Headroom
+// at all, they can just define window.Headroom = { cutsTheMustard: false };
+// eslint-disable-next-line prefer-destructuring
+const Headroom = window.Headroom;
 
 const Config = {
   Templates: {

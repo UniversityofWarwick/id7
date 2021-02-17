@@ -932,3 +932,14 @@ hr.spacer {
     scroll-behavior: smooth;
   }
 }
+
+/* Fix unwanted border on HP mobile view buttons SBTWO-9448 */
+
+.id7-masthead .id7-logo-row nav ul>li {
+  &.more-links-trigger:before {
+    display: none;
+  }
+  &.search-trigger:before {
+    display: none;
+  }
+}

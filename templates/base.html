@@ -11,9 +11,12 @@
 
   <title>Your page title</title>
 
-  <!-- Lato web font -->
+  <!-- Pre-connect to Google Fonts domain -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+
+  <!-- Load the Lato web font using the loadCSS method so it doesn't block rendering of the page -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;subset=latin,latin-ext&amp;display=optional"
-      rel="stylesheet" type="text/css" crossorigin="anonymous">
+        rel="preload" as="style" type="text/css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- ID7 -->
   <link href="css/id7.css" rel="stylesheet">
