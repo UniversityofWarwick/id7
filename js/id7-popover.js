@@ -79,8 +79,8 @@ $.fn.id7Popover = function id7Popover(options) {
   $('html')
     .not(`.${dismissHandlerClass}`)
     // unbind in case asynchronous runs get pass our class guard
-    .off('click.popoverDismiss')
-    .on('click.popoverDismiss', (e) => {
+    .off('click.id7PopoverDismiss')
+    .on('click.id7PopoverDismiss', (e) => {
       const $target = $(e.target);
 
       // if clicking anywhere other than the popover itself
