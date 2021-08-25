@@ -33,6 +33,8 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
 
   private static final String SLACK_CHANNEL = "#brand";
 
+  private static final String NODE_VERSION = "Node 14";
+
   public static void main(String[] args) throws Exception {
     new ID7PlanSpec().publish();
   }
@@ -56,37 +58,27 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
                     .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
                     .inlineBody("git clean -fdx"),
                   new NpmTask()
-                    .description("npm prune")
-                    .nodeExecutable("Node 14")
-                    .command("prune"),
-                  new NpmTask()
                     .description("npm ci")
-                    .nodeExecutable("Node 14")
+                    .nodeExecutable(NODE_VERSION)
                     .command("ci"),
-                  new ScriptTask()
-                    .description("BUNDLE!!!!111111111")
-                    .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
-                    .inlineBody("if [[ `type -P scl` ]]; then\n  source scl_source enable rh-ruby24\nfi\nbundle install --path vendor/bundle"),
                   new ScriptTask()
                     .description("Remove old test results from previous builds")
                     .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
                     .inlineBody("rm -rf _build"),
                   new NpmTask()
                     .description("Build assets")
-                    .nodeExecutable("Node 14")
-                    .command("run-script build"),
+                    .nodeExecutable(NODE_VERSION)
+                    .command("run build"),
                   new NpmTask()
                     .description("Test")
-                    .nodeExecutable("Node 14")
-                    .command("run-script test"),
+                    .nodeExecutable(NODE_VERSION)
+                    .command("run test"),
                   new TestParserTask(TestParserTaskProperties.TestType.JUNIT)
                     .description("Parse JUnit results")
-                    .resultDirectories("_build/test-reports/*.xml"),
-                  new ScriptTask()
-                    .description("Commit generated dist files back")
-                    .interpreter(ScriptTaskProperties.Interpreter.BINSH_OR_CMDEXE)
-                    .inlineBody("git config user.name \"Bamboo\"\ngit config user.email \"11889472+uow-bamboo@users.noreply.github.com\"\ngit add dist\ngit commit -m \"Automated commit of built assets\"\ngit remote add github git@github.com:UniversityofWarwick/id7.git\nssh-keyscan -t rsa github.com > ~/.ssh/known_hosts\ngit push github\nexit 0"))
+                    .resultDirectories("_build/test-reports/*.xml")
                 )
+            )
+
         )
         .slackNotifications(SLACK_CHANNEL, false)
         .build()
