@@ -87,9 +87,9 @@ Have a bug or a feature request? Contact <webteam@warwick.ac.uk>.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Documentation
+## Documentation / Demo
 
-Documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted on GitHub Pages at <http://id7.warwick.ac.uk>. The docs may also be run locally.
+Documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted by Netlify at <http://id7.warwick.ac.uk>. The docs may also be run locally.
 
 ### Running sample site locally
 
