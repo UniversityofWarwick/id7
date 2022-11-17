@@ -65,7 +65,7 @@ The `id7-bundle.js` file includes dependencies such as jQuery and Bootstrap. The
 - [Bootstrap](https://github.com/twbs/bootstrap) 3.4.1
 - [bootstrap-3-typeahead](https://github.com/UniversityOfWarwick/Bootstrap-3-Typeahead) 4.0.3
 - [headroom.js](https://github.com/WickyNilliams/headroom.js) 0.10.3
-- jQuery doubleScroll 0.6
+- [jqDoubleScroll](https://github.com/UniversityOfWarwick/jqDoubleScroll) 0.7.0
 
 ## Icons
 

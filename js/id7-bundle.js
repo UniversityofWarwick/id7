@@ -19,7 +19,7 @@ require('./bootstrap-scrollspy.jquery');
 require('./bootstrap-tab.jquery');
 require('./bootstrap-affix.jquery');
 require('./bootstrap-3-typeahead.jquery');
-require('jqdoublescroll'); // Required for wide-tables
+require('@universityofwarwick/jqdoublescroll'); // Required for wide-tables
 require('./headroom.jquery');
 
 require('./id7-standalone');
