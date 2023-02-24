@@ -139,12 +139,16 @@
         width: @container-lg;
       }
 
-      @media screen and (min-width: @screen-xl-min) {
-        width: @container-xl;
+      & when (@support-xl-viewport) {
+        @media screen and (min-width: @screen-xl-min) {
+          width: @container-xl;
+        }
       }
 
-      @media screen and (min-width: @screen-2xl-min) {
-        width: @container-2xl;
+      & when (@support-2xl-viewport) {
+        @media screen and (min-width: @screen-2xl-min) {
+          width: @container-2xl;
+        }
       }
 
       &.headroom {
