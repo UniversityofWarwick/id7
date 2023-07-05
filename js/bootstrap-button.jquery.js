@@ -4,4 +4,4 @@
  *
  * https://getbootstrap.com/docs/3.4/javascript/#buttons
  */
-require('bootstrap/js/button');
+require('../bootstrap/js/button');

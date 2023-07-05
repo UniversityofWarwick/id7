@@ -4,4 +4,4 @@
  *
  * https://getbootstrap.com/docs/3.4/javascript/#tabs
  */
-require('bootstrap/js/tab');
+require('../bootstrap/js/tab');

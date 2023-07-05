@@ -4,4 +4,4 @@
  *
  * https://getbootstrap.com/docs/3.4/javascript/#affix
  */
-require('bootstrap/js/affix');
+require('../bootstrap/js/affix');

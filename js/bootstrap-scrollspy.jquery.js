@@ -4,4 +4,4 @@
  *
  * https://getbootstrap.com/docs/3.4/javascript/#scrollspy
  */
-require('bootstrap/js/scrollspy');
+require('../bootstrap/js/scrollspy');

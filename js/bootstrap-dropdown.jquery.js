@@ -4,7 +4,7 @@ const $ = window.jQuery;
 /*
  * Add dropdowns to links, navigation etc. Required for ID7 dropdown navigation
  */
-require('bootstrap/js/dropdown');
+require('../bootstrap/js/dropdown');
 
 
 // ID-294 We use non-standard dropdowns that need to have different click actions..
