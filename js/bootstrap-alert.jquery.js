@@ -5,4 +5,4 @@
  *
  * https://getbootstrap.com/docs/3.4/javascript/#alerts
  */
-require('bootstrap/js/alert');
+require('../bootstrap/js/alert');

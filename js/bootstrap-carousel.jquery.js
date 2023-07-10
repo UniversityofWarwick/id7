@@ -4,4 +4,4 @@
  *
  * https://getbootstrap.com/docs/3.4/javascript/#carousel
  */
-require('bootstrap/js/carousel');
+require('../bootstrap/js/carousel');

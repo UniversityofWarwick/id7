@@ -6,7 +6,7 @@ const $ = window.jQuery;
  *
  * https://getbootstrap.com/docs/3.4/javascript/#modals
  */
-require('bootstrap/js/modal');
+require('../bootstrap/js/modal');
 
 // ID-93 https://github.com/twbs/bootstrap/issues/16148
 // ID7's .id7-fixed-width-container is position: relative, so we need to inject the backdrop at

@@ -7,4 +7,4 @@
 // Required dependency
 require('./bootstrap-tooltip.jquery');
 
-require('bootstrap/js/popover');
+require('../bootstrap/js/popover');

@@ -7,4 +7,4 @@
 
 // Required dependency
 require('./bootstrap-transition.jquery');
-require('bootstrap/js/collapse');
+require('../bootstrap/js/collapse');
