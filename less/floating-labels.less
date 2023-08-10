@@ -22,6 +22,11 @@
   }
   
   @media (max-width: @screen-sm-min) {
+    input:placeholder-shown ~ label {
+      // SBTWO-10013 Do no transformation on Search Warwick input label so it will not overflow
+      transform: none;
+    }
+
     label {
       visibility: hidden;
       opacity: 0;
