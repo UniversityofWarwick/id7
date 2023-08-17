@@ -34,13 +34,17 @@ function supportsPassiveEventListeners() {
 if (supportsPassiveEventListeners() && 'ontouchstart' in document.documentElement && 'addEventListener' in document) {
   $.event.special.touchstart = {
     setup(_, ns, handle) {
-      this.addEventListener('touchstart', handle, { passive: true });
+      if (this.addEventListener) {
+        this.addEventListener('touchstart', handle, { passive: true });
+      }
     },
   };
 
   $.event.special.touchend = {
     setup(_, ns, handle) {
-      this.addEventListener('touchend', handle, { passive: true });
+      if (this.addEventListener) {
+        this.addEventListener('touchend', handle, { passive: true });
+      }
     },
   };
 }
