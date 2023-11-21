@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.2",
-    "@universityofwarwick/bootstrap-3-typeahead": "4.1.0",
+    "@universityofwarwick/bootstrap-3-typeahead": "4.1.1",
     "@universityofwarwick/jqdoublescroll": "0.7.0",
     "headroom.js": "0.12.0",
     "jquery": "3.5.1",
