@@ -20,7 +20,7 @@
     "@universityofwarwick/jqdoublescroll": "0.7.0",
     "headroom.js": "0.12.0",
     "jquery": "3.5.1",
-    "lodash-es": "4.17.20",
+    "lodash-es": "4.17.21",
     "loglevel": "1.7.1"
   },
   "devDependencies": {
