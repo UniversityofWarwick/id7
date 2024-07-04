@@ -113,6 +113,13 @@ In your application you will need to do the following:
 * Replace references to `id7-bundle.min.js` with `id7-bundle.js`
 * `id7-standalone.js` was removed from the distribution; you should build your own bundle if you are using this
 
+## ID7.1 Opt-in
+
+From version 2.9.7 you can opt in to "ID7.1" - a reworked masthead. To do this:
+
+* Add the class `id7-point-1` to any instances of the `id7-utility-masthead` in your app's templates.
+* Check that nothing else needs updating to work nicely with it. The whole masthead area should be white.
+
 ## Breaking changes
 
 - **1.2.0** - Now uses a custom Modernizr build (see _What's included_ above) with a minimal range of tests. If your application relies on other tests or shims which were included in previous versions, they will likely fail.
