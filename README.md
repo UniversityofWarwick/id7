@@ -118,7 +118,7 @@ In your application you will need to do the following:
 From version 2.9.7 onwards, you can apply the new "ID7.1" styling to the site masthead in your app. To do so:
 
 * Add the `id7-point-1` class to any `id7-utility-masthead` elements in your templates
-* Replace the logo image src `/dist/images/logo.png` with `/dist/images/logo.svg` in your templates
+* Replace the logo image `logo.png` with `logo.svg` in your templates
 * Update anything app-specific that needs updating - the whole masthead region should have a white background
 
 ## Breaking changes
