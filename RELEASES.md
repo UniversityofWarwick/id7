@@ -23,7 +23,7 @@ Once the release is published, GitHub Actions will do the rest and run `npm run 
 
 ## Netlify deploy
 
-Netlify will deploy the static site at https://id7.warwick.ac.uk automatically when `master` is updated, you don't need to run any scripts.
+Netlify will deploy the static site at https://id7.warwick.ac.uk automatically when `main` is updated, you don't need to run any scripts.
 
 ## Publishing the package on npmjs.com
 
