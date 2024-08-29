@@ -38,6 +38,7 @@
       <property name="caretWidth" class="java.lang.Integer" />
     </properties>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="IdProvider" IDEtalkID="AA96B03277616E08B2AFF47B9E820E9A" />
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
