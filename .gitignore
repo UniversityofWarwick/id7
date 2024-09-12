@@ -24,6 +24,7 @@ _site
 
 # Ignore build artifacts
 _build
+/dist/
 
 # Numerous always-ignore extensions
 *.diff
