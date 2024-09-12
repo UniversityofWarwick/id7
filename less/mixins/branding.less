@@ -38,7 +38,7 @@
 
 .apply-navbar-brand(@colour, @active-colour: screen(@colour, lighten(black, 30%))) {
   @border-colour: multiply(@colour, darken(white, 20%));
-  @contrast-colour: contrast(@colour, @text-color, white, 50%);
+  @contrast-colour: #wcag.contrast(@colour, white, @text-color)[@result];
 
   .apply-navbar-brand(@colour,
     @contrast-colour,
@@ -211,20 +211,70 @@
   }
 }
 
+// Generates a set of valid colours for a given brand colour.
+// Colours are grouped into pairs for use in different contexts.
+// Colours of a pair should pass AA contrast.
+.calculate-brand-colours(@colour) {
+  @primary: @colour;
+  @primary-contrast: #wcag.contrast(@primary, white, @text-color)[@result];
+
+  // don't use directly, use @secondary
+  @base-secondary: tint(@colour, 30%);
+
+  // ultra-contrast may end up darkening or lightening the background to achieve AA
+  @secondary-calc-msg: #wcag.ultra-contrast(@base-secondary, white, @text-color)[@msg];
+  @secondary: #wcag.ultra-contrast(@base-secondary, white, @text-color)[@bg];
+  @secondary-contrast: #wcag.ultra-contrast(@base-secondary, white, @text-color)[@fg];
+  // Used for some minor link hover states
+  @secondary-accent: multiply(@secondary, darken(white, 20%));
+
+  // A colour we can place on white. For links and headings
+  @white-emphasis: #wcag.contrast-fallback(white, @primary, @text-color)[@result];
+
+  // A deeper colour we can place on white. May be the same as @white-emphasis if they are both black
+  @white-deep-emphasis: #wcag.contrast-fallback(white, darken(@primary, 20%), @text-color)[@result];
+
+  // Links/headings on a pale tint of brand colour
+  @pale: tint(@colour, 85%);
+  @pale-emphasis: #wcag.contrast-fallback(@pale, @primary, @text-color)[@result];
+
+  // Links/headings on pale grey
+  @pale-grey: @gray-lighter;
+  @pale-grey-emphasis: #wcag.contrast-fallback(@pale-grey, @primary, @text-color)[@result];
+
+}
+
 .apply-brand(@colour) {
-  .header-colour(@colour);
-  .link-colour(@colour);
+
+  @colours: .calculate-brand-colours(@colour);
+
+  @primary-colour: @colours[@primary];
+  @secondary-colour: @colours[@secondary];
+  @secondary-accent-colour: @colours[@secondary-accent];
+  @secondary-contrast-colour: @colours[@secondary-contrast];
+
+  .debug(--secondary-debug, @colours[@secondary-calc-msg]);
+
+  // Only really for the tertiary nav
+  @tertiary-accent-colour: multiply(@id7-navigation-tertiary-background-colour, darken(white, 20%));
+  @tertiary-contrast-colour: contrast(@id7-navigation-tertiary-background-colour, @text-color, white, 50%);
+
+  .header-colour(@colours[@white-emphasis]);
+  .link-colour(@colours[@white-emphasis]);
+
+  // capture the colour used
+  @link-colour: .link-colour(@colour)[@c];
 
   blockquote.quotes {
-    color: darken(@colour, 20%);
+    color: @colours[@white-deep-emphasis];
 
     &::before {
-      color: @colour;
+      color: @colours[@white-deep-emphasis];
     }
   }
 
   .brand-bg {
-    @contrast-colour: contrast(@colour, @text-color, white, 50%);
+    @contrast-colour: @colours[@primary-contrast];
 
     background: @colour;
     color: @contrast-colour;
@@ -238,8 +288,8 @@
 
   .brand-border { border-color: @colour; }
 
-  @btn-brand-color:  contrast(@colour, @text-color, white, 50%);
-  @btn-brand-bg:     @colour;
+  @btn-brand-color:  @colours[@primary-contrast];
+  @btn-brand-bg:     @colours[@primary];
   @btn-brand-border: darken(@btn-brand-bg, 5%);
 
   // Brand colour button variant
@@ -260,11 +310,8 @@
     background-color: transparent;
   }
 
-  @primary-colour: @colour;
-  @secondary-colour: screen(@colour, lighten(black, 30%));
-
   .id7-navigation .navbar-primary {
-    .apply-navbar-brand(@primary-colour, @secondary-colour);
+    .apply-navbar-brand(@colours[@primary], @colours[@secondary]);
   }
 
   @breadcrumbs-colour: @colour;
@@ -273,9 +320,6 @@
   }
 
   .navbar-secondary {
-    @secondary-accent-colour: multiply(@secondary-colour, darken(white, 20%));
-    @secondary-contrast-colour: contrast(@secondary-colour, @text-color, white, 50%);
-
     .apply-navbar-brand(
       @secondary-colour,
       @secondary-contrast-colour,
@@ -307,9 +351,6 @@
   }
 
   .navbar-tertiary {
-    @tertiary-accent-colour: multiply(@id7-navigation-tertiary-background-colour, darken(white, 20%));
-    @tertiary-contrast-colour: contrast(@id7-navigation-tertiary-background-colour, @text-color, white, 50%);
-
     .apply-navbar-brand(
       @id7-navigation-tertiary-background-colour,
       @tertiary-contrast-colour,
@@ -430,11 +471,14 @@
 }
 
 .apply-boxstyles-brand(@colour) {
-  #boxstyle > .filled(~".box1", screen(@colour, lighten(black, 85%)));
-  #boxstyle > .filled(~".box2", @gray-lighter);
-  #boxstyle > .bordered(~".box3", @colour);
-  #boxstyle > .bordered(~".box4", @gray-light);
-  #boxstyle > .filled(~".box5", @colour, white);
+  // Use the approved colour pairings from this mixin
+  @colours: .calculate-brand-colours(@colour);
+
+  #boxstyle.filled(~".box1", @colours[@pale], @text-color, @colours[@pale-emphasis]);
+  #boxstyle.filled(~".box2", @colours[@pale-grey], @text-color, @colours[@pale-grey-emphasis]);
+  #boxstyle.bordered(~".box3", @colour);
+  #boxstyle.bordered(~".box4", @gray-light);
+  #boxstyle.filled(~".box5", @colours[@primary], @colours[@primary-contrast], @colours[@primary-contrast]);
 }
 
 .apply-pagination-brand(@colour) {

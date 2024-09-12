@@ -1,6 +1,8 @@
 .link-colour(@base, @hover) {
+  @c: @base;
+
   a, a:link, a:visited {
-    color: @base;
+    color: @c;
   }
 
   a:hover, a:focus, a:active {
@@ -8,7 +10,7 @@
   }
 
   .popover button.close {
-    color: @base;
+    color: @c;
     &:hover {
       color: @hover;
     }
@@ -23,7 +25,7 @@
   }
 
   .btn-link {
-    color: @base;
+    color: @c;
     &:hover,
     &:focus {
       color: @hover;
