@@ -98,6 +98,7 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 1. In the root `/id7` directory:
     1. Run `bundle install` to install dependent gems.
     1. Run `npm ci` to install webpack and other node.js dependencies.
+    1. Run `npm run dev` (or `npm run watch`) to build a copy of static assets.
     1. Run `npm run start` in the command line.
 1. Open <http://localhost:8080> in your browser, et voilà.
 

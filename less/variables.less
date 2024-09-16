@@ -6,21 +6,37 @@
 @container-desktop:         (950px + @grid-gutter-width);
 @container-large-desktop:   (1150px + @grid-gutter-width);
 
-// Primary colour palette   // Secondary colour palette
-@id7-brand-purple: #552D62; // hsl(285, 15%, 50%) originally #7b428e
-@id7-brand-gray: #393A3B;   // hsl(210, 1%, 46%)
-@id7-brand-white: #ffffff;
-@id7-brand-gold: #996b00;   // #886c11;   // hsl(46, 78%, 44%) originally #c8a019 - unreferenced in public info (ID-363)
-@id7-brand-orange: #be410c; // #a14418; // hsl(19, 89%, 54%) originally #f26322 now hsl(19, 74%, 36%) - unreferenced in public info (ID-363)
-@id7-brand-red: #9A1310;    // hsl(1, 40%, 53%) originally #b4153a now hsl(346, 79%, 30%)
-@id7-brand-green: #0F4001; 
-@id7-brand-blue: #00407A;   // hsl(209, 36%, 47%) originally #5698d2 now hsl(208, 58%, 30%)
+///
+// https://warwick.ac.uk/about/brand/brand-guidelines/colours/
+///
 
-@id7-brand-gold-bright: #ffc233; // unreferenced in public info (ID-363)
-@id7-brand-orange-bright: #f47920; // unreferenced in public info (ID-363)
-@id7-brand-red-bright: #ef4050; // unreferenced in public info (ID-363)
-@id7-brand-green-bright: #7ecbb6; // unreferenced in public info (ID-363)
-@id7-brand-blue-bright: #00b2dd; // unreferenced in public info (ID-363)
+// Primary brand colour - Aubergine
+@id7-brand-purple: #3C1053; 
+
+// "Text and background colours"
+@id7-brand-black: #000000; // inspired
+@id7-brand-gray: #58595B;
+@id7-brand-white: #FFFFFF; // wow
+
+// Secondary palette (bright)
+@id7-brand-gold-bright: #F1BE48; 
+@id7-brand-orange-bright: #E87722; 
+@id7-brand-red-bright: #CB333B; 
+@id7-brand-blue-bright: #00A9CE; 
+@id7-brand-teal-bright: #6DCDB8;
+
+// Tertiary palette (dark)
+@id7-brand-gold: #D69A2D;   
+@id7-brand-orange: #BE531C; 
+@id7-brand-red: #9D2235;    
+@id7-brand-blue: #41748D;   
+@id7-brand-teal: #507F70;
+
+// Green is no longer a colour in the brand palette, but keeping here
+// for backward compatibility. Could alias it to teal?
+@id7-brand-green: #0F4001; 
+@id7-brand-green-bright: #7ecbb6;
+
 
 @id7-brand-default: @id7-brand-purple;
 
