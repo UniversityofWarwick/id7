@@ -1,0 +1,31 @@
+---
+# Colour Palette as displayed in colour-palette/index.html.
+# Based on https://warwick.ac.uk/about/brand/brand-guidelines/colours/
+# The primary and secondary colours are manually managed here.
+- id: purple
+  name: Aubergine
+  include_in_palette: true
+  primary: "#3C1053"
+  secondary: "#775887"
+- id: gray
+  name: Gray
+  include_in_palette: true
+  primary: "#3C1053"
+  secondary: "#775887"
+- id: orange
+  name: Dark Orange
+- id: red
+  name: Dark Ruby
+  include_in_palette: true
+  primary: "#9D2235"
+  secondary: "BA6472"
+- id: blue
+  name: Dark Blue
+  include_in_palette: true
+  primary: "#41748D"
+  secondary: "#7A9EAF"
+- id: teal
+  name: Dark Teal
+  include_in_palette: true
+  primary: "#507F70"
+  secondary: "#84A59B"

@@ -4,74 +4,37 @@ title: Colour palette
 slug: components/colour-palette
 ---
 
-<div class="panel panel-info">
-    <div class="panel-body">
+<div class="alert alert-info">
+    <p>
     Visit the official <a href="https://warwick.ac.uk/brand/brand-guidelines/colours/">Colour palette page on the Brand Portal</a> for the full set of brand colours.
-    </div>
+    </p>
 </div>
 
+<div class="alert alert-warning">
+    <p>We are currently in the process of checking the new colour palette for accessibility and updating our contrast functions. This is to ensure that our website meets the necessary standards for all users, including those with visual impairments. In the meantime you may find that not all colours offered in the full palette are suitable as a site brand colour. We apologize for any inconvenience caused during this transition period.</p>
+</div>
 
 <div class="row">
+    {% comment %}
+        This data is defined in _data/brand_palette.yml
+    {% endcomment %}
+
+    {% for brand in site.data.brand_palette %}
+    {% if brand.include_in_palette %}
     <div class="col-sm-4">
-        <div class="id7-docs-palette-logo purple pull-left"></div>
+        <div class="id7-docs-palette-logo {{ brand.id }} pull-left"></div>
 
         <dl class="pull-left">
             <dt>Name</dt>
-            <dd>Warwick Aubergine</dd>
+            <dd>{{ brand.name }}</dd>
             <dt>Primary Hex</dt>
-            <dd class="primary purple swatch">#3C1053</dd>
+            <dd class="primary {{ brand.id }} swatch">{{ brand.primary }}</dd>
             <dt>Secondary Hex</dt>
-            <dd class="secondary purple swatch">#775887</dd>
+            <dd class="secondary {{ brand.id }} swatch">{{ brand.secondary }}</dd>
         </dl>
     </div>
-    <div class="col-sm-4">
-        <div class="id7-docs-palette-logo gray pull-left"></div>
-
-        <dl class="pull-left">
-            <dt>Name</dt>
-            <dd>Warwick Gray</dd>
-            <dt>Primary Hex</dt>
-            <dd class="primary gray swatch">#58595B</dd>
-            <dt>Secondary Hex</dt>
-            <dd class="secondary gray swatch">#8A8B8C</dd>
-        </dl>
-    </div>
-    <div class="col-sm-4">
-        <div class="id7-docs-palette-logo red pull-left"></div>
-
-        <dl class="pull-left">
-            <dt>Name</dt>
-            <dd>Dark Ruby</dd>
-            <dt>Primary Hex</dt>
-            <dd class="primary red swatch">#9D2235</dd>
-            <dt>Secondary Hex</dt>
-            <dd class="secondary red swatch">#BA6472</dd>
-        </dl>
-    </div>
-    <div class="col-sm-4">
-        <div class="id7-docs-palette-logo blue pull-left"></div>
-
-        <dl class="pull-left">
-            <dt>Name</dt>
-            <dd>Dark Blue</dd>
-            <dt>Primary Hex</dt>
-            <dd class="primary blue swatch">#41748D</dd>
-            <dt>Secondary Hex</dt>
-            <dd class="secondary blue swatch">#7A9EAF</dd>
-        </dl>
-    </div>
-    <div class="col-sm-4">
-        <div class="id7-docs-palette-logo teal pull-left"></div>
-
-        <dl class="pull-left">
-            <dt>Name</dt>
-            <dd>Dark Teal</dd>
-            <dt>Primary Hex</dt>
-            <dd class="primary teal swatch">#507F70</dd>
-            <dt>Secondary Hex</dt>
-            <dd class="secondary teal swatch">#84A59B</dd>
-        </dl>
-    </div>
+    {% endif %}
+    {% endfor %}
 </div>
 <!-- 
 <h2 id="tints">Tints</h2>
