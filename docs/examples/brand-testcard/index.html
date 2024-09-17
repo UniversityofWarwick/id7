@@ -1,0 +1,33 @@
+---
+layout: default
+title: Testcard
+slug: examples/testcard
+---
+
+<div class="row">
+  {% for brand in site.data.brand_palette %}
+  <section class="col-sm-4 brand-{{ brand.id }}">
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+
+      <p>Some text here</p>
+
+      <h2><a href="go.warwick.ac.uk/its">Link heading 2</a></h2>
+
+      <blockquote class="quotes">
+          <p>Some text here. Continues a bit further to show how it looks on multiple lines.</p>
+      </blockquote>
+      
+      {% for b in (1..5) %}
+      <div class="boxstyle_ box{{ b }}">
+        <h2>Box style {{ b }} with <a href="go.warwick.ac.uk/its">link heading 2</a> </h2>
+
+        <p>Some text here and a <a href="go.warwick.ac.uk/its">link</a></p>
+      </div>
+      {% endfor %}
+    </section>
+    {% endfor %}
+</div>
