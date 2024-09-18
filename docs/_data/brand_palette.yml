@@ -8,24 +8,36 @@
   primary: "#3C1053"
   secondary: "#775887"
 - id: gray
-  name: Gray
+  name: Grey
   include_in_palette: true
-  primary: "#3C1053"
-  secondary: "#775887"
+  primary: "#58595B"
+  secondary: "#8A8B8C"
 - id: orange
   name: Dark Orange
+- id: orange-bright
+  name: Bright Orange
 - id: red
   name: Dark Ruby
   include_in_palette: true
   primary: "#9D2235"
-  secondary: "BA6472"
+  secondary: "#BA6472"
+- id: red-bright
+  name: Bright Ruby
 - id: blue
   name: Dark Blue
   include_in_palette: true
   primary: "#41748D"
   secondary: "#7A9EAF"
+- id: blue-bright
+  name: Bright Blue
 - id: teal
   name: Dark Teal
   include_in_palette: true
   primary: "#507F70"
   secondary: "#84A59B"
+- id: teal-bright
+  name: Bright Teal
+- id: gold
+  name: Dark Gold
+- id: gold-bright
+  name: Bright Gold
