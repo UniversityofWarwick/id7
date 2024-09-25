@@ -218,15 +218,19 @@
   @primary: @colour;
   @primary-contrast: #wcag.contrast(@primary, white, @text-color)[@result];
 
-  // don't use directly, use @secondary
-  @base-secondary: tint(@colour, 30%);
+  // "private" values
+  @_base-secondary: tint(@colour, 30%);
+  @_secondary-result: #wcag.ultra-contrast(@_base-secondary, white, @text-color);
 
   // ultra-contrast may end up darkening or lightening the background to achieve AA
-  @secondary-calc-msg: #wcag.ultra-contrast(@base-secondary, white, @text-color)[@msg];
-  @secondary: #wcag.ultra-contrast(@base-secondary, white, @text-color)[@bg];
-  @secondary-contrast: #wcag.ultra-contrast(@base-secondary, white, @text-color)[@fg];
+  @secondary-calc-msg: @_secondary-result[@msg];
+  @secondary: @_secondary-result[@bg];
+  @secondary-contrast: @_secondary-result[@fg];
   // Used for some minor link hover states
-  @secondary-accent: multiply(@secondary, darken(white, 20%));
+  @secondary-accent: #wcag.contrast(@secondary-contrast,
+    multiply(@secondary, darken(white, 20%)),
+    tint(@secondary, 30%)
+  )[@result];
 
   // A colour we can place on white. For links and headings
   @white-emphasis: #wcag.contrast-fallback(white, @primary, @text-color)[@result];
