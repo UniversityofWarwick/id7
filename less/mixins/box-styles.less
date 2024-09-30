@@ -60,6 +60,10 @@
 }
 
 #boxstyle {
+  .box1-bg(@colour) {
+    @result: screen(@colour, lighten(black, 85%));
+  }
+
   .image(@class, @bg-image, @text-colour: @text-color) {
     .apply() {
       &@{class} {
@@ -127,7 +131,7 @@
     }
   }
 
-  .filled(@class, @bg, @text-colour: @text-color) {
+  .filled(@class, @bg, @text-colour, @link-colour) {
     // Filled boxstyles should flush at widths that the padding isn't added at
     .flush() {
       &@{class} {
@@ -168,23 +172,22 @@
     }
   }
 
-  .filled(@class, @bg, @text-colour) when (lightness(@bg) < 50%) {
-    .boxstyle_, .boxstyle-xs, .boxstyle-sm, .boxstyle-md, .boxstyle-lg {
-      &@{class} {
-        .link-colour(@text-colour);
-      }
-    }
-  }
-
-  .filled(@class, @bg, @text-colour: @text-color) when not (@text-colour = inherit) {
+  .filled(@class, @bg, @text-colour, @link-colour) when not (@text-colour = inherit) {
     .boxstyle_, .boxstyle-xs, .boxstyle-sm, .boxstyle-md, .boxstyle-lg {
       &@{class} {
         .header-colour(@text-colour);
-        // ID-78 Hanging fire on this for now .link-colour(@text-colour);
 
         blockquote.quotes {
           color: inherit;
         }
+      }
+    }
+  }
+
+  .filled(@class, @bg, @text-colour, @link-colour) when not (@link-colour = inherit) {
+    .boxstyle_, .boxstyle-xs, .boxstyle-sm, .boxstyle-md, .boxstyle-lg {
+      &@{class} {
+        .link-colour(@text-colour);
       }
     }
   }

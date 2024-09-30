@@ -1,0 +1,14 @@
+@debug-enabled: false;
+
+// If @debug-enabled is true, outputs some debug data at the
+// current location. Normally the key might be a CSS variable name.
+// Useful for debugging intermediate values that you aren't otherwise
+// using.
+// May not work inside a mixin that is being captured into a variable.
+.debug(@key, @value) when (@debug-enabled) {
+  .debug-data {
+    @{key}: @value;
+  }
+}
+
+.debug(@key, @value) when (default()) {}

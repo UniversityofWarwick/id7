@@ -1,0 +1,107 @@
+#wcag {
+  @aa-contrast: 4.5;
+
+  // Calculates the contrast between a dark colour and a background colour,
+  // and returns the foreground colour that gives the best contrast (whether
+  // that passes AA or not).
+  .contrast(@background, @light, @dark) {
+    @contrast-ratio-light: #wcag.contrast-ratio(@background, @light)[@result];
+    @contrast-ratio-dark: #wcag.contrast-ratio(@background, @dark)[@result];
+
+    @result: if(@contrast-ratio-dark >= @contrast-ratio-light,
+      @dark,
+      @light
+    )
+  }
+
+  // Similar to .contrast, but it will strongly prefer the preferred colour
+  // if it passes AA, and will only use the fallback colour if it has to.
+  //
+  // There is an assumption here that @background and @fallback pass AA.
+  // If they don't, you may get a result that doesn't pass AA.
+  .contrast-fallback(@background, @preferred, @fallback) {
+    @contrast-ratio-preferred: #wcag.contrast-ratio(@background, @preferred)[@result];
+    @contrast-ratio-fallback: #wcag.contrast-ratio(@background, @fallback)[@result];
+
+    @result: if(@contrast-ratio-preferred >= #wcag[@aa-contrast],
+      @preferred,
+      @fallback
+    );
+  }
+
+
+
+  // Contrast on steroids. This function may also modify the background colour
+  // in order to make a colour pass the contrast threshold, and it heavily
+  // favours the light colour over the dark colour because of situations such
+  // as navigation where
+  .ultra-contrast(@background, @light, @dark) {
+    @target-contrast: #wcag[@aa-contrast];
+
+    @lighter-background: lighten(@background, 25%);
+    @darker-background: darken(@background, 15%);
+
+    @light-aa: boolean(#wcag.contrast-ratio(@background, @light)[@result] > @target-contrast);
+    @dark-aa: boolean(#wcag.contrast-ratio(@background, @dark)[@result] > @target-contrast);
+
+    @enhanced-dark-aa: boolean(#wcag.contrast-ratio(@lighter-background, @dark)[@result] > @target-contrast);
+    @enhanced-light-aa: boolean(#wcag.contrast-ratio(@darker-background, @light)[@result] > @target-contrast);
+
+    @choice: if(@light-aa,
+      {
+        @msg: "Light colour passes AA";
+        @fg: @light;
+        @bg: @background;
+      },
+      if(@dark-aa,
+        {
+            @msg: "Dark colour passes AA";
+            @fg: @dark;
+            @bg: @background;
+        },
+        if(@enhanced-dark-aa,
+          {
+            @msg: "Dark colour passes AA with tweak";
+            @fg: @dark;
+            @bg: @lighter-background;
+          },
+          if(@enhanced-light-aa,
+            {
+              @msg: "Light colour passes AA with tweak";
+              @fg: @light;
+              @bg: @darker-background;
+            },
+            // final else: nothing worked, fall back to light text :|
+            {
+              @msg: "No colour passes AA, falling back to light text";
+              @fg: @light;
+              @bg: @background;
+            }
+          )
+        )
+      )
+    );
+
+    @msg: @choice[@msg];
+    @fg: @choice[@fg];
+    @bg: @choice[@bg];
+  }
+
+  // Calculates the WCAG contrast ratio between two colours.
+  // Result properties:
+  // - @result: the contrast ratio between the two colours.
+  // - @c1-luma: the luma of the first colour.
+  // - @c2-luma: the luma of the second colour.
+  // - @light-luma: the luma of the lighter of the two colours.
+  // - @dark-luma: the luma of the darker of the two colours.
+  .contrast-ratio(@c1, @c2) {
+    @c1-luma: luma(@c1);
+    @c2-luma: luma(@c2);
+
+    @light-luma: max(@c1-luma, @c2-luma);
+    @dark-luma: min(@c1-luma, @c2-luma);
+
+    @result: round(unit(((@light-luma+5)/(@dark-luma+5))), 2);
+  }
+}
+

@@ -55,11 +55,11 @@
     }
   }
 
-  #boxstyle > .filled(~'.box1', screen(@id7-brand-purple, darken(white, 40%)));
-  #boxstyle > .filled(~'.box2', screen(@id7-brand-purple, darken(white, 10%)));
-  #boxstyle > .filled(~'.box3', #e6e6e6);
-  #boxstyle > .image(~'.box4', ~'url(../site/site1/banner-image.jpg) top right no-repeat', white);
-  #boxstyle > .image(~'.box5', ~'url(../site/site3/banner-image.jpg) top right no-repeat', white);
+  #boxstyle.filled(~'.box1', screen(@id7-brand-purple, darken(white, 40%)), @text-color, @text-color);
+  #boxstyle.filled(~'.box2', screen(@id7-brand-purple, darken(white, 10%)), @text-color, @id7-brand-purple);
+  #boxstyle.filled(~'.box3', #e6e6e6, @text-color, @id7-brand-purple);
+  #boxstyle.image(~'.box4', ~'url(../site/site1/banner-image.jpg) top right no-repeat', white);
+  #boxstyle.image(~'.box5', ~'url(../site/site3/banner-image.jpg) top right no-repeat', white);
 
   .feature-box {
     .heading {
