@@ -11,7 +11,7 @@
     @result: if(@contrast-ratio-dark >= @contrast-ratio-light,
       @dark,
       @light
-    )
+    );
   }
 
   // Similar to .contrast, but it will strongly prefer the preferred colour
@@ -21,7 +21,6 @@
   // If they don't, you may get a result that doesn't pass AA.
   .contrast-fallback(@background, @preferred, @fallback) {
     @contrast-ratio-preferred: #wcag.contrast-ratio(@background, @preferred)[@result];
-    @contrast-ratio-fallback: #wcag.contrast-ratio(@background, @fallback)[@result];
 
     @result: if(@contrast-ratio-preferred >= #wcag[@aa-contrast],
       @preferred,
@@ -34,12 +33,12 @@
   // Contrast on steroids. This function may also modify the background colour
   // in order to make a colour pass the contrast threshold, and it heavily
   // favours the light colour over the dark colour because of situations such
-  // as navigation where
+  // as navigation where the background colour is not known.
   .ultra-contrast(@background, @light, @dark) {
     @target-contrast: #wcag[@aa-contrast];
 
-    @lighter-background: lighten(@background, 25%);
-    @darker-background: darken(@background, 15%);
+    @lighter-background: tint(@background, 40%);
+    @darker-background: screen(@background, darken(white, 30%));
 
     @light-aa: boolean(#wcag.contrast-ratio(@background, @light)[@result] > @target-contrast);
     @dark-aa: boolean(#wcag.contrast-ratio(@background, @dark)[@result] > @target-contrast);
@@ -57,7 +56,9 @@
         {
             @msg: "Dark colour passes AA";
             @fg: @dark;
-            @bg: @background;
+            // @background would pass AA here but we've decided to go lighter for that extra boost,
+            // as AA black text just doesn't appear as contrasting in practice.
+            @bg: @lighter-background;
         },
         if(@enhanced-dark-aa,
           {
