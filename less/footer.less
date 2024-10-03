@@ -62,6 +62,17 @@ footer {
   }
 }
 
+// ID-428 Remove W cutout in ID7.1
+body.id7-point-1 footer {
+  .id7-site-footer, .id7-app-footer {
+    @media screen {
+      .id7-logo-bleed {
+        display: none;
+      }
+    }
+  }
+}
+
 .id7-non-branded {
   .id7-page-footer {
     .id7-site-footer, .id7-app-footer {
