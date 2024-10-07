@@ -138,6 +138,9 @@ From version 2.9.7 onwards, you can apply the new "ID7.1" styling to the site ma
   - Bootstrap typeahead now adds aria- attributes to parent elements. If you use typeahead directly, ensure your input field is inside a reasonable container element (a Bootstrap column or `.form-group` is fine)
 - **2.9.0**:
   - The `id7-site-footer` and `id7-app-footer` elements now require a nested content element, `id7-site-footer-content` and `id7-app-footer-content` respectively. The template has been updated to reflect this.
+- **2.9.10**:
+  - Using the 7.1 design requires the `id7-point-1` class to be on the `<body>` element.
+  - If building your own CSS, LESS must be at least version 3.5.
 
 ## Copyright and license
 
