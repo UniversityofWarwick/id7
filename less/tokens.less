@@ -1,0 +1,14 @@
+@import (reference) "variables";
+
+// value/reference tokens - these should generally only be referred to by other tokens,
+// to allow swapping out for theming.
+:root {
+  --id7-ref-purple: @id7-brand-purple;
+  --id7-ref-purple-contrast: white;
+}
+
+// system tokens - overridden by themes
+:root {
+  --id7-sys-primary-bg: var(--id7-ref-purple);
+  --id7-sys-primary-on-bg: var(--id7-ref-)
+}
