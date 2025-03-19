@@ -19,7 +19,6 @@ const paths = {
   ASSETS: path.join(__dirname, 'dist'),
   ASSETS_IMAGES(basePath) { return path.join(basePath, 'images'); },
   ASSETS_CSS(basePath) { return path.join(basePath, 'css'); },
-  ASSETS_HOMEPAGE_2019_CSS(basePath) { return path.join(basePath, 'hp-2019/css'); },
   ASSETS_FONTS(basePath) { return path.join(basePath, 'fonts'); },
   ASSETS_TEMPLATES(basePath) { return path.join(basePath, 'templates'); },
   BUNDLE: './js/id7-bundle.js',
@@ -29,13 +28,10 @@ const paths = {
   ID7_BORDERLESS: './less/id7-borderless.less',
   ID6A: './less/id6a.less',
   NODE_MODULES: path.join(__dirname, 'node_modules'),
-  BOOTSTRAP: path.join(__dirname, 'node_modules/bootstrap'),
   FONTAWESOME_FONTS: path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts'),
   FONTAWESOME_PRO_FONTS: path.join(__dirname, 'node_modules/@fortawesome/fontawesome-pro/webfonts'),
   TEMPLATES: path.join(__dirname, 'templates'),
   PUBLIC_PATH: '/static',
-  HOMEPAGE_2019_JS: './js/hp-2019/hp.js',
-  HOMEPAGE_2019_LESS: './less/hp-2019/hp.less',
   DOCS_ASSETS: path.join(__dirname, 'docs/dist'),
 };
 
@@ -78,12 +74,7 @@ const commonConfig = basePath => merge([
           trash: false,
         },
       }),
-    ],
-    resolve: {
-      alias: {
-        bootstrap: paths.BOOTSTRAP,
-      },
-    },
+    ]
   },
   tooling.lintJS(),
   tooling.transpileJS(),
@@ -117,70 +108,6 @@ const commonConfig = basePath => merge([
       'css/id7-wide': paths.ID7_WIDE,
       'css/id7-borderless': paths.ID7_BORDERLESS,
       'css/id6a': paths.ID6A,
-    },
-  },
-]);
-
-const homepage2019Config = basePath => merge([
-  {
-    output: {
-      path: basePath,
-      publicPath: paths.PUBLIC_PATH,
-    },
-    node: {
-      // Fix Webpack global CSP violation https://github.com/webpack/webpack/issues/6461
-      global: false,
-    },
-    plugins: [
-      new ProvidePlugin({
-        // Fix Webpack global CSP violation https://github.com/webpack/webpack/issues/6461
-        global: require.resolve('./build-tooling/global.js'),
-      }),
-      new RemovePlugin({
-        before: {
-          root: paths.ROOT,
-          allowRootAndOutside: true,
-          include: [basePath],
-          log: false,
-          trash: false,
-        },
-        after: {
-          root: paths.ROOT,
-          allowRootAndOutside: true,
-          test: [
-            {
-              folder: paths.ASSETS_HOMEPAGE_2019_CSS(basePath),
-              method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
-            },
-          ],
-          log: false,
-          trash: false,
-        },
-      }),
-    ],
-    resolve: {
-      alias: {
-        bootstrap: paths.BOOTSTRAP,
-      },
-    },
-  },
-  tooling.lintJS(),
-  tooling.transpileJS(),
-  tooling.extractCSS({
-    resolverPaths: [
-      paths.NODE_MODULES,
-    ],
-  }),
-  {
-    externals: {
-      jquery: 'jQuery',
-      'lodash-es': '_',
-    },
-  },
-  {
-    entry: {
-      'hp-2019/js/hp': paths.HOMEPAGE_2019_JS,
-      'hp-2019/css/hp': paths.HOMEPAGE_2019_LESS,
     },
   },
 ]);
@@ -243,10 +170,6 @@ const docsConfig = merge([
           to: path.join(paths.DOCS_ASSETS, 'docs/id6'),
         },
         {
-          from: './docs/assets/hp-2019/images',
-          to: path.join(paths.DOCS_ASSETS, 'docs/hp-2019/images'),
-        },
-        {
           from: './docs/assets/site',
           ignore: ['*.less', '*.js'],
           to: path.join(paths.DOCS_ASSETS, 'docs/site'),
@@ -266,17 +189,7 @@ module.exports = ({ production, docs } = {}) => {
     mainConfig = merge(commonConfig(paths.ASSETS), developmentConfig);
   }
 
-  let hp2019Config;
-  if (production) {
-    hp2019Config = merge(homepage2019Config(paths.ASSETS), productionConfig);
-  } else if (docs) {
-    hp2019Config = merge(homepage2019Config(paths.DOCS_ASSETS), productionConfig, docsConfig);
-  } else {
-    hp2019Config = merge(homepage2019Config(paths.ASSETS), developmentConfig);
-  }
-
   return [
     merge(mainConfig, { name: 'main' }),
-    merge(hp2019Config, { name: 'homepage2019' }),
   ];
 };
