@@ -3,10 +3,19 @@
 @import (reference) '../../../less/variables.less';
 @import (reference) '../../../less/mixins.less';
 
+.example-site-styles(@path) {
+  .apply-site-imagery(@path);
+  // Our extra specificity breaks some styles in the ID7 theme, so we need to reapply them
+  body.id7-point-1 .id7-utility-masthead {
+    background-image: none;
+    background-color: white;
+  }
+}
+
 html {
-  &.site1 { .apply-site-imagery('/dist/docs/site/site1'); }
-  &.site2 { .apply-site-imagery('/dist/docs/site/site2'); }
-  &.site3 { .apply-site-imagery('/dist/docs/site/site3'); }
+  &.site1 { .example-site-styles('/dist/docs/site/site1'); }
+  &.site2 { .example-site-styles('/dist/docs/site/site2'); }
+  &.site3 { .example-site-styles('/dist/docs/site/site3'); }
 }
 
 .apply-brand(@id7-brand-purple);
