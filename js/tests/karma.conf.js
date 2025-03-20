@@ -4,7 +4,7 @@ process.env.CHROME_BIN = require('puppeteer').executablePath();
 
 const browsers = [
   // 'PhantomJS',
-  'ChromeHeadless',
+  'ChromeHeadlessNoSandbox',
 ];
 
 const frameworks = [
@@ -40,6 +40,12 @@ const conf = {
   junitReporter: {
     outputDir: '_build/test-reports',
   },
+  customLaunchers: {
+    ChromeHeadlessNoSandbox: {
+      base: 'ChromeHeadless',
+      flags: ['--no-sandbox']
+    }
+  }
 };
 
 plugins.push(
