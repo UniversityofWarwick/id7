@@ -1,7 +1,7 @@
 .apply-masthead-width(@breakpoint-name, @min-width, @max-width) {
   .id7-utility-masthead {
     &::before {
-      .svg-background-with-fallback('@{id7-image-root-dir}/masthead-logo-bleed-borderless-@{breakpoint-name}', '@{id7-image-root-dir}/masthead-logo-bleed-borderless-@{breakpoint-name}', 0 @id7-masthead-bleed-height);
+      .svg-background('@{id7-image-root-dir}/masthead-logo-bleed-borderless-@{breakpoint-name}', 0 @id7-masthead-bleed-height);
       background-size: @max-width 300px;
       width: @max-width;
 
@@ -14,16 +14,12 @@
   }
 }
 
-.apply-wide-viewport-support() when (@borderless-container) {
+@borderless-rules: {
   @media (min-width: @grid-float-breakpoint) {
     .id7-left-border, .id7-right-border {
       display: none;
       background-image: none !important;
     }
-  }
-
-  html {
-    overflow-x: hidden; // Avoid horizontal scrollbar
   }
 
   // Escape the fixed width container
@@ -110,14 +106,31 @@
     .apply-masthead-width('lg', @container-lg, 3000px);
   }
 }
-.apply-wide-viewport-support() when (@borderless-container) and (@support-xl-viewport) {
+
+.apply-wide-viewport-support() when (@support-xl-viewport) {
   @media (min-width: @screen-xl-min) {
     .apply-masthead-width('xl', @container-xl, 3000px);
   }
 }
-.apply-wide-viewport-support() when (@borderless-container) and (@support-xl-viewport) and (@support-2xl-viewport) {
+.apply-wide-viewport-support() when (@support-xl-viewport) and (@support-2xl-viewport) {
   @media (min-width: @screen-2xl-min) {
     .apply-masthead-width('2xl', @container-2xl, 3000px);
   }
 }
-.apply-wide-viewport-support();
+
+// Global borderless using @borderless-container
+.conditional-borderless-support() when (@borderless-container) {
+  html {
+    overflow-x: hidden; // Avoid horizontal scrollbar
+  }
+  .apply-wide-viewport-support();
+  @borderless-rules();
+}
+.conditional-borderless-support();
+
+// Built-in conditional borderless by applying the body style
+html.id7-borderless {
+  overflow-x: hidden; // Avoid horizontal scrollbar
+  .apply-wide-viewport-support();
+  @borderless-rules();
+}

@@ -1,14 +1,8 @@
 .container(@gutter) {
   .container-fixed(@gutter);
 
-  @media screen and (min-width: @screen-sm-min) {
-    width: @container-sm;
-  }
-  @media screen and (min-width: @screen-md-min) {
-    width: @container-md;
-  }
-  @media screen and (min-width: @screen-lg-min) {
-    width: @container-lg;
+  @media screen {
+    width: var(--w-sys-containerWidth);
   }
 }
 
@@ -220,7 +214,7 @@ button.close {
   color: @text-muted;
 }
 
-// Contrast fixes ID-347 
+// Contrast fixes ID-347
 
 .help-block {
   color: darken(@text-muted, 10%);

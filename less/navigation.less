@@ -16,20 +16,8 @@
   &.affix {
     position: fixed;
     top: @id7-affixed-header-height;
-    width: 100%;
+    width: var(--w-sys-containerWidth);
     z-index: 20;
-
-    @media screen and (min-width: @screen-sm-min) {
-      width: @container-sm;
-    }
-
-    @media screen and (min-width: @screen-md-min) {
-      width: @container-md;
-    }
-
-    @media screen and (min-width: @screen-lg-min) {
-      width: @container-lg;
-    }
 
     &.headroom {
       transition: transform 100ms linear;

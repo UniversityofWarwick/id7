@@ -13,8 +13,14 @@ slug: examples/borderless
 </p>
 
 <p>
-    Either include <code>id7-borderless.css</code> instead of <code>id7.css</code>, or if you are building your own assets,
-    set the LessCSS variable:
+    To enable borderless for a single page, add the <code>.id7-borderless</code> class to the html tag:
+</p>
+
+<pre><code class="language-html">&lt;html class="id7-borderless"&gt;</code></pre>
+
+<p>
+    To enable borderless for an entire application, either include <code>id7-borderless.css</code> instead of <code>id7.css</code>, 
+    or if you are building your own assets, set the LessCSS variable:
 </p>
 
 <pre><code class="language-less">@borderless-container: false; // Set to true to have a borderless container</code></pre>

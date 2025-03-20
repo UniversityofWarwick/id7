@@ -1,111 +1,11 @@
 // Support wider viewports than standard
-.container(@gutter) {
-  .container-fixed(@gutter);
-
-  @media screen and (min-width: @screen-sm-min) {
-    width: @container-sm;
-  }
-  @media screen and (min-width: @screen-md-min) {
-    width: @container-md;
-  }
-  @media screen and (min-width: @screen-lg-min) {
-    width: @container-lg;
-  }
-}
-
-.container(@gutter) when (@support-xl-viewport) {
-  @media screen and (min-width: @screen-xl-min) {
-    width: @container-xl;
-  }
-}
-
-.container(@gutter) when (@support-xl-viewport) and (@support-2xl-viewport) {
-  @media screen and (min-width: @screen-2xl-min) {
-    width: @container-2xl;
-  }
-}
-
-.container-fluid(@gutter) {
-  .container-fixed(@gutter);
-}
-
-.apply-wide-viewport-support() when (@support-xl-viewport) {
-  .id7-fixed-width-container {
-    @media screen and (min-width: @screen-xl-min) {
-      width: @container-xl;
-    }
-  }
-
-  @media screen and (min-width: @screen-xl-min) {
-    .id7-left-border {
-      .translate((-(@container-xl / 2)), 0);
-    }
-    .id7-right-border {
-      .translate((@container-xl / 2), 0);
-    }
-  }
-
-  .id7-masthead {
-    // Need a wider version of the SVGs/PNGs in the masthead
-    @media (min-width: @screen-xl-min) {
-      .svg-background-with-fallback("@{id7-image-root-dir}/masthead-logo-bleed-lg", "@{id7-image-root-dir}/masthead-logo-bleed-lg");
-      background-size: @container-2xl 300px;
-    }
-
-    .id7-header-text h1.affix {
-      @media (min-width: @screen-xl-min) {
-        width: @container-xl;
-      }
-    }
-  }
-
-  .id7-navigation.affix {
-    @media (min-width: @screen-xl-min) {
-      width: @container-xl;
-    }
-  }
-}
-.apply-wide-viewport-support() when (@support-xl-viewport) and (@support-2xl-viewport) {
-  .id7-fixed-width-container {
-    @media screen and (min-width: @screen-2xl-min) {
-      width: @container-2xl;
-    }
-  }
-
-  @media screen and (min-width: @screen-2xl-min) {
-    .id7-left-border {
-      .translate((-(@container-2xl / 2)), 0);
-    }
-    .id7-right-border {
-      .translate((@container-2xl / 2), 0);
-    }
-  }
-
-  .id7-masthead .id7-header-text h1.affix {
-    @media (min-width: @screen-2xl-min) {
-      width: @container-2xl;
-    }
-  }
-
-  .id7-navigation.affix {
-    @media (min-width: @screen-2xl-min) {
-      width: @container-2xl;
-    }
-  }
-}
-.apply-wide-viewport-support();
-
 .id7-main-content-area {
   > header, > .id7-main-content {
     .container((@grid-gutter-width * 2));
   }
 }
 
-.id7-paging {
-  .container((@grid-gutter-width * 2));
-}
-
-// col-xl and col-2xl
+// col-xl-* and col-2xl-* classes
 .make-xl-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   min-height: 1px;
