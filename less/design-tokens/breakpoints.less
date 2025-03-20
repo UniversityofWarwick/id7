@@ -1,0 +1,23 @@
+:root {
+  --w-sys-containerWidth: 100%;
+
+  @media screen and (min-width: @screen-sm-min) {
+    --w-sys-containerWidth: @container-sm;
+  }
+  @media screen and (min-width: @screen-md-min) {
+    --w-sys-containerWidth: @container-md;
+  }
+  @media screen and (min-width: @screen-lg-min) {
+    --w-sys-containerWidth: @container-lg;
+  }
+  & when (@support-xl-viewport) {
+    @media screen and (min-width: @screen-xl-min) {
+      --w-sys-containerWidth: @container-xl;
+    }
+  }
+  & when (@support-xl-viewport) and (@support-2xl-viewport) {
+    @media screen and (min-width: @screen-2xl-min) {
+      --w-sys-containerWidth: @container-2xl;
+    }
+  }
+}

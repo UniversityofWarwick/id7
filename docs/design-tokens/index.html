@@ -1,0 +1,69 @@
+---
+layout: default
+title: Design tokens
+slug: design-tokens
+---
+
+<div class="row">
+  <section class="col-sm-9">
+    <p>
+        Design tokens are an increasingly popular way to describe the various values and measurements that make up
+        a standard design. They can be colours, sizes, fonts, and other values.
+    </p>
+    <p>
+        In ID7 we use a set of tokens in the form of LESS variables, which can be adjusted for individual
+        applications and sites. However they have a few issues in practice:
+    </p>
+      <ul>
+        <li>There is no separation between "internal" and "public" variables, so it's difficult to know which
+            variables you can reliably use and modify.</li>
+        <li>LESS variables are not dynamic, which limits how they can be used to theme and customise components.</li>
+        <li>Values tend to be offered individually, but in many cases sets of values go together well. A good example
+            is pairs of colours for use as background and text colour - it's hard to know ahead of time if they
+            will display with enough contrast to be readable.</li>
+      </ul>
+    <p>
+        With this in mind we will gradually be introducing design tokens implemented as CSS custom properties.
+        We will clearly document which tokens can be safely used in your own designs, allowing you to implement
+        interfaces that respond dynamically to theme changes and colour contrast, and maintain a consistent look and
+        feel. Google's <a href="https://m3.material.io/foundations/design-tokens/overview">Material Design</a> site has a
+        good overview of the concept.
+    </p>
+
+    <p>
+        We haven't made any tokens public yet but the first ones will likely be colour pairings to be used together
+        as background and foreground colours, which will have guaranteed contrast and automatically re-theme themselves
+        when used across different sites.
+    </p>
+
+    <h2>Token naming system</h2>
+
+    Token names will have three parts:
+
+      <ul>
+          <li>The brand identifier - in this case <code>w</code> for Warwick</li>
+          <li>The token class:
+              <ul>
+                  <li><code>ref</code> - a reference token usually has a fixed value and wouldn't be used directly</li>
+                  <li><code>sys</code> - a system token is semantic and describes a particular use for a value.
+                      It is likely to be based on a reference token but will vary depending
+                  </li>
+              </ul>
+          </li>
+          <li>
+            The token description - explaining what it is or what it's for
+          </li>
+      </ul>
+
+      <p>An example (nonexistant) token name might be <code>--w-sys-foregroundColor</code>.</p>
+
+
+  </section>
+  <aside class="col-sm-3">
+    <!--<div class="id7-docs-sidebar" role="complementary">
+      <ul class="nav id7-docs-sidenav">
+        <li><a href="#item1">Item 1</a></li>
+      </ul>
+    </div>-->
+  </aside>
+</div>
