@@ -55,7 +55,10 @@
   }
 
   // White bleed over the masthead image.
-  background-image: url("@{id7-image-root-dir}/masthead-logo-bleed-wide-lg.svg");
+  background-image: url("@{id7-image-root-dir}/masthead-logo-bleed-xs.svg");
+  @media (min-width: @screen-sm-min) {
+    background-image: url("@{id7-image-root-dir}/masthead-logo-bleed-lg.svg");
+  }
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: auto 300px;

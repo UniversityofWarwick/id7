@@ -141,11 +141,19 @@ From version 2.9.7 onwards, you can apply the new "ID7.1" styling to the site ma
 - **2.9.10**:
   - Using the 7.1 design requires the `id7-point-1` class to be on the `<body>` element.
   - If building your own CSS, LESS must be at least version 3.5.
+- **2.10.0**:
+  - Some styles are now based on CSS custom properties (CSS variables). There shouldn't be a noticeable
+    difference to your site.
+  - If you are currently importing your own subset of ID7 intead of using `id7-no-fa` or similar then you
+    will need to make sure to import `design-tokens/all` to ensure that the new CSS custom properties are
+    defined. If you don't do this then a lot of things will look wrong.
 
 ## Copyright and license
 
 Bootstrap is licensed under the [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE).
 
 ID7 is licensed under the [ISC license](https://github.com/UniversityofWarwick/id7/blob/master/LICENSE).
+
+This project includes a modified version of Bootstrap 3. Changes have been made to the original code.
 
 Note that Access to the University web-site is subject to the separate, [published copyright notice](https://warwick.ac.uk/terms/copyright).
