@@ -54,16 +54,18 @@
     height: @id7-masthead-logo-height-xs;
   }
 
-  .svg-background-with-fallback("@{id7-image-root-dir}/masthead-logo-bleed-xs", "@{id7-image-root-dir}/masthead-logo-bleed-xs");
-  background-size: 1680px 300px;
+  // White bleed over the masthead image.
+  background-image: url("@{id7-image-root-dir}/masthead-logo-bleed-xs.svg");
+  @media (min-width: @screen-sm-min) {
+    background-image: url("@{id7-image-root-dir}/masthead-logo-bleed-lg.svg");
+  }
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: auto 300px;
 
   @media (min-width: @grid-float-breakpoint) {
-    .svg-background-with-fallback("@{id7-image-root-dir}/masthead-logo-bleed-sm", "@{id7-image-root-dir}/masthead-logo-bleed-sm");
-    background-size: @container-lg 300px;
-
     .id7-logo-row {
       height: @id7-masthead-logo-height-sm;
-
       > .id7-logo {
         width: @id7-masthead-logo-width-sm;
         float: left;
@@ -123,33 +125,9 @@
       top: 0;
       margin: 0 (-@grid-gutter-width / 2);
       padding: 0 @grid-gutter-width;
-      width: 100%;
+      width: var(--w-sys-containerWidth);
       z-index: 10;
       background-color: white;
-
-      @media screen and (min-width: @screen-sm-min) {
-        width: @container-sm;
-      }
-
-      @media screen and (min-width: @screen-md-min) {
-        width: @container-md;
-      }
-
-      @media screen and (min-width: @screen-lg-min) {
-        width: @container-lg;
-      }
-
-      & when (@support-xl-viewport) {
-        @media screen and (min-width: @screen-xl-min) {
-          width: @container-xl;
-        }
-      }
-
-      & when (@support-2xl-viewport) {
-        @media screen and (min-width: @screen-2xl-min) {
-          width: @container-2xl;
-        }
-      }
 
       &.headroom {
         transition: transform 100ms linear;
