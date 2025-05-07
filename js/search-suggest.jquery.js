@@ -1,9 +1,9 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import _ from 'lodash-es';
+import { escape } from './html-utils';
 import FeatureDetect from './feature-detect';
 
-require('./bootstrap-3-typeahead.jquery');
+import './bootstrap-3-typeahead.jquery';
 
 /**
  * Use Bootstrap 3 typeahead to provide Go.Warwick suggestions on an <input>
@@ -83,7 +83,7 @@ $.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
       },
       minLength,
       display: (item) => item.path,
-      displayText: (o) => `<div><p class="go-path">${_.escape(o.path)}</p><p class="go-description">${(typeof o.description !== 'undefined' ? _.escape(o.description) : '')}</p></div>`,
+      displayText: (o) => `<div><p class="go-path">${escape(o.path)}</p><p class="go-description">${(typeof o.description !== 'undefined' ? escape(o.description) : '')}</p></div>`,
       itemLink: (item) => `https://go.warwick.ac.uk/${item.path}?goSearchReferer=${encodeURIComponent(window.location)}&goSearchQuery=${encodeURIComponent($(el).val())}`,
     }));
 

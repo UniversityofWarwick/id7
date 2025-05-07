@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import _ from 'lodash-es';
 import log from 'loglevel';
+import { escape } from './html-utils';
 
 import currentScreenSize from './screen-sizes';
 
@@ -12,7 +12,7 @@ const Config = {
      */
     Popover(o) {
       return `<div class="account-info">
-        <iframe src="${_.escape(o.useMwIframe ? `${o.iframelink}?embedded` : o.legacyIframeLink)}" 
+        <iframe src="${escape(o.useMwIframe ? `${o.iframelink}?embedded` : o.legacyIframeLink)}" 
                 scrolling="auto" frameborder="0" allowtransparency="true" 
                 seamless 
                 sandbox="allow-same-origin allow-scripts allow-top-navigation allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
@@ -20,7 +20,7 @@ const Config = {
         <div class="actions">
           <div class="btn-group btn-group-justified">
             <div class="btn-group sign-out">
-              <a href="${_.escape(o.logoutlink)}" class="btn btn-default">Sign out</a>
+              <a href="${escape(o.logoutlink)}" class="btn btn-default">Sign out</a>
             </div>
           </div>
         </div>`;
@@ -30,9 +30,9 @@ const Config = {
      */
     Action(o) {
       return `<div class="btn-group">
-        <a href="${_.escape(o.href)}" 
-           title="${_.escape(o.tooltip)}" 
-           class="btn btn-default ${_.escape(o.classes)}">${_.escape(o.title)}</a>
+        <a href="${escape(o.href)}" 
+           title="${escape(o.tooltip)}" 
+           class="btn btn-default ${escape(o.classes)}">${escape(o.title)}</a>
         </div>`;
     },
   },
@@ -210,14 +210,14 @@ class AccountPopover {
     const $popover = this.$trigger.next('.popover');
 
     switch (messageType) {
-      case 'addAction':
-        _.defaults(data, { classes: '', tooltip: '' });
-
-        $popover.find('.actions > .btn-group').prepend(Config.Templates.Action(data));
+      case 'addAction': {
+        const d = { ...data, classes: '', tooltip: '' };
+        $popover.find('.actions > .btn-group').prepend(Config.Templates.Action(d));
         $popover.find('.actions > .btn-group > .btn-group').first().find('[title]:not([title=""])').tooltip({
           placement: 'bottom',
         });
         break;
+      }
       case 'resizeIframe':
         $popover.find('.account-info iframe').height(data.height);
         break;
@@ -297,7 +297,7 @@ $(() => {
         });
       }
     } catch (error) {
-      // ignore
+      log.error('Error parsing message data', error);
     }
   });
 });

@@ -1,6 +1,5 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import _ from 'lodash-es';
 
 import currentScreenSize from './screen-sizes';
 import changeLocationHash from './change-location-hash';
@@ -197,10 +196,13 @@ class Navigation {
       $moreContainer.addClass('hidden');
 
       if (!options.collapseSmallscreen || screenConfig.name !== 'xs') {
-        const isWrapped = () => _.some(
-          _.union($nav.find('> li').get(), $moreContainer.get()),
-          (el) => $(el).is(':visible') && $(el).position().top > 0,
-        );
+        const isWrapped = () => {
+          const items = [
+            ...$nav.find('> li').get(),
+            ...$moreContainer.get(),
+          ];
+          return items.some((el) => $(el).is(':visible') && $(el).position().top > 0);
+        };
 
         if (isWrapped()) {
           $moreContainer.removeClass('hidden');
@@ -230,7 +232,7 @@ class Navigation {
         $navbar.addClass('important-no-transition');
         $navbar.toggleClass('navbar-wrapped', isWrapped);
 
-        _.defer(() => $navbar.removeClass('important-no-transition'));
+        setTimeout(() => $navbar.removeClass('important-no-transition'), 1);
       }
     });
   }
