@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import { escape } from './html-utils';
 import log from 'loglevel';
+import { escape } from './html-utils';
 
 import currentScreenSize from './screen-sizes';
 

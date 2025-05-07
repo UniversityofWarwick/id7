@@ -4,7 +4,7 @@ const MAPPINGS = {
   '<': '&lt;',
   '>': '&gt;',
   '"': '&quot;',
-  "'": '&#39;'
+  "'": '&#39;',
 };
 
 const HTML_CHARS_PATTERN = /[&<>"']/g;
