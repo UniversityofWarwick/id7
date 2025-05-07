@@ -297,7 +297,7 @@ $(() => {
         });
       }
     } catch (error) {
-      // ignore
+      log.error('Error parsing message data', error);
     }
   });
 });
