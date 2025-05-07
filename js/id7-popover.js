@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import _ from 'lodash-es';
 
 
 /*
@@ -39,9 +38,10 @@ $.fn.id7Popover = function id7Popover(options) {
   // TAB-7486 If we want the popover to be tabbed into
   // i.e. when we don't have a focus trigger, bind an enter trigger to click
   const $nonFocusItems = $items.filter((i, el) => {
-    const elOpts = _.merge({}, opts, {
+    const elOpts = {
+      ...opts,
       trigger: $(el).data('trigger'),
-    });
+    };
     return (elOpts.trigger || '').indexOf('focus') === -1;
   });
   $nonFocusItems.on('keypress', function handleEnter(event) {

@@ -1,5 +1,4 @@
 /* eslint-env browser */
-import _ from 'lodash-es';
 
 const ScreenSizes = [
   {
@@ -17,7 +16,7 @@ const ScreenSizes = [
 ];
 
 export default function currentScreenSize() {
-  return _.find(ScreenSizes, (screenConfig) => screenConfig.matcher().matches);
+  return ScreenSizes.find((screenConfig) => screenConfig.matcher().matches);
 }
 
 export function allScreenSizes() {
