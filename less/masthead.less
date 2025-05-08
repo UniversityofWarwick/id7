@@ -9,7 +9,6 @@
     .make-sm-column(8);
 
     float: left;
-    width: @id7-masthead-logo-width-xs;
 
     @media (min-width: @grid-float-breakpoint) {
       margin-bottom: 2px;
@@ -20,7 +19,6 @@
     .make-sm-column(4);
 
     float: right;
-    margin-left: (-@id7-masthead-logo-width-xs);
     max-width: 50%;
     padding-left: 0;
 
@@ -37,10 +35,6 @@
           font-size: 1.15rem;
           line-height: 2.4em;
         }
-        &:-ms-input-placeholder { // Internet Explorer 10+
-          font-size: 1.15rem;
-          line-height: 2.4em;
-        }
         &::-webkit-input-placeholder {  // Safari and Chrome
           font-size: 1.15rem;
           line-height: 2.4em;
@@ -49,43 +43,22 @@
     }
   }
 
+
   .id7-logo-row {
-    .make-row();
-    height: @id7-masthead-logo-height-xs;
-  }
-
-  // White bleed over the masthead image.
-  background-image: url("@{id7-image-root-dir}/masthead-logo-bleed-xs.svg");
-  @media (min-width: @screen-sm-min) {
-    background-image: url("@{id7-image-root-dir}/masthead-logo-bleed-lg.svg");
-  }
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: auto 300px;
-
-  @media (min-width: @grid-float-breakpoint) {
-    .id7-logo-row {
-      height: @id7-masthead-logo-height-sm;
-      > .id7-logo {
-        width: @id7-masthead-logo-width-sm;
-        float: left;
-      }
-    }
+    display: flex;
+    align-items: flex-end;
   }
 
   .id7-logo a {
     display: block;
-    height: @id7-masthead-logo-height-xs;
-    width: 100%;
     text-align: center;
 
-    @media (min-width: @grid-float-breakpoint) {
-      height: @id7-masthead-logo-height-sm;
-    }
-
     img {
-      .opacity(0);
-      height: 100%; // BZ-687311
+      aspect-ratio: @id7-masthead-logo-aspect;
+      height: @id7-masthead-logo-height-xs;
+      @media (min-width: @grid-float-breakpoint) {
+        height: @id7-masthead-logo-height-sm;
+      }
     }
 
     &:focus {
@@ -164,6 +137,7 @@
     }
   }
 
+  // links alongside the logo
   .id7-logo-row nav {
     display: none;
 
@@ -171,13 +145,13 @@
       display: block;
     }
 
-    margin-left: @id7-masthead-logo-width-sm;
+    margin-left: @grid-gutter-width;
 
     &:not(:focus-within) {
-      .opacity(0);
+      opacity: 0;
     }
 
-    .transition(opacity 0.15s linear);
+    transition: opacity 0.15s linear;
     .small();
 
     @line-height-small-computed: (@font-size-small-px * @line-height-small); // ~17px
@@ -197,19 +171,6 @@
 
     @media (min-width: @grid-float-breakpoint) {
       margin-top: (@id7-masthead-search-offset-sm + (@line-height-computed / 2));
-    }
-  }
-}
-
-// Overrides for ID7.1, July 2024, ID-416
-body.id7-point-1 .id7-utility-masthead .id7-masthead {
-  background-image: none;
-
-  .id7-logo-column {
-    padding-left: 0;
-
-    .id7-logo > a > img {
-      opacity: 1;
     }
   }
 }

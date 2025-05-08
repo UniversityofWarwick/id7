@@ -44,10 +44,6 @@ id7/
 │   └── id7-bundle.js.map
 ├── images/
 │   ├── logo.png
-│   ├── masthead-logo-bleed-sm.svg
-│   ├── masthead-logo-bleed-sm.png
-│   ├── masthead-logo-bleed-xs.svg
-│   ├── masthead-logo-bleed-xs.png
 │   └── (and others)
 ├── fonts/
 │   └── (font files)
@@ -116,9 +112,10 @@ In your application you will need to do the following:
 
 ## Using ID7.1
 
-From version 2.9.7 onwards, you can apply the new "ID7.1" styling to the site masthead in your app. To do so:
+From version 2.9.7 onwards, you can apply the new "ID7.1" styling to the site masthead in your app.
+From 2.11.0, it is no longer optional and all sites will use the 7.1 styling.
+To do so:
 
-* Add the `id7-point-1` class to the `<body>` element in your templates
 * Replace the logo image `logo.png` with `logo.svg` in your templates
 * Update anything app-specific that needs updating - the whole masthead region should have a white background
 
@@ -147,6 +144,8 @@ From version 2.9.7 onwards, you can apply the new "ID7.1" styling to the site ma
   - If you are currently importing your own subset of ID7 intead of using `id7-no-fa` or similar then you
     will need to make sure to import `design-tokens/all` to ensure that the new CSS custom properties are
     defined. If you don't do this then a lot of things will look wrong.
+- **2.11.0**:
+  - The 7.1 design refresh is now the only option, so it no longer requires the `id7-point-1` class.
 
 ## Copyright and license
 

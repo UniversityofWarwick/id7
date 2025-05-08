@@ -31,14 +31,8 @@ footer {
   .id7-site-footer, .id7-app-footer {
     @media screen {
       .id7-logo-bleed {
-        .logo-as-css(auto, (@grid-gutter-width * 2), white);
-        position: absolute;
-        top: 0px;
-        right: 10%;
-
-        + * {
-          margin-top: @grid-gutter-width;
-        }
+        // Not currently used, so hide.
+        display: none;
       }
     }
   }
@@ -58,17 +52,6 @@ footer {
 
     .id7-horizontal-divider .divider {
       stroke: @text-color !important;
-    }
-  }
-}
-
-// ID-428 Remove W cutout in ID7.1
-body.id7-point-1 footer {
-  .id7-site-footer, .id7-app-footer {
-    @media screen {
-      .id7-logo-bleed {
-        display: none;
-      }
     }
   }
 }
