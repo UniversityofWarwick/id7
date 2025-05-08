@@ -79,25 +79,6 @@
       }
     }
   }
-
-  // Apply white bleed as a ::before pseudo-element.
-  // Use the same massive bleed SVG for all breakpoints.
-  @media (min-width: @screen-sm-min) {
-    .id7-utility-masthead {
-      @svg-width: 3000px;
-      &::before {
-        .svg-background('@{id7-image-root-dir}/masthead-logo-bleed-borderless-2xl', 0 @id7-masthead-bleed-height);
-        background-size: @svg-width 300px;
-        width: @svg-width;
-
-        left: calc((100vw - var(--w-sys-containerWidth)) / 2 - 572px);
-      }
-
-      &::after {
-        left: calc((50% - (@container-2xl / 2)) + @grid-gutter-width);
-      }
-    }
-  }
 }
 
 

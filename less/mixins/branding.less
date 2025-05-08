@@ -4,20 +4,8 @@
   @border-image-left: "border-image-left.jpg",
   @border-image-right: "border-image-right.jpg") {
 
-  .apply-masthead-image("@{basedir}/@{masthead-image}");
   .apply-left-border-image("@{basedir}/@{border-image-left}");
   .apply-right-border-image("@{basedir}/@{border-image-right}");
-}
-
-.apply-masthead-image(@url) {
-  .id7-utility-masthead {
-    background-image: url(@url);
-
-    body.id7-point-1 & {
-      background-image: none;
-      background-color: white;
-    }
-  }
 }
 
 .apply-left-border-image(@url) {
@@ -302,15 +290,12 @@
   }
 
   .id7-utility-masthead {
-    background-color: screen(@colour, lighten(black, 30%));
+    background-color: white;
   }
 
   // Colour of the "WARWICK" text on the logo
   .id7-utility-masthead::after {
-    background-color: @colour;
-    body.id7-point-1 & {
-      background-color: transparent;
-    }
+    background-color: transparent;
   }
 
   .id7-navigation .navbar-primary {

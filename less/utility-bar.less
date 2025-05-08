@@ -12,10 +12,14 @@
     .pull-right();
   }
 
-  .link-colour(white);
+  .link-colour(@text-color);
 
   > ul {
-    .horizontal-utility-links(0.4em, @gray-lighter);
+    .horizontal-utility-links(0.4em, @text-color);
+  }
+
+  a > .fa-stack.id7-notifications-badge {
+    > i { color: #dddddd; }
   }
 
   .caret { margin-left: 5px; }
@@ -156,15 +160,3 @@
   }
 }
 
-// Overrides for ID7.1, January 2024, ID-416
-body.id7-point-1 .id7-utility-masthead  .id7-utility-bar {
-  .link-colour(@text-color);
-
-  > ul {
-    .horizontal-utility-links(0.4em, @text-color);
-  }
-
-  a > .fa-stack.id7-notifications-badge {
-    > i { color: #dddddd; }
-  }
-}

@@ -1,5 +1,16 @@
 @import (reference) "../bootstrap/less/variables.less";
 
+// Version switches for different generations of the brand,
+// so we can continue to build older versions of the site (particularly
+// non-branded sites that were based on an older version).
+// One overall version for the whole site, and individual ones for
+// different areas that could be overriden individually.
+@id7-gen: 2024;
+// @id7-gen should not be referenced anywhere other than for these defaults!
+@id7-gen-font: @id7-gen;
+@id7-gen-buttons: @id7-gen;
+
+
 @grid-gutter-width:         20px;
 
 @container-tablet:          (730px + @grid-gutter-width);
@@ -50,10 +61,8 @@
 
 @id7-masthead-bleed-height: 24px;
 @id7-masthead-logo-height-xs: 54px;
-@id7-masthead-logo-height-sm: 80px;
-@id7-point-1-masthead-logo-height-sm: 75px;
-@id7-masthead-logo-width-xs: 110px;
-@id7-masthead-logo-width-sm: 160px;
+@id7-masthead-logo-height-sm: 75px;
+@id7-masthead-logo-aspect: (226/150); // image intrinsic dimensions
 
 @id7-masthead-search-offset-xs: 7px;
 @id7-masthead-search-offset-sm: 32px;
@@ -91,7 +100,11 @@
 @int-fa-font-path: '../fonts';
 @body-bg: transparent;
 @text-color: #202020;
-@font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// Quick test of gen switching
+@font-family-sans-serif: if((@id7-gen-font = 2024),
+  ~"'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  ~"'Neue Haas Grotesk', 'Lato', 'Helvetica Neue', Helvetica, 'SF Pro', 'Arial Nova', Arial, sans-serif"
+);
 @line-height-base: 1.6;
 
 @main-font-size: 1.6rem;

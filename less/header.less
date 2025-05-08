@@ -18,41 +18,6 @@
   }
 }
 
-.id7-utility-masthead {
-  // Place a block underneath the WARWICK text so we can change its colour
-  position: relative;
-  z-index: 40;
-
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: @grid-gutter-width;
-
-    .position-logo-colour-block(@logo-height, @logo-width) {
-      @offset: ceil((@logo-height * 2 / 3));
-
-      top: (@id7-masthead-bleed-height + @offset);
-      width: (@logo-width - @grid-gutter-width);
-      height: (@logo-height - @offset);
-    }
-
-    .position-logo-colour-block(@id7-masthead-logo-height-xs, @id7-masthead-logo-width-xs);
-
-    @media (min-width: @grid-float-breakpoint) {
-      .position-logo-colour-block(@id7-masthead-logo-height-sm, @id7-masthead-logo-width-sm);
-    }
-  }
-}
-
-body.id7-point-1 .id7-utility-masthead {
-  @media (min-width: @grid-float-breakpoint) {
-    .id7-masthead .id7-logo a {
-      height: @id7-point-1-masthead-logo-height-sm;
-    }
-  }
-}
-
 @import 'utility-bar.less';
 @import 'masthead.less';
 @import 'header-image.less';
