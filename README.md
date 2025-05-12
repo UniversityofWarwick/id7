@@ -152,6 +152,9 @@ To do so:
   - You will need to update any web font import in your template from Lato to Neue Haas Grotesk, as per the template.
   - If you use a CSP, you will need to update to allow TypeKit as a font source (see [Getting started](/getting-started/#security-headers)).
   - Borderless is enabled in this mode so there is no need to specify left or right border images.
+- **2.xx.0**:
+  - The new brand is enabled by default. You can opt back to the older version with `@id7-gen: 2024` though the logos will still be the new ones.
+
 
 ## Copyright and license
 
