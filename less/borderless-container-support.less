@@ -92,7 +92,7 @@
 
 // Built-in conditional borderless by applying the body style
 // (Only include this class when not using the global borderless)
-html.id7-borderless when not (@borderless-rules) {
+html.id7-borderless when not (@borderless-container) {
   overflow-x: hidden; // Avoid horizontal scrollbar
   @borderless-rules();
 }

@@ -8,8 +8,10 @@
 @id7-gen: 2024;
 // @id7-gen should not be referenced anywhere other than for these defaults!
 @id7-gen-font: @id7-gen;
+@id7-gen-font-sizes: @id7-gen;
 @id7-gen-buttons: @id7-gen;
-
+@id7-gen-colours: @id7-gen;
+@id7-gen-layout: @id7-gen;
 
 @grid-gutter-width:         20px;
 
@@ -99,20 +101,21 @@
 // FA path, used in the font-awesome LESS files
 @int-fa-font-path: '../fonts';
 @body-bg: transparent;
-@text-color: #202020;
-// Quick test of gen switching
+@text-color: if((@id7-gen-colours = 2024), #202020, #212529);
+@font-stack-lato: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-stack-neuehaasgrotesk: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica, 'SF Pro', 'Arial Nova', Arial, sans-serif;
 @font-family-sans-serif: if((@id7-gen-font = 2024),
-  ~"'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-  ~"'Neue Haas Grotesk', 'Lato', 'Helvetica Neue', Helvetica, 'SF Pro', 'Arial Nova', Arial, sans-serif"
+  @font-stack-lato,
+  @font-stack-neuehaasgrotesk
 );
 @line-height-base: 1.6;
 
 @main-font-size: 1.6rem;
-@main-font-weight: 300;
+@main-font-weight: if((@id7-gen-font = 2024), 400, 500);
 
 @blockquote-font-size: inherit;
 
-@headings-font-weight: 400;
+@headings-font-weight: if((@id7-gen-font = 2024), 400, 700);;
 
 @nav-link-padding: 10px;
 
@@ -140,22 +143,22 @@
 @input-color: #222222;
 
 // see @id7-header-h1-font-size for site title size.
-@font-size-h1: 2.8rem;
-@font-size-h2: 2.6rem;
-@font-size-h3: 2.4rem;
-@font-size-h4: 2.2rem;
-@font-size-h5: 2rem;
-@font-size-h6: @main-font-size;
+@font-size-h1: if((@id7-gen-font-sizes = 2024), 2.8rem, 7rem);
+@font-size-h2: if((@id7-gen-font-sizes = 2024), 2.6rem, 5.6rem);
+@font-size-h3: if((@id7-gen-font-sizes = 2024), 2.4rem, 4rem);
+@font-size-h4: if((@id7-gen-font-sizes = 2024), 2.2rem, 2rem);
+@font-size-h5: if((@id7-gen-font-sizes = 2024), 2rem, 1.8rem);
+@font-size-h6: @main-font-size; // some things never change
 @id7-h6-font-weight: bold;
 
 // Overriding of bootstrap defaults to stop calculation misery now that font sizes are based on rem
 
-@font-size-base: 1.4rem;
+@font-size-base: 1.6rem;
 @font-size-large: 1.8rem;
 @font-size-small: 1.2rem;
 
 //Use these instead of the above font sizes for calculations that should produce results in px
-@font-size-base-px: 14px;
+@font-size-base-px: 16px;
 @font-size-large-px: 18px;
 @font-size-small-px: 12px;
 
@@ -179,9 +182,9 @@
 @border-radius-large: 0px;
 @border-radius-small: 0px;
 
-@button-border-radius-base: 4px;
-@button-border-radius-large: 6px;
-@button-border-radius-small: 3px;
+@button-border-radius-base: if(@id7-gen-buttons = 2024, 4px, 0);
+@button-border-radius-large: if(@id7-gen-buttons = 2024, 6px, 0);
+@button-border-radius-small: if(@id7-gen-buttons = 2024, 3px, 0);
 
 @grid-float-breakpoint-max: 0px; // Don't collapse nav
 
@@ -258,4 +261,4 @@
 @screen-lg-max:             (@screen-xl-min - 1);
 @screen-xl-max:             (@screen-2xl-min - 1);
 
-@borderless-container:      false;
+@borderless-container:      if(@id7-gen > 2024, true, false);

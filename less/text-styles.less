@@ -126,7 +126,9 @@ h6, .h6 {
 
 h1 {
   padding-bottom: (@line-height-computed / 2);
-  border-bottom: 1px solid @id7-subtle-line-colour;
+  & when (@id7-gen-layout = 2024) {
+    border-bottom: 1px solid @id7-subtle-line-colour;
+  }
 
   @media print {
     border: none;
@@ -149,7 +151,7 @@ h1, h2, h3, h4, h5, h6,
 .id7-page-title {
   margin-top: @grid-gutter-width;
 
-  h1 {
+  h1, .h1 {
     margin-bottom: 0;
   }
 }
