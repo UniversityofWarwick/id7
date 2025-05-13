@@ -1,3 +1,5 @@
+// TODO add a `when (@id7-gen = 2024)` guard to slim down new brand CSS
+
 .apply-site-imagery(
   @basedir,
   @masthead-image: "masthead-image.jpg",
@@ -236,6 +238,71 @@
 
 }
 
+// Define the CSS variables for a brand colour.
+// This can't be called from the top level like apply-brand,
+// because it isn't valid CSS. In those cases you can call
+// this inside :root or inside a class, depending on when
+// you want them to apply. Normally you'd want it to be applied
+// to root at least once so it applies to the page, but you could
+// then apply another colour to a class that you can then add
+// at any level within the page to switch colour scheme.
+.brand-css-variables(@colour) {
+  @colours: .calculate-brand-colours(@colour);
+
+  --w-ref-colors-primary: @colours[@primary];
+  --w-ref-colors-secondary: @colours[@secondary];
+
+  //// Colour pairings
+
+  // Primary colour background
+  --w-sys-colors-primary: var(--w-ref-colors-primary);
+  --w-sys-colors-primary-contrast: @colours[@primary-contrast]; // black or white
+
+  // Set of tints of the primary colour.
+  // Copying Bootstrap 5's 100-900 system.
+  @scale-values:
+          100 80%, // lightest
+          200 60%,
+          300 40%,
+          400 20%,
+          500 0%,  // 500 is always the base colour
+          600 20%,
+          700 40%,
+          800 60%,
+          900 80%; // darkest
+
+  each(@scale-values, {
+    @step: extract(@value, 1);
+    @percent: extract(@value, 2);
+
+    @mix-color: if(@step < 500, #ffffff, if(@step > 500, #000000, @colour));
+    @final-color: if(@step = 500, @colour, mix(@mix-color, @colour, @percent));
+
+    --w-sys-colors-primary-@{step}: @final-color;
+    --w-sys-colors-primary-@{step}-contrast: #wcag.contrast(@final-color, white, @text-color)[];
+  });
+
+  // Secondary colour background
+  --w-sys-colors-secondary: @colours[@secondary];
+  --w-sys-colors-secondary-contrast: @colours[@secondary-contrast];
+  --w-sys-colors-secondary-accent: @colours[@secondary-accent];
+
+  // A colour we can place on white - can fall back to black
+  --w-sys-colors-white-accent: @colours[@white-emphasis];
+  // Slightly deeper colour (or black again)
+  --w-sys-colors-white-deepAccent: @colours[@white-deep-emphasis];
+
+  --w-sys-colors-pale: @colours[@pale];
+  --w-sys-colors-pale-accent: @colours[@pale-emphasis];
+
+  // This grey doesn't depend on the brand colour
+  // but the emphasis colour does - may as well keep
+  // them together.
+  --w-sys-colors-paleGrey: @colours[@pale-grey];
+  --w-sys-colors-paleGrey-accent: @colours[@pale-grey-emphasis];
+}
+
+// Generates the CSS for a brand colour
 .apply-brand(@colour) {
 
   @colours: .calculate-brand-colours(@colour);

@@ -1,0 +1,17 @@
+
+// This can be enabled to generate a set of
+// CSS classes for switching to a different preset
+// colour scheme.
+// At the time of writing the set of colours
+// is not finalised and also nothing is themed
+// using CSS variables so they wouldn't have
+// any effect on built-in components.
+& when (@id7-generate-colour-classes) {
+  each(@id7-brand-colors, {
+    .id7-brand-@{value} {
+      @brand-color-var: "id7-brand-@{value}";
+      @brand-color: @@brand-color-var;
+      .brand-css-variables(@brand-color);
+    }
+  });
+}
