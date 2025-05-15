@@ -1,3 +1,22 @@
+@import (reference) "../mixins/branding";
+@import (reference) "../variables";
+
+:root {
+  /* Reference tokens (don't use directly) */
+  --w-ref-colors-page-light: white;
+  --w-ref-colors-page-light-contrast: @text-color;
+  --w-ref-colors-page-dark: @text-color;
+  --w-ref-colors-page-dark-contrast: white;
+
+  // System tokens
+  /* Page colour and default text colour */
+  --w-sys-colors-page: var(--w-ref-colors-page-light);
+  --w-sys-colors-page-contrast: var(--w-ref-colors-page-light-contrast);
+
+  /* Current background and contrasting text colour */
+  --w-sys-colors-bg: var(--w-sys-colors-page);
+  --w-sys-colors-bg-contrast: var(--w-sys-colors-page-contrast);
+}
 
 // This can be enabled to generate a set of
 // CSS classes for switching to a different preset
@@ -7,11 +26,20 @@
 // using CSS variables so they wouldn't have
 // any effect on built-in components.
 & when (@id7-generate-colour-classes) {
-  each(@id7-brand-colors, {
-    .id7-brand-@{value} {
+  :root {
+    /*
+      Definitions for brand colour palette and tints.
+      Don't use these reference values directly - use the --w-sys-colors-primary-*
+      aliases instead and choose the colour for that area with the `id7-brand-COLORNAME` classes.
+     */
+    each(@id7-brand-colors, {
       @brand-color-var: "id7-brand-@{value}";
       @brand-color: @@brand-color-var;
-      .brand-css-variables(@brand-color);
-    }
+      .colour-css-variables(@value, ref, @brand-color);
+    });
+  }
+  // Generate CSS classes that alias sys-colors-primary to a given colour.
+  each(@id7-brand-colors, {
+    .colour-sys-aliases(@value);
   });
 }
