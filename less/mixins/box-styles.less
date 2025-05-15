@@ -255,13 +255,3 @@
     }
   }
 }
-
-each(range(1,9), {
-  @step: @value * 100;
-  // class name borrowed from https://getbootstrap.com/docs/5.0/utilities/background/
-  // though we include the tint level, and we set colour
-  .bg-primary-@{step} {
-    background-color: ~"var(--w-sys-colors-primary-@{step})";
-    color:            ~"var(--w-sys-colors-primary-@{step}-contrast)";
-  }
-})
