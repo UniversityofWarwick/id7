@@ -24,7 +24,8 @@ const definitions = [
   { name: 'orange-bright', description: 'Bright Orange', expectFailure: true },
   { name: 'blue', description: 'Dark Blue' },
   { name: 'blue-bright', description: 'Bright Blue', expectFailure: true },
-  { name: 'green', description: 'Dark Green' },
+  // Green isn't really green anymore, almost turquoise, so we expect it to look bad
+  { name: 'green', description: 'Dark Green', expectFailure: true },
   { name: 'green-bright', description: 'Bright Green', expectFailure: true },
   { name: 'teal', description: 'Teal' },
   { name: 'teal-bright', description: 'Bright Teal', expectFailure: true },
