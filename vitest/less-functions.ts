@@ -53,7 +53,7 @@ export function getValueFromAst(ast: CssAst, name: string): string {
 export function getValuesFromAst(ast: CssAst): Record<string, string> {
   const rules = ast.stylesheet.rules;
   if (rules.length !== 1) {
-    throw new Error('Expected one rule, got ' + rules.length);
+    throw new Error('Expected one rule, got ' + rules.length + ': ' + ast.stylesheet.rules.map(r => r.selectors));
   }
   const decs = rules[0].declarations;
   return Object.fromEntries(decs.map(d => [d.property, d.value]));

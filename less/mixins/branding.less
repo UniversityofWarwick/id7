@@ -238,26 +238,7 @@
 
 }
 
-// Define the CSS variables for a brand colour.
-// This can't be called from the top level like apply-brand,
-// because it isn't valid CSS. In those cases you can call
-// this inside :root or inside a class, depending on when
-// you want them to apply. Normally you'd want it to be applied
-// to root at least once so it applies to the page, but you could
-// then apply another colour to a class that you can then add
-// at any level within the page to switch colour scheme.
-.brand-css-variables(@colour) {
-  @colours: .calculate-brand-colours(@colour);
-
-  --w-ref-colors-primary: @colours[@primary];
-  --w-ref-colors-secondary: @colours[@secondary];
-
-  //// Colour pairings
-
-  // Primary colour background
-  --w-sys-colors-primary: var(--w-ref-colors-primary);
-  --w-sys-colors-primary-contrast: @colours[@primary-contrast]; // black or white
-
+.colour-css-variables(@name, @clazz, @colour) {
   // Set of tints of the primary colour.
   // Copying Bootstrap 5's 100-900 system.
   @scale-values:
@@ -278,9 +259,44 @@
     @mix-color: if(@step < 500, #ffffff, if(@step > 500, #000000, @colour));
     @final-color: if(@step = 500, @colour, mix(@mix-color, @colour, @percent));
 
-    --w-sys-colors-primary-@{step}: @final-color;
-    --w-sys-colors-primary-@{step}-contrast: #wcag.contrast(@final-color, white, @text-color)[];
+    --w-@{clazz}-colors-@{name}-@{step}: @final-color;
+    --w-@{clazz}-colors-@{name}-@{step}-contrast: #wcag.contrast(@final-color, white, @text-color)[];
   });
+}
+
+.colour-sys-aliases(@name) {
+  .id7-brand-@{name} {
+    each(range(1,9), {
+      @step: @value * 100;
+      // These are defined with interpolated strings because otherwise it can't find the variables @name or @step -
+      // seems to be resolved in Less 4.x which we're not currently on yet
+      --w-sys-colors-primary-@{step}: ~"var(--w-ref-colors-@{name}-@{step})";
+      --w-sys-colors-primary-@{step}-contrast: ~"var(--w-ref-colors-@{name}-@{step}-contrast)";
+    })
+  }
+}
+
+// Define the CSS variables for a brand colour.
+// This can't be called from the top level like apply-brand,
+// because it isn't valid CSS. In those cases you can call
+// this inside :root or inside a class, depending on when
+// you want them to apply. Normally you'd want it to be applied
+// to root at least once so it applies to the page, but you could
+// then apply another colour to a class that you can then add
+// at any level within the page to switch colour scheme.
+.brand-css-variables(@colour) {
+  @colours: .calculate-brand-colours(@colour);
+
+  --w-ref-colors-primary: @colours[@primary];
+  --w-ref-colors-secondary: @colours[@secondary];
+
+  //// Colour pairings
+
+  // Primary colour - alias to tint 500
+  --w-sys-colors-primary: var(--w-sys-colors-primary-500);
+  --w-sys-colors-primary-contrast: var(--w-sys-colors-primary-500-contrast);
+
+  .colour-css-variables(primary, sys, @colour);
 
   // Secondary colour background
   --w-sys-colors-secondary: @colours[@secondary];
@@ -291,9 +307,6 @@
   --w-sys-colors-white-accent: @colours[@white-emphasis];
   // Slightly deeper colour (or black again)
   --w-sys-colors-white-deepAccent: @colours[@white-deep-emphasis];
-
-  --w-sys-colors-pale: @colours[@pale];
-  --w-sys-colors-pale-accent: @colours[@pale-emphasis];
 
   // This grey doesn't depend on the brand colour
   // but the emphasis colour does - may as well keep

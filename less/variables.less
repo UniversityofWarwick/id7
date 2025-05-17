@@ -43,15 +43,22 @@
 @id7-brand-blue: #41748D;
 @id7-brand-teal: #507F70;
 
-// A fixed set of colours for which we'll generate some CSS variables
-// wrapped in classes. Actual set WIP (awaiting new colour values)
-@id7-brand-colors: gold-bright, blue-bright, teal-bright;
-@id7-generate-colour-classes: false; // don't actually generate them right now
+// 2025 sherbert flavours
+@id7-brand-coral: #F1977F;
+@id7-brand-lavender: #A499F4;
+@id7-brand-paleblue: #6CB7FF;
+@id7-brand-yellow: #FEDE7B;
+@id7-brand-green: #51D7C1;
 
-// Green is no longer a colour in the brand palette, but keeping here
-// for backward compatibility. Could alias it to teal?
-@id7-brand-green: #0F4001;
-@id7-brand-green-bright: #7ecbb6;
+// A fixed set of colours for which we'll generate some CSS variables
+// wrapped in classes. These names reference id7-brand-* variables above
+@id7-brand-colors: coral, lavender, paleblue, yellow, green;
+@id7-generate-colour-classes: true;
+
+// Green briefly wasn't a colour in the official palette, but now there is one
+// (though it's basically turquoise). Keeping the old "Bright Green" definition
+// though aliased to the new one for maximum confusion
+@id7-brand-green-bright: @id7-brand-green;
 
 
 @id7-brand-default: @id7-brand-purple;
