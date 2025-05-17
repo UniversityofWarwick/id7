@@ -8,13 +8,14 @@
     "test:karma": "karma start --reporters=junit,progress js/tests/karma.conf.js",
     "test:vitest": "vitest",
     "test": "npm-run-all test:karma test:vitest",
-    "start": "npm-run-all --parallel readme-md2html watch docs-watch docs-serve",
+    "start": "npm-run-all --serial readme-md2html docs-assets --parallel docs-watch docs-serve",
     "docs-assets": "NODE_ENV=development webpack --mode development --env.docs",
     "docs-watch": "NODE_ENV=development webpack --mode development --env.docs --watch",
     "docs-serve": "bundle exec jekyll serve",
     "docs-build": "bundle exec jekyll build",
     "readme-md2html": "marked README.md > docs/_includes/README.html",
-    "prepublishOnly": "rm -rf ./dist/ && npm run build"
+    "clean": "rm -rf ./dist/ ./docs/dist/",
+    "prepublishOnly": "npm-run-all clean build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
@@ -69,7 +70,6 @@
     "purify-css": "1.2.5",
     "purifycss-webpack": "0.7.0",
     "qunit": "2.9.3",
-    "remove-files-webpack-plugin": "1.2.1",
     "sinon": "8.0.2",
     "svg-inline-loader": "0.8.0",
     "terser-webpack-plugin": "2.3.1",
