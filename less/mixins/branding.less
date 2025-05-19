@@ -372,7 +372,7 @@
   }
 
   .id7-utility-masthead {
-    background-color: white;
+    background-color: var(--w-sys-colors-masthead);
   }
 
   // Colour of the "WARWICK" text on the logo
@@ -459,7 +459,7 @@
 
 .apply-footer-brand(@colour) {
   .id7-page-footer {
-    .id7-app-footer {
+    .id7-app-footer when (@id7-gen-layout = 2024) {
       @app-footer-text-colour: contrast(@colour, @text-color, white, 50%);
 
       background: @colour;

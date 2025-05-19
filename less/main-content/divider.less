@@ -1,4 +1,4 @@
-.id7-horizontal-divider {
+.id7-horizontal-divider when (@id7-gen-logos = 2024) {
   overflow: hidden;
   position: absolute;
   top: 0px;
@@ -12,4 +12,8 @@
   + * {
     margin-top: @grid-gutter-width;
   }
+}
+
+.id7-horizontal-divider when (@id7-gen-logos > 2024) {
+  display: none;
 }

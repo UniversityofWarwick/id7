@@ -1,5 +1,5 @@
 footer {
-  .id7-site-footer .id7-site-footer-content, .id7-app-footer .id7-app-footer-content {
+  .id7-site-footer .id7-site-footer-content, .id7-app-footer {
     .container-fluid((@grid-gutter-width * 2));
     position: relative;
     padding-top: @grid-gutter-width;
@@ -27,6 +27,25 @@ footer {
     }
   }
 
+  & when (@id7-gen-logos > 2024) {
+    @media screen {
+      // Crest
+      .id7-app-footer-content {
+        --w-sys-crest-height: 8rem;
+        background-image: url(@id7-image-crest-negative);
+        background-repeat: no-repeat;
+        background-position: bottom var(--w-ref-gridGutterWidth) left 0;
+        background-size: auto var(--w-sys-crest-height);
+        padding-bottom: calc(var(--w-sys-crest-height) + var(--w-ref-gridGutterWidth));
+      }
+
+      // This isn't set dynamically at the moment - something has to set it.
+      &.id7-light-background .id7-app-footer-content {
+        background-image: url(@id7-image-crest-positive);
+      }
+    }
+  }
+
   // Footer styling elements - logo bleed and/or divider
   .id7-site-footer, .id7-app-footer {
     @media screen {
@@ -49,10 +68,6 @@ footer {
       display: block;
       margin-top: @grid-gutter-width;
     }
-
-    .id7-horizontal-divider .divider {
-      stroke: @text-color !important;
-    }
   }
 }
 
@@ -67,5 +82,9 @@ footer {
         }
       }
     }
+  }
+  .id7-app-footer-content {
+    background-image: none;
+    padding-bottom: 0;
   }
 }

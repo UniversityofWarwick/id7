@@ -4,66 +4,78 @@
       display: none;
       background-image: none !important;
     }
-  }
 
-  // Escape the fixed width container
-  @media (min-width: @grid-float-breakpoint) {
+    // Escape the fixed width container
     // Cancel existing containers
     .id7-fixed-width-container {
       width: auto;
     }
-  }
 
-  // Put contents back in a container
-  .id7-utility-bar,
-  .id7-masthead .id7-masthead-contents,
-  .id7-navigation .navbar .navbar-nav,
-  .id7-site-footer .id7-site-footer-content, .id7-app-footer .id7-app-footer-content {
-    .container(@grid-gutter-width);
-  }
-
-  .id7-utility-bar {
-    padding: 0 @grid-gutter-width;
-  }
-
-  .id7-navigation.affix {
-    width: 100%;
-  }
-
-  @media (max-width: @screen-xs-max) {
-    .id7-masthead .id7-masthead-contents {
-      padding: 0;
-      margin: 0 -(@grid-gutter-width / 2);
+    // Put contents back in a container
+    .id7-utility-bar,
+    .id7-masthead .id7-masthead-contents,
+    .id7-navigation .navbar .navbar-nav,
+    .id7-site-footer .id7-site-footer-content, .id7-app-footer .id7-app-footer-content {
+      width: var(--w-sys-containerWidth);
+      margin-left: auto;
+      margin-right: auto;
     }
-  }
 
-  // We don't support the right-floated dropdown nav
-  .id7-navigation .navbar-nav {
-    float: none;
-  }
+    .id7-site-footer-content, .id7-app-footer-content {
+      padding-left: var(--w-ref-gridGutterWidth);
+      padding-right: var(--w-ref-gridGutterWidth);
+    }
 
-  // Make sure the affixed header text is on a white background
-  .id7-masthead .id7-header-text.affix {
-    &::before, &::after {
-      content: '';
-      display: block;
+    // Shift the crest
+    .id7-app-footer-content when (@id7-gen-logos > 2024) {
+      background-position: bottom var(--w-ref-gridGutterWidth) left var(--w-ref-gridGutterWidth);
+    }
+
+    .id7-navigation .navbar .navbar-nav {
+      padding: 0 calc(var(--w-ref-gridGutterWidth) / 2);
+    }
+
+    .id7-utility-bar {
+      padding: 0 var(--w-ref-gridGutterWidth);
+    }
+
+    .id7-navigation.affix {
       width: 100%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      background: white;
     }
 
-    &::before {
-      left: -99%;
+    //@media (max-width: @screen-xs-max) {
+    //  .id7-masthead .id7-masthead-contents {
+    //    padding: 0;
+    //    margin: 0 -(@grid-gutter-width / 2);
+    //  }
+    //}
+
+    // We don't support the right-floated dropdown nav
+    .id7-navigation .navbar-nav {
+      float: none;
     }
 
-    &::after {
-      right: -99%;
-    }
-  }
+    // Make sure the affixed header text is on a white background
+    .id7-masthead .id7-header-text.affix {
+      &::before, &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: white;
+      }
 
-  @media (min-width: @grid-float-breakpoint) {
+      &::before {
+        left: -99%;
+      }
+
+      &::after {
+        right: -99%;
+      }
+    }
+
     .id7-masthead {
       background: none;
       padding: 0;

@@ -6,7 +6,11 @@
                     <div class="id7-logo-row">
                         <div class="id7-logo">
                             <a href="https://warwick.ac.uk" title="University of Warwick homepage">
+                                {% if site.id7_gen == 2024 %}
                                 <img src="/dist/images/logo.svg" alt="University of Warwick homepage">
+                                {% else %}
+                                <img src="/dist/images/wordmark.svg" alt="University of Warwick homepage">
+                                {% endif %}
                             </a>
                         </div>
                         <nav class="id7-site-links" aria-label="Site links">
