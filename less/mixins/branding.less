@@ -331,6 +331,8 @@
   @tertiary-accent-colour: multiply(@id7-navigation-tertiary-background-colour, darken(white, 20%));
   @tertiary-contrast-colour: contrast(@id7-navigation-tertiary-background-colour, @text-color, white, 50%);
 
+  // FIXME new brand may be monochrome headings
+  // this colour may get set by theme files so we'd need to be specific enough to override that
   .header-colour(@colours[@white-emphasis]);
   .link-colour(@colours[@white-emphasis]);
 

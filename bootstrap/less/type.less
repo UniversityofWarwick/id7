@@ -13,13 +13,24 @@ h1, h2, h3, h4, h5, h6,
   font-family: @headings-font-family;
   font-weight: @headings-font-weight;
   line-height: @headings-line-height;
-  color: @headings-color;
+
+  & when (@id7-gen = 2024) {
+    color: @headings-color;
+    small, .small {
+      color: @headings-small-color;
+    }
+  }
+
+  // New brand has monochrome headings - and needs to
+  // override existing theme CSS
+  .id7-main-content-area & when (@id7-gen > 2024) {
+    color: @text-color;
+  }
 
   small,
   .small {
     font-weight: 400;
     line-height: 1;
-    color: @headings-small-color;
   }
 }
 

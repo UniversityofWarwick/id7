@@ -279,7 +279,9 @@ $(() => {
     const { origin } = e.originalEvent;
 
     try {
-      const data = JSON.parse(e.originalEvent.data);
+      const unparsedData = e.originalEvent.data;
+      if (typeof unparsedData !== 'string' || !unparsedData.startsWith('{')) return;
+      const data = JSON.parse(unparsedData);
       if (data.type && data.type.indexOf(Config.MessagePrefix) === 0) {
         const messageType = data.type.substring(Config.MessagePrefix.length);
 

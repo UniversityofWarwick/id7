@@ -28,11 +28,13 @@
   {% endif %}
 </title>
 
-<!-- Pre-connect to Google Fonts domain -->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;subset=latin,latin-ext&amp;display=fallback" rel="preload" as="style" type="text/css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+{% include header-load-font.html %}
 
+{% if site.id7_gen == 2024 %}
 <link href="/dist/css/id7.css" rel="stylesheet" type="text/css">
+{% else %}
+<link href="/dist/css/id7-2025.css" rel="stylesheet" type="text/css">
+{% endif %}
 <link href="/dist/css/id7-default-theme.css" rel="stylesheet" type="text/css">
 
 {% unless page.slug contains 'examples/hp' %}

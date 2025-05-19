@@ -30,6 +30,7 @@ By whitelisting sources of approved content, you can prevent the browser from lo
                 <td><code>'self' data:</code></td>
                 <td>We need to allow <code>data:</code> image URIs in order to perform WebP feature detection</td>
             </tr>
+            {% if site.id7_gen == 2024 %}
             <tr>
                 <td><code>style-src</code></td>
                 <td><code>'self' https://fonts.googleapis.com</code></td>
@@ -40,6 +41,18 @@ By whitelisting sources of approved content, you can prevent the browser from lo
                 <td><code>'self' https://fonts.gstatic.com</code></td>
                 <td>Domain that the Lato webfont is downloaded from</td>
             </tr>
+            {% else %}
+            <tr>
+              <td><code>style-src</code></td>
+              <td><code>'self' https://use.typekit.net https://p.typekit.net</code></td>
+              <td>We load the Neue Haas Grotesk webfont from TypeKit via a CSS import</td>
+            </tr>
+            <tr>
+              <td><code>font-src</code></td>
+              <td><code>'self' https://use.typekit.net</code></td>
+              <td>Domain that the Neue Haas Grotesk webfont is downloaded from</td>
+            </tr>
+            {% endif %}
             <tr>
                 <td><code>script-src</code></td>
                 <td><code>'self'</code></td>
