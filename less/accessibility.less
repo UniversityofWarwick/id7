@@ -1,16 +1,26 @@
+:root {
+  --w-ref-focusOutline: @focus-outline;
+  --w-sys-focusOutline: var(--w-ref-focusOutline);
+}
+
 .id7-outline() {
-  outline: 3px solid @focus-outline;
+  outline: 3px solid var(--w-sys-focusOutline);
   color: #0b0c0c !important;
-  background-color: @focus-outline !important;
-  box-shadow: 0 -2px @focus-outline, 0 6px #0b0c0c;
+  background-color: var(--w-sys-focusOutline) !important;
+  box-shadow: 0 -2px var(--w-sys-focusOutline), 0 6px #0b0c0c;
   text-decoration: none !important;
   transition-duration: 0s;
 }
 
-// This overrides Bootstrap's own tab-focus mixin which is how it gets applied to most links
+// This augments Bootstrap's own tab-focus mixin which is how it gets applied to most links
+// (the aforementioned mixin has been emptied out so these should be the only rules)
 .tab-focus() {
   outline-offset: 0;
   .id7-outline();
+}
+
+a:focus img {
+  background-color: var(--w-sys-focusOutline)
 }
 
 a:focus .id7-notifications-badge .counter-value {
