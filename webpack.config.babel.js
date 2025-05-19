@@ -1,7 +1,6 @@
 import path from 'path';
 import EventEmitter from 'events';
 import WebpackNotifierPlugin from 'webpack-notifier';
-import RemovePlugin from 'remove-files-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { ProvidePlugin } from 'webpack';
 import ZipPlugin from 'zip-webpack-plugin';
@@ -53,27 +52,6 @@ const commonConfig = basePath => merge([
         $: 'jquery',
       }),
       new PlayFingerprintsPlugin(),
-      new RemovePlugin({
-        before: {
-          root: paths.ROOT,
-          allowRootAndOutside: true,
-          include: [basePath],
-          log: false,
-          trash: false,
-        },
-        after: {
-          root: paths.ROOT,
-          allowRootAndOutside: true,
-          test: [
-            {
-              folder: paths.ASSETS_CSS(basePath),
-              method: filePath => (new RegExp(/.*\.js.*$/, 'm').test(filePath)),
-            },
-          ],
-          log: false,
-          trash: false,
-        },
-      }),
     ]
   },
   tooling.lintJS(),
