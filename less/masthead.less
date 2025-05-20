@@ -62,10 +62,16 @@
   .id7-logo a {
     display: block;
     text-align: center;
+    // Old logo
     & when (@id7-gen-logos = 2024) {
       padding: 0 var(--w-ref-gridGutterWidth);
     }
-    & when (@id7-gen-logos > 2024) {
+    // New layout
+    & when (@id7-gen-layout > 2024) {
+      padding: var(--w-ref-gridGutterWidth);
+    }
+    // New logo without new layout
+    & when (@id7-gen-logos > 2024) and (@id7-gen-layout = 2024) {
       padding: calc(var(--w-ref-gridGutterWidth) / 2) var(--w-ref-gridGutterWidth);
     }
 
