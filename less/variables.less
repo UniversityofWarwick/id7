@@ -75,7 +75,7 @@
 @id7-account-popover-actions-border: #ebebeb;
 
 @id7-masthead-bleed-height: 24px;
-@id7-masthead-logo-height-xs: if(@id7-gen-logos = 2024, 54px, 35px);
+@id7-masthead-logo-height-xs: if(@id7-gen-logos = 2024, 54px, 44px);
 @id7-masthead-logo-height-sm: if(@id7-gen-logos = 2024, 75px, 40px);
 @id7-masthead-logo-aspect: if(@id7-gen-logos = 2024, (226/150), (300/80)); // image intrinsic dimensions
 
@@ -108,8 +108,8 @@
 @id7-print-logo-width: 122px;
 
 @id7-image-root-dir: "../images";
-@id7-image-crest-positive: "@{id7-image-root-dir}/crest-positive.svg";
-@id7-image-crest-negative: "@{id7-image-root-dir}/crest-negative.svg";
+@id7-image-crest-positive: url("@{id7-image-root-dir}/crest-positive.svg");
+@id7-image-crest-negative: url("@{id7-image-root-dir}/crest-negative.svg");
 @id7-image-wordmark: "@{id7-image-root-dir}/wordmark.svg";
 
 // Bootstrap and FA variable overrides

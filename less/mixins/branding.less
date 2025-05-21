@@ -686,3 +686,25 @@
     }
   }
 }
+
+// Adds crest as a background image of an element.
+// You will need to position it in an appropriate corner
+// and possibly add padding to avoid overdraw.
+.crest-bg(@defaultStyle) {
+  background-repeat: no-repeat;
+  background-size: auto var(--w-sys-crestHeight);
+}
+
+.crest-bg(positive) {
+  background-image: var(--w-ref-images-crestPositive);
+  .id7-dark-background & {
+    background-image: var(--w-ref-images-crestNegative);
+  }
+}
+
+.crest-bg(negative) {
+  background-image: var(--w-ref-images-crestNegative);
+  .id7-light-background & {
+    background-image: var(--w-ref-images-crestPositive);
+  }
+}

@@ -27,24 +27,18 @@ footer {
     }
   }
 
+
+
   & when (@id7-gen-logos > 2024) {
     @media screen {
       // Crest
       .id7-app-footer-content {
-        --w-sys-crest-height: 8rem;
-        background-image: url(@id7-image-crest-negative);
-        background-repeat: no-repeat;
+        .crest-bg(positive);
+        padding-bottom: calc(var(--w-sys-crestHeight) + var(--w-ref-gridGutterWidth));
         background-position: if(@borderless-container,
           bottom var(--w-ref-gridGutterWidth) left var(--w-ref-gridGutterWidth),
           bottom var(--w-ref-gridGutterWidth) left 0
         );
-        background-size: auto var(--w-sys-crest-height);
-        padding-bottom: calc(var(--w-sys-crest-height) + var(--w-ref-gridGutterWidth));
-      }
-
-      // This isn't set dynamically at the moment - something has to set it on the app footer.
-      .id7-light-background .id7-app-footer-content {
-        background-image: url(@id7-image-crest-positive);
       }
     }
   }
