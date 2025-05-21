@@ -1,5 +1,5 @@
 footer {
-  .id7-site-footer .id7-site-footer-content, .id7-app-footer .id7-app-footer-content {
+  .id7-site-footer .id7-site-footer-content, .id7-app-footer {
     .container-fluid((@grid-gutter-width * 2));
     position: relative;
     padding-top: @grid-gutter-width;
@@ -27,6 +27,22 @@ footer {
     }
   }
 
+
+
+  & when (@id7-gen-logos > 2024) {
+    @media screen {
+      // Crest
+      .id7-app-footer-content {
+        .crest-bg(positive);
+        padding-bottom: calc(var(--w-sys-crestHeight) + var(--w-ref-gridGutterWidth));
+        background-position: if(@borderless-container,
+          bottom var(--w-ref-gridGutterWidth) left var(--w-ref-gridGutterWidth),
+          bottom var(--w-ref-gridGutterWidth) left 0
+        );
+      }
+    }
+  }
+
   // Footer styling elements - logo bleed and/or divider
   .id7-site-footer, .id7-app-footer {
     @media screen {
@@ -49,10 +65,6 @@ footer {
       display: block;
       margin-top: @grid-gutter-width;
     }
-
-    .id7-horizontal-divider .divider {
-      stroke: @text-color !important;
-    }
   }
 }
 
@@ -67,5 +79,9 @@ footer {
         }
       }
     }
+  }
+  .id7-app-footer-content {
+    background-image: none;
+    padding-bottom: 0;
   }
 }

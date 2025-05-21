@@ -25,6 +25,24 @@
     .transition(color .15s linear);
   }
 
+  .search-button {
+    appearance: none;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  .search-button:focus {
+    .tab-focus();
+    .fas {
+      color: #204f79;
+    }
+  }
+}
+
+.id7-utility-masthead {
   .typeahead:hover + .fas {
     color: black;
   }
@@ -72,22 +90,6 @@
 
     .go-description {
       margin: 0;
-    }
-  }
-
-  .search-button {
-    appearance: none;
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-  }
-
-  .search-button:focus {
-    .tab-focus();
-    .fas {
-      color: #204f79;
     }
   }
 }

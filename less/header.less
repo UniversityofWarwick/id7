@@ -2,6 +2,10 @@
   .link-decoration(none);
   .bordered-headings(none);
 
+  & when (@id7-gen-layout > 2024) {
+    border-bottom: 1px solid @text-color;
+  }
+
   // Hide the whole header when printing
   @media print {
     display: none;

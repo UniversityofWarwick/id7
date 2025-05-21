@@ -12,6 +12,7 @@
 @id7-gen-buttons: @id7-gen;
 @id7-gen-colours: @id7-gen;
 @id7-gen-layout: @id7-gen;
+@id7-gen-logos: @id7-gen;
 
 @grid-gutter-width:         20px;
 
@@ -74,9 +75,9 @@
 @id7-account-popover-actions-border: #ebebeb;
 
 @id7-masthead-bleed-height: 24px;
-@id7-masthead-logo-height-xs: 54px;
-@id7-masthead-logo-height-sm: 75px;
-@id7-masthead-logo-aspect: (226/150); // image intrinsic dimensions
+@id7-masthead-logo-height-xs: if(@id7-gen-logos = 2024, 54px, 44px);
+@id7-masthead-logo-height-sm: if(@id7-gen-logos = 2024, 75px, 40px);
+@id7-masthead-logo-aspect: if(@id7-gen-logos = 2024, (226/150), (300/80)); // image intrinsic dimensions
 
 @id7-masthead-search-offset-xs: 7px;
 @id7-masthead-search-offset-sm: 32px;
@@ -107,6 +108,9 @@
 @id7-print-logo-width: 122px;
 
 @id7-image-root-dir: "../images";
+@id7-image-crest-positive: url("@{id7-image-root-dir}/crest-positive.svg");
+@id7-image-crest-negative: url("@{id7-image-root-dir}/crest-negative.svg");
+@id7-image-wordmark: "@{id7-image-root-dir}/wordmark.svg";
 
 // Bootstrap and FA variable overrides
 @icon-font-path: '../fonts';

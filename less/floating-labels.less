@@ -1,4 +1,11 @@
-.floating-label {
+.floating-label when (@id7-gen-layout > 2024) {
+  // There's no room for this
+  input ~ label {
+    .sr-only;
+  }
+}
+
+.floating-label when (@id7-gen-layout = 2024) {
   position: relative;
   display: flex;
   flex-flow: column-reverse;
@@ -20,7 +27,7 @@
     visibility: hidden;
     opacity: 0;
   }
-  
+
   @media (max-width: @screen-sm-min) {
     input:placeholder-shown ~ label {
       // SBTWO-10013 Do no transformation on Search Warwick input label so it will not overflow

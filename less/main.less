@@ -1,3 +1,21 @@
+:root {
+  --w-sys-logoHeight: @id7-masthead-logo-height-xs;
+  @media (min-width: @grid-float-breakpoint) {
+    --w-sys-logoHeight: @id7-masthead-logo-height-sm;
+  }
+
+  // From the Brand Book:
+  //  When the Wordmark and Crest are split, the
+  //  height of the Crest must be 1.75 times the
+  //  height of the Wordmark. This rule also applies
+  //  to the Responsive Crest.
+  --w-sys-crestHeight: calc(1.75 * var(--w-sys-logoHeight));
+  --w-sys-crestAspect: ~"107 / 150"; // Stop Less doing its maths
+
+  --w-ref-images-crestPositive: @id7-image-crest-positive; // Black crest
+  --w-ref-images-crestNegative: @id7-image-crest-negative; // White crest
+}
+
 html {
   font-size: 0.625rem;
 }
@@ -16,4 +34,27 @@ html {
       padding-right: 4rem;
     }
   }
+}
+
+// Add a crest image to the top right of an element,
+// by adding it as a pseudo-element and then layout it out
+// with flexbox (which pseudo-elements participate in).
+.crest-right when (@id7-gen-logos >= 2025) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  & > * { flex-grow: 1; }
+
+  &::after {
+    content: var(--w-ref-images-crestPositive);
+    height: var(--w-sys-crestHeight);
+    aspect-ratio: var(--w-sys-crestAspect);
+  }
+}
+
+// Add crest to top right of element as a background.
+.crest-bg-top-right {
+  .crest-bg(positive);
+  background-position: top right;
 }

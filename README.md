@@ -146,12 +146,15 @@ To do so:
     defined. If you don't do this then a lot of things will look wrong.
 - **2.11.0**:
   - The 7.1 design refresh is now the only option, so it no longer requires the `id7-point-1` class.
+
+<!--
 - **2.12.0**:
-  - 2025 brand updates are available but not enabled by default. If you are building ID7 from source, you can set 
-    `@id7-gen: 2025;` in your LESS to enable the new styles. 
+  - 2025 brand updates are available but not enabled by default. If you are building ID7 from source, you can set
+    `@id7-gen: 2025;` in your LESS to enable the new styles.
   - You will need to update any web font import in your template from Lato to Neue Haas Grotesk, as per the template.
   - If you use a CSP, you will need to update to allow TypeKit as a font source (see [Getting started](/getting-started/#security-headers)).
   - Borderless is enabled in this mode so there is no need to specify left or right border images.
+-->
 
 ## Copyright and license
 
