@@ -169,12 +169,12 @@
 
 // Overriding of bootstrap defaults to stop calculation misery now that font sizes are based on rem
 
-@font-size-base: 1.6rem;
+@font-size-base: if(@id7-gen-font-sizes = 2024, 1.4rem, 1.6rem);
 @font-size-large: 1.8rem;
 @font-size-small: 1.2rem;
 
 //Use these instead of the above font sizes for calculations that should produce results in px
-@font-size-base-px: 16px;
+@font-size-base-px: if(@id7-gen-font-sizes = 2024, 14px, 16px);
 @font-size-large-px: 18px;
 @font-size-small-px: 12px;
 

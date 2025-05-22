@@ -163,8 +163,9 @@
     font-size: clamp(1.2rem, 1.2vw, 1.8rem);
 
     & when (@id7-gen-logos = 2024) {
-      @line-height-small-computed: (@font-size-small-px * @line-height-small); // ~17px
-      margin-top: calc(var(--w-sys-logoHeight) * 5/6 - (@line-height-small-computed / 2));
+      // Raise up to be in line with WARWICK -
+      // negative vw to keep in line as the text resizes
+      margin-bottom: calc(14px - 0.5vw);
     }
 
     ul {
