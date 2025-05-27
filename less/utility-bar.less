@@ -1,4 +1,10 @@
-.id7-utility-bar {
+.id7-utility-bar when (@id7-gen-layout > 2024) {
+  > ul {
+
+  }
+}
+
+.id7-utility-bar when (@id7-gen-layout = 2024) {
   .container-fluid((@grid-gutter-width * 2));
   position: relative;
   .small();

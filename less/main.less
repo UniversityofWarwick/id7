@@ -40,16 +40,12 @@ html {
 // by adding it as a pseudo-element and then layout it out
 // with flexbox (which pseudo-elements participate in).
 .crest-right when (@id7-gen-logos >= 2025) {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  & > * { flex-grow: 1; }
-
-  &::after {
+  &::before {
+    display: block;
     content: var(--w-ref-images-crestPositive);
     height: var(--w-sys-crestHeight);
     aspect-ratio: var(--w-sys-crestAspect);
+    margin-left: auto;
   }
 }
 

@@ -19,7 +19,9 @@ footer {
     }
 
     .id7-footer-utility {
-      margin-bottom: @grid-gutter-width;
+      & when (@id7-gen-layout = 2024) {
+        margin-bottom: @grid-gutter-width;
+      }
 
       ul {
         .horizontal-utility-links();
@@ -33,7 +35,7 @@ footer {
     @media screen {
       // Crest
       .id7-app-footer-content {
-        .crest-bg(positive);
+        .crest-bg(negative);
         padding-bottom: calc(var(--w-sys-crestHeight) + var(--w-ref-gridGutterWidth));
         background-position: if(@borderless-container,
           bottom var(--w-ref-gridGutterWidth) left var(--w-ref-gridGutterWidth),
