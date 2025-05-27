@@ -106,6 +106,7 @@ const extractCSS = ({ resolverPaths } = {}) => ({
               paths: resolverPaths,
               relativeUrls: false,
               sourceMap: true,
+              math: 'parens-division',
             },
           },
         ],
