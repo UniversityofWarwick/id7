@@ -25,5 +25,9 @@ each(range(1,9), {
   .bg-primary-@{step} {
     background-color: ~"var(--w-sys-colors-primary-@{step})";
     color:            ~"var(--w-sys-colors-primary-@{step}-contrast)";
+
+    // Define these variables for use in containing elements.
+    --w-sys-colors-bg: ~"var(--w-sys-colors-primary-@{step})";
+    --w-sys-colors-fg: ~"var(--w-sys-colors-primary-@{step}-contrast)";
   }
 })

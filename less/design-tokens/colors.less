@@ -2,10 +2,13 @@
 @import (reference) "../variables";
 
 :root {
+  --w-ref-colors-blackText: @text-color;
+  --w-ref-colors-blackBg: black; // actual black
+
   /* Reference tokens (don't use directly) */
   --w-ref-colors-page-light: white;
-  --w-ref-colors-page-light-contrast: @text-color;
-  --w-ref-colors-page-dark: @text-color;
+  --w-ref-colors-page-light-contrast: var(--w-ref-colors-blackText);
+  --w-ref-colors-page-dark: var(--w-ref-colors-blackBg);
   --w-ref-colors-page-dark-contrast: white;
 
   // System tokens
@@ -15,9 +18,18 @@
 
   /* Current background and contrasting text colour */
   --w-sys-colors-bg: var(--w-sys-colors-page);
-  --w-sys-colors-bg-contrast: var(--w-sys-colors-page-contrast);
+  --w-sys-colors-fg: var(--w-sys-colors-page-contrast);
+  // These values currently only work for the new brand where we don't use colours
+  // for headings or links.
+  --w-sys-colors-heading: var(--w-sys-colors-fg);
+  --w-sys-colors-link: var(--w-sys-colors-fg);
 
   --w-sys-colors-masthead: if(@id7-gen-layout = 2024, white, var(--w-sys-colors-primary));
+}
+
+.bg-black {
+  --w-sys-colors-bg: var(--w-ref-colors-page-dark);
+  --w-sys-colors-fg: var(--w-ref-colors-page-dark-contrast);
 }
 
 // This can be enabled to generate a set of
