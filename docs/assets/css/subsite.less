@@ -169,15 +169,15 @@
       margin: 0 !important;
 
       @media (min-width: @screen-sm-min) {
-        width: floor((@container-sm - @grid-gutter-width) / 13);
+        width: (floor((@container-sm - @grid-gutter-width) / 13));
       }
 
       @media (min-width: @screen-md-min) {
-        width: floor((@container-md - @grid-gutter-width) / 26);
+        width: (floor((@container-md - @grid-gutter-width) / 26));
       }
 
       @media (min-width: @screen-lg-min) {
-        width: floor((@container-lg - @grid-gutter-width) / 26);
+        width: (floor((@container-lg - @grid-gutter-width) / 26));
       }
 
       > a {
@@ -246,7 +246,7 @@ blockquote.branded {
 
   color: @id7-brand-default;
   border-top: 1px solid @id7-brand-default;
-  
+
   footer {
     color: inherit;
     &:before { content: none; }
