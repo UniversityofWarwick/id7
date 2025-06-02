@@ -40,24 +40,16 @@
       color: #204f79;
     }
   }
-}
 
-.id7-utility-masthead {
-  .typeahead:hover + .fas {
-    color: black;
-  }
-
+  // These typeahead rules only apply to the non-homepage search box
+  // that lives inside the search box container. The homepage places
+  // it in the masthead and the plugin does positioning.
   .typeahead {
     width: 100%;
   }
 
   .typeahead.dropdown-menu {
     margin-top: -1px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    .box-shadow(0 5px 10px rgba(0,0,0,.2));
-
     left: auto !important;
     right: 0px !important;
     min-width: 100%;
@@ -69,8 +61,17 @@
       width: 100%;
     }
   }
+}
+
+.id7-utility-masthead {
+  .typeahead:hover + .fas {
+    color: black;
+  }
 
   .typeahead.dropdown-menu {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
     padding: 0;
 
     > li > a {
