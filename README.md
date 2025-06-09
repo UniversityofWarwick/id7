@@ -150,6 +150,7 @@ To do so:
   - The math option for Less has been changed to `parens-division`, so expressions such as `19 / 6` will now be
     left as-is instead of being evaluated. This is to improve compatibility with CSS that uses the division operator.
     If you are doing your own LESS compilation, you should set `math: 'parens-division'` in your LESS compiler options.
+  - The "clearfix hack" has been removed from the Bootstrap container styles. This shouldn't have an effect on most layouts but if you have custom content using the container mixins, you may want to check that content doesn't spill out onto other content.
 
 <!--
 - **2.12.0**:

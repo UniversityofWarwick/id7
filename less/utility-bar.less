@@ -1,21 +1,20 @@
 .id7-utility-bar {
   .container-fluid((@grid-gutter-width * 2));
   position: relative;
-  .small();
+  font-size: if(@id7-gen-layout=2024, 85%, 1.4rem);
   white-space: nowrap;
 
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-  height: @id7-masthead-bleed-height;
-  line-height: @id7-masthead-bleed-height;
 
-  > ul {
-    .pull-right();
-  }
+  display: flex;
+  justify-content: end;
 
   .link-colour(@text-color);
 
   > ul {
     .horizontal-utility-links(0.4em, @text-color);
+    padding: 1px 10px;
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
   a > .fa-stack.id7-notifications-badge {
