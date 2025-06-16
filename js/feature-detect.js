@@ -11,20 +11,6 @@ export default class FeatureDetect {
     return (mql && mql.matches) || false;
   }
 
-  static cssSupports(property, value) {
-    if (typeof window.CSS !== 'undefined' && 'supports' in window.CSS) {
-      return window.CSS.supports(property, value);
-    }
-
-    if ('supportsCSS' in window) {
-      return window.supportsCSS(`${property}:${value}`);
-    }
-
-    // As IE11 doesn't support CSS.supports but its flexbox implementation is just
-    // about good-enough, special-case it
-    return property === 'display' && value === 'flex' && /rv:11.0/i.test(window.navigator.userAgent);
-  }
-
   static toggleClasses(container, feature, supported) {
     if (supported) {
       container.classList.remove(`no-${feature}`);

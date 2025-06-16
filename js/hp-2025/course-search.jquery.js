@@ -1,6 +1,6 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import * as html from '../html-utils';
+import * as htmlUtils from '../html-utils';
 
 const Config = {
   Defaults: {
@@ -78,7 +78,7 @@ class CourseSearch {
       },
       matcher: () => true, // All data received from the server matches the query
       sorter: (results) => results, // Don't sort
-      displayText: (o) => `<div><p class="title">${html.escape(o.title)}</p></div>`,
+      displayText: (o) => `<div><p class="title">${htmlUtils.escape(o.title)}</p></div>`,
       highlighter: (html) => html,
       followLinkOnSelect: true,
       showHintOnFocus: false, // ID-381 minLength has no effect unless this is false

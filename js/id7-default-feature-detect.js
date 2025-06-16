@@ -5,7 +5,7 @@ import FeatureDetect from './feature-detect';
 
 const detect = new FeatureDetect();
 detect.addTest('js', true);
-detect.addTest('flexbox', FeatureDetect.cssSupports('display', 'flex'));
+detect.addTest('flexbox', true);
 
 let svgFilters = false;
 try {
