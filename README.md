@@ -146,20 +146,19 @@ To do so:
     defined. If you don't do this then a lot of things will look wrong.
 - **2.11.0**:
   - The 7.1 design refresh is now the only option, so it no longer requires the `id7-point-1` class.
-- **2.??.?**:
+- **2.12.0**:
   - The math option for Less has been changed to `parens-division`, so expressions such as `19 / 6` will now be
     left as-is instead of being evaluated. This is to improve compatibility with CSS that uses the division operator.
     If you are doing your own LESS compilation, you should set `math: 'parens-division'` in your LESS compiler options.
-  - The "clearfix hack" has been removed from the Bootstrap container styles. This shouldn't have an effect on most layouts but if you have custom content using the container mixins, you may want to check that content doesn't spill out onto other content.
-
-<!--
-- **2.12.0**:
-  - 2025 brand updates are available but not enabled by default. If you are building ID7 from source, you can set
-    `@id7-gen: 2025;` in your LESS to enable the new styles.
-  - You will need to update any web font import in your template from Lato to Neue Haas Grotesk, as per the template.
+  - The "clearfix hack" has been removed from the Bootstrap container styles. This shouldn't have an effect on most layouts but if you have custom content using the container mixins, you may want to check that content doesn't spill out onto other content. The `display: flow-root` rule can be used as a modern alternative to clearfix where you are relying on floats.
+- **3.0.0**:
+  - **The 2025 brand evolution is now active**. If you are building ID7 from source, you can set `@id7-gen: 2024` to revert to the older style, and there are various `@id7-gen-*` sub-flags to switch individual features to and from `2024` and `2025`.
+  - Replace `logo.svg` with `wordmark.svg`.
+  - You will need to update any web font import in your template from Lato to Neue Haas Grotesk, as per the template. If there is no applicable Creative Cloud subscription then you may not have a license to use Adobe Fonts and you should exclude the web font import, leaving it to fallback to some selected alternatives.
   - If you use a CSP, you will need to update to allow TypeKit as a font source (see [Getting started](/getting-started/#security-headers)).
-  - Borderless is enabled in this mode so there is no need to specify left or right border images.
--->
+  - Review your footer content to ensure the crest is laid out sensibly. It should be in the top right with adequate contrast.
+    
+  
 
 ## Copyright and license
 

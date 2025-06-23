@@ -1,6 +1,6 @@
 
-.id7-utility-masthead when (@id7-gen-layout > 2024) {
-  // Above the nav, if there is one
+// Only add a border if it isn't followed by .id7-navigation
+.id7-utility-masthead:not(:has(+ .id7-navigation)) when (@id7-gen-layout > 2024) {
   border-bottom: 1px solid @text-color;
 }
 
@@ -11,6 +11,10 @@
   }
   .id7-logo-column {
     flex: 1;
+    // No search to the right? Add some margin.
+    &:not(:has(+ .id7-search-column)) {
+      margin-right: var(--w-ref-gridGutterWidth);
+    }
   }
 
   .id7-search-column {
@@ -153,9 +157,10 @@
   // links alongside the logo
   .id7-logo-row nav {
     display: none;
-
+    justify-content: end;
+    flex-grow: 1;
     @media (min-width: @grid-float-breakpoint) {
-      display: block;
+      display: flex;
     }
 
     &:not(:focus-within) {
@@ -163,8 +168,9 @@
     }
 
     transition: opacity 0.15s linear;
+    transition-delay: 150ms;
     .small();
-    font-size: clamp(1.2rem, 1.2vw, 1.8rem);
+    font-size: clamp(var(--w-ref-mastheadLinksMinSize), 1.2vw, var(--w-ref-mastheadLinksMaxSize));
 
     & when (@id7-gen-logos = 2024) {
       // Raise up to be in line with WARWICK -
@@ -174,6 +180,9 @@
 
     ul {
       .horizontal-utility-links();
+      & when (@id7-gen-logos >= 2025) {
+        font-weight: 500;
+      }
     }
 
     .link-colour(@gray-dark);

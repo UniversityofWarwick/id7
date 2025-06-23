@@ -82,7 +82,7 @@ p:last-child {
 }
 
 .lead {
-  font-weight: 700;
+  font-weight: if(@id7-gen-font=2024, 700, 500);
   font-size: (@font-size-base * 1.15);
 }
 
@@ -188,7 +188,7 @@ blockquote.quotes {
 }
 
 // ID-127
-ul, ol {
+:where(.id7-main-content) :is(ul, ol) {
   padding-left: 30px;
 
   li {
@@ -200,21 +200,25 @@ ul, ol {
   }
 }
 
+// Default list styles for nested unordered lists
+// (using :is to vastly reduce the amount of code duplication)
 ul {
   list-style-type: square;
 }
-
-ul ul, ol ul {
-  list-style-type: circle;
-}
-
-ol ol ul, ol ul ul, ul ol ul, ul ul ul {
-  list-style-type: disc;
-}
-
-ol ol ol ul, ol ol ul ul, ol ul ol ul, ol ul ul ul,
-ul ol ol ul, ul ol ul ul, ul ul ol ul, ul ul ul ul {
-  list-style-type: square;
+:is(ul, ol) {
+  ul {
+    list-style-type: circle;
+  }
+  :is(ul, ol) {
+    ul {
+      list-style-type: disc;
+    }
+    :is(ul, ol) {
+      ul {
+          list-style-type: square;
+      }
+    }
+  }
 }
 
 label {

@@ -14,14 +14,14 @@
   {% include header-load-font.html %}
 
   <!-- ID7 -->
-  <link href="css/id7.min.css" rel="stylesheet">
+  <link href="css/id7.css" rel="stylesheet">
 
   <!-- Default styling. You will probably want to replace with your own site.css -->
-  <link href="css/id7-default-style.min.css" rel="stylesheet">
+  <link href="css/id7-default-style.css" rel="stylesheet">
 
-  <script src="js/id7-bundle.min.js"></script>
+  <script src="js/id7-bundle.js"></script>
 </head>
-<body class="id7-point-1">
+<body>
   <div class="id7-left-border"></div>
   <div class="id7-fixed-width-container">
     <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
@@ -42,7 +42,7 @@
                 <div class="id7-logo-row">
                   <div class="id7-logo">
                     <a href="http://warwick.ac.uk" title="Warwick homepage">
-                      <img src="images/shim.gif" alt="Warwick">
+                      <img src="images/wordmark.svg" alt="Warwick">
                     </a>
                   </div>
                   <nav class="id7-site-links" aria-label="Site links">
@@ -93,9 +93,6 @@
     <!-- Page content of course! -->
     <main class="id7-main-content-area" id="main">
       <header class="id7-main-content-header">
-        <div class="id7-horizontal-divider">
-          {% include divider.html %}
-        </div>
 
         <div class="id7-page-title">
           <h1>Your page title</h1>
@@ -107,29 +104,24 @@
       </div>
     </main>
 
-    <footer class="id7-page-footer id7-footer-coloured"> <!-- one of id7-footer-coloured or id7-footer-divider -->
+    <footer class="id7-page-footer">
       <div class="id7-site-footer">
-        <!-- Only included when footer class="id7-footer-divider"
-          <div class="id7-horizontal-divider">
-          {% include divider.html %}
-          </div>
-        -->
-
-        Your site footer content
+        <div class="id7-site-footer-content">
+          Your site footer content
+        </div>
       </div>
       <div class="id7-app-footer">
-        <!-- Only include the id7-logo-bleed for footer class="id7-footer-coloured" -->
-        <div class="id7-logo-bleed"></div>
-
-        <div class="id7-footer-utility">
-          <ul>
-            <li>Powered by <a href="http://warwick.ac.uk/sitebuilder">App name</a></li>
-            <li><a href="http://warwick.ac.uk/copyright">© MMXV</a></li>
-            <li><a href="http://warwick.ac.uk/terms">Terms</a></li>
-            <li><a href="http://warwick.ac.uk/privacy">Privacy</a></li>
-            <li><a href="http://warwick.ac.uk/cookies">Cookies</a></li>
-            <li><a href="http://warwick.ac.uk/accessibility">Accessibility</a></li>
-          </ul>
+        <div class="id7-app-footer-content">
+          <div class="id7-footer-utility">
+            <ul>
+              <li>Powered by <a href="http://warwick.ac.uk/sitebuilder">App name</a></li>
+              <li><a href="http://warwick.ac.uk/copyright">© MMXV</a></li>
+              <li><a href="http://warwick.ac.uk/terms">Terms</a></li>
+              <li><a href="http://warwick.ac.uk/privacy">Privacy</a></li>
+              <li><a href="http://warwick.ac.uk/cookies">Cookies</a></li>
+              <li><a href="http://warwick.ac.uk/accessibility">Accessibility</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

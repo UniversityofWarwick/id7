@@ -1,10 +1,11 @@
 {% if site.id7_gen == 2024 %}
 <!-- Pre-connect to Google Fonts domain -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<!-- Load the Lato web font using the loadCSS method so it doesn't block rendering of the page -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;subset=latin,latin-ext"
+       type="text/css" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;subset=latin,latin-ext&amp;display=fallback"
-      rel="preload" as="style" type="text/css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+      rel="stylesheet" type="text/css" crossorigin="anonymous">
 {% else %}
-<link href="https://use.typekit.net/iog2qgq.css" integrity="sha384-+x2FJzFv9tjoA+oOkn7vinOu4+0RukcFD+DmbGYztER64c2XBUQs25LT+7wXccdt"
-      rel="preload" as="style" type="text/css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://use.typekit.net/iog2qgq.css"
+      rel="stylesheet" type="text/css" crossorigin="anonymous">
 {% endif %}

@@ -8,9 +8,10 @@
 // Headings
 // -------------------------
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: @headings-font-family;
+:is(h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6) {
+  --w-sys-fontFamily: var(--w-ref-fontFamily-headings);
+  font-family: var(--w-sys-fontFamily);
   font-weight: @headings-font-weight;
   line-height: @headings-line-height;
 
@@ -23,20 +24,19 @@ h1, h2, h3, h4, h5, h6,
 
   // New brand has monochrome headings - and needs to
   // override existing theme CSS
-  .id7-main-content-area & when (@id7-gen > 2024) {
+  :is(.id7-main-content-area, .id7-site-footer) & when (@id7-gen > 2024) {
     color: @text-color;
   }
 
-  small,
-  .small {
+  :is(small, .small) {
     font-weight: @main-font-weight;
     line-height: 1;
   }
 }
 
-h1, .h1,
+:is(h1, .h1,
 h2, .h2,
-h3, .h3 {
+h3, .h3) {
   margin-top: @line-height-computed;
   margin-bottom: (@line-height-computed / 2);
 
@@ -45,9 +45,9 @@ h3, .h3 {
     font-size: 65%;
   }
 }
-h4, .h4,
+:is(h4, .h4,
 h5, .h5,
-h6, .h6 {
+h6, .h6) {
   margin-top: (@line-height-computed / 2);
   margin-bottom: (@line-height-computed / 2);
 
@@ -168,12 +168,10 @@ mark,
 // -------------------------
 
 // Unordered and Ordered lists
-ul,
-ol {
+:is(ul,ol) {
   margin-top: 0;
   margin-bottom: (@line-height-computed / 2);
-  ul,
-  ol {
+  :is(ul,ol) {
     margin-bottom: 0;
   }
 }
@@ -261,9 +259,11 @@ blockquote {
   font-size: @blockquote-font-size;
   border-left: 5px solid @blockquote-border-color;
 
-  p,
-  ul,
-  ol {
+  :is(
+    p,
+    ul,
+    ol
+  ) {
     &:last-child {
       margin-bottom: 0;
     }
@@ -288,8 +288,8 @@ blockquote {
 // Opposite alignment of blockquote
 //
 // Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
-.blockquote-reverse,
-blockquote.pull-right {
+:is(.blockquote-reverse,
+blockquote.pull-right) {
   padding-right: 15px;
   padding-left: 0;
   text-align: right;
@@ -297,9 +297,9 @@ blockquote.pull-right {
   border-left: 0;
 
   // Account for citation
-  footer,
+  :is(footer,
   small,
-  .small {
+  .small) {
     &:before { content: ""; }
     &:after {
       content: "\00A0 \2014"; // nbsp, em dash
