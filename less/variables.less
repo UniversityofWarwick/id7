@@ -5,7 +5,7 @@
 // non-branded sites that were based on an older version).
 // One overall version for the whole site, and individual ones for
 // different areas that could be overriden individually.
-@id7-gen: 2024;
+@id7-gen: 2025;
 // @id7-gen should not be referenced anywhere other than for these defaults!
 @id7-gen-font: @id7-gen;
 @id7-gen-font-sizes: @id7-gen;
@@ -74,7 +74,7 @@
 @id7-account-popover-actions-bg: #f7f7f7;
 @id7-account-popover-actions-border: #ebebeb;
 
-@id7-masthead-logo-height-xs: if(@id7-gen-logos = 2024, 54px, 44px);
+@id7-masthead-logo-height-xs: if(@id7-gen-logos = 2024, 54px, 40px);
 @id7-masthead-logo-height-sm: if(@id7-gen-logos = 2024, 75px, 40px);
 @id7-masthead-logo-aspect: if(@id7-gen-logos = 2024, (226/150), (300/80)); // image intrinsic dimensions
 
@@ -93,7 +93,7 @@
 @id7-header-h1-font-size-xs: 20px;
 
 @id7-header-h1-height: (1.875 * @main-font-size);
-@id7-header-h1-padding-vertical: 1.2rem;
+@id7-header-h1-padding-vertical: 0.8rem;
 @id7-affixed-header-height: (@id7-header-h1-height + (@id7-header-h1-padding-vertical * 2));
 
 @id7-navigation-height: 35px;
@@ -119,10 +119,12 @@
 @text-color: if((@id7-gen-colours = 2024), #202020, #212529);
 @font-stack-lato: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+@font-stack-nhg-fallbacks: Aptos, 'Helvetica Neue', Helvetica, 'SF Pro', 'Liberation Sans', sans-serif;
+
 // Best for headings
-@font-stack-nhg-display: neue-haas-grotesk-display, 'Helvetica Neue', Helvetica, 'SF Pro', 'Arial Nova', Arial, sans-serif;
+@font-stack-nhg-display: neue-haas-grotesk-display, @font-stack-nhg-fallbacks;
 // Best for other text
-@font-stack-nhg-text: neue-haas-grotesk-text, 'Helvetica Neue', Helvetica, 'SF Pro', 'Arial Nova', Arial, sans-serif;
+@font-stack-nhg-text: neue-haas-grotesk-text, @font-stack-nhg-fallbacks;
 
 @font-family-sans-serif: if((@id7-gen-font = 2024),
   @font-stack-lato,
@@ -132,11 +134,12 @@
 @line-height-base: 1.6;
 
 @main-font-size: 1.6rem;
+@nav-font-size: 1.4rem;
 @main-font-weight: 400;
 
 @blockquote-font-size: inherit;
 
-@headings-font-weight: if((@id7-gen-font = 2024), 400, 700);
+@headings-font-weight: if((@id7-gen-font = 2024), 400, 600);
 @headings-font-family: if((@id7-gen-font = 2024),
   inherit,
   @font-stack-nhg-display
@@ -168,12 +171,12 @@
 @input-color: #222222;
 
 // see @id7-header-h1-font-size for site title size.
-@font-size-h1: if((@id7-gen-font-sizes = 2024), 2.8rem, 7rem);
-@font-size-h2: if((@id7-gen-font-sizes = 2024), 2.6rem, 5.6rem);
-@font-size-h3: if((@id7-gen-font-sizes = 2024), 2.4rem, 4rem);
-@font-size-h4: if((@id7-gen-font-sizes = 2024), 2.2rem, 2rem);
-@font-size-h5: if((@id7-gen-font-sizes = 2024), 2rem, 1.8rem);
-@font-size-h6: @main-font-size; // some things never change
+@font-size-h1: if((@id7-gen-font-sizes = 2024), 2.8rem, 4rem);
+@font-size-h2: 2.6rem;
+@font-size-h3: 2.4rem;
+@font-size-h4: 2.2rem;
+@font-size-h5: 2rem;
+@font-size-h6: @main-font-size;
 @id7-h6-font-weight: bold;
 
 // Overriding of bootstrap defaults to stop calculation misery now that font sizes are based on rem
@@ -203,7 +206,7 @@
 
 // End of font-size-based bootstrap overrides
 
-@font-scale-xs: 0.875;
+@font-scale-xs: if(@id7-gen-font-sizes = 2024, 0.875, 1);
 
 @border-radius-base: 0px;
 @border-radius-large: 0px;
@@ -288,4 +291,4 @@
 @screen-lg-max:             (@screen-xl-min - 1);
 @screen-xl-max:             (@screen-2xl-min - 1);
 
-@borderless-container:      if(@id7-gen > 2024, true, false);
+@borderless-container:      false;

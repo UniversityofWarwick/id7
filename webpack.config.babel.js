@@ -22,7 +22,7 @@ const paths = {
   ASSETS_TEMPLATES(basePath) { return path.join(basePath, 'templates'); },
   BUNDLE: './js/id7-bundle.js',
   ID7: './less/id7.less',
-  ID7_2025: './less/id7-2025.less',
+  ID7_2024: './less/id7-2024.less',
   ID7_DEFAULT_THEME: './less/default-theme.less',
   ID7_WIDE: './less/id7-wide.less',
   ID7_BORDERLESS: './less/id7-borderless.less',
@@ -83,7 +83,7 @@ const commonConfig = basePath => merge([
     entry: {
       'js/id7-bundle': paths.BUNDLE,
       'css/id7': paths.ID7,
-      'css/id7-2025': paths.ID7_2025,
+      'css/id7-2024': paths.ID7_2024,
       'css/id7-default-theme': paths.ID7_DEFAULT_THEME,
       'css/id7-wide': paths.ID7_WIDE,
       'css/id7-borderless': paths.ID7_BORDERLESS,

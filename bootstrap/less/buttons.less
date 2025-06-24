@@ -9,6 +9,9 @@
 // --------------------------------------------------
 
 .btn {
+  // Use text font stack even if inside a heading.
+  --w-sys-fontFamily: var(--w-ref-fontFamily-text);
+  font-family: var(--w-sys-fontFamily);
   display: inline-block;
   margin-bottom: 0; // For input.btn
   font-weight: @btn-font-weight;

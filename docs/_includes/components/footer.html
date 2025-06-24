@@ -3,7 +3,7 @@
 <p class="lead">The page footer contains common links for the whole application and, optionally, for the site.</p>
 
 {% highlight html %}
-<footer class="id7-page-footer id7-footer-coloured">
+<footer class="id7-page-footer">
   <div class="id7-site-footer">
     <div class="id7-site-footer-content">...</div>
   </div>
@@ -12,8 +12,6 @@
   </div>
 </footer>
 {% endhighlight %}
-
-<p>The footer <strong>MUST</strong> use one of <code>id7-footer-coloured</code> or <code>id7-footer-divider</code> as detailed below.</p>
 
 <h3>Site footer</h3>
 
@@ -28,44 +26,3 @@ Typical links are for application platform information, copyright, terms of use,
 vendor-specific pages if the application has differing policies. <b>If you link to central pages, you must ensure that your application
 does follow these policies and procedures without conflict.</b></p>
 
-<h3>Coloured footer</h3>
-
-<p>By adding the class <code>id7-footer-coloured</code> to the <code>&lt;footer&gt;</code> element, the site-wide footer will be coloured. You can then add a logo bleed to the app footer by using the following HTML:</p>
-
-{% highlight html %}
-<footer class="id7-page-footer id7-footer-coloured">
-  <div class="id7-site-footer">
-    <div class="id7-site-footer-content">...</div>
-  </div>
-  <div class="id7-app-footer">
-    <div class="id7-app-footer-content">
-      <div class="id7-logo-bleed"></div>
-
-      ...
-    </div>
-  </div>
-</footer>
-{% endhighlight %}
-
-<h3>Footer with divider</h3>
-
-<p>By adding the class <code>id7-footer-divider</code> to the <code>&lt;footer&gt;</code> element, the site-wide footer will be white and it is possible to add a divider at the top of it by using the following HTML:
-
-{% highlight html %}
-<footer class="id7-page-footer id7-footer-divider">
-  <div class="id7-site-footer">
-    <div class="id7-site-footer-content">
-      <div class="id7-horizontal-divider">
-        {% include divider.html %}
-      </div>
-
-      ...
-    </div>
-  </div>
-  <div class="id7-app-footer">
-    <div class="id7-app-footer-content">...</div>
-  </div>
-</footer>
-{% endhighlight %}
-
-<p>The divider will be the brand colour.</p>

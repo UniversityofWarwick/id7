@@ -40,7 +40,7 @@
                 <div class="id7-logo-row">
                   <div class="id7-logo">
                     <a href="https://warwick.ac.uk" title="University of Warwick homepage">
-                      <img src="images/shim.gif" alt="University of Warwick homepage">
+                      <img src="images/wordmark.svg" alt="University of Warwick homepage">
                     </a>
                   </div>
                   <nav class="id7-site-links" aria-label="Site links">
@@ -72,11 +72,11 @@
             </div>
 
             <div class="id7-header-text clearfix">
-              <h1>
+              <h2 class="h1">
                 <!-- Parent site link often excluded -->
                 <span class="id7-parent-site-link"><a href="#">Parent site name</a></span>
                 <span class="id7-current-site-link"><a href="#">Current site name</a></span>
-              </h1>
+              </h2>
             </div>
           </div>
         </div>
@@ -91,10 +91,6 @@
     <!-- Page content of course! -->
     <main class="id7-main-content-area" id="main">
       <header class="id7-main-content-header">
-        <div class="id7-horizontal-divider">
-          {% include divider.html %}
-        </div>
-
         <div class="id7-page-title">
           <h1>Your page title</h1>
         </div>
@@ -105,23 +101,15 @@
       </div>
     </main>
 
-    <footer class="id7-page-footer id7-footer-coloured"> <!-- one of id7-footer-coloured or id7-footer-divider -->
+    <footer class="id7-page-footer">
       <div class="id7-site-footer">
         <div class="id7-site-footer-content">
-          <!-- Only included when footer class="id7-footer-divider"
-            <div class="id7-horizontal-divider">
-            {% include divider.html %}
-            </div>
-          -->
 
           Your site footer content
         </div>
       </div>
       <div class="id7-app-footer">
         <div class="id7-app-footer-content">
-          <!-- Only include the id7-logo-bleed for footer class="id7-footer-coloured" -->
-          <div class="id7-logo-bleed"></div>
-
           <div class="id7-footer-utility">
             <ul>
               <li>Powered by <a href="https://warwick.ac.uk/sitebuilder">App name</a></li>

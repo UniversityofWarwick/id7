@@ -1,7 +1,9 @@
 :root {
   --w-sys-logoHeight: @id7-masthead-logo-height-xs;
-  @media (min-width: @grid-float-breakpoint) {
-    --w-sys-logoHeight: @id7-masthead-logo-height-sm;
+  & when not (@id7-masthead-logo-height-xs = @id7-masthead-logo-height-sm) {
+      @media (min-width: @grid-float-breakpoint) {
+        --w-sys-logoHeight: @id7-masthead-logo-height-sm;
+      }
   }
 
   // From the Brand Book:
@@ -24,8 +26,10 @@ html {
   font-weight: @main-font-weight;
   font-size: (@main-font-size * @font-scale-xs);
 
-  @media (min-width: @grid-float-breakpoint) {
-    font-size: @main-font-size;
+  & when not (@font-scale-xs = 1.0) {
+    @media (min-width: @grid-float-breakpoint) {
+      font-size: @main-font-size;
+    }
   }
 
   // Only add the right padding on a screen (to avoid it going on print)
@@ -40,19 +44,26 @@ html {
 // by adding it as a pseudo-element and then layout it out
 // with flexbox (which pseudo-elements participate in).
 .crest-right when (@id7-gen-logos >= 2025) {
+  .crest-right(positive);
+}
+
+
+.crest-right(positive) {
+  --w-sys-images-crest: var(--w-ref-images-crestPositive);
+}
+
+.crest-right(negative) {
+  --w-sys-images-crest: var(--w-ref-images-crestNegative);
+}
+
+.crest-right(@_) {
   @media screen {
     &::before {
       display: block;
-      content: var(--w-ref-images-crestPositive);
+      content: var(--w-sys-images-crest);
       height: var(--w-sys-crestHeight);
       aspect-ratio: var(--w-sys-crestAspect);
       margin-left: auto;
     }
   }
-}
-
-// Add crest to top right of element as a background.
-.crest-bg-top-right {
-  .crest-bg(positive);
-  background-position: top right;
 }

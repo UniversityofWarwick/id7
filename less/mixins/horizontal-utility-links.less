@@ -1,4 +1,13 @@
-.horizontal-utility-links(@spacing: 0.2em, @separator-colour: @gray-light) {
+
+.horizontal-utility-links(@spacing: 0.6em, @ignored: 0) when (@id7-gen-layout > 2024) {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  column-gap: @spacing;
+}
+
+.horizontal-utility-links(@spacing: 0.4em, @separator-colour: @gray-light) when (@id7-gen-layout=2024) {
   padding-left: 0;
   list-style: none;
   margin: 0;
@@ -14,8 +23,8 @@
       height: 1em;
       opacity: 0.5;
       display: inline-block;
-      margin-left: (@spacing * 0.8);
-      margin-right: (@spacing * 1.8);
+      margin-left: (@spacing * 0.4);
+      margin-right: (@spacing * 0.9);
       margin-bottom: -0.15em;
 
     }

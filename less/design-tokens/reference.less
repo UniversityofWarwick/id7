@@ -4,6 +4,22 @@
   --w-ref-gridGutterWidth: @grid-gutter-width;
   --w-ref-fixedContainerMinHeight: 100vh;
 
-  --w-sys-fontScale: 1.0;
+  --w-ref-fontSizeMain: @main-font-size;
+  --w-ref-fontSizeNav: @nav-font-size;
+
+  // Masthead links scala dynamically based on window size - these are the limits.
+  --w-ref-mastheadLinksMinSize: 1.2rem;
+  --w-ref-mastheadLinksMaxSize: 1.6rem;
+
+  // Two separate scale factors - one to adjust based on screen size, and another
+  // to be adjusted manually.
+  --w-sys-fontScaleScreen: 1.0;
+  --w-sys-fontScaleOverride: 1.0;
+  // Don't override this directly - override one of the others above.
+  --w-sys-fontScale: calc(var(--w-sys-fontScaleScreen) * var(--w-sys-fontScaleOverride));
   --w-sys-fontScaleHeaders: var(--w-sys-fontScale);
+
+  // Scaled font sizes
+  --w-sys-fontSizeMain: calc(var(--w-ref-fontSizeMain) * var(--w-sys-fontScale));
+  --w-sys-fontSizeNav: calc(var(--w-ref-fontSizeNav) * var(--w-sys-fontScale));
 }

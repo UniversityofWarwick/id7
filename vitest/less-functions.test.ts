@@ -4,7 +4,7 @@ import css from 'css';
 
 test('evaluateVariable', async () => {
   const textColor = await lessFunctions.evaluateVariable('text-color');
-  expect(textColor).toBe('#202020');
+  expect(textColor).toBe('#212529');
 });
 
 test('renderLessFiles', async () => {

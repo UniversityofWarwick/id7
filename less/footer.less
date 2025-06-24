@@ -2,11 +2,19 @@ footer {
   .id7-site-footer .id7-site-footer-content, .id7-app-footer {
     .container-fluid((@grid-gutter-width * 2));
     position: relative;
-    padding-top: @grid-gutter-width;
+    padding-top: var(--w-ref-gridGutterWidth);
+    padding-bottom: var(--w-ref-gridGutterWidth);
   }
 
   .id7-app-footer {
+    .crest-right;
     .small();
+
+    background-color: black;
+    &, :is(a, a:link, a:visited) {
+      color: white;
+      text-decoration-color: white;
+    }
 
     .page-footer-elements {
       margin-top: 0;
@@ -23,8 +31,14 @@ footer {
         padding-bottom: @grid-gutter-width;
       }
 
+      & when (@id7-gen-logos >= 2025) {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+      }
+
       ul {
-        .horizontal-utility-links();
+        .horizontal-utility-links(1em);
+        flex-wrap: wrap;
       }
     }
   }
@@ -32,27 +46,23 @@ footer {
 
 
   & when (@id7-gen-logos > 2024) {
-    @media screen {
-      // Crest
-      .id7-app-footer-content {
-        .crest-bg(negative);
-        padding-bottom: calc(var(--w-sys-crestHeight) + var(--w-ref-gridGutterWidth));
-        background-position: if(@borderless-container,
-          bottom var(--w-ref-gridGutterWidth) left var(--w-ref-gridGutterWidth),
-          bottom var(--w-ref-gridGutterWidth) left 0
-        );
+    // Crest
+    .id7-app-footer-content {
+      .crest-right(negative);
+      &::before {
+        grid-row: 1;
+        grid-column: -1;
       }
+
+      display: grid;
+      grid: auto-flow / 1fr 1fr auto;
     }
   }
 
   // Footer styling elements - logo bleed and/or divider
-  .id7-site-footer, .id7-app-footer {
-    @media screen {
-      .id7-logo-bleed {
-        // Not currently used, so hide.
-        display: none;
-      }
-    }
+  div:is(.id7-site-footer, .id7-app-footer) .id7-logo-bleed {
+      // Not currently used, so hide.
+      display: none;
   }
 
   @media print {
