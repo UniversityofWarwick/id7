@@ -24,7 +24,7 @@
 
   // New brand has monochrome headings - and needs to
   // override existing theme CSS
-  :is(.id7-main-content-area, .id7-site-footer) & when (@id7-gen > 2024) {
+  :where(.id7-main-content-area, .id7-site-footer) & when (@id7-gen > 2024) {
     color: @text-color;
   }
 
