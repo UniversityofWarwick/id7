@@ -18,10 +18,8 @@ const Config = {
                 sandbox="allow-same-origin allow-scripts allow-top-navigation allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
         <div class="actions">
-          <div class="btn-group btn-group-justified">
-            <div class="btn-group sign-out">
-              <a href="${escape(o.logoutlink)}" class="btn btn-default">Sign out</a>
-            </div>
+          <div class="action">
+            <a href="${escape(o.logoutlink)}" class="btn btn-default btn-block sign-out">Sign out</a>
           </div>
         </div>`;
     },
@@ -29,10 +27,10 @@ const Config = {
      * @return {string}
      */
     Action(o) {
-      return `<div class="btn-group">
+      return `<div class="action">
         <a href="${escape(o.href)}" 
            title="${escape(o.tooltip)}" 
-           class="btn btn-default ${escape(o.classes)}">${escape(o.title)}</a>
+           class="btn btn-default btn-block ${escape(o.classes)}">${escape(o.title)}</a>
         </div>`;
     },
   },
@@ -212,8 +210,8 @@ class AccountPopover {
     switch (messageType) {
       case 'addAction': {
         const d = { ...data, classes: '', tooltip: '' };
-        $popover.find('.actions > .btn-group').prepend(Config.Templates.Action(d));
-        $popover.find('.actions > .btn-group > .btn-group').first().find('[title]:not([title=""])').tooltip({
+        $popover.find('.actions').prepend(Config.Templates.Action(d));
+        $popover.find('.actions > .action').first().find('[title]:not([title=""])').tooltip({
           placement: 'bottom',
         });
         break;
@@ -230,7 +228,7 @@ class AccountPopover {
         break;
       case 'signedOut': {
         const { loginlink } = this.options;
-        $popover.find('.actions > .btn-group > .sign-out')
+        $popover.find('.actions > .action > .sign-out').parent()
           .replaceWith(Config.Templates.Action({
             href: loginlink,
             classes: 'sign-in',
