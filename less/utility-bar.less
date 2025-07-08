@@ -121,6 +121,13 @@
 
       .actions {
         flex: 0 0 auto;
+        display: flex;
+        padding: (@line-height-computed / 2);
+        gap: (@line-height-computed / 2);
+
+        .action {
+          flex-grow: 1;
+        }
       }
     }
   }
@@ -134,10 +141,6 @@
 
     background: @id7-account-popover-actions-bg;
     border-top: 1px solid @id7-account-popover-actions-border;
-
-    .btn-group-justified {
-      border-spacing: (@line-height-computed / 2);
-    }
   }
 
   .popover.account-information {
