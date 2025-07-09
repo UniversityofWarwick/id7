@@ -8,7 +8,6 @@ window.jQuery = $;
 require('./bootstrap-transition.jquery');
 require('./bootstrap-alert.jquery');
 require('./bootstrap-button.jquery');
-require('./bootstrap-carousel.jquery');
 require('./bootstrap-collapse.jquery');
 require('./bootstrap-dropdown.jquery');
 require('./bootstrap-modal.jquery');

@@ -157,6 +157,8 @@ To do so:
   - You will need to update any web font import in your template from Lato to Neue Haas Grotesk, as per the template. If there is no applicable Creative Cloud subscription then you may not have a license to use Adobe Fonts and you should exclude the web font import, leaving it to fallback to some selected alternatives.
   - If you use a CSP, you will need to update to allow TypeKit as a font source (see [Getting started](/getting-started/#security-headers)).
   - Review your footer content to ensure the crest is laid out sensibly. It should be in the top right with adequate contrast.
+- **3.1.0**:  
+  - The carousel component has been removed by default as it is rarely used and has a number of accessibility issues. If you still need to use it while you migrate away, you can include the JS and LESS files for it in a custom bundle.
     
   
 
