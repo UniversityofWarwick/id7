@@ -158,7 +158,9 @@ To do so:
   - If you use a CSP, you will need to update to allow TypeKit as a font source (see [Getting started](/getting-started/#security-headers)).
   - Review your footer content to ensure the crest is laid out sensibly. It should be in the top right with adequate contrast.
 - **3.1.0**:  
-  - The carousel component has been removed by default as it is rarely used and has a number of accessibility issues. If you still need to use it while you migrate away, you can include the JS and LESS files for it in a custom bundle.
+    - The carousel component has been removed by default as it is rarely used and has a number of accessibility issues. If you still need to use it while you migrate away, you can include the JS and LESS files for it in a custom bundle.
+- **3.2.0**:
+    - jQuery has been updated. Please make sure that your project doesn't specify a `jquery` dependency with a specific version as this may cause conflicts.
     
   
 
