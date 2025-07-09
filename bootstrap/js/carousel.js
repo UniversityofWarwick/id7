@@ -115,16 +115,16 @@
   }
 
   Carousel.prototype.slide = function (type, next) {
-    var $active   = this.$element.find('.item.active')
-    var $next     = next || this.getItemForDirection(type, $active)
-    var isCycling = this.interval
-    var direction = type == 'next' ? 'left' : 'right'
-    var that      = this
+    const $active = this.$element.find('.item.active');
+    const $next     = next || this.getItemForDirection(type, $active)
+    const isCycling = this.interval
+    const direction = type == 'next' ? 'left' : 'right'
+    const that      = this
 
     if ($next.hasClass('active')) return (this.sliding = false)
 
-    var relatedTarget = $next[0]
-    var slideEvent = $.Event('slide.bs.carousel', {
+    const relatedTarget = $next[0]
+    const slideEvent = $.Event('slide.bs.carousel', {
       relatedTarget: relatedTarget,
       direction: direction
     })
@@ -137,11 +137,11 @@
 
     if (this.$indicators.length) {
       this.$indicators.find('.active').removeClass('active')
-      var $nextIndicator = $(this.$indicators.children()[this.getItemIndex($next)])
+      const $nextIndicator = $(this.$indicators.children()[this.getItemIndex($next)])
       $nextIndicator && $nextIndicator.addClass('active')
     }
 
-    var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
+    const slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
     if ($.support.transition && this.$element.hasClass('slide')) {
       $next.addClass(type)
       if (typeof $next === 'object' && $next.length) {
@@ -177,10 +177,10 @@
 
   function Plugin(option) {
     return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.carousel')
-      var options = $.extend({}, Carousel.DEFAULTS, $this.data(), typeof option == 'object' && option)
-      var action  = typeof option == 'string' ? option : options.slide
+      const $this   = $(this)
+      let data      = $this.data('bs.carousel')
+      const options = $.extend({}, Carousel.DEFAULTS, $this.data(), typeof option == 'object' && option)
+      const action  = typeof option == 'string' ? option : options.slide
 
       if (!data) $this.data('bs.carousel', (data = new Carousel(this, options)))
       if (typeof option == 'number') data.to(option)
@@ -189,7 +189,7 @@
     })
   }
 
-  var old = $.fn.carousel
+  const old = $.fn.carousel
 
   $.fn.carousel             = Plugin
   $.fn.carousel.Constructor = Carousel
@@ -207,29 +207,29 @@
   // CAROUSEL DATA-API
   // =================
 
-  var clickHandler = function (e) {
-    var $this   = $(this)
-    var href    = $this.attr('href')
+  const clickHandler = function (e) {
+    e.preventDefault();
+
+    const $this = $(this);
+    let href = $this.attr('href');
     if (href) {
       href = href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
     }
 
-    var target  = $this.attr('data-target') || href
-    var $target = $(document).find(target)
+    const target  = $this.attr('data-target') || href;
+    const $target = $(document).find(target);
 
-    if (!$target.hasClass('carousel')) return
+    if (!$target.hasClass('carousel')) return;
 
-    var options = $.extend({}, $target.data(), $this.data())
-    var slideIndex = $this.attr('data-slide-to')
-    if (slideIndex) options.interval = false
+    const options = $.extend({}, $target.data(), $this.data());
+    const slideIndex = $this.attr('data-slide-to');
+    if (slideIndex) options.interval = false;
 
-    Plugin.call($target, options)
+    Plugin.call($target, options);
 
     if (slideIndex) {
-      $target.data('bs.carousel').to(slideIndex)
+      $target.data('bs.carousel').to(slideIndex);
     }
-
-    e.preventDefault()
   }
 
   $(document)
@@ -238,7 +238,7 @@
 
   $(window).on('load', function () {
     $('[data-ride="carousel"]').each(function () {
-      var $carousel = $(this)
+      const $carousel = $(this)
       Plugin.call($carousel, $carousel.data())
     })
   })
