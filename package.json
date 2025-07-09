@@ -1,6 +1,6 @@
 {
   "name": "@universityofwarwick/id7",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "scripts": {
     "watch": "NODE_ENV=development webpack --mode development --watch",
     "dev": "NODE_ENV=development webpack --mode development",
@@ -22,7 +22,7 @@
     "@universityofwarwick/bootstrap-3-typeahead": "4.1.0",
     "@universityofwarwick/jqdoublescroll": "0.7.0",
     "headroom.js": "0.12.0",
-    "jquery": "3.5.1",
+    "jquery": "^3.7.1",
     "loglevel": "1.7.1"
   },
   "devDependencies": {
