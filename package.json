@@ -15,7 +15,8 @@
     "docs-build": "bundle exec jekyll build",
     "readme-md2html": "marked README.md > docs/_includes/README.html",
     "clean": "rm -rf ./dist/ ./docs/dist/",
-    "prepublishOnly": "npm-run-all clean build"
+    "prepublishOnly": "npm-run-all clean build",
+    "generateIcons": "node generate-icons.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
@@ -23,7 +24,9 @@
     "@universityofwarwick/jqdoublescroll": "0.7.0",
     "headroom.js": "0.12.0",
     "jquery": "^3.7.1",
-    "loglevel": "1.7.1"
+    "loglevel": "1.7.1",
+    "png-to-ico": "2.1.8",
+    "sharp": "0.34.3"
   },
   "devDependencies": {
     "@babel/core": "7.7.7",

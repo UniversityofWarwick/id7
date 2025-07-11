@@ -40,6 +40,7 @@ const commonConfig = basePath => merge([
     output: {
       path: basePath,
       publicPath: paths.PUBLIC_PATH,
+      hashFunction: 'xxhash64',
     },
     node: {
       // Fix Webpack global CSP violation https://github.com/webpack/webpack/issues/6461
