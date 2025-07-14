@@ -90,7 +90,7 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 ### Running sample site locally
 
 1. Install Ruby and run `gem install bundler`.
-1. Install node.js.
+1. Install node.js - version 22 required.
 1. In the root `/id7` directory:
     1. Run `bundle install` to install dependent gems.
     1. Run `npm ci` to install webpack and other node.js dependencies.
@@ -118,10 +118,6 @@ To do so:
 
 * Replace the logo image `logo.png` with `logo.svg` in your templates
 * Update anything app-specific that needs updating - the whole masthead region should have a white background
-
-## Generating favicons
-
-If you need to update the favicons, you can amend the settings (or add new code) to `generate-icons.js` and recreate the icons by running `npm run generateIcons`.
 
 ## Breaking changes
 
