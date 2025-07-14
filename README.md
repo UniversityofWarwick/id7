@@ -119,6 +119,10 @@ To do so:
 * Replace the logo image `logo.png` with `logo.svg` in your templates
 * Update anything app-specific that needs updating - the whole masthead region should have a white background
 
+## Generating favicons
+
+If you need to update the favicons, you can amend the settings (or add new code) to `generate-icons.js` and recreate the icons by running `npm run generateIcons`.
+
 ## Breaking changes
 
 - **1.2.0** - Now uses a custom Modernizr build (see _What's included_ above) with a minimal range of tests. If your application relies on other tests or shims which were included in previous versions, they will likely fail.
@@ -161,8 +165,8 @@ To do so:
     - The carousel component has been removed by default as it is rarely used and has a number of accessibility issues. If you still need to use it while you migrate away, you can include the JS and LESS files for it in a custom bundle.
 - **3.2.0**:
     - jQuery has been updated. Please make sure that your project doesn't specify a `jquery` dependency with a specific version as this may cause conflicts.
-    
-  
+- **3.3.0**:    
+    - New favicons and a new favicon generator are included, along with light mode and dark mode versions. To use the new dark mode icons, update the <head> of your teamplates to include the new code in `docs/_includes/header.html`.
 
 ## Copyright and license
 
