@@ -20,103 +20,99 @@ const SETTINGS = {
 
 const transparent = {r: 0, g: 0, b: 0, alpha: 0};
 
-try {
-  SETTINGS.androidChromeIconSizes.forEach(async (size) => {
-    await generateIcon({
-      size,
-      padding: Math.floor(size / 20),
-      inputFilename: SETTINGS.iconLightFilename,
-      outputFilename: `android-chrome-${size}x${size}.png`,
-      background: transparent,
-    })
-  });
-
-  SETTINGS.appleTouchIconSizes.forEach(async (size) => {
-    await generateIcon({
-      size,
-      padding: Math.floor(size / 10),
-      inputFilename: SETTINGS.iconDarkFilename,
-      outputFilename: `apple-touch-icon-${size}x${size}.png`,
-      background: {r: 255, g: 255, b: 255, alpha: 1},
-    });
-  });
-
-  SETTINGS.faviconSizes.forEach(async (size) => {
-    await generateIcon({
-      size,
-      padding: 0,
-      inputFilename: SETTINGS.iconDarkFilename,
-      outputFilename: `favicon-${size}x${size}.png`,
-      background: transparent,
-    });
-  });
-
-  SETTINGS.faviconSizes.forEach(async (size) => {
-    await generateIcon({
-      size,
-      padding: 0,
-      inputFilename: SETTINGS.iconLightFilename,
-      outputFilename: `favicon-dark-mode-${size}x${size}.png`,
-      background: transparent,
-    });
-  });
-
-  const faviconBuffer = await pngToIco(SETTINGS.faviconSizes.map((size) => path.join(__dirname, SETTINGS.outputDirectory, `favicon-${size}x${size}.png`)));
-  await fs.writeFile(path.join(__dirname, SETTINGS.outputDirectory, 'favicon.ico'), faviconBuffer);
-
-  const faviconDarkBuffer = await pngToIco(SETTINGS.faviconSizes.map((size) => path.join(__dirname, SETTINGS.outputDirectory, `favicon-dark-mode-${size}x${size}.png`)));
-  await fs.writeFile(path.join(__dirname, SETTINGS.outputDirectory, 'favicon-dark-mode.ico'), faviconDarkBuffer);
-
-// MS Tile icons - these are more faffy as regards padding and sizes
+SETTINGS.androidChromeIconSizes.forEach(async (size) => {
   await generateIcon({
-    size: 144,
+    size,
+    padding: Math.floor(size / 20),
+    inputFilename: SETTINGS.iconLightFilename,
+    outputFilename: `android-chrome-${size}x${size}.png`,
+    background: transparent,
+  })
+});
+
+SETTINGS.appleTouchIconSizes.forEach(async (size) => {
+  await generateIcon({
+    size,
+    padding: Math.floor(size / 10),
+    inputFilename: SETTINGS.iconDarkFilename,
+    outputFilename: `apple-touch-icon-${size}x${size}.png`,
+    background: {r: 255, g: 255, b: 255, alpha: 1},
+  });
+});
+
+SETTINGS.faviconSizes.forEach(async (size) => {
+  await generateIcon({
+    size,
+    padding: 0,
+    inputFilename: SETTINGS.iconDarkFilename,
+    outputFilename: `favicon-${size}x${size}.png`,
+    background: transparent,
+  });
+});
+
+SETTINGS.faviconSizes.forEach(async (size) => {
+  await generateIcon({
+    size,
     padding: 0,
     inputFilename: SETTINGS.iconLightFilename,
-    outputFilename: 'mstile-144x144.png',
+    outputFilename: `favicon-dark-mode-${size}x${size}.png`,
     background: transparent,
   });
+});
 
-  await generateIcon({
-    width: 128,
-    height: 81,
-    padding: 16,
-    inputFilename: SETTINGS.iconLightFilename,
-    outputFilename: 'mstile-70x70.png',
-    background: transparent,
-  });
+const faviconBuffer = await pngToIco(SETTINGS.faviconSizes.map((size) => path.join(__dirname, SETTINGS.outputDirectory, `favicon-${size}x${size}.png`)));
+await fs.writeFile(path.join(__dirname, SETTINGS.outputDirectory, 'favicon.ico'), faviconBuffer);
 
-  await generateIcon({
-    width: 270,
-    height: 208,
-    xPadding: 70,
-    yPadding: 50,
-    inputFilename: SETTINGS.iconLightFilename,
-    outputFilename: 'mstile-150x150.png',
-    background: transparent,
-  });
+const faviconDarkBuffer = await pngToIco(SETTINGS.faviconSizes.map((size) => path.join(__dirname, SETTINGS.outputDirectory, `favicon-dark-mode-${size}x${size}.png`)));
+await fs.writeFile(path.join(__dirname, SETTINGS.outputDirectory, 'favicon-dark-mode.ico'), faviconDarkBuffer);
 
-  await generateIcon({
-    width: 558,
-    height: 208,
-    xPadding: 216,
-    yPadding: 50,
-    inputFilename: SETTINGS.iconLightFilename,
-    outputFilename: 'mstile-310x150.png',
-    background: transparent,
-  });
+// MS Tile icons - these are more faffy as regards padding and sizes
+await generateIcon({
+  size: 144,
+  padding: 0,
+  inputFilename: SETTINGS.iconLightFilename,
+  outputFilename: 'mstile-144x144.png',
+  background: transparent,
+});
 
-  await generateIcon({
-    width: 558,
-    height: 430,
-    xPadding: 150,
-    yPadding: 128,
-    inputFilename: SETTINGS.iconLightFilename,
-    outputFilename: 'mstile-310x310.png',
-    background: transparent,
-  });
-} catch (error) {
-  console.error('Error generating icons:', error);
-}
+await generateIcon({
+  width: 128,
+  height: 81,
+  padding: 16,
+  inputFilename: SETTINGS.iconLightFilename,
+  outputFilename: 'mstile-70x70.png',
+  background: transparent,
+});
+
+await generateIcon({
+  width: 270,
+  height: 208,
+  xPadding: 70,
+  yPadding: 50,
+  inputFilename: SETTINGS.iconLightFilename,
+  outputFilename: 'mstile-150x150.png',
+  background: transparent,
+});
+
+await generateIcon({
+  width: 558,
+  height: 208,
+  xPadding: 216,
+  yPadding: 50,
+  inputFilename: SETTINGS.iconLightFilename,
+  outputFilename: 'mstile-310x150.png',
+  background: transparent,
+});
+
+await generateIcon({
+  width: 558,
+  height: 430,
+  xPadding: 150,
+  yPadding: 128,
+  inputFilename: SETTINGS.iconLightFilename,
+  outputFilename: 'mstile-310x310.png',
+  background: transparent,
+});
 
 /**
  * @param {Object} options - Options for generating the icon
@@ -149,10 +145,9 @@ async function generateIcon(options) {
     img.flatten({ background: options.background });
   }
 
-  img
+  await img
     .png()
     .toFile(path.join(__dirname, SETTINGS.outputDirectory, options.outputFilename))
-    .then(() => {
-      console.log(`Generated icon: ${options.outputFilename}`);
-    });
+
+  console.log(`Generated icon: ${options.outputFilename}`);
 }

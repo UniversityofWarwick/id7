@@ -162,7 +162,7 @@ To do so:
 - **3.2.0**:
     - jQuery has been updated. Please make sure that your project doesn't specify a `jquery` dependency with a specific version as this may cause conflicts.
 - **3.3.0**:    
-    - New favicons and a new favicon generator are included, along with light mode and dark mode versions. To use the new dark mode icons, update the <head> of your teamplates to include the new code in `docs/_includes/header.html`.
+    - Node 22 now required. New favicons and a new favicon generator are included, along with light mode and dark mode versions. To use the new dark mode icons, update the <head> of your templates to include the new code in `docs/_includes/header.html`.
 
 ## Copyright and license
 
