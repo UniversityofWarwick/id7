@@ -33,7 +33,7 @@ public class ID7PlanSpec extends AbstractWarwickBuildSpec {
 
   private static final String SLACK_CHANNEL = "#brand";
 
-  private static final String NODE_VERSION = "Node 16";
+  private static final String NODE_VERSION = "Node 22";
 
   public static void main(String[] args) throws Exception {
     new ID7PlanSpec().publish();

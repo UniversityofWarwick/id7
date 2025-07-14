@@ -90,7 +90,7 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 ### Running sample site locally
 
 1. Install Ruby and run `gem install bundler`.
-1. Install node.js.
+1. Install node.js - version 22 required.
 1. In the root `/id7` directory:
     1. Run `bundle install` to install dependent gems.
     1. Run `npm ci` to install webpack and other node.js dependencies.
@@ -161,8 +161,8 @@ To do so:
     - The carousel component has been removed by default as it is rarely used and has a number of accessibility issues. If you still need to use it while you migrate away, you can include the JS and LESS files for it in a custom bundle.
 - **3.2.0**:
     - jQuery has been updated. Please make sure that your project doesn't specify a `jquery` dependency with a specific version as this may cause conflicts.
-    
-  
+- **3.3.0**:    
+    - Node 22 now required. New favicons and a new favicon generator are included, along with light mode and dark mode versions. To use the new dark mode icons, update the <head> of your templates to include the new code in `docs/_includes/header.html`.
 
 ## Copyright and license
 
