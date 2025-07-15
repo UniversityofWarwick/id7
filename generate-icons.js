@@ -15,7 +15,8 @@ const SETTINGS = {
   darkColor: '#0c0c0c',
   androidChromeIconSizes: [36, 48, 72, 96, 144, 192],
   appleTouchIconSizes: [57, 60, 72, 76, 114, 120, 144, 152, 180],
-  faviconSizes: [16, 32, 96],
+  faviconSizes: [16, 32, 96, 192],
+  pwaIconSizes: [72, 128, 144, 192, 512],
 }
 
 const transparent = {r: 0, g: 0, b: 0, alpha: 0};
@@ -24,7 +25,7 @@ SETTINGS.androidChromeIconSizes.forEach(async (size) => {
   await generateIcon({
     size,
     padding: Math.floor(size / 20),
-    inputFilename: SETTINGS.iconLightFilename,
+    inputFilename: SETTINGS.iconDarkFilename,
     outputFilename: `android-chrome-${size}x${size}.png`,
     background: transparent,
   })
@@ -56,6 +57,16 @@ SETTINGS.faviconSizes.forEach(async (size) => {
     padding: 0,
     inputFilename: SETTINGS.iconLightFilename,
     outputFilename: `favicon-dark-mode-${size}x${size}.png`,
+    background: transparent,
+  });
+});
+
+SETTINGS.pwaIconSizes.forEach(async (size) => {
+  await generateIcon({
+    size,
+    padding: Math.floor(size / 5.5), // 5.5 is a bit arbitrary, but works for the crest
+    inputFilename: SETTINGS.iconDarkFilename,
+    outputFilename: `pwa-icon-${size}x${size}.png`,
     background: transparent,
   });
 });

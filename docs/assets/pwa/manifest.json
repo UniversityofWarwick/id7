@@ -1,0 +1,39 @@
+{
+  "short_name": "ID7",
+  "name": "ID7 - University of Warwick brand",
+  "icons": [
+    {
+      "src": "/dist/images/pwa-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/dist/images/pwa-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    }
+  ],
+  "id": "/",
+  "start_url": "/",
+  "background_color": "#A499F4",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#A499F4",
+  "description": "Standalone app for University of Warwick's ID7 brand",
+  "screenshots": [
+    {
+      "src": "/dist/images/screenshot-540x720.jpg",
+      "type": "image/jpg",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/dist/images/screenshot-720x540.jpg",
+      "type": "image/jpg",
+      "sizes": "720x540",
+      "form_factor": "wide"
+    }
+  ]
+}

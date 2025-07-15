@@ -154,6 +154,10 @@ const docsConfig = merge([
           ignore: ['*.less', '*.js'],
           to: path.join(paths.DOCS_ASSETS, 'docs/site'),
         },
+        {
+          from: './docs/assets/pwa',
+          to: path.join(paths.DOCS_ASSETS, 'docs/pwa'),
+        },
       ]),
     ],
   },
