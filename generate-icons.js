@@ -67,7 +67,7 @@ SETTINGS.pwaIconSizes.forEach(async (size) => {
     padding: Math.floor(size / 5.5), // 5.5 is a bit arbitrary, but works for the crest
     inputFilename: SETTINGS.iconDarkFilename,
     outputFilename: `pwa-icon-${size}x${size}.png`,
-    background: transparent,
+    background: {r: 164, g: 153, b: 244, alpha: 1},
   });
 });
 
