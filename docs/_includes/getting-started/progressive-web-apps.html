@@ -1,3 +1,10 @@
+<h2 id="pwa" class="page-header">Progressive Web Apps</h2>
+<p>We've included icons to help you set up your application as a Progressive Web App (PWA) if you want. You'll find them
+in the images folder with the form <em>pwa-icon-[size]x[size].png</em>.</p>
+
+<p>Here's an example of a PWA manifest.json file you can update and use for your application:</p>
+
+<pre>
 {
   "short_name": "ID7",
   "name": "ID7 - University of Warwick brand",
@@ -22,18 +29,7 @@
   "scope": "/",
   "theme_color": "#A499F4",
   "description": "Standalone app for University of Warwick's ID7 brand",
-  "screenshots": [
-    {
-      "src": "/dist/images/screenshot-540x720.jpg",
-      "type": "image/jpg",
-      "sizes": "540x720",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "/dist/images/screenshot-720x540.jpg",
-      "type": "image/jpg",
-      "sizes": "720x540",
-      "form_factor": "wide"
-    }
-  ]
 }
+</pre>
+
+<p>There's more you can do with PWAs if you're intending for people to actually install your app. See <a href="https://web.dev/learn/pwa?hl=en">web.dev's guidelines</a> for more.</p>
