@@ -17,5 +17,5 @@ encoding:         UTF-8
 prefix:           /
 
 # Custom variables
-current_version:  3.3.0
+current_version:  3.3.1
 id7_gen:          2025 # Which brand version to generate for the demo site. values: 2024, 2025
