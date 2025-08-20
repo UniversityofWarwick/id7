@@ -125,33 +125,33 @@ hr {
 //
 // See: https://a11yproject.com/posts/how-to-hide-content
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
+// Backported from Bootstrap 5 (scss/mixins/_visually-hidden.scss)
+.visually-hidden() {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important; // Fix for https://github.com/twbs/bootstrap/issues/25686
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 
-// Use in conjunction with .sr-only to only display content when it's focused.
-// Useful for "Skip to main content" links; see https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
-// Credit: HTML5 Boilerplate
+  // Fix for positioned table caption that could become anonymous cells
+  &:not(caption) {
+    position: absolute !important;
+    left: 0;
+  }
 
-.sr-only-focusable {
-  &:active,
-  &:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
+  // Fix to prevent overflowing children to become focusable
+  * {
+    overflow: hidden !important;
   }
 }
 
+.sr-only:not(.sr-only-focusable),
+.sr-only-focusable:not(:focus):not(:focus-visible) {
+  .visually-hidden();
+}
 
 // iOS "clickable elements" fix for role="button"
 //
