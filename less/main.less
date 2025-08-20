@@ -1,9 +1,16 @@
 :root {
   --w-sys-logoHeight: @id7-masthead-logo-height-xs;
   & when not (@id7-masthead-logo-height-xs = @id7-masthead-logo-height-sm) {
-      @media (min-width: @grid-float-breakpoint) {
-        --w-sys-logoHeight: @id7-masthead-logo-height-sm;
-      }
+    @media (min-width: @grid-float-breakpoint) {
+      --w-sys-logoHeight: @id7-masthead-logo-height-sm;
+    }
+  }
+  // ID-457 while most mobiles report a larger width, older phones
+  // that report a width of 320px (e.g. iPhone 5) need a smaller logo.
+  & when not (@id7-masthead-logo-height-xxs = @id7-masthead-logo-height-xs) {
+    @media (max-width: 320px) {
+      --w-sys-logoHeight: @id7-masthead-logo-height-xxs;
+    }
   }
 
   // From the Brand Book:
