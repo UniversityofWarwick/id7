@@ -71,7 +71,8 @@
     }
     // New layout
     & when (@id7-gen-layout > 2024) {
-      padding: var(--w-ref-gridGutterWidth);
+      padding: calc(0.5 * var(--w-ref-gridGutterWidth));
+      margin: calc(0.5 * var(--w-ref-gridGutterWidth));
     }
     // New logo without new layout
     & when (@id7-gen-logos > 2024) and (@id7-gen-layout = 2024) {
