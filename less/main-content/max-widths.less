@@ -39,10 +39,8 @@ img, audio {
 
 @media (max-width: (@grid-float-breakpoint - 1)) {
   table[role="presentation"] {
-    > tr > td,
-    > tr > th,
-    > tbody > tr > td,
-    > tbody > tr > th,  {
+    > :is(thead, tbody) > tr > :is(td, th),
+    > tr > :is(td, th) {
       display: block !important;
       padding-left: 0 !important;
       padding-right: 0 !important;
