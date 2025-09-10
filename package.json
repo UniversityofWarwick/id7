@@ -20,13 +20,11 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@universityofwarwick/bootstrap-3-typeahead": "4.1.0",
-    "@universityofwarwick/jqdoublescroll": "0.7.0",
-    "headroom.js": "0.12.0",
+    "@universityofwarwick/bootstrap-3-typeahead": "^4.1.0",
+    "@universityofwarwick/jqdoublescroll": "^0.7.0",
+    "headroom.js": "^0.12.0",
     "jquery": "^3.7.1",
-    "loglevel": "1.7.1",
-    "png-to-ico": "2.1.8",
-    "sharp": "0.34.3"
+    "loglevel": "^1.7.1"
   },
   "devDependencies": {
     "@babel/core": "7.7.7",
@@ -66,6 +64,7 @@
     "mocha-bamboo-reporter": "1.1.2",
     "npm-run-all": "4.1.5",
     "optimize-css-assets-webpack-plugin": "5.0.3",
+    "png-to-ico": "2.1.8",
     "popper.js": "1.16.0",
     "postcss-loader": "3.0.0",
     "postcss-safe-parser": "7.0.1",
@@ -73,6 +72,7 @@
     "purify-css": "1.1.9",
     "purifycss-webpack": "0.7.0",
     "qunit": "2.24.1",
+    "sharp": "0.34.3",
     "sinon": "8.0.2",
     "svg-inline-loader": "0.8.2",
     "terser-webpack-plugin": "2.3.8",
