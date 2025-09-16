@@ -25,19 +25,17 @@ body {
   }
 
   // Stretch the content down to the footer, using Flexbox
-  @media screen and (min-width: @grid-float-breakpoint) {
-    html.flexbox & {
-      display: flex;
-      flex-direction: column;
-      min-height: var(--w-ref-fixedContainerMinHeight);
+  @media screen {
+    display: flex;
+    flex-direction: column;
+    min-height: var(--w-ref-fixedContainerMinHeight);
 
-      .id7-main-content-area {
-        flex: 1 0 auto;
-      }
+    .id7-main-content-area {
+      flex: 1 0 auto;
+    }
 
-      .id7-page-header, .id7-page-footer {
-        flex-shrink: 0;
-      }
+    .id7-page-header, .id7-page-footer {
+      flex-shrink: 0;
     }
   }
 
