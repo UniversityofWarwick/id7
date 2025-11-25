@@ -10,7 +10,8 @@
     "test:vitest": "vitest",
     "test": "npm-run-all test:karma test:vitest",
     "start": "npm-run-all --serial readme-md2html docs-assets --parallel docs-watch docs-serve",
-    "docs-assets": "run-s build docs-assets:copy",
+    "docs-assets": "run-s build docs-assets:copy docs-assets:build",
+    "docs-assets:build": "NODE_ENV=development webpack --mode development --env docs",
     "docs-assets:copy": "mkdir -p ./docs/dist && cp -rf ./dist/* ./docs/dist/",
     "docs-watch:icons": "chokidar 'images/**' 'generate-official-icons.js' -c 'npm run generateIcons'",
     "docs-watch:dist": "chokidar 'dist/**' -c 'npm run docs-assets:copy'",
@@ -19,7 +20,7 @@
     "docs-build": "bundle exec jekyll build",
     "readme-md2html": "marked README.md > docs/_includes/README.html",
     "clean": "rm -rf ./dist/ ./docs/dist/",
-    "prepublishOnly": "npm-p clean build",
+    "prepublishOnly": "run-s clean build",
     "generateIcons": "node generate-official-icons.js"
   },
   "dependencies": {
