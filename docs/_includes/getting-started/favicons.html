@@ -1,0 +1,14 @@
+<h2 id="favicons">Custom icons</h2>
+
+<p>ID7 provides a set of standard Warwick icons that browsers and devices can use to represent the current app in icon form.</p>
+
+<p>If your app needs a custom icon, there is an icon generator module that you can use to take an SVG and output a selection of icons in various sizes. From your build script, import <code>@universityofwarwick/id7/tools/icon-generator</code> and use the <code>generateCustomIcons</code> function. The JSDoc should show you the options available.</p>
+
+<p>
+  You will then use your SVG as the "main" icon in your markup. Ideally it will be designed to be visible on all backgrounds.
+  If that's impossible, then you can use the same trick used in `crest-dynamic.svg` and use media queries inside the SVG
+  to display the appropriate graphic. Note that you shouldn't pass such an SVG to `icon-generator` as it won't know what
+  to do with it, so you would need two separate SVG images in that case.
+</p>
+
+<p>Make sure that as well as updating the icons in the HTML, you have an updated <a href="#pwa">Web Manifest</a> too.</p>

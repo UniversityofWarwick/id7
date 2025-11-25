@@ -21,9 +21,9 @@ ID7 is available under an OSS license so that the open-source community can bene
 
 ## Quick start
 
-Three quick start options are available:
+Three options are available to start using ID7 in your project:
 
-- Install with [npm](https://www.npmjs.com): `npm i @universityofwarwick/id7`
+- (Recommended) Install with [npm](https://www.npmjs.com): `npm i @universityofwarwick/id7`
 - [Download the latest release](https://github.com/UniversityofWarwick/id7/releases/latest).
 - Clone the repo: `git clone https://github.com/UniversityofWarwick/id7.git`.
 
@@ -74,6 +74,12 @@ We don't include the FA4 compatibility layer by default. It can be imported with
 ```
 
 Replacing `fontawesome-free` with `fontawesome-pro` if necessary.
+
+## Favicons / App icons
+
+ID7 provides a set of standard Warwick icons that browsers and devices can use to represent the current app in icon form.
+
+If your app needs a custom icon, there is an icon generator module that you can use to take an SVG and output a selection of icons in various sizes. From your build script, import `tools/icon-generator` and use the `generateCustomIcons` function.
 
 ## Bugs and feature requests
 
@@ -172,4 +178,4 @@ ID7 is licensed under the [ISC license](https://github.com/UniversityofWarwick/i
 
 This project includes a modified version of Bootstrap 3. Changes have been made to the original code.
 
-Note that Access to the University web-site is subject to the separate, [published copyright notice](https://warwick.ac.uk/terms/copyright).
+Note that Access to the University website is subject to the separate [published copyright notice](https://warwick.ac.uk/terms/copyright).

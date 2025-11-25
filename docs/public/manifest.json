@@ -1,0 +1,22 @@
+{
+  "short_name": "ID7",
+  "name": "ID7 - University of Warwick",
+  "display": "browser",
+  "icons": [
+    {
+      "src": "/dist/images/pwa-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/dist/images/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#A499F4",
+  "theme_color": "#A499F4"
+}

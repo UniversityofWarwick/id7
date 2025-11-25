@@ -1,25 +1,36 @@
-<h2 id="pwa" class="page-header">Progressive Web Apps</h2>
-<p>We've included icons to help you set up your application as a Progressive Web App (PWA) if you want. You'll find them
-in the images folder with the form <em>pwa-icon-[size]x[size].png</em>.</p>
+<h2 id="pwa" class="page-header">Progressive Web Apps / Web Manifests</h2>
 
-<p>Here's an example of a PWA manifest.json file you can update and use for your application:</p>
+<p>
+  We recommend declaring a web manifest in your template - it defines some extra icons and other
+  descriptive properties, which help the app look better when shown as an icon.
+</p>
+
+<p>
+  Depending on your needs, you may also use this manifest to declare your app as a Progressive Web App -
+  that is optional and you can find more information in <a href="https://web.dev/learn/pwa?hl=en">web.dev's guidelines</a>.
+</p>
+
+<p>
+  This is a minimal example to use the official icons - you may want to use <a href="#favicons">custom icons</a> and/or adjust the
+  name, description and colour properties.
+</p>
 
 <pre>
 {
-  "short_name": "ID7",
-  "name": "ID7 - University of Warwick brand",
+  "short_name": "Warwick",
+  "name": "University of Warwick",
   "icons": [
+    {
+      "src": "/dist/images/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
     {
       "src": "/dist/images/pwa-icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/dist/images/pwa-icon-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ],
   "id": "/",
@@ -28,8 +39,6 @@ in the images folder with the form <em>pwa-icon-[size]x[size].png</em>.</p>
   "display": "standalone",
   "scope": "/",
   "theme_color": "#A499F4",
-  "description": "Standalone app for University of Warwick's ID7 brand",
 }
 </pre>
 
-<p>There's more you can do with PWAs if you're intending for people to actually install your app. See <a href="https://web.dev/learn/pwa?hl=en">web.dev's guidelines</a> for more.</p>
