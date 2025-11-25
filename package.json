@@ -11,7 +11,7 @@
     "test": "npm-run-all test:karma test:vitest",
     "start": "npm-run-all --serial readme-md2html docs-assets --parallel docs-watch docs-serve",
     "docs-assets": "run-s build docs-assets:copy",
-    "docs-assets:copy": "cp -rf ./dist/* ./docs/dist/",
+    "docs-assets:copy": "mkdir -p ./docs/dist && cp -rf ./dist/* ./docs/dist/",
     "docs-watch:icons": "chokidar 'images/**' 'generate-official-icons.js' -c 'npm run generateIcons'",
     "docs-watch:dist": "chokidar 'dist/**' -c 'npm run docs-assets:copy'",
     "docs-watch": "run-p docs-watch:icons docs-watch:dist",
