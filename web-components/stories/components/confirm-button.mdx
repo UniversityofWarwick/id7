@@ -1,0 +1,17 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as stories from './confirm-button.stories';
+
+
+<Meta of={stories} />
+
+# Confirm button
+
+This creates a simple button that will throw up a browser confirmation.
+
+You can use it standalone and it will guard in front of any click events:
+
+<Story of={stories.StandaloneButton} />
+
+Or you can use it in a form, just like a normal button:
+
+<Story of={stories.FormSubmission} />
