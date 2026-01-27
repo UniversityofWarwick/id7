@@ -57,7 +57,7 @@ $.fn.searchSuggest = function searchSuggestPlugin(options) {
   return this.each(attach);
 };
 
-$.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
+$.fn.goSearchSuggest = function goSearchSuggestPlugin(commonOptions = {}) {
   function attach(i, el) {
     // ID-156 find the icon next to it
     $(el).next('.fa,.fas,.fal,.fab,.far').on('click', (e) => {
@@ -66,6 +66,13 @@ $.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
 
       $(el).closest('form').submit();
     });
+
+    const options = {
+      ...commonOptions,
+      ...el.dataset,
+    };
+
+    const origin = options.origin || 'https://sitebuilder.warwick.ac.uk';
 
     // ID-89 On xs, set the min length to 3, not 2, and only show 3 results
     let minLength = 3;
@@ -79,12 +86,12 @@ $.fn.goSearchSuggest = function goSearchSuggestPlugin(options = {}) {
     const $trigger = $(el);
     $trigger.searchSuggest($.extend(options, $trigger.data(), {
       source: (query, callback) => {
-        $.getJSON(`https://sitebuilder.warwick.ac.uk/sitebuilder2/api/go/redirects.json?maxResults=${maxResults}&prefix=${encodeURIComponent(query)}`, callback);
+        $.getJSON(`${origin}/sitebuilder2/api/go/v2/redirects.json?maxResults=${maxResults}&prefix=${encodeURIComponent(query)}`, callback);
       },
       minLength,
       display: (item) => item.path,
       displayText: (o) => `<div><p class="go-path">${escape(o.path)}</p><p class="go-description">${(typeof o.description !== 'undefined' ? escape(o.description) : '')}</p></div>`,
-      itemLink: (item) => `https://go.warwick.ac.uk/${item.path}?goSearchReferer=${encodeURIComponent(window.location)}&goSearchQuery=${encodeURIComponent($(el).val())}`,
+      itemLink: (item) => `${item.url}?goSearchReferer=${encodeURIComponent(window.location)}&goSearchQuery=${encodeURIComponent($(el).val())}`,
     }));
 
     // ID-145
