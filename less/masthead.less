@@ -164,12 +164,6 @@
       display: flex;
     }
 
-    &:not(:focus-within) {
-      opacity: 0;
-    }
-
-    transition: opacity 0.15s linear;
-    transition-delay: 150ms;
     .small();
     font-size: clamp(var(--w-ref-mastheadLinksMinSize), 1.2vw, var(--w-ref-mastheadLinksMaxSize));
 
@@ -188,8 +182,6 @@
 
     .link-colour(@gray-dark);
   }
-
-  .id7-logo-row:hover nav { .opacity(1); }
 
   .id7-search-box-container when (@id7-gen-logos = 2024) {
     margin-top: @id7-masthead-search-offset-xs;
