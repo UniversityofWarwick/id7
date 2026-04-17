@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-restricted-syntax */
 import path from 'path';
 import { createHash } from 'crypto';
 
@@ -13,66 +11,79 @@ import { createHash } from 'crypto';
  *
  * Logic based on the gulp-play-assets module.
  */
-module.exports = class PlayFingerprintsPlugin {
+export default class PlayFingerprintsPlugin {
   constructor(options) {
     this.options = options || {};
   }
 
   apply(compiler) {
-    compiler.plugin('emit', (compilation, done) => {
-      const { assets } = compilation;
-      // const versionedFilenames = {};
+    compiler.hooks.thisCompilation.tap('PlayFingerprintsPlugin', (compilation) => {
+      compilation.hooks.processAssets.tapAsync(
+        {
+          name: 'PlayFingerprintsPlugin',
+          stage: compilation.compiler.webpack.Compilation.PROCESS_ASSETS_STAGE_ADDITIONAL,
+        },
+        (assets, done) => {
+          // const versionedFilenames = {};
 
-      for (const fullPath in assets) {
-        if (Object.prototype.hasOwnProperty.call(assets, fullPath)) {
-          const dir = path.dirname(fullPath);
-          const filename = path.basename(fullPath);
+          // Get list of asset names to process (avoid mutating during iteration)
+          const assetNames = Object.keys(assets);
 
-          const dynamicChunk = filename.match(/^([a-z0-9]+)-([0-9]+.js(\.map)?)$/);
-          if (dynamicChunk) {
-            // This is a dynamic chunk that uses [chunkhash]
-            // in its filename already - so reverse engineer the .md5 file
-            // to allow the Gulp script to find the fingerprinted version.
-            const hash = dynamicChunk[1];
-            const name = dynamicChunk[2];
-            assets[`${dir}/${name}.md5`] = {
-              source: () => hash,
-              size: () => hash.length,
-            };
+          for (const fullPath of assetNames) {
+            const dir = path.dirname(fullPath);
+            const filename = path.basename(fullPath);
 
-            // don't really need this, but Play seems not to serve the file
-            // unless the non-fingerprinted version exists.
-            assets[`${dir}/${name}`] = assets[fullPath];
-          } else {
-            const hash = createHash('md5');
-            hash.update(assets[fullPath].source());
-            const md5 = hash.digest('hex');
+            // Skip zip files - they don't need fingerprinting
+            if (filename.endsWith('.zip')) {
+              continue;
+            }
 
-            // Identical to original file but with hash prepended.
-            assets[`${dir}/${md5}-${filename}`] = assets[fullPath];
+            const dynamicChunk = filename.match(/^([a-z0-9]+)-([0-9]+.js(\.map)?)$/);
+            if (dynamicChunk) {
+              // This is a dynamic chunk that uses [chunkhash]
+              // in its filename already - so reverse engineer the .md5 file
+              // to allow the Gulp script to find the fingerprinted version.
+              const hash = dynamicChunk[1];
+              const name = dynamicChunk[2];
+              
+              const RawSource = compilation.compiler.webpack.sources.RawSource;
+              compilation.emitAsset(`${dir}/${name}.md5`, new RawSource(hash));
 
-            // Fingerprint .md5 file
-            assets[`${dir}/${filename}.md5`] = {
-              source: () => md5,
-              size: () => md5.length,
-            };
+              // don't really need this, but Play seems not to serve the file
+              // unless the non-fingerprinted version exists.
+              compilation.emitAsset(`${dir}/${name}`, compilation.getAsset(fullPath).source);
+            } else {
+              const asset = compilation.getAsset(fullPath);
+              if (!asset) continue;
+              
+              const hash = createHash('md5');
+              hash.update(asset.source.source());
+              const md5 = hash.digest('hex');
 
-            // versionedFilenames[filename] = `${md5}-${filename}`;
+              // Identical to original file but with hash prepended.
+              compilation.emitAsset(`${dir}/${md5}-${filename}`, asset.source);
+
+              // Fingerprint .md5 file
+              const RawSource = compilation.compiler.webpack.sources.RawSource;
+              compilation.emitAsset(`${dir}/${filename}.md5`, new RawSource(md5));
+
+              // versionedFilenames[filename] = `${md5}-${filename}`;
+            }
           }
+
+          // for (const chunkId in compilation.chunks) {
+          //   if (compilation.chunks.hasOwnProperty(chunkId)) {
+          //     const chunk = compilation.chunks[chunkId];
+          //     chunk.files = chunk.files.map( file => {
+          //       console.log(`Replacing ${file} with ${versionedFilenames[file]}`);
+          //       return versionedFilenames[file];
+          //     });
+          //   }
+          // }
+
+          done();
         }
-      }
-
-      // for (const chunkId in compilation.chunks) {
-      //   if (compilation.chunks.hasOwnProperty(chunkId)) {
-      //     const chunk = compilation.chunks[chunkId];
-      //     chunk.files = chunk.files.map( file => {
-      //       console.log(`Replacing ${file} with ${versionedFilenames[file]}`);
-      //       return versionedFilenames[file];
-      //     });
-      //   }
-      // }
-
-      done();
+      );
     });
   }
-};
+}

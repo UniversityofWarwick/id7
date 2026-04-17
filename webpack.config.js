@@ -1,17 +1,26 @@
 import path from 'path';
-import EventEmitter from 'events';
+import { fileURLToPath } from 'url';
+import { EventEmitter } from 'events';
+import { createRequire } from 'module';
 import WebpackNotifierPlugin from 'webpack-notifier';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
-import { ProvidePlugin } from 'webpack';
+import webpack from 'webpack';
 import ZipPlugin from 'zip-webpack-plugin';
+import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
 
-import PlayFingerprintsPlugin from './build-tooling/PlayFingerprintsPlugin';
-import WatchEventsPlugin from './build-tooling/WatchEventsPlugin';
+import PlayFingerprintsPlugin from './build-tooling/PlayFingerprintsPlugin.js';
+import WatchEventsPlugin from './build-tooling/WatchEventsPlugin.js';
 
-const merge = require('webpack-merge');
-const tooling = require('./build-tooling/webpack.tooling');
+import { merge } from 'webpack-merge';
+import * as tooling from './build-tooling/webpack.tooling.js';
 
+const require = createRequire(import.meta.url);
 const { version } = require('./package.json');
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const { ProvidePlugin } = webpack;
 
 const paths = {
   ROOT: __dirname,
@@ -46,9 +55,10 @@ const commonConfig = basePath => merge([
       global: false,
     },
     plugins: [
+      new RemoveEmptyScriptsPlugin(),
       new ProvidePlugin({
         // Fix Webpack global CSP violation https://github.com/webpack/webpack/issues/6461
-        global: require.resolve('./build-tooling/global.js'),
+        global: path.join(__dirname, 'build-tooling/global.js'),
         jQuery: 'jquery',
         $: 'jquery',
       }),
@@ -62,16 +72,18 @@ const commonConfig = basePath => merge([
   }),
   {
     plugins: [
-      new CopyWebpackPlugin([
-        {
-          from: paths.FONTAWESOME_FONTS,
-          to: paths.ASSETS_FONTS(basePath),
-        },
-        {
-          from: paths.TEMPLATES,
-          to: paths.ASSETS_TEMPLATES(basePath),
-        },
-      ]),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: paths.FONTAWESOME_FONTS,
+            to: paths.ASSETS_FONTS(basePath),
+          },
+          {
+            from: paths.TEMPLATES,
+            to: paths.ASSETS_TEMPLATES(basePath),
+          },
+        ],
+      }),
     ],
   },
   tooling.extractCSS({
@@ -136,30 +148,34 @@ const docsConfig = merge([
   },
   {
     plugins: [
-      new CopyWebpackPlugin([
-        {
-          from: './docs/assets/js',
-          to: path.join(paths.DOCS_ASSETS, 'docs/js'),
-        },
-        {
-          from: './docs/assets/images',
-          to: path.join(paths.DOCS_ASSETS, 'docs/images'),
-        },
-        {
-          from: './docs/assets/id6',
-          to: path.join(paths.DOCS_ASSETS, 'docs/id6'),
-        },
-        {
-          from: './docs/assets/site',
-          ignore: ['*.less', '*.js'],
-          to: path.join(paths.DOCS_ASSETS, 'docs/site'),
-        },
-      ]),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: './docs/assets/js',
+            to: path.join(paths.DOCS_ASSETS, 'docs/js'),
+          },
+          {
+            from: './docs/assets/images',
+            to: path.join(paths.DOCS_ASSETS, 'docs/images'),
+          },
+          {
+            from: './docs/assets/id6',
+            to: path.join(paths.DOCS_ASSETS, 'docs/id6'),
+          },
+          {
+            from: './docs/assets/site',
+            globOptions: {
+              ignore: ['**/*.less', '**/*.js'],
+            },
+            to: path.join(paths.DOCS_ASSETS, 'docs/site'),
+          },
+        ],
+      }),
     ],
   },
 ]);
 
-module.exports = ({ production, docs } = {}) => {
+export default ({ production, docs } = {}) => {
   let mainConfig;
   if (production) {
     mainConfig = merge(commonConfig(paths.ASSETS), productionConfig);
