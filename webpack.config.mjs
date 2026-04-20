@@ -8,11 +8,11 @@ import webpack from 'webpack';
 import ZipPlugin from 'zip-webpack-plugin';
 import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
 
-import PlayFingerprintsPlugin from './build-tooling/PlayFingerprintsPlugin.js';
-import WatchEventsPlugin from './build-tooling/WatchEventsPlugin.js';
+import PlayFingerprintsPlugin from './build-tooling/PlayFingerprintsPlugin.mjs';
+import WatchEventsPlugin from './build-tooling/WatchEventsPlugin.mjs';
 
 import { merge } from 'webpack-merge';
-import * as tooling from './build-tooling/webpack.tooling.js';
+import * as tooling from './build-tooling/webpack.tooling.mjs';
 
 const require = createRequire(import.meta.url);
 const { version } = require('./package.json');

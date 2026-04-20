@@ -2,10 +2,10 @@
   "name": "@universityofwarwick/id7",
   "version": "3.8.0",
   "scripts": {
-    "watch": "NODE_ENV=development webpack --mode development --watch",
-    "dev": "NODE_ENV=development webpack --mode development",
+    "watch": "NODE_ENV=development webpack --config webpack.config.mjs --mode development --watch",
+    "dev": "NODE_ENV=development webpack --config webpack.config.mjs --mode development",
     "build": "run-s build:webpack generateIcons",
-    "build:webpack": "NODE_ENV=production webpack --mode production --env production",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.mjs --mode production --env production",
     "test:karma": "karma start --reporters=junit,progress js/tests/karma.conf.cjs",
     "test:vitest": "vitest",
     "test": "npm-run-all test:karma test:vitest",
@@ -92,6 +92,5 @@
   "author": "University of Warwick",
   "license": "ISC",
   "homepage": "https://id7.warwick.ac.uk",
-  "repository": "github:UniversityofWarwick/id7",
-  "type": "module"
+  "repository": "github:UniversityofWarwick/id7"
 }
