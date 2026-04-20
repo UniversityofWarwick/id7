@@ -6,7 +6,7 @@
     "dev": "NODE_ENV=development webpack --mode development",
     "build": "run-s build:webpack generateIcons",
     "build:webpack": "NODE_ENV=production webpack --mode production --env production",
-    "test:karma": "karma start --reporters=junit,progress js/tests/karma.conf.js",
+    "test:karma": "karma start --reporters=junit,progress js/tests/karma.conf.cjs",
     "test:vitest": "vitest",
     "test": "npm-run-all test:karma test:vitest",
     "start": "npm-run-all --serial readme-md2html docs-assets --parallel docs-watch docs-serve",
