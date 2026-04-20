@@ -2,20 +2,20 @@ import path from 'path';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import Autoprefixer from 'autoprefixer';
-import CssNano from 'cssnano';
-import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
-import PostCssSafeParser from 'postcss-safe-parser';
 
 const autoprefix = () => ({
   loader: 'postcss-loader',
   options: {
-    plugins: () => [Autoprefixer()],
+    postcssOptions: {
+      plugins: [Autoprefixer()],
+    },
     sourceMap: true,
   },
 });
 
-const lintJS = () => ({
+export const lintJS = () => ({
 
   module: {
     rules: [
@@ -28,7 +28,7 @@ const lintJS = () => ({
   },
 });
 
-const transpileJS = () => ({
+export const transpileJS = () => ({
   output: {
     chunkFilename: '[name].js',
     filename: '[name].js',
@@ -47,7 +47,7 @@ const transpileJS = () => ({
   },
 });
 
-const copyNpmDistAssets = ({ modules, dest } = {}) => {
+export const copyNpmDistAssets = ({ modules, dest } = {}) => {
   const pairs = modules.map(m => ({
     from: `node_modules/${m}/dist`,
     to: `${dest}/${m}/[1]`,
@@ -56,22 +56,26 @@ const copyNpmDistAssets = ({ modules, dest } = {}) => {
 
   return {
     plugins: [
-      new CopyWebpackPlugin(pairs),
+      new CopyWebpackPlugin({ patterns: pairs }),
     ],
   };
 };
 
-const copyLocalImages = ({ dest } = {}) => ({
+export const copyLocalImages = ({ dest } = {}) => ({
   plugins: [
-    new CopyWebpackPlugin([{
-      from: 'images',
-      ignore: ['*.sh', 'src', 'src/**/*'],
-      to: dest,
-    }]),
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: 'images',
+        globOptions: {
+          ignore: ['**/*.sh', '**/src', '**/src/**/*'],
+        },
+        to: dest,
+      }],
+    }),
   ],
 });
 
-const extractCSS = ({ resolverPaths } = {}) => ({
+export const extractCSS = ({ resolverPaths } = {}) => ({
   module: {
     rules: [
       {
@@ -103,10 +107,12 @@ const extractCSS = ({ resolverPaths } = {}) => ({
           {
             loader: 'less-loader',
             options: {
-              paths: resolverPaths,
-              relativeUrls: false,
+              lessOptions: {
+                paths: resolverPaths,
+                relativeUrls: false,
+                math: 'parens-division',
+              },
               sourceMap: true,
-              math: 'parens-division',
             },
           },
         ],
@@ -121,12 +127,10 @@ const extractCSS = ({ resolverPaths } = {}) => ({
 });
 
 
-const minify = () => ({
+export const minify = () => ({
   optimization: {
     minimizer: [
       new TerserPlugin({
-        sourceMap: true,
-        cache: true,
         terserOptions: {
           compress: {
             drop_console: true,
@@ -136,31 +140,20 @@ const minify = () => ({
           },
         },
       }),
-      new OptimizeCssAssetsPlugin({
-        cssProcessor: CssNano,
-        cssProcessorOptions: {
-          parser: PostCssSafeParser,
-          discardComments: {
-            removeAll: true,
-          },
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          preset: ['default', {
+            discardComments: {
+              removeAll: true,
+            },
+          }],
         },
-        canPrint: true,
       }),
     ],
   },
 });
 
 
-const generateSourceMaps = (devtool) => ({
+export const generateSourceMaps = (devtool) => ({
   devtool,
 });
-
-export {
-  copyNpmDistAssets,
-  copyLocalImages,
-  lintJS,
-  transpileJS,
-  extractCSS,
-  minify,
-  generateSourceMaps,
-};

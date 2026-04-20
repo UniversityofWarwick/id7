@@ -11,7 +11,7 @@ import { existsSync } from 'node:fs';
 
 import pngToIco from 'png-to-ico';
 
-import { COLOURS, generateIcon as generateIconInternal } from "./tools/icon-generator.js";
+import { COLOURS, generateIcon as generateIconInternal } from "./tools/icon-generator.mjs";
 
 const __dirname = import.meta.dirname;
 
