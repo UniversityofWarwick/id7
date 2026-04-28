@@ -4,11 +4,6 @@
 @import (reference) 'mixins.less';
 @import (reference) 'design-tokens/all.less';
 
-/* A default theme */
-.id7-fixed-width-container {
-  background-color: @gray-lighter;
-}
-
 @media (min-width: @grid-float-breakpoint) {
   .id7-left-border {
     background-color: @gray-lighter;
@@ -19,6 +14,9 @@
   }
 }
 
-:root {
-  //.id7-brand-lavender;
+@layer site-theme {
+  html {
+    @brand-var: "id7-brand-lavender";
+    .brand-css-variables(@@brand-var);
+  }
 }
