@@ -2,29 +2,39 @@
 @import (reference) "../variables";
 
 :root {
+  /* Reference tokens (don't use directly) */
   --w-ref-colors-blackText: @text-color;
   --w-ref-colors-blackBg: black; // actual black
 
-  /* Reference tokens (don't use directly) */
   --w-ref-colors-page-light: white;
   --w-ref-colors-page-light-contrast: var(--w-ref-colors-blackText);
   --w-ref-colors-page-dark: var(--w-ref-colors-blackBg);
   --w-ref-colors-page-dark-contrast: white;
 
-  // System tokens
-  /* Page colour and default text colour */
-  --w-sys-colors-page: var(--w-ref-colors-page-light);
-  --w-sys-colors-page-contrast: var(--w-ref-colors-page-light-contrast);
-
-  /* Current background and contrasting text colour */
-  --w-sys-colors-bg: var(--w-sys-colors-page);
-  --w-sys-colors-fg: var(--w-sys-colors-page-contrast);
-  // These values currently only work for the new brand where we don't use colours
-  // for headings or links.
-  --w-sys-colors-heading: var(--w-sys-colors-fg);
-  --w-sys-colors-link: var(--w-sys-colors-fg);
-
+  /* Default system tokens. Can be overridden */
+  // Default to white masthead - set to primary in evolved theme.
   --w-sys-colors-masthead: white;
+
+  --w-sys-colors-paleGrey-contrast: var(--w-ref-colors-blackText);
+}
+
+// System tokens
+// Tokens that refer to other tokens are defined here in the * selector
+// to ensure they are always recalculated. If they were defined in :root, 
+// they would only be calculated once and would not update when the 
+// target tokens they refer to are updated.
+// Note that as these aliases are redefined in every element,
+// you can't replace the alias in a container as it will get squashed
+// by this rule again in the child.
+* {
+  // Primary colour - alias to tint 500
+  --w-sys-colors-primary: var(--w-sys-colors-primary-500);
+  --w-sys-colors-primary-contrast: var(--w-sys-colors-primary-500-contrast);
+
+  --w-sys-colors-heading: if(@id7-gen-colours>2024,
+    var(--w-sys-colors-fg),
+    var(--w-sys-colors-white-accent)
+  );
 }
 
 .bg-black {
@@ -32,13 +42,15 @@
   --w-sys-colors-fg: var(--w-ref-colors-page-dark-contrast);
 }
 
+:root, .bg-white {
+  --w-sys-colors-bg: var(--w-ref-colors-page-light);
+  --w-sys-colors-fg: var(--w-ref-colors-page-light-contrast);
+  --w-sys-colors-link: var(--w-sys-colors-white-accent);
+}
+
 // This can be enabled to generate a set of
 // CSS classes for switching to a different preset
 // colour scheme.
-// At the time of writing the set of colours
-// is not finalised and also nothing is themed
-// using CSS variables so they wouldn't have
-// any effect on built-in components.
 & when (@id7-generate-colour-classes) {
   :root {
     /*
@@ -56,4 +68,45 @@
   each(@id7-brand-colors, {
     .colour-sys-aliases(@value);
   });
+}
+
+.bg-brand-100() {
+  --w-sys-colors-bg: var(--w-sys-colors-primary-100);
+  --w-sys-colors-fg: var(--w-sys-colors-primary-100-contrast);
+  --w-sys-colors-heading: var(--w-sys-colors-primary-100-contrast);
+  --w-sys-colors-link: var(--w-sys-colors-primary-100-contrast);
+  background-color: var(--w-sys-colors-bg);
+  color: var(--w-sys-colors-fg);
+}
+
+.bg-brand-300() {
+  --w-sys-colors-bg: var(--w-sys-colors-primary-300);
+  --w-sys-colors-fg: var(--w-sys-colors-primary-300-contrast);
+  --w-sys-colors-heading: var(--w-sys-colors-primary-300-contrast);
+  --w-sys-colors-link: var(--w-sys-colors-primary-300-contrast);
+  background-color: var(--w-sys-colors-bg);
+  color: var(--w-sys-colors-fg);
+}
+
+.bg-brand-500() {
+  --w-sys-colors-bg: var(--w-sys-colors-primary);
+  --w-sys-colors-fg: var(--w-sys-colors-primary-contrast);
+  --w-sys-colors-heading: var(--w-sys-colors-primary-contrast);
+  --w-sys-colors-link: var(--w-sys-colors-primary-contrast);
+  background-color: var(--w-sys-colors-bg);
+  color: var(--w-sys-colors-fg);
+}
+
+.brand-bg {
+  --w-sys-colors-fg: var(--w-sys-colors-primary-contrast);
+  --w-sys-colors-bg: var(--w-sys-colors-primary);
+  background-color: var(--w-sys-colors-bg);
+  color: var(--w-sys-colors-fg);
+}
+
+html.id7-evolved {
+  --w-sys-colors-masthead: var(--w-sys-colors-primary);
+  .id7-utility-masthead {
+    background-color: var(--w-sys-colors-masthead);
+  }
 }

@@ -26,181 +26,6 @@
   }
 }
 
-.apply-navbar-brand(@colour, @active-colour: screen(@colour, lighten(black, 30%))) {
-  @border-colour: multiply(@colour, darken(white, 20%));
-  @contrast-colour: #wcag.contrast(@colour, white, @text-color)[@result];
-
-  .apply-navbar-brand(@colour,
-    @contrast-colour,
-    @contrast-colour,
-    @contrast-colour,
-    @border-colour,
-    @active-colour,
-    @contrast-colour,
-    @border-colour
-  );
-}
-
-.apply-navbar-brand(
-  @bg,
-  @text,
-  @link-colour,
-  @link-hover-colour,
-  @link-hover-bg,
-  @link-active-marker-colour,
-  @link-disabled-colour,
-  @link-disabled-bg) {
-
-  background-color: @bg;
-
-  &.navbar-primary.navbar-wrapped > .navbar-nav > li {
-    color: @link-disabled-colour;
-
-    &.active,
-    &:hover {
-      color: @link-hover-colour;
-    }
-  }
-
-  .navbar-text {
-    color: @text;
-  }
-
-  .navbar-nav li.dropdown ul.dropdown-menu .active::after {
-    border-left-color: @link-active-marker-colour;
-  }
-
-  .navbar-nav {
-    > li {
-      color: @link-colour;
-
-      &:hover,
-      &:focus {
-        color: @link-hover-colour;
-        background-color: @link-hover-bg;
-      }
-
-      > a {
-        &,
-        &:hover,
-        &:focus {
-          color: inherit;
-          background: none;
-        }
-      }
-    }
-
-    > li.active {
-      &.next-secondary::before {
-        border-bottom-color: @link-active-marker-colour;
-      }
-
-      &.next-tertiary::before {
-        border-bottom-color: @id7-navigation-tertiary-background-colour;
-      }
-
-      &::before {
-        border-bottom-color: @id7-brand-white;
-      }
-    }
-
-    > .disabled {
-      &,
-      &:hover,
-      &:focus {
-        color: @link-disabled-colour;
-        background-color: @link-disabled-bg;
-      }
-    }
-  }
-
-  .navbar-toggle {
-    border: none;
-    color: @link-colour;
-
-    &:hover,
-    &:focus {
-      color: @link-colour;
-      background: none;
-    }
-  }
-
-  // Dropdowns
-  .navbar-nav {
-    > .open {
-      &,
-      &:hover,
-      &:focus {
-        color: @link-hover-colour;
-        background-color: @link-hover-bg;
-      }
-    }
-
-    // Dropdowns get custom display
-    .dropdown-menu {
-      background-color: @bg;
-
-      @dropdown-accent-colour: multiply(@bg, darken(white, 20%));
-
-      > .dropdown-header {
-        border-color: @dropdown-accent-colour;
-      }
-
-      .divider {
-        background-color: @dropdown-accent-colour;
-      }
-
-      > li > a {
-        color: @link-colour;
-
-        &:hover,
-        &:focus {
-          color: @link-hover-colour;
-          background-color: @link-hover-bg;
-        }
-      }
-      > .active > a {
-        background-color: @link-hover-bg;
-        background-image: none;
-
-        &::before {
-          border-bottom-color: @link-active-marker-colour;
-        }
-      }
-      > .disabled > a {
-        &,
-        &:hover,
-        &:focus {
-          color: @link-disabled-colour;
-          background-color: @link-disabled-bg;
-        }
-      }
-    }
-  }
-
-  .navbar-link {
-    color: @link-colour;
-    &:hover {
-      color: @link-hover-colour;
-    }
-  }
-
-  .btn-link {
-    color: @link-colour;
-    &:hover,
-    &:focus {
-      color: @link-hover-colour;
-    }
-    &[disabled],
-    fieldset[disabled] & {
-      &:hover,
-      &:focus {
-        color: @link-disabled-colour;
-      }
-    }
-  }
-}
-
 // Generates a set of valid colours for a given brand colour.
 // Colours are grouped into pairs for use in different contexts.
 // Colours of a pair should pass AA contrast.
@@ -238,7 +63,32 @@
 
 }
 
+// Generates reference tokens for all the colours derived from a brand colour.
+// These are not to be used
 .colour-css-variables(@name, @clazz, @colour) {
+  @colours: .calculate-brand-colours(@colour);
+
+  --w-sys-colors-white-accent: @colours[@white-emphasis];
+
+  --w-ref-colors-primary: @colours[@primary];
+  --w-ref-colors-secondary: @colours[@secondary];
+
+  // Secondary colour background
+  --w-sys-colors-secondary: @colours[@secondary];
+  --w-sys-colors-secondary-contrast: @colours[@secondary-contrast];
+  --w-sys-colors-secondary-accent: @colours[@secondary-accent];
+
+  // A colour we can place on white - can fall back to black
+  --w-sys-colors-white-accent: @colours[@white-emphasis];
+  // Slightly deeper colour (or black again)
+  --w-sys-colors-white-deepAccent: @colours[@white-deep-emphasis];
+
+  // This grey doesn't depend on the brand colour
+  // but the emphasis colour does - may as well keep
+  // them together.
+  --w-sys-colors-paleGrey: @colours[@pale-grey];
+  --w-sys-colors-paleGrey-accent: @colours[@pale-grey-emphasis];
+
   // Set of tints of the primary colour.
   // Copying Bootstrap 5's 100-900 system.
   @scale-values:
@@ -266,6 +116,12 @@
 
 .colour-sys-aliases(@name) {
   .id7-brand-@{name} {
+    --w-sys-colors-primary: var(--w-sys-colors-primary-500);
+    --w-sys-colors-primary-contrast: var(--w-sys-colors-primary-500-contrast);
+
+    --w-sys-colors-heading: var(--w-sys-colors-fg);
+    --w-sys-colors-link: var(--w-sys-colors-white-accent);
+
     each(range(1,9), {
       @step: @value * 100;
       // These are defined with interpolated strings because otherwise it can't find the variables @name or @step -
@@ -280,10 +136,11 @@
 // This can't be called from the top level like apply-brand,
 // because it isn't valid CSS. In those cases you can call
 // this inside :root or inside a class, depending on when
-// you want them to apply. Normally you'd want it to be applied
-// to root at least once so it applies to the page, but you could
-// then apply another colour to a class that you can then add
-// at any level within the page to switch colour scheme.
+// you want them to apply.
+//
+// This should only be used if @colour is not one of the brand
+// palette colours. If it is, you should mix in .id7-brand-COLOURNAME
+// to get the correct aliases (or just add that class to your HTML document).
 .brand-css-variables(@colour) {
   @colours: .calculate-brand-colours(@colour);
 
@@ -291,10 +148,6 @@
   --w-ref-colors-secondary: @colours[@secondary];
 
   //// Colour pairings
-
-  // Primary colour - alias to tint 500
-  --w-sys-colors-primary: var(--w-sys-colors-primary-500);
-  --w-sys-colors-primary-contrast: var(--w-sys-colors-primary-500-contrast);
 
   .colour-css-variables(primary, sys, @colour);
 
@@ -315,371 +168,18 @@
   --w-sys-colors-paleGrey-accent: @colours[@pale-grey-emphasis];
 }
 
-// Generates the CSS for a brand colour
+// Generates the CSS for a brand colour.
+// This used to generate swathes of overrides but it has replacements depending
+// on what colour theme you want to use. We generate a CSS comment explaining the options.
 .apply-brand(@colour) {
-
-  @colours: .calculate-brand-colours(@colour);
-
-  @primary-colour: @colours[@primary];
-  @secondary-colour: @colours[@secondary];
-  @secondary-accent-colour: @colours[@secondary-accent];
-  @secondary-contrast-colour: @colours[@secondary-contrast];
-
-  .debug(--secondary-debug, @colours[@secondary-calc-msg]);
-
-  // Only really for the tertiary nav
-  @tertiary-accent-colour: multiply(@id7-navigation-tertiary-background-colour, darken(white, 20%));
-  @tertiary-contrast-colour: contrast(@id7-navigation-tertiary-background-colour, @text-color, white, 50%);
-
-  // FIXME new brand may be monochrome headings
-  // this colour may get set by theme files so we'd need to be specific enough to override that
-  .header-colour(@colours[@white-emphasis]);
-  .link-colour(@colours[@white-emphasis]);
-
-  // capture the colour used
-  @link-colour: .link-colour(@colour)[@c];
-
-  blockquote.quotes {
-    color: @colours[@white-deep-emphasis];
-
-    &::before {
-      color: @colours[@white-deep-emphasis];
-    }
-  }
-
-  .brand-bg {
-    @contrast-colour: @colours[@primary-contrast];
-
-    background: @colour;
-    color: @contrast-colour;
-    .link-colour(@contrast-colour) !important;
-  }
-
-  .brand-text {
-    color: @colour;
-    .link-colour(@colour) !important;
-  }
-
-  .brand-border { border-color: @colour; }
-
-  @btn-brand-color:  @colours[@primary-contrast];
-  @btn-brand-bg:     @colours[@primary];
-  @btn-brand-border: darken(@btn-brand-bg, 5%);
-
-  // Brand colour button variant
-  .btn-brand {
-    .button-variant(@btn-brand-color; @btn-brand-bg; @btn-brand-border);
-  }
-
-  .id7-utility-masthead {
-    background-color: var(--w-sys-colors-masthead);
-  }
-
-  // Colour of the "WARWICK" text on the logo
-  .id7-utility-masthead::after {
-    background-color: transparent;
-  }
-
-  .id7-navigation .navbar-primary {
-    .apply-navbar-brand(@colours[@primary], @colours[@secondary]);
-  }
-
-  @breadcrumbs-colour: @colour;
-  .navbar-primary .navbar-brand {
-    background-color: @breadcrumbs-colour;
-  }
-
-  .navbar-secondary {
-    .apply-navbar-brand(
-      @secondary-colour,
-      @secondary-contrast-colour,
-      @secondary-contrast-colour,
-      @secondary-contrast-colour,
-      @secondary-accent-colour,
-      white,
-      @secondary-contrast-colour,
-      @secondary-accent-colour
-    );
-
-    .navbar-nav {
-      > li::after {
-        color: @primary-colour;
-      }
-
-      > li:first-child {
-        background-color: @primary-colour;
-        color: white;
-
-        &:hover::after {
-          border-right-color: @breadcrumbs-colour;
-        }
-        &::after {
-          border-color: transparent transparent transparent @primary-colour;
-        }
-      }
-    }
-  }
-
-  .navbar-tertiary {
-    .apply-navbar-brand(
-      @id7-navigation-tertiary-background-colour,
-      @tertiary-contrast-colour,
-      @tertiary-contrast-colour,
-      @tertiary-contrast-colour,
-      @tertiary-accent-colour,
-      white,
-      @tertiary-contrast-colour,
-      @tertiary-accent-colour
-    );
-  }
-
-  &.bordered {
-    .id7-left-border, .id7-right-border {
-      border-color: fadeout(@colour, 70%);
-    }
-  }
-
-  .apply-footer-brand(@colour);
-
-  .apply-form-control-brand(@colour);
-
-  .apply-carousel-brand(@colour);
-
-  // Box styles
-  .apply-boxstyles-brand(@colour);
-
-  .apply-pagination-brand(@colour);
-
-  .apply-navs-brand(@colour);
-
-  .apply-listgroup-brand(@colour);
-
-  .apply-koan-spinner-brand(@colour);
+/*
+  .apply-brand() has been called here, but it is now a no-op. Either:
+  - Add the id7-brand-COLOURNAME class to your HTML document to get the correct CSS variable definitions for a colour in the brand palette
+  - Mix in the id7-brand-COLOURNAME class in your own build if adding it to the HTML document isn't an option
+  - If you want to use a custom colour, call .brand-css-variables(COLOR) inside :root
+*/
 }
 
-.apply-footer-brand(@colour) {
-  .id7-page-footer {
-    .id7-app-footer when (@id7-gen-layout = 2024) {
-      @app-footer-text-colour: contrast(@colour, @text-color, white, 50%);
-
-      background: @colour;
-      color: @app-footer-text-colour;
-      .header-colour(@app-footer-text-colour);
-      .link-colour(@app-footer-text-colour);
-    }
-
-    .id7-horizontal-divider .divider {
-      stroke: @colour;
-    }
-
-    &.id7-footer-divider {
-      .id7-site-footer {
-        background: white;
-      }
-
-      .id7-app-footer {
-        .id7-logo-bleed {
-          .logo-as-css-colour(white);
-        }
-      }
-    }
-
-    &.id7-footer-coloured {
-      .id7-site-footer {
-        @site-footer-text-colour: contrast(@id7-site-footer-colour, @text-color, white, 50%);
-
-        background: @id7-site-footer-colour;
-        color: @site-footer-text-colour;
-        .header-colour(@site-footer-text-colour);
-        .link-colour(@site-footer-text-colour);
-      }
-    }
-  }
-}
-
-.apply-form-control-brand(@colour) {
-  .id7-search {
-    .fa, .fas {
-      color: @colour; // IE 8
-      color: fadeout(@colour, 50%);
-      .transition(color .15s linear);
-    }
-
-    .form-control:hover + .fa, .typeahead:hover + .fa, .fa:hover,
-    .form-control:hover + .fas, .typeahead:hover + .fas, .fas:hover {
-      color: @colour;
-    }
-
-    .typeahead.dropdown-menu > li.active > a {
-      background: @colour;
-      color: contrast(@colour, @text-color, white, 50%);
-    }
-  }
-
-  .form-control {
-    .form-control-focus(@colour);
-  }
-}
-
-.apply-carousel-brand(@colour) {
-  .carousel .carousel-indicators li {
-    &::after {
-      color: @colour; // IE 8
-      color: fadeout(@colour, 70%);
-    }
-
-    &.active::after {
-      color: @colour;
-    }
-  }
-}
-
-.apply-boxstyles-brand(@colour) {
-  // Use the approved colour pairings from this mixin
-  @colours: .calculate-brand-colours(@colour);
-
-  #boxstyle.filled(~".box1", @colours[@pale], @text-color, @colours[@pale-emphasis]);
-  #boxstyle.filled(~".box2", @colours[@pale-grey], @text-color, @colours[@pale-grey-emphasis]);
-  #boxstyle.bordered(~".box3", @colour);
-  #boxstyle.bordered(~".box4", @gray-light);
-  #boxstyle.filled(~".box5", @colours[@primary], @colours[@primary-contrast], @colours[@primary-contrast]);
-}
-
-.apply-pagination-brand(@colour) {
-  .pagination > li {
-    a, span { color: @colour; }
-
-    &.active {
-      > a, > span:not(.sr-only) {
-        &,
-        &:hover,
-        &:focus {
-          background-color: @colour;
-          border-color: @colour;
-          color: contrast(@colour, @text-color, white, 50%);
-        }
-      }
-    }
-  }
-}
-
-.apply-navs-brand(@colour) {
-  @border-colour: screen(@colour, darken(white, 50%));
-  @link-bg: screen(@colour, darken(white, 20%));
-  @hover-border-colour: screen(@colour, darken(white, 40%));
-  @link-hover-bg: screen(@colour, darken(white, 10%));
-  @active-slab-colour: @colour;
-  @hover-slab-colour: screen(@colour, darken(white, 60%));
-  @transition-timing-function: cubic-bezier(0.44, 0, 0.35, 1);
-
-  .nav-tabs {
-    border-bottom-color: @border-colour;
-
-    > li {
-      > a {
-        background-color: @link-bg;
-        border-color: @border-colour;
-        transition: background 0.3s @transition-timing-function;
-
-        &::before {
-          display: block;
-          position: absolute;
-          content: '';
-          width: 0;
-          height: 3px;
-          background: @hover-slab-colour;
-          top: 0;
-          left: 0;
-          transition: width 0.3s @transition-timing-function;
-        }
-
-        &:hover,
-        &:focus {
-          background-color: @link-hover-bg;
-          border-color: @hover-border-colour @hover-border-colour @border-colour;
-
-          &::before {
-            width: 100%;
-          }
-        }
-      }
-
-      &.open > a {
-        &,
-        &:hover,
-        &:focus {
-          background-color: @link-hover-bg;
-          border-color: @hover-border-colour @hover-border-colour @border-colour;
-
-          &::before {
-            background: @active-slab-colour;
-            width: 100%;
-          }
-        }
-      }
-
-      &.active {
-        > a {
-          &,
-          &:hover,
-          &:focus {
-            border-color: @border-colour @border-colour transparent;
-
-            &::before {
-              background: @active-slab-colour;
-              width: 100%;
-            }
-          }
-        }
-      }
-
-      &.disabled {
-        > a {
-          color: #555;
-
-          &:hover,
-          &:focus {
-            background-color: @link-bg;
-          }
-
-          &::before {
-            background: transparent;
-          }
-        }
-      }
-    }
-  }
-
-  .nav-pills > li.active > a {
-    &,
-    &:hover,
-    &:focus {
-      background-color: @colour;
-      color: contrast(@colour, @text-color, white, 50%);
-    }
-  }
-}
-
-.apply-listgroup-brand(@colour) {
-  .list-group-item.active {
-    &,
-    &:hover,
-    &:focus {
-      background-color: @colour;
-      border-color: @colour;
-      color: contrast(@colour, @text-color, white, 50%);
-    }
-  }
-}
-
-
-.apply-koan-spinner-brand(@colour) {
-  .id7-koan-spinner__neon {
-    &--top, &--bottom {
-      stroke: @colour;
-    }
-  }
-}
 
 // Adds crest as a background image of an element.
 // You will need to position it in an appropriate corner

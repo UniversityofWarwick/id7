@@ -1,29 +1,35 @@
-var ALL_CLASSES = ['brand-default', 'brand-purple', 'brand-gray', 'brand-gold', 'brand-blue', 'brand-orange', 'brand-green', 'brand-red'];
-
 jQuery(function($) {
-    $('[data-toggle-class]').on('click', function(e) {
-        e.stopPropagation();
+    document.querySelectorAll('[data-toggle-class]').forEach(function(el) {
+      el.addEventListener('click', function(e) {
         e.preventDefault();
-
-        var clazz = $(this).data('toggle-class');
-        $.each(ALL_CLASSES, function(i, clz) {
-            if (clz != clazz) {
-                $('body').removeClass(clz).addClass(clazz);
-            }
+        const list = document.documentElement.classList;
+        list.forEach(function(clz) {
+          if (clz.startsWith('id7-brand-')) {
+            list.remove(clz);
+          }
         });
+        list.add(el.dataset.toggleClass);
+      });
     });
 
-    $('[data-toggle="className"]').on('change', function(e) {
-        var $cb = $(this);
-        var $target = $($cb.attr('data-target'));
-        var className = $cb.attr('data-className');
+    document.querySelectorAll('[data-toggle="className"]').forEach(function(el) {
+      el.addEventListener('change', function(cb) {
+        var target = document.querySelector(el.dataset.target);
+        var className = el.dataset.className;
 
-        if ($cb.is(':checked')) {
-            $target.addClass(className);
-        } else {
-            $target.removeClass(className);
+        if (!target) {
+          console.warn('No target found for', el);
+          return;
         }
-    }).trigger('change');
+
+        if (el.checked) {
+            target.classList.add(className);
+        } else {
+            target.classList.remove(className);
+        }
+      });
+      el.dispatchEvent(new Event('change'));
+    });
 
     $('#border-width').on('change', function(e) {
         var width = $(this).val();
@@ -49,4 +55,9 @@ jQuery(function($) {
         $.each(allClasses, function(i, clz) { $('html').removeClass(clz); });
         $('html').addClass($(this).val());
     }).trigger('change');
+
+    document.querySelector('#toggle-evolved').addEventListener('click', function() {
+        document.documentElement.classList.toggle('id7-evolved');
+        document.documentElement.classList.toggle('id7-borderless');
+    });
 });

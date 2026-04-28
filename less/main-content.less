@@ -35,3 +35,22 @@
 @import "main-content/divider.less";
 @import "main-content/margins.less";
 @import "main-content/container-breakout.less";
+
+/* EXPERIMENTAL */
+/* Evolved Brand page section */
+section.page-section {
+  padding: var(--w-ref-gridGutterWidth);
+  &[data-padding="lg"] {
+    padding: calc(4 * var(--w-ref-gridGutterWidth)) var(--w-ref-gridGutterWidth);
+  }
+  &[data-padding="md"] {
+    padding: calc(2 * var(--w-ref-gridGutterWidth)) var(--w-ref-gridGutterWidth);
+  }
+
+  .id7-container-breakout;
+  & > * {
+    width: calc(var(--w-sys-containerWidth) - var(--w-ref-gridGutterWidth) * 2);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

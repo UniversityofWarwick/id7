@@ -18,6 +18,26 @@
   .make-lg-boxstyle();
 }
 
+.box1 {
+  .bg-brand-100();
+  background-color: var(--w-sys-colors-bg);
+  color: var(--w-sys-colors-fg);
+}
+
+.box2 {
+  --w-sys-colors-bg: var(--w-sys-colors-paleGrey);
+  --w-sys-colors-fg: var(--w-sys-colors-paleGrey-contrast);
+  --w-sys-colors-link: var(--w-sys-colors-paleGrey-accent);
+  background-color: var(--w-sys-colors-bg);
+  color: var(--w-sys-colors-fg);
+}
+
+.box5 {
+  .bg-brand-500(); 
+  background-color: var(--w-sys-colors-bg);
+  color: var(--w-sys-colors-fg);
+} 
+
 each(range(1,9), {
   @step: @value * 100;
   // class name borrowed from https://getbootstrap.com/docs/5.0/utilities/background/
@@ -29,5 +49,7 @@ each(range(1,9), {
     // Define these variables for use in containing elements.
     --w-sys-colors-bg: ~"var(--w-sys-colors-primary-@{step})";
     --w-sys-colors-fg: ~"var(--w-sys-colors-primary-@{step}-contrast)";
+    --w-sys-colors-heading: ~"var(--w-sys-colors-fg)";
+    --w-sys-colors-link: ~"var(--w-sys-colors-fg)";
   }
 })

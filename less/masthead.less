@@ -6,6 +6,8 @@
 
 .id7-masthead {
 
+  background-color: var(--w-sys-colors-masthead);
+
   .id7-masthead-contents > .clearfix {
       display: flex;
   }
@@ -86,8 +88,9 @@
   }
 
   .id7-header-text {
-    .header-colour(@text-color);
-    .link-colour(@text-color);
+    // :is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 a) {
+    //   color: var(--w-sys-colors-primary-contrast);
+    // } 
     .link-decoration(underline);
 
     @media (min-width: @grid-float-breakpoint) {
