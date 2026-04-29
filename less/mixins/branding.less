@@ -178,6 +178,10 @@
   - Mix in the id7-brand-COLOURNAME class in your own build if adding it to the HTML document isn't an option
   - If you want to use a custom colour, call .brand-css-variables(COLOR) inside :root
 */
+  // These are still in here for now for the tests to check .calculate-brand-colours is working correctly, 
+  // but they don't generate output.
+  @colours: .calculate-brand-colours(@colour);
+  @link-colour: @colours[@white-emphasis];
 }
 
 
