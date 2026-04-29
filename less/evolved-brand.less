@@ -1,0 +1,18 @@
+html.id7-evolved {
+  --w-sys-colors-masthead: var(--w-sys-colors-primary);
+  --w-sys-colors-masthead-contrast: var(--w-sys-colors-primary-contrast);
+
+  .id7-utility-masthead {
+    background-color: var(--w-sys-colors-masthead);
+  }
+
+  footer .id7-site-footer {
+    background-color: black;
+    color: white;
+
+    :is(a, a:link, a:visited) {
+      color: currentColor;
+      text-decoration-color: currentColor;
+    }
+  }
+}

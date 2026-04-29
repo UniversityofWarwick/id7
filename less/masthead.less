@@ -7,6 +7,11 @@
 .id7-masthead {
 
   background-color: var(--w-sys-colors-masthead);
+  color: var(--w-sys-colors-masthead-contrast);
+  
+  a {
+    color: currentColor;
+  }
 
   .id7-masthead-contents > .clearfix {
       display: flex;
@@ -121,7 +126,7 @@
       padding: 0 var(--w-ref-gridGutterWidth);
       width: var(--w-sys-containerWidth);
       z-index: 10;
-      background-color: white;
+      background-color: var(--w-sys-colors-masthead);
 
       &.headroom {
         transition: transform 100ms linear;
@@ -182,8 +187,6 @@
         font-weight: 500;
       }
     }
-
-    .link-colour(@gray-dark);
   }
 
   .id7-search-box-container when (@id7-gen-logos = 2024) {

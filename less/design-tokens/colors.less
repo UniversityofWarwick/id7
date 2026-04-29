@@ -9,13 +9,36 @@
   --w-ref-colors-page-light: white;
   --w-ref-colors-page-light-contrast: var(--w-ref-colors-blackText);
   --w-ref-colors-page-dark: var(--w-ref-colors-blackBg);
-  --w-ref-colors-page-dark-contrast: white;
-
-  /* Default system tokens. Can be overridden */
-  // Default to white masthead - set to primary in evolved theme.
-  --w-sys-colors-masthead: white;
-
+  --w-ref-colors-page-dark-contrast: #efefef;
+    /* Default system tokens. Can be overridden */
   --w-sys-colors-paleGrey-contrast: var(--w-ref-colors-blackText);
+}
+
+:root, [data-color-scheme="light"] {
+  color-scheme: light;
+  --w-sys-colors-page: var(--w-ref-colors-page-light);
+  --w-sys-colors-page-contrast: var(--w-ref-colors-page-light-contrast);
+  --w-sys-colors-page-accent: var(--w-sys-colors-white-accent);
+  --w-sys-colors-masthead: var(--w-sys-colors-page);
+  --w-sys-colors-masthead-contrast: var(--w-sys-colors-page-contrast);
+
+  // Grey text on background, like labels
+  --w-sys-colors-page-grey: #555;
+}
+
+[data-color-scheme="dark"] when (@dark-mode) {
+  color-scheme: dark;
+  --w-sys-colors-page: var(--w-ref-colors-page-dark);
+  --w-sys-colors-page-contrast: var(--w-ref-colors-page-dark-contrast);
+  --w-sys-colors-page-accent: var(--w-ref-colors-page-dark-contrast);
+  --w-sys-colors-masthead: var(--w-sys-colors-page);
+  --w-sys-colors-masthead-contrast: var(--w-sys-colors-page-contrast);
+
+  --w-sys-colors-page-grey: #aaa;
+
+  .id7-logo img {
+    filter: invert(100%);
+  }
 }
 
 // System tokens
@@ -43,70 +66,30 @@
 }
 
 :root, .bg-white {
-  --w-sys-colors-bg: var(--w-ref-colors-page-light);
-  --w-sys-colors-fg: var(--w-ref-colors-page-light-contrast);
-  --w-sys-colors-link: var(--w-sys-colors-white-accent);
+  --w-sys-colors-bg: var(--w-sys-colors-page);
+  --w-sys-colors-fg: var(--w-sys-colors-page-contrast);
+  --w-sys-colors-link: var(--w-sys-colors-page-accent);
 }
 
 // This can be enabled to generate a set of
 // CSS classes for switching to a different preset
 // colour scheme.
 & when (@id7-generate-colour-classes) {
-  :root {
-    /*
-      Definitions for brand colour palette and tints.
-      Don't use these reference values directly - use the --w-sys-colors-primary-*
-      aliases instead and choose the colour for that area with the `id7-brand-COLORNAME` classes.
-     */
-    each(@id7-brand-colors, {
-      @brand-color-var: "id7-brand-@{value}";
-      @brand-color: @@brand-color-var;
-      .colour-css-variables(@value, ref, @brand-color);
-    });
-  }
   // Generate CSS classes that alias sys-colors-primary to a given colour.
   each(@id7-brand-colors, {
-    .colour-sys-aliases(@value);
+    @brand-color-var: "id7-brand-@{value}";
+    @brand-color: @@brand-color-var;
+    .id7-brand-@{value} {
+      @colours: .calculate-brand-colours(@brand-color);
+      .generate-tint-variables(primary, sys, @brand-color);
+
+      --w-sys-colors-primary: var(--w-sys-colors-primary-500);
+      --w-sys-colors-primary-contrast: var(--w-sys-colors-primary-500-contrast);
+
+      --w-sys-colors-heading: var(--w-sys-colors-fg);
+      --w-sys-colors-link: var(--w-sys-colors-fg);
+
+      --w-sys-colors-paleGrey-accent: @colours[@pale-grey-emphasis];
+    }
   });
-}
-
-.bg-brand-100() {
-  --w-sys-colors-bg: var(--w-sys-colors-primary-100);
-  --w-sys-colors-fg: var(--w-sys-colors-primary-100-contrast);
-  --w-sys-colors-heading: var(--w-sys-colors-primary-100-contrast);
-  --w-sys-colors-link: var(--w-sys-colors-primary-100-contrast);
-  background-color: var(--w-sys-colors-bg);
-  color: var(--w-sys-colors-fg);
-}
-
-.bg-brand-300() {
-  --w-sys-colors-bg: var(--w-sys-colors-primary-300);
-  --w-sys-colors-fg: var(--w-sys-colors-primary-300-contrast);
-  --w-sys-colors-heading: var(--w-sys-colors-primary-300-contrast);
-  --w-sys-colors-link: var(--w-sys-colors-primary-300-contrast);
-  background-color: var(--w-sys-colors-bg);
-  color: var(--w-sys-colors-fg);
-}
-
-.bg-brand-500() {
-  --w-sys-colors-bg: var(--w-sys-colors-primary);
-  --w-sys-colors-fg: var(--w-sys-colors-primary-contrast);
-  --w-sys-colors-heading: var(--w-sys-colors-primary-contrast);
-  --w-sys-colors-link: var(--w-sys-colors-primary-contrast);
-  background-color: var(--w-sys-colors-bg);
-  color: var(--w-sys-colors-fg);
-}
-
-.brand-bg {
-  --w-sys-colors-fg: var(--w-sys-colors-primary-contrast);
-  --w-sys-colors-bg: var(--w-sys-colors-primary);
-  background-color: var(--w-sys-colors-bg);
-  color: var(--w-sys-colors-fg);
-}
-
-html.id7-evolved {
-  --w-sys-colors-masthead: var(--w-sys-colors-primary);
-  .id7-utility-masthead {
-    background-color: var(--w-sys-colors-masthead);
-  }
 }

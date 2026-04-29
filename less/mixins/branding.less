@@ -29,6 +29,7 @@
 // Generates a set of valid colours for a given brand colour.
 // Colours are grouped into pairs for use in different contexts.
 // Colours of a pair should pass AA contrast.
+// Pure LESS Function - doesn't generate any CSS.
 .calculate-brand-colours(@colour) {
   @primary: @colour;
   @primary-contrast: #wcag.contrast(@primary, white, @text-color)[@result];
@@ -64,42 +65,19 @@
 }
 
 // Generates reference tokens for all the colours derived from a brand colour.
-// These are not to be used
-.colour-css-variables(@name, @clazz, @colour) {
-  @colours: .calculate-brand-colours(@colour);
-
-  --w-sys-colors-white-accent: @colours[@white-emphasis];
-
-  --w-ref-colors-primary: @colours[@primary];
-  --w-ref-colors-secondary: @colours[@secondary];
-
-  // Secondary colour background
-  --w-sys-colors-secondary: @colours[@secondary];
-  --w-sys-colors-secondary-contrast: @colours[@secondary-contrast];
-  --w-sys-colors-secondary-accent: @colours[@secondary-accent];
-
-  // A colour we can place on white - can fall back to black
-  --w-sys-colors-white-accent: @colours[@white-emphasis];
-  // Slightly deeper colour (or black again)
-  --w-sys-colors-white-deepAccent: @colours[@white-deep-emphasis];
-
-  // This grey doesn't depend on the brand colour
-  // but the emphasis colour does - may as well keep
-  // them together.
-  --w-sys-colors-paleGrey: @colours[@pale-grey];
-  --w-sys-colors-paleGrey-accent: @colours[@pale-grey-emphasis];
-
+.generate-tint-variables(@name, @clazz, @colour) {
   // Set of tints of the primary colour.
   // Copying Bootstrap 5's 100-900 system.
+  // Some are commented out to reduce the number of generated colours, but we can add them back if we need them.
   @scale-values:
           100 80%, // lightest
-          200 60%,
+          //200 60%,
           300 40%,
-          400 20%,
+          //400 20%,
           500 0%,  // 500 is always the base colour
-          600 20%,
+          //600 20%,
           700 40%,
-          800 60%,
+          //800 60%,
           900 80%; // darkest
 
   each(@scale-values, {
@@ -114,24 +92,6 @@
   });
 }
 
-.colour-sys-aliases(@name) {
-  .id7-brand-@{name} {
-    --w-sys-colors-primary: var(--w-sys-colors-primary-500);
-    --w-sys-colors-primary-contrast: var(--w-sys-colors-primary-500-contrast);
-
-    --w-sys-colors-heading: var(--w-sys-colors-fg);
-    --w-sys-colors-link: var(--w-sys-colors-white-accent);
-
-    each(range(1,9), {
-      @step: @value * 100;
-      // These are defined with interpolated strings because otherwise it can't find the variables @name or @step -
-      // seems to be resolved in Less 4.x which we're not currently on yet
-      --w-sys-colors-primary-@{step}: ~"var(--w-ref-colors-@{name}-@{step})";
-      --w-sys-colors-primary-@{step}-contrast: ~"var(--w-ref-colors-@{name}-@{step}-contrast)";
-    })
-  }
-}
-
 // Define the CSS variables for a brand colour.
 // This can't be called from the top level like apply-brand,
 // because it isn't valid CSS. In those cases you can call
@@ -144,17 +104,18 @@
 .brand-css-variables(@colour) {
   @colours: .calculate-brand-colours(@colour);
 
-  --w-ref-colors-primary: @colours[@primary];
-  --w-ref-colors-secondary: @colours[@secondary];
-
   //// Colour pairings
 
-  .colour-css-variables(primary, sys, @colour);
+  .generate-tint-variables(primary, sys, @colour);
 
   // Secondary colour background
+  --w-sys-colors-primary: var(--w-sys-colors-primary-500);
   --w-sys-colors-secondary: @colours[@secondary];
   --w-sys-colors-secondary-contrast: @colours[@secondary-contrast];
   --w-sys-colors-secondary-accent: @colours[@secondary-accent];
+
+  --w-sys-colors-alt-bg: var(--w-sys-colors-300);
+  --w-sys-colors-alt-fg: var(--w-sys-colors-300-contrast);
 
   // A colour we can place on white - can fall back to black
   --w-sys-colors-white-accent: @colours[@white-emphasis];
