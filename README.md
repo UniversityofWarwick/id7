@@ -6,9 +6,7 @@ ID7 is the 7th iteration of the University of Warwick corporate identity. This l
 
 ID7 is available under an OSS license so that the open-source community can benefit from the various UI components and JavaScript functionality we have implemented.
 
-<a href="https://www.netlify.com">
-  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deployments powered by Netlify" />
-</a> 
+<a href="https://www.netlify.com">Deployments powered by Netlify</a> 
 
 ## Table of contents
 
@@ -169,6 +167,11 @@ To do so:
     - jQuery has been updated. Please make sure that your project doesn't specify a `jquery` dependency with a specific version as this may cause conflicts.
 - **3.3.0**:    
     - Node 22 now required. New favicons and a new favicon generator are included, along with light mode and dark mode versions. To use the new dark mode icons, update the <head> of your templates to include the new code in `docs/_includes/header.html`.
+- **4.0.0**:
+    - Theming has been overhauled to use CSS Custom Properties rather than relying on compile-time overrides. This allows for more consistent styling and the ability to create themeable components, but it does also require some adjustments:
+    - If you build your own subset of modules, ensure you include:
+      - `@import 'evolved-brand.less';`
+    - .apply-brand no longer works.
 
 ## Copyright and license
 
