@@ -1,6 +1,6 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import * as htmlUtils from '../html-utils';
+import * as htmlUtils from '../html-utils.js';
 
 const Config = {
   Defaults: {

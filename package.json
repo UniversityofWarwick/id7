@@ -89,6 +89,7 @@
     "webpack-remove-empty-scripts": "1.1.1",
     "zip-webpack-plugin": "^4.0.3"
   },
+  "type": "module",
   "author": "University of Warwick",
   "license": "ISC",
   "homepage": "https://id7.warwick.ac.uk",

@@ -5,6 +5,6 @@
  * https://getbootstrap.com/docs/3.4/javascript/#popovers
  */
 // Required dependency
-require('./bootstrap-tooltip.jquery');
+import './bootstrap-tooltip.jquery.js';
 
-require('../bootstrap/js/popover');
+import '../bootstrap/js/popover.js';

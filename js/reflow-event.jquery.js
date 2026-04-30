@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import $ from 'jquery';
 
-import currentScreenSize, { allScreenSizes } from './screen-sizes';
+import currentScreenSize, { allScreenSizes } from './screen-sizes.js';
 
 const Config = {
   Defaults: {

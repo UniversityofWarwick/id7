@@ -1,11 +1,11 @@
 /* eslint-env browser */
 
-require('./id7-default-feature-detect');
-require('./reflow-event.jquery');
-require('./account-popover.jquery');
-require('./navigation.jquery');
-require('./search-suggest.jquery');
-require('./wide-tables.jquery');
-require('./koan-spinner.jquery');
-require('./jquery-focussable');
-require('./site-links');
+import './id7-default-feature-detect.js';
+import './reflow-event.jquery.js';
+import './account-popover.jquery.js';
+import './navigation.jquery.js';
+import './search-suggest.jquery.js';
+import './wide-tables.jquery.js';
+import './koan-spinner.jquery.js';
+import './jquery-focussable.js';
+import './site-links.js';

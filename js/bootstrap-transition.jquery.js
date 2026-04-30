@@ -4,4 +4,4 @@
  *
  * https://getbootstrap.com/docs/3.4/javascript/#transitions
  */
-require('../bootstrap/js/transition');
+import '../bootstrap/js/transition.js';
