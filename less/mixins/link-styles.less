@@ -1,13 +1,8 @@
 .link-colour(@base, @hover) {
   @c: @base;
 
-  a, a:link, a:visited {
-    color: @c;
-  }
-
-  a:hover, a:focus, a:active {
-    color: @hover;
-  }
+  --w-sys-colors-link: @c;
+  --w-sys-colors-link-hover: @hover;
 
   .popover button.close {
     color: @c;
@@ -19,7 +14,7 @@
   a {
     &:hover {
       .new-window-link, .insecure-link {
-        color: @hover;
+        color: currentColor;
       }
     }
   }

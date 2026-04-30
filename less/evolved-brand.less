@@ -1,4 +1,4 @@
-html.id7-evolved {
+@id7-evolved-rules: {
   --w-sys-colors-masthead: var(--w-sys-colors-primary);
   --w-sys-colors-masthead-contrast: var(--w-sys-colors-primary-contrast);
 
@@ -14,5 +14,14 @@ html.id7-evolved {
       color: currentColor;
       text-decoration-color: currentColor;
     }
+  }
+}
+
+& when (@evolved-brand) {
+  html.id7-evolved when not (@evolved-brand-default) {
+    @id7-evolved-rules();
+  }
+  & when (@evolved-brand-default) {
+    @id7-evolved-rules();
   }
 }

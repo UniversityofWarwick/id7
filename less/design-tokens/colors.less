@@ -36,6 +36,7 @@
 
   --w-sys-colors-page-grey: #aaa;
 
+  // FIXME this is only appropriate if the masthead was white
   .id7-logo img {
     filter: invert(100%);
   }
@@ -75,21 +76,12 @@
 // CSS classes for switching to a different preset
 // colour scheme.
 & when (@id7-generate-colour-classes) {
-  // Generate CSS classes that alias sys-colors-primary to a given colour.
+  // Generate CSS classes that override the sys-primary colours.
   each(@id7-brand-colors, {
     @brand-color-var: "id7-brand-@{value}";
     @brand-color: @@brand-color-var;
     .id7-brand-@{value} {
-      @colours: .calculate-brand-colours(@brand-color);
-      .generate-tint-variables(primary, sys, @brand-color);
-
-      --w-sys-colors-primary: var(--w-sys-colors-primary-500);
-      --w-sys-colors-primary-contrast: var(--w-sys-colors-primary-500-contrast);
-
-      --w-sys-colors-heading: var(--w-sys-colors-fg);
-      --w-sys-colors-link: var(--w-sys-colors-fg);
-
-      --w-sys-colors-paleGrey-accent: @colours[@pale-grey-emphasis];
+      .brand-css-variables(@brand-color);
     }
   });
 }

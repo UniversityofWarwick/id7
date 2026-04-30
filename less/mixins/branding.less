@@ -130,19 +130,16 @@
 }
 
 // Generates the CSS for a brand colour.
-// This used to generate swathes of overrides but it has replacements depending
-// on what colour theme you want to use. We generate a CSS comment explaining the options.
+// This used to generate swathes of overrides but it will now just generate the CSS variables.
+// If you are using a colour from the brand palette, you should use the .id7-brand-COLOURNAME class 
+// instead of calling this mixin directly, which saves on file size.
 .apply-brand(@colour) {
-/*
-  .apply-brand() has been called here, but it is now a no-op. Either:
-  - Add the id7-brand-COLOURNAME class to your HTML document to get the correct CSS variable definitions for a colour in the brand palette
-  - Mix in the id7-brand-COLOURNAME class in your own build if adding it to the HTML document isn't an option
-  - If you want to use a custom colour, call .brand-css-variables(COLOR) inside :root
-*/
   // These are still in here for now for the tests to check .calculate-brand-colours is working correctly, 
-  // but they don't generate output.
+  // but they don't affect output.
   @colours: .calculate-brand-colours(@colour);
   @link-colour: @colours[@white-emphasis];
+
+  .brand-css-variables(@colour);
 }
 
 

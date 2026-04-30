@@ -71,6 +71,20 @@
   .dropdown-menu {
     font-size: var(--w-sys-fontSizeNav);
     border: 0;
+    --w-sys-colors-bg: var(--primary-bg);
+    --w-sys-colors-fg: var(--primary-fg);
+    --active-bg: hsl(from var(--w-sys-colors-primary) h s calc(l - 10%));
+    background-color: var(--primary-bg);
+    color: var(--primary-fg);
+
+    li {
+      &.active {
+        background-color: var(--active-bg);
+      }
+      a {
+        color: currentColor;
+      }
+    }
   }
 
   @media (min-width: @grid-float-breakpoint) {

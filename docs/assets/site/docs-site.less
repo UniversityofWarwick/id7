@@ -17,6 +17,14 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.example-card {
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  padding: var(--w-ref-gridGutterWidth);
+  align-items: flex-end;
+}
+
 // Syntax highlighting
 :is(pre, code, .highlight) {
 .hll { background-color: #ffffcc }
