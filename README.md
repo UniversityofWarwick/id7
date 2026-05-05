@@ -123,53 +123,53 @@ To do so:
 * Replace the logo image `logo.png` with `logo.svg` in your templates
 * Update anything app-specific that needs updating - the whole masthead region should have a white background
 
-## Breaking changes
+## Change log
 
-- **1.2.0** - Now uses a custom Modernizr build (see _What's included_ above) with a minimal range of tests. If your application relies on other tests or shims which were included in previous versions, they will likely fail.
-- **1.4.0** - Support for Internet Explorer 8 was removed, and a reduced range of Modernizr tests is used as a result.
-- **1.6.0** - Font Awesome v5 is now used by default instead of v4. Icon identifier references may need to be updated, or the [shim](https://github.com/UniversityofWarwick/id7/#icons) included.
-- **2.0.0** - Now built with Webpack instead of Grunt. Removed non-minified resources from packages. Moved from typeahead.js to bootstrap-3-typeahead.
-- **2.3.0**:
-  - Modernizr was removed and replaced with a shim just containing the tests used in ID7.
-  - lodash is no longer exposed as `_` in order to reduce the bundle size
-- **2.6.0**:
-  - Internet Explorer 11 is no longer fully supported
-  - Headroom.js was updated to 0.10.3 which no longer supports IE11 without a polyfill for `Object.assign`. To enable this in IE11, include an `Object.assign` polyfill and then add `data-fixed-header="true" data-fixed-nav="true"` to the `.id7-navigation` element.  
-- **2.8.0**:
-  - Bootstrap typeahead now adds aria- attributes to parent elements. If you use typeahead directly, ensure your input field is inside a reasonable container element (a Bootstrap column or `.form-group` is fine)
-- **2.9.0**:
-  - The `id7-site-footer` and `id7-app-footer` elements now require a nested content element, `id7-site-footer-content` and `id7-app-footer-content` respectively. The template has been updated to reflect this.
-- **2.9.10**:
-  - Using the 7.1 design requires the `id7-point-1` class to be on the `<body>` element.
-  - If building your own CSS, LESS must be at least version 3.5.
-- **2.10.0**:
-  - Some styles are now based on CSS custom properties (CSS variables). There shouldn't be a noticeable
-    difference to your site.
-  - If you are currently importing your own subset of ID7 intead of using `id7-no-fa` or similar then you
-    will need to make sure to import `design-tokens/all` to ensure that the new CSS custom properties are
-    defined. If you don't do this then a lot of things will look wrong.
-- **2.11.0**:
-  - The 7.1 design refresh is now the only option, so it no longer requires the `id7-point-1` class.
-- **2.12.0**:
-  - The math option for Less has been changed to `parens-division`, so expressions such as `19 / 6` will now be
-    left as-is instead of being evaluated. This is to improve compatibility with CSS that uses the division operator.
-    If you are doing your own LESS compilation, you should set `math: 'parens-division'` in your LESS compiler options.
-  - The "clearfix hack" has been removed from the Bootstrap container styles. This shouldn't have an effect on most layouts but if you have custom content using the container mixins, you may want to check that content doesn't spill out onto other content. The `display: flow-root` rule can be used as a modern alternative to clearfix where you are relying on floats.
+- **4.0.0**:
+    - Theming has been overhauled to use CSS Custom Properties rather than relying on compile-time overrides. This allows for more consistent styling and the ability to create themeable components, but it does also require some adjustments.
+    Follow the [Migration guide](/migration/4.0).
+- **3.3.0**:    
+    - Node 22 now required. New favicons and a new favicon generator are included, along with light mode and dark mode versions. To use the new dark mode icons, update the <head> of your templates to include the new code in `docs/_includes/header.html`.
+- **3.2.0**:
+    - jQuery has been updated. Please make sure that your project doesn't specify a `jquery` dependency with a specific version as this may cause conflicts.
+- **3.1.0**:  
+    - The carousel component has been removed by default as it is rarely used and has a number of accessibility issues. If you still need to use it while you migrate away, you can include the JS and LESS files for it in a custom bundle.
 - **3.0.0**:
   - **The 2025 brand evolution is now active**. If you are building ID7 from source, you can set `@id7-gen: 2024` to revert to the older style, and there are various `@id7-gen-*` sub-flags to switch individual features to and from `2024` and `2025`.
   - Replace `logo.svg` with `wordmark.svg`.
   - You will need to update any web font import in your template from Lato to Neue Haas Grotesk, as per the template. If there is no applicable Creative Cloud subscription then you may not have a license to use Adobe Fonts and you should exclude the web font import, leaving it to fallback to some selected alternatives.
   - If you use a CSP, you will need to update to allow TypeKit as a font source (see [Getting started](/getting-started/#security-headers)).
   - Review your footer content to ensure the crest is laid out sensibly. It should be in the top right with adequate contrast.
-- **3.1.0**:  
-    - The carousel component has been removed by default as it is rarely used and has a number of accessibility issues. If you still need to use it while you migrate away, you can include the JS and LESS files for it in a custom bundle.
-- **3.2.0**:
-    - jQuery has been updated. Please make sure that your project doesn't specify a `jquery` dependency with a specific version as this may cause conflicts.
-- **3.3.0**:    
-    - Node 22 now required. New favicons and a new favicon generator are included, along with light mode and dark mode versions. To use the new dark mode icons, update the <head> of your templates to include the new code in `docs/_includes/header.html`.
-- **4.0.0**:
-    - Theming has been overhauled to use CSS Custom Properties rather than relying on compile-time overrides. This allows for more consistent styling and the ability to create themeable components, but it does also require some adjustments.
-    Follow the [Migration guide](/migration/4.0).
+- **2.12.0**:
+  - The math option for Less has been changed to `parens-division`, so expressions such as `19 / 6` will now be
+    left as-is instead of being evaluated. This is to improve compatibility with CSS that uses the division operator.
+    If you are doing your own LESS compilation, you should set `math: 'parens-division'` in your LESS compiler options.
+  - The "clearfix hack" has been removed from the Bootstrap container styles. This shouldn't have an effect on most layouts but if you have custom content using the container mixins, you may want to check that content doesn't spill out onto other content. The `display: flow-root` rule can be used as a modern alternative to clearfix where you are relying on floats.
+- **2.11.0**:
+  - The 7.1 design refresh is now the only option, so it no longer requires the `id7-point-1` class.
+- **2.10.0**:
+  - Some styles are now based on CSS custom properties (CSS variables). There shouldn't be a noticeable
+    difference to your site.
+  - If you are currently importing your own subset of ID7 intead of using `id7-no-fa` or similar then you
+    will need to make sure to import `design-tokens/all` to ensure that the new CSS custom properties are
+    defined. If you don't do this then a lot of things will look wrong.
+- **2.9.10**:
+  - Using the 7.1 design requires the `id7-point-1` class to be on the `<body>` element.
+  - If building your own CSS, LESS must be at least version 3.5.
+- **2.9.0**:
+  - The `id7-site-footer` and `id7-app-footer` elements now require a nested content element, `id7-site-footer-content` and `id7-app-footer-content` respectively. The template has been updated to reflect this.
+- **2.8.0**:
+  - Bootstrap typeahead now adds aria- attributes to parent elements. If you use typeahead directly, ensure your input field is inside a reasonable container element (a Bootstrap column or `.form-group` is fine)
+- **2.6.0**:
+  - Internet Explorer 11 is no longer fully supported
+  - Headroom.js was updated to 0.10.3 which no longer supports IE11 without a polyfill for `Object.assign`. To enable this in IE11, include an `Object.assign` polyfill and then add `data-fixed-header="true" data-fixed-nav="true"` to the `.id7-navigation` element.  
+- **2.3.0**:
+  - Modernizr was removed and replaced with a shim just containing the tests used in ID7.
+  - lodash is no longer exposed as `_` in order to reduce the bundle size
+- **2.0.0** - Now built with Webpack instead of Grunt. Removed non-minified resources from packages. Moved from typeahead.js to bootstrap-3-typeahead.
+- **1.6.0** - Font Awesome v5 is now used by default instead of v4. Icon identifier references may need to be updated, or the [shim](https://github.com/UniversityofWarwick/id7/#icons) included.
+- **1.4.0** - Support for Internet Explorer 8 was removed, and a reduced range of Modernizr tests is used as a result.
+- **1.2.0** - Now uses a custom Modernizr build (see _What's included_ above) with a minimal range of tests. If your application relies on other tests or shims which were included in previous versions, they will likely fail.
 
 ## Copyright and license
 
