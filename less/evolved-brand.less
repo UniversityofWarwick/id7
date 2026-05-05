@@ -2,8 +2,20 @@
   --w-sys-colors-masthead: var(--w-sys-colors-primary);
   --w-sys-colors-masthead-contrast: var(--w-sys-colors-primary-contrast);
 
-  .id7-utility-masthead {
+  .id7-utility-masthead,
+  // Colour the overall page background to match the masthead, to capture the page title
+  .id7-main-content-area {
     background-color: var(--w-sys-colors-masthead);
+  }
+
+  // The above rule makes the main content background coloured, so we need to 
+  // colour this back in with the page colour (white).
+  .id7-main-content {
+    background-color: var(--w-sys-colors-bg);
+    // clip-path trick to make the background spill out to the sides
+    // with clip-path to prevent it going up or down.
+    box-shadow: 0 0 0 100vmax var(--w-sys-colors-bg);
+    clip-path: inset(0 -100vmax); 
   }
 
   footer .id7-site-footer {
