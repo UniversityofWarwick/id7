@@ -14,9 +14,9 @@
   }
 }
 
-@layer site-theme {
-  html {
-    @brand-var: "id7-brand-lavender";
-    .brand-css-variables(@@brand-var);
-  }
+:where(:root) {
+  // Keep default theme colour as it was before
+  //@brand-var: "id7-brand-lavender";
+  @brand-var: "id7-brand-blue";
+  .brand-css-variables(@@brand-var);
 }
