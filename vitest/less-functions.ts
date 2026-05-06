@@ -20,7 +20,7 @@ export interface CssRule {
   }[];
 }
 
-export async function renderLessFiles(paths, suffix): Promise<string> {
+export async function renderLessFiles(paths: string[], suffix: string): Promise<string> {
   const srcs = paths.map(path => `@import (reference) "${path}";\n`);
   //const props = properties.map(p => `@${p.name}: ${p.value};`).join('\n');
   const result = await less.render(srcs.join("") + suffix, {
@@ -29,7 +29,7 @@ export async function renderLessFiles(paths, suffix): Promise<string> {
   return result.css;
 }
 
-export async function evaluateVariable(variableName) {
+export async function evaluateVariable(variableName: string): Promise<string> {
   const lessFiles = [
     'less/variables.less',
     'less/mixins/branding.less',
@@ -47,7 +47,7 @@ export function parse(cssString: string): CssAst {
 // Gets the value of a named property from the first rule in a CSS AST.
 export function getValueFromAst(ast: CssAst, name: string): string {
   const decs = ast.stylesheet.rules[0].declarations;
-  return decs.find(d => d.property === name)?.value;
+  return decs.find(d => d.property === name)?.value || '';
 }
 
 export function getValuesFromAst(ast: CssAst): Record<string, string> {

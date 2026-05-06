@@ -4,6 +4,7 @@ import TerserPlugin from 'terser-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import Autoprefixer from 'autoprefixer';
+import ESLintPlugin from 'eslint-webpack-plugin';
 
 const autoprefix = () => ({
   loader: 'postcss-loader',
@@ -16,16 +17,13 @@ const autoprefix = () => ({
 });
 
 export const lintJS = () => ({
-
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        enforce: 'pre',
-        use: 'eslint-loader',
-      },
-    ],
-  },
+  plugins: [
+    new ESLintPlugin({
+      extensions: ['js'],
+      //eslintPath: "eslint/use-at-your-own-risk",
+      configType: 'eslintrc',
+    }),
+  ],
 });
 
 export const transpileJS = () => ({
