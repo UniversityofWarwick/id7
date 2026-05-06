@@ -2,13 +2,12 @@
 @import (reference) '../../../bootstrap/less/mixins.less';
 @import (reference) '../../../less/variables.less';
 @import (reference) '../../../less/mixins.less';
+@import (reference) '../../../less/main-content/container-breakout.less';
 
-@layer site-theme {
-  .apply-site-imagery("/dist/docs/site/docs-site");
-  
-  :root {
-    .brand-css-variables(@id7-brand-blue);
-  }
+.apply-site-imagery("/dist/docs/site/docs-site");
+
+:where(:root) {
+  .brand-css-variables(@id7-brand-blue);
 }
 
 .example-grid {
@@ -23,6 +22,21 @@
   flex-direction: column;
   padding: var(--w-ref-gridGutterWidth);
   align-items: flex-end;
+}
+
+.section-example {
+  @media screen and (min-width: @grid-float-breakpoint) {
+    .id7-container-breakout;
+    & > * {
+      width: calc(var(--w-sys-containerWidth) - var(--w-ref-gridGutterWidth) * 2);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+} 
+.section-example--padding-lg {
+  padding-top: calc(var(--w-ref-gridGutterWidth) * 4);
+  padding-bottom: calc(var(--w-ref-gridGutterWidth) * 4);
 }
 
 // Syntax highlighting

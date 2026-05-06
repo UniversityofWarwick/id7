@@ -129,20 +129,6 @@
   --w-sys-colors-paleGrey-accent: @colours[@pale-grey-emphasis];
 }
 
-// Generates the CSS for a brand colour.
-// This used to generate swathes of overrides but it will now just generate the CSS variables.
-// If you are using a colour from the brand palette, you should use the .id7-brand-COLOURNAME class 
-// instead of calling this mixin directly, which saves on file size.
-.apply-brand(@colour) {
-  // These are still in here for now for the tests to check .calculate-brand-colours is working correctly, 
-  // but they don't affect output.
-  @colours: .calculate-brand-colours(@colour);
-  @link-colour: @colours[@white-emphasis];
-
-  .brand-css-variables(@colour);
-}
-
-
 // Adds crest as a background image of an element.
 // You will need to position it in an appropriate corner
 // and possibly add padding to avoid overdraw.

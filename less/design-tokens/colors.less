@@ -61,15 +61,33 @@
   );
 }
 
+// Utility classes for switching between light and dark backgrounds.
+// TODO I don't really know why these are in the design tokens file. Organise elsewhere.
+
 .bg-black {
+  // Updates some system rendered elements to look better on a dark background.
+  color-scheme: dark;
   --w-sys-colors-bg: var(--w-ref-colors-page-dark);
   --w-sys-colors-fg: var(--w-ref-colors-page-dark-contrast);
+  --w-sys-colors-link: var(--w-ref-colors-page-dark-contrast);
+  --w-sys-colors-page-grey: #aaa;
 }
 
 :root, .bg-white {
   --w-sys-colors-bg: var(--w-sys-colors-page);
   --w-sys-colors-fg: var(--w-sys-colors-page-contrast);
   --w-sys-colors-link: var(--w-sys-colors-page-accent);
+}
+
+.bg-grey {
+  --w-sys-colors-bg: var(--w-sys-colors-paleGrey);
+  --w-sys-colors-fg: var(--w-sys-colors-paleGrey-contrast);
+  --w-sys-colors-link: var(--w-sys-colors-paleGrey-accent);
+}
+
+.bg-white, .bg-black, .bg-grey {
+  color: var(--w-sys-colors-fg);
+  background-color: var(--w-sys-colors-bg);
 }
 
 // This can be enabled to generate a set of

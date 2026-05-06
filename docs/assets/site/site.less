@@ -13,8 +13,6 @@ html {
   &.site3 { .example-site-styles('/dist/docs/site/site3'); }
 }
 
-@layer site-theme {
-  :root {
-    .brand-css-variables(@id7-brand-purple);
-  }
+:where(:root) {
+  .brand-css-variables(@id7-brand-purple);
 }

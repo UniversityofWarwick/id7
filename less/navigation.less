@@ -24,6 +24,8 @@
   .navbar {
     background-color: var(--w-sys-colors-bg);
     color: var(--w-sys-colors-fg);
+
+    --primary-bg-hover: hsl(from var(--w-sys-colors-bg) h s calc(l - 8));
   }
   .navbar-primary {
     --w-sys-colors-bg: var(--primary-bg);
@@ -73,18 +75,20 @@
     border: 0;
     --w-sys-colors-bg: var(--primary-bg);
     --w-sys-colors-fg: var(--primary-fg);
-    --active-bg: hsl(from var(--w-sys-colors-primary) h s calc(l - 10%));
-    background-color: var(--primary-bg);
-    color: var(--primary-fg);
+    // background-color: var(--primary-bg);
+    // color: var(--primary-fg);
 
-    li {
-      &.active {
-        background-color: var(--active-bg);
-      }
-      a {
-        color: currentColor;
-      }
-    }
+    // Override Bootstrap's default dropdown component
+    --w-cmp-dropdown-bg: var(--primary-bg);
+    --w-cmp-dropdown-fg: var(--primary-fg);
+    --w-cmp-dropdown-hover-bg: var(--primary-bg-hover);
+    --w-cmp-dropdown-hover-fg: var(--primary-fg);
+    --w-cmp-dropdown-active-bg: var(--primary-bg-hover);
+    --w-cmp-dropdown-active-fg: var(--primary-fg);
+
+    // li a {
+    //     color: currentColor;   
+    // }
   }
 
   @media (min-width: @grid-float-breakpoint) {
@@ -135,6 +139,10 @@
       float: left;
       cursor: pointer;
       .transition(~"background-color .15s linear, color .15s linear");
+
+      &:focus, &:hover {
+        background-color: var(--primary-bg-hover);
+      }
 
       &:hover + a {
         text-decoration: underline;
@@ -223,6 +231,8 @@
       &.active {
         font-weight: bold;
 
+        --triangle-bg: var(--w-sys-colors-masthead);
+
         // active section triangle indicator
         &::before {
           content: " ";
@@ -232,14 +242,15 @@
           z-index: 2;
           margin-left: (-@nav-triangle-width / 2);
 
-          .triangle(up, @nav-triangle-width, @nav-triangle-height, white);
+          .triangle(up, @nav-triangle-width, @nav-triangle-height, var(--triangle-bg));
         }
 
+        // Match the triangle colour to the nav below it
         &.next-secondary::before {
-          border-bottom-color: var(--secondary-bg);
+          --triangle-bg: var(--secondary-bg);
         }
         &.next-tertiary::before {
-          border-bottom-color: var(--tertiary-bg);
+          --triangle-bg: var(--tertiary-bg);
         }
 
         // hide the triangle on hover if there's a menu

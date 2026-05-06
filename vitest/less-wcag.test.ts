@@ -28,12 +28,12 @@ async function checkWcag(colour: string) {
   // the most contrasting and also that that one meets the AA standard.
   const siteLess = `html { 
         color: #wcag.contrast(${colour}, ${lightTextColor}, @text-color)[@result];
-        @brand: .apply-brand(${colour});
+        @colours: .calculate-brand-colours(${colour});
         
-        // extract elements of the apply-brand result here so that we can
+        // extract elements of the result here so that we can
         // easily fetch them in the test.
         
-        linkColour: @brand[@link-colour];
+        linkColour: @colours[@white-emphasis];
     }`;
   const r = await renderLessFiles(lessFiles, siteLess);
   const ast = parse(r);

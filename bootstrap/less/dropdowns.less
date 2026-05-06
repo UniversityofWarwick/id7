@@ -2,6 +2,19 @@
 // Dropdown menus
 // --------------------------------------------------
 
+:root {
+  --w-cmp-dropdown-fg: @dropdown-link-color;
+  --w-cmp-dropdown-bg: @dropdown-bg;
+  --w-cmp-dropdown-hover-bg: @dropdown-link-hover-bg;
+  --w-cmp-dropdown-hover-fg: @dropdown-link-hover-color;
+  --w-cmp-dropdown-active-fg: @dropdown-link-active-color;
+  --w-cmp-dropdown-active-bg: @dropdown-link-active-bg;
+  --w-cmp-dropdown-disabled-fg: @dropdown-link-disabled-color;
+  --w-cmp-dropdown-border: @dropdown-border;
+  --w-cmp-dropdown-divider-bg: @dropdown-divider-bg;
+  --w-cmp-dropdown-header-fg: @dropdown-header-color;
+  --w-cmp-dropdown-caret-fg: @dropdown-caret-color;
+}
 
 // Dropdown arrow/caret
 .caret {
@@ -41,10 +54,9 @@
   font-size: @font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
-  background-color: @dropdown-bg;
+  background-color: var(--w-cmp-dropdown-bg);
   background-clip: padding-box;
-  border: 1px solid @dropdown-fallback-border; // IE8 fallback
-  border: 1px solid @dropdown-border;
+  border: 1px solid var(--w-cmp-dropdown-border);
   border-radius: @border-radius-base;
   .box-shadow(0 6px 12px rgba(0, 0, 0, .175));
 
@@ -58,7 +70,7 @@
 
   // Dividers (basically an hr) within the dropdown
   .divider {
-    .nav-divider(@dropdown-divider-bg);
+    .nav-divider(var(--w-cmp-dropdown-divider-bg));
   }
 
   // Links within the dropdown menu
@@ -68,14 +80,14 @@
     clear: both;
     font-weight: @main-font-weight;
     line-height: @line-height-base;
-    color: @dropdown-link-color;
+    color: var(--w-cmp-dropdown-fg);
     white-space: nowrap; // prevent links from randomly breaking onto new lines
 
     &:hover,
     &:focus {
-      color: @dropdown-link-hover-color;
+      color: var(--w-cmp-dropdown-hover-fg);
       text-decoration: none;
-      background-color: @dropdown-link-hover-bg;
+      background-color: var(--w-cmp-dropdown-hover-bg);
     }
   }
 }
@@ -85,9 +97,9 @@
   &,
   &:hover,
   &:focus {
-    color: @dropdown-link-active-color;
+    color: var(--w-cmp-dropdown-active-fg);
     text-decoration: none;
-    background-color: @dropdown-link-active-bg;
+    background: var(--w-cmp-dropdown-active-bg);
     outline: 0;
   }
 }
@@ -100,7 +112,7 @@
   &,
   &:hover,
   &:focus {
-    color: @dropdown-link-disabled-color;
+    color: var(--w-cmp-dropdown-disabled-fg);
   }
 
   // Nuke hover/focus effects
@@ -152,7 +164,7 @@
   padding: 3px 20px;
   font-size: @font-size-small;
   line-height: @line-height-base;
-  color: @dropdown-header-color;
+  color: var(--w-cmp-dropdown-header-fg);
   white-space: nowrap; // as with > li > a
 }
 
@@ -184,7 +196,6 @@
     content: "";
     border-top: 0;
     border-bottom: @caret-width-base dashed;
-    border-bottom: @caret-width-base solid ~"\9"; // IE8
   }
   // Different positioning for bottom up menu
   .dropdown-menu {
