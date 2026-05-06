@@ -6,6 +6,5 @@ module.exports = function(api) {
     "presets": [
       "@babel/preset-env"
     ],
-    "plugins": ["lodash"]
   };
 };

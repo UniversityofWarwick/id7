@@ -6,7 +6,6 @@ const $ = window.jQuery;
  */
 require('../bootstrap/js/dropdown');
 
-
 // ID-294 We use non-standard dropdowns that need to have different click actions..
 
 // Bootstrap devs were lazy when they implemented Esc key support, and just triggered

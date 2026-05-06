@@ -1,4 +1,3 @@
-
 const MAPPINGS = {
   '&': '&amp;',
   '<': '&lt;',
