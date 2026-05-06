@@ -1,12 +1,12 @@
 /* eslint-env browser */
-const $ = window.jQuery;
+import $ from 'jquery';
 
 /*
  * Adds typeahead support to Bootstrap 3. Forked of a fork
  *
  * https://github.com/UniversityofWarwick/bootstrap-3-typeahead
  */
-require('@universityofwarwick/bootstrap-3-typeahead');
+import '@universityofwarwick/bootstrap-3-typeahead';
 
 function supportsPassiveEventListeners() {
   let supportsPassiveOption = false;

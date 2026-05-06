@@ -1,12 +1,12 @@
 /* eslint-env browser */
-const $ = window.jQuery;
+import $ from 'jquery';
 
 /*
  * Streamlined, flexible dialog prompts.
  *
  * https://getbootstrap.com/docs/3.4/javascript/#modals
  */
-require('../bootstrap/js/modal');
+import '../bootstrap/js/modal.js';
 
 // ID-93 https://github.com/twbs/bootstrap/issues/16148
 // ID7's .id7-fixed-width-container is position: relative, so we need to inject the backdrop at

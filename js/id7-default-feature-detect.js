@@ -1,7 +1,7 @@
 /* eslint-env browser */
 
 // Feature detection
-import FeatureDetect from './feature-detect';
+import FeatureDetect from './feature-detect.js';
 
 const detect = new FeatureDetect();
 detect.addTest('js', true);

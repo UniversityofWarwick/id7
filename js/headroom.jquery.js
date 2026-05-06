@@ -5,6 +5,6 @@
  * http://wicky.nillia.ms/headroom.js
  */
 import Headroom from 'headroom.js';
+import 'headroom.js/dist/jQuery.headroom.js';
 
 window.Headroom = Headroom;
-require('headroom.js/dist/jQuery.headroom');
