@@ -50,7 +50,7 @@ As well as the default `.embed-responsive-16by9` and `embed-responsive-4by3` asp
 - `.embed-responsive-3by2`
 - `.embed-responsive-3by1`
 
-<section class="section-example section-example--padding-lg bg-primary-strong id7-brand-yellow" markdown="1">
+<section class="page-section bg-primary-strong id7-brand-yellow" markdown="1" data-padding="lg">
 
 ## Full-width containers with fixed-width content
 
