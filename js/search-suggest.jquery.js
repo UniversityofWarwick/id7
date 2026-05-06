@@ -1,9 +1,9 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import { escape } from './html-utils';
-import FeatureDetect from './feature-detect';
+import { escape } from './html-utils.js';
+import FeatureDetect from './feature-detect.js';
 
-import './bootstrap-3-typeahead.jquery';
+import './bootstrap-3-typeahead.jquery.js';
 
 /**
  * Use Bootstrap 3 typeahead to provide Go.Warwick suggestions on an <input>

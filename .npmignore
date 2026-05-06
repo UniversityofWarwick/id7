@@ -4,4 +4,6 @@
 !/js/**
 !/less/**
 !/dist/**
+/dist/*.zip
+/dist/bundle-stats
 !/tools/*

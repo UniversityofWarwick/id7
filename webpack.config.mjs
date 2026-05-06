@@ -7,6 +7,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import webpack from 'webpack';
 import ZipPlugin from 'zip-webpack-plugin';
 import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 import PlayFingerprintsPlugin from './build-tooling/PlayFingerprintsPlugin.mjs';
 import WatchEventsPlugin from './build-tooling/WatchEventsPlugin.mjs';
@@ -63,6 +64,13 @@ const commonConfig = basePath => merge([
         $: 'jquery',
       }),
       new PlayFingerprintsPlugin(),
+      new BundleAnalyzerPlugin({
+        analyzerMode: 'static',
+        openAnalyzer: false,
+        generateStatsFile: true,
+        reportFilename: 'bundle-stats/report.html',
+        statsFilename: 'bundle-stats/stats.json',
+      }),
     ]
   },
   tooling.lintJS(),

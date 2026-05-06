@@ -1,24 +1,21 @@
 /* eslint-env browser */
-import $ from 'jquery';
-
-// Expose globals for backwards compatibility
-window.jQuery = $;
+import './window-jquery.js';
 
 // jQuery plugins/modifiers
-require('./bootstrap-transition.jquery');
-require('./bootstrap-alert.jquery');
-require('./bootstrap-button.jquery');
-require('./bootstrap-collapse.jquery');
-require('./bootstrap-dropdown.jquery');
-require('./bootstrap-modal.jquery');
-require('./bootstrap-tooltip.jquery');
-require('./bootstrap-popover.jquery');
-require('./id7-popover');
-require('./bootstrap-scrollspy.jquery');
-require('./bootstrap-tab.jquery');
-require('./bootstrap-affix.jquery');
-require('./bootstrap-3-typeahead.jquery');
-require('@universityofwarwick/jqdoublescroll'); // Required for wide-tables
-require('./headroom.jquery');
+import './bootstrap-transition.jquery.js';
+import './bootstrap-alert.jquery.js';
+import './bootstrap-button.jquery.js';
+import './bootstrap-collapse.jquery.js';
+import './bootstrap-dropdown.jquery.js';
+import './bootstrap-modal.jquery.js';
+import './bootstrap-tooltip.jquery.js';
+import './bootstrap-popover.jquery.js';
+import './id7-popover.js';
+import './bootstrap-scrollspy.jquery.js';
+import './bootstrap-tab.jquery.js';
+import './bootstrap-affix.jquery.js';
+import './bootstrap-3-typeahead.jquery.js';
+import '@universityofwarwick/jqdoublescroll'; // Required for wide-tables
+import './headroom.jquery.js';
 
-require('./id7-standalone');
+import './id7-standalone.js';

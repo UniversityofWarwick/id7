@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import $ from 'jquery';
 
-import currentScreenSize, { allScreenSizes } from './screen-sizes';
+import currentScreenSize, { allScreenSizes } from './screen-sizes.js';
 
 const Config = {
   Defaults: {
@@ -49,7 +49,6 @@ class ReflowEvent {
         }
       });
     });
-
 
     // ID-30 on load (i.e. after fonts have loaded) run this, forcing a resize
     if (document.readyState === 'complete') {

@@ -1,9 +1,9 @@
 /* eslint-env browser */
 import $ from 'jquery';
 import log from 'loglevel';
-import { escape } from './html-utils';
+import { escape } from './html-utils.js';
 
-import currentScreenSize from './screen-sizes';
+import currentScreenSize from './screen-sizes.js';
 
 const Config = {
   Templates: {

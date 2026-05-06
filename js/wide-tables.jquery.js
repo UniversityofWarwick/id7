@@ -1,6 +1,6 @@
 /* eslint-env browser */
 import $ from 'jquery';
-import FeatureDetect from './feature-detect';
+import FeatureDetect from './feature-detect.js';
 
 const Config = {
   Templates: {

@@ -20,11 +20,6 @@ const plugins = [
 
 const reporters = ['dots'];
 
-let files = [
-  'node_modules/popper.js/dist/umd/popper.min.js',
-  'node_modules/hammer-simulator/index.js',
-];
-
 const conf = {
   basePath: '../..',
   port: 9876,
@@ -53,17 +48,14 @@ plugins.push(
   'karma-chrome-launcher',
 );
 
-files = files.concat([
-  'dist/js/id7-bundle.js',
-]);
-
-files.push('js/tests/unit/*.js');
-
 conf.browsers = browsers;
 conf.frameworks = frameworks;
 conf.plugins = plugins;
 conf.reporters = reporters;
-conf.files = files;
+conf.files = [
+  'dist/js/id7-bundle.js',
+  'js/tests/unit/*.js'
+];
 
 module.exports = (karmaConfig) => {
   // possible values: karmaConfig.LOG_DISABLE || karmaConfig.LOG_ERROR || karmaConfig.LOG_WARN || karmaConfig.LOG_INFO || karmaConfig.LOG_DEBUG

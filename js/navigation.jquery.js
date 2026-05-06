@@ -1,9 +1,9 @@
 /* eslint-env browser */
 import $ from 'jquery';
 
-import currentScreenSize from './screen-sizes';
-import changeLocationHash from './change-location-hash';
-import { getVisibleTextNodesIn, wrapNode } from './dom-utils';
+import currentScreenSize from './screen-sizes.js';
+import changeLocationHash from './change-location-hash.js';
+import { getVisibleTextNodesIn, wrapNode } from './dom-utils.js';
 
 // Get Headroom from window instead of importing it so that if an app doesn't want to use Headroom
 // at all, they can just define window.Headroom = { cutsTheMustard: false };

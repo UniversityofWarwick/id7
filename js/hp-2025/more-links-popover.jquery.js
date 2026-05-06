@@ -1,8 +1,8 @@
 /* eslint-env browser */
 import $ from 'jquery';
 
-import changeLocationHash from '../change-location-hash';
-import currentScreenSize from '../screen-sizes';
+import changeLocationHash from '../change-location-hash.js';
+import currentScreenSize from '../screen-sizes.js';
 
 const Config = {
   Defaults: {

@@ -1,11 +1,10 @@
 /* eslint-env browser */
-const $ = window.jQuery;
+import $ from 'jquery';
 
 /*
  * Add dropdowns to links, navigation etc. Required for ID7 dropdown navigation
  */
-require('../bootstrap/js/dropdown');
-
+import '../bootstrap/js/dropdown.js';
 
 // ID-294 We use non-standard dropdowns that need to have different click actions..
 
