@@ -12,6 +12,14 @@
   --w-ref-colors-page-dark-contrast: #efefef;
     /* Default system tokens. Can be overridden */
   --w-sys-colors-paleGrey-contrast: var(--w-ref-colors-blackText);
+
+  & when (@id7-generate-ref-colours) {
+    each(@id7-ref-colors, {
+      @brand-color-var: "id7-brand-@{value}";
+      @brand-color: @@brand-color-var;   
+        .generate-tint-variables(@value, ref, @brand-color);
+    });
+  }
 }
 
 :root, [data-color-scheme="light"] {

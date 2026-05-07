@@ -27,6 +27,12 @@
       text-decoration-color: currentColor;
     }
   }
+
+  // Invert the button colours, to make a black button with coloured text.
+  .btn-brand {
+    --w-cmp-button-brand-bg: var(--w-sys-colors-fg);
+    --w-cmp-button-brand-fg: var(--w-sys-colors-bg);
+  }
 }
 
 & when (@evolved-brand) {

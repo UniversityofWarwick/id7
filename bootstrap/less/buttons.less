@@ -4,6 +4,20 @@
 // Buttons
 // --------------------------------------------------
 
+:root {
+  --w-cmp-button-color: @btn-default-color;
+
+  // Colours specifically for btn-brand, which can vary by theme but
+  // also by where they are used.
+  --w-cmp-button-brand-bg: var(--w-sys-colors-primary-500);
+  --w-cmp-button-brand-fg: var(--w-sys-colors-primary-500-contrast);
+
+  // .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+  --w-cmp-button-padding: @padding-base-vertical @padding-base-horizontal;
+  --w-cmp-button-fontSize: @font-size-base;
+  --w-cmp-button-lineHeight: @line-height-base;
+  --w-cmp-button-borderRadius: @btn-border-radius-base;
+}
 
 // Base styles
 // --------------------------------------------------
@@ -22,8 +36,15 @@
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
-  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+  
   .user-select(none);
+  text-decoration: none;
+
+  // Button size
+  padding: var(--w-cmp-button-padding);
+  font-size: var(--w-cmp-button-fontSize);
+  line-height: var(--w-cmp-button-lineHeight);
+  border-radius: var(--w-cmp-button-borderRadius);
 
   &,
   &:active,
@@ -32,13 +53,6 @@
     &.focus {
       .tab-focus();
     }
-  }
-
-  &:hover,
-  &:focus,
-  &.focus {
-    color: @btn-default-color;
-    text-decoration: none;
   }
 
   &:active,
@@ -61,6 +75,57 @@
     fieldset[disabled] & {
       pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
     }
+  }
+
+  color: var(--w-cmp-button-color);
+  background-color: var(--w-cmp-button-background);
+  border-color: var(--w-cmp-button-border);
+
+  &:focus,
+  &.focus {
+    color: var(--w-cmp-button-color);
+    background-color: color-mix(in oklab, var(--w-cmp-button-background) 80%, black);
+    border-color: color-mix(in oklab, var(--w-cmp-button-border) 75%, black);
+  }
+  &:hover {
+    color: var(--w-cmp-button-color);
+    background-color: color-mix(in oklab, var(--w-cmp-button-background) 80%, black);
+    border-color: color-mix(in oklab, var(--w-cmp-button-border) 88%, black);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: var(--w-cmp-button-color);
+    background-color: color-mix(in oklab, var(--w-cmp-button-background) 80%, black);
+    background-image: none;
+    border-color: color-mix(in oklab, var(--w-cmp-button-border) 88%, black);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: var(--w-cmp-button-color);
+      background-color: color-mix(in oklab, var(--w-cmp-button-background) 83%, black);
+      border-color: color-mix(in oklab, var(--w-cmp-button-border) 75%, black);
+    }
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: var(--w-cmp-button-background);
+      border-color: var(--w-cmp-button-border);
+    }
+  }
+
+  .badge {
+    color: var(--w-cmp-button-background);
+    background-color: var(--w-cmp-button-color);
+  }
+
+  &:not(.btn-link) {
+    text-decoration: none;
   }
 }
 
@@ -90,6 +155,9 @@
 .btn-danger {
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
 }
+.btn-brand {
+  .button-variant(var(--w-cmp-button-brand-fg); var(--w-cmp-button-brand-bg); var(--w-cmp-button-brand-bg));
+}
 
 
 // Link buttons
@@ -98,8 +166,9 @@
 // Make a button look and behave like a link
 .btn-link {
   font-weight: @main-font-weight;
-  color: @link-color;
+  color: var(--w-sys-colors-link);
   border-radius: 0;
+  text-decoration: underline;
 
   &,
   &:active,

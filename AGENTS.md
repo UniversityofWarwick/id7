@@ -193,7 +193,6 @@ npm run start         # Builds docs assets and starts Jekyll on http://localhost
   ```
   Sub-flags (`@id7-gen-font`, `@id7-gen-colours`, etc.) can be set independently.
 - Bootstrap 3 source is vendored in `bootstrap/less/` and customised via `less/variables.less` overrides.
-- The `less/shame.less` file holds known hacks and workarounds — add a comment explaining why.
 
 ---
 

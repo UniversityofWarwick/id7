@@ -26,12 +26,17 @@ a {
     font-size: @font-size-small;
     padding-left: 3px;
     margin-right: 2px;
-    .transition(color 0.3s linear);
+    transition: opacity 0.3s linear;
+  }
+
+  &:hover {
+    .new-window-link, .insecure-link {
+      opacity: 1;
+    }
   }
 
   .new-window-link {
-    color: @gray-light;
-
+    opacity: 0.8;
     &:before {
       content: @fa-var-external-link-alt;
     }
@@ -39,15 +44,10 @@ a {
 
   .insecure-link {
     color: @brand-danger;
+    opacity: 0.9;
 
     &:before {
       content: @fa-var-unlock-alt;
-    }
-  }
-
-  &:hover {
-    .new-window-link, .insecure-link {
-      color: @link-color;
     }
   }
 
