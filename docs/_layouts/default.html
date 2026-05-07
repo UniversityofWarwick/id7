@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB" class="{% if page.nonbranded %}id7-non-branded {% endif %}no-js">
+<html lang="en-GB" class="{% if page.html_classes %} {{ page.html_classes }}{% endif %} {% if page.nonbranded %}id7-non-branded {% endif %}no-js">
 <head>
   {% include header.html %}
 </head>

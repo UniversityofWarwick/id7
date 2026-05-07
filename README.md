@@ -125,6 +125,9 @@ To do so:
 
 ## Change log
 
+- **4.0.0**:
+    - Theming has been overhauled to use CSS Custom Properties rather than relying on compile-time overrides. This allows for more consistent styling and the ability to create themeable components, but it does also require some adjustments.
+    Follow the [Migration guide](/migration/4.0).
 - **3.3.0**:    
     - Node 22 now required. New favicons and a new favicon generator are included, along with light mode and dark mode versions. To use the new dark mode icons, update the <head> of your templates to include the new code in `docs/_includes/header.html`.
 - **3.2.0**:

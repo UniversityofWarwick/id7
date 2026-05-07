@@ -16,7 +16,7 @@
       padding: @padding-base-vertical @padding-base-horizontal;
       margin-left: -1px;
       line-height: @line-height-base;
-      color: @pagination-color;
+      color: var(--w-sys-colors-link);
       text-decoration: none;
       background-color: @pagination-bg;
       border: 1px solid @pagination-border;
@@ -50,10 +50,10 @@
     &:hover,
     &:focus {
       z-index: 3;
-      color: @pagination-active-color;
+      color: var(--w-sys-colors-primary-500-contrast);
       cursor: default;
-      background-color: @pagination-active-bg;
-      border-color: @pagination-active-border;
+      background-color: var(--w-sys-colors-primary-500);
+      border-color: var(--w-sys-colors-primary-500);
     }
   }
 

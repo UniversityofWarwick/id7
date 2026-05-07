@@ -3,26 +3,11 @@
 @import (reference) '../../../less/variables.less';
 @import (reference) '../../../less/mixins.less';
 
-// These are not CSS colors
-@brand-names: purple,
-  gray,
-  gold,
-  gold-bright,
-  blue,
-  blue-bright,
-  orange,
-  orange-bright,
-  teal,
-  teal-bright,
-  red,
-  red-bright;
-
-each(@brand-names,
+each(@id7-brand-colors,
   {
   @brand-var: "id7-brand-@{value}";
 
   .brand-@{value} {
-    .apply-brand(@@brand-var);
     .brand-css-variables(@@brand-var);
   }
 });

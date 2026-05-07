@@ -18,16 +18,62 @@
   .make-lg-boxstyle();
 }
 
-each(range(1,9), {
-  @step: @value * 100;
+.box1 {
+  .bg-primary-tint(100);
+  background-color: var(--w-sys-colors-bg);
+  color: var(--w-sys-colors-fg);
+}
+
+.box2 {
+  --w-sys-colors-bg: var(--w-sys-colors-paleGrey);
+  --w-sys-colors-fg: var(--w-sys-colors-paleGrey-contrast);
+  --w-sys-colors-link: var(--w-sys-colors-paleGrey-accent);
+  background-color: var(--w-sys-colors-bg);
+  color: var(--w-sys-colors-fg);
+}
+
+.box5 {
+  .bg-primary-tint(500); 
+  background-color: var(--w-sys-colors-bg);
+  color: var(--w-sys-colors-fg);
+}
+
+.bg-primary-tint(@tint) {
+  // Define these variables for use in containing elements.
+  --w-sys-colors-bg: ~"var(--w-sys-colors-primary-@{tint})";
+  --w-sys-colors-fg: ~"var(--w-sys-colors-primary-@{tint}-contrast)";
+  --w-sys-colors-heading: var(--w-sys-colors-fg);
+  --w-sys-colors-link: var(--w-sys-colors-fg);
+  background-color: var(--w-sys-colors-bg);
+  color:            var(--w-sys-colors-fg);
+}
+
+each(100 300 500 700 900, {
   // class name borrowed from https://getbootstrap.com/docs/5.0/utilities/background/
   // though we include the tint level, and we set colour
-  .bg-primary-@{step} {
-    background-color: ~"var(--w-sys-colors-primary-@{step})";
-    color:            ~"var(--w-sys-colors-primary-@{step}-contrast)";
-
-    // Define these variables for use in containing elements.
-    --w-sys-colors-bg: ~"var(--w-sys-colors-primary-@{step})";
-    --w-sys-colors-fg: ~"var(--w-sys-colors-primary-@{step}-contrast)";
+  .bg-primary-@{value} {
+    .bg-primary-tint(@value);
   }
 })
+
+.bg-primary-strong {
+  .bg-primary-tint(500);
+
+  --w-sys-colors-alt-bg: var(--w-sys-colors-primary-300);
+  --w-sys-colors-alt-fg: var(--w-sys-colors-primary-300-contrast);
+}
+
+.bg-primary-subtle {
+  .bg-primary-tint(300);
+  [data-color-scheme="dark"] & when (@dark-mode) {
+    .bg-primary-tint(700);
+  }
+
+  --w-sys-colors-alt-bg: var(--w-sys-colors-primary-500);
+  --w-sys-colors-alt-fg: var(--w-sys-colors-primary-500-contrast);
+}
+
+.bg-primary-alt {
+  background-color: var(--w-sys-colors-alt-bg);
+  color: var(--w-sys-colors-alt-fg);
+}

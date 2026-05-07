@@ -2,11 +2,7 @@
 @import (reference) '../bootstrap/less/mixins.less';
 @import (reference) 'variables.less';
 @import (reference) 'mixins.less';
-
-/* A default theme */
-.id7-fixed-width-container {
-  background-color: @gray-lighter;
-}
+@import (reference) 'design-tokens/all.less';
 
 @media (min-width: @grid-float-breakpoint) {
   .id7-left-border {
@@ -18,7 +14,9 @@
   }
 }
 
-.apply-brand(@id7-brand-default);
-:root {
-  .brand-css-variables(@id7-brand-default);
+:where(:root) {
+  // Keep default theme colour as it was before
+  //@brand-var: "id7-brand-lavender";
+  @brand-var: "id7-brand-blue";
+  .brand-css-variables(@@brand-var);
 }

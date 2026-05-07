@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB" class="{% if page.nonbranded %}id7-non-branded {% endif %}no-js">
+<html lang="en-GB" class="{% if page.html_classes %} {{ page.html_classes }}{% endif %} {% if page.nonbranded %}id7-non-branded {% endif %}no-js">
 <head>
   {% include header-borderless.html %}
 </head>
@@ -20,12 +20,6 @@
   <!-- Page content of course! -->
   <main class="id7-main-content-area" id="main">
     <div class="id7-main-content">
-      <div class="id7-container-breakout">
-        <p class="embed-responsive embed-responsive-3by1 flush-top">
-          <img class="embed-responsive-item" src="https://picsum.photos/3000/1000">
-        </p>
-      </div>
-
       {{ content }}
     </div>
   </main>

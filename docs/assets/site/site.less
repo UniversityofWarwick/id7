@@ -5,11 +5,6 @@
 
 .example-site-styles(@path) {
   .apply-site-imagery(@path);
-  // Our extra specificity breaks some styles in the ID7 theme, so we need to reapply them
-  body .id7-utility-masthead {
-    background-image: none;
-    background-color: white;
-  }
 }
 
 html {
@@ -18,7 +13,6 @@ html {
   &.site3 { .example-site-styles('/dist/docs/site/site3'); }
 }
 
-.apply-brand(@id7-brand-purple);
-:root {
+:where(:root) {
   .brand-css-variables(@id7-brand-purple);
 }

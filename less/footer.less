@@ -3,18 +3,20 @@ footer {
     .container-fluid((@grid-gutter-width * 2));
     position: relative;
     padding-top: var(--w-ref-gridGutterWidth);
-    padding-bottom: var(--w-ref-gridGutterWidth);
+    padding-bottom: var(--w-ref-gridGutterWidth);    
   }
 
   .id7-app-footer {
+    background-color: black;
+    color: white;
+
+    :is(a, a:link, a:visited) {
+      color: currentColor;
+      text-decoration-color: currentColor;
+    }
+ 
     .crest-right;
     .small();
-
-    background-color: black;
-    &, :is(a, a:link, a:visited) {
-      color: white;
-      text-decoration-color: white;
-    }
 
     .page-footer-elements {
       margin-top: 0;

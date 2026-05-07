@@ -7,9 +7,46 @@
   z-index: 3;
   font-size: var(--w-sys-fontSizeNav);
 
+  --primary-bg: var(--w-sys-colors-primary-500);
+  --primary-fg: var(--w-sys-colors-primary-500-contrast);
+  --secondary-bg: var(--w-sys-colors-secondary);
+  --secondary-fg: var(--w-sys-colors-secondary-contrast);
+  --tertiary-bg: var(--w-sys-colors-paleGrey);
+  --tertiary-fg: var(--w-sys-colors-paleGrey-contrast);
+
+  .id7-evolved & {
+    --secondary-bg: var(--w-sys-colors-primary-500);
+    --secondary-fg: var(--w-sys-colors-primary-500-contrast);
+    --tertiary-bg: var(--w-sys-colors-primary-500);
+    --tertiary-fg: var(--w-sys-colors-primary-500-contrast);
+  }
+
+  .navbar {
+    background-color: var(--w-sys-colors-bg);
+    color: var(--w-sys-colors-fg);
+
+    --primary-bg-hover: hsl(from var(--w-sys-colors-bg) h s calc(l - 8));
+  }
+  .navbar-primary {
+    --w-sys-colors-bg: var(--primary-bg);
+    --w-sys-colors-fg: var(--primary-fg);
+  }
+  .navbar-secondary {
+    --w-sys-colors-bg: var(--secondary-bg);
+    --w-sys-colors-fg: var(--secondary-fg);
+  }
+  .navbar-tertiary {
+    --w-sys-colors-bg: var(--tertiary-bg);
+    --w-sys-colors-fg: var(--tertiary-fg);
+  }
+
   .navbar {
     min-height: 0;
     border-width: 0px;
+  }
+
+  a {
+    color: currentColor;
   }
 
   transform: translate3d(0, 0, 0); // ID-188
@@ -36,6 +73,22 @@
   .dropdown-menu {
     font-size: var(--w-sys-fontSizeNav);
     border: 0;
+    --w-sys-colors-bg: var(--primary-bg);
+    --w-sys-colors-fg: var(--primary-fg);
+    // background-color: var(--primary-bg);
+    // color: var(--primary-fg);
+
+    // Override Bootstrap's default dropdown component
+    --w-cmp-dropdown-bg: var(--primary-bg);
+    --w-cmp-dropdown-fg: var(--primary-fg);
+    --w-cmp-dropdown-hover-bg: var(--primary-bg-hover);
+    --w-cmp-dropdown-hover-fg: var(--primary-fg);
+    --w-cmp-dropdown-active-bg: var(--primary-bg-hover);
+    --w-cmp-dropdown-active-fg: var(--primary-fg);
+
+    // li a {
+    //     color: currentColor;   
+    // }
   }
 
   @media (min-width: @grid-float-breakpoint) {
@@ -87,12 +140,21 @@
       cursor: pointer;
       .transition(~"background-color .15s linear, color .15s linear");
 
+      &:focus, &:hover {
+        background-color: var(--primary-bg-hover);
+      }
+
       &:hover + a {
         text-decoration: underline;
       }
 
       > a {
         padding: 0;
+
+        &:hover, &:focus {
+          // Undo odd Bootstrap navbar default
+          background: none;
+        }
       }
 
       &:first-child {
@@ -125,6 +187,8 @@
           border-style: solid;
           border-width: 17px 0 17px 17px;
           z-index: 10;
+
+          border-color: transparent transparent transparent var(--w-sys-colors-primary);
         }
       }
 
@@ -167,6 +231,8 @@
       &.active {
         font-weight: bold;
 
+        --triangle-bg: var(--w-sys-colors-masthead);
+
         // active section triangle indicator
         &::before {
           content: " ";
@@ -176,7 +242,15 @@
           z-index: 2;
           margin-left: (-@nav-triangle-width / 2);
 
-          .triangle(up, @nav-triangle-width, @nav-triangle-height, white);
+          .triangle(up, @nav-triangle-width, @nav-triangle-height, var(--triangle-bg));
+        }
+
+        // Match the triangle colour to the nav below it
+        &.next-secondary::before {
+          --triangle-bg: var(--secondary-bg);
+        }
+        &.next-tertiary::before {
+          --triangle-bg: var(--tertiary-bg);
         }
 
         // hide the triangle on hover if there's a menu
@@ -185,6 +259,7 @@
           display: none;
         }
       }
+
 
 
       &.dropdown {
@@ -239,6 +314,13 @@
 
   .navbar-secondary > li:first-child::after {
     .transition(~"background-color .15s linear, color .15s linear")
+  }
+
+  .navbar-secondary .navbar-nav > li:first-child {
+    --w-sys-colors-bg: var(--w-sys-colors-primary-500);
+    --w-sys-colors-fg: var(--w-sys-colors-primary-500-contrast);
+    background-color: var(--w-sys-colors-bg);
+    color: var(--w-sys-colors-fg);
   }
 
   &.affix + .id7-navigation-marker {

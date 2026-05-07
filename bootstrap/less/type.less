@@ -15,19 +15,6 @@
   font-weight: @headings-font-weight;
   line-height: @headings-line-height;
 
-  & when (@id7-gen = 2024) {
-    color: @headings-color;
-    small, .small {
-      color: @headings-small-color;
-    }
-  }
-
-  // New brand has monochrome headings - and needs to
-  // override existing theme CSS
-  :where(.id7-main-content-area, .id7-site-footer) & when (@id7-gen > 2024) {
-    color: @text-color;
-  }
-
   :is(small, .small) {
     font-weight: @main-font-weight;
     line-height: 1;

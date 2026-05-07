@@ -2,58 +2,112 @@
 @import (reference) "../variables";
 
 :root {
+  /* Reference tokens (don't use directly) */
   --w-ref-colors-blackText: @text-color;
   --w-ref-colors-blackBg: black; // actual black
 
-  /* Reference tokens (don't use directly) */
   --w-ref-colors-page-light: white;
   --w-ref-colors-page-light-contrast: var(--w-ref-colors-blackText);
   --w-ref-colors-page-dark: var(--w-ref-colors-blackBg);
-  --w-ref-colors-page-dark-contrast: white;
+  --w-ref-colors-page-dark-contrast: #efefef;
+    /* Default system tokens. Can be overridden */
+  --w-sys-colors-paleGrey-contrast: var(--w-ref-colors-blackText);
 
-  // System tokens
-  /* Page colour and default text colour */
-  --w-sys-colors-page: var(--w-ref-colors-page-light);
-  --w-sys-colors-page-contrast: var(--w-ref-colors-page-light-contrast);
-
-  /* Current background and contrasting text colour */
-  --w-sys-colors-bg: var(--w-sys-colors-page);
-  --w-sys-colors-fg: var(--w-sys-colors-page-contrast);
-  // These values currently only work for the new brand where we don't use colours
-  // for headings or links.
-  --w-sys-colors-heading: var(--w-sys-colors-fg);
-  --w-sys-colors-link: var(--w-sys-colors-fg);
-
-  --w-sys-colors-masthead: white;
+  & when (@id7-generate-ref-colours) {
+    each(@id7-ref-colors, {
+      @brand-color-var: "id7-brand-@{value}";
+      @brand-color: @@brand-color-var;   
+        .generate-tint-variables(@value, ref, @brand-color);
+    });
+  }
 }
 
+:root, [data-color-scheme="light"] {
+  color-scheme: light;
+  --w-sys-colors-page: var(--w-ref-colors-page-light);
+  --w-sys-colors-page-contrast: var(--w-ref-colors-page-light-contrast);
+  --w-sys-colors-page-accent: var(--w-sys-colors-white-accent);
+  --w-sys-colors-masthead: var(--w-sys-colors-page);
+  --w-sys-colors-masthead-contrast: var(--w-sys-colors-page-contrast);
+
+  // Grey text on background, like labels
+  --w-sys-colors-page-grey: #555;
+}
+
+[data-color-scheme="dark"] when (@dark-mode) {
+  color-scheme: dark;
+  --w-sys-colors-page: var(--w-ref-colors-page-dark);
+  --w-sys-colors-page-contrast: var(--w-ref-colors-page-dark-contrast);
+  --w-sys-colors-page-accent: var(--w-ref-colors-page-dark-contrast);
+  --w-sys-colors-masthead: var(--w-sys-colors-page);
+  --w-sys-colors-masthead-contrast: var(--w-sys-colors-page-contrast);
+
+  --w-sys-colors-page-grey: #aaa;
+
+  // FIXME this is only appropriate if the masthead was white
+  .id7-logo img {
+    filter: invert(100%);
+  }
+}
+
+// System tokens
+// Tokens that refer to other tokens are defined here in the * selector
+// to ensure they are always recalculated. If they were defined in :root, 
+// they would only be calculated once and would not update when the 
+// target tokens they refer to are updated.
+// Note that as these aliases are redefined in every element,
+// you can't replace the alias in a container as it will get squashed
+// by this rule again in the child.
+* {
+  // Primary colour - alias to tint 500
+  --w-sys-colors-primary: var(--w-sys-colors-primary-500);
+  --w-sys-colors-primary-contrast: var(--w-sys-colors-primary-500-contrast);
+
+  --w-sys-colors-heading: if(@id7-gen-colours>2024,
+    var(--w-sys-colors-fg),
+    var(--w-sys-colors-white-accent)
+  );
+}
+
+// Utility classes for switching between light and dark backgrounds.
+// TODO I don't really know why these are in the design tokens file. Organise elsewhere.
+
 .bg-black {
+  // Updates some system rendered elements to look better on a dark background.
+  color-scheme: dark;
   --w-sys-colors-bg: var(--w-ref-colors-page-dark);
   --w-sys-colors-fg: var(--w-ref-colors-page-dark-contrast);
+  --w-sys-colors-link: var(--w-ref-colors-page-dark-contrast);
+  --w-sys-colors-page-grey: #aaa;
+}
+
+:root, .bg-white {
+  --w-sys-colors-bg: var(--w-sys-colors-page);
+  --w-sys-colors-fg: var(--w-sys-colors-page-contrast);
+  --w-sys-colors-link: var(--w-sys-colors-page-accent);
+}
+
+.bg-grey {
+  --w-sys-colors-bg: var(--w-sys-colors-paleGrey);
+  --w-sys-colors-fg: var(--w-sys-colors-paleGrey-contrast);
+  --w-sys-colors-link: var(--w-sys-colors-paleGrey-accent);
+}
+
+.bg-white, .bg-black, .bg-grey {
+  color: var(--w-sys-colors-fg);
+  background-color: var(--w-sys-colors-bg);
 }
 
 // This can be enabled to generate a set of
 // CSS classes for switching to a different preset
 // colour scheme.
-// At the time of writing the set of colours
-// is not finalised and also nothing is themed
-// using CSS variables so they wouldn't have
-// any effect on built-in components.
 & when (@id7-generate-colour-classes) {
-  :root {
-    /*
-      Definitions for brand colour palette and tints.
-      Don't use these reference values directly - use the --w-sys-colors-primary-*
-      aliases instead and choose the colour for that area with the `id7-brand-COLORNAME` classes.
-     */
-    each(@id7-brand-colors, {
-      @brand-color-var: "id7-brand-@{value}";
-      @brand-color: @@brand-color-var;
-      .colour-css-variables(@value, ref, @brand-color);
-    });
-  }
-  // Generate CSS classes that alias sys-colors-primary to a given colour.
+  // Generate CSS classes that override the sys-primary colours.
   each(@id7-brand-colors, {
-    .colour-sys-aliases(@value);
+    @brand-color-var: "id7-brand-@{value}";
+    @brand-color: @@brand-color-var;
+    .id7-brand-@{value} {
+      .brand-css-variables(@brand-color);
+    }
   });
 }

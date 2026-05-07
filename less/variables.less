@@ -32,14 +32,14 @@
 @id7-brand-gray: #58595B;
 @id7-brand-white: #FFFFFF; // wow
 
-// Secondary palette (bright)
+// Secondary palette (bright) - OBSOLETE
 @id7-brand-gold-bright: #F1BE48;
 @id7-brand-orange-bright: #E87722;
 @id7-brand-red-bright: #CB333B;
 @id7-brand-blue-bright: #00A9CE;
 @id7-brand-teal-bright: #6DCDB8;
 
-// Tertiary palette (dark)
+// Tertiary palette (dark) - OBSOLETE
 @id7-brand-gold: #D69A2D;
 @id7-brand-orange: #BE531C;
 @id7-brand-red: #9D2235;
@@ -57,6 +57,13 @@
 // wrapped in classes. These names reference id7-brand-* variables above
 @id7-brand-colors: purple, coral, lavender, paleblue, yellow, green;
 @id7-generate-colour-classes: true;
+
+// Reference colour variables.
+// Whether to generate --w-ref-colors for all brand colour tints. Usually there's
+// no need to have these output as CSS variables, but there are some situations where
+// they're in use so we need to have the tokens available.
+@id7-generate-ref-colours: false; 
+@id7-ref-colors: coral, lavender, paleblue, yellow, green;
 
 // Green briefly wasn't a colour in the official palette, but now there is one
 // (though it's basically turquoise). Keeping the old "Bright Green" definition
@@ -98,7 +105,6 @@
 @id7-affixed-header-height: (@id7-header-h1-height + (@id7-header-h1-padding-vertical * 2));
 
 @id7-navigation-height: 35px;
-@id7-navigation-tertiary-background-colour: #f8f8f8;
 
 @id7-border-image-width: 375px;
 @id7-border-image-height: 1200px;
@@ -293,3 +299,7 @@
 @screen-xl-max:             (@screen-2xl-min - 1);
 
 @borderless-container:      false;
+@evolved-brand:             true; // Include any evolved brand styles?
+@evolved-brand-default:     false; // false: opt in with id7-evolved on html element. true: always on.
+                                   // @evolved-brand and @borderless container should be true for default to work properly. 
+@dark-mode:                 false; // Experimental and incomplete

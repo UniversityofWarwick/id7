@@ -1,0 +1,45 @@
+@id7-evolved-rules: {
+  --w-sys-colors-masthead: var(--w-sys-colors-primary);
+  --w-sys-colors-masthead-contrast: var(--w-sys-colors-primary-contrast);
+
+  .id7-utility-masthead,
+  // Colour the overall page background to match the masthead, to capture the page title
+  .id7-main-content-area {
+    background-color: var(--w-sys-colors-masthead);
+  }
+
+  // The above rule makes the main content background coloured, so we need to 
+  // colour this back in with the page colour (white).
+  .id7-main-content {
+    background-color: var(--w-sys-colors-bg);
+    // clip-path trick to make the background spill out to the sides
+    // with clip-path to prevent it going up or down.
+    box-shadow: 0 0 0 100vmax var(--w-sys-colors-bg);
+    clip-path: inset(0 -100vmax); 
+  }
+
+  footer .id7-site-footer {
+    background-color: black;
+    color: white;
+
+    :is(a, a:link, a:visited) {
+      color: currentColor;
+      text-decoration-color: currentColor;
+    }
+  }
+
+  // Invert the button colours, to make a black button with coloured text.
+  .btn-brand {
+    --w-cmp-button-brand-bg: var(--w-sys-colors-fg);
+    --w-cmp-button-brand-fg: var(--w-sys-colors-bg);
+  }
+}
+
+& when (@evolved-brand) {
+  html.id7-evolved when not (@evolved-brand-default) {
+    @id7-evolved-rules();
+  }
+  & when (@evolved-brand-default) {
+    @id7-evolved-rules();
+  }
+}

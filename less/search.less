@@ -30,16 +30,22 @@
     padding: 0;
     border: none;
     font: inherit;
-    color: inherit;
+    color: var(--w-sys-colors-primary-300);
     background-color: transparent;
-  }
 
-  .search-button:focus {
-    .tab-focus();
-    .fas {
-      color: #204f79;
+    &:hover .fas {
+      color: var(--w-sys-colors-primary-500);
+    }
+
+    &:focus {
+      .tab-focus();
+      .fas {
+        color: var(--w-sys-colors-primary-500);
+      }
     }
   }
+
+  
 
   // These typeahead rules only apply to the non-homepage search box
   // that lives inside the search box container. The homepage places
