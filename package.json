@@ -1,6 +1,6 @@
 {
   "name": "@universityofwarwick/id7",
-  "version": "3.8.0",
+  "version": "4.0.0",
   "scripts": {
     "watch": "NODE_ENV=development webpack --config webpack.config.mjs --mode development --watch",
     "dev": "NODE_ENV=development webpack --config webpack.config.mjs --mode development",
@@ -18,7 +18,7 @@
     "docs-watch:icons": "chokidar 'images/**' 'generate-official-icons.mjs' -c 'npm run generateIcons'",
     "docs-watch:dist": "chokidar 'dist/**' -c 'npm run docs-assets:copy'",
     "docs-watch": "run-p docs-watch:icons docs-watch:dist",
-    "docs-serve": "bundle exec jekyll serve",
+    "docs-serve": "bundle exec jekyll serve --incremental",
     "docs-build": "bundle exec jekyll build",
     "readme-md2html": "marked README.md > docs/_includes/README.html",
     "clean": "rm -rf ./dist/ ./docs/dist/",
