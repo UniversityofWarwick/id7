@@ -151,7 +151,7 @@ jobs:
         with:
           tag_name: ${{ steps.version.outputs.tag }}
           release_name: Release ${{ steps.version.outputs.tag }}
-          draft: false
+          draft: true
           prerelease: ${{ steps.version.outputs.is_prerelease }}
           body: |
             ## ${{ steps.version.outputs.tag }}
@@ -162,7 +162,7 @@ jobs:
             - Ready to download from assets below
             
             ### Publishing
-            This release has been automatically published to npmjs.org. You can install it with:
+            This release is published to npmjs.org. You can install it with:
             ```bash
             npm install @universityofwarwick/id7@${{ steps.version.outputs.version }}
             ```
@@ -207,6 +207,26 @@ jobs:
           echo "✓ Published successfully"
           echo "npm-published=true" >> $GITHUB_OUTPUT
 
+      - name: Publish GitHub Release
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const releaseId = '${{ steps.create-release.outputs.id }}';
+            const tag = '${{ steps.version.outputs.tag }}';
+            
+            console.log(`📤 Publishing GitHub release ${tag}...`);
+            
+            // Publish the release (set draft: false)
+            await github.rest.repos.updateRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: parseInt(releaseId),
+              draft: false,
+            });
+            
+            console.log(`✅ Release ${tag} published`);
+
       - name: Handle publish failure
         if: failure() && steps.npm-publish.conclusion == 'failure'
         uses: actions/github-script@v7
@@ -214,24 +234,15 @@ jobs:
           script: |
             const version = '${{ steps.version.outputs.version }}';
             const tag = '${{ steps.version.outputs.tag }}';
-            const releaseId = '${{ steps.create-release.outputs.id }}';
             
-            console.log('❌ NPM publish failed - moving release to draft');
-            
-            // Move release to draft
-            await github.rest.repos.updateRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              release_id: parseInt(releaseId),
-              draft: true,
-            });
+            console.log('❌ NPM publish failed - release remains in draft');
             
             // Add comment to PR
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: ${{ github.event.issue.number }},
-              body: `⚠️ **NPM Publish Failed**\n\nThe GitHub release for ${tag} has been created but moved to **draft** status because NPM publish failed.\n\n**Next steps:**\n1. Check the workflow logs for the error\n2. If the error is authentication-related, verify that Trusted Publishing is set up correctly for the package at npmjs`,
+              body: `⚠️ **NPM Publish Failed**\n\nThe GitHub release for ${tag} has been created but remains in **draft** status because NPM publish failed.\n\n**Next steps:**\n1. Check the workflow logs for the error\n2. If the error is authentication-related, verify that Trusted Publishing is set up correctly for the package at npmjs\n3. Once fixed, comment **/release** again to retry`,
             });
             
             throw new Error('NPM publish failed - see comment on PR for details');
