@@ -21,7 +21,9 @@
     --tertiary-fg: var(--w-sys-colors-primary-500-contrast);
   }
 
-  .navbar {
+  // :where is used to reduce specificity to (0,1,0)
+  // to allow site.css branding to override
+  :where(&) .navbar {
     background-color: var(--w-sys-colors-bg);
     color: var(--w-sys-colors-fg);
 
@@ -75,8 +77,6 @@
     border: 0;
     --w-sys-colors-bg: var(--primary-bg);
     --w-sys-colors-fg: var(--primary-fg);
-    // background-color: var(--primary-bg);
-    // color: var(--primary-fg);
 
     // Override Bootstrap's default dropdown component
     --w-cmp-dropdown-bg: var(--primary-bg);
@@ -85,10 +85,6 @@
     --w-cmp-dropdown-hover-fg: var(--primary-fg);
     --w-cmp-dropdown-active-bg: var(--primary-bg-hover);
     --w-cmp-dropdown-active-fg: var(--primary-fg);
-
-    // li a {
-    //     color: currentColor;   
-    // }
   }
 
   @media (min-width: @grid-float-breakpoint) {
