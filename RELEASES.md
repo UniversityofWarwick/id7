@@ -1,12 +1,13 @@
 # Releasing ID7
 
-ID7 uses an automated release process powered by GitHub Actions. All you need to do is choose a version - a release PR is created for you. When that PR is approved and merged, the release process is finalised for you.
+ID7 uses an automated release process powered by GitHub Actions. All you need to do is choose a version - a release PR is created for you. When that PR is approved, comment `/release` to trigger the finalization.
 
 ## Quick instructions
 
 1. Go to the [create release workflow](https://github.com/UniversityofWarwick/id7/actions/workflows/create-release-pr.yml) and click **Run workflow**
 2. Type in the version and submit
-3. Get the PR reviewed, approved and merged
+3. Get the PR reviewed and approved
+4. Comment `/release` when you're ready
 
 ## Detailed release process
 
@@ -34,18 +35,29 @@ The workflow will:
 1. Review the pull request in **Pull Requests** tab
 2. Verify the version bump is correct in both files
 3. Request approval from maintainers
-4. Once approved, **merge the pull request**
+4. Once approved, a bot comment will appear saying "Ready to Release"
+5. **Do not merge yet** — verify that all CI checks have passed
 
-### Step 3: Finalize Release (Automated)
+### Step 3: Trigger Release (Manual)
 
-When the release PR is merged to `main`, the **Finalize Release** workflow automatically:
+When you're ready to release:
+
+1. Comment `/release` on the PR
+2. The system will verify:
+   - You have permission to merge the PR
+   - The PR is in a mergeable state (no conflicts, CI passed)
+3. If all checks pass, the **Finalize Release** workflow launches
+
+### Step 4: Finalize Release (Automated)
+
+The **Finalize Release** workflow automatically:
 
 - ✓ Creates a GitHub release with tag `vX.Y.Z`
 - ✓ Marks prerelease versions (e.g., `-rc.1`) appropriately
 - ✓ Runs `npm run build` to generate production artifacts
 - ✓ Uploads distribution ZIP files to the release
 - ✓ Publishes the package to npmjs.org with `npm publish --access=public`
-- ✓ Posts a summary comment on the PR with install instructions
+- ✓ Merges the PR to `main`
 
 **Monitoring:** Watch the **Actions** tab > **Finalize Release** workflow.
 
@@ -58,7 +70,8 @@ If NPM publish fails:
    - The error details
    - Steps to resolve (usually checking authentication)
    - Instructions to re-run or manually publish
-   - 
+
+The PR will **not be merged** on failure, allowing you to retry.
 ---
 
 ## Netlify Deploy
@@ -90,4 +103,5 @@ The version is stored in:
 | **PR already exists** | The workflow detects existing PRs and links to them instead of creating duplicates.                                                                                                                               |
 | **NPM publish fails** | Check the publisher set up on npmjs.org. We have set up GitHub integration so that this specific workflow can publish to this specific package via Trusted Publishing (https://docs.npmjs.com/trusted-publishers) |
 | **Release in draft status** | NPM publish failed. See PR comment for next steps.                                                                                                                                                                |
-| **Can't merge PR** | Branch protection rules may require reviews or passing CI. Check repo settings.                                                                                                                                   |
+| **Release blocked / insufficient permissions** | The user commenting `/release` doesn't have write access to the repository. Only users with admin, maintain, or write permissions can trigger a release.                                                        |
+| **Can't merge PR** | The workflow checks merge permissions automatically. If you see an error, either you lack permissions or the PR has conflicts/failed CI checks.                                                                  |

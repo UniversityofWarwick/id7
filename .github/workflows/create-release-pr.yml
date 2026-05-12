@@ -131,7 +131,7 @@ jobs:
               title: `Release v${version}`,
               head: branch,
               base: 'main',
-              body: `## Release v${version}\n\nThis PR bumps the version to v${version} and is ready to merge.\n\nOnce merged, GitHub Actions will automatically:\n1. Create a GitHub release with tag \`v${version}\`\n2. Build production artifacts\n3. Upload assets to the release\n4. Publish to npmjs.org\n\n**Important:** Review the version number before merging!`,
+              body: `## Release v${version}\n\nThis PR bumps the version to v${version} and is ready for release.\n\n### Release Flow\nOnce CI passes and this PR is approved:\n1. A comment will be posted asking you to confirm the release\n2. Comment **/release** to trigger the release pipeline\n3. GitHub Actions will:\n   - Create a GitHub release with tag \`v${version}\`\n   - Build production artifacts\n   - Upload assets to the release\n   - Publish to npmjs.org\n   - Automatically merge this PR\n\nThis allows us to see and verify the successful build before finalizing the release.\n\n**Important:** Review the version number before approving!`,
               draft: false,
             });
             

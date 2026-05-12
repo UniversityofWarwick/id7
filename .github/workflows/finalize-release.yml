@@ -1,17 +1,16 @@
 name: Finalize Release
 
 on:
-  pull_request:
+  issue_comment:
     types:
-      - closed
-    branches:
-      - main
+      - created
 
 jobs:
   finalize:
     if: |
-      github.event.pull_request.merged &&
-      startsWith(github.event.pull_request.head.ref, 'release/v')
+      github.event.issue.pull_request != null &&
+      github.event.comment.body == '/release' &&
+      startsWith(github.event.issue.title, 'Release v')
     runs-on: ubuntu-latest
 
     permissions:
@@ -19,17 +18,98 @@ jobs:
       pull-requests: write
 
     steps:
+      - name: Get PR details
+        id: pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            
+            core.setOutput('head-ref', pr.head.ref);
+            core.setOutput('pr-number', pr.number);
+            console.log(`📝 PR #${pr.number}: ${pr.title}`);
+            console.log(`🌿 Branch: ${pr.head.ref}`);
+
+      - name: Check merge permissions
+        id: check-permissions
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const commentAuthor = context.payload.comment.user.login;
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            
+            // Check if PR is mergeable
+            if (pr.mergeable === false) {
+              console.log('❌ PR has merge conflicts');
+              core.setOutput('can-merge', 'false');
+              core.setOutput('reason', 'PR has merge conflicts');
+              return;
+            }
+            
+            if (pr.mergeable_state === 'blocked') {
+              console.log('❌ PR is blocked from merging');
+              core.setOutput('can-merge', 'false');
+              core.setOutput('reason', 'PR is blocked - required status checks may not have passed');
+              return;
+            }
+            
+            // Check user's permission level on the repository
+            const { data: userPerm } = await github.rest.repos.getCollaboratorPermissionLevel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              username: commentAuthor,
+            });
+            
+            const permission = userPerm.permission;
+            console.log(`User ${commentAuthor} has permission: ${permission}`);
+            
+            // Allow 'admin', 'maintain', and 'write' (push) permissions to merge
+            const canMerge = ['admin', 'maintain', 'write'].includes(permission);
+            
+            if (canMerge) {
+              console.log(`✅ User ${commentAuthor} has permission to merge`);
+              core.setOutput('can-merge', 'true');
+            } else {
+              console.log(`❌ User ${commentAuthor} does not have permission to merge (${permission})`);
+              core.setOutput('can-merge', 'false');
+              core.setOutput('reason', `User @${commentAuthor} does not have permission to merge this PR (current permission: ${permission})`);
+            }
+
+      - name: Abort if user cannot merge
+        if: steps.check-permissions.outputs.can-merge == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const reason = '${{ steps.check-permissions.outputs.reason }}';
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `❌ **Release blocked**\n\n${reason}\n\nOnly users with admin, maintain, or write permissions can trigger a release.`,
+            });
+            
+            core.setFailed(reason);
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: main
+          ref: ${{ steps.pr.outputs.head-ref }}
 
-      - name: Extract version from branch name
+      - name: Extract version from PR title
         id: version
         run: |
-          BRANCH="${{ github.event.pull_request.head.ref }}"
-          # Extract version from release/vX.Y.Z or release/vX.Y.Z-prerelease
-          VERSION="${BRANCH#release/v}"
+          TITLE="${{ github.event.issue.title }}"
+          # Extract version from "Release vX.Y.Z" or "Release vX.Y.Z-prerelease"
+          VERSION="${TITLE#Release v}"
           
           # Determine if prerelease
           if [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+-.* ]]; then
@@ -150,11 +230,32 @@ jobs:
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: context.issue.number,
+              issue_number: ${{ github.event.issue.number }},
               body: `⚠️ **NPM Publish Failed**\n\nThe GitHub release for ${tag} has been created but moved to **draft** status because NPM publish failed.\n\n**Next steps:**\n1. Check the workflow logs for the error\n2. If the error is authentication-related, verify that Trusted Publishing is set up correctly for the package at npmjs`,
             });
             
             throw new Error('NPM publish failed - see comment on PR for details');
+
+      - name: Merge the release PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = ${{ github.event.issue.number }};
+            const tag = '${{ steps.version.outputs.tag }}';
+            
+            console.log(`📝 Merging release PR #${prNumber}...`);
+            
+            await github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              commit_title: `Merge release ${tag}`,
+              commit_message: `Release ${tag} - assets published to npmjs`,
+              merge_method: 'squash',
+            });
+            
+            console.log(`✅ PR #${prNumber} merged successfully`);
+
 
       - name: Success summary
         run: |
