@@ -1,6 +1,6 @@
 # Releasing ID7
 
-ID7 uses an automated release process powered by GitHub Actions. All you need to do is choose a version - a release PR is created for you. When that PR is approved, comment `/release` to trigger the finalization.
+ID7 uses an automated release process powered by GitHub Actions. All you need to do is choose a version - a release branch is created for you, and a PR is automatically generated. When that PR is approved, comment `/release` to trigger the finalization.
 
 ## Quick instructions
 
@@ -30,7 +30,7 @@ The workflow will:
 - ✓ Create a new `release/vX.Y.Z` branch
 - ✓ Create a pull request titled "Release vX.Y.Z"
 
-### Step 2: Review and Approve (Manual)
+### Step 3: Review and Approve (Manual)
 
 1. Review the pull request in **Pull Requests** tab
 2. Verify the version bump is correct in both files
@@ -38,7 +38,7 @@ The workflow will:
 4. Once approved, a bot comment will appear saying "Ready to Release"
 5. **Do not merge yet** — verify that all CI checks have passed
 
-### Step 3: Trigger Release (Manual)
+### Step 4: Trigger Release (Manual)
 
 When you're ready to release:
 
@@ -48,16 +48,17 @@ When you're ready to release:
    - The PR is in a mergeable state (no conflicts, CI passed)
 3. If all checks pass, the **Finalize Release** workflow launches
 
-### Step 4: Finalize Release (Automated)
+### Step 5: Finalize Release (Automated)
 
 The **Finalize Release** workflow automatically:
 
-- ✓ Creates a GitHub release with tag `vX.Y.Z`
+- ✓ Creates a GitHub release (as draft) with tag `vX.Y.Z`
 - ✓ Marks prerelease versions (e.g., `-rc.1`) appropriately
 - ✓ Runs `npm run build` to generate production artifacts
 - ✓ Uploads distribution ZIP files to the release
 - ✓ Publishes the package to npmjs.org with `npm publish --access=public`
-- ✓ Merges the PR to `main`
+- ✓ Publishes the GitHub release (moves from draft to public)
+- ✓ Automatically merges the PR to `main`
 
 **Monitoring:** Watch the **Actions** tab > **Finalize Release** workflow.
 
@@ -65,13 +66,13 @@ The **Finalize Release** workflow automatically:
 
 If NPM publish fails:
 
-1. The GitHub release is **moved to draft** status (not published)
+1. The GitHub release **remains in draft** status (not published)
 2. A comment is posted on the PR with:
    - The error details
    - Steps to resolve (usually checking authentication)
    - Instructions to re-run or manually publish
 
-The PR will **not be merged** on failure, allowing you to retry.
+The PR will **not be merged** on failure, allowing you to retry after fixing the issue.
 ---
 
 ## Netlify Deploy

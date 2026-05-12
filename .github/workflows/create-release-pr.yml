@@ -1,60 +1,31 @@
-name: Create Release PR
+name: Prepare Release PR
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version number (X.Y.Z, with optional prerelease suffix like -alpha)'
-        required: true
-        type: string
+  push:
+    branches:
+      - release/v*
 
 jobs:
-  create-pr:
+  prepare-pr:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.ref_name }}
 
-      - name: Normalize and validate version
+      - name: Extract version from branch name
         id: version
         run: |
-          # Normalize version (remove leading v if present)
-          VERSION="${{ github.event.inputs.version }}"
-          VERSION="${VERSION#v}"
+          BRANCH="${{ github.ref_name }}"
+          # Extract version from release/vX.Y.Z
+          VERSION="${BRANCH#release/v}"
           
-          # Validate format: X.Y.Z or X.Y.Z-prerelease
-          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-.+)?$ ]]; then
-            echo "❌ Invalid version format: $VERSION"
-            echo "Expected format: X.Y.Z or X.Y.Z-prerelease (with or without leading 'v')"
-            exit 1
-          fi
-          
-          echo "✓ Valid version: $VERSION"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "branch=release/v$VERSION" >> $GITHUB_OUTPUT
-
-      - name: Check if branch already exists
-        id: branch-check
-        run: |
-          BRANCH="${{ steps.version.outputs.branch }}"
-          if git rev-parse --verify "origin/$BRANCH" >/dev/null 2>&1; then
-            echo "exists=true" >> $GITHUB_OUTPUT
-            echo "ℹ️  Branch '$BRANCH' already exists"
-          else
-            echo "exists=false" >> $GITHUB_OUTPUT
-            echo "ℹ️  Creating new branch '$BRANCH'"
-          fi
-
-      - name: Create or checkout release branch
-        run: |
-          BRANCH="${{ steps.version.outputs.branch }}"
-          if [ "${{ steps.branch-check.outputs.exists }}" = "true" ]; then
-            git fetch origin "$BRANCH"
-            git checkout "$BRANCH"
-          else
-            git checkout -b "$BRANCH"
-          fi
+          echo "branch=$BRANCH" >> $GITHUB_OUTPUT
+          
+          echo "📦 Detected version from branch: $VERSION"
+          echo "🌿 Branch: $BRANCH"
 
       - name: Update version in package.json and _config.yml
         run: |
@@ -84,7 +55,7 @@ jobs:
           
           echo "✓ Version updates verified"
 
-      - name: Commit changes
+      - name: Commit version updates
         run: |
           VERSION="${{ steps.version.outputs.version }}"
           git config user.name "github-actions[bot]"
@@ -95,13 +66,13 @@ jobs:
             git commit -m "Release v$VERSION"
             echo "✓ Committed version bump"
           else
-            echo "ℹ️  No changes to commit (version may already be up to date)"
+            echo "ℹ️  No changes to commit (version already up to date)"
           fi
 
-      - name: Push branch
+      - name: Push version updates
         run: |
           BRANCH="${{ steps.version.outputs.branch }}"
-          git push origin "$BRANCH" --force-with-lease
+          git push origin "$BRANCH"
 
       - name: Create or update pull request
         uses: actions/github-script@v7
