@@ -1,0 +1,140 @@
+name: Create Release PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number (X.Y.Z, with optional prerelease suffix like -alpha)'
+        required: true
+        type: string
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Normalize and validate version
+        id: version
+        run: |
+          # Normalize version (remove leading v if present)
+          VERSION="${{ github.event.inputs.version }}"
+          VERSION="${VERSION#v}"
+          
+          # Validate format: X.Y.Z or X.Y.Z-prerelease
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-.+)?$ ]]; then
+            echo "❌ Invalid version format: $VERSION"
+            echo "Expected format: X.Y.Z or X.Y.Z-prerelease (with or without leading 'v')"
+            exit 1
+          fi
+          
+          echo "✓ Valid version: $VERSION"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "branch=release/v$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Check if branch already exists
+        id: branch-check
+        run: |
+          BRANCH="${{ steps.version.outputs.branch }}"
+          if git rev-parse --verify "origin/$BRANCH" >/dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "ℹ️  Branch '$BRANCH' already exists"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "ℹ️  Creating new branch '$BRANCH'"
+          fi
+
+      - name: Create or checkout release branch
+        run: |
+          BRANCH="${{ steps.version.outputs.branch }}"
+          if [ "${{ steps.branch-check.outputs.exists }}" = "true" ]; then
+            git fetch origin "$BRANCH"
+            git checkout "$BRANCH"
+          else
+            git checkout -b "$BRANCH"
+          fi
+
+      - name: Update version in package.json and _config.yml
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          
+          # Update package.json
+          sed -i -E 's/"version": "[^"]+"/"version": "'$VERSION'"/' package.json
+          echo "✓ Updated package.json to $VERSION"
+          
+          # Update _config.yml
+          sed -i -E 's/current_version: [^ ]+/current_version: '$VERSION'/' _config.yml
+          echo "✓ Updated _config.yml to $VERSION"
+
+      - name: Verify version updates
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          PKG_VERSION=$(grep -o '"version": "[^"]*"' package.json | cut -d'"' -f4)
+          CONFIG_VERSION=$(grep 'current_version:' _config.yml | awk '{print $2}')
+          
+          echo "package.json version: $PKG_VERSION"
+          echo "_config.yml version: $CONFIG_VERSION"
+          
+          if [ "$PKG_VERSION" != "$VERSION" ] || [ "$CONFIG_VERSION" != "$VERSION" ]; then
+            echo "❌ Version update verification failed"
+            exit 1
+          fi
+          
+          echo "✓ Version updates verified"
+
+      - name: Commit changes
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if ! git diff --quiet; then
+            git add package.json _config.yml
+            git commit -m "Release v$VERSION"
+            echo "✓ Committed version bump"
+          else
+            echo "ℹ️  No changes to commit (version may already be up to date)"
+          fi
+
+      - name: Push branch
+        run: |
+          BRANCH="${{ steps.version.outputs.branch }}"
+          git push origin "$BRANCH" --force-with-lease
+
+      - name: Create or update pull request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const version = '${{ steps.version.outputs.version }}';
+            const branch = '${{ steps.version.outputs.branch }}';
+            
+            // Check for existing PR
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              head: `${context.repo.owner}:${branch}`,
+            });
+            
+            if (prs.length > 0) {
+              console.log(`✓ Pull request already exists: ${prs[0].html_url}`);
+              core.setOutput('pr_url', prs[0].html_url);
+              return;
+            }
+            
+            // Create new PR
+            const { data: pr } = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Release v${version}`,
+              head: branch,
+              base: 'main',
+              body: `## Release v${version}\n\nThis PR bumps the version to v${version} and is ready to merge.\n\nOnce merged, GitHub Actions will automatically:\n1. Create a GitHub release with tag \`v${version}\`\n2. Build production artifacts\n3. Upload assets to the release\n4. Publish to npmjs.org\n\n**Important:** Review the version number before merging!`,
+              draft: false,
+            });
+            
+            console.log(`✓ Pull request created: ${pr.html_url}`);
+            core.setOutput('pr_url', pr.html_url);
+
