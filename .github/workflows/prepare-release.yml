@@ -71,7 +71,7 @@ jobs:
             2. Verify that CI has passed (check the PR status checks below)
             3. Comment **/release** on this PR to trigger the release process
             4. The release workflow will verify merge permissions, then:
-               - Create a GitHub release with tag \`v${tag}\`
+               - Create a GitHub release with tag \`${tag}\`
                - Build production artifacts
                - Upload assets to the release
                - Publish to npmjs.org
