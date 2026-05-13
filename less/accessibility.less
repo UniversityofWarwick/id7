@@ -1,13 +1,12 @@
 :root {
-  --w-ref-focusOutline: @focus-outline;
-  --w-sys-focusOutline: var(--w-ref-focusOutline);
+  --w-sys-focusOutline: @focus-outline;
 }
 
 .id7-outline() {
   outline: 3px solid var(--w-sys-focusOutline);
   color: #0b0c0c !important;
   background-color: var(--w-sys-focusOutline) !important;
-  box-shadow: 0 -2px var(--w-sys-focusOutline), 0 6px #0b0c0c;
+  box-shadow: 0 -2px var(--w-sys-focusOutline), 0 9px #0b0c0c;
   text-decoration: none !important;
   transition-duration: 0s;
 }
@@ -19,7 +18,7 @@
   .id7-outline();
 }
 
-a:focus img {
+a:focus-visible img {
   background-color: var(--w-sys-focusOutline)
 }
 
@@ -27,7 +26,7 @@ a:focus .id7-notifications-badge .counter-value {
   color: white;
 }
 
-.open > a:focus, .dropdown-menu > .active > a:focus, .dropdown-toggle:focus, [role="button"]:focus {
+.open > a:focus-visible, .dropdown-menu > .active > a:focus-visible, .dropdown-toggle:focus-visible, [role="button"]:focus-visible {
   .id7-outline();
 }
 
