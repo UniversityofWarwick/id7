@@ -1,6 +1,9 @@
 @import (reference) "../mixins/branding";
 @import (reference) "../variables";
 
+// Some longer fallback var expressions to keep together
+@headings-color-var: var(--w-sys-colors-heading, var(--w-sys-colors-fg));
+
 :root {
   /* Reference tokens (don't use directly) */
   --w-ref-colors-blackText: @text-color;
@@ -13,10 +16,15 @@
     /* Default system tokens. Can be overridden */
   --w-sys-colors-paleGrey-contrast: var(--w-ref-colors-blackText);
 
+  --w-sys-colors-bg: var(--w-sys-colors-page);
+  // We shouldn't ever need to override this - instead set the `color` property and
+  // let the `currentColor` value do its thing.
+  --w-sys-colors-fg: currentColor;
+
   & when (@id7-generate-ref-colours) {
     each(@id7-ref-colors, {
       @brand-color-var: "id7-brand-@{value}";
-      @brand-color: @@brand-color-var;   
+      @brand-color: @@brand-color-var;
         .generate-tint-variables(@value, ref, @brand-color);
     });
   }
@@ -52,8 +60,8 @@
 
 // System tokens
 // Tokens that refer to other tokens are defined here in the * selector
-// to ensure they are always recalculated. If they were defined in :root, 
-// they would only be calculated once and would not update when the 
+// to ensure they are always recalculated. If they were defined in :root,
+// they would only be calculated once and would not update when the
 // target tokens they refer to are updated.
 // Note that as these aliases are redefined in every element,
 // you can't replace the alias in a container as it will get squashed
@@ -62,11 +70,6 @@
   // Primary colour - alias to tint 500
   --w-sys-colors-primary: var(--w-sys-colors-primary-500);
   --w-sys-colors-primary-contrast: var(--w-sys-colors-primary-500-contrast);
-
-  --w-sys-colors-heading: if(@id7-gen-colours>2024,
-    var(--w-sys-colors-fg),
-    var(--w-sys-colors-white-accent)
-  );
 }
 
 // Utility classes for switching between light and dark backgrounds.
@@ -75,26 +78,25 @@
 .bg-black {
   // Updates some system rendered elements to look better on a dark background.
   color-scheme: dark;
+  color: var(--w-ref-colors-page-dark-contrast);
   --w-sys-colors-bg: var(--w-ref-colors-page-dark);
-  --w-sys-colors-fg: var(--w-ref-colors-page-dark-contrast);
   --w-sys-colors-link: var(--w-ref-colors-page-dark-contrast);
   --w-sys-colors-page-grey: #aaa;
 }
 
 :root, .bg-white {
+  color: var(--w-sys-colors-page-contrast);
   --w-sys-colors-bg: var(--w-sys-colors-page);
-  --w-sys-colors-fg: var(--w-sys-colors-page-contrast);
   --w-sys-colors-link: var(--w-sys-colors-page-accent);
 }
 
 .bg-grey {
+  color: var(--w-sys-colors-paleGrey-contrast);
   --w-sys-colors-bg: var(--w-sys-colors-paleGrey);
-  --w-sys-colors-fg: var(--w-sys-colors-paleGrey-contrast);
   --w-sys-colors-link: var(--w-sys-colors-paleGrey-accent);
 }
 
 .bg-white, .bg-black, .bg-grey {
-  color: var(--w-sys-colors-fg);
   background-color: var(--w-sys-colors-bg);
 }
 

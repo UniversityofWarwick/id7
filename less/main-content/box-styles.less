@@ -20,32 +20,25 @@
 
 .box1 {
   .bg-primary-tint(100);
-  background-color: var(--w-sys-colors-bg);
-  color: var(--w-sys-colors-fg);
 }
 
 .box2 {
   --w-sys-colors-bg: var(--w-sys-colors-paleGrey);
-  --w-sys-colors-fg: var(--w-sys-colors-paleGrey-contrast);
   --w-sys-colors-link: var(--w-sys-colors-paleGrey-accent);
+  color: var(--w-sys-colors-paleGrey-contrast);
   background-color: var(--w-sys-colors-bg);
-  color: var(--w-sys-colors-fg);
 }
 
 .box5 {
-  .bg-primary-tint(500); 
-  background-color: var(--w-sys-colors-bg);
-  color: var(--w-sys-colors-fg);
+  .bg-primary-tint(500);
 }
 
 .bg-primary-tint(@tint) {
   // Define these variables for use in containing elements.
+  color: ~"var(--w-sys-colors-primary-@{tint}-contrast)";
   --w-sys-colors-bg: ~"var(--w-sys-colors-primary-@{tint})";
-  --w-sys-colors-fg: ~"var(--w-sys-colors-primary-@{tint}-contrast)";
-  --w-sys-colors-heading: var(--w-sys-colors-fg);
-  --w-sys-colors-link: var(--w-sys-colors-fg);
+  --w-sys-colors-link: currentColor;
   background-color: var(--w-sys-colors-bg);
-  color:            var(--w-sys-colors-fg);
 }
 
 each(100 300 500 700 900, {
