@@ -144,6 +144,8 @@ jobs:
           echo "📦 Artifacts:"
           ls -lh dist/id7*.zip 2>/dev/null || echo "⚠️  No zip artifacts found"
 
+      # NOTE: this doesn't currently work as we'd want it - it's looking up by tag
+      # which drafts don't have, so it wouldn't find an existing draft release.
       - name: Check if release already exists
         id: check-release
         uses: actions/github-script@v7
