@@ -1,6 +1,6 @@
 # ID7
 
-![Build status](https://github.com/UniversityofWarwick/id7/workflows/Node%20CI/badge.svg)
+![Build status](https://github.com/UniversityofWarwick/id7/workflows/Node%20CI/badge.svg) ![NPM Version](https://img.shields.io/npm/v/%40universityofwarwick%2Fid7)
 
 ID7 is the 7th iteration of the University of Warwick corporate identity. This library provides CSS, JavaScript and sample HTML in order to use the corporate identity on your site.
 
