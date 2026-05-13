@@ -52,13 +52,12 @@ a {
   color: var(--w-sys-colors-link);
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: var(--w-sys-colors-link-hover); 
+  &:hover {
+    color: var(--w-sys-colors-link-hover);
     text-decoration: @link-hover-decoration;
   }
 
-  &:focus {
+  &:focus-visible {
     .tab-focus();
   }
 }

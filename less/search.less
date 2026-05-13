@@ -37,15 +37,15 @@
       color: var(--w-sys-colors-primary-500);
     }
 
-    &:focus {
+    &:focus-visible {
       .tab-focus();
+    }
+    &:focus {
       .fas {
         color: var(--w-sys-colors-primary-500);
       }
     }
   }
-
-  
 
   // These typeahead rules only apply to the non-homepage search box
   // that lives inside the search box container. The homepage places
