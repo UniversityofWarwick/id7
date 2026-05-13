@@ -1,0 +1,282 @@
+name: Finalize Release
+
+on:
+  issue_comment:
+    types:
+      - created
+
+jobs:
+  finalize:
+    if: |
+      github.event.issue.pull_request != null &&
+      github.event.comment.body == '/release' &&
+      startsWith(github.event.issue.title, 'Release v')
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Get PR details
+        id: pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            
+            core.setOutput('head-ref', pr.head.ref);
+            core.setOutput('pr-number', pr.number);
+            console.log(`📝 PR #${pr.number}: ${pr.title}`);
+            console.log(`🌿 Branch: ${pr.head.ref}`);
+
+      - name: Check merge permissions
+        id: check-permissions
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const commentAuthor = context.payload.comment.user.login;
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            
+            // Check if PR is mergeable
+            if (pr.mergeable === false) {
+              console.log('❌ PR has merge conflicts');
+              core.setOutput('can-merge', 'false');
+              core.setOutput('reason', 'PR has merge conflicts');
+              return;
+            }
+            
+            if (pr.mergeable_state === 'blocked') {
+              console.log('❌ PR is blocked from merging');
+              core.setOutput('can-merge', 'false');
+              core.setOutput('reason', 'PR is blocked - required status checks may not have passed');
+              return;
+            }
+            
+            // Check user's permission level on the repository
+            const { data: userPerm } = await github.rest.repos.getCollaboratorPermissionLevel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              username: commentAuthor,
+            });
+            
+            const permission = userPerm.permission;
+            console.log(`User ${commentAuthor} has permission: ${permission}`);
+            
+            // Allow 'admin', 'maintain', and 'write' (push) permissions to merge
+            const canMerge = ['admin', 'maintain', 'write'].includes(permission);
+            
+            if (canMerge) {
+              console.log(`✅ User ${commentAuthor} has permission to merge`);
+              core.setOutput('can-merge', 'true');
+            } else {
+              console.log(`❌ User ${commentAuthor} does not have permission to merge (${permission})`);
+              core.setOutput('can-merge', 'false');
+              core.setOutput('reason', `User @${commentAuthor} does not have permission to merge this PR (current permission: ${permission})`);
+            }
+
+      - name: Abort if user cannot merge
+        if: steps.check-permissions.outputs.can-merge == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const reason = '${{ steps.check-permissions.outputs.reason }}';
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `❌ **Release blocked**\n\n${reason}\n\nOnly users with admin, maintain, or write permissions can trigger a release.`,
+            });
+            
+            core.setFailed(reason);
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ steps.pr.outputs.head-ref }}
+
+      - name: Extract version from PR title
+        id: version
+        run: |
+          TITLE="${{ github.event.issue.title }}"
+          # Extract version from "Release vX.Y.Z" or "Release vX.Y.Z-prerelease"
+          VERSION="${TITLE#Release v}"
+          
+          # Determine if prerelease
+          if [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+-.* ]]; then
+            IS_PRERELEASE="true"
+          else
+            IS_PRERELEASE="false"
+          fi
+          
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+          echo "is_prerelease=$IS_PRERELEASE" >> $GITHUB_OUTPUT
+          
+          echo "📦 Detected version: $VERSION"
+          echo "🏷️  Tag: v$VERSION"
+          echo "🔖 Prerelease: $IS_PRERELEASE"
+
+      - name: Setup Node.js 22.x
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22.x
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false  # never use caching in release builds
+
+      - name: Install and build production artifacts
+        run: |
+          npm ci
+          npm run build
+          echo "✓ Production build complete"
+          
+          # List generated artifacts
+          echo "📦 Artifacts:"
+          ls -lh dist/id7*.zip 2>/dev/null || echo "⚠️  No zip artifacts found"
+
+      - name: Create GitHub Release
+        id: create-release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          release_name: Release ${{ steps.version.outputs.tag }}
+          draft: true
+          prerelease: ${{ steps.version.outputs.is_prerelease }}
+          body: |
+            ## ${{ steps.version.outputs.tag }}
+            
+            **Release artifacts:**
+            - Production CSS and JavaScript bundles
+            - Distribution archives (zip files)
+            - Ready to download from assets below
+            
+            ### Publishing
+            This release is published to npmjs.org. You can install it with:
+            ```bash
+            npm install @universityofwarwick/id7@${{ steps.version.outputs.version }}
+            ```
+
+      - name: Upload production artifacts to release
+        id: upload-assets
+        run: |
+          RELEASE_ID="${{ steps.create-release.outputs.id }}"
+          
+          # Find all ZIP files
+          FILES=$(find dist -maxdepth 1 -name "id7*.zip" -type f)
+          
+          if [ -z "$FILES" ]; then
+            echo "⚠️  No zip artifacts found to upload"
+            exit 0
+          fi
+          
+          echo "📤 Uploading artifacts..."
+          while IFS= read -r FILE; do
+            FILENAME=$(basename "$FILE")
+            echo "  Uploading: $FILENAME"
+            
+            gh release upload "v${{ steps.version.outputs.version }}" "$FILE" --clobber
+            
+            if [ $? -eq 0 ]; then
+              echo "  ✓ Uploaded: $FILENAME"
+            else
+              echo "  ❌ Failed to upload: $FILENAME"
+              exit 1
+            fi
+          done <<< "$FILES"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to npmjs.org
+        id: npm-publish
+        run: |
+          echo "📤 Publishing to npmjs.org..."
+          
+          npm publish --provenance --access=public
+          
+          echo "✓ Published successfully"
+          echo "npm-published=true" >> $GITHUB_OUTPUT
+
+      - name: Publish GitHub Release
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const releaseId = '${{ steps.create-release.outputs.id }}';
+            const tag = '${{ steps.version.outputs.tag }}';
+            
+            console.log(`📤 Publishing GitHub release ${tag}...`);
+            
+            // Publish the release (set draft: false)
+            await github.rest.repos.updateRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: parseInt(releaseId),
+              draft: false,
+            });
+            
+            console.log(`✅ Release ${tag} published`);
+
+      - name: Handle publish failure
+        if: failure() && steps.npm-publish.conclusion == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const version = '${{ steps.version.outputs.version }}';
+            const tag = '${{ steps.version.outputs.tag }}';
+            
+            console.log('❌ NPM publish failed - release remains in draft');
+            
+            // Add comment to PR
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ github.event.issue.number }},
+              body: `⚠️ **NPM Publish Failed**\n\nThe GitHub release for ${tag} has been created but remains in **draft** status because NPM publish failed.\n\n**Next steps:**\n1. Check the workflow logs for the error\n2. If the error is authentication-related, verify that Trusted Publishing is set up correctly for the package at npmjs\n3. Once fixed, comment **/release** again to retry`,
+            });
+            
+            throw new Error('NPM publish failed - see comment on PR for details');
+
+      - name: Merge the release PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = ${{ github.event.issue.number }};
+            const tag = '${{ steps.version.outputs.tag }}';
+            
+            console.log(`📝 Merging release PR #${prNumber}...`);
+            
+            await github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              commit_title: `Merge release ${tag}`,
+              commit_message: `Release ${tag} - assets published to npmjs`,
+              merge_method: 'squash',
+            });
+            
+            console.log(`✅ PR #${prNumber} merged successfully`);
+
+
+      - name: Success summary
+        run: |
+          echo "✅ Release v${{ steps.version.outputs.version }} finalized!"
+          echo ""
+          echo "📊 Summary:"
+          echo "  Tag: ${{ steps.version.outputs.tag }}"
+          echo "  Prerelease: ${{ steps.version.outputs.is_prerelease }}"
+          echo "  NPM Published: ${{ steps.npm-publish.outputs.npm-published }}"
+          echo ""
+          echo "🔗 Release URL: ${{ steps.create-release.outputs.html_url }}"
+
+
