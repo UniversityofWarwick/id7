@@ -303,6 +303,40 @@ jobs:
             
             console.log(`✅ PR #${prNumber} merged successfully`);
 
+      - name: Merge into develop
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const tag = '${{ steps.version.outputs.tag }}';
+            
+            console.log(`📝 Merging ${tag} into develop...`);
+            
+            try {
+              await github.rest.repos.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                base: 'develop',
+                head: 'main',
+                commit_message: `Merge release ${tag} from main into develop`,
+              });
+              
+              console.log(`✅ Successfully merged into develop`);
+            } catch (error) {
+              if (error.status === 409) {
+                console.log(`ℹ️  No merge needed - develop is already up to date`);
+              } else {
+                console.log(`⚠️  Failed to merge into develop: ${error.message}`);
+                
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: ${{ github.event.issue.number }},
+                  body: `⚠️ **Release merged to main, but merge to develop failed**\n\nThe release ${tag} was successfully merged to main, but automatic merge to develop failed.\n\n**Error:** ${error.message}\n\n**Action required:** Please manually merge main into develop to ensure the release changes are synced.`,
+                });
+                
+                throw error;
+              }
+            }
 
       - name: Success summary
         run: |
