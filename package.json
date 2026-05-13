@@ -1,6 +1,6 @@
 {
   "name": "@universityofwarwick/id7",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "scripts": {
     "watch": "NODE_ENV=development webpack --config webpack.config.mjs --mode development --watch",
     "dev": "NODE_ENV=development webpack --config webpack.config.mjs --mode development",
@@ -82,5 +82,8 @@
   "author": "University of Warwick",
   "license": "ISC",
   "homepage": "https://id7.warwick.ac.uk",
-  "repository": "github:UniversityofWarwick/id7"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UniversityofWarwick/id7"
+  }
 }

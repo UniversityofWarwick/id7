@@ -25,21 +25,19 @@
   // to allow site.css branding to override
   :where(&) .navbar {
     background-color: var(--w-sys-colors-bg);
-    color: var(--w-sys-colors-fg);
-
     --primary-bg-hover: hsl(from var(--w-sys-colors-bg) h s calc(l - 8));
   }
   .navbar-primary {
     --w-sys-colors-bg: var(--primary-bg);
-    --w-sys-colors-fg: var(--primary-fg);
+    color: var(--primary-fg);
   }
   .navbar-secondary {
     --w-sys-colors-bg: var(--secondary-bg);
-    --w-sys-colors-fg: var(--secondary-fg);
+    color: var(--secondary-fg);
   }
   .navbar-tertiary {
     --w-sys-colors-bg: var(--tertiary-bg);
-    --w-sys-colors-fg: var(--tertiary-fg);
+    color: var(--tertiary-fg);
   }
 
   .navbar {
@@ -76,7 +74,7 @@
     font-size: var(--w-sys-fontSizeNav);
     border: 0;
     --w-sys-colors-bg: var(--primary-bg);
-    --w-sys-colors-fg: var(--primary-fg);
+    color: var(--primary-fg);
 
     // Override Bootstrap's default dropdown component
     --w-cmp-dropdown-bg: var(--primary-bg);
@@ -314,9 +312,8 @@
 
   .navbar-secondary .navbar-nav > li:first-child {
     --w-sys-colors-bg: var(--w-sys-colors-primary-500);
-    --w-sys-colors-fg: var(--w-sys-colors-primary-500-contrast);
     background-color: var(--w-sys-colors-bg);
-    color: var(--w-sys-colors-fg);
+    color: var(--w-sys-colors-primary-500-contrast);
   }
 
   &.affix + .id7-navigation-marker {
@@ -338,7 +335,7 @@
     margin: 0 0 0 4px;
     padding: 0;
 
-    &:focus {
+    &:focus-visible {
       .tab-focus();
     }
   }
