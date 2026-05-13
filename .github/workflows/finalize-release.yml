@@ -5,6 +5,11 @@ on:
     types:
       - created
 
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write # For provenance
+
 jobs:
   finalize:
     if: |
@@ -12,11 +17,6 @@ jobs:
       github.event.comment.body == '/release' &&
       startsWith(github.event.issue.title, 'Release v')
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-      pull-requests: write
-      id-token: write # For provenance
 
     steps:
       - name: Get PR details
@@ -127,10 +127,10 @@ jobs:
           echo "🏷️  Tag: v$VERSION"
           echo "🔖 Prerelease: $IS_PRERELEASE"
 
-      - name: Setup Node.js 22.x
+      - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: '24'
           registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false  # never use caching in release builds
 
@@ -144,8 +144,35 @@ jobs:
           echo "📦 Artifacts:"
           ls -lh dist/id7*.zip 2>/dev/null || echo "⚠️  No zip artifacts found"
 
+      - name: Check if release already exists
+        id: check-release
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const tag = '${{ steps.version.outputs.tag }}';
+            
+            try {
+              const { data: release } = await github.rest.repos.getReleaseByTag({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag: tag,
+              });
+              
+              console.log(`✓ Release ${tag} already exists (ID: ${release.id})`);
+              core.setOutput('release-id', release.id);
+              core.setOutput('already-exists', 'true');
+            } catch (error) {
+              if (error.status === 404) {
+                console.log(`ℹ️  No existing release for ${tag} - will create new one`);
+                core.setOutput('already-exists', 'false');
+              } else {
+                throw error;
+              }
+            }
+
       - name: Create GitHub Release
         id: create-release
+        if: steps.check-release.outputs.already-exists == 'false'
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -168,11 +195,18 @@ jobs:
             npm install @universityofwarwick/id7@${{ steps.version.outputs.version }}
             ```
 
+      - name: Use existing release ID
+        id: release-id-output
+        run: |
+          if [ "${{ steps.check-release.outputs.already-exists }}" == "true" ]; then
+            echo "id=${{ steps.check-release.outputs.release-id }}" >> $GITHUB_OUTPUT
+          else
+            echo "id=${{ steps.create-release.outputs.id }}" >> $GITHUB_OUTPUT
+          fi
+
       - name: Upload production artifacts to release
         id: upload-assets
         run: |
-          RELEASE_ID="${{ steps.create-release.outputs.id }}"
-          
           # Find all ZIP files
           FILES=$(find dist -maxdepth 1 -name "id7*.zip" -type f)
           
@@ -203,7 +237,7 @@ jobs:
         run: |
           echo "📤 Publishing to npmjs.org..."
           
-          npm publish --provenance --access=public
+          npm publish --access=public
           
           echo "✓ Published successfully"
           echo "npm-published=true" >> $GITHUB_OUTPUT
@@ -213,7 +247,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const releaseId = '${{ steps.create-release.outputs.id }}';
+            const releaseId = '${{ steps.release-id-output.outputs.id }}';
             const tag = '${{ steps.version.outputs.tag }}';
             
             console.log(`📤 Publishing GitHub release ${tag}...`);
@@ -233,7 +267,6 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const version = '${{ steps.version.outputs.version }}';
             const tag = '${{ steps.version.outputs.tag }}';
             
             console.log('❌ NPM publish failed - release remains in draft');
@@ -278,6 +311,6 @@ jobs:
           echo "  Prerelease: ${{ steps.version.outputs.is_prerelease }}"
           echo "  NPM Published: ${{ steps.npm-publish.outputs.npm-published }}"
           echo ""
-          echo "🔗 Release URL: ${{ steps.create-release.outputs.html_url }}"
+          echo "🔗 Release URL: https://github.com/${{ github.repository }}/releases/tag/${{ steps.version.outputs.tag }}"
 
 

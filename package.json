@@ -82,5 +82,8 @@
   "author": "University of Warwick",
   "license": "ISC",
   "homepage": "https://id7.warwick.ac.uk",
-  "repository": "github:UniversityofWarwick/id7"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UniversityofWarwick/id7"
+  }
 }
