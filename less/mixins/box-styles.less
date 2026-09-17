@@ -1,3 +1,11 @@
+.small-screen-padding-and-margin() {
+  @media(max-width: @screen-xs-max) {
+    padding: @grid-gutter-width;
+    margin-left: -@grid-gutter-width;
+    margin-right: -@grid-gutter-width;
+  }
+}
+
 .make-xs-boxstyle() {
   .clearfix();
   margin-bottom: @line-height-computed;
@@ -9,6 +17,8 @@
   @media print {
     page-break-inside: avoid;
   }
+
+  .small-screen-padding-and-margin();
 }
 
 .make-sm-boxstyle() {
@@ -21,6 +31,8 @@
   @media print {
     page-break-inside: avoid;
   }
+
+  .small-screen-padding-and-margin();
 
   @media (min-width: @screen-sm-min) {
     padding: @grid-gutter-width;
@@ -38,6 +50,8 @@
     page-break-inside: avoid;
   }
 
+  .small-screen-padding-and-margin();
+
   @media (min-width: @screen-md-min) {
     padding: @grid-gutter-width;
   }
@@ -53,6 +67,8 @@
   @media print {
     page-break-inside: avoid;
   }
+
+  .small-screen-padding-and-margin();
 
   @media (min-width: @screen-lg-min) {
     padding: @grid-gutter-width;
