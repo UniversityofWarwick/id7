@@ -1,77 +1,42 @@
-.small-screen-padding-and-margin() {
-  @media(max-width: @screen-xs-max) {
-    padding: @grid-gutter-width;
-    margin-left: -@grid-gutter-width;
-    margin-right: -@grid-gutter-width;
-  }
+.boxstyle-flush() {
+  margin-left: (-@grid-gutter-width);
+  margin-right: (-@grid-gutter-width);
 }
 
-.make-xs-boxstyle() {
+.boxstyle-common() {
   .clearfix();
   margin-bottom: @line-height-computed;
   padding: @grid-gutter-width;
 
   .bordered-headings(none);
 
-  // Avoid breaking box styles when printing
   @media print {
     page-break-inside: avoid;
   }
+}
 
-  .small-screen-padding-and-margin();
+.make-xs-boxstyle() {
+  .boxstyle-common();
 }
 
 .make-sm-boxstyle() {
-  .clearfix();
-  margin-bottom: @line-height-computed;
-
-  .bordered-headings(none);
-
-  // Avoid breaking box styles when printing
-  @media print {
-    page-break-inside: avoid;
-  }
-
-  .small-screen-padding-and-margin();
-
-  @media (min-width: @screen-sm-min) {
-    padding: @grid-gutter-width;
+  .boxstyle-common();
+  @media(max-width: @screen-xs-max) {
+    .boxstyle-flush();
   }
 }
 
 .make-md-boxstyle() {
-  .clearfix();
-  margin-bottom: @line-height-computed;
-
-  .bordered-headings(none);
-
-  // Avoid breaking box styles when printing
-  @media print {
-    page-break-inside: avoid;
-  }
-
-  .small-screen-padding-and-margin();
-
-  @media (min-width: @screen-md-min) {
-    padding: @grid-gutter-width;
+  .boxstyle-common();
+  @media(max-width: @screen-sm-max) {
+    .boxstyle-flush();
   }
 }
 
 .make-lg-boxstyle() {
-  .clearfix();
-  margin-bottom: @line-height-computed;
-
-  .bordered-headings(none);
-
-  // Avoid breaking box styles when printing
-  @media print {
-    page-break-inside: avoid;
-  }
-
-  .small-screen-padding-and-margin();
-
-  @media (min-width: @screen-lg-min) {
-    padding: @grid-gutter-width;
+  .boxstyle-common();
+  @media(max-width: @screen-md-max) {
+    .boxstyle-flush();
   }
 }
 
@@ -148,33 +113,6 @@
   }
 
   .filled(@class, @bg, @text-colour, @link-colour) {
-    // Filled boxstyles should flush at widths that the padding isn't added at
-    .flush() {
-      &@{class} {
-        padding: @grid-gutter-width;
-        margin-left: (-@grid-gutter-width);
-        margin-right: (-@grid-gutter-width);
-      }
-    }
-
-    .boxstyle_, .boxstyle-sm {
-      @media (max-width: @screen-xs-max) {
-        .flush();
-      }
-    }
-
-    .boxstyle-md {
-      @media (max-width: @screen-sm-max) {
-        .flush();
-      }
-    }
-
-    .boxstyle-lg {
-      @media (max-width: @screen-md-max) {
-        .flush();
-      }
-    }
-
     .boxstyle_, .boxstyle-xs, .boxstyle-sm, .boxstyle-md, .boxstyle-lg {
       &@{class} {
         border: 0;
@@ -222,18 +160,27 @@
     }
 
     .boxstyle_, .boxstyle-sm {
+      @media (max-width: @screen-xs-max) {
+        border: 0;
+      }
       @media (min-width: @screen-sm-min) {
         .apply();
       }
     }
 
     .boxstyle-md {
+      @media (max-width: @screen-sm-max) {
+        border: 0;
+      }
       @media (min-width: @screen-md-min) {
         .apply();
       }
     }
 
     .boxstyle-lg {
+      @media (max-width: @screen-md-max) {
+        border: 0;
+      }
       @media (min-width: @screen-lg-min) {
         .apply();
       }
@@ -253,18 +200,27 @@
     }
 
     .boxstyle_, .boxstyle-sm {
+      @media (max-width: @screen-xs-max) {
+        border: 0;
+      }
       @media (min-width: @screen-sm-min) {
         .apply();
       }
     }
 
     .boxstyle-md {
+      @media (max-width: @screen-sm-max) {
+        border: 0;
+      }
       @media (min-width: @screen-md-min) {
         .apply();
       }
     }
 
     .boxstyle-lg {
+      @media (max-width: @screen-md-max) {
+        border: 0;
+      }
       @media (min-width: @screen-lg-min) {
         .apply();
       }
