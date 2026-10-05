@@ -1,3 +1,5 @@
+@import (reference) "../../less/mixins/box-styles";
+
 .boxstyle_ { // legacy
   .make-sm-boxstyle();
 }
@@ -28,6 +30,9 @@
   color: var(--w-sys-colors-paleGrey-contrast);
   background-color: var(--w-sys-colors-bg);
 }
+
+#boxstyle.bordered(~'.box3', var(--w-sys-colors-paleGrey-accent), @text-color);
+#boxstyle.bordered(~'.box4', var(--w-sys-colors-primary), @text-color);
 
 .box5 {
   .bg-primary-tint(500);
