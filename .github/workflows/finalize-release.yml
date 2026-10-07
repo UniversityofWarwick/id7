@@ -4,6 +4,12 @@ on:
   issue_comment:
     types:
       - created
+  workflow_dispatch:
+    inputs:
+      pr-number:
+        description: Release pull request number
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -11,40 +17,64 @@ permissions:
   id-token: write # For provenance
 
 jobs:
-  finalize:
+  authorize:
     if: |
-      github.event.issue.pull_request != null &&
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.issue.pull_request != null &&
       github.event.comment.body == '/release' &&
-      startsWith(github.event.issue.title, 'Release v')
+      startsWith(github.event.issue.title, 'Release v'))
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      actions: write
+    outputs:
+      head-sha: ${{ steps.pr.outputs.head-sha }}
+      pr-number: ${{ steps.pr.outputs.pr-number }}
+      title: ${{ steps.pr.outputs.title }}
 
     steps:
       - name: Get PR details
         id: pr
         uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ inputs.pr-number }}
         with:
           script: |
+            const prNumber = context.eventName === 'issue_comment'
+              ? context.issue.number : Number(process.env.PR_NUMBER);
+            if (!Number.isSafeInteger(prNumber) || prNumber <= 0) {
+              throw new Error('A valid release pull request number is required');
+            }
             const { data: pr } = await github.rest.pulls.get({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number: context.issue.number,
+              pull_number: prNumber,
             });
+            if (pr.state !== 'open' ||
+                pr.head.repo?.full_name !== `${context.repo.owner}/${context.repo.repo}` ||
+                !pr.head.ref.startsWith('release/v') ||
+                !/^Release v\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(pr.title)) {
+              throw new Error('Expected an open release PR from this repository');
+            }
             
-            core.setOutput('head-ref', pr.head.ref);
+            core.setOutput('head-sha', pr.head.sha);
             core.setOutput('pr-number', pr.number);
+            core.setOutput('title', pr.title);
             console.log(`📝 PR #${pr.number}: ${pr.title}`);
             console.log(`🌿 Branch: ${pr.head.ref}`);
 
       - name: Check merge permissions
         id: check-permissions
         uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.pr-number }}
         with:
           script: |
-            const commentAuthor = context.payload.comment.user.login;
             const { data: pr } = await github.rest.pulls.get({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number: context.issue.number,
+              pull_number: Number(process.env.PR_NUMBER),
             });
             
             // Check if PR is mergeable
@@ -62,6 +92,13 @@ jobs:
               return;
             }
             
+            // Dispatching a workflow already requires repository write access.
+            if (context.eventName === 'workflow_dispatch') {
+              core.setOutput('can-merge', 'true');
+              return;
+            }
+            const commentAuthor = context.payload.comment.user.login;
+
             // Check user's permission level on the repository
             const { data: userPerm } = await github.rest.repos.getCollaboratorPermissionLevel({
               owner: context.repo.owner,
@@ -87,28 +124,53 @@ jobs:
       - name: Abort if user cannot merge
         if: steps.check-permissions.outputs.can-merge == 'false'
         uses: actions/github-script@v7
+        env:
+          REASON: ${{ steps.check-permissions.outputs.reason }}
+          PR_NUMBER: ${{ steps.pr.outputs.pr-number }}
         with:
           script: |
-            const reason = '${{ steps.check-permissions.outputs.reason }}';
+            const reason = process.env.REASON;
             
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: context.issue.number,
+              issue_number: Number(process.env.PR_NUMBER),
               body: `❌ **Release blocked**\n\n${reason}\n\nOnly users with admin, maintain, or write permissions can trigger a release.`,
             });
             
             core.setFailed(reason);
 
+      - name: Dispatch finalization
+        if: github.event_name == 'issue_comment'
+        uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.pr-number }}
+        with:
+          script: |
+            // npm rejects OIDC exchanges from issue_comment runs.
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'finalize-release.yml',
+              ref: context.payload.repository.default_branch,
+              inputs: { 'pr-number': process.env.PR_NUMBER },
+            });
+
+  finalize:
+    needs: authorize
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ steps.pr.outputs.head-ref }}
+          ref: ${{ needs.authorize.outputs.head-sha }}
 
       - name: Extract version from PR title
         id: version
+        env:
+          TITLE: ${{ needs.authorize.outputs.title }}
         run: |
-          TITLE="${{ github.event.issue.title }}"
           # Extract version from "Release vX.Y.Z" or "Release vX.Y.Z-prerelease"
           VERSION="${TITLE#Release v}"
           
@@ -277,7 +339,7 @@ jobs:
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: ${{ github.event.issue.number }},
+              issue_number: ${{ needs.authorize.outputs.pr-number }},
               body: `⚠️ **NPM Publish Failed**\n\nThe GitHub release for ${tag} has been created but remains in **draft** status because NPM publish failed.\n\n**Next steps:**\n1. Check the workflow logs for the error\n2. If the error is authentication-related, verify that Trusted Publishing is set up correctly for the package at npmjs\n3. Once fixed, comment **/release** again to retry`,
             });
             
@@ -287,7 +349,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const prNumber = ${{ github.event.issue.number }};
+            const prNumber = ${{ needs.authorize.outputs.pr-number }};
             const tag = '${{ steps.version.outputs.tag }}';
             
             console.log(`📝 Merging release PR #${prNumber}...`);
@@ -296,6 +358,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: prNumber,
+              sha: '${{ needs.authorize.outputs.head-sha }}',
               commit_title: `Merge release ${tag}`,
               commit_message: `Release ${tag} - assets published to npmjs`,
               merge_method: 'squash',
@@ -330,7 +393,7 @@ jobs:
                 await github.rest.issues.createComment({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  issue_number: ${{ github.event.issue.number }},
+                  issue_number: ${{ needs.authorize.outputs.pr-number }},
                   body: `⚠️ **Release merged to main, but merge to develop failed**\n\nThe release ${tag} was successfully merged to main, but automatic merge to develop failed.\n\n**Error:** ${error.message}\n\n**Action required:** Please manually merge main into develop to ensure the release changes are synced.`,
                 });
                 
@@ -348,5 +411,3 @@ jobs:
           echo "  NPM Published: ${{ steps.npm-publish.outputs.npm-published }}"
           echo ""
           echo "🔗 Release URL: https://github.com/${{ github.repository }}/releases/tag/${{ steps.version.outputs.tag }}"
-
-

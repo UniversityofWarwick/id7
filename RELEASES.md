@@ -48,6 +48,12 @@ When you're ready to release:
    - The PR is in a mergeable state (no conflicts, CI passed)
 3. If all checks pass, the **Finalize Release** workflow launches
 
+The comment-triggered run authorizes the request, then dispatches a separate run
+of `finalize-release.yml` on the default branch. npm trusted publishing rejects
+OIDC token exchanges from `issue_comment` runs, so publishing happens only in
+the dispatched run. You can also run the workflow manually with the release PR
+number.
+
 ### Step 5: Finalize Release (Automated)
 
 The **Finalize Release** workflow automatically:
@@ -61,6 +67,11 @@ The **Finalize Release** workflow automatically:
 - ✓ Automatically merges the PR to `main`
 
 **Monitoring:** Watch the **Actions** tab > **Finalize Release** workflow.
+
+The npm trusted publisher must specify owner `UniversityofWarwick`, repository
+`id7`, and workflow filename `finalize-release.yml` (without its directory).
+Leave the environment name empty, and allow direct `npm publish`, not just
+`npm stage publish`. No npm token is required.
 
 ### Handling Publish Failures
 
