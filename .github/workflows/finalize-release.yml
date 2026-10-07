@@ -239,7 +239,7 @@ jobs:
         run: |
           echo "📤 Publishing to npmjs.org..."
           
-          npm publish --access=public
+          npm publish --access=public --verbose
           
           echo "✓ Published successfully"
           echo "npm-published=true" >> $GITHUB_OUTPUT
