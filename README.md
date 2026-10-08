@@ -1,6 +1,6 @@
 # ID7
 
-![Build status](https://github.com/UniversityofWarwick/id7/workflows/Node%20CI/badge.svg)
+![Build status](https://github.com/UniversityofWarwick/id7/workflows/Node%20CI/badge.svg) ![NPM Version](https://img.shields.io/npm/v/%40universityofwarwick%2Fid7)
 
 ID7 is the 7th iteration of the University of Warwick corporate identity. This library provides CSS, JavaScript and sample HTML in order to use the corporate identity on your site.
 
@@ -94,13 +94,13 @@ Documentation, included in this repo in the root directory, is built with [Jekyl
 ### Running sample site locally
 
 1. Install Ruby and run `gem install bundler`.
-1. Install node.js - version 22 required.
-1. In the root `/id7` directory:
+2. Install node.js - version 22 required.
+3. In the root `/id7` directory:
     1. Run `bundle install` to install dependent gems.
-    1. Run `npm ci` to install webpack and other node.js dependencies.
-    1. Run `npm run dev` (or `npm run watch`) to build a copy of static assets.
-    1. Run `npm run start` in the command line.
-1. Open <http://localhost:8080> in your browser, et voilà.
+    2. Run `npm ci` to install webpack and other node.js dependencies.
+    3. Run `npm run dev` (or `npm run watch`) to build a copy of static assets.
+    4. Run `npm run start` in the command line.
+4. Open <http://localhost:8080> in your browser, et voilà.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
 
