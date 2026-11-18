@@ -19,7 +19,7 @@
     $(element).on('click.bs.dropdown', this.toggle)
   }
 
-  Dropdown.VERSION = '3.4.1'
+  Dropdown.VERSION = '3000.0.0-id7'
 
   function getParent($this) {
     var selector = $this.attr('data-target')

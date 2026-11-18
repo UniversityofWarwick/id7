@@ -19,7 +19,7 @@
     // jscs:enable requireDollarBeforejQueryAssignment
   }
 
-  Tab.VERSION = '3.4.1'
+  Tab.VERSION = '3000.0.0-id7'
 
   Tab.TRANSITION_DURATION = 150
 

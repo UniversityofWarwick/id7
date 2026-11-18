@@ -19,7 +19,7 @@
     this.isLoading = false
   }
 
-  Button.VERSION  = '3.4.1'
+  Button.VERSION  = '3000.0.0-id7'
 
   Button.DEFAULTS = {
     loadingText: 'loading...'
