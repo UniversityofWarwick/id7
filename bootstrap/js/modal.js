@@ -34,7 +34,7 @@
     }
   }
 
-  Modal.VERSION = '3.4.1'
+  Modal.VERSION = '3000.0.0-id7'
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150

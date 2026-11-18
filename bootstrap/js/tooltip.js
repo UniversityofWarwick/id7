@@ -107,16 +107,11 @@
       return sanitizeFn(unsafeHtml)
     }
 
-    // IE 8 and below don't support createHTMLDocument
-    if (!document.implementation || !document.implementation.createHTMLDocument) {
-      return unsafeHtml
-    }
-
-    var createdDocument = document.implementation.createHTMLDocument('sanitization')
-    createdDocument.body.innerHTML = unsafeHtml
+    const domParser = new DOMParser();
+    const doc = domParser.parseFromString(unsafeHtml, 'text/html');
 
     var whitelistKeys = $.map(whiteList, function (el, i) { return i })
-    var elements = $(createdDocument.body).find('*')
+    var elements = $(doc.body).find('*')
 
     for (var i = 0, len = elements.length; i < len; i++) {
       var el = elements[i]
@@ -138,7 +133,7 @@
       }
     }
 
-    return createdDocument.body.innerHTML
+    return doc.body.innerHTML
   }
 
   // TOOLTIP PUBLIC CLASS DEFINITION
@@ -156,7 +151,7 @@
     this.init('tooltip', element, options)
   }
 
-  Tooltip.VERSION  = '3.4.1'
+  Tooltip.VERSION  = '3000.0.0-id7'
 
   Tooltip.TRANSITION_DURATION = 150
 
